@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    "cereal",
+    "flatbuffers",
+    "fmt",
+    "gtest",
+    "nng",
+    "nngpp",
+    "spdlog"
+  ]
+}

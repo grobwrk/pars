@@ -1,0 +1,19 @@
+#include "pars/log/flags.h"
+
+constexpr auto pars_build_type_v = "${BUILD_TYPE}";
+
+constexpr auto pars_log_enabled =
+  std::string_view(pars_build_type_v).compare("DEBUG") == 0;
+
+constexpr auto pars_log_level =
+  std::string_view(pars_build_type_v).compare("DEBUG") == 0
+    ? ::spdlog::level::debug
+    : ::spdlog::level::info;
+
+constexpr auto pars_log_enable_stderr = true;
+
+constexpr auto pars_log_enable_file = false;
+
+constexpr auto pars_log_flags = ::pars::lf::app | ::pars::lf::comp |
+                                ::pars::lf::event | ::pars::lf::net |
+                                ::pars::lf::user;

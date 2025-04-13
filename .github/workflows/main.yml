@@ -1,0 +1,47 @@
+name: build
+on: push
+jobs:
+  publish-docs:
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write      # 'write' access to pull requests
+    env:
+      NIX_CONFIG: |
+        download-buffer-size = 1000000000
+        extra-experimental-features = flakes nix-command
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git clone https://github.com/Neumann-A/my-vcpkg-triplets.git $HOME/my-vcpkg-triplets
+      - uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - run: nix-collect-garbage
+      - run: nix develop -c echo 'DONE'
+      - run: ln -s $(realpath $(dirname $(nix develop -c which vcpkg))/../share/vcpkg) $HOME/vcpkg
+      - uses: actions/cache/restore@v4
+        id: restore-cache
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ runner.os }}-${{ hashFiles('vcpkg.json') }}
+      - run: nix develop -c scripts/ci-build.sh linux-debug-llvm docs
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
+      - name: Create and push force gh-pages branch
+        run: |
+          cd out/install/linux-debug-llvm/share/docs
+          touch .nojekyll
+          git init
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'deploy'
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}/out/install/linux-debug-llvm/share/docs
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git branch -m gh-pages
+          git push origin gh-pages --force
+      - run: ls -la out/install/linux-debug-llvm/share/docs
