@@ -113,26 +113,26 @@ On ``received<event::fib_computed>`` we terminate the component and print the re
 
 .. literalinclude::
    ../../../example/client.cpp
-   :start-at: void terminate
-   :end-before: void terminate_print_ex
+   :start-at: void terminate(hf_arg<received, fib_computed>
+   :end-before: void terminate(hf_arg<fired, exception>
 
 On ``fired<exception>`` (ie: an exception was thrown during an execution of some handler function), we just terminate and print the exception message:
 
 .. literalinclude::
    ../../../example/client.cpp
-   :start-at: void terminate_print_ex
-   :end-before: void terminate_print_err
+   :start-at: void terminate(hf_arg<fired, exception>
+   :end-before: void terminate(hf_arg<fired, network_error>
 
 On ``fired<network_error>`` (ie: we got some error while executing a send or recv operation), we just terminate and print the error message:
 
 .. literalinclude::
    ../../../example/client.cpp
-   :start-at: void terminate_print_err
-   :end-before: void terminate_print_msg
+   :start-at: void terminate(hf_arg<fired, network_error>
+   :end-before: void terminate(hf_arg<fired, pipe_removed>
 
 On ``fired<pipe_removed>`` (ie: connection gone), we just terminate and inform the client was disconnected:
 
 .. literalinclude::
    ../../../example/client.cpp
-   :start-at: void terminate_print_msg
+   :start-at: void terminate(hf_arg<fired, pipe_removed>
    :end-before: };

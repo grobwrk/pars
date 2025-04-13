@@ -35,10 +35,10 @@ Run a server backend that listen on port 49001 and react to events that receives
 
 Execute a client that ask the server backend to compute the fibonacci number of 42 using a fast algorithm.
 
-- ``./client dial tcp://127.0.0.1:49001 1 1 42``
+- ``./client dial tcp://127.0.0.1:49001 1 fast 42``
 
 Execute a client that ask the server backend to compute the fibonacci number of 42 using a slow algorithm (you can cancel the computation by hitting ``CTRL-C``).
 
-- ``./client dial tcp://127.0.0.1:49001 1 0 42``
+- ``./client dial tcp://127.0.0.1:49001 1 slow 42``
 
 For further usages run ``./client`` or ``./server_backend``.
