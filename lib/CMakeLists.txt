@@ -5,6 +5,7 @@ find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 
 add_library (pars INTERFACE)
+add_library (pars::pars ALIAS pars)
 
 # sorted please
 target_sources (
@@ -84,12 +85,52 @@ target_include_directories (
 string (TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 configure_file ("config.h.in" "generated/config.h")
 
+# install
+include (GNUInstallDirs)
+
+set (pars_project_config_in "${CMAKE_SOURCE_DIR}/cmake/parsConfig.cmake.in")
+set (pars_project_config_out "${CMAKE_CURRENT_BINARY_DIR}/parsConfig.cmake")
+set (pars_config_targets_file "parsConfigTargets.cmake")
+set (pars_version_config_file "${CMAKE_CURRENT_BINARY_DIR}/parsConfigVersion.cmake")
+set (pars_export_dest_dir "${CMAKE_INSTALL_LIBDIR}/cmake/pars")
+
 install (
     TARGETS pars
+    EXPORT pars
     LIBRARY FILE_SET HEADERS
 )
 
 install(
     FILES ${CMAKE_BINARY_DIR}/lib/generated/config.h
     DESTINATION include/pars
+)
+
+export(
+    TARGETS pars
+    NAMESPACE pars::
+    FILE "${CMAKE_CURRENT_BINARY_DIR}/${pars_config_targets_file}"
+)
+
+install(
+    EXPORT pars
+    DESTINATION ${pars_export_dest_dir}
+    NAMESPACE pars::
+    FILE ${pars_config_targets_file}
+)
+
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+    "${pars_project_config_in}"
+    "${pars_project_config_out}"
+    INSTALL_DESTINATION ${pars_export_dest_dir}
+)
+
+write_basic_package_version_file(
+    "${pars_version_config_file}"
+    COMPATIBILITY SameMajorVersion
+)
+
+install(
+    FILES "${pars_project_config_out}" "${pars_version_config_file}"
+    DESTINATION "${pars_export_dest_dir}"
 )
