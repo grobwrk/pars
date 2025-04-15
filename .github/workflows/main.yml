@@ -50,9 +50,15 @@ jobs:
       #     git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       #     git branch -m gh-pages
       #     git push origin gh-pages --force
-      - name: Create and push docs to gh-pages branch
+      - name: Push docs to gh-pages
         run: |
-          DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          if [[ $GITHUB_REF = refs/tags/* ]]; then
+            DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/tags\///')
+          elif [[ $GITHUB_REF = refs/heads/* ]]; then
+            DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          else
+            DOC_BRANCH=unknown
+          fi
           DOCS="out/install/linux-debug-llvm/share/docs"
           mkdir -p $(dirname $DOC_BRANCH)
           git fetch origin gh-pages
@@ -63,7 +69,7 @@ jobs:
           mkdir -p $DOC_BRANCH
           cp -ap $DOCS/* $DOC_BRANCH
           git add $DOC_BRANCH
-          git commit -m 'Build docs for $DOC_BRANCH'
+          git commit -m "Build docs for $DOC_BRANCH"
           git push origin gh-pages
           cd $DOC_BRANCH
           pwd
