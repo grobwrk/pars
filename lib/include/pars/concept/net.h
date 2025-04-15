@@ -30,6 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include "pars/init.h"
+#include "pars/net/tool_view.h"
 
 #include <concepts>
 
@@ -42,7 +43,9 @@ class context;
 
 template<typename value_t>
 concept tool_c = requires {
-  std::same_as<value_t, net::socket> || std::same_as<value_t, net::context>;
+  requires std::same_as<std::remove_const_t<value_t>, net::socket> ||
+             std::same_as<std::remove_const_t<value_t>, net::context> ||
+             std::same_as<std::remove_const_t<value_t>, net::tool_view>;
 };
 
 } // namespace pars::net

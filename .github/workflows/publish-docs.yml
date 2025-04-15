@@ -5,20 +5,21 @@ on:
     branches:
       - dev
       - 'f/**'
+env:
+  VCPKG_ROOT: "${{ github.workspace }}/../../vcpkg"
+  VCPKG_TRIPLETS_ROOT: "${{ github.workspace }}/../../my-vcpkg-triplets"
+  NIX_CONFIG: |
+    download-buffer-size = 1000000000
+    extra-experimental-features = flakes nix-command
 jobs:
   publish-docs:
     permissions:                # Job-level permissions configuration starts here
       contents: write           # 'write' access to repository contents
       pull-requests: write      # 'write' access to pull requests
-    env:
-      VCPKG_ROOT: "${{ github.workspace }}/../../vcpkg"
-      NIX_CONFIG: |
-        download-buffer-size = 1000000000
-        extra-experimental-features = flakes nix-command
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: git clone https://github.com/Neumann-A/my-vcpkg-triplets.git $HOME/my-vcpkg-triplets
+      - run: git clone https://github.com/Neumann-A/my-vcpkg-triplets.git $VCPKG_TRIPLETS_ROOT
       - uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixos-unstable
