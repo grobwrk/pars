@@ -9,6 +9,7 @@ jobs:
       contents: write           # 'write' access to repository contents
       pull-requests: write      # 'write' access to pull requests
     env:
+      VCPKG_ROOT: "${{ github.workspace }}/../../vcpkg"
       NIX_CONFIG: |
         download-buffer-size = 1000000000
         extra-experimental-features = flakes nix-command
@@ -21,7 +22,7 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
       - run: nix-collect-garbage
       - run: nix develop -c echo 'DONE'
-      - run: ln -s $(realpath $(dirname $(nix develop -c which vcpkg))/../share/vcpkg) $HOME/vcpkg
+      - run: ln -s $(realpath $(dirname $(nix develop -c which vcpkg))/../share/vcpkg) $VCPKG_ROOT
       - uses: actions/cache/restore@v4
         id: restore-cache
         with:
