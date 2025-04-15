@@ -16,6 +16,7 @@ A pars application is created by defining handler functions for certain kinds of
    :maxdepth: 2
    :caption: Table of Contents:
 
+   tutorial/index
    examples/index
    library/index
    contribute/index
