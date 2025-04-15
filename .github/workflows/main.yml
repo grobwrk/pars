@@ -1,8 +1,10 @@
 name: build
 on:
   push:
+    tags: '**'
     branches:
       - dev
+      - 'f/**'
 jobs:
   publish-docs:
     permissions:                # Job-level permissions configuration starts here
@@ -35,17 +37,34 @@ jobs:
           path: |
             ~/.cache/vcpkg
           key: ${{ steps.restore-cache.outputs.cache-primary-key }}
-      - name: Create and push force gh-pages branch
+      # - name: Create and push force gh-pages branch
+      #   run: |
+      #     cd out/install/linux-debug-llvm/share/docs
+      #     touch .nojekyll
+      #     git init
+      #     git add -A
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git commit -m 'deploy'
+      #     git config --global --add safe.directory ${GITHUB_WORKSPACE}/out/install/linux-debug-llvm/share/docs
+      #     git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+      #     git branch -m gh-pages
+      #     git push origin gh-pages --force
+      - name: Create and push docs to gh-pages branch
         run: |
-          cd out/install/linux-debug-llvm/share/docs
-          touch .nojekyll
-          git init
-          git add -A
+          DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          DOCS="out/install/linux-debug-llvm/share/docs"
+          mkdir -p $(dirname $DOC_BRANCH)
+          git fetch origin gh-pages
+          git checkout gh-pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m 'deploy'
-          git config --global --add safe.directory ${GITHUB_WORKSPACE}/out/install/linux-debug-llvm/share/docs
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git branch -m gh-pages
-          git push origin gh-pages --force
-      - run: ls -la out/install/linux-debug-llvm/share/docs
+          rm -rf $DOC_BRANCH
+          mkdir -p $DOC_BRANCH
+          cp -ap $DOCS/* $DOC_BRANCH
+          git add $DOC_BRANCH
+          git commit -m 'Build docs for $DOC_BRANCH'
+          git push origin gh-pages
+          cd $DOC_BRANCH
+          pwd
+          ls -laR
