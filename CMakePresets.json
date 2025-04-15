@@ -89,18 +89,13 @@
       }
     },
     {
-      "name": "linux-debug",
-      "displayName": "Linux Debug",
+      "name": "linux-common",
+      "displayName": "Linux",
       "inherits": "common",
       "hidden": true,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "installDir": "${sourceDir}/out/install/${presetName}",
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_BUILD_TYPE": "Debug"
-      },
       "environment": {
         "PATH": "$env{HOME}/.nix-profile/bin:$env{HOME}/.local/bin:$penv{PATH}",
         "LD_LIBRARY_PATH": "$env{HOME}/.nix-profile/lib"
@@ -123,9 +118,27 @@
       }
     },
     {
+      "name": "linux-debug-gcc",
+      "displayName": "Linux Debug GCC",
+      "inherits": "linux-common",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-release-gcc",
+      "displayName": "Linux Release GCC",
+      "inherits": "linux-debug-gcc",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
       "name": "linux-debug-llvm",
       "displayName": "Linux Debug LLVM",
-      "inherits": "linux-debug",
+      "inherits": "linux-common",
       "cacheVariables": {
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_CXX_COMPILER": "clang++",

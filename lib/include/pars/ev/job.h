@@ -78,7 +78,7 @@ public:
     // get the received<nng::msg>
     auto r = event<received, nng::msg>();
 
-    auto& md = r.metadata();
+    auto& md = r.md();
 
     // return a received<event_t>
     return received{
@@ -122,7 +122,7 @@ static job make_job(std::size_t j_id, kind_of<event_t> ke)
 {
   auto h = compute_spec_hash(ke);
 
-  return job(j_id, ke.metadata().socket_id(), h,
+  return job(j_id, ke.md().socket_id(), h,
              std::make_any<kind_of<event_t>>(std::move(ke)));
 }
 

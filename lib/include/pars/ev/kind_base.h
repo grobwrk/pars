@@ -51,7 +51,7 @@ struct common_kind
 
   const event_type& event() const { return event_m; }
 
-  metadata_type& metadata() { return metadata_m; }
+  metadata_type& md() { return metadata_m; }
 
   std::tuple<const event_type&, metadata_type&> as_tuple()
   {

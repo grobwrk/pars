@@ -185,7 +185,7 @@ private:
     }
     else if constexpr (network_event_c<event_t>)
     {
-      auto p_id = ke.metadata().pipe().id();
+      auto p_id = ke.md().pipe().id();
 
       runner_m.associate_job_to_pipe(j_id, p_id);
 

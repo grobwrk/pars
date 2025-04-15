@@ -1,0 +1,44 @@
+name: build
+on:
+  push:
+    tags: '**'
+    branches:
+      - dev
+      - 'f/**'
+env:
+  VCPKG_ROOT: "${{ github.workspace }}/../../vcpkg"
+  VCPKG_TRIPLETS_ROOT: "${{ github.workspace }}/../../my-vcpkg-triplets"
+  NIX_CONFIG: |
+    download-buffer-size = 1000000000
+    extra-experimental-features = flakes nix-command
+jobs:
+  build:
+    strategy:
+      matrix:
+        compiler: [gcc, llvm]
+        build_type: [debug, release]
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write      # 'write' access to pull requests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git clone https://github.com/Neumann-A/my-vcpkg-triplets.git $VCPKG_TRIPLETS_ROOT
+      - uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - run: nix-collect-garbage
+      - run: nix develop -c echo 'DONE'
+      - run: ln -s $(realpath $(dirname $(nix develop -c which vcpkg))/../share/vcpkg) $VCPKG_ROOT
+      - uses: actions/cache/restore@v4
+        id: restore-cache
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ runner.os }}-${{ hashFiles('vcpkg.json') }}
+      - run: nix develop -c scripts/ci-build.sh linux-${{ matrix.build_type }}-${{ matrix.compiler }} all
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}

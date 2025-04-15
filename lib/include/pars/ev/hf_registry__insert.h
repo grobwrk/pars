@@ -49,9 +49,11 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
       auto task = std::packaged_task([hf_ptr](std::stop_token tk, job j) {
         auto ke = j.event<kind_of, event_t>();
 
-        ke.metadata().set_job_id(j.id());
+        auto& md = ke.md();
 
-        ke.metadata().set_stop_token(tk);
+        md.set_job_id(j.id());
+
+        md.set_stop_token(tk);
 
         (*hf_ptr)(std::move(ke));
       });
@@ -65,7 +67,7 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
     return insert_jhf<kind_of, event_t>(s_id, [hf_ptr](job j) {
       auto ke = j.event<kind_of, event_t>();
 
-      ke.metadata().set_job_id(j.id());
+      ke.md().set_job_id(j.id());
 
       (*hf_ptr)(ke);
     });
