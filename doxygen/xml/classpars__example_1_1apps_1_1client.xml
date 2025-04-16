@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars__example_1_1apps_1_1client" kind="class" language="C++" prot="public">
+    <compoundname>pars_example::apps::client</compoundname>
+    <basecompoundref refid="classpars_1_1app_1_1single" prot="public" virt="non-virtual">pars::app::single&lt; comp::client &gt;</basecompoundref>
+    <sectiondef kind="user-defined">
+      <header>Types</header>
+      <memberdef kind="typedef" id="classpars__example_1_1apps_1_1client_1aa9d5ead54339f4738344321d5b407835" prot="private" static="no">
+        <type><ref refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" kindref="member">self_type</ref></type>
+        <definition>using pars_example::apps::client::parent_type =  self_type</definition>
+        <argsstring></argsstring>
+        <name>parent_type</name>
+        <qualifiedname>pars_example::apps::client::parent_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="44" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" prot="private" static="no">
+        <type><ref refid="classpars__example_1_1apps_1_1client" kindref="compound">client</ref></type>
+        <definition>using pars_example::apps::client::self =  client</definition>
+        <argsstring></argsstring>
+        <name>self</name>
+        <qualifiedname>pars_example::apps::client::self</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="45" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Network Parameters</header>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a055d26e33c6bcc04433ea101df4f2864" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
+        <definition>milli pars_example::apps::client::req_recv_timeout</definition>
+        <argsstring></argsstring>
+        <name>req_recv_timeout</name>
+        <qualifiedname>pars_example::apps::client::req_recv_timeout</qualifiedname>
+        <initializer>{-1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="49" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a28488dbd99185cbeee1830ff0f90b242" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
+        <definition>milli pars_example::apps::client::req_send_timeout</definition>
+        <argsstring></argsstring>
+        <name>req_send_timeout</name>
+        <qualifiedname>pars_example::apps::client::req_send_timeout</qualifiedname>
+        <initializer>{1000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="50" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Input Parameters</header>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a48735cc5de36aed2d448d95efb4a9ca5" prot="private" static="no" mutable="no">
+        <type>component_type::connect_p</type>
+        <definition>component_type::connect_p pars_example::apps::client::connect_p</definition>
+        <argsstring></argsstring>
+        <name>connect_p</name>
+        <qualifiedname>pars_example::apps::client::connect_p</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="54" column="29" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t pars_example::apps::client::work_id</definition>
+        <argsstring></argsstring>
+        <name>work_id</name>
+        <qualifiedname>pars_example::apps::client::work_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="55" column="15" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pars_example::apps::client::fast_fib</definition>
+        <argsstring></argsstring>
+        <name>fast_fib</name>
+        <qualifiedname>pars_example::apps::client::fast_fib</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="56" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a85cdc9bd734e4841d085ef604a4ab209" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t pars_example::apps::client::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <qualifiedname>pars_example::apps::client::n</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="57" column="12" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>App State</header>
+      <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1abd29b4d43a0e05778f43c3054e1a5e79" prot="private" static="no" mutable="no">
+        <type><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine</ref>&lt; <ref refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09a" kindref="member">client_state</ref> &gt;</type>
+        <definition>app::state_machine&lt;client_state&gt; pars_example::apps::client::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>pars_example::apps::client::state</qualifiedname>
+        <initializer>= {client_state::creating}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="61" column="22" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Initialization</header>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a934b7e78084c00a74c9282b7dbdbf4ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::usage</definition>
+        <argsstring>()</argsstring>
+        <name>usage</name>
+        <qualifiedname>pars_example::apps::client::usage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="69" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::startup</definition>
+        <argsstring>(int argc, char **argv) override</argsstring>
+        <name>startup</name>
+        <qualifiedname>pars_example::apps::client::startup</qualifiedname>
+        <reimplements refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb">startup</reimplements>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><orderedlist>
+<listitem><para>create state transition</para>
+</listitem></orderedlist>
+</para>
+<para><orderedlist>
+<listitem><para>get the input</para>
+</listitem></orderedlist>
+</para>
+<para><orderedlist>
+<listitem><para>insert handler functions</para>
+</listitem></orderedlist>
+</para>
+<para><orderedlist>
+<listitem><para>commit state transition</para>
+</listitem></orderedlist>
+</para>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="75" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="75" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Handler Functions</header>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1aaba1ed98e686ce79aba4810d7491850d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::initialize</definition>
+        <argsstring>(hf_arg&lt; fired, init &gt; fired)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>pars_example::apps::client::initialize</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1init" kindref="compound">init</ref> &gt;</type>
+          <declname>fired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="130" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="130" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a86c6c063bd87aeef6ddeb9ad1c48305b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::send_work</definition>
+        <argsstring>(hf_arg&lt; fired, pipe_created &gt; fired)</argsstring>
+        <name>send_work</name>
+        <qualifiedname>pars_example::apps::client::send_work</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1pipe__created" kindref="compound">pipe_created</ref> &gt;</type>
+          <declname>fired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="144" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="144" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a34b6776d72c7ff29ce388d19b77b0f99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::recv_answer</definition>
+        <argsstring>(hf_arg&lt; sent, fib_requested &gt; sent)</argsstring>
+        <name>recv_answer</name>
+        <qualifiedname>pars_example::apps::client::recv_answer</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1sent" kindref="compound">sent</ref>, <ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">fib_requested</ref> &gt;</type>
+          <declname>sent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="160" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="160" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a2338f51f150eec5897d13a5a2176704b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::terminate</definition>
+        <argsstring>(hf_arg&lt; received, fib_computed &gt; recv)</argsstring>
+        <name>terminate</name>
+        <qualifiedname>pars_example::apps::client::terminate</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1received" kindref="compound">received</ref>, <ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">fib_computed</ref> &gt;</type>
+          <declname>recv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="173" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="173" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1ad655b8656dd6d5f9368318371c9782dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::terminate</definition>
+        <argsstring>(hf_arg&lt; fired, exception &gt; fired)</argsstring>
+        <name>terminate</name>
+        <qualifiedname>pars_example::apps::client::terminate</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1exception" kindref="compound">exception</ref> &gt;</type>
+          <declname>fired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="190" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="190" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a2dea7fd29d4fab76a9f538a5048c2505" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::terminate</definition>
+        <argsstring>(hf_arg&lt; fired, network_error &gt; fired)</argsstring>
+        <name>terminate</name>
+        <qualifiedname>pars_example::apps::client::terminate</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1network__error" kindref="compound">network_error</ref> &gt;</type>
+          <declname>fired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="206" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="206" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a19178b502c43909a38d406dcf2e09faa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars_example::apps::client::terminate</definition>
+        <argsstring>(hf_arg&lt; fired, pipe_removed &gt; fired)</argsstring>
+        <name>terminate</name>
+        <qualifiedname>pars_example::apps::client::terminate</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1pipe__removed" kindref="compound">pipe_removed</ref> &gt;</type>
+          <declname>fired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="222" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="222" bodyend="234"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Runs the client component as an single application (req) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pars::app::single&lt; comp::client &gt;</label>
+        <link refid="classpars_1_1app_1_1single"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pars::app::with_default_setup</label>
+        <link refid="structpars_1_1app_1_1with__default__setup"/>
+      </node>
+      <node id="1">
+        <label>pars_example::apps::client</label>
+        <link refid="classpars__example_1_1apps_1_1client"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>pars::app::single&lt; comp::client &gt;</label>
+        <link refid="classpars_1_1app_1_1single"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pars::app::with_default_setup</label>
+        <link refid="structpars_1_1app_1_1with__default__setup"/>
+      </node>
+      <node id="1">
+        <label>pars_example::apps::client</label>
+        <link refid="classpars__example_1_1apps_1_1client"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/example/client.cpp" line="39" column="1" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="40" bodyend="235"/>
+    <listofallmembers>
+      <member refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>comp</name></member>
+      <member refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>component_type</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a48735cc5de36aed2d448d95efb4a9ca5" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>connect_p</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1a11ad0a06ff6c0e16378facb9b7d92f9c" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>enable_source_loc_logging</name></member>
+      <member refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>exec</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>fast_fib</name></member>
+      <member refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>graceful_terminate</name></member>
+      <member refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>hfs</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1aaba1ed98e686ce79aba4810d7491850d" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>initialize</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a85cdc9bd734e4841d085ef604a4ab209" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>n</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1aa9d5ead54339f4738344321d5b407835" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>parent_type</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a34b6776d72c7ff29ce388d19b77b0f99" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>recv_answer</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a055d26e33c6bcc04433ea101df4f2864" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>req_recv_timeout</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a28488dbd99185cbeee1830ff0f90b242" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>req_send_timeout</name></member>
+      <member refid="classpars_1_1app_1_1single_1a2d155acd16d58aabacf954ab7adb867e" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>router</name></member>
+      <member refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>run</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>self</name></member>
+      <member refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>self_type</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a86c6c063bd87aeef6ddeb9ad1c48305b" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>send_work</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>setup</name></member>
+      <member refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>single</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" prot="private" virt="virtual"><scope>pars_example::apps::client</scope><name>startup</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1abd29b4d43a0e05778f43c3054e1a5e79" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>state</name></member>
+      <member refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>stop_job_thread</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a2338f51f150eec5897d13a5a2176704b" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1ad655b8656dd6d5f9368318371c9782dd" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a2dea7fd29d4fab76a9f538a5048c2505" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a19178b502c43909a38d406dcf2e09faa" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
+      <member refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate_now</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a934b7e78084c00a74c9282b7dbdbf4ef" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>usage</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>with_default_setup</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>work_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

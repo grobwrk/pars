@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1ev_1_1dispatcher" kind="class" language="C++" prot="public">
+    <compoundname>pars::ev::dispatcher</compoundname>
+    <includes refid="dispatcher_8h" local="no">dispatcher.h</includes>
+    <sectiondef kind="user-defined">
+      <header>Multi Threading</header>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1a26b8a90f31bbd71c2b1479ad1621f2a9" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex pars::ev::dispatcher::mtx_m</definition>
+        <argsstring></argsstring>
+        <name>mtx_m</name>
+        <qualifiedname>pars::ev::dispatcher::mtx_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="142" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1afe24fcff1882e4013d7b7ab1546f08bf" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable pars::ev::dispatcher::cond_m</definition>
+        <argsstring></argsstring>
+        <name>cond_m</name>
+        <qualifiedname>pars::ev::dispatcher::cond_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="143" column="27" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Running Jobs</header>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1a4152f8ed67fa75873604f0d070e07b9c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pars::ev::dispatcher::terminate_m</definition>
+        <argsstring></argsstring>
+        <name>terminate_m</name>
+        <qualifiedname>pars::ev::dispatcher::terminate_m</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>terminate run and exit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="164" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1ad08973bcd026afa1867d5fef6301c9af" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pars::ev::dispatcher::running_m</definition>
+        <argsstring></argsstring>
+        <name>running_m</name>
+        <qualifiedname>pars::ev::dispatcher::running_m</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>wether we&apos;re running jobs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="165" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1a82fc53a8df1cc51618300efc434f0710" prot="private" static="no" mutable="no">
+        <type><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref> &amp;</type>
+        <definition>runner&amp; pars::ev::dispatcher::runner_m</definition>
+        <argsstring></argsstring>
+        <name>runner_m</name>
+        <qualifiedname>pars::ev::dispatcher::runner_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="166" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1ac065f92adaa6851f98c0bade4f287465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>pars::ev::dispatcher::run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="56" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="56" bodyend="79"/>
+        <references refid="classpars_1_1ev_1_1dispatcher_1ad8f8faeb81501b8662022f9a556442b8" compoundref="dispatcher_8h" startline="117" endline="125">queue_back</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a5334c54f56b52d2a4fce00046ed498ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::stop_running</definition>
+        <argsstring>()</argsstring>
+        <name>stop_running</name>
+        <qualifiedname>pars::ev::dispatcher::stop_running</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="81" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1aad27e6a4d1f1d4a0b6d2b11cb670f0bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::terminate_now</definition>
+        <argsstring>()</argsstring>
+        <name>terminate_now</name>
+        <qualifiedname>pars::ev::dispatcher::terminate_now</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="94" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="94" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a8562b93eda4c4b31dd3feb9e505b6c68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pars::ev::dispatcher::terminating</definition>
+        <argsstring>()</argsstring>
+        <name>terminating</name>
+        <qualifiedname>pars::ev::dispatcher::terminating</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="106" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a581fb655ce10de32d140fc39e4c93bed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref></type>
+        <definition>job pars::ev::dispatcher::next_job</definition>
+        <argsstring>(auto &amp;lock)</argsstring>
+        <name>next_job</name>
+        <qualifiedname>pars::ev::dispatcher::next_job</qualifiedname>
+        <param>
+          <type>auto &amp;</type>
+          <declname>lock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="147" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="147" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>Managing Queue</header>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1dispatcher_1a059e56d9293806221b6f216f4499a319" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &gt;</type>
+        <definition>std::deque&lt;job&gt; pars::ev::dispatcher::queue_m</definition>
+        <argsstring></argsstring>
+        <name>queue_m</name>
+        <qualifiedname>pars::ev::dispatcher::queue_m</qualifiedname>
+        <briefdescription>
+<para>a deque of all jobs </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="196" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1ad8f8faeb81501b8662022f9a556442b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::queue_back</definition>
+        <argsstring>(kind_of&lt; event_t &gt; ke)</argsstring>
+        <name>queue_back</name>
+        <qualifiedname>pars::ev::dispatcher::queue_back</qualifiedname>
+        <param>
+          <type>kind_of&lt; event_t &gt;</type>
+          <declname>ke</declname>
+        </param>
+    <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="117" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="117" bodyend="125"/>
+        <referencedby refid="classpars_1_1ev_1_1dispatcher_1ac065f92adaa6851f98c0bade4f287465" compoundref="dispatcher_8h" startline="56" endline="79">run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a3813f60af8ed6ece055a8ad4906777ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::queue_front</definition>
+        <argsstring>(kind_of&lt; event_t &gt; ke)</argsstring>
+        <name>queue_front</name>
+        <qualifiedname>pars::ev::dispatcher::queue_front</qualifiedname>
+        <param>
+          <type>kind_of&lt; event_t &gt;</type>
+          <declname>ke</declname>
+        </param>
+    <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="129" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="129" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a4749d9bd00b7636ad46aa6b355e9dab9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::ev::dispatcher::queue</definition>
+        <argsstring>(kind_of&lt; event_t &gt; ke, auto push_fn)</argsstring>
+        <name>queue</name>
+        <qualifiedname>pars::ev::dispatcher::queue</qualifiedname>
+        <param>
+          <type>kind_of&lt; event_t &gt;</type>
+          <declname>ke</declname>
+        </param>
+        <param>
+          <type>auto</type>
+          <declname>push_fn</declname>
+        </param>
+    <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="172" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="172" bodyend="194"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1ev_1_1dispatcher_1a43b9315b37007dc8efd70555f340b195" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::dispatcher::dispatcher</definition>
+        <argsstring>(runner &amp;r)</argsstring>
+        <name>dispatcher</name>
+        <qualifiedname>pars::ev::dispatcher::dispatcher</qualifiedname>
+        <param>
+          <type><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="49" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" line="46" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h" bodystart="47" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classpars_1_1ev_1_1dispatcher_1afe24fcff1882e4013d7b7ab1546f08bf" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>cond_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a43b9315b37007dc8efd70555f340b195" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>dispatcher</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a26b8a90f31bbd71c2b1479ad1621f2a9" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>mtx_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a581fb655ce10de32d140fc39e4c93bed" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>next_job</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a4749d9bd00b7636ad46aa6b355e9dab9" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>queue</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1ad8f8faeb81501b8662022f9a556442b8" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>queue_back</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a3813f60af8ed6ece055a8ad4906777ee" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>queue_front</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a059e56d9293806221b6f216f4499a319" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>queue_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1ac065f92adaa6851f98c0bade4f287465" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>run</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a82fc53a8df1cc51618300efc434f0710" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>runner_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1ad08973bcd026afa1867d5fef6301c9af" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>running_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a5334c54f56b52d2a4fce00046ed498ec" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>stop_running</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a4152f8ed67fa75873604f0d070e07b9c" prot="private" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>terminate_m</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1aad27e6a4d1f1d4a0b6d2b11cb670f0bf" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>terminate_now</name></member>
+      <member refid="classpars_1_1ev_1_1dispatcher_1a8562b93eda4c4b31dd3feb9e505b6c68" prot="public" virt="non-virtual"><scope>pars::ev::dispatcher</scope><name>terminating</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

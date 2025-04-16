@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacenng" kind="namespace" language="C++">
+    <compoundname>nng</compoundname>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacenng_1ac0f5a2bb1e618f01b57c2593b60e13a8" prot="public" static="no">
+        <type>std::function&lt; void(nng::error, nng::msg)&gt;</type>
+        <definition>using nng::cb_f =  std::function&lt;void(nng::error, nng::msg)&gt;</definition>
+        <argsstring></argsstring>
+        <name>cb_f</name>
+        <qualifiedname>nng::cb_f</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="50" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenng_1ab8c550903b56d71d96ccbe65addf5094" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::error_code</type>
+        <definition>std::error_code nng::make_error_code</definition>
+        <argsstring>(nng::error e) noexcept</argsstring>
+        <name>make_error_code</name>
+        <qualifiedname>nng::make_error_code</qualifiedname>
+        <param>
+          <type>nng::error</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="71" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="71" bodyend="74"/>
+        <references refid="namespacepars_1_1net_1a144553f8959ec1af004d64fefa49d541" compoundref="err_8h" startline="41" endline="54">pars::net::error_category</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="68" column="1"/>
+  </compounddef>
+</doxygen>
