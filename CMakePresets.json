@@ -5,7 +5,8 @@
       "name": "common",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "${sourceParentDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_OVERLAY_TRIPLETS": "$env{VCPKG_ROOT}/../my-vcpkg-triplets",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "On"
       }
     },
@@ -16,9 +17,6 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "installDir": "${sourceDir}/out/install/${presetName}",
-      "cacheVariables": {
-        "VCPKG_OVERLAY_TRIPLETS": "${sourceParentDir}/my-vcpkg-triplets"
-      },
       "condition": {
         "type": "equals",
         "lhs": "${hostSystemName}",
@@ -91,19 +89,13 @@
       }
     },
     {
-      "name": "linux-debug",
-      "displayName": "Linux Debug",
+      "name": "linux-common",
+      "displayName": "Linux",
       "inherits": "common",
+      "hidden": true,
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "installDir": "${sourceDir}/out/install/${presetName}",
-      "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "$env{HOME}/vcpkg/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_OVERLAY_TRIPLETS": "$env{HOME}/my-vcpkg-triplets",
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_BUILD_TYPE": "Debug"
-      },
       "environment": {
         "PATH": "$env{HOME}/.nix-profile/bin:$env{HOME}/.local/bin:$penv{PATH}",
         "LD_LIBRARY_PATH": "$env{HOME}/.nix-profile/lib"
@@ -120,15 +112,33 @@
         "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
           "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}",
           "copyAdditionalIncludeDirectoriesList": [
-            "$env{HOME}/vcpkg/buildtrees"
+            "$env{VCPKG_ROOT}/buildtrees"
           ]
         }
       }
     },
     {
+      "name": "linux-debug-gcc",
+      "displayName": "Linux Debug GCC",
+      "inherits": "linux-common",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-release-gcc",
+      "displayName": "Linux Release GCC",
+      "inherits": "linux-debug-gcc",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
       "name": "linux-debug-llvm",
       "displayName": "Linux Debug LLVM",
-      "inherits": "linux-debug",
+      "inherits": "linux-common",
       "cacheVariables": {
         "CMAKE_C_COMPILER": "clang",
         "CMAKE_CXX_COMPILER": "clang++",

@@ -1,0 +1,77 @@
+name: publish-docs
+on:
+  push:
+    tags: '**'
+    branches:
+      - dev
+      - 'f/**'
+env:
+  VCPKG_ROOT: "${{ github.workspace }}/../../vcpkg"
+  VCPKG_TRIPLETS_ROOT: "${{ github.workspace }}/../../my-vcpkg-triplets"
+  NIX_CONFIG: |
+    download-buffer-size = 1000000000
+    extra-experimental-features = flakes nix-command
+jobs:
+  publish-docs:
+    permissions:                # Job-level permissions configuration starts here
+      contents: write           # 'write' access to repository contents
+      pull-requests: write      # 'write' access to pull requests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git clone https://github.com/Neumann-A/my-vcpkg-triplets.git $VCPKG_TRIPLETS_ROOT
+      - uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - run: nix-collect-garbage
+      - run: nix develop -c echo 'DONE'
+      - run: ln -s $(realpath $(dirname $(nix develop -c which vcpkg))/../share/vcpkg) $VCPKG_ROOT
+      - uses: actions/cache/restore@v4
+        id: restore-cache
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ runner.os }}-${{ hashFiles('vcpkg.json') }}
+      - run: nix develop -c scripts/ci-build.sh linux-debug-llvm docs
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/vcpkg
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
+      # - name: Create and push force gh-pages branch
+      #   run: |
+      #     cd out/install/linux-debug-llvm/share/docs
+      #     touch .nojekyll
+      #     git init
+      #     git add -A
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git commit -m 'deploy'
+      #     git config --global --add safe.directory ${GITHUB_WORKSPACE}/out/install/linux-debug-llvm/share/docs
+      #     git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+      #     git branch -m gh-pages
+      #     git push origin gh-pages --force
+      - name: Push docs to gh-pages
+        run: |
+          if [[ $GITHUB_REF = refs/tags/* ]]; then
+            DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/tags\///')
+          elif [[ $GITHUB_REF = refs/heads/* ]]; then
+            DOC_BRANCH=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+          else
+            DOC_BRANCH=unknown
+          fi
+          DOCS="out/install/linux-debug-llvm/share/docs"
+          mkdir -p $(dirname $DOC_BRANCH)
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          rm -rf $DOC_BRANCH
+          mkdir -p $DOC_BRANCH
+          cp -ap $DOCS/* $DOC_BRANCH
+          git add $DOC_BRANCH
+          git commit -m "Build docs for $DOC_BRANCH"
+          git push origin gh-pages
+          cd $DOC_BRANCH
+          pwd
+          ls -laR
