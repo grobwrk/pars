@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Index &#8212; pars 0.1.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=279e0f84" />
+    <script src="_static/documentation_options.js?v=a58bc63e"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples/index.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet"> -->
+<style type="text/css" media="screen">
+.small-fa {
+vertical-align: top;
+font-size:0.7em;
+margin: 2px 0px 0px 2px;
+}
+</style>
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="examples/index.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">pars 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Index</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="index">
+<h1>Index<a class="headerlink" href="#index" title="Link to this heading">¶</a></h1>
+<p>Welcome to the <strong>pars</strong> C++23 framework documentation.</p>
+<p>This framework leverages libnng to create distributed applications by combining one or more reusable components. A component is an aggregate of nng_socket(s). You implement a pars application by combining one or more components.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the moment, we support only applications that uses a single component, implemented by extending from <a class="reference internal" href="library/core/app.html#_CPPv4I0EN4pars3app6singleE" title="pars::app::single"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">app::single</span></code></a>. Take a look at the <a class="reference internal" href="contribute/milestones.html#milestones"><span class="std std-ref">milestones</span></a> page to see coming features.</p>
+</div>
+<p>A pars application is created by defining handler functions for certain kinds of events, and registering them into the <a class="reference internal" href="library/core/dispatcher.html#_CPPv4N4pars2ev10dispatcherE" title="pars::ev::dispatcher"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ev::dispatcher</span></code></a>. The events are defined by you, while the kind of events are provided by pars and are: <a class="reference internal" href="library/core/kinds.html#_CPPv4I0EN4pars2ev5firedE" title="pars::ev::fired"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">ev::fired</span></code></a>, <a class="reference internal" href="library/core/kinds.html#_CPPv4I0EN4pars2ev4sentE" title="pars::ev::sent"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">ev::sent</span></code></a> and <a class="reference internal" href="library/core/kinds.html#_CPPv4I0EN4pars2ev8receivedE" title="pars::ev::received"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">ev::received</span></code></a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/client.html">Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/ref.html">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="library/index.html">Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library/core/index.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library/net/index.html">Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute/milestones.html">Milestones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute/building.html">Building</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="examples/index.html"
+                          title="next chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="examples/index.html" title="Examples"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">pars 0.1.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Index</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright  2025 Giuseppe Roberti.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

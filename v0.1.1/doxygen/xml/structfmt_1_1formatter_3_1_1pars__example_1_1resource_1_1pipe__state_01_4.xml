@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">fmt::formatter&lt; std::string &gt;</basecompoundref>
+    <includes refid="common_8h" local="no">common.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1a1f3c4a297f9a1ad4ca21e11c74c91c50" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) fmt::formatter&lt;::pars_example::resource::pipe_state &gt;::format</definition>
+        <argsstring>(const ::pars_example::resource::pipe_state &amp;s, format_context &amp;ctx) const</argsstring>
+        <name>format</name>
+        <qualifiedname>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;::format</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931" kindref="member">::pars_example::resource::pipe_state</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/common.h" line="178" column="8" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="178" bodyend="205"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>fmt::formatter&lt; std::string &gt;</label>
+      </node>
+      <node id="1">
+        <label>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;</label>
+        <link refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>fmt::formatter&lt; std::string &gt;</label>
+      </node>
+      <node id="1">
+        <label>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;</label>
+        <link refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/example/common.h" line="175" column="1" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="177" bodyend="206"/>
+    <listofallmembers>
+      <member refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1a1f3c4a297f9a1ad4ca21e11c74c91c50" prot="public" virt="non-virtual"><scope>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;</scope><name>format</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
