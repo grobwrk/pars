@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1ev_1_1job" kind="class" language="C++" prot="public">
+    <compoundname>pars::ev::job</compoundname>
+    <includes refid="job_8h" local="no">job.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1ev_1_1job_1a194b79e7d94a585e3dbe21016cb79195" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t pars::ev::job::id_m</definition>
+        <argsstring></argsstring>
+        <name>id_m</name>
+        <qualifiedname>pars::ev::job::id_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="103" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1job_1a868c4d1c315bb779cc55c56279357f9b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pars::ev::job::socket_id_m</definition>
+        <argsstring></argsstring>
+        <name>socket_id_m</name>
+        <qualifiedname>pars::ev::job::socket_id_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="104" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1job_1ab42f12b6b289f44e78368413ae7a2b0a" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t pars::ev::job::spec_hash_m</definition>
+        <argsstring></argsstring>
+        <name>spec_hash_m</name>
+        <qualifiedname>pars::ev::job::spec_hash_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="105" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1ev_1_1job_1a7eba37a7fcecf8c0abd17a62a953af45" prot="private" static="no" mutable="no">
+        <type>std::any</type>
+        <definition>std::any pars::ev::job::event_kind_m</definition>
+        <argsstring></argsstring>
+        <name>event_kind_m</name>
+        <qualifiedname>pars::ev::job::event_kind_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="106" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::job::job</definition>
+        <argsstring>(std::size_t j_id, int s_id, std::size_t h, std::any ke)</argsstring>
+        <name>job</name>
+        <qualifiedname>pars::ev::job::job</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>j_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>s_id</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>std::any</type>
+          <declname>ke</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="49" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="49" bodyend="55"/>
+        <referencedby refid="classpars_1_1ev_1_1job_1aa18aab9927053d1b0a498ef41eb39d60">job</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1job_1ab67f241a9dbf282aa591d5348af0405f">job</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1job_1a93a52ee39b5fcd82c5d62b34efbd059b">operator=</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1job_1a7543ef2b21ff5e3383300eaef165784a">operator=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1aa18aab9927053d1b0a498ef41eb39d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::job::job</definition>
+        <argsstring>(const job &amp;)=delete</argsstring>
+        <name>job</name>
+        <qualifiedname>pars::ev::job::job</qualifiedname>
+        <param>
+          <type>const <ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="57" column="3"/>
+        <references refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" compoundref="job_8h" startline="49" endline="55">job</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1ab67f241a9dbf282aa591d5348af0405f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::job::job</definition>
+        <argsstring>(job &amp;&amp;)=default</argsstring>
+        <name>job</name>
+        <qualifiedname>pars::ev::job::job</qualifiedname>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="59" column="3"/>
+        <references refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" compoundref="job_8h" startline="49" endline="55">job</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1a93a52ee39b5fcd82c5d62b34efbd059b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;</type>
+        <definition>job &amp; pars::ev::job::operator=</definition>
+        <argsstring>(const job &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>pars::ev::job::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="61" column="7"/>
+        <references refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" compoundref="job_8h" startline="49" endline="55">job</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1a7543ef2b21ff5e3383300eaef165784a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;</type>
+        <definition>job &amp; pars::ev::job::operator=</definition>
+        <argsstring>(job &amp;&amp;j)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>pars::ev::job::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref> &amp;&amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="63" column="7"/>
+        <references refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" compoundref="concept_2kind_8h" startline="56">pars::ev::is_same_kind_v</references>
+        <references refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" compoundref="job_8h" startline="49" endline="55">job</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1afce2c813eadb6e5471e026fa0b4fbaaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>kind_of&lt; event_t &gt;</type>
+        <definition>kind_of&lt; event_t &gt; pars::ev::job::event</definition>
+        <argsstring>()</argsstring>
+        <name>event</name>
+        <qualifiedname>pars::ev::job::event</qualifiedname>
+    <requiresclause>(!is_same_kind_v&lt;kind_of, received&gt; || std::is_same_v&lt;event_t, nng::msg&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="68" column="11" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="68" bodyend="71"/>
+        <referencedby refid="classpars_1_1ev_1_1job_1a5a92965db4c873e87600ac9d7d0faada" compoundref="job_8h" startline="76" endline="87">event</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" compoundref="hf__registry____insert_8h" startline="40" endline="75">pars::ev::hf_registry::insert</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1a5a92965db4c873e87600ac9d7d0faada" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structpars_1_1ev_1_1received" kindref="compound">received</ref>&lt; event_t &gt;</type>
+        <definition>received&lt; event_t &gt; pars::ev::job::event</definition>
+        <argsstring>()</argsstring>
+        <name>event</name>
+        <qualifiedname>pars::ev::job::event</qualifiedname>
+    <requiresclause>(is_same_kind_v&lt;kind_of, received&gt; &amp;&amp; !std::is_same_v&lt;event_t, nng::msg&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="76" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="76" bodyend="87"/>
+        <references refid="classpars_1_1ev_1_1job_1afce2c813eadb6e5471e026fa0b4fbaaf" compoundref="job_8h" startline="68" endline="71">event</references>
+        <references refid="structpars_1_1ev_1_1serialize_1a6e30dbe1b94b270504b43116ca736292" compoundref="serializer_8h" startline="80" endline="106">pars::ev::serialize::to_event</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t pars::ev::job::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <qualifiedname>pars::ev::job::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="89" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="89" bodyend="89"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" compoundref="hf__registry____insert_8h" startline="40" endline="75">pars::ev::hf_registry::insert</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1job_1ae742efe1daa7a551317a916871ecaf7e" compoundref="job_8h" startline="100" endline="100">set_id</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="54" endline="69">pars::ev::runner::start_thread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::ev::job::socket_id</definition>
+        <argsstring>() const</argsstring>
+        <name>socket_id</name>
+        <qualifiedname>pars::ev::job::socket_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="91" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="91" bodyend="91"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="54" endline="69">pars::ev::runner::start_thread</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t pars::ev::job::spec_hash</definition>
+        <argsstring>() const</argsstring>
+        <name>spec_hash</name>
+        <qualifiedname>pars::ev::job::spec_hash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="93" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="93" bodyend="93"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1job_1ac99bbb4d6833af6990ca0f06b26a36ce" compoundref="job_8h" startline="95" endline="98">format_to</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1ac99bbb4d6833af6990ca0f06b26a36ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::ev::job::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::ev::job::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="95" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="95" bodyend="98"/>
+        <references refid="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" compoundref="job_8h" startline="93" endline="93">spec_hash</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1ev_1_1job_1ae742efe1daa7a551317a916871ecaf7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::ev::job::set_id</definition>
+        <argsstring>(std::size_t id)</argsstring>
+        <name>set_id</name>
+        <qualifiedname>pars::ev::job::set_id</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="100" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="100" bodyend="100"/>
+        <references refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" compoundref="job_8h" startline="89" endline="89">id</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="46" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="47" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classpars_1_1ev_1_1job_1afce2c813eadb6e5471e026fa0b4fbaaf" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>event</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a5a92965db4c873e87600ac9d7d0faada" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>event</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a7eba37a7fcecf8c0abd17a62a953af45" prot="private" virt="non-virtual"><scope>pars::ev::job</scope><name>event_kind_m</name></member>
+      <member refid="classpars_1_1ev_1_1job_1ac99bbb4d6833af6990ca0f06b26a36ce" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>format_to</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>id</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a194b79e7d94a585e3dbe21016cb79195" prot="private" virt="non-virtual"><scope>pars::ev::job</scope><name>id_m</name></member>
+      <member refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>job</name></member>
+      <member refid="classpars_1_1ev_1_1job_1aa18aab9927053d1b0a498ef41eb39d60" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>job</name></member>
+      <member refid="classpars_1_1ev_1_1job_1ab67f241a9dbf282aa591d5348af0405f" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>job</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a93a52ee39b5fcd82c5d62b34efbd059b" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>operator=</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a7543ef2b21ff5e3383300eaef165784a" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>operator=</name></member>
+      <member refid="classpars_1_1ev_1_1job_1ae742efe1daa7a551317a916871ecaf7e" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>set_id</name></member>
+      <member refid="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>socket_id</name></member>
+      <member refid="classpars_1_1ev_1_1job_1a868c4d1c315bb779cc55c56279357f9b" prot="private" virt="non-virtual"><scope>pars::ev::job</scope><name>socket_id_m</name></member>
+      <member refid="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" prot="public" virt="non-virtual"><scope>pars::ev::job</scope><name>spec_hash</name></member>
+      <member refid="classpars_1_1ev_1_1job_1ab42f12b6b289f44e78368413ae7a2b0a" prot="private" virt="non-virtual"><scope>pars::ev::job</scope><name>spec_hash_m</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

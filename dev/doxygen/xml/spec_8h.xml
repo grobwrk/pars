@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="spec_8h" kind="file" language="C++">
+    <compoundname>spec.h</compoundname>
+    <includes refid="klass_8h" local="yes">pars/ev/klass.h</includes>
+    <includes refid="nametype_8h" local="yes">pars/log/nametype.h</includes>
+    <includes local="no">cereal/cereal.hpp</includes>
+    <includes local="no">fmt/format.h</includes>
+    <includes local="no">nngpp/msg.h</includes>
+    <includedby refid="hf__registry_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</includedby>
+    <includedby refid="job_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/job.h</includedby>
+    <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pars/ev/kind_decl.h</label>
+        <link refid="kind__decl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pars/ev/klass.h</label>
+        <link refid="klass_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
+        <link refid="spec_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pars/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pars/log/demangle.h</label>
+        <link refid="demangle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>pars/log/nametype.h</label>
+        <link refid="nametype_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>cereal/cereal.hpp</label>
+      </node>
+      <node id="8">
+        <label>chrono</label>
+      </node>
+      <node id="10">
+        <label>concepts</label>
+      </node>
+      <node id="14">
+        <label>cstddef</label>
+      </node>
+      <node id="18">
+        <label>cxxabi.h</label>
+      </node>
+      <node id="13">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="19">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="9">
+        <label>nngpp/msg.h</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>string_view</label>
+      </node>
+      <node id="20">
+        <label>typeinfo</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <link refid="client_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <link refid="example_2event_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <link refid="server__backend_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/single.h</label>
+        <link refid="single_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</label>
+        <link refid="backend_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h</label>
+        <link refid="enqueuer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</label>
+        <link refid="hf__registry_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h</label>
+        <link refid="hf__registry____insert_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/job.h</label>
+        <link refid="job_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/runner.h</label>
+        <link refid="runner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
+        <link refid="spec_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context.h</label>
+        <link refid="context_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</label>
+        <link refid="context__registry_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/op.h</label>
+        <link refid="op_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pull.h</label>
+        <link refid="pull_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/push.h</label>
+        <link refid="push_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/rep.h</label>
+        <link refid="rep_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/req.h</label>
+        <link refid="req_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
+        <link refid="socket_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <link refid="pars_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classpars_1_1ev_1_1spec" prot="public">pars::ev::spec</innerclass>
+    <innernamespace refid="namespacepars">pars</innernamespace>
+    <innernamespace refid="namespacepars_1_1ev">pars::ev</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>(c)<sp/>2025<sp/>Giuseppe<sp/>Roberti.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/>modification,</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/>contributors</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="klass_8h" kindref="compound">pars/ev/klass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nametype_8h" kindref="compound">pars/log/nametype.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cereal/cereal.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/msg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of_event_t&gt;</highlight></codeline>
+<codeline lineno="43" refid="classpars_1_1ev_1_1spec" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1ev_1_1spec" kindref="compound">spec</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classpars_1_1ev_1_1spec_1a34b174db9977dd376976477a8cbbc7cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1ev_1_1spec_1a34b174db9977dd376976477a8cbbc7cc" kindref="member">kind_of_event_type</ref><sp/>=<sp/>kind_of_event_t;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="49" refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kindref="member">kind_type</ref><sp/>=<sp/>kind_of_event_type::template<sp/><ref refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kindref="member">kind_type&lt;event_t&gt;</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classpars_1_1ev_1_1spec_1a19dc9a6ecc43008cad9731862167c765" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1ev_1_1spec_1a19dc9a6ecc43008cad9731862167c765" kindref="member">event_type</ref><sp/>=<sp/>kind_of_event_type::event_type;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">hash</ref><sp/>=</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;kind_type&lt;event_type&gt;</ref>&gt;<ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">::hash</ref><sp/>^<sp/>(<ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;klass&lt;event_type&gt;</ref>&gt;<ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">::hash</ref><sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}<sp/>\x1b[90m[hash:{:X},<sp/>kind:{}({:X}),<sp/>event:{}({:X})]\x1b[0m&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" kindref="member">nametype</ref>&lt;<ref refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kindref="member">kind_type&lt;event_type&gt;</ref>&gt;(),<sp/><ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">hash</ref>,<sp/><ref refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kindref="member">kind_type&lt;event_type&gt;::uuid</ref>,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid</ref>&lt;<ref refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kindref="member">kind_type&lt;event_type&gt;</ref>&gt;<ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">::hash</ref>,<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_type&gt;::uuid</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid</ref>&lt;<ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_type&gt;</ref>&gt;<ref refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kindref="member">::hash</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h"/>
+  </compounddef>
+</doxygen>
