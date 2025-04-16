@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Core &#8212; pars 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css?v=279e0f84" />
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Protocols" href="protocols.html" />
+    <link rel="prev" title="Network" href="index.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet"> -->
+<style type="text/css" media="screen">
+.small-fa {
+vertical-align: top;
+font-size:0.7em;
+margin: 2px 0px 0px 2px;
+}
+</style>
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="protocols.html" title="Protocols"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Network"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pars 0.1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Library</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Network</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Core</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="core">
+<h1>Core<a class="headerlink" href="#core" title="Link to this heading">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socketE">
+<span id="_CPPv3N4pars3net6socketE"></span><span id="_CPPv2N4pars3net6socketE"></span><span id="pars::net::socket"></span><span class="target" id="classpars_1_1net_1_1socket"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net6socketE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Represents an nng_socket. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket6socketERN2ev8enqueuerERRN3nng6socketE">
+<span id="_CPPv3N4pars3net6socket6socketERN2ev8enqueuerERRN3nng6socketE"></span><span id="_CPPv2N4pars3net6socket6socketERN2ev8enqueuerERRN3nng6socketE"></span><span id="pars::net::socket::socket__ev::enqueuerR.nng::socketRR"></span><span class="target" id="classpars_1_1net_1_1socket_1ad0cec6aacedbf22148b5ae633882d831"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ev</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../core/dispatcher.html#_CPPv4N4pars2ev8enqueuerE" title="pars::ev::enqueuer"><span class="n"><span class="pre">enqueuer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span>, <span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket6socketERN2ev8enqueuerERRN3nng6socketE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Construct a socket. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socketD0Ev">
+<span id="_CPPv3N4pars3net6socketD0Ev"></span><span id="_CPPv2N4pars3net6socketD0Ev"></span><span id="pars::net::socket::~socket"></span><span class="target" id="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~socket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socketD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socketcv9tool_viewEv">
+<span id="_CPPv3N4pars3net6socketcv9tool_viewEv"></span><span id="_CPPv2N4pars3net6socketcv9tool_viewEv"></span><span id="pars::net::socket::castto-tool_view-operator"></span><span class="target" id="classpars_1_1net_1_1socket_1a1d2bfd0ed8969422204f7c0775098753"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net9tool_viewE" title="pars::net::tool_view"><span class="n"><span class="pre">tool_view</span></span></a></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socketcv9tool_viewEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket7optionsEK10socket_opt">
+<span id="_CPPv3N4pars3net6socket7optionsEK10socket_opt"></span><span id="_CPPv2N4pars3net6socket7optionsEK10socket_opt"></span><span id="pars::net::socket::options__socket_optC"></span><span class="target" id="classpars_1_1net_1_1socket_1aff1b8fae37edaa56bfafa6800db0079b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net10socket_optE" title="pars::net::socket_opt"><span class="n"><span class="pre">socket_opt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">opts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket7optionsEK10socket_opt" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket7optionsEv">
+<span id="_CPPv3NK4pars3net6socket7optionsEv"></span><span id="_CPPv2NK4pars3net6socket7optionsEv"></span><span id="pars::net::socket::optionsC"></span><span class="target" id="classpars_1_1net_1_1socket_1ad5a06ea8d8c8fd74a2988e4a2e03598e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net10socket_optE" title="pars::net::socket_opt"><span class="n"><span class="pre">socket_opt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket7optionsEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket4dialEPKc">
+<span id="_CPPv3N4pars3net6socket4dialEPKc"></span><span id="_CPPv2N4pars3net6socket4dialEPKc"></span><span id="pars::net::socket::dial__cCP"></span><span class="target" id="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dial</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket4dialEPKc" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket6listenEPKc">
+<span id="_CPPv3N4pars3net6socket6listenEPKc"></span><span id="_CPPv2N4pars3net6socket6listenEPKc"></span><span id="pars::net::socket::listen__cCP"></span><span class="target" id="classpars_1_1net_1_1socket_1ac86eb2bd9aeacb0e852a0189bc7e074e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket6listenEPKc" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket7connectEPKcK5cmode">
+<span id="_CPPv3N4pars3net6socket7connectEPKcK5cmode"></span><span id="_CPPv2N4pars3net6socket7connectEPKcK5cmode"></span><span id="pars::net::socket::connect__cCP.cmodeC"></span><span class="target" id="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connect</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">addr</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net5cmodeE" title="pars::net::cmode"><span class="n"><span class="pre">cmode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket7connectEPKcK5cmode" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket8make_ctxEv">
+<span id="_CPPv3NK4pars3net6socket8make_ctxEv"></span><span id="_CPPv2NK4pars3net6socket8make_ctxEv"></span><span id="pars::net::socket::make_ctxC"></span><span class="target" id="classpars_1_1net_1_1socket_1accff1cd65ffe3d2763a0aa62727d8c98"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ctx</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">make_ctx</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket8make_ctxEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket8send_aioEN3nng8aio_viewE">
+<span id="_CPPv3N4pars3net6socket8send_aioEN3nng8aio_viewE"></span><span id="_CPPv2N4pars3net6socket8send_aioEN3nng8aio_viewE"></span><span id="pars::net::socket::send_aio__nng::aio_view"></span><span class="target" id="classpars_1_1net_1_1socket_1af4d4b5fb3040fd8dacd0ce65ad0297bb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_aio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aio_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket8send_aioEN3nng8aio_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket8recv_aioEN3nng8aio_viewE">
+<span id="_CPPv3N4pars3net6socket8recv_aioEN3nng8aio_viewE"></span><span id="_CPPv2N4pars3net6socket8recv_aioEN3nng8aio_viewE"></span><span id="pars::net::socket::recv_aio__nng::aio_view"></span><span class="target" id="classpars_1_1net_1_1socket_1a97c1e97487f978813305f667b3837d88"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_aio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aio_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket8recv_aioEN3nng8aio_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_N2ev7event_cEEN4pars3net6socket4sendEv7event_t4pipe">
+<span id="_CPPv3I_N2ev7event_cEEN4pars3net6socket4sendE7event_t4pipe"></span><span id="_CPPv2I_N2ev7event_cEEN4pars3net6socket4sendE7event_t4pipe"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net6socket4sendEv7event_t4pipe" title="pars::net::socket::send::ev"><span class="n"><span class="pre">ev</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">event_c</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">event_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpars_1_1net_1_1socket_1a5a7f31a949fcd8a99f829b0c5e491329"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net6socket4sendEv7event_t4pipe" title="pars::net::socket::send::event_t"><span class="n"><span class="pre">event_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ev</span></span>, <a class="reference internal" href="#_CPPv4N4pars3net4pipeE" title="pars::net::pipe"><span class="n"><span class="pre">pipe</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_N2ev7event_cEEN4pars3net6socket4sendEv7event_t4pipe" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket4recvEv">
+<span id="_CPPv3N4pars3net6socket4recvEv"></span><span id="_CPPv2N4pars3net6socket4recvEv"></span><span id="pars::net::socket::recv"></span><span class="target" id="classpars_1_1net_1_1socket_1a9ebfc30e5757d46d147b1d35da38fc2e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket4recvEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net6socket4stopEv">
+<span id="_CPPv3N4pars3net6socket4stopEv"></span><span id="_CPPv2N4pars3net6socket4stopEv"></span><span id="pars::net::socket::stop"></span><span class="target" id="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net6socket4stopEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket2idEv">
+<span id="_CPPv3NK4pars3net6socket2idEv"></span><span id="_CPPv2NK4pars3net6socket2idEv"></span><span id="pars::net::socket::idC"></span><span class="target" id="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket2idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket9socket_idEv">
+<span id="_CPPv3NK4pars3net6socket9socket_idEv"></span><span id="_CPPv2NK4pars3net6socket9socket_idEv"></span><span id="pars::net::socket::socket_idC"></span><span class="target" id="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket9socket_idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket10proto_nameEv">
+<span id="_CPPv3NK4pars3net6socket10proto_nameEv"></span><span id="_CPPv2NK4pars3net6socket10proto_nameEv"></span><span id="pars::net::socket::proto_nameC"></span><span class="target" id="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">proto_name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket10proto_nameEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net6socket9format_toERN3fmt14format_contextE">
+<span id="_CPPv3NK4pars3net6socket9format_toERN3fmt14format_contextE"></span><span id="_CPPv2NK4pars3net6socket9format_toERN3fmt14format_contextE"></span><span id="pars::net::socket::format_to__fmt::format_contextRC"></span><span class="target" id="classpars_1_1net_1_1socket_1a2b9ab30d61ab290fbf7f2923fc7b5943"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">decltype</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4NK4pars3net6socket9format_toERN3fmt14format_contextE" title="pars::net::socket::format_to::ctx"><span class="n"><span class="pre">ctx</span></span></a><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">out</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format_to</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">format_context</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ctx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net6socket9format_toERN3fmt14format_contextE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net10socket_optE">
+<span id="_CPPv3N4pars3net10socket_optE"></span><span id="_CPPv2N4pars3net10socket_optE"></span><span id="pars::net::socket_opt"></span><span class="target" id="structpars_1_1net_1_1socket__opt"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket_opt</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net10socket_optE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Represents the options that can be configured for a given socket. </p>
+<p>These can be nng_options for an nng_socket, or they can be options of the nng_req protocol. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-nng_socket-options">nng_socket Options</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net10socket_opt12recv_timeoutE">
+<span id="_CPPv3N4pars3net10socket_opt12recv_timeoutE"></span><span id="_CPPv2N4pars3net10socket_opt12recv_timeoutE"></span><span id="pars::net::socket_opt::recv_timeout__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_timeout</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net10socket_opt12recv_timeoutE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>NNG_OPT_RECVTIMEO. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net10socket_opt12send_timeoutE">
+<span id="_CPPv3N4pars3net10socket_opt12send_timeoutE"></span><span id="_CPPv2N4pars3net10socket_opt12send_timeoutE"></span><span id="pars::net::socket_opt::send_timeout__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_timeout</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net10socket_opt12send_timeoutE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>NNG_OPT_SENDTIMEO. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-nng_req-options">nng_req Options</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net10socket_opt15req_resend_timeE">
+<span id="_CPPv3N4pars3net10socket_opt15req_resend_timeE"></span><span id="_CPPv2N4pars3net10socket_opt15req_resend_timeE"></span><span id="pars::net::socket_opt::req_resend_time__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">req_resend_time</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net10socket_opt15req_resend_timeE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>NNG_OPT_REQ_RESENDTIME. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net10socket_opt15req_resend_tickE">
+<span id="_CPPv3N4pars3net10socket_opt15req_resend_tickE"></span><span id="_CPPv2N4pars3net10socket_opt15req_resend_tickE"></span><span id="pars::net::socket_opt::req_resend_tick__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">req_resend_tick</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net10socket_opt15req_resend_tickE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>NNG_OPT_REQ_RESENDTICK. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7contextE">
+<span id="_CPPv3N4pars3net7contextE"></span><span id="_CPPv2N4pars3net7contextE"></span><span id="pars::net::context"></span><span class="target" id="classpars_1_1net_1_1context"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">context</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net7contextE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context7contextERN2ev8enqueuerERRN3nng3ctxERKN3net6socketE">
+<span id="_CPPv3N4pars3net7context7contextERN2ev8enqueuerERRN3nng3ctxERKN3net6socketE"></span><span id="_CPPv2N4pars3net7context7contextERN2ev8enqueuerERRN3nng3ctxERKN3net6socketE"></span><span id="pars::net::context::context__ev::enqueuerR.nng::ctxRR.net::socketCR"></span><span class="target" id="classpars_1_1net_1_1context_1a5f747aade88c1cd58c28c1e4d248fe3c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">context</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ev</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../core/dispatcher.html#_CPPv4N4pars2ev8enqueuerE" title="pars::ev::enqueuer"><span class="n"><span class="pre">enqueuer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span>, <span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ctx</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N4pars3net6socketE" title="pars::net::socket"><span class="n"><span class="pre">socket</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context7contextERN2ev8enqueuerERRN3nng3ctxERKN3net6socketE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7contextD0Ev">
+<span id="_CPPv3N4pars3net7contextD0Ev"></span><span id="_CPPv2N4pars3net7contextD0Ev"></span><span id="pars::net::context::~context"></span><span class="target" id="classpars_1_1net_1_1context_1aa972739a825381e5a987bc5ee2b47849"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~context</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7contextD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7contextcv9tool_viewEv">
+<span id="_CPPv3N4pars3net7contextcv9tool_viewEv"></span><span id="_CPPv2N4pars3net7contextcv9tool_viewEv"></span><span id="pars::net::context::castto-tool_view-operator"></span><span class="target" id="classpars_1_1net_1_1context_1ac78d9beb9ebaf66e9ba3b470436c6835"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net9tool_viewE" title="pars::net::tool_view"><span class="n"><span class="pre">tool_view</span></span></a></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7contextcv9tool_viewEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context11set_optionsE11context_opt">
+<span id="_CPPv3N4pars3net7context11set_optionsE11context_opt"></span><span id="_CPPv2N4pars3net7context11set_optionsE11context_opt"></span><span id="pars::net::context::set_options__context_opt"></span><span class="target" id="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_options</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N4pars3net11context_optE" title="pars::net::context_opt"><span class="n"><span class="pre">context_opt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">opts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context11set_optionsE11context_opt" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net7context7optionsEv">
+<span id="_CPPv3NK4pars3net7context7optionsEv"></span><span id="_CPPv2NK4pars3net7context7optionsEv"></span><span id="pars::net::context::optionsC"></span><span class="target" id="classpars_1_1net_1_1context_1a121e18a8538a0aa3f8d4f1a4f5b0d2d9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net11context_optE" title="pars::net::context_opt"><span class="n"><span class="pre">context_opt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">options</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net7context7optionsEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context8send_aioEN3nng8aio_viewE">
+<span id="_CPPv3N4pars3net7context8send_aioEN3nng8aio_viewE"></span><span id="_CPPv2N4pars3net7context8send_aioEN3nng8aio_viewE"></span><span id="pars::net::context::send_aio__nng::aio_view"></span><span class="target" id="classpars_1_1net_1_1context_1a9c03c104952727be09ca4ce39fa869b0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_aio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aio_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context8send_aioEN3nng8aio_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context8recv_aioEN3nng8aio_viewE">
+<span id="_CPPv3N4pars3net7context8recv_aioEN3nng8aio_viewE"></span><span id="_CPPv2N4pars3net7context8recv_aioEN3nng8aio_viewE"></span><span id="pars::net::context::recv_aio__nng::aio_view"></span><span class="target" id="classpars_1_1net_1_1context_1a08f8d9db0b002d04cef0ee0f012a60a1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_aio</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">aio_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context8recv_aioEN3nng8aio_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_N2ev7event_cEEN4pars3net7context4sendEv7event_t4pipe">
+<span id="_CPPv3I_N2ev7event_cEEN4pars3net7context4sendE7event_t4pipe"></span><span id="_CPPv2I_N2ev7event_cEEN4pars3net7context4sendE7event_t4pipe"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net7context4sendEv7event_t4pipe" title="pars::net::context::send::ev"><span class="n"><span class="pre">ev</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">event_c</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">event_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpars_1_1net_1_1context_1ab93a9163b25d90e2f7c9111af489bab4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net7context4sendEv7event_t4pipe" title="pars::net::context::send::event_t"><span class="n"><span class="pre">event_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ev</span></span>, <a class="reference internal" href="#_CPPv4N4pars3net4pipeE" title="pars::net::pipe"><span class="n"><span class="pre">pipe</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_N2ev7event_cEEN4pars3net7context4sendEv7event_t4pipe" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context4recvEv">
+<span id="_CPPv3N4pars3net7context4recvEv"></span><span id="_CPPv2N4pars3net7context4recvEv"></span><span id="pars::net::context::recv"></span><span class="target" id="classpars_1_1net_1_1context_1a50de22a87a21f5c8070be3276bb8ff51"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context4recvEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net7context4stopEv">
+<span id="_CPPv3N4pars3net7context4stopEv"></span><span id="_CPPv2N4pars3net7context4stopEv"></span><span id="pars::net::context::stop"></span><span class="target" id="classpars_1_1net_1_1context_1ae85758aec6bcd5b74843ec857fa620b6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net7context4stopEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net7context2idEv">
+<span id="_CPPv3NK4pars3net7context2idEv"></span><span id="_CPPv2NK4pars3net7context2idEv"></span><span id="pars::net::context::idC"></span><span class="target" id="classpars_1_1net_1_1context_1a1b38d5507e3052dfed0f1695a5e8e763"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net7context2idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net7context9socket_idEv">
+<span id="_CPPv3NK4pars3net7context9socket_idEv"></span><span id="_CPPv2NK4pars3net7context9socket_idEv"></span><span id="pars::net::context::socket_idC"></span><span class="target" id="classpars_1_1net_1_1context_1a711dd6d4e2d0bd4a7302672956436861"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net7context9socket_idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net7context4sockEv">
+<span id="_CPPv3NK4pars3net7context4sockEv"></span><span id="_CPPv2NK4pars3net7context4sockEv"></span><span id="pars::net::context::sockC"></span><span class="target" id="classpars_1_1net_1_1context_1ad139db4bcba3294c91658c4322455dd4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N4pars3net6socketE" title="pars::net::socket"><span class="n"><span class="pre">socket</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">sock</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net7context4sockEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net7context9format_toERN3fmt14format_contextE">
+<span id="_CPPv3NK4pars3net7context9format_toERN3fmt14format_contextE"></span><span id="_CPPv2NK4pars3net7context9format_toERN3fmt14format_contextE"></span><span id="pars::net::context::format_to__fmt::format_contextRC"></span><span class="target" id="classpars_1_1net_1_1context_1a58098fcdd732040e3d7aade8dcd8e73e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">decltype</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4NK4pars3net7context9format_toERN3fmt14format_contextE" title="pars::net::context::format_to::ctx"><span class="n"><span class="pre">ctx</span></span></a><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">out</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format_to</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">format_context</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ctx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net7context9format_toERN3fmt14format_contextE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net11context_optE">
+<span id="_CPPv3N4pars3net11context_optE"></span><span id="_CPPv2N4pars3net11context_optE"></span><span id="pars::net::context_opt"></span><span class="target" id="structpars_1_1net_1_1context__opt"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">context_opt</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net11context_optE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net11context_opt12recv_timeoutE">
+<span id="_CPPv3N4pars3net11context_opt12recv_timeoutE"></span><span id="_CPPv2N4pars3net11context_opt12recv_timeoutE"></span><span id="pars::net::context_opt::recv_timeout__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_timeout</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net11context_opt12recv_timeoutE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net11context_opt12send_timeoutE">
+<span id="_CPPv3N4pars3net11context_opt12send_timeoutE"></span><span id="_CPPv2N4pars3net11context_opt12send_timeoutE"></span><span id="pars::net::context_opt::send_timeout__std::optional:nng_duration:"></span><span class="target" id="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">nng_duration</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_timeout</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net11context_opt12send_timeoutE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registryE">
+<span id="_CPPv3N4pars3net16context_registryE"></span><span id="_CPPv2N4pars3net16context_registryE"></span><span id="pars::net::context_registry"></span><span class="target" id="classpars_1_1net_1_1context__registry"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">context_registry</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net16context_registryE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registry16context_registryERN2ev8enqueuerERN3net6socketE">
+<span id="_CPPv3N4pars3net16context_registry16context_registryERN2ev8enqueuerERN3net6socketE"></span><span id="_CPPv2N4pars3net16context_registry16context_registryERN2ev8enqueuerERN3net6socketE"></span><span id="pars::net::context_registry::context_registry__ev::enqueuerR.net::socketR"></span><span class="target" id="classpars_1_1net_1_1context__registry_1ac0ed0f395e588f201dac1a3454b3909f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">context_registry</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ev</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../core/dispatcher.html#_CPPv4N4pars2ev8enqueuerE" title="pars::ev::enqueuer"><span class="n"><span class="pre">enqueuer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span>, <span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N4pars3net6socketE" title="pars::net::socket"><span class="n"><span class="pre">socket</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net16context_registry16context_registryERN2ev8enqueuerERN3net6socketE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registry8stop_allEv">
+<span id="_CPPv3N4pars3net16context_registry8stop_allEv"></span><span id="_CPPv2N4pars3net16context_registry8stop_allEv"></span><span id="pars::net::context_registry::stop_all"></span><span class="target" id="classpars_1_1net_1_1context__registry_1a33dc46a66145476a2efbdfbcc58a772b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop_all</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net16context_registry8stop_allEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registry7emplaceEv">
+<span id="_CPPv3N4pars3net16context_registry7emplaceEv"></span><span id="_CPPv2N4pars3net16context_registry7emplaceEv"></span><span id="pars::net::context_registry::emplace"></span><span class="target" id="classpars_1_1net_1_1context__registry_1af4ffa0b9a6c2329ef554a61edc3a8286"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">emplace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net16context_registry7emplaceEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registry2ofERKN3net9tool_viewE">
+<span id="_CPPv3N4pars3net16context_registry2ofERKN3net9tool_viewE"></span><span id="_CPPv2N4pars3net16context_registry2ofERKN3net9tool_viewE"></span><span id="pars::net::context_registry::of__net::tool_viewCR"></span><span class="target" id="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net7contextE" title="pars::net::context"><span class="n"><span class="pre">context</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">of</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N4pars3net9tool_viewE" title="pars::net::tool_view"><span class="n"><span class="pre">tool_view</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net16context_registry2ofERKN3net9tool_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net16context_registry10start_recvEi">
+<span id="_CPPv3N4pars3net16context_registry10start_recvEi"></span><span id="_CPPv2N4pars3net16context_registry10start_recvEi"></span><span id="pars::net::context_registry::start_recv__i"></span><span class="target" id="classpars_1_1net_1_1context__registry_1a15cd11ff729311912777eded34907288"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start_recv</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_ctxs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net16context_registry10start_recvEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2opE">
+<span id="_CPPv3N4pars3net2opE"></span><span id="_CPPv2N4pars3net2opE"></span><span id="pars::net::op"></span><span class="target" id="classpars_1_1net_1_1op"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">op</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net2opE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2opD0Ev">
+<span id="_CPPv3N4pars3net2opD0Ev"></span><span id="_CPPv2N4pars3net2opD0Ev"></span><span id="pars::net::op::~op"></span><span class="target" id="classpars_1_1net_1_1op_1a5d31c5655ef3420fbcc9279203a0364d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~op</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2opD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2opcvbEv">
+<span id="_CPPv3N4pars3net2opcvbEv"></span><span id="_CPPv2N4pars3net2opcvbEv"></span><span id="pars::net::op::castto-b-operator"></span><span class="target" id="classpars_1_1net_1_1op_1ac2e586be1d74ae91c29bae1f634e83c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2opcvbEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t">
+<span id="_CPPv3I_N2ev7event_cE_6tool_cEN4pars3net2op4sendERN2ev8enqueuerER6tool_t4pipe7event_t"></span><span id="_CPPv2I_N2ev7event_cE_6tool_cEN4pars3net2op4sendERN2ev8enqueuerER6tool_t4pipe7event_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t" title="pars::net::op::send::ev"><span class="n"><span class="pre">ev</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">event_c</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">event_t</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../core/concepts.html#_CPPv4I0EN4pars3net6tool_cE" title="pars::net::tool_c"><span class="n"><span class="pre">tool_c</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tool_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t" title="pars::net::op::send::ev"><span class="n"><span class="pre">ev</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enqueuer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span>, <a class="reference internal" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t" title="pars::net::op::send::tool_t"><span class="n"><span class="pre">tool_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span>, <a class="reference internal" href="#_CPPv4N4pars3net4pipeE" title="pars::net::pipe"><span class="n"><span class="pre">pipe</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span>, <a class="reference internal" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t" title="pars::net::op::send::event_t"><span class="n"><span class="pre">event_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ev</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I_6tool_cEN4pars3net2op4recvEvRN2ev8enqueuerER6tool_t">
+<span id="_CPPv3I_6tool_cEN4pars3net2op4recvERN2ev8enqueuerER6tool_t"></span><span id="_CPPv2I_6tool_cEN4pars3net2op4recvERN2ev8enqueuerER6tool_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../core/concepts.html#_CPPv4I0EN4pars3net6tool_cE" title="pars::net::tool_c"><span class="n"><span class="pre">tool_c</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tool_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ev</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../core/dispatcher.html#_CPPv4N4pars2ev8enqueuerE" title="pars::ev::enqueuer"><span class="n"><span class="pre">enqueuer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span>, <a class="reference internal" href="#_CPPv4I_6tool_cEN4pars3net2op4recvEvRN2ev8enqueuerER6tool_t" title="pars::net::op::recv::tool_t"><span class="n"><span class="pre">tool_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_6tool_cEN4pars3net2op4recvEvRN2ev8enqueuerER6tool_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE">
+<span id="_CPPv3N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE"></span><span id="_CPPv2N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE"></span><span class="target" id="classpars_1_1net_1_1op_1aa4faf9415e3741de3afaf12d7d745d4f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng_duration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ms</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2op11reset_sleepE12nng_duration">
+<span id="_CPPv3N4pars3net2op11reset_sleepE12nng_duration"></span><span id="_CPPv2N4pars3net2op11reset_sleepE12nng_duration"></span><span id="pars::net::op::reset_sleep__nng_duration"></span><span class="target" id="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_sleep</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng_duration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ms</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2op11reset_sleepE12nng_duration" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net2op6resultEv">
+<span id="_CPPv3NK4pars3net2op6resultEv"></span><span id="_CPPv2NK4pars3net2op6resultEv"></span><span id="pars::net::op::resultC"></span><span class="target" id="classpars_1_1net_1_1op_1abb22751b69382b2cb64b409e00050762"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">error</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net2op6resultEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>return result of asynchronous operation </p>
+<p>
+The nng_aio_result() returns the result of the operation associated with the handle aio. If the operation was successful, then 0 is returned. Otherwise a non-zero error code is returned. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net2op5abortEN3nng5errorE">
+<span id="_CPPv3NK4pars3net2op5abortEN3nng5errorE"></span><span id="_CPPv2NK4pars3net2op5abortEN3nng5errorE"></span><span id="pars::net::op::abort__nng::errorC"></span><span class="target" id="classpars_1_1net_1_1op_1a8d35e2fa062fc0c2e1dbbddc6cddaec3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">abort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">error</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net2op5abortEN3nng5errorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>abort asynchronous I/O operation </p>
+<p>
+The <a class="reference internal" href="#classpars_1_1net_1_1op_1a8d35e2fa062fc0c2e1dbbddc6cddaec3"><span class="std std-ref">abort()</span></a> function aborts an operation previously started with the handle aio.</p>
+<p>If the operation is aborted, then the callback for the handle will be called, and the function <a class="reference internal" href="#classpars_1_1net_1_1op_1abb22751b69382b2cb64b409e00050762"><span class="std std-ref">result()</span></a> will return the error err. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>err</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net2op6cancelEv">
+<span id="_CPPv3NK4pars3net2op6cancelEv"></span><span id="_CPPv2NK4pars3net2op6cancelEv"></span><span id="pars::net::op::cancelC"></span><span class="target" id="classpars_1_1net_1_1op_1a9ac8d52abb9b193d31096fbc93c2c4c4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cancel</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net2op6cancelEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>cancel asynchronous I/O operation </p>
+<p>The nng_aio_cancel() function aborts an operation previously started with the handle aio. If the operation is aborted, then the callback for the handle will be called, and the function nng_aio_result() will return the error NNG_ECANCELED.</p>
+<p>This function does not wait for the operation to be fully aborted, but returns immediately.</p>
+<p>If no operation is currently in progress (either because it has already finished, or no operation has been started yet), then this function has no effect.</p>
+<p>Same as abort(nng::error::canceled) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net2op4waitEv">
+<span id="_CPPv3NK4pars3net2op4waitEv"></span><span id="_CPPv2NK4pars3net2op4waitEv"></span><span id="pars::net::op::waitC"></span><span class="target" id="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net2op4waitEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>wait for asynchronous I/O operation </p>
+<p>The nng_aio_wait() function waits for an asynchronous I/O operation to complete. If the operation has not been started, or has already completed, then it returns immediately. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2op4stopEv">
+<span id="_CPPv3N4pars3net2op4stopEv"></span><span id="_CPPv2N4pars3net2op4stopEv"></span><span id="pars::net::op::stop"></span><span class="target" id="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2op4stopEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>stop asynchronous I/O operation </p>
+<p>The <a class="reference internal" href="#classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe"><span class="std std-ref">stop()</span></a> function stops the asynchronous I/O operation associated with aio by aborting with NNG_ECANCELED, and then waits for it to complete or to be completely aborted, and for the callback associated with the aio to have completed executing.</p>
+<p>Same as <a class="reference internal" href="#classpars_1_1net_1_1op_1a9ac8d52abb9b193d31096fbc93c2c4c4"><span class="std std-ref">cancel()</span></a> + <a class="reference internal" href="#classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642"><span class="std std-ref">wait()</span></a>. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net4pipeE">
+<span id="_CPPv3N4pars3net4pipeE"></span><span id="_CPPv2N4pars3net4pipeE"></span><span id="pars::net::pipe"></span><span class="target" id="classpars_1_1net_1_1pipe"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pipe</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pipe_view</span></span><a class="headerlink" href="#_CPPv4N4pars3net4pipeE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net4pipe4pipeEv">
+<span id="_CPPv3N4pars3net4pipe4pipeEv"></span><span id="_CPPv2N4pars3net4pipe4pipeEv"></span><span id="pars::net::pipe::pipe"></span><span class="target" id="classpars_1_1net_1_1pipe_1ab231de0a3773ad95409c1b9626acdc06"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pipe</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net4pipe4pipeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net4pipe4pipeEN3nng9pipe_viewE">
+<span id="_CPPv3N4pars3net4pipe4pipeEN3nng9pipe_viewE"></span><span id="_CPPv2N4pars3net4pipe4pipeEN3nng9pipe_viewE"></span><span id="pars::net::pipe::pipe__nng::pipe_view"></span><span class="target" id="classpars_1_1net_1_1pipe_1a2126e90b835a6b42a9814c0867edb535"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pipe</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pipe_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pv</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N4pars3net4pipe4pipeEN3nng9pipe_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net4pipe2idEv">
+<span id="_CPPv3NK4pars3net4pipe2idEv"></span><span id="_CPPv2NK4pars3net4pipe2idEv"></span><span id="pars::net::pipe::idC"></span><span class="target" id="classpars_1_1net_1_1pipe_1a1e8d61f123efea7d9656bd7bcefbbc65"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK4pars3net4pipe2idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net4pipe9socket_idEv">
+<span id="_CPPv3NK4pars3net4pipe9socket_idEv"></span><span id="_CPPv2NK4pars3net4pipe9socket_idEv"></span><span id="pars::net::pipe::socket_idC"></span><span class="target" id="classpars_1_1net_1_1pipe_1ab1ca71a4da0bf477ca46e1b68c35db54"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket_id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net4pipe9socket_idEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net4pipecvbEv">
+<span id="_CPPv3N4pars3net4pipecvbEv"></span><span id="_CPPv2N4pars3net4pipecvbEv"></span><span id="pars::net::pipe::castto-b-operator"></span><span class="target" id="classpars_1_1net_1_1pipe_1afb345e75cb7c7604d433373f45fbe6ee"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net4pipecvbEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net4pipe5closeEv">
+<span id="_CPPv3NK4pars3net4pipe5closeEv"></span><span id="_CPPv2NK4pars3net4pipe5closeEv"></span><span id="pars::net::pipe::closeC"></span><span class="target" id="classpars_1_1net_1_1pipe_1ac3042bc4a31373b835fcb16b38781de6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK4pars3net4pipe5closeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net4pipe9format_toERN3fmt14format_contextE">
+<span id="_CPPv3NK4pars3net4pipe9format_toERN3fmt14format_contextE"></span><span id="_CPPv2NK4pars3net4pipe9format_toERN3fmt14format_contextE"></span><span id="pars::net::pipe::format_to__fmt::format_contextRC"></span><span class="target" id="classpars_1_1net_1_1pipe_1a808dda688a244d875dfbbd19e05a74ba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">decltype</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4NK4pars3net4pipe9format_toERN3fmt14format_contextE" title="pars::net::pipe::format_to::ctx"><span class="n"><span class="pre">ctx</span></span></a><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">out</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format_to</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">format_context</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ctx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net4pipe9format_toERN3fmt14format_contextE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net9tool_viewE">
+<span id="_CPPv3N4pars3net9tool_viewE"></span><span id="_CPPv2N4pars3net9tool_viewE"></span><span id="pars::net::tool_view"></span><span class="target" id="classpars_1_1net_1_1tool__view"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tool_view</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net9tool_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Represents an nng_socket or nng_ctx view. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net9tool_view9tool_viewEN3nng8ctx_viewE">
+<span id="_CPPv3N4pars3net9tool_view9tool_viewEN3nng8ctx_viewE"></span><span id="_CPPv2N4pars3net9tool_view9tool_viewEN3nng8ctx_viewE"></span><span id="pars::net::tool_view::tool_view__nng::ctx_view"></span><span class="target" id="classpars_1_1net_1_1tool__view_1abfe7c0308303cadb349a60fccca5c0da"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tool_view</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ctx_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net9tool_view9tool_viewEN3nng8ctx_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classpars_1_1net_1_1tool__view"><span class="std std-ref">tool_view</span></a> from an nng_ctx view. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net9tool_view9tool_viewEN3nng11socket_viewE">
+<span id="_CPPv3N4pars3net9tool_view9tool_viewEN3nng11socket_viewE"></span><span id="_CPPv2N4pars3net9tool_view9tool_viewEN3nng11socket_viewE"></span><span id="pars::net::tool_view::tool_view__nng::socket_view"></span><span class="target" id="classpars_1_1net_1_1tool__view_1adc5826f8d75e3bfd03c8e50a73f926e4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tool_view</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net9tool_view9tool_viewEN3nng11socket_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Construct a <a class="reference internal" href="#classpars_1_1net_1_1tool__view"><span class="std std-ref">tool_view</span></a> from an nng_socket view. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net9tool_view4typeEv">
+<span id="_CPPv3NK4pars3net9tool_view4typeEv"></span><span id="_CPPv2NK4pars3net9tool_view4typeEv"></span><span id="pars::net::tool_view::typeC"></span><span class="target" id="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type_info</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net9tool_view4typeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the std::type_info of the underlying variant. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net9tool_view3whoEv">
+<span id="_CPPv3NK4pars3net9tool_view3whoEv"></span><span id="_CPPv2NK4pars3net9tool_view3whoEv"></span><span id="pars::net::tool_view::whoC"></span><span class="target" id="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">who</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net9tool_view3whoEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a string that represents the type of the underlying variant. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net9tool_view2idEv">
+<span id="_CPPv3NK4pars3net9tool_view2idEv"></span><span id="_CPPv2NK4pars3net9tool_view2idEv"></span><span id="pars::net::tool_view::idC"></span><span class="target" id="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net9tool_view2idEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The id of the underlying variant. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4pars3net9tool_view9format_toERN3fmt14format_contextE">
+<span id="_CPPv3NK4pars3net9tool_view9format_toERN3fmt14format_contextE"></span><span id="_CPPv2NK4pars3net9tool_view9format_toERN3fmt14format_contextE"></span><span id="pars::net::tool_view::format_to__fmt::format_contextRC"></span><span class="target" id="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">decltype</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4NK4pars3net9tool_view9format_toERN3fmt14format_contextE" title="pars::net::tool_view::format_to::ctx"><span class="n"><span class="pre">ctx</span></span></a><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">out</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format_to</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">format_context</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ctx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4pars3net9tool_view9format_toERN3fmt14format_contextE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Formatter for debugging purpose. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3nng4cb_fE">
+<span id="_CPPv3N3nng4cb_fE"></span><span id="_CPPv2N3nng4cb_fE"></span><span class="target" id="namespacenng_1ac0f5a2bb1e618f01b57c2593b60e13a8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">cb_f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">error</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3nng4cb_fE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net5cmodeE">
+<span id="_CPPv3N4pars3net5cmodeE"></span><span id="_CPPv2N4pars3net5cmodeE"></span><span class="target" id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">cmode</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net5cmodeE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net5cmode4dialE">
+<span id="_CPPv3N4pars3net5cmode4dialE"></span><span id="_CPPv2N4pars3net5cmode4dialE"></span><span class="target" id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dial</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net5cmode4dialE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net5cmode6listenE">
+<span id="_CPPv3N4pars3net5cmode6listenE"></span><span id="_CPPv2N4pars3net5cmode6listenE"></span><span class="target" id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">listen</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net5cmode6listenE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net17cmode_from_stringEPKc">
+<span id="_CPPv3N4pars3net17cmode_from_stringEPKc"></span><span id="_CPPv2N4pars3net17cmode_from_stringEPKc"></span><span id="pars::net::cmode_from_string__cCP"></span><span class="target" id="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N4pars3net5cmodeE" title="pars::net::cmode"><span class="n"><span class="pre">cmode</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">cmode_from_string</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net17cmode_from_stringEPKc" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net3dirE">
+<span id="_CPPv3N4pars3net3dirE"></span><span id="_CPPv2N4pars3net3dirE"></span><span class="target" id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">net</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">dir</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net3dirE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net3dir3outE">
+<span id="_CPPv3N4pars3net3dir3outE"></span><span id="_CPPv2N4pars3net3dir3outE"></span><span class="target" id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">out</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net3dir3outE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net3dir2inE">
+<span id="_CPPv3N4pars3net3dir2inE"></span><span id="_CPPv2N4pars3net3dir2inE"></span><span class="target" id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in</span></span></span><a class="headerlink" href="#_CPPv4N4pars3net3dir2inE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars14hash_from_uuidERKNSt11string_viewE">
+<span id="_CPPv3N4pars14hash_from_uuidERKNSt11string_viewE"></span><span id="_CPPv2N4pars14hash_from_uuidERKNSt11string_viewE"></span><span id="pars::hash_from_uuid__std::string_viewCR"></span><span class="target" id="namespacepars_1a7e5d12501985d0fe55404f8e53d26676"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">hash_from_uuid</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">uuid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars14hash_from_uuidERKNSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4pars13hash_from_msgERKN3nng3msgE">
+<span id="_CPPv3N4pars13hash_from_msgERKN3nng3msgE"></span><span id="_CPPv2N4pars13hash_from_msgERKN3nng3msgE"></span><span id="pars::hash_from_msg__nng::msgCR"></span><span class="target" id="namespacepars_1a9f1aa0c8a9a0f6c9b0fb031b19aa1acd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">hash_from_msg</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">nng</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars13hash_from_msgERKN3nng3msgE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Core</a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socketE"><code class="docutils literal notranslate"><span class="pre">pars::net::socket</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket6socketERN2ev8enqueuerERRN3nng6socketE"><code class="docutils literal notranslate"><span class="pre">socket()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socketD0Ev"><code class="docutils literal notranslate"><span class="pre">~socket()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socketcv9tool_viewEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">tool_view()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket7optionsEK10socket_opt"><code class="docutils literal notranslate"><span class="pre">options()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket7optionsEv"><code class="docutils literal notranslate"><span class="pre">options()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket4dialEPKc"><code class="docutils literal notranslate"><span class="pre">dial()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket6listenEPKc"><code class="docutils literal notranslate"><span class="pre">listen()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket7connectEPKcK5cmode"><code class="docutils literal notranslate"><span class="pre">connect()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket8make_ctxEv"><code class="docutils literal notranslate"><span class="pre">make_ctx()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket8send_aioEN3nng8aio_viewE"><code class="docutils literal notranslate"><span class="pre">send_aio()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket8recv_aioEN3nng8aio_viewE"><code class="docutils literal notranslate"><span class="pre">recv_aio()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net6socket4sendEv7event_t4pipe"><code class="docutils literal notranslate"><span class="pre">send()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket4recvEv"><code class="docutils literal notranslate"><span class="pre">recv()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net6socket4stopEv"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket2idEv"><code class="docutils literal notranslate"><span class="pre">id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket9socket_idEv"><code class="docutils literal notranslate"><span class="pre">socket_id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket10proto_nameEv"><code class="docutils literal notranslate"><span class="pre">proto_name()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net6socket9format_toERN3fmt14format_contextE"><code class="docutils literal notranslate"><span class="pre">format_to()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net10socket_optE"><code class="docutils literal notranslate"><span class="pre">pars::net::socket_opt</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net10socket_opt12recv_timeoutE"><code class="docutils literal notranslate"><span class="pre">recv_timeout</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net10socket_opt12send_timeoutE"><code class="docutils literal notranslate"><span class="pre">send_timeout</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net10socket_opt15req_resend_timeE"><code class="docutils literal notranslate"><span class="pre">req_resend_time</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net10socket_opt15req_resend_tickE"><code class="docutils literal notranslate"><span class="pre">req_resend_tick</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7contextE"><code class="docutils literal notranslate"><span class="pre">pars::net::context</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context7contextERN2ev8enqueuerERRN3nng3ctxERKN3net6socketE"><code class="docutils literal notranslate"><span class="pre">context()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7contextD0Ev"><code class="docutils literal notranslate"><span class="pre">~context()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7contextcv9tool_viewEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">tool_view()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context11set_optionsE11context_opt"><code class="docutils literal notranslate"><span class="pre">set_options()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net7context7optionsEv"><code class="docutils literal notranslate"><span class="pre">options()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context8send_aioEN3nng8aio_viewE"><code class="docutils literal notranslate"><span class="pre">send_aio()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context8recv_aioEN3nng8aio_viewE"><code class="docutils literal notranslate"><span class="pre">recv_aio()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I_N2ev7event_cEEN4pars3net7context4sendEv7event_t4pipe"><code class="docutils literal notranslate"><span class="pre">send()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context4recvEv"><code class="docutils literal notranslate"><span class="pre">recv()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net7context4stopEv"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net7context2idEv"><code class="docutils literal notranslate"><span class="pre">id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net7context9socket_idEv"><code class="docutils literal notranslate"><span class="pre">socket_id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net7context4sockEv"><code class="docutils literal notranslate"><span class="pre">sock()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net7context9format_toERN3fmt14format_contextE"><code class="docutils literal notranslate"><span class="pre">format_to()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net11context_optE"><code class="docutils literal notranslate"><span class="pre">pars::net::context_opt</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net11context_opt12recv_timeoutE"><code class="docutils literal notranslate"><span class="pre">recv_timeout</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net11context_opt12send_timeoutE"><code class="docutils literal notranslate"><span class="pre">send_timeout</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registryE"><code class="docutils literal notranslate"><span class="pre">pars::net::context_registry</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registry16context_registryERN2ev8enqueuerERN3net6socketE"><code class="docutils literal notranslate"><span class="pre">context_registry()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registry8stop_allEv"><code class="docutils literal notranslate"><span class="pre">stop_all()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registry7emplaceEv"><code class="docutils literal notranslate"><span class="pre">emplace()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registry2ofERKN3net9tool_viewE"><code class="docutils literal notranslate"><span class="pre">of()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net16context_registry10start_recvEi"><code class="docutils literal notranslate"><span class="pre">start_recv()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2opE"><code class="docutils literal notranslate"><span class="pre">pars::net::op</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2opD0Ev"><code class="docutils literal notranslate"><span class="pre">~op()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2opcvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I_N2ev7event_cE_6tool_cEN4pars3net2op4sendEvRN2ev8enqueuerER6tool_t4pipe7event_t"><code class="docutils literal notranslate"><span class="pre">send()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4I_6tool_cEN4pars3net2op4recvEvRN2ev8enqueuerER6tool_t"><code class="docutils literal notranslate"><span class="pre">recv()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE"><code class="docutils literal notranslate"><span class="pre">sleep()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2op11reset_sleepE12nng_duration"><code class="docutils literal notranslate"><span class="pre">reset_sleep()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net2op6resultEv"><code class="docutils literal notranslate"><span class="pre">result()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net2op5abortEN3nng5errorE"><code class="docutils literal notranslate"><span class="pre">abort()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net2op6cancelEv"><code class="docutils literal notranslate"><span class="pre">cancel()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net2op4waitEv"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2op4stopEv"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net4pipeE"><code class="docutils literal notranslate"><span class="pre">pars::net::pipe</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net4pipe4pipeEv"><code class="docutils literal notranslate"><span class="pre">pipe()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net4pipe4pipeEN3nng9pipe_viewE"><code class="docutils literal notranslate"><span class="pre">pipe()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net4pipe2idEv"><code class="docutils literal notranslate"><span class="pre">id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net4pipe9socket_idEv"><code class="docutils literal notranslate"><span class="pre">socket_id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net4pipecvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net4pipe5closeEv"><code class="docutils literal notranslate"><span class="pre">close()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net4pipe9format_toERN3fmt14format_contextE"><code class="docutils literal notranslate"><span class="pre">format_to()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net9tool_viewE"><code class="docutils literal notranslate"><span class="pre">pars::net::tool_view</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net9tool_view9tool_viewEN3nng8ctx_viewE"><code class="docutils literal notranslate"><span class="pre">tool_view()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net9tool_view9tool_viewEN3nng11socket_viewE"><code class="docutils literal notranslate"><span class="pre">tool_view()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net9tool_view4typeEv"><code class="docutils literal notranslate"><span class="pre">type()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net9tool_view3whoEv"><code class="docutils literal notranslate"><span class="pre">who()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net9tool_view2idEv"><code class="docutils literal notranslate"><span class="pre">id()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK4pars3net9tool_view9format_toERN3fmt14format_contextE"><code class="docutils literal notranslate"><span class="pre">format_to()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N3nng4cb_fE"><code class="docutils literal notranslate"><span class="pre">cb_f</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net5cmodeE"><code class="docutils literal notranslate"><span class="pre">cmode</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net5cmode4dialE"><code class="docutils literal notranslate"><span class="pre">dial</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net5cmode6listenE"><code class="docutils literal notranslate"><span class="pre">listen</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net17cmode_from_stringEPKc"><code class="docutils literal notranslate"><span class="pre">cmode_from_string()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net3dirE"><code class="docutils literal notranslate"><span class="pre">dir</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N4pars3net3dir3outE"><code class="docutils literal notranslate"><span class="pre">out</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net3dir2inE"><code class="docutils literal notranslate"><span class="pre">in</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N4pars14hash_from_uuidERKNSt11string_viewE"><code class="docutils literal notranslate"><span class="pre">hash_from_uuid()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars13hash_from_msgERKN3nng3msgE"><code class="docutils literal notranslate"><span class="pre">hash_from_msg()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Network</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="protocols.html"
+                          title="next chapter">Protocols</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/library/net/core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="protocols.html" title="Protocols"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Network"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pars 0.1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Library</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Network</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Core</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright  2025 Giuseppe Roberti.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1shutdown" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::shutdown</compoundname>
+    <includes refid="lib_2include_2pars_2ev_2event_8h" local="no">event.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" prot="private" static="no" mutable="no">
+        <type>std::chrono::system_clock::time_point</type>
+        <definition>std::chrono::system_clock::time_point pars::ev::shutdown::creation_time</definition>
+        <argsstring></argsstring>
+        <name>creation_time</name>
+        <qualifiedname>pars::ev::shutdown::creation_time</qualifiedname>
+        <initializer>=
+    std::chrono::system_clock::now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="178" column="41" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1shutdown_1ad486265bf3e58fbea2b2fc2584c7ded5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::ev::shutdown::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::ev::shutdown::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="172" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="172" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="170" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="171" bodyend="180"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" prot="private" virt="non-virtual"><scope>pars::ev::shutdown</scope><name>creation_time</name></member>
+      <member refid="structpars_1_1ev_1_1shutdown_1ad486265bf3e58fbea2b2fc2584c7ded5" prot="public" virt="non-virtual"><scope>pars::ev::shutdown</scope><name>format_to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

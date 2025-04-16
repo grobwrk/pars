@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1comp_1_1backend" kind="class" language="C++" prot="public">
+    <compoundname>pars::comp::backend</compoundname>
+    <includes refid="backend_8h" local="no">backend.h</includes>
+    <innerclass refid="structpars_1_1comp_1_1backend_1_1connect__p" prot="public">pars::comp::backend::connect_p</innerclass>
+    <innerclass refid="structpars_1_1comp_1_1backend_1_1init__p" prot="public">pars::comp::backend::init_p</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1comp_1_1backend_1a348c8595d7b0cd6b8fe0cf0f18f477ce" prot="private" static="no" mutable="no">
+        <type><ref refid="classpars_1_1net_1_1rep" kindref="compound">net::rep</ref></type>
+        <definition>net::rep pars::comp::backend::rep_m</definition>
+        <argsstring></argsstring>
+        <name>rep_m</name>
+        <qualifiedname>pars::comp::backend::rep_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="81" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1ab901b1c10e6add798b1163758751fa3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::comp::backend::backend</definition>
+        <argsstring>(ev::hf_registry &amp;h, ev::enqueuer &amp;r)</argsstring>
+        <name>backend</name>
+        <qualifiedname>pars::comp::backend::backend</qualifiedname>
+        <param>
+          <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref> &amp;</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="42" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1a4b06442c5e9952ef67e4e7bf59e388b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::backend::init</definition>
+        <argsstring>(const init_p &amp;params)</argsstring>
+        <name>init</name>
+        <qualifiedname>pars::comp::backend::init</qualifiedname>
+        <param>
+          <type>const <ref refid="structpars_1_1comp_1_1backend_1_1init__p" kindref="compound">init_p</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="53" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="53" bodyend="58"/>
+        <references refid="structpars_1_1comp_1_1backend_1_1init__p_1a5a09b6183d2661c9b22008faedaf11e8" compoundref="backend_8h" startline="49">pars::comp::backend::init_p::num_ctxs</references>
+        <references refid="structpars_1_1comp_1_1backend_1_1init__p_1aee962c0dafcb2cfbb88e292347e1bc38" compoundref="backend_8h" startline="50">pars::comp::backend::init_p::rep_opts</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1aa11d1ab3cf22cdd6e5c6d7bd58eb0388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::backend::connect</definition>
+        <argsstring>(const connect_p &amp;params)</argsstring>
+        <name>connect</name>
+        <qualifiedname>pars::comp::backend::connect</qualifiedname>
+        <param>
+          <type>const <ref refid="structpars_1_1comp_1_1backend_1_1connect__p" kindref="compound">connect_p</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="66" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="66" bodyend="69"/>
+        <references refid="structpars_1_1comp_1_1backend_1_1connect__p_1acd3862109757ae57b684ad55eb734fb5" compoundref="backend_8h" startline="63">pars::comp::backend::connect_p::service_addr</references>
+        <references refid="structpars_1_1comp_1_1backend_1_1connect__p_1a144d7bd4c0321d7f85ded5e74759a78a" compoundref="backend_8h" startline="62">pars::comp::backend::connect_p::service_cmode</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1ace178941233809489ef08320b5c36cc3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpars_1_1net_1_1rep" kindref="compound">net::rep</ref> &amp;</type>
+        <definition>net::rep &amp; pars::comp::backend::rep</definition>
+        <argsstring>()</argsstring>
+        <name>rep</name>
+        <qualifiedname>pars::comp::backend::rep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="71" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1a25281327a7df4eda9ad9241bf97d3fa0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::backend::graceful_terminate</definition>
+        <argsstring>()</argsstring>
+        <name>graceful_terminate</name>
+        <qualifiedname>pars::comp::backend::graceful_terminate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="73" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1backend_1a5e25cb9689a788971572dd74185375d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::comp::backend::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::comp::backend::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="75" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/backend.h" bodystart="40" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classpars_1_1comp_1_1backend_1ab901b1c10e6add798b1163758751fa3c" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>backend</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1aa11d1ab3cf22cdd6e5c6d7bd58eb0388" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>connect</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1a5e25cb9689a788971572dd74185375d9" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>format_to</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1a25281327a7df4eda9ad9241bf97d3fa0" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>graceful_terminate</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1a4b06442c5e9952ef67e4e7bf59e388b0" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>init</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1ace178941233809489ef08320b5c36cc3" prot="public" virt="non-virtual"><scope>pars::comp::backend</scope><name>rep</name></member>
+      <member refid="classpars_1_1comp_1_1backend_1a348c8595d7b0cd6b8fe0cf0f18f477ce" prot="private" virt="non-virtual"><scope>pars::comp::backend</scope><name>rep_m</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

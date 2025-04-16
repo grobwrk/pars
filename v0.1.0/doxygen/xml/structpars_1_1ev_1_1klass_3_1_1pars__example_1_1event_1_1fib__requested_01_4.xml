@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</compoundname>
+    <basecompoundref refid="structpars_1_1ev_1_1base__klass" prot="public" virt="non-virtual">pars::ev::base_klass&lt;::pars_example::event::fib_requested &gt;</basecompoundref>
+    <includes refid="example_2event_8h" local="no">event.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::uuid</definition>
+        <argsstring></argsstring>
+        <name>uuid</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::uuid</qualifiedname>
+        <initializer>=
+    &quot;9e85e1e6-28b1-4e52-85d6-12ca0110049f&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="83" column="37" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::serialize</definition>
+        <argsstring>(event_type &amp;ev, Archive &amp;ar)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::serialize</qualifiedname>
+        <param>
+          <type><ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref> &amp;</type>
+          <declname>ev</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="87" column="15" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename &gt; typename</type>
+            <declname>kind_of</declname>
+            <defname>kind_of</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kindref="member">executes</ref></type>
+        <definition>static constexpr executes pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::exec_policy</definition>
+        <argsstring>()</argsstring>
+        <name>exec_policy</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::exec_policy</qualifiedname>
+    <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="94" column="29" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="94" bodyend="100"/>
+        <references refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" compoundref="lib_2include_2pars_2concept_2event_8h" startline="45">pars::ev::async</references>
+        <references refid="common_8h_1a0309fff2c27bd9c255d5255478ae34a5" compoundref="common_8h" startline="32">enable_compute_fib_async</references>
+        <references refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" compoundref="klass_8h" startline="61" endline="64">pars::ev::base_klass&lt; event_t &gt;::exec_policy</references>
+        <references refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" compoundref="concept_2kind_8h" startline="56">pars::ev::is_same_kind_v</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" static="no">
+        <type><ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">::pars_example::event::fib_requested</ref></type>
+        <definition>using pars::ev::klass&lt; ::pars_example::event::fib_requested &gt;::event_type = </definition>
+        <argsstring></argsstring>
+        <name>event_type</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::event_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pars::ev::base_klass&lt;::pars_example::event::fib_requested &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__klass"/>
+      </node>
+      <node id="1">
+        <label>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</label>
+        <link refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>pars::ev::base_klass&lt;::pars_example::event::fib_requested &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__klass"/>
+      </node>
+      <node id="1">
+        <label>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</label>
+        <link refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/example/event.h" line="80" column="1" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="82" bodyend="101"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</scope><name>event_type</name></member>
+      <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</scope><name>exec_policy</name></member>
+      <member refid="structpars_1_1ev_1_1base__klass_1a7ab5d044bcbadd3017c73657a8c71183" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</scope><name>requires_network</name></member>
+      <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</scope><name>serialize</name></member>
+      <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</scope><name>uuid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
