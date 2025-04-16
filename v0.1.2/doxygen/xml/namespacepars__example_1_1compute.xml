@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars__example_1_1compute" kind="namespace" language="C++">
+    <compoundname>pars_example::compute</compoundname>
+    <innerclass refid="structpars__example_1_1compute_1_1stop__requested" prot="public">pars_example::compute::stop_requested</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepars__example_1_1compute_1aac60029fd2626d454a76e5b814e6d58a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t pars_example::compute::slow_fib</definition>
+        <argsstring>(const uint16_t n, std::optional&lt; std::stop_token &gt; tk)</argsstring>
+        <name>slow_fib</name>
+        <qualifiedname>pars_example::compute::slow_fib</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; std::stop_token &gt;</type>
+          <declname>tk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/fib.h" line="50" column="17" bodyfile="/home/runner/work/pars/pars/example/fib.h" bodystart="50" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars__example_1_1compute_1aba38a566535e118eeb2b93a8204332dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t pars_example::compute::fast_fib</definition>
+        <argsstring>(uint16_t n, std::optional&lt; std::stop_token &gt;)</argsstring>
+        <name>fast_fib</name>
+        <qualifiedname>pars_example::compute::fast_fib</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; std::stop_token &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/fib.h" line="64" column="17" bodyfile="/home/runner/work/pars/pars/example/fib.h" bodystart="64" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars__example_1_1compute_1a97cdcc6055ddbef15858b3d64004b6bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename metadata_t</type>
+          </param>
+        </templateparamlist>
+        <type>uint64_t</type>
+        <definition>static uint64_t pars_example::compute::fib</definition>
+        <argsstring>(const uint64_t n, const bool use_fast_fib, const metadata_t &amp;md)</argsstring>
+        <name>fib</name>
+        <qualifiedname>pars_example::compute::fib</qualifiedname>
+        <param>
+          <type>const uint64_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>use_fast_fib</declname>
+        </param>
+        <param>
+          <type>const metadata_t &amp;</type>
+          <declname>md</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/fib.h" line="77" column="17" bodyfile="/home/runner/work/pars/pars/example/fib.h" bodystart="77" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/example/fib.h" line="39" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Building &#8212; pars 0.1.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <script src="../_static/documentation_options.js?v=92734c54"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Milestones" href="milestones.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet"> -->
+<style type="text/css" media="screen">
+.small-fa {
+vertical-align: top;
+font-size:0.7em;
+margin: 2px 0px 0px 2px;
+}
+</style>
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="milestones.html" title="Milestones"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.1.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Contribute</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="building">
+<span id="id1"></span><h1>Building<a class="headerlink" href="#building" title="Link to this heading">¶</a></h1>
+<section id="install-deps">
+<h2>Install Deps<a class="headerlink" href="#install-deps" title="Link to this heading">¶</a></h2>
+<p>Follow these instructions (for Ubuntu 24.10) to install the dependencies to build the framework and example applications:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">build-essential</span> <span class="pre">cmake</span> <span class="pre">ninja-build</span> <span class="pre">pkg-config</span> <span class="pre">git</span></code></p></li>
+<li><p>install vcpkg to <code class="docutils literal notranslate"><span class="pre">~/vcpkg</span></code> (<a class="reference external" href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash">https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash</a>)</p></li>
+<li><p>install my-vcpkg-triplets to <code class="docutils literal notranslate"><span class="pre">~/my-vcpkg-triplets</span></code> by cloning the repository (<a class="reference external" href="https://github.com/Neumann-A/my-vcpkg-triplets">https://github.com/Neumann-A/my-vcpkg-triplets</a>)</p></li>
+</ul>
+</section>
+<section id="clone">
+<h2>Clone<a class="headerlink" href="#clone" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/grobx/pars.git</span> <span class="pre">~/pars</span></code></p></li>
+</ul>
+</section>
+<section id="build">
+<h2>Build<a class="headerlink" href="#build" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/pars</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--preset</span> <span class="pre">linux-release-llvm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span> <span class="pre">out/build/linux-release-llvm</span></code></p></li>
+</ul>
+</section>
+<section id="run">
+<h2>Run<a class="headerlink" href="#run" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/pars/out/build/linux-release-llvm/examples</span></code></p></li>
+</ul>
+<p>Run a server backend that listen on port 49001 and react to events that receives from clients:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./server_backend</span> <span class="pre">listen</span> <span class="pre">tcp://0.0.0.0:49001</span></code></p></li>
+</ul>
+<p>Execute a client that ask the server backend to compute the fibonacci number of 42 using a fast algorithm.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./client</span> <span class="pre">dial</span> <span class="pre">tcp://127.0.0.1:49001</span> <span class="pre">1</span> <span class="pre">fast</span> <span class="pre">42</span></code></p></li>
+</ul>
+<p>Execute a client that ask the server backend to compute the fibonacci number of 42 using a slow algorithm (you can cancel the computation by hitting <code class="docutils literal notranslate"><span class="pre">CTRL-C</span></code>).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./client</span> <span class="pre">dial</span> <span class="pre">tcp://127.0.0.1:49001</span> <span class="pre">1</span> <span class="pre">slow</span> <span class="pre">42</span></code></p></li>
+</ul>
+<p>For further usages run <code class="docutils literal notranslate"><span class="pre">./client</span></code> or <code class="docutils literal notranslate"><span class="pre">./server_backend</span></code>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Building</a><ul>
+<li><a class="reference internal" href="#install-deps">Install Deps</a></li>
+<li><a class="reference internal" href="#clone">Clone</a></li>
+<li><a class="reference internal" href="#build">Build</a></li>
+<li><a class="reference internal" href="#run">Run</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="milestones.html"
+                          title="previous chapter">Milestones</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/contribute/building.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="milestones.html" title="Milestones"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.1.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Contribute</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright  2025 Giuseppe Roberti.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

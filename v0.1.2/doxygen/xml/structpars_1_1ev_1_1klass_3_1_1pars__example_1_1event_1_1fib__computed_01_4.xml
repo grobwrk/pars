@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</compoundname>
+    <basecompoundref refid="structpars_1_1ev_1_1base__klass" prot="public" virt="non-virtual">pars::ev::base_klass&lt;::pars_example::event::fib_computed &gt;</basecompoundref>
+    <includes refid="example_2event_8h" local="no">event.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view pars::ev::klass&lt;::pars_example::event::fib_computed &gt;::uuid</definition>
+        <argsstring></argsstring>
+        <name>uuid</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;::uuid</qualifiedname>
+        <initializer>=
+    &quot;3dc87ab0-bfe0-4eea-8f71-76a16bda62ff&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="107" column="37" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void pars::ev::klass&lt;::pars_example::event::fib_computed &gt;::serialize</definition>
+        <argsstring>(event_type &amp;ev, Archive &amp;ar)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;::serialize</qualifiedname>
+        <param>
+          <type><ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref> &amp;</type>
+          <declname>ev</declname>
+        </param>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="111" column="15" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="111" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" static="no">
+        <type><ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">::pars_example::event::fib_computed</ref></type>
+        <definition>using pars::ev::klass&lt; ::pars_example::event::fib_computed &gt;::event_type = </definition>
+        <argsstring></argsstring>
+        <name>event_type</name>
+        <qualifiedname>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;::event_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pars::ev::base_klass&lt;::pars_example::event::fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__klass"/>
+      </node>
+      <node id="1">
+        <label>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>pars::ev::base_klass&lt;::pars_example::event::fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__klass"/>
+      </node>
+      <node id="1">
+        <label>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/example/event.h" line="104" column="1" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="106" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>event_type</name></member>
+      <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>exec_policy</name></member>
+      <member refid="structpars_1_1ev_1_1base__klass_1a7ab5d044bcbadd3017c73657a8c71183" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>requires_network</name></member>
+      <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>serialize</name></member>
+      <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>uuid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
