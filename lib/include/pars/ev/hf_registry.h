@@ -42,9 +42,22 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::ev
 {
 
-using job_handler_f = std::function<void(job)>;
-
 class runner;
+
+} // namespace pars::ev
+
+namespace pars::net
+{
+
+class rep;
+class req;
+
+} // namespace pars::net
+
+namespace pars::ev
+{
+
+using job_handler_f = std::function<void(job)>;
 
 struct hf_registry
 {
@@ -62,6 +75,11 @@ public:
     insert<kind_of, event_t>(make_hf(mem_fn, self));
   }
 
+private:
+  friend net::rep;
+  friend net::req;
+  friend runner;
+
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
   void insert(handler_f<kind_of, event_t> hf)
@@ -73,9 +91,6 @@ public:
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
   void insert(int s_id, handler_f<kind_of, event_t> hf);
-
-private:
-  friend runner;
 
   auto lock() { return std::unique_lock{mtx_m}; }
 
