@@ -1,6 +1,26 @@
 enable_testing ()
 
 find_package (GTest CONFIG REQUIRED)
-
 include (GoogleTest)
-# gtest_discover_tests (tests)
+
+set (
+  PARS_TESTS
+  "events-internal"
+  "events-network"
+)
+
+foreach (TEST ${PARS_TESTS})
+  set (TEST_TARGET "test-${TEST}")
+  add_executable (${TEST_TARGET} "${TEST}.cpp")
+  target_link_libraries (${TEST_TARGET} PUBLIC pars)
+
+  if (${PARS_BUILD_COVERAGE})
+    target_compile_options (${TEST_TARGET} PRIVATE "-fprofile-instr-generate" "-fcoverage-mapping")
+    target_link_options (${TEST_TARGET} PRIVATE "-fprofile-instr-generate" "-fcoverage-mapping")
+  endif ()
+
+  # Putting either GTest::gmock or GTest::gmock_main or both, broke tests
+  target_link_libraries (${TEST_TARGET} PRIVATE GTest::gtest GTest::gtest_main)
+
+  gtest_discover_tests (${TEST_TARGET})
+endforeach ()

@@ -19,6 +19,7 @@
        buildInputs = [
          pkgs.llvmPackages_19.clang
          pkgs.llvmPackages_19.lld
+         pkgs.llvm
          pkgs.cmake
          pkgs.ninja
          pkgs.vcpkg

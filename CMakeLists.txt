@@ -7,9 +7,10 @@ list (INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}/cmake")
 set (PARS_VERSION "0.1.2.9999")
 project ("pars" VERSION ${PARS_VERSION} LANGUAGES CXX)
 
-option (PARS_BUILD_EXAMPLES "Build examples" ON)
-option (PARS_BUILD_DOCUMENTATION "Build documentation")
-option (PARS_BUILD_TESTS "Build tests")
+option (PARS_BUILD_EXAMPLES      "Build examples"      ON)
+option (PARS_BUILD_DOCUMENTATION "Build documentation" OFF)
+option (PARS_BUILD_TESTS         "Build tests"         OFF)
+option (PARS_BUILD_COVERAGE      "Build coverage"      ON)  # Requires PARS_BUILD_TESTS=ON
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   set (CMAKE_CXX_STANDARD 23)
