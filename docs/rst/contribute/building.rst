@@ -15,7 +15,7 @@ Follow these instructions (for Ubuntu 24.10) to install the dependencies to buil
 Clone
 -----
 
-- ``git clone https://github.com/grobx/pars.git ~/pars``
+- ``git clone https://github.com/grobwrk/pars.git ~/pars``
 
 Build
 -----
