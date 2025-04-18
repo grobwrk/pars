@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars__example_1_1compute_1_1stop__requested" kind="struct" language="C++" prot="public">
+    <compoundname>pars_example::compute::stop_requested</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <includes refid="fib_8h" local="no">fib.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars_example::compute::stop_requested::stop_requested</definition>
+        <argsstring>()</argsstring>
+        <name>stop_requested</name>
+        <qualifiedname>pars_example::compute::stop_requested::stop_requested</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/fib.h" line="44" column="3" bodyfile="/home/runner/work/pars/pars/example/fib.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pars_example::compute::stop_requested</label>
+        <link refid="structpars__example_1_1compute_1_1stop__requested"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pars_example::compute::stop_requested</label>
+        <link refid="structpars__example_1_1compute_1_1stop__requested"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/example/fib.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/example/fib.h" bodystart="43" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" prot="public" virt="non-virtual"><scope>pars_example::compute::stop_requested</scope><name>stop_requested</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

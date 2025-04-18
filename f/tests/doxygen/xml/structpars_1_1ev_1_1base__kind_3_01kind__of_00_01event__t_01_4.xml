@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1base__kind_3_01kind__of_00_01event__t_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::base_kind&lt; kind_of, event_t &gt;</compoundname>
+    <basecompoundref refid="structpars_1_1ev_1_1common__kind" prot="public" virt="non-virtual">pars::ev::common_kind&lt; kind_of, event_t &gt;</basecompoundref>
+    <basecompoundref refid="structpars_1_1ev_1_1common__kind" prot="public" virt="non-virtual">pars::ev::common_kind&lt; kind_of, event_t &gt;</basecompoundref>
+    <basecompoundref refid="structpars_1_1ev_1_1common__kind" prot="public" virt="non-virtual">pars::ev::common_kind&lt; kind_of, event_t &gt;</basecompoundref>
+    <basecompoundref refid="structpars_1_1ev_1_1common__kind" prot="public" virt="non-virtual">pars::ev::common_kind&lt; kind_of, event_t &gt;</basecompoundref>
+    <includes refid="kind__base_8h" local="no">kind_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>template&lt; typename &gt; typename</type>
+        <declname>kind_of</declname>
+        <defname>kind_of</defname>
+      </param>
+      <param>
+        <type>sync_internal_event_c&lt; kind_of &gt;</type>
+        <declname>event_t</declname>
+        <defname>event_t</defname>
+      </param>
+    </templateparamlist>
+    <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pars::ev::base_kind&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__kind_3_01kind__of_00_01event__t_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pars::ev::common_kind&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1common__kind"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>event_t</label>
+      </node>
+      <node id="9">
+        <label>pars::ev::base_async_metadata</label>
+        <link refid="structpars_1_1ev_1_1base__async__metadata"/>
+      </node>
+      <node id="5">
+        <label>pars::ev::base_internal_metadata</label>
+        <link refid="structpars_1_1ev_1_1base__internal__metadata"/>
+      </node>
+      <node id="1">
+        <label>pars::ev::base_kind&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1base__kind_3_01kind__of_00_01event__t_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>pars::ev::base_network_metadata</label>
+        <link refid="structpars_1_1ev_1_1base__network__metadata"/>
+      </node>
+      <node id="6">
+        <label>pars::ev::base_sync_metadata</label>
+        <link refid="structpars_1_1ev_1_1base__sync__metadata"/>
+      </node>
+      <node id="2">
+        <label>pars::ev::common_kind&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1common__kind"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>event_m</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>metadata_m</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pars::ev::common_metadata&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1common__metadata"/>
+      </node>
+      <node id="4">
+        <label>pars::ev::metadata&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h" line="79" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h" bodystart="80" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1common__kind_1a23e499a282cc1c382b4e89091c13e1c0" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>as_tuple</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>common_kind</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" prot="protected" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event_m</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1ac648f20f1ebff638a4269ea514f0fbcd" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event_type</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1a927893fac05943e48256935aecc33979" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>kind_type</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>md</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" prot="protected" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>metadata_m</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1aedd3fb812f5a8c9a2042cfb498feecb2" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>metadata_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

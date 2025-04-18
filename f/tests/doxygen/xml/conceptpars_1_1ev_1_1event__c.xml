@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptpars_1_1ev_1_1event__c" kind="concept">
+    <compoundname>pars::ev::event_c</compoundname>
+    <includes refid="lib_2include_2pars_2concept_2event_8h" local="no">event.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename event_t</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename event_t&gt;
+concept <ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">pars::ev::event_c</ref> =  requires {
+  requires std::default_initializable&lt;klass&lt;event_t&gt;&gt;;
+  { klass&lt;event_t&gt;::uuid } -&gt; std::same_as&lt;const std::string_view&amp;&gt;;
+  { klass&lt;event_t&gt;::requires_network } -&gt; std::same_as&lt;const bool&amp;&gt;;
+  { klass&lt;event_t&gt;::template exec_policy&lt;sent&gt;() } -&gt; std::same_as&lt;executes&gt;;
+  {
+    klass&lt;event_t&gt;::template exec_policy&lt;received&gt;()
+  } -&gt; std::same_as&lt;executes&gt;;
+  { klass&lt;event_t&gt;::template exec_policy&lt;fired&gt;() } -&gt; std::same_as&lt;executes&gt;;
+}    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="53" column="1"/>
+  </compounddef>
+</doxygen>

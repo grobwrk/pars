@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/tests - [...]/lib/include/pars/ev/runner.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/tests</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Fri Apr 18 10:07:45 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">114</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;pars/ev/event.h&quot;
+             : #include &quot;pars/ev/hf_registry.h&quot;
+             : #include &quot;pars/ev/job.h&quot;
+             : 
+             : #include &lt;functional&gt;
+             : #include &lt;future&gt;
+             : #include &lt;thread&gt;
+             : #include &lt;unordered_map&gt;
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : struct runner
+             : {
+             : public:
+             :   runner(hf_registry&amp; hfs)
+             :     : hf_registry_m{hfs}
+             :   {
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   std::size_t next_job_id() <span class="lineNoCov">{ return next_job_id_m++; }</span>
+             : 
+             :   void start_thread(std::size_t spec_hash,
+             :                     std::packaged_task&lt;void(std::stop_token, job)&gt; task, job j)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto j_id = j.id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto s_id = j.socket_id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    futures_m.emplace_back(j_id, s_id, spec_hash, task.get_future());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto th_res = threads_m.try_emplace(j_id, std::move(task), std::move(j));</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!th_res.second)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      futures_m.pop_back();</span>
+             :   }
+             : 
+             :   auto count_threads()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return futures_m.size();</span>
+             :   }
+             : 
+             :   void stop_all_threads()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (const auto&amp; t : threads_m)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (stop_possible(t.first))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        request_stop(t.first);</span>
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    while (!futures_m.empty())</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      process_futures();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    pipe_jobs_m.clear();</span>
+             :   }
+             : 
+             :   bool can_exec(int s_id, std::size_t spec_hash)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto lock = hf_registry_m.lock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return hf_registry_m.has_handler_for(s_id, spec_hash);</span>
+             :   }
+             : 
+             :   void exec(job j)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto spec_hash = j.spec_hash();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto s_id = j.socket_id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto lock = hf_registry_m.lock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!hf_registry_m.has_handler_for(s_id, spec_hash))</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::err(SL, lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                &quot;Unable to find handler for Spec 0x{:X} on Socket {}, skip &quot;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                &quot;message ...&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                spec_hash, s_id);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return;</span>
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto&amp; hf = hf_registry_m.handler_for(s_id, spec_hash);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    lock.unlock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    pars::debug(SL, lf::event, &quot;Job #{}: Running Handler [{}]&quot;, j.id(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                demangle(hf_registry_m.type_for(spec_hash)-&gt;name()));</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    try</span>
+             :     {
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        process_futures();</span>
+             :       }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      hf(std::move(j));</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    catch (...)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      process_exception(s_id, spec_hash);</span>
+             :     }
+             :   }
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void exec(kind_of&lt;event_t&gt; ke)
+             :   {
+             :     exec(make_job(next_job_id(), std::move(ke)));
+             :   }
+             : 
+             :   void add_pipe(const net::pipe&amp; p)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto p_id = p.id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    pipe_jobs_m.insert({p_id, {}});</span>
+             :   }
+             : 
+             :   /// stop all running and remove all pending jobs for pipe p
+             :   void remove_pipe(const net::pipe&amp; p)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto p_id = p.id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!pipe_jobs_m.at(p_id).empty())</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      // stop all running jobs for pipe p</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      stop_runnings(pipe_jobs_m.at(p_id));</span>
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    pipe_jobs_m.erase(p_id);</span>
+             :   }
+             : 
+             :   void associate_job_to_pipe(const int j_id, const int p_id)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (j_id &lt;= 0)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(fmt::format(&quot;Job #{}: invalid Job!&quot;, p_id));</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (p_id &lt;= 0)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // add j_id to the jobs related to p, unless p was removed with a previous</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // call to remove_pipe(p) (ie: pipe_jobs_m does not contains p.id())</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (pipe_jobs_m.contains(p_id))</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pipe_jobs_m.at(p_id).push_back(j_id);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::debug(SL, lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  &quot;Job #{} pushed and associated to Pipe {:X} [# size: {}]&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  j_id, p_id, pipe_jobs_m.at(p_id).size());</span>
+             :     }
+             :   }
+             : 
+             :   void stop_thread(const int j_id)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard(mtx_m);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (stop_possible(j_id))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      request_stop(j_id);</span>
+             :   }
+             : 
+             : private:
+             :   std::unordered_set&lt;std::size_t&gt; stop_runnings(std::vector&lt;std::size_t&gt; j_ids)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    std::unordered_set&lt;std::size_t&gt; pending_jobs;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (const auto&amp; j_id : j_ids)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (thread_running(j_id))</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        // stop running job, if possible</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        if (stop_possible(j_id))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          request_stop(j_id);</span>
+             :       }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      else</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        pending_jobs.insert(j_id);</span>
+             :       }
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return pending_jobs;</span>
+             :   }
+             : 
+             :   void process_futures()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (auto it = futures_m.begin(); it != futures_m.end();)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      using namespace std::chrono_literals;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto&amp; [j_id, s_id, spec_hash, f] = *it;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (f.wait_for(0ms) == std::future_status::ready)</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        try</span>
+             :         {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          f.get();</span>
+             :         }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        catch (...)</span>
+             :         {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          pars::debug(SL, lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                      &quot;Job #{}: Throws, processing exceptions !!&quot;, j_id);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          process_exception(s_id, spec_hash);</span>
+             :         }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        threads_m.erase(j_id);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        pars::debug(SL, lf::event, &quot;Job #{}: Done! [# futures: {}]&quot;, j_id,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                    futures_m.size());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        it = futures_m.erase(it);</span>
+             :       }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      else</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        ++it;</span>
+             :       }
+             :     }
+             :   }
+             : 
+             :   void process_exception(auto s_id, auto spec_hash)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto e_ptr = std::current_exception();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    try</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::rethrow_exception(e_ptr);</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    catch (std::exception&amp; e)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::err(SL, lf::event, &quot;Handler for 0x{:X} throws: {}&quot;, spec_hash,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                e.what());</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    catch (...)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::err(SL, lf::event, &quot;Handler for 0x{:X} throws: Unknown Exception&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                spec_hash);</span>
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto e_hash = spec&lt;fired&lt;exception&gt;&gt;::hash;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto lock = hf_registry_m.lock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!hf_registry_m.has_handler_for(s_id, e_hash))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto&amp; hf = hf_registry_m.handler_for(s_id, e_hash);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    lock.unlock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    try</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      hf(make_job(next_job_id(), fired{exception{e_ptr}, {}}));</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    catch (std::exception&amp; e)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::err(SL, lf::event, &quot;Exception Handler for 0x{:X} throws: {}&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                spec_hash, e.what());</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    catch (...)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::err(SL, lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                &quot;Exeption Handler for 0x{:X} throws: Unknown Exception&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                spec_hash);</span>
+             :     }
+             :   }
+             : 
+             :   void request_stop(const std::size_t j_id)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    threads_m[j_id].get_stop_source().request_stop();</span>
+             :   }
+             : 
+             :   bool thread_running(const std::size_t j_id)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return threads_m.contains(j_id);</span>
+             :   }
+             : 
+             :   bool stop_possible(const std::size_t j_id)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return threads_m[j_id].get_stop_token().stop_possible();</span>
+             :   }
+             : 
+             :   std::mutex mtx_m; ///&lt; protects futures_m, threads_m
+             : 
+             :   using futures_value_type =
+             :     std::tuple&lt;std::size_t, int, std::size_t, std::future&lt;void&gt;&gt;;
+             : 
+             :   std::vector&lt;futures_value_type&gt;
+             :     futures_m; ///&lt; all job ids, socket ids, spec hashes
+             :                ///&lt; and futures from threads that are running
+             : 
+             :   std::unordered_map&lt;std::size_t, std::jthread&gt;
+             :     threads_m; ///&lt; the jthread for a given job id, if any
+             : 
+             :   hf_registry&amp; hf_registry_m;
+             : 
+             :   std::unordered_map&lt;int, std::vector&lt;std::size_t&gt;&gt;
+             :     pipe_jobs_m; ///&lt; all queued ids of jobs for a given pipe id
+             : 
+             :   std::atomic&lt;std::size_t&gt; next_job_id_m{0};
+             : };
+             : 
+             : } // namespace pars::ev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

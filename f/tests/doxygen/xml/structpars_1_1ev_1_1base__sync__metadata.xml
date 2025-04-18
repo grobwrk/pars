@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1base__sync__metadata" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::base_sync_metadata</compoundname>
+    <derivedcompoundref refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4" prot="public" virt="non-virtual">pars::ev::metadata&lt; kind_of, event_t &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4" prot="public" virt="non-virtual">pars::ev::metadata&lt; kind_of, event_t &gt;</derivedcompoundref>
+    <includes refid="metadata_8h" local="no">metadata.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pars::ev::base_sync_metadata</label>
+        <link refid="structpars_1_1ev_1_1base__sync__metadata"/>
+      </node>
+      <node id="2">
+        <label>pars::ev::metadata&lt; kind_of, event_t &gt;</label>
+        <link refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="99" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="100" bodyend="101"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

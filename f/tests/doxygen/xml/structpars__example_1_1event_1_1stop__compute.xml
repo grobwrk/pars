@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars__example_1_1event_1_1stop__compute" kind="struct" language="C++" prot="public">
+    <compoundname>pars_example::event::stop_compute</compoundname>
+    <includes refid="example_2event_8h" local="no">event.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pars_example::event::stop_compute::pipe_id</definition>
+        <argsstring></argsstring>
+        <name>pipe_id</name>
+        <qualifiedname>pars_example::event::stop_compute::pipe_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="69" column="7" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" compoundref="example_2event_8h" startline="71" endline="74">format_to</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars_example::event::stop_compute::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars_example::event::stop_compute::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/example/event.h" line="71" column="8" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="71" bodyend="74"/>
+        <references refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" compoundref="example_2event_8h" startline="69">pipe_id</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/example/event.h" line="67" column="1" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="68" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>format_to</name></member>
+      <member refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>pipe_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

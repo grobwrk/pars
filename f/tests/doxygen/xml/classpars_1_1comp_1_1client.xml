@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1comp_1_1client" kind="class" language="C++" prot="public">
+    <compoundname>pars::comp::client</compoundname>
+    <includes refid="client_8h" local="no">client.h</includes>
+    <innerclass refid="structpars_1_1comp_1_1client_1_1connect__p" prot="public">pars::comp::client::connect_p</innerclass>
+    <innerclass refid="structpars_1_1comp_1_1client_1_1init__p" prot="public">pars::comp::client::init_p</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1comp_1_1client_1aa8f6647a69206ea300ded5102c550459" prot="private" static="no" mutable="no">
+        <type><ref refid="classpars_1_1net_1_1req" kindref="compound">net::req</ref></type>
+        <definition>net::req pars::comp::client::req_m</definition>
+        <argsstring></argsstring>
+        <name>req_m</name>
+        <qualifiedname>pars::comp::client::req_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="70" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1comp_1_1client_1a8dc663bfdb9b7339f49791175d16c551" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::comp::client::client</definition>
+        <argsstring>(ev::hf_registry &amp;h, ev::enqueuer &amp;r)</argsstring>
+        <name>client</name>
+        <qualifiedname>pars::comp::client::client</qualifiedname>
+        <param>
+          <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref> &amp;</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="42" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1client_1a8deaba7552fb2b92df1b39734e44e171" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpars_1_1net_1_1req" kindref="compound">net::req</ref> &amp;</type>
+        <definition>net::req &amp; pars::comp::client::req</definition>
+        <argsstring>()</argsstring>
+        <name>req</name>
+        <qualifiedname>pars::comp::client::req</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="47" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::client::init</definition>
+        <argsstring>(const init_p &amp;params)</argsstring>
+        <name>init</name>
+        <qualifiedname>pars::comp::client::init</qualifiedname>
+        <param>
+          <type>const <ref refid="structpars_1_1comp_1_1client_1_1init__p" kindref="compound">init_p</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="54" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="54" bodyend="54"/>
+        <references refid="structpars_1_1comp_1_1client_1_1init__p_1a25561076de1efda65570c043f7ca7dd2" compoundref="client_8h" startline="51">pars::comp::client::init_p::req_opts</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::client::connect</definition>
+        <argsstring>(const connect_p &amp;params)</argsstring>
+        <name>connect</name>
+        <qualifiedname>pars::comp::client::connect</qualifiedname>
+        <param>
+          <type>const <ref refid="structpars_1_1comp_1_1client_1_1connect__p" kindref="compound">connect_p</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="62" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="62" bodyend="65"/>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" compoundref="client_8h" startline="59">pars::comp::client::connect_p::service_addr</references>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" compoundref="client_8h" startline="58">pars::comp::client::connect_p::service_cmode</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1comp_1_1client_1a2757a5dfbae6dbceaab73314c6b965ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::comp::client::graceful_terminate</definition>
+        <argsstring>()</argsstring>
+        <name>graceful_terminate</name>
+        <qualifiedname>pars::comp::client::graceful_terminate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="67" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/comp/client.h" bodystart="40" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classpars_1_1comp_1_1client_1a8dc663bfdb9b7339f49791175d16c551" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>client</name></member>
+      <member refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>connect</name></member>
+      <member refid="classpars_1_1comp_1_1client_1a2757a5dfbae6dbceaab73314c6b965ed" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>graceful_terminate</name></member>
+      <member refid="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>init</name></member>
+      <member refid="classpars_1_1comp_1_1client_1a8deaba7552fb2b92df1b39734e44e171" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>req</name></member>
+      <member refid="classpars_1_1comp_1_1client_1aa8f6647a69206ea300ded5102c550459" prot="private" virt="non-virtual"><scope>pars::comp::client</scope><name>req_m</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

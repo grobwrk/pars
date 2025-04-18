@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/tests - [...]/lib/include/pars/ev/dispatcher.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/tests</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Fri Apr 18 10:07:45 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">47</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;pars/ev/event.h&quot;
+             : #include &quot;pars/ev/hf_registry.h&quot;
+             : #include &quot;pars/ev/job.h&quot;
+             : #include &quot;pars/ev/kind.h&quot;
+             : #include &quot;pars/ev/runner.h&quot;
+             : #include &quot;pars/log.h&quot;
+             : 
+             : #include &lt;condition_variable&gt;
+             : #include &lt;deque&gt;
+             : #include &lt;mutex&gt;
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : class dispatcher
+             : {
+             : public:
+             :   dispatcher(runner&amp; r)
+             :     : runner_m{r}
+             :   {
+             :   }
+             : 
+             :   /// @name Running Jobs
+             : 
+             :   void run()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    running_m = true;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue_back(fired{init{}, {}});</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (;;)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto lock = std::unique_lock{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      cond_m.wait(lock, [&amp;]() { return !queue_m.empty() || !running_m; });</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (!running_m)</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        cond_m.wait(lock, [&amp;]() { return terminate_m; });</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return;</span>
+             :       }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      // NOTE: exec is executed after mtx_m unlock</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      runner_m.exec(next_job(lock));</span>
+             :     }
+             :   }
+             : 
+             :   void stop_running()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue_m.clear();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    runner_m.stop_all_threads();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    running_m = false;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    cond_m.notify_one();</span>
+             :   }
+             : 
+             :   void terminate_now()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (running_m)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(&quot;Call stop_running first!&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    terminate_m = true;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    cond_m.notify_one();</span>
+             :   }
+             : 
+             :   bool terminating()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return running_m == false;</span>
+             :   }
+             : 
+             :   /// @name Managing Queue
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void queue_back(kind_of&lt;event_t&gt; ke)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue(std::move(ke),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          std::bind(std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                      &amp;decltype(queue_m)::push_back),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                    &amp;queue_m, std::placeholders::_1));</span>
+             :   }
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void queue_front(kind_of&lt;event_t&gt; ke)
+             :   {
+             :     auto guard = std::lock_guard{mtx_m};
+             : 
+             :     queue(std::move(ke),
+             :           std::bind(std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(
+             :                       &amp;decltype(queue_m)::push_front),
+             :                     &amp;queue_m, std::placeholders::_1));
+             :   }
+             : 
+             : private:
+             :   /// @name Multi Threading
+             : 
+             :   std::mutex mtx_m;
+             :   std::condition_variable cond_m;
+             : 
+             :   /// @name Running Jobs
+             : 
+             :   job next_job(auto&amp; lock)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto j{std::move(queue_m.front())};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue_m.pop_front();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // we would like to use exec(next_job(std::move(lock)))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // but it is implementation-defined wether the lock moved into next_job</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // is destroyed before exec is executed or not</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // https://eel.is/c++draft/expr.call#6.sentence-10</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // for this reason, we are going to unlock here</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    lock.unlock();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return j;</span>
+             :   }
+             : 
+             :   bool terminate_m{false}; ///&lt; terminate run and exit
+             :   bool running_m{false};   ///&lt; wether we're running jobs
+             :   runner&amp; runner_m;
+             : 
+             :   /// @name Managing Queue
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void queue(kind_of&lt;event_t&gt; ke, auto push_fn)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!running_m)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto j_id = runner_m.next_job_id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    push_fn(make_job(j_id, std::move(ke)));</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if constexpr (internal_event_c&lt;event_t&gt;)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::debug(SL, lf::event, &quot;Job #{} pushed [# jobs: {}]&quot;, j_id,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  queue_m.size());</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else if constexpr (network_event_c&lt;event_t&gt;)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto p_id = ke.md().pipe().id();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      runner_m.associate_job_to_pipe(j_id, p_id);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      cond_m.notify_one();</span>
+             :     }
+             :   }
+             : 
+             :   std::deque&lt;job&gt; queue_m; ///&lt; a deque of all jobs
+             : };
+             : 
+             : } // namespace pars::ev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>
