@@ -38,7 +38,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::net
 {
 
-const std::error_category& error_category() noexcept
+static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
@@ -68,7 +68,7 @@ struct is_error_code_enum<::nng::error> : true_type
 namespace nng
 {
 
-std::error_code make_error_code(nng::error e) noexcept
+inline std::error_code make_error_code(nng::error e) noexcept
 {
   return std::error_code(static_cast<int>(e), pars::net::error_category());
 }
