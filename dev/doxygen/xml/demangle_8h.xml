@@ -288,9 +288,9 @@
       </node>
     </invincdepgraph>
     <sectiondef kind="func">
-      <memberdef kind="function" id="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="demangle_8h_1ad02552d0a98f7dd4450d41c156857961" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const std::string</type>
-        <definition>const std::string demangle</definition>
+        <definition>static const std::string demangle</definition>
         <argsstring>(const char *name)</argsstring>
         <name>demangle</name>
         <param>
@@ -303,10 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/log/demangle.h" line="39" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/demangle.h" bodystart="39" bodyend="45"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
-        <referencedby refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" compoundref="nametype_8h" startline="37" endline="40">nametype</referencedby>
-        <referencedby refid="nametype_8h_1a44cf2292d98aa52f62494578e2c8cf80" compoundref="nametype_8h" startline="43" endline="46">nametype</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/demangle.h" line="39" column="26" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/demangle.h" bodystart="39" bodyend="45"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -352,7 +349,7 @@
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cxxabi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" kindref="member">demangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>demangle(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>status<sp/>=<sp/>std::numeric_limits&lt;int&gt;::min();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>str<sp/>=<sp/>std::unique_ptr&lt;char,<sp/>void<sp/>(*)(void*)&gt;(</highlight></codeline>
@@ -360,7 +357,7 @@
 <codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status<sp/>==<sp/>0<sp/>?<sp/>str.get()<sp/>:<sp/>name;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" kindref="member">demangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>demangle(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>name;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">}</highlight></codeline>

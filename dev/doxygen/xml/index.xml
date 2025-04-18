@@ -790,7 +790,7 @@
     <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kind="enum"><name>cmode</name></member>
     <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kind="enumvalue"><name>dial</name></member>
     <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" kind="enumvalue"><name>listen</name></member>
-    <member refid="namespacepars_1_1net_1a144553f8959ec1af004d64fefa49d541" kind="function"><name>error_category</name></member>
+    <member refid="namespacepars_1_1net_1a3948381dc2d59831b966cfb4361f7eb4" kind="function"><name>error_category</name></member>
     <member refid="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" kind="function"><name>cmode_from_string</name></member>
   </compound>
   <compound refid="namespacepars__example" kind="namespace"><name>pars_example</name>
@@ -911,7 +911,7 @@
     <member refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kind="define"><name>SL</name></member>
   </compound>
   <compound refid="demangle_8h" kind="file"><name>demangle.h</name>
-    <member refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" kind="function"><name>demangle</name></member>
+    <member refid="demangle_8h_1ad02552d0a98f7dd4450d41c156857961" kind="function"><name>demangle</name></member>
   </compound>
   <compound refid="flags_8h" kind="file"><name>flags.h</name>
   </compound>

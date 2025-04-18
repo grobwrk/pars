@@ -19,7 +19,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacenng_1ab8c550903b56d71d96ccbe65addf5094" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespacenng_1ab8c550903b56d71d96ccbe65addf5094" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::error_code</type>
         <definition>std::error_code nng::make_error_code</definition>
         <argsstring>(nng::error e) noexcept</argsstring>
@@ -35,8 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="71" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="71" bodyend="74"/>
-        <references refid="namespacepars_1_1net_1a144553f8959ec1af004d64fefa49d541" compoundref="err_8h" startline="41" endline="54">pars::net::error_category</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="71" column="24" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="71" bodyend="74"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

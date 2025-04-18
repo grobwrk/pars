@@ -390,7 +390,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  121</span>    lock.unlock();</div>
 <div class="line"><span class="lineno">  122</span> </div>
 <div class="line"><span class="lineno">  123</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>, <span class="stringliteral">&quot;Job #{}: Running Handler [{}]&quot;</span>, j.id(),</div>
-<div class="line"><span class="lineno">  124</span>                <a class="code hl_function" href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585">demangle</a>(hf_registry_m.type_for(spec_hash)-&gt;name()));</div>
+<div class="line"><span class="lineno">  124</span>                demangle(hf_registry_m.type_for(spec_hash)-&gt;name()));</div>
 <div class="line"><span class="lineno">  125</span> </div>
 <div class="line"><span class="lineno">  126</span>    <span class="keywordflow">try</span></div>
 <div class="line"><span class="lineno">  127</span>    {</div>
@@ -407,10 +407,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  138</span>      process_exception(s_id, spec_hash);</div>
 <div class="line"><span class="lineno">  139</span>    }</div>
 <div class="line"><span class="lineno">  140</span>  }</div>
-<div class="ttc" id="ademangle_8h_html_a0cdb6805cb2ca8543af88f7d73435585"><div class="ttname"><a href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585">demangle</a></div><div class="ttdeci">const std::string demangle(const char *name)</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00039">demangle.h:39</a></div></div>
 <div class="ttc" id="anamespacepars_html_a2f1cf1eb41879a6841dc516a92bcf35f"><div class="ttname"><a href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">pars::err</a></div><div class="ttdeci">void err(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00214">log.h:214</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, <a class="el" href="demangle_8h_source.html#l00039">demangle()</a>, <a class="el" href="log_8h_source.html#l00214">pars::err()</a>, <a class="el" href="flags_8h_source.html#l00041">pars::event</a>, <a class="el" href="job_8h_source.html#l00089">pars::ev::job::id()</a>, <a class="el" href="log_8h_source.html#l00061">SL</a>, <a class="el" href="job_8h_source.html#l00091">pars::ev::job::socket_id()</a>, and <a class="el" href="job_8h_source.html#l00093">pars::ev::job::spec_hash()</a>.</p>
+<p class="reference">References <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, <a class="el" href="log_8h_source.html#l00214">pars::err()</a>, <a class="el" href="flags_8h_source.html#l00041">pars::event</a>, <a class="el" href="job_8h_source.html#l00089">pars::ev::job::id()</a>, <a class="el" href="log_8h_source.html#l00061">SL</a>, <a class="el" href="job_8h_source.html#l00091">pars::ev::job::socket_id()</a>, and <a class="el" href="job_8h_source.html#l00093">pars::ev::job::spec_hash()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="runner_8h_source.html#l00144">exec()</a>.</p>
 <div class="dynheader">
@@ -418,22 +417,20 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1ev_1_1runner_a95f7f53cfd50512ecc8412b59ed133e0_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1runner_a95f7f53cfd50512ecc8412b59ed133e0_cgraph" alt=""/></div>
 <map name="astructpars_1_1ev_1_1runner_a95f7f53cfd50512ecc8412b59ed133e0_cgraph" id="astructpars_1_1ev_1_1runner_a95f7f53cfd50512ecc8412b59ed133e0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,136,166,164"/>
+<area shape="rect" title=" " alt="" coords="5,109,166,137"/>
 <area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="253,5,350,33"/>
-<area shape="poly" title=" " alt="" coords="99,134,146,90,178,65,212,43,237,33,240,37,215,48,181,69,150,94,102,138"/>
-<area shape="rect" href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585" title=" " alt="" coords="259,57,345,85"/>
-<area shape="poly" title=" " alt="" coords="118,133,213,95,243,85,245,90,215,100,120,138"/>
-<area shape="rect" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f" title=" " alt="" coords="264,109,340,137"/>
-<area shape="poly" title=" " alt="" coords="165,137,248,127,249,132,166,143"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3" title=" " alt="" coords="242,161,362,189"/>
-<area shape="poly" title=" " alt="" coords="166,157,226,164,226,169,165,162"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#aae533d6b0f37befa2eaca26c4b5e161c" title=" " alt="" coords="217,213,386,241"/>
-<area shape="poly" title=" " alt="" coords="121,162,215,198,238,206,236,211,213,203,119,167"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#aff37b681c04723903c874d551940e676" title=" " alt="" coords="214,265,390,293"/>
-<area shape="poly" title=" " alt="" coords="103,162,150,205,181,229,215,250,229,257,227,262,212,255,178,234,147,209,99,166"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="438,57,515,85"/>
-<area shape="poly" title=" " alt="" coords="352,31,424,53,422,58,350,36"/>
-<area shape="poly" title=" " alt="" coords="339,109,422,84,424,89,341,115"/>
+<area shape="poly" title=" " alt="" coords="105,107,153,75,213,43,238,34,240,39,215,48,156,80,108,111"/>
+<area shape="rect" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f" title=" " alt="" coords="264,57,340,85"/>
+<area shape="poly" title=" " alt="" coords="146,106,249,81,250,86,147,111"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3" title=" " alt="" coords="242,109,362,137"/>
+<area shape="poly" title=" " alt="" coords="166,120,226,120,226,126,166,126"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#aae533d6b0f37befa2eaca26c4b5e161c" title=" " alt="" coords="217,161,386,189"/>
+<area shape="poly" title=" " alt="" coords="147,135,227,155,226,160,146,140"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#aff37b681c04723903c874d551940e676" title=" " alt="" coords="214,213,390,241"/>
+<area shape="poly" title=" " alt="" coords="108,135,156,166,215,198,233,205,231,210,213,203,153,171,105,140"/>
+<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="438,32,515,60"/>
+<area shape="poly" title=" " alt="" coords="352,24,423,35,422,40,351,29"/>
+<area shape="poly" title=" " alt="" coords="340,63,422,51,423,56,340,68"/>
 </map>
 </div>
 <div class="dynheader">
@@ -488,26 +485,24 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1ev_1_1runner_a68cb34be52ee194f0c43cfd0e21de906_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1runner_a68cb34be52ee194f0c43cfd0e21de906_cgraph" alt=""/></div>
 <map name="astructpars_1_1ev_1_1runner_a68cb34be52ee194f0c43cfd0e21de906_cgraph" id="astructpars_1_1ev_1_1runner_a68cb34be52ee194f0c43cfd0e21de906_cgraph">
-<area shape="rect" title=" " alt="" coords="5,167,166,194"/>
-<area shape="rect" href="structpars_1_1ev_1_1runner.html#a95f7f53cfd50512ecc8412b59ed133e0" title=" " alt="" coords="214,136,374,164"/>
-<area shape="poly" title=" " alt="" coords="165,166,198,161,198,167,166,171"/>
-<area shape="rect" href="structpars_1_1ev_1_1runner.html#a530562da38da9d1236803c670705959e" title=" " alt="" coords="214,188,374,232"/>
-<area shape="poly" title=" " alt="" coords="166,189,199,194,198,199,165,194"/>
+<area shape="rect" title=" " alt="" coords="5,140,166,168"/>
+<area shape="rect" href="structpars_1_1ev_1_1runner.html#a95f7f53cfd50512ecc8412b59ed133e0" title=" " alt="" coords="214,109,374,137"/>
+<area shape="poly" title=" " alt="" coords="165,139,198,135,198,140,166,145"/>
+<area shape="rect" href="structpars_1_1ev_1_1runner.html#a530562da38da9d1236803c670705959e" title=" " alt="" coords="214,161,374,206"/>
+<area shape="poly" title=" " alt="" coords="166,162,199,167,198,172,165,168"/>
 <area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="462,5,559,33"/>
-<area shape="poly" title=" " alt="" coords="307,134,354,90,386,65,421,43,446,33,448,37,423,48,389,69,358,94,310,138"/>
-<area shape="rect" href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585" title=" " alt="" coords="467,57,553,85"/>
-<area shape="poly" title=" " alt="" coords="327,133,421,95,451,85,453,90,423,100,329,138"/>
-<area shape="rect" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f" title=" " alt="" coords="472,109,548,137"/>
-<area shape="poly" title=" " alt="" coords="374,137,457,127,457,132,374,143"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3" title=" " alt="" coords="450,161,570,189"/>
-<area shape="poly" title=" " alt="" coords="374,157,435,164,434,169,374,162"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#aae533d6b0f37befa2eaca26c4b5e161c" title=" " alt="" coords="426,213,595,241"/>
-<area shape="poly" title=" " alt="" coords="345,162,375,173,423,198,443,206,441,211,421,203,373,178,344,167"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#aff37b681c04723903c874d551940e676" title=" " alt="" coords="422,265,598,293"/>
-<area shape="poly" title=" " alt="" coords="357,162,376,173,393,193,400,213,408,232,424,251,432,256,429,260,420,254,403,235,395,215,388,196,372,177,354,167"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="646,57,724,85"/>
-<area shape="poly" title=" " alt="" coords="560,31,632,53,631,58,559,36"/>
-<area shape="poly" title=" " alt="" coords="548,109,631,84,632,89,549,115"/>
+<area shape="poly" title=" " alt="" coords="313,107,361,75,421,43,446,34,448,39,423,48,364,80,316,111"/>
+<area shape="rect" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f" title=" " alt="" coords="472,57,548,85"/>
+<area shape="poly" title=" " alt="" coords="354,106,457,81,458,86,355,111"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3" title=" " alt="" coords="450,109,570,137"/>
+<area shape="poly" title=" " alt="" coords="374,120,434,120,434,126,374,126"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#aae533d6b0f37befa2eaca26c4b5e161c" title=" " alt="" coords="426,161,595,189"/>
+<area shape="poly" title=" " alt="" coords="355,135,435,155,434,160,354,140"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#aff37b681c04723903c874d551940e676" title=" " alt="" coords="422,213,598,241"/>
+<area shape="poly" title=" " alt="" coords="354,135,375,146,391,160,400,173,409,186,424,198,435,204,432,209,420,203,405,189,396,176,387,163,373,151,351,140"/>
+<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="646,32,724,60"/>
+<area shape="poly" title=" " alt="" coords="560,24,631,35,630,40,559,29"/>
+<area shape="poly" title=" " alt="" coords="548,63,631,51,632,56,549,68"/>
 </map>
 </div>
 

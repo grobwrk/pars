@@ -306,7 +306,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/log/nametype.h" line="37" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/nametype.h" bodystart="37" bodyend="40"/>
-        <references refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" compoundref="demangle_8h" startline="39" endline="45">demangle</references>
         <referencedby refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" compoundref="spec_8h" startline="56" endline="63">pars::ev::spec&lt; kind_of_event_t &gt;::format_to</referencedby>
         <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="69" endline="107">pars::net::op::send</referencedby>
       </memberdef>
@@ -331,7 +330,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/log/nametype.h" line="43" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/nametype.h" bodystart="43" bodyend="46"/>
-        <references refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" compoundref="demangle_8h" startline="39" endline="45">demangle</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -377,13 +375,13 @@
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
 <codeline lineno="37" refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" refkind="member"><highlight class="normal">std::string<sp/><ref refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" kindref="member">nametype</ref>()</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" kindref="member">demangle</ref>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(value_t).name());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>demangle(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(value_t).name());</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
 <codeline lineno="43" refid="nametype_8h_1a44cf2292d98aa52f62494578e2c8cf80" refkind="member"><highlight class="normal">std::string<sp/><ref refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" kindref="member">nametype</ref>(value_t&amp;<sp/>x)</highlight></codeline>
 <codeline lineno="44"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="demangle_8h_1a0cdb6805cb2ca8543af88f7d73435585" kindref="member">demangle</ref>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(x).name());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>demangle(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(x).name());</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/log/nametype.h"/>

@@ -91,8 +91,7 @@ $(function(){ initResizable(false); });
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#concepts">Concepts</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle"><div class="title">pars::net Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -146,11 +145,6 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2">listen</a>
  }</td></tr>
 <tr class="separator:a087bfa3d6bb7c88fdd097f40d7764f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a144553f8959ec1af004d64fefa49d541" id="r_a144553f8959ec1af004d64fefa49d541"><td class="memItemLeft" align="right" valign="top">const std::error_category &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a144553f8959ec1af004d64fefa49d541">error_category</a> () noexcept</td></tr>
-<tr class="separator:a144553f8959ec1af004d64fefa49d541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a087bfa3d6bb7c88fdd097f40d7764f0b" name="a087bfa3d6bb7c88fdd097f40d7764f0b"></a>
@@ -219,59 +213,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="anamespacepars_1_1net_html_a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf"><div class="ttname"><a href="#a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf">pars::net::dir::in</a></div><div class="ttdeci">@ in</div><div class="ttdef"><b>Definition</b> <a href="dir_8h_source.html#l00040">dir.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html_a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275"><div class="ttname"><a href="#a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275">pars::net::dir::out</a></div><div class="ttdeci">@ out</div><div class="ttdef"><b>Definition</b> <a href="dir_8h_source.html#l00039">dir.h:39</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a144553f8959ec1af004d64fefa49d541" name="a144553f8959ec1af004d64fefa49d541"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a144553f8959ec1af004d64fefa49d541">&#9670;&#160;</a></span>error_category()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::error_category &amp; pars::net::error_category </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="err_8h_source.html#l00041">41</a> of file <a class="el" href="err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
-<div class="line"><span class="lineno">   43</span>  <span class="keyword">static</span> struct : std::error_category</div>
-<div class="line"><span class="lineno">   44</span>  {</div>
-<div class="line"><span class="lineno">   45</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* name() const noexcept<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;pars::net&quot;</span>; }</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>    <span class="keyword">virtual</span> std::string message(<span class="keywordtype">int</span> e)<span class="keyword"> const override</span></div>
-<div class="line"><span class="lineno">   48</span><span class="keyword">    </span>{</div>
-<div class="line"><span class="lineno">   49</span>      return ::nng_strerror(e);</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="line"><span class="lineno">   51</span>  } network_error_category;</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> network_error_category;</div>
-<div class="line"><span class="lineno">   54</span>}</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="err_8h_source.html#l00071">nng::make_error_code()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacepars_1_1net_a144553f8959ec1af004d64fefa49d541_icgraph.png" border="0" usemap="#anamespacepars_1_1net_a144553f8959ec1af004d64fefa49d541_icgraph" alt=""/></div>
-<map name="anamespacepars_1_1net_a144553f8959ec1af004d64fefa49d541_icgraph" id="anamespacepars_1_1net_a144553f8959ec1af004d64fefa49d541_icgraph">
-<area shape="rect" title=" " alt="" coords="219,5,400,33"/>
-<area shape="rect" href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094" title=" " alt="" coords="5,5,171,33"/>
-<area shape="poly" title=" " alt="" coords="203,22,171,22,171,16,203,16"/>
-</map>
-</div>
-
 </div>
 </div>
 </div><!-- contents -->

@@ -131,12 +131,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacepars_1_1net.html#a144553f8959ec1af004d64fefa49d541">   41</a></span><span class="keyword">const</span> std::error_category&amp; <a class="code hl_function" href="namespacepars_1_1net.html#a144553f8959ec1af004d64fefa49d541">error_category</a>() noexcept</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">static</span> <span class="keyword">const</span> std::error_category&amp; error_category() noexcept</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">static</span> struct : std::error_category</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* name() <span class="keyword">const</span> <span class="keyword">noexcept</span> <span class="keyword">override</span> { <span class="keywordflow">return</span> <span class="stringliteral">&quot;pars::net&quot;</span>; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* name() const noexcept<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;pars::net&quot;</span>; }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> std::string message(<span class="keywordtype">int</span> e)<span class="keyword"> const override</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">    </span>{</div>
@@ -146,7 +145,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">return</span> network_error_category;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} <span class="comment">// namespace pars::net</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
@@ -169,9 +167,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094">   71</a></span>std::error_code <a class="code hl_function" href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094">make_error_code</a>(nng::error e) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094">   71</a></span><span class="keyword">inline</span> std::error_code <a class="code hl_function" href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094">make_error_code</a>(nng::error e) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> std::error_code(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(e), <a class="code hl_function" href="namespacepars_1_1net.html#a144553f8959ec1af004d64fefa49d541">pars::net::error_category</a>());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> std::error_code(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(e), pars::net::error_category());</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
@@ -181,7 +179,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacenng_html"><div class="ttname"><a href="namespacenng.html">nng</a></div><div class="ttdef"><b>Definition</b> <a href="#l00068">err.h:69</a></div></div>
 <div class="ttc" id="anamespacenng_html_ab8c550903b56d71d96ccbe65addf5094"><div class="ttname"><a href="namespacenng.html#ab8c550903b56d71d96ccbe65addf5094">nng::make_error_code</a></div><div class="ttdeci">std::error_code make_error_code(nng::error e) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00071">err.h:71</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
-<div class="ttc" id="anamespacepars_1_1net_html_a144553f8959ec1af004d64fefa49d541"><div class="ttname"><a href="namespacepars_1_1net.html#a144553f8959ec1af004d64fefa49d541">pars::net::error_category</a></div><div class="ttdeci">const std::error_category &amp; error_category() noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00041">err.h:41</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="#l00058">err.h:59</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

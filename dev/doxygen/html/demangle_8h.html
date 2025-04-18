@@ -88,8 +88,6 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">demangle.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -221,60 +219,6 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 <p><a href="demangle_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0cdb6805cb2ca8543af88f7d73435585" id="r_a0cdb6805cb2ca8543af88f7d73435585"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdb6805cb2ca8543af88f7d73435585">demangle</a> (const char *name)</td></tr>
-<tr class="separator:a0cdb6805cb2ca8543af88f7d73435585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a0cdb6805cb2ca8543af88f7d73435585" name="a0cdb6805cb2ca8543af88f7d73435585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cdb6805cb2ca8543af88f7d73435585">&#9670;&#160;</a></span>demangle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string demangle </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="demangle_8h_source.html#l00039">39</a> of file <a class="el" href="demangle_8h_source.html">demangle.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
-<div class="line"><span class="lineno">   41</span>  <span class="keyword">auto</span> status = std::numeric_limits&lt;int&gt;::min();</div>
-<div class="line"><span class="lineno">   42</span>  <span class="keyword">auto</span> str = std::unique_ptr&lt;char, void (*)(void*)&gt;(</div>
-<div class="line"><span class="lineno">   43</span>    abi::__cxa_demangle(name, NULL, NULL, &amp;status), std::free);</div>
-<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">return</span> status == 0 ? str.get() : name;</div>
-<div class="line"><span class="lineno">   45</span>}</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="runner_8h_source.html#l00101">pars::ev::runner::exec()</a>, <a class="el" href="nametype_8h_source.html#l00037">nametype()</a>, and <a class="el" href="nametype_8h_source.html#l00043">nametype()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="demangle_8h_a0cdb6805cb2ca8543af88f7d73435585_icgraph.png" border="0" usemap="#ademangle_8h_a0cdb6805cb2ca8543af88f7d73435585_icgraph" alt=""/></div>
-<map name="ademangle_8h_a0cdb6805cb2ca8543af88f7d73435585_icgraph" id="ademangle_8h_a0cdb6805cb2ca8543af88f7d73435585_icgraph">
-<area shape="rect" title=" " alt="" coords="444,57,530,85"/>
-<area shape="rect" href="structpars_1_1ev_1_1runner.html#a95f7f53cfd50512ecc8412b59ed133e0" title=" " alt="" coords="236,5,396,33"/>
-<area shape="poly" title=" " alt="" coords="429,56,363,36,365,31,430,51"/>
-<area shape="rect" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13" title=" " alt="" coords="272,57,360,85"/>
-<area shape="poly" title=" " alt="" coords="429,74,360,74,360,68,429,68"/>
-<area shape="rect" href="nametype_8h.html#a44cf2292d98aa52f62494578e2c8cf80" title=" " alt="" coords="272,109,360,137"/>
-<area shape="poly" title=" " alt="" coords="430,91,361,113,359,107,429,86"/>
-<area shape="rect" href="structpars_1_1ev_1_1runner.html#a68cb34be52ee194f0c43cfd0e21de906" title=" " alt="" coords="16,5,177,33"/>
-<area shape="poly" title=" " alt="" coords="220,22,177,22,177,16,220,16"/>
-<area shape="rect" href="classpars_1_1ev_1_1spec.html#a687a863807ab68c98c9a0303373535dd" title=" " alt="" coords="5,57,188,85"/>
-<area shape="poly" title=" " alt="" coords="257,74,188,74,188,68,257,68"/>
-<area shape="rect" href="classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a" title=" " alt="" coords="26,109,167,137"/>
-<area shape="poly" title=" " alt="" coords="258,88,159,111,158,106,256,82"/>
-</map>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

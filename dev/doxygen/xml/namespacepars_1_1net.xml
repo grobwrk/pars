@@ -69,9 +69,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacepars_1_1net_1a144553f8959ec1af004d64fefa49d541" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespacepars_1_1net_1a3948381dc2d59831b966cfb4361f7eb4" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>const std::error_category &amp;</type>
-        <definition>const std::error_category &amp; pars::net::error_category</definition>
+        <definition>static const std::error_category &amp; pars::net::error_category</definition>
         <argsstring>() noexcept</argsstring>
         <name>error_category</name>
         <qualifiedname>pars::net::error_category</qualifiedname>
@@ -81,8 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="41" column="27" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="41" bodyend="54"/>
-        <referencedby refid="namespacenng_1ab8c550903b56d71d96ccbe65addf5094" compoundref="err_8h" startline="71" endline="74">nng::make_error_code</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="41" column="34" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="41" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">cmode</ref></type>

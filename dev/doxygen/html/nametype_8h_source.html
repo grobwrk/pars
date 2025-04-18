@@ -130,7 +130,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">   37</a></span>std::string <a class="code hl_function" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a>()</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585">demangle</a>(<span class="keyword">typeid</span>(value_t).name());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">return</span> demangle(<span class="keyword">typeid</span>(value_t).name());</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
@@ -138,11 +138,10 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="nametype_8h.html#a44cf2292d98aa52f62494578e2c8cf80">   43</a></span>std::string <a class="code hl_function" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a>(value_t&amp; x)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585">demangle</a>(<span class="keyword">typeid</span>(x).name());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">return</span> demangle(<span class="keyword">typeid</span>(x).name());</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 </div>
 <div class="ttc" id="ademangle_8h_html"><div class="ttname"><a href="demangle_8h.html">demangle.h</a></div></div>
-<div class="ttc" id="ademangle_8h_html_a0cdb6805cb2ca8543af88f7d73435585"><div class="ttname"><a href="demangle_8h.html#a0cdb6805cb2ca8543af88f7d73435585">demangle</a></div><div class="ttdeci">const std::string demangle(const char *name)</div><div class="ttdef"><b>Definition</b> <a href="demangle_8h_source.html#l00039">demangle.h:39</a></div></div>
 <div class="ttc" id="anametype_8h_html_a38dd383b4a7349ba3771309bc3bafa13"><div class="ttname"><a href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a></div><div class="ttdeci">std::string nametype()</div><div class="ttdef"><b>Definition</b> <a href="#l00037">nametype.h:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
