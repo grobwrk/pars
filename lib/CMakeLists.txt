@@ -4,14 +4,8 @@ find_package (fmt CONFIG REQUIRED)
 find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 
-add_library (pars INTERFACE)
-add_library (pars::pars ALIAS pars)
-
 # sorted please
-target_sources (
-    pars INTERFACE
-    FILE_SET HEADERS BASE_DIRS include
-    FILES
+set (PARS_HEADERS
     "include/pars/app/resources.h"
     "include/pars/app/setup.h"
     "include/pars/app/single.h"
@@ -63,6 +57,16 @@ target_sources (
     "include/pars/init.h"
     "include/pars/log.h"
     "include/pars/pars.h"
+)
+
+add_library (pars INTERFACE ${PARS_HEADERS})
+add_library (pars::pars ALIAS pars)
+
+target_sources (
+    pars INTERFACE
+    FILE_SET HEADERS
+    BASE_DIRS include
+    FILES ${PARS_HEADERS}
 )
 
 target_link_libraries (

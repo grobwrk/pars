@@ -27,50 +27,56 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#include <pars/pars.h>
 
-#include "pars/init.h"
+#include <gtest/gtest.h>
 
-#include <nngpp/error.h>
+#include <type_traits>
 
-#include <system_error>
-
-namespace pars::net
+namespace pars::tests
 {
 
-static const std::error_category& error_category() noexcept
+using InternalEvents = ::testing::Types<ev::init, ev::exception>;
+
+template<typename event_t>
+struct InternalKinds : testing::Test
 {
-  static struct : std::error_category
-  {
-    virtual const char* name() const noexcept override { return "pars::net"; }
-
-    virtual std::string message(int e) const override
-    {
-      return ::nng_strerror(e);
-    }
-  } network_error_category;
-
-  return network_error_category;
-}
-
-} // namespace pars::net
-
-namespace std
-{
-
-template<>
-struct is_error_code_enum<::nng::error> : true_type
-{
+  using event_type = event_t;
 };
 
-} // namespace std
+TYPED_TEST_SUITE(InternalKinds, InternalEvents);
 
-namespace nng
+TYPED_TEST(InternalKinds, EventsAreRecognized)
 {
+  using event_type = InternalKinds<TypeParam>::event_type;
 
-inline std::error_code make_error_code(nng::error e) noexcept
-{
-  return std::error_code(static_cast<int>(e), pars::net::error_category());
+  // event_type is recognized as and event
+  EXPECT_TRUE(ev::event_c<event_type>);
+
+  // event_type do not requires network data
+  EXPECT_FALSE(ev::klass<event_type>::requires_network);
+
+  // event_type is recognized as an internal_event_c
+  EXPECT_TRUE(ev::internal_event_c<event_type>);
 }
 
-} // namespace nng
+TYPED_TEST(InternalKinds, EventsCanBeFired)
+{
+  using event_type = InternalKinds<TypeParam>::event_type;
+
+  // we can instantiate a fired<event_type>
+  EXPECT_TRUE((std::is_constructible_v<ev::fired<event_type>, event_type,
+                                       ev::metadata<ev::fired, event_type>>));
+
+  if (std::default_initializable<event_type>)
+  {
+    // we can instantiate from event_type{} without specifing the type
+    // event_type
+    ev::fired{event_type{}, {}};
+
+    // we can instantiate specifing the type event_type
+    ev::fired<event_type>{{}, {}};
+  }
+}
+
+} // namespace pars::tests

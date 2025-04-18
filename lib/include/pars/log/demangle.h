@@ -36,7 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #if !defined(_MSC_VER)
 #include <cxxabi.h>
 #include <limits>
-const std::string demangle(const char* name)
+static const std::string demangle(const char* name)
 {
   auto status = std::numeric_limits<int>::min();
   auto str = std::unique_ptr<char, void (*)(void*)>(
@@ -44,7 +44,7 @@ const std::string demangle(const char* name)
   return status == 0 ? str.get() : name;
 }
 #else
-const std::string demangle(const char* name)
+static const std::string demangle(const char* name)
 {
   return name;
 }
