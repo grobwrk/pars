@@ -130,58 +130,50 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> kind_of, <a class="code hl_concept" href="conceptpars_1_1ev_1_1event__c.html">event_c</a> event_t&gt;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">requires</span> <a class="code hl_concept" href="conceptpars_1_1ev_1_1kind__c.html">kind_c&lt;kind_of&gt;</a></div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1hf__registry.html#aa49457624813a0936277091b08fb5215">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="structpars_1_1ev_1_1hf__registry.html#ade1f24a6befdc5df33d9b3bc7d6aaba0">hf_registry::insert</a>(<span class="keywordtype">int</span> s_id, <a class="code hl_typedef" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f&lt;kind_of, event_t&gt;</a> hf)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> hf_registry::insert(<span class="keywordtype">int</span> s_id, <a class="code hl_typedef" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f&lt;kind_of, event_t&gt;</a> hf)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keyword">auto</span> hf_ptr = std::make_shared&lt;handler_f&lt;kind_of, event_t&gt;&gt;(std::move(hf));</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">auto</span> guard = std::lock_guard{mtx_m};</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptpars_1_1ev_1_1async__kind__c.html">async_kind_c&lt;kind_of&lt;event_t&gt;</a>&gt;)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (async_kind_c&lt;kind_of&lt;event_t&gt;&gt;)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [&amp;, hf_ptr](<a class="code hl_class" href="classpars_1_1ev_1_1job.html">job</a> j) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">auto</span> task = std::packaged_task([hf_ptr](std::stop_token tk, <a class="code hl_class" href="classpars_1_1ev_1_1job.html">job</a> j) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">auto</span> ke = j.<a class="code hl_function" href="classpars_1_1ev_1_1job.html#afce2c813eadb6e5471e026fa0b4fbaaf">event</a>&lt;kind_of, event_t&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [&amp;, hf_ptr](job j) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keyword">auto</span> task = std::packaged_task([hf_ptr](std::stop_token tk, job j) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">auto</span> ke = j.event&lt;kind_of, event_t&gt;();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">auto</span>&amp; md = ke.md();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        md.set_job_id(j.<a class="code hl_function" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3">id</a>());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        md.set_job_id(j.id());</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        md.set_stop_token(tk);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        (*hf_ptr)(std::move(ke));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      });</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      runner_m.start_thread(<a class="code hl_class" href="classpars_1_1ev_1_1spec.html">spec</a>&lt;kind_of&lt;event_t&gt;&gt;::hash, std::move(task),</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      runner_m.start_thread(spec&lt;kind_of&lt;event_t&gt;&gt;::hash, std::move(task),</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                            std::move(j));</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    });</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [hf_ptr](<a class="code hl_class" href="classpars_1_1ev_1_1job.html">job</a> j) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keyword">auto</span> ke = j.<a class="code hl_function" href="classpars_1_1ev_1_1job.html#afce2c813eadb6e5471e026fa0b4fbaaf">event</a>&lt;kind_of, event_t&gt;();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [hf_ptr](job j) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keyword">auto</span> ke = j.event&lt;kind_of, event_t&gt;();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      ke.md().set_job_id(j.<a class="code hl_function" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3">id</a>());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      ke.md().set_job_id(j.id());</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      (*hf_ptr)(ke);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    });</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
-</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>} <span class="comment">// namespace pars::ev</span></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1job_html"><div class="ttname"><a href="classpars_1_1ev_1_1job.html">pars::ev::job</a></div><div class="ttdef"><b>Definition</b> <a href="job_8h_source.html#l00046">job.h:47</a></div></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1job_html_a41155821180189773234cab1826b8ab3"><div class="ttname"><a href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3">pars::ev::job::id</a></div><div class="ttdeci">std::size_t id() const</div><div class="ttdef"><b>Definition</b> <a href="job_8h_source.html#l00089">job.h:89</a></div></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1job_html_afce2c813eadb6e5471e026fa0b4fbaaf"><div class="ttname"><a href="classpars_1_1ev_1_1job.html#afce2c813eadb6e5471e026fa0b4fbaaf">pars::ev::job::event</a></div><div class="ttdeci">kind_of&lt; event_t &gt; event()</div><div class="ttdef"><b>Definition</b> <a href="job_8h_source.html#l00068">job.h:68</a></div></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1spec_html"><div class="ttname"><a href="classpars_1_1ev_1_1spec.html">pars::ev::spec</a></div><div class="ttdef"><b>Definition</b> <a href="spec_8h_source.html#l00043">spec.h:44</a></div></div>
-<div class="ttc" id="aconceptpars_1_1ev_1_1async__kind__c_html"><div class="ttname"><a href="conceptpars_1_1ev_1_1async__kind__c.html">pars::ev::async_kind_c</a></div><div class="ttdef"><b>Definition</b> <a href="concept_2kind_8h_source.html#l00049">kind.h:49</a></div></div>
 <div class="ttc" id="aconceptpars_1_1ev_1_1event__c_html"><div class="ttname"><a href="conceptpars_1_1ev_1_1event__c.html">pars::ev::event_c</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00053">event.h:53</a></div></div>
 <div class="ttc" id="aconceptpars_1_1ev_1_1kind__c_html"><div class="ttname"><a href="conceptpars_1_1ev_1_1kind__c.html">pars::ev::kind_c</a></div><div class="ttdef"><b>Definition</b> <a href="concept_2kind_8h_source.html#l00039">kind.h:39</a></div></div>
 <div class="ttc" id="ahf__registry_8h_html"><div class="ttname"><a href="hf__registry_8h.html">hf_registry.h</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00039">event.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a775df579549c610e3e2c8dae429f129c"><div class="ttname"><a href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">pars::ev::handler_f</a></div><div class="ttdeci">std::move_only_function&lt; void(hf_arg&lt; kind_of, event_t &gt;)&gt; handler_f</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00050">make_hf.h:50</a></div></div>
 <div class="ttc" id="arunner_8h_html"><div class="ttname"><a href="runner_8h.html">runner.h</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1hf__registry_html_ade1f24a6befdc5df33d9b3bc7d6aaba0"><div class="ttname"><a href="structpars_1_1ev_1_1hf__registry.html#ade1f24a6befdc5df33d9b3bc7d6aaba0">pars::ev::hf_registry::insert</a></div><div class="ttdeci">void insert(handler_f&lt; kind_of, event_t &gt; hf)</div><div class="ttdef"><b>Definition</b> <a href="hf__registry_8h_source.html#l00067">hf_registry.h:67</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

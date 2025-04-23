@@ -292,15 +292,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      runner_m.associate_job_to_pipe(j_id, p_id);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      cond_m.notify_one();</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  }</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  std::deque&lt;job&gt; queue_m; </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>,</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                  <span class="stringliteral">&quot;Job #{} pushed and associated with Pipe {:X} [# jobs: {}]&quot;</span>,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                  j_id, p_id, queue_m.size());</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    cond_m.notify_one();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  std::deque&lt;job&gt; queue_m; </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>};</div>
 </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>} <span class="comment">// namespace pars::ev</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>} <span class="comment">// namespace pars::ev</span></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1dispatcher_html_a3813f60af8ed6ece055a8ad4906777ee"><div class="ttname"><a href="classpars_1_1ev_1_1dispatcher.html#a3813f60af8ed6ece055a8ad4906777ee">pars::ev::dispatcher::queue_front</a></div><div class="ttdeci">void queue_front(kind_of&lt; event_t &gt; ke)</div><div class="ttdef"><b>Definition</b> <a href="#l00129">dispatcher.h:129</a></div></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1dispatcher_html_a43b9315b37007dc8efd70555f340b195"><div class="ttname"><a href="classpars_1_1ev_1_1dispatcher.html#a43b9315b37007dc8efd70555f340b195">pars::ev::dispatcher::dispatcher</a></div><div class="ttdeci">dispatcher(runner &amp;r)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">dispatcher.h:49</a></div></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1dispatcher_html_a5334c54f56b52d2a4fce00046ed498ec"><div class="ttname"><a href="classpars_1_1ev_1_1dispatcher.html#a5334c54f56b52d2a4fce00046ed498ec">pars::ev::dispatcher::stop_running</a></div><div class="ttdeci">void stop_running()</div><div class="ttdef"><b>Definition</b> <a href="#l00081">dispatcher.h:81</a></div></div>

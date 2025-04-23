@@ -849,7 +849,21 @@
   </compound>
   <compound refid="client_8h" kind="file"><name>client.h</name>
   </compound>
+  <compound refid="example_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="lib_2include_2pars_2concept_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="lib_2include_2pars_2ev_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="concept_2formattable_8h" kind="file"><name>formattable.h</name>
+  </compound>
+  <compound refid="fmt_2formattable_8h" kind="file"><name>formattable.h</name>
+  </compound>
   <compound refid="hashable_8h" kind="file"><name>hashable.h</name>
+  </compound>
+  <compound refid="concept_2kind_8h" kind="file"><name>kind.h</name>
+  </compound>
+  <compound refid="ev_2kind_8h" kind="file"><name>kind.h</name>
   </compound>
   <compound refid="net_8h" kind="file"><name>net.h</name>
   </compound>
@@ -859,21 +873,11 @@
   </compound>
   <compound refid="enqueuer_8h" kind="file"><name>enqueuer.h</name>
   </compound>
-  <compound refid="example_2event_8h" kind="file"><name>event.h</name>
-  </compound>
-  <compound refid="lib_2include_2pars_2concept_2event_8h" kind="file"><name>event.h</name>
-  </compound>
-  <compound refid="lib_2include_2pars_2ev_2event_8h" kind="file"><name>event.h</name>
-  </compound>
   <compound refid="hf__registry_8h" kind="file"><name>hf_registry.h</name>
   </compound>
   <compound refid="hf__registry____insert_8h" kind="file"><name>hf_registry__insert.h</name>
   </compound>
   <compound refid="job_8h" kind="file"><name>job.h</name>
-  </compound>
-  <compound refid="concept_2kind_8h" kind="file"><name>kind.h</name>
-  </compound>
-  <compound refid="ev_2kind_8h" kind="file"><name>kind.h</name>
   </compound>
   <compound refid="kind__base_8h" kind="file"><name>kind_base.h</name>
   </compound>
@@ -891,10 +895,6 @@
   <compound refid="serializer_8h" kind="file"><name>serializer.h</name>
   </compound>
   <compound refid="spec_8h" kind="file"><name>spec.h</name>
-  </compound>
-  <compound refid="concept_2formattable_8h" kind="file"><name>formattable.h</name>
-  </compound>
-  <compound refid="fmt_2formattable_8h" kind="file"><name>formattable.h</name>
   </compound>
   <compound refid="helpers_8h" kind="file"><name>helpers.h</name>
   </compound>

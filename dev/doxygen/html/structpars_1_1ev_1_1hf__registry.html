@@ -105,19 +105,10 @@ Public Member Functions</h2></td></tr>
 requires ev::kind_c&lt;kind_of&gt;</td></tr>
 <tr class="memitem:ad8e4eac6e124f05d3bc86ba167bf1299"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad8e4eac6e124f05d3bc86ba167bf1299">on</a> (void(class_t::*mem_fn)(<a class="el" href="namespacepars_1_1ev.html#ada8ba2faa8e8f8b6a385eb2156e52613">hf_arg</a>&lt; kind_of, event_t &gt;), class_t *self)</td></tr>
 <tr class="separator:ad8e4eac6e124f05d3bc86ba167bf1299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1f24a6befdc5df33d9b3bc7d6aaba0" id="r_ade1f24a6befdc5df33d9b3bc7d6aaba0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; typename kind_of, event_c event_t&gt; <br />
-requires kind_c&lt;kind_of&gt;</td></tr>
-<tr class="memitem:ade1f24a6befdc5df33d9b3bc7d6aaba0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ade1f24a6befdc5df33d9b3bc7d6aaba0">insert</a> (<a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a>&lt; kind_of, event_t &gt; hf)</td></tr>
-<tr class="separator:ade1f24a6befdc5df33d9b3bc7d6aaba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49457624813a0936277091b08fb5215" id="r_aa49457624813a0936277091b08fb5215"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; typename kind_of, event_c event_t&gt; <br />
-requires kind_c&lt;kind_of&gt;</td></tr>
-<tr class="memitem:aa49457624813a0936277091b08fb5215"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa49457624813a0936277091b08fb5215">insert</a> (int s_id, <a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a>&lt; kind_of, event_t &gt; hf)</td></tr>
-<tr class="memdesc:aa49457624813a0936277091b08fb5215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an <a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a> for a kind_of&lt;event_t&gt; on a socket s_id.  <br /></td></tr>
-<tr class="separator:aa49457624813a0936277091b08fb5215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00049">49</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00062">62</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a55c88e8f8b3dbefd1d6739d023632835" name="a55c88e8f8b3dbefd1d6739d023632835"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55c88e8f8b3dbefd1d6739d023632835">&#9670;&#160;</a></span>hf_registry()</h2>
@@ -142,149 +133,14 @@ requires kind_c&lt;kind_of&gt;</td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00052">52</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>    : runner_m{r}</div>
-<div class="line"><span class="lineno">   54</span>  {</div>
-<div class="line"><span class="lineno">   55</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00065">65</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>    : runner_m{r}</div>
+<div class="line"><span class="lineno">   67</span>  {</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ade1f24a6befdc5df33d9b3bc7d6aaba0" name="ade1f24a6befdc5df33d9b3bc7d6aaba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade1f24a6befdc5df33d9b3bc7d6aaba0">&#9670;&#160;</a></span>insert() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;template&lt; typename &gt; typename kind_of, event_c event_t&gt; <br />
-requires kind_c&lt;kind_of&gt;</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void pars::ev::hf_registry::insert </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a>&lt; kind_of, event_t &gt;</td>          <td class="paramname"><span class="paramname"><em>hf</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00067">67</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>  {</div>
-<div class="line"><span class="lineno">   69</span>    <a class="code hl_function" href="#ade1f24a6befdc5df33d9b3bc7d6aaba0">insert</a>(0, std::move(hf));</div>
-<div class="line"><span class="lineno">   70</span>  }</div>
-<div class="ttc" id="astructpars_1_1ev_1_1hf__registry_html_ade1f24a6befdc5df33d9b3bc7d6aaba0"><div class="ttname"><a href="#ade1f24a6befdc5df33d9b3bc7d6aaba0">pars::ev::hf_registry::insert</a></div><div class="ttdeci">void insert(handler_f&lt; kind_of, event_t &gt; hf)</div><div class="ttdef"><b>Definition</b> <a href="hf__registry_8h_source.html#l00067">hf_registry.h:67</a></div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="hf__registry_8h_source.html#l00067">insert()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="hf__registry_8h_source.html#l00067">insert()</a>, and <a class="el" href="hf__registry_8h_source.html#l00060">on()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_cgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_cgraph" id="astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,29,156,74"/>
-<area shape="poly" title=" " alt="" coords="51,29,50,19,55,11,65,5,81,3,97,5,107,11,104,16,95,10,80,8,67,10,59,14,55,20,56,29"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_icgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_icgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_icgraph" id="astructpars_1_1ev_1_1hf__registry_ade1f24a6befdc5df33d9b3bc7d6aaba0_icgraph">
-<area shape="rect" title=" " alt="" coords="227,29,377,74"/>
-<area shape="poly" title=" " alt="" coords="336,17,323,10,302,8,282,10,270,15,265,21,267,28,261,29,260,19,267,10,281,5,302,3,325,5,338,12"/>
-<area shape="rect" href="structpars_1_1ev_1_1hf__registry.html#ad8e4eac6e124f05d3bc86ba167bf1299" title=" " alt="" coords="5,38,179,66"/>
-<area shape="poly" title=" " alt="" coords="211,54,179,54,179,49,211,49"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa49457624813a0936277091b08fb5215" name="aa49457624813a0936277091b08fb5215"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa49457624813a0936277091b08fb5215">&#9670;&#160;</a></span>insert() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;template&lt; typename &gt; typename kind_of, event_c event_t&gt; <br />
-requires kind_c&lt;kind_of&gt;</div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void pars::ev::hf_registry::insert </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>s_id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a>&lt; kind_of, event_t &gt;</td>          <td class="paramname"><span class="paramname"><em>hf</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Insert an <a class="el" href="namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c">handler_f</a> for a kind_of&lt;event_t&gt; on a socket s_id. </p>
-
-<p class="definition">Definition at line <a class="el" href="hf__registry____insert_8h_source.html#l00040">40</a> of file <a class="el" href="hf__registry____insert_8h_source.html">hf_registry__insert.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>{</div>
-<div class="line"><span class="lineno">   42</span>  <span class="keyword">auto</span> hf_ptr = std::make_shared&lt;handler_f&lt;kind_of, event_t&gt;&gt;(std::move(hf));</div>
-<div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>  <span class="keyword">auto</span> guard = std::lock_guard{mtx_m};</div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (async_kind_c&lt;kind_of&lt;event_t&gt;&gt;)</div>
-<div class="line"><span class="lineno">   47</span>  {</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [&amp;, hf_ptr](job j) {</div>
-<div class="line"><span class="lineno">   49</span>      <span class="keyword">auto</span> task = std::packaged_task([hf_ptr](std::stop_token tk, job j) {</div>
-<div class="line"><span class="lineno">   50</span>        <span class="keyword">auto</span> ke = j.event&lt;kind_of, event_t&gt;();</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>        <span class="keyword">auto</span>&amp; md = ke.md();</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>        md.set_job_id(j.id());</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>        md.set_stop_token(tk);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>        (*hf_ptr)(std::move(ke));</div>
-<div class="line"><span class="lineno">   59</span>      });</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>      runner_m.start_thread(spec&lt;kind_of&lt;event_t&gt;&gt;::hash, std::move(task),</div>
-<div class="line"><span class="lineno">   62</span>                            std::move(j));</div>
-<div class="line"><span class="lineno">   63</span>    });</div>
-<div class="line"><span class="lineno">   64</span>  }</div>
-<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   66</span>  {</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> insert_jhf&lt;kind_of, event_t&gt;(s_id, [hf_ptr](job j) {</div>
-<div class="line"><span class="lineno">   68</span>      <span class="keyword">auto</span> ke = j.event&lt;kind_of, event_t&gt;();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>      ke.md().set_job_id(j.id());</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>      (*hf_ptr)(ke);</div>
-<div class="line"><span class="lineno">   73</span>    });</div>
-<div class="line"><span class="lineno">   74</span>  }</div>
-<div class="line"><span class="lineno">   75</span>}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="job_8h_source.html#l00068">pars::ev::job::event()</a>, and <a class="el" href="job_8h_source.html#l00089">pars::ev::job::id()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1hf__registry_aa49457624813a0936277091b08fb5215_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_aa49457624813a0936277091b08fb5215_cgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1hf__registry_aa49457624813a0936277091b08fb5215_cgraph" id="astructpars_1_1ev_1_1hf__registry_aa49457624813a0936277091b08fb5215_cgraph">
-<area shape="rect" title="Insert an handler_f for a kind_of&lt;event_t&gt; on a socket s_id." alt="" coords="5,24,156,68"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#afce2c813eadb6e5471e026fa0b4fbaaf" title=" " alt="" coords="204,5,349,33"/>
-<area shape="poly" title=" " alt="" coords="156,33,188,29,189,34,156,38"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#a41155821180189773234cab1826b8ab3" title=" " alt="" coords="216,57,336,85"/>
-<area shape="poly" title=" " alt="" coords="156,53,201,59,200,64,156,58"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ad8e4eac6e124f05d3bc86ba167bf1299" name="ad8e4eac6e124f05d3bc86ba167bf1299"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8e4eac6e124f05d3bc86ba167bf1299">&#9670;&#160;</a></span>on()</h2>
 
@@ -315,24 +171,21 @@ requires ev::kind_c&lt;kind_of&gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00060">60</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>  {</div>
-<div class="line"><span class="lineno">   62</span>    <a class="code hl_function" href="#ade1f24a6befdc5df33d9b3bc7d6aaba0">insert&lt;kind_of, event_t&gt;</a>(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">make_hf</a>(mem_fn, self));</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00073">73</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>  {</div>
+<div class="line"><span class="lineno">   75</span>    insert&lt;kind_of, event_t&gt;(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">make_hf</a>(mem_fn, self));</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a5ae21c09902e125632b0c4f37e20a07a"><div class="ttname"><a href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">pars::ev::make_hf</a></div><div class="ttdeci">handler_f&lt; kind_of, event_t &gt; make_hf(mem_fn_t &amp;mem_fn, class_t *self)</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00058">make_hf.h:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="hf__registry_8h_source.html#l00067">insert()</a>, and <a class="el" href="make__hf_8h_source.html#l00058">pars::ev::make_hf()</a>.</p>
+<p class="reference">References <a class="el" href="make__hf_8h_source.html#l00058">pars::ev::make_hf()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph" alt=""/></div>
 <map name="astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph" id="astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph">
-<area shape="rect" title=" " alt="" coords="5,68,179,96"/>
-<area shape="rect" href="structpars_1_1ev_1_1hf__registry.html#ade1f24a6befdc5df33d9b3bc7d6aaba0" title=" " alt="" coords="227,29,377,74"/>
-<area shape="poly" title=" " alt="" coords="178,67,211,62,212,67,179,72"/>
-<area shape="rect" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a" title=" " alt="" coords="234,98,370,126"/>
-<area shape="poly" title=" " alt="" coords="179,92,219,97,218,103,178,97"/>
-<area shape="poly" title=" " alt="" coords="261,29,260,19,267,10,281,5,302,3,325,5,338,12,336,17,323,10,302,8,282,10,270,15,265,21,267,28"/>
+<area shape="rect" title=" " alt="" coords="5,5,179,33"/>
+<area shape="rect" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a" title=" " alt="" coords="227,5,363,33"/>
+<area shape="poly" title=" " alt="" coords="179,16,211,16,211,22,179,22"/>
 </map>
 </div>
 

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 08:29:57 2025 </td>
+                     <td class="headerValue" width="15%">Wed Apr 23 13:47:10 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -79,9 +79,22 @@
              : namespace pars::ev
              : {
              : 
-             : using job_handler_f = std::function&lt;void(job)&gt;;
-             : 
              : class runner;
+             : 
+             : } // namespace pars::ev
+             : 
+             : namespace pars::net
+             : {
+             : 
+             : class rep;
+             : class req;
+             : 
+             : } // namespace pars::net
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : using job_handler_f = std::function&lt;void(job)&gt;;
              : 
              : struct hf_registry
              : {
@@ -99,6 +112,11 @@
              :     insert&lt;kind_of, event_t&gt;(make_hf(mem_fn, self));
              :   }
              : 
+             : private:
+             :   friend net::rep;
+             :   friend net::req;
+             :   friend runner;
+             : 
              :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
              :     requires kind_c&lt;kind_of&gt;
              :   void insert(handler_f&lt;kind_of, event_t&gt; hf)
@@ -110,9 +128,6 @@
              :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
              :     requires kind_c&lt;kind_of&gt;
              :   void insert(int s_id, handler_f&lt;kind_of, event_t&gt; hf);
-             : 
-             : private:
-             :   friend runner;
              : 
 <span class="lineNoCov">      0 / 1 </span> :   auto lock() <span class="lineNoCov">{ return std::unique_lock{mtx_m}; }</span>
              : 

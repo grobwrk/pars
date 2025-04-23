@@ -624,6 +624,7 @@
     <innerclass refid="structpars_1_1ev_1_1hf__registry" prot="public">pars::ev::hf_registry</innerclass>
     <innernamespace refid="namespacepars">pars</innernamespace>
     <innernamespace refid="namespacepars_1_1ev">pars::ev</innernamespace>
+    <innernamespace refid="namespacepars_1_1net">pars::net</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -673,85 +674,100 @@
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref><sp/>=<sp/>std::function&lt;void(<ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref>)&gt;;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="structpars_1_1ev_1_1hf__registry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kindref="member">hf_registry</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
 <codeline lineno="50"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="52" refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kindref="member">hf_registry</ref>(runner&amp;<sp/>r)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>runner_m{r}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1net_1_1rep" kindref="compound">rep</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1net_1_1req" kindref="compound">req</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">ev::event_c</ref><sp/>event_t,</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t&gt;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">ev::kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="60" refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" kindref="member">on</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(class_t::*mem_fn)(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;kind_of, event_t&gt;</ref>),<sp/>class_t*<sp/>self)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kindref="member">insert&lt;kind_of, event_t&gt;</ref>(<ref refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kindref="member">make_hf</ref>(mem_fn,<sp/>self));</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="67" refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kindref="member">insert</ref>(<ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf)</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kindref="member">insert</ref>(0,<sp/>std::move(hf));</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kindref="member">insert</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref>;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::unique_lock{mtx_m};<sp/>}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_handler_for(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/>std::size_t<sp/>spec_hash)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handlers_m[s_id].contains(spec_hash);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>type_for(std::size_t<sp/>spec_hash)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>types_m[spec_hash];</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref>&amp;<sp/>handler_for(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/>std::size_t<sp/>spec_hash)</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handlers_m[s_id][spec_hash];</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref><sp/>=<sp/>std::function&lt;void(<ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref>)&gt;;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structpars_1_1ev_1_1hf__registry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kindref="member">hf_registry</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65" refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kindref="member">hf_registry</ref>(runner&amp;<sp/>r)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>runner_m{r}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">ev::event_c</ref><sp/>event_t,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t&gt;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">ev::kind_c&lt;kind_of&gt;</ref></highlight></codeline>
+<codeline lineno="73" refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" kindref="member">on</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(class_t::*mem_fn)(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;kind_of, event_t&gt;</ref>),<sp/>class_t*<sp/>self)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>insert&lt;kind_of,<sp/>event_t&gt;(<ref refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kindref="member">make_hf</ref>(mem_fn,<sp/>self));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1rep" kindref="compound">net::rep</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1req" kindref="compound">net::req</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>insert(<ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>insert(0,<sp/>std::move(hf));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/>event_c<sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>kind_c&lt;kind_of&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>insert(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lock()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::unique_lock{mtx_m};<sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/>event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>kind_c&lt;kind_of&gt;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>insert_jhf(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref><sp/>hf)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>spec_hash<sp/>=<sp/>spec&lt;kind_of&lt;event_t&gt;&gt;::hash;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!handlers_m[s_id].try_emplace(spec_hash,<sp/>std::move(hf)).second)</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(fmt::format(</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>emplace<sp/>the<sp/>handler_f<sp/>for<sp/>Socket<sp/>#{}<sp/>and<sp/>Spec<sp/>{:X}&quot;</highlight><highlight class="normal">,<sp/>s_id,</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec_hash));</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>register<sp/>the<sp/>type<sp/>for<sp/>logging<sp/>purpose</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>types_m[spec_hash]<sp/>=<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(kind_of&lt;event_t&gt;);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Socket<sp/>{}:<sp/>Registered<sp/>{}!&quot;</highlight><highlight class="normal">,<sp/>s_id,</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec&lt;kind_of&lt;event_t&gt;&gt;{});</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/>std::mutex<sp/>mtx_m;<sp/></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>std::unordered_map&lt;std::size_t,<sp/>job_handler_f&gt;&gt;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>handlers_m;<sp/></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::size_t,<sp/>const<sp/>std::type_info*&gt;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>types_m;<sp/></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/>runner&amp;<sp/>runner_m;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_handler_for(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/>std::size_t<sp/>spec_hash)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handlers_m[s_id].contains(spec_hash);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>type_for(std::size_t<sp/>spec_hash)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>types_m[spec_hash];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref>&amp;<sp/>handler_for(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/>std::size_t<sp/>spec_hash)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handlers_m[s_id][spec_hash];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/>event_c<sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>kind_c&lt;kind_of&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>insert_jhf(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref><sp/>hf)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>spec_hash<sp/>=<sp/>spec&lt;kind_of&lt;event_t&gt;&gt;::hash;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!handlers_m[s_id].try_emplace(spec_hash,<sp/>std::move(hf)).second)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(fmt::format(</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>emplace<sp/>the<sp/>handler_f<sp/>for<sp/>Socket<sp/>#{}<sp/>and<sp/>Spec<sp/>{:X}&quot;</highlight><highlight class="normal">,<sp/>s_id,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec_hash));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>register<sp/>the<sp/>type<sp/>for<sp/>logging<sp/>purpose</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>types_m[spec_hash]<sp/>=<sp/>&amp;</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(kind_of&lt;event_t&gt;);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Socket<sp/>{}:<sp/>Registered<sp/>{}!&quot;</highlight><highlight class="normal">,<sp/>s_id,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spec&lt;kind_of&lt;event_t&gt;&gt;{});</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>std::mutex<sp/>mtx_m;<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;int,<sp/>std::unordered_map&lt;std::size_t,<sp/>job_handler_f&gt;&gt;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>handlers_m;<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::size_t,<sp/>const<sp/>std::type_info*&gt;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>types_m;<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>runner&amp;<sp/>runner_m;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h"/>
   </compounddef>

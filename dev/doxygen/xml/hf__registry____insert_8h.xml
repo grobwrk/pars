@@ -626,37 +626,37 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="40" refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kindref="member">hf_registry::insert</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>hf_registry::insert(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>s_id,<sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/>hf)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>hf_ptr<sp/>=<sp/>std::make_shared&lt;handler_f&lt;kind_of,<sp/>event_t&gt;&gt;(std::move(hf));</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>guard<sp/>=<sp/>std::lock_guard{mtx_m};</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="conceptpars_1_1ev_1_1async__kind__c" kindref="compound">async_kind_c&lt;kind_of&lt;event_t&gt;</ref>&gt;)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(async_kind_c&lt;kind_of&lt;event_t&gt;&gt;)</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert_jhf&lt;kind_of,<sp/>event_t&gt;(s_id,<sp/>[&amp;,<sp/>hf_ptr](<ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref><sp/>j)<sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>task<sp/>=<sp/>std::packaged_task([hf_ptr](std::stop_token<sp/>tk,<sp/><ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref><sp/>j)<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ke<sp/>=<sp/>j.<ref refid="classpars_1_1ev_1_1job_1afce2c813eadb6e5471e026fa0b4fbaaf" kindref="member">event</ref>&lt;kind_of,<sp/>event_t&gt;();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert_jhf&lt;kind_of,<sp/>event_t&gt;(s_id,<sp/>[&amp;,<sp/>hf_ptr](job<sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>task<sp/>=<sp/>std::packaged_task([hf_ptr](std::stop_token<sp/>tk,<sp/>job<sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ke<sp/>=<sp/>j.event&lt;kind_of,<sp/>event_t&gt;();</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>md<sp/>=<sp/>ke.md();</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>md.set_job_id(j.<ref refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" kindref="member">id</ref>());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>md.set_job_id(j.id());</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>md.set_stop_token(tk);</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*hf_ptr)(std::move(ke));</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>runner_m.start_thread(<ref refid="classpars_1_1ev_1_1spec" kindref="compound">spec</ref>&lt;kind_of&lt;event_t&gt;&gt;::hash,<sp/>std::move(task),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>runner_m.start_thread(spec&lt;kind_of&lt;event_t&gt;&gt;::hash,<sp/>std::move(task),</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(j));</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert_jhf&lt;kind_of,<sp/>event_t&gt;(s_id,<sp/>[hf_ptr](<ref refid="classpars_1_1ev_1_1job" kindref="compound">job</ref><sp/>j)<sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ke<sp/>=<sp/>j.<ref refid="classpars_1_1ev_1_1job_1afce2c813eadb6e5471e026fa0b4fbaaf" kindref="member">event</ref>&lt;kind_of,<sp/>event_t&gt;();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>insert_jhf&lt;kind_of,<sp/>event_t&gt;(s_id,<sp/>[hf_ptr](job<sp/>j)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ke<sp/>=<sp/>j.event&lt;kind_of,<sp/>event_t&gt;();</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ke.md().set_job_id(j.<ref refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" kindref="member">id</ref>());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ke.md().set_job_id(j.id());</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(*hf_ptr)(ke);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
