@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.30)
 list (INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set (PARS_VERSION "0.1.2.9999")
+set (PARS_VERSION "0.1.3")
 project ("pars" VERSION ${PARS_VERSION} LANGUAGES CXX)
 
 option (PARS_BUILD_EXAMPLES      "Build examples"      ON)

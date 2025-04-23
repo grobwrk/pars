@@ -5,4 +5,4 @@ You can start developing a new pars application using the [pars-app-template](ht
 Documentation:
 
 - latest: [sphinx](https://grobwrk.github.io/pars/dev/sphinx), [doxygen](https://grobwrk.github.io/pars/dev/doxygen/html), [coverage](https://grobwrk.github.io/pars/dev/coverage)
-- v0.1.2: [sphinx](https://grobwrk.github.io/pars/v0.1.2/sphinx), [doxygen](https://grobwrk.github.io/pars/v0.1.2/doxygen/html)
+- v0.1.3: [sphinx](https://grobwrk.github.io/pars/v0.1.3/sphinx), [doxygen](https://grobwrk.github.io/pars/v0.1.3/doxygen/html)
