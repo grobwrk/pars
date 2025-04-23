@@ -189,8 +189,12 @@ private:
 
       runner_m.associate_job_to_pipe(j_id, p_id);
 
-      cond_m.notify_one();
+      pars::debug(SL, lf::event,
+                  "Job #{} pushed and associated with Pipe {:X} [# jobs: {}]",
+                  j_id, p_id, queue_m.size());
     }
+
+    cond_m.notify_one();
   }
 
   std::deque<job> queue_m; ///< a deque of all jobs
