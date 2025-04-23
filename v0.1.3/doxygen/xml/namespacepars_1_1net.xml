@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars_1_1net" kind="namespace" language="C++">
+    <compoundname>pars::net</compoundname>
+    <innerclass refid="classpars_1_1net_1_1context" prot="public">pars::net::context</innerclass>
+    <innerclass refid="structpars_1_1net_1_1context__opt" prot="public">pars::net::context_opt</innerclass>
+    <innerclass refid="classpars_1_1net_1_1context__registry" prot="public">pars::net::context_registry</innerclass>
+    <innerclass refid="classpars_1_1net_1_1op" prot="public">pars::net::op</innerclass>
+    <innerclass refid="classpars_1_1net_1_1pipe" prot="public">pars::net::pipe</innerclass>
+    <innerclass refid="classpars_1_1net_1_1pull" prot="public">pars::net::pull</innerclass>
+    <innerclass refid="classpars_1_1net_1_1push" prot="public">pars::net::push</innerclass>
+    <innerclass refid="classpars_1_1net_1_1rep" prot="public">pars::net::rep</innerclass>
+    <innerclass refid="classpars_1_1net_1_1req" prot="public">pars::net::req</innerclass>
+    <innerclass refid="classpars_1_1net_1_1socket" prot="public">pars::net::socket</innerclass>
+    <innerclass refid="structpars_1_1net_1_1socket__opt" prot="public">pars::net::socket_opt</innerclass>
+    <innerclass refid="classpars_1_1net_1_1tool__view" prot="public">pars::net::tool_view</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>dir</name>
+        <qualifiedname>pars::net::dir</qualifiedname>
+        <enumvalue id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275" prot="public">
+          <name>out</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf" prot="public">
+          <name>in</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/dir.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/dir.h" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>cmode</name>
+        <qualifiedname>pars::net::cmode</qualifiedname>
+        <enumvalue id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" prot="public">
+          <name>dial</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" prot="public">
+          <name>listen</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="49" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="50" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepars_1_1net_1a3948381dc2d59831b966cfb4361f7eb4" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const std::error_category &amp;</type>
+        <definition>static const std::error_category &amp; pars::net::error_category</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>error_category</name>
+        <qualifiedname>pars::net::error_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="41" column="34" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="41" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">cmode</ref></type>
+        <definition>static cmode pars::net::cmode_from_string</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>cmode_from_string</name>
+        <qualifiedname>pars::net::cmode_from_string</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="55" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="55" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/net.h" line="37" column="1"/>
+  </compounddef>
+</doxygen>

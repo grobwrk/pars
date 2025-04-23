@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1init" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::init</compoundname>
+    <includes refid="lib_2include_2pars_2ev_2event_8h" local="no">event.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1init_1a31fc6b1a39a347a3f7b460471f1753cc" prot="private" static="no" mutable="no">
+        <type>std::chrono::system_clock::time_point</type>
+        <definition>std::chrono::system_clock::time_point pars::ev::init::creation_time</definition>
+        <argsstring></argsstring>
+        <name>creation_time</name>
+        <qualifiedname>pars::ev::init::creation_time</qualifiedname>
+        <initializer>=
+    std::chrono::system_clock::now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="157" column="41" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1init_1ac52bc879371c91880fa6c8249258844b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::ev::init::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::ev::init::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="151" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="151" bodyend="154"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="149" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="150" bodyend="159"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1init_1a31fc6b1a39a347a3f7b460471f1753cc" prot="private" virt="non-virtual"><scope>pars::ev::init</scope><name>creation_time</name></member>
+      <member refid="structpars_1_1ev_1_1init_1ac52bc879371c91880fa6c8249258844b" prot="public" virt="non-virtual"><scope>pars::ev::init</scope><name>format_to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
