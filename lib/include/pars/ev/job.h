@@ -29,13 +29,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/msg.h"
+
 #include "pars/ev/kind.h"
 #include "pars/ev/metadata.h"
 #include "pars/ev/serializer.h"
 #include "pars/ev/spec.h"
-
-#include <nngpp/msg.h>
-#include <nngpp/view.h>
 
 #include <any>
 #include <type_traits>
@@ -64,7 +63,7 @@ public:
 
   template<template<typename> typename kind_of, event_c event_t>
     requires(!is_same_kind_v<kind_of, received> ||
-             std::is_same_v<event_t, nng::msg>)
+             std::is_same_v<event_t, nngxx::msg>)
   kind_of<event_t> event()
   {
     return std::any_cast<kind_of<event_t>>(std::move(event_kind_m));
@@ -72,11 +71,11 @@ public:
 
   template<template<typename> typename kind_of, event_c event_t>
     requires(is_same_kind_v<kind_of, received> &&
-             !std::is_same_v<event_t, nng::msg>)
+             !std::is_same_v<event_t, nngxx::msg>)
   received<event_t> event()
   {
-    // get the received<nng::msg>
-    auto r = event<received, nng::msg>();
+    // get the received<nngxx::msg>
+    auto r = event<received, nngxx::msg>();
 
     auto& md = r.md();
 
@@ -110,7 +109,7 @@ template<template<typename> typename kind_of, event_c event_t>
   requires kind_c<kind_of>
 static std::size_t compute_spec_hash(const kind_of<event_t>& ke)
 {
-  if constexpr (std::is_same_v<kind_of<event_t>, received<nng::msg>>)
+  if constexpr (std::is_same_v<kind_of<event_t>, received<nngxx::msg>>)
     return ke.msg_hash();
   else
     return spec<kind_of<event_t>>::hash;

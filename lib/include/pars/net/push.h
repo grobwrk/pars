@@ -33,8 +33,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry__insert.h"
 #include "pars/net/socket.h"
 
-#include <nngpp/protocol/push0.h>
-
 namespace pars::net
 {
 
@@ -46,7 +44,7 @@ class push
 public:
   /// Construct a push
   push(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nng::push::v0::open()}
+    : sock_m{r, nngxx::push::v0::make_socket().value_or_abort()}
     , hf_registry_m{h}
   {
   }

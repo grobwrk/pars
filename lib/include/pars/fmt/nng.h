@@ -29,39 +29,19 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/msg_header.h"
+#include "nngxx/pipe.h"
+
 #include "pars/net/hash.h"
 
+#include "pars/err.h"
+
 #include <fmt/format.h>
-#include <nngpp/error.h>
-#include <nngpp/msg.h>
-#include <nngpp/pipe_view.h>
-#include <nngpp/view.h>
 
 template<>
-struct fmt::formatter<nng::error> : formatter<std::string>
+struct fmt::formatter<nngxx::msg> : formatter<std::string>
 {
-  auto format(const nng::error& e, format_context& ctx) const
-    -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{}", nng::to_string(e));
-  }
-};
-
-template<>
-struct fmt::formatter<nng::exception> : formatter<std::string>
-{
-  auto format(const nng::exception& e, format_context& ctx) const
-    -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "nng::exception during {} ({}) - {}]",
-                          e.who(), e.get_error(), e.what());
-  }
-};
-
-template<>
-struct fmt::formatter<nng::msg> : formatter<std::string>
-{
-  auto format(const nng::msg& m, format_context& ctx) const
+  auto format(const nngxx::msg& m, format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (m.body().size() < sizeof(std::size_t))
@@ -84,20 +64,9 @@ struct fmt::formatter<nng::msg> : formatter<std::string>
 };
 
 template<>
-struct fmt::formatter<nng::view> : formatter<std::string>
+struct fmt::formatter<nngxx::pipe_view> : formatter<std::string>
 {
-  auto format(const nng::view& v, format_context& ctx) const
-    -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{}",
-                          std::string_view{v.data<char>(), v.size()});
-  }
-};
-
-template<>
-struct fmt::formatter<nng::pipe_view> : formatter<std::string>
-{
-  auto format(const nng::pipe_view& p, fmt::format_context& ctx) const
+  auto format(const nngxx::pipe_view& p, fmt::format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (p)

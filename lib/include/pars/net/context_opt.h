@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h"
 
-#include <nngpp/core.h>
+#include <nng/nng.h>
 
 #include <optional>
 

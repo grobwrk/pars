@@ -1,11 +1,14 @@
-# set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
-find_package (fmt CONFIG REQUIRED)
 find_package (nng CONFIG REQUIRED)
+find_package (fmt CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 
 # sorted please
 set (PARS_HEADERS
+    "include/clev/err.h"
+    "include/clev/iface.h"
+    "include/clev/own.h"
+    "include/clev/value.h"
     "include/pars/app/resources.h"
     "include/pars/app/setup.h"
     "include/pars/app/single.h"
@@ -57,6 +60,29 @@ set (PARS_HEADERS
     "include/pars/init.h"
     "include/pars/log.h"
     "include/pars/pars.h"
+    "include/nngxx/iface/aio.h"
+    "include/nngxx/iface/ctx.h"
+    "include/nngxx/iface/dialer.h"
+    "include/nngxx/iface/listener.h"
+    "include/nngxx/iface/msg.h"
+    "include/nngxx/iface/pipe.h"
+    "include/nngxx/iface/socket.h"
+    "include/nngxx/iface/value.h"
+    "include/nngxx/aio.h"
+    "include/nngxx/concept.h"
+    "include/nngxx/ctx.h"
+    "include/nngxx/dialer.h"
+    "include/nngxx/err.h"
+    "include/nngxx/listener.h"
+    "include/nngxx/msg.h"
+    "include/nngxx/msg_body.h"
+    "include/nngxx/msg_header.h"
+    "include/nngxx/opt.h"
+    "include/nngxx/opt_getter.h"
+    "include/nngxx/opt_setter.h"
+    "include/nngxx/pipe.h"
+    "include/nngxx/socket.h"
+    "include/nngxx/socket_decl.h"
 )
 
 add_library (pars INTERFACE ${PARS_HEADERS})
@@ -72,8 +98,8 @@ target_sources (
 target_link_libraries (
     pars
     INTERFACE
-    nng::nng
     fmt::fmt
+    nng::nng
     spdlog::spdlog
 )
 
@@ -104,37 +130,37 @@ install (
     LIBRARY FILE_SET HEADERS
 )
 
-install(
+install (
     FILES ${CMAKE_BINARY_DIR}/lib/generated/config.h
     DESTINATION include/pars
 )
 
-export(
+export (
     TARGETS pars
     NAMESPACE pars::
     FILE "${CMAKE_CURRENT_BINARY_DIR}/${pars_config_targets_file}"
 )
 
-install(
+install (
     EXPORT pars
     DESTINATION ${pars_export_dest_dir}
     NAMESPACE pars::
     FILE ${pars_config_targets_file}
 )
 
-include(CMakePackageConfigHelpers)
-configure_package_config_file(
+include (CMakePackageConfigHelpers)
+configure_package_config_file (
     "${pars_project_config_in}"
     "${pars_project_config_out}"
     INSTALL_DESTINATION ${pars_export_dest_dir}
 )
 
-write_basic_package_version_file(
+write_basic_package_version_file (
     "${pars_version_config_file}"
     COMPATIBILITY SameMajorVersion
 )
 
-install(
+install (
     FILES "${pars_project_config_out}" "${pars_version_config_file}"
     DESTINATION "${pars_export_dest_dir}"
 )

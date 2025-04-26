@@ -29,61 +29,52 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "clev/iface.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
-
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace clev
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
+template<typename value_t>
+struct value
 {
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
+  using value_type = value_t;
+
+  value(value_type v) noexcept
+    : v{v}
   {
   }
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
+  value() noexcept
+    : value{iface<value_type>::empty()}
   {
   }
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
+  [[nodiscard]] operator value_type() noexcept { return v; }
+
+  [[nodiscard]] operator const value_type() const noexcept { return v; }
+
+  [[nodiscard]] value_type release() noexcept
   {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
+    auto ret = v;
+
+    v = iface<value_type>::empty();
+
+    return ret;
   }
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
-
-  /// The id of the underlying variant
-  int id() const
+  [[nodiscard]] explicit operator bool() const noexcept
   {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
+    return iface<value_type>::is_valid(v);
   }
 
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
-
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
+protected:
+  value_type v;
 };
 
-} // namespace pars::net
+} // namespace clev
+
+#include <concepts>
+
+static_assert(std::copyable<clev::value<int>>);
+
+static_assert(std::copyable<clev::value<int*>>);

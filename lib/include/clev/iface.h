@@ -29,61 +29,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
-
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
-
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace clev
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
-{
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
-  {
-  }
+template<typename wrap_t>
+struct iface;
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
-  {
-  }
-
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
-  {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
-  }
-
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
-
-  /// The id of the underlying variant
-  int id() const
-  {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
-  }
-
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
-
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
-};
-
-} // namespace pars::net
+} // namespace clev

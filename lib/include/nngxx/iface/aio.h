@@ -29,61 +29,57 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "nngxx/err.h"
+#include "nngxx/iface/value.h"
+#include "nngxx/msg.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
+#include <nng/nng.h>
 
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+template<>
+struct clev::iface<nng_aio*> : nngxx::value<nng_aio*>
 {
+  using value::value;
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
-{
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
+  inline static nng_aio* empty() noexcept { return nullptr; }
+
+  [[nodiscard]] inline static clev::expected<void> destroy(nng_aio* v) noexcept
   {
+    return nngxx::invoke(nng_aio_free, v);
   }
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
+  [[nodiscard]] inline static clev::expected<nng_aio*> alloc(void (*cb)(void*),
+                                                             void* arg) noexcept
   {
+    return nngxx::make(nng_aio_alloc, cb, arg);
   }
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
+  inline void wait() const noexcept { nng_aio_wait(v); }
+
+  inline void abort(nngxx::err err) noexcept
   {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
+    nng_aio_abort(v, static_cast<int>(err));
   }
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
+  inline void cancel() noexcept { nng_aio_cancel(v); }
 
-  /// The id of the underlying variant
-  int id() const
+  inline void stop() noexcept { nng_aio_stop(v); }
+
+  [[nodiscard]] inline nngxx::msg release_msg() noexcept
   {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
+    auto m = nng_aio_get_msg(v);
+
+    nng_aio_set_msg(v, nullptr);
+
+    return m;
   }
 
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  [[nodiscard]] inline clev::expected<void> result() const noexcept
   {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
+    return nngxx::invoke(nng_aio_result, v);
   }
 
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
+  inline void set_msg(nngxx::msg m) noexcept
+  {
+    nng_aio_set_msg(v, m.release());
+  }
 };
-
-} // namespace pars::net

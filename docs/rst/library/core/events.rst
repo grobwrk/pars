@@ -26,7 +26,7 @@ Events
 .. doxygenstruct:: pars::ev::uuid
 .. doxygenstruct:: pars::ev::base_klass
 .. doxygenstruct:: pars::ev::klass
-.. doxygenstruct:: pars::ev::klass< nng::msg >
+.. doxygenstruct:: pars::ev::klass< nngxx::msg >
 .. doxygenstruct:: pars::ev::klass< std::shared_ptr< event_t > >
 
 .. doxygenstruct:: pars::ev::metadata

@@ -34,7 +34,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <cereal/cereal.hpp>
 #include <fmt/format.h>
-#include <nngpp/msg.h>
 
 namespace pars::ev
 {

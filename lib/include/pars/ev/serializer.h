@@ -29,12 +29,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/msg.h"
+
 #include "pars/concept/event.h"
 #include "pars/ev/klass.h"
 #include "pars/log.h"
 
 #include <cereal/archives/binary.hpp>
-#include <nngpp/msg.h>
 
 #include <istream>
 #include <ostream>
@@ -48,7 +49,7 @@ namespace pars::ev
 struct serialize
 {
   template<event_c event_t>
-  static nng::msg to_network(event_t& ev)
+  static nngxx::msg to_network(event_t& ev)
   {
     // 1. serialize the event to a stringstream
     auto ostring = std::ostringstream();
@@ -59,9 +60,10 @@ struct serialize
     // 2. compute the event_hash
     auto event_hash = uuid<klass<event_t>>::hash;
 
-    // 3. create the nng::msg to hold the hash+event
+    // 3. create the nngxx::msg to hold the hash+event
     auto serialization = ostring.rdbuf()->view();
-    auto m = nng::make_msg(sizeof(event_hash) + serialization.size());
+    auto m = nngxx::make_msg(sizeof(event_hash) + serialization.size())
+               .value_or_abort();
     auto b = m.body();
 
     // 4. append the event hash
@@ -77,7 +79,7 @@ struct serialize
   }
 
   template<event_c event_t>
-  static event_t to_event(const nng::msg& m)
+  static event_t to_event(const nngxx::msg& m)
   {
     // 1. compute received and requested event hash
     auto recv_event_hash = hash_from_msg(m);
@@ -85,14 +87,12 @@ struct serialize
 
     // 2. check they correspond
     if (recv_event_hash - req_event_hash != 0)
-      throw new std::runtime_error("Requested event mismatch!");
+      throw std::runtime_error("Requested event mismatch!");
 
-    // 3. remove event hash
-    m.body().trim_u64();
-
-    // 4. deserialize event
+    // 3. deserialize event
     auto body = m.body();
-    auto view = std::string_view(body.data<char>(), body.size());
+    auto view =
+      std::string_view(body.data<char>() + sizeof(uint64_t), body.size());
     auto istring = std::ispanstream(view);
     auto istream = std::istream(istring.rdbuf());
     auto ar = cereal::BinaryInputArchive(istream);

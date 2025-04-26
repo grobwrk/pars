@@ -35,8 +35,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/context_registry.h"
 #include "pars/net/socket.h"
 
-#include <nngpp/protocol/req0.h>
-
 namespace pars::net
 {
 
@@ -48,7 +46,7 @@ class req
 public:
   /// Construct a req
   req(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nng::req::v0::open()}
+    : sock_m{r, nngxx::req::v0::make_socket().value_or_abort()}
     , ctx_registry_m{r, sock_m}
     , hf_registry_m{h}
   {

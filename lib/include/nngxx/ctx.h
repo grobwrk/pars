@@ -29,61 +29,25 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "nngxx/iface/ctx.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
-
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace nngxx
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
+using ctx_view = clev::iface<nng_ctx>;
+
+using ctx = clev::own<nng_ctx>;
+
+[[nodiscard]] inline static clev::expected<ctx>
+make_ctx(socket_view& s) noexcept
 {
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
-  {
-  }
+  auto ret = ctx{};
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
-  {
-  }
+  return ret.open(s).transform_to(std::move(ret));
+}
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
-  {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
-  }
+} // namespace nngxx
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
+static_assert(std::copyable<nngxx::ctx_view>);
 
-  /// The id of the underlying variant
-  int id() const
-  {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
-  }
-
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
-
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
-};
-
-} // namespace pars::net
+static_assert(nngxx::movable_only_c<nngxx::ctx>);

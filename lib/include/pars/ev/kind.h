@@ -67,9 +67,9 @@ template<typename event_t>
 received(event_t, metadata<received, event_t>) -> received<event_t>;
 
 template<>
-struct received<nng::msg> : base_kind<received, nng::msg>
+struct received<nngxx::msg> : base_kind<received, nngxx::msg>
 {
-  using event_type = nng::msg;
+  using event_type = nngxx::msg;
 
   using base_kind<received, event_type>::base_kind;
 

@@ -29,16 +29,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/aio.h"
+#include "nngxx/ctx.h"
+#include "nngxx/dialer.h"
+#include "nngxx/listener.h"
+#include "nngxx/pipe.h"
+
 #include "pars/ev/enqueuer.h"
 #include "pars/net/op.h"
 #include "pars/net/socket_opt.h"
-
-#include <nng/protocol/reqrep0/req.h>
-#include <nngpp/ctx.h>
-#include <nngpp/dialer.h>
-#include <nngpp/listener.h>
-#include <nngpp/pipe.h>
-#include <nngpp/socket.h>
 
 #include <string_view>
 #include <vector>
@@ -61,7 +60,7 @@ static cmode cmode_from_string(const char* str)
   else if (str_view.compare("listen") == 0)
     return cmode::listen;
 
-  throw new std::runtime_error(fmt::format("Unable to parse {} to CMODE", str));
+  throw std::runtime_error(fmt::format("Unable to parse {} to CMODE", str));
 }
 
 /**
@@ -71,7 +70,7 @@ class socket
 {
 public:
   /// Construct a socket
-  socket(ev::enqueuer& r, nng::socket&& s)
+  socket(ev::enqueuer& r, nngxx::socket&& s)
     : router_m{r}
     , socket_m{std::move(s)}
   {
@@ -82,34 +81,34 @@ public:
 
   operator tool_view() { return tool_view{socket_m}; }
 
-  void options(const socket_opt opts)
+  void set_options(const socket_opt opts)
   {
     if (opts.recv_timeout)
-      socket_m.set_opt_ms(NNG_OPT_RECVTIMEO, *opts.recv_timeout);
+      socket_m.set_recv_timeout(*opts.recv_timeout).or_abort();
 
     if (opts.send_timeout)
-      socket_m.set_opt_ms(NNG_OPT_SENDTIMEO, *opts.send_timeout);
+      socket_m.set_send_timeout(*opts.send_timeout).or_abort();
 
     if (opts.req_resend_time)
-      socket_m.set_opt_ms(NNG_OPT_REQ_RESENDTIME, *opts.send_timeout);
+      socket_m.set_req_resend_time(*opts.req_resend_time).or_abort();
 
     if (opts.req_resend_tick)
-      socket_m.set_opt_ms(NNG_OPT_REQ_RESENDTICK, *opts.send_timeout);
+      socket_m.set_req_resend_tick(*opts.req_resend_tick).or_abort();
   }
 
   socket_opt options() const
   {
     return {
-      .recv_timeout = socket_m.get_opt_ms(NNG_OPT_RECVTIMEO),
-      .send_timeout = socket_m.get_opt_ms(NNG_OPT_SENDTIMEO),
-      .req_resend_time = socket_m.get_opt_ms(NNG_OPT_REQ_RESENDTIME),
-      .req_resend_tick = socket_m.get_opt_ms(NNG_OPT_REQ_RESENDTICK),
+      .recv_timeout = socket_m.get_recv_timeout().value_or_abort(),
+      .send_timeout = socket_m.get_send_timeout().value_or_abort(),
+      .req_resend_time = socket_m.get_req_resend_time().value_or_abort(),
+      .req_resend_tick = socket_m.get_req_resend_tick().value_or_abort(),
     };
   }
 
-  void dial(const char* addr) { emplace_dialer(addr).start(); }
+  void dial(const char* addr) { emplace_dialer(addr).start().or_abort(); }
 
-  void listen(const char* addr) { emplace_listener(addr).start(); }
+  void listen(const char* addr) { emplace_listener(addr).start().or_abort(); }
 
   void connect(const char* addr, const cmode mode)
   {
@@ -126,11 +125,11 @@ public:
     }
   }
 
-  nng::ctx make_ctx() const { return nng::make_ctx(socket_m); }
+  nngxx::ctx make_ctx() { return nngxx::make_ctx(socket_m).value_or_abort(); }
 
-  void send_aio(nng::aio_view a) { socket_m.send(a); }
+  void send_aio(nngxx::aio_view& a) { socket_m.send(a); }
 
-  void recv_aio(nng::aio_view a) { socket_m.recv(a); }
+  void recv_aio(nngxx::aio_view& a) { socket_m.recv(a); }
 
   template<ev::event_c event_t>
   void send(event_t ev, pipe p = {})
@@ -148,11 +147,7 @@ public:
 
   const char* proto_name() const
   {
-    const char* proto_name_ptr;
-
-    nng_socket_proto_name(socket_m.get(), &proto_name_ptr);
-
-    return proto_name_ptr;
+    return socket_m.proto_name().value_or("<not-found>");
   }
 
   auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
@@ -163,7 +158,7 @@ public:
 private:
   void pipe_cb(nng_pipe cp, nng_pipe_ev ev)
   {
-    auto pv = nng::pipe_view{cp};
+    auto pv = nngxx::pipe_view{cp};
 
     switch (ev)
     {
@@ -202,27 +197,32 @@ private:
     };
 
     // NOTE: pass this, cant move socket
-    socket_m.pipe_notify(nng::pipe_ev::add_pre, pipe_cb, this);
-    socket_m.pipe_notify(nng::pipe_ev::add_post, pipe_cb, this);
-    socket_m.pipe_notify(nng::pipe_ev::rem_post, pipe_cb, this);
-    socket_m.pipe_notify(nng::pipe_ev::num, pipe_cb, this);
+    socket_m.pipe_notify(nngxx::pipe_ev::add_pre, pipe_cb, this).or_abort();
+    socket_m.pipe_notify(nngxx::pipe_ev::add_post, pipe_cb, this).or_abort();
+    socket_m.pipe_notify(nngxx::pipe_ev::rem_post, pipe_cb, this).or_abort();
+    socket_m.pipe_notify(nngxx::pipe_ev::num, pipe_cb, this).or_abort();
   }
 
-  nng::listener& emplace_listener(const char* addr)
+  nngxx::listener& emplace_listener(const char* addr)
   {
-    return listeners_m.emplace_back(socket_m, addr);
+    listeners_m.push_back(
+      nngxx::make_listener(socket_m, addr).value_or_abort());
+
+    return listeners_m.back();
   }
 
-  nng::dialer& emplace_dialer(const char* addr)
+  nngxx::dialer& emplace_dialer(const char* addr)
   {
-    return dialers_m.emplace_back(socket_m, addr);
+    dialers_m.push_back(nngxx::make_dialer(socket_m, addr).value_or_abort());
+
+    return dialers_m.back();
   }
 
   ev::enqueuer& router_m;
   op op_m;
-  nng::socket socket_m;
-  std::vector<nng::dialer> dialers_m;
-  std::vector<nng::listener> listeners_m;
+  nngxx::socket socket_m;
+  std::vector<nngxx::dialer> dialers_m;
+  std::vector<nngxx::listener> listeners_m;
 };
 
 } // namespace pars::net

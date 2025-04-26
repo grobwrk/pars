@@ -51,7 +51,7 @@ public:
     net::socket_opt req_opts;
   };
 
-  void init(const init_p& params) { req_m.sock().options(params.req_opts); }
+  void init(const init_p& params) { req_m.sock().set_options(params.req_opts); }
 
   struct connect_p
   {

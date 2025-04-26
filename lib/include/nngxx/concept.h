@@ -29,61 +29,44 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include <nng/nng.h>
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
+#include <concepts>
 
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace nngxx
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
-{
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
-  {
-  }
+template<typename nng_value_t>
+concept nng_value_c = std::same_as<nng_value_t, nng_duration> ||
+                      std::same_as<nng_value_t, nng_sockaddr> ||
+                      std::same_as<nng_value_t, const char*>;
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
-  {
-  }
+template<typename nng_t>
+concept nng_with_set_opt_c =
+  std::same_as<nng_t, nng_socket> || std::same_as<nng_t, nng_ctx> ||
+  std::same_as<nng_t, nng_listener> || std::same_as<nng_t, nng_dialer>;
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
-  {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
-  }
+template<typename nng_t>
+concept nng_with_get_opt_c =
+  nng_with_set_opt_c<nng_t> || std::same_as<nng_t, nng_pipe>;
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
+template<typename nng_t>
+concept nng_c = nng_with_get_opt_c<nng_t> || std::same_as<nng_t, nng_msg*> ||
+                std::same_as<nng_t, nng_aio*>;
 
-  /// The id of the underlying variant
-  int id() const
-  {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
-  }
+template<typename uint_t>
+concept uint_c =
+  std::same_as<uint_t, uint16_t> || std::same_as<uint_t, uint32_t> ||
+  std::same_as<uint_t, uint64_t>;
 
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
+template<typename value_t>
+concept move_only_constructible_c =
+  std::move_constructible<value_t> && !std::copy_constructible<value_t>;
 
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
-};
+template<typename value_t>
+concept move_only_assignable_c =
+  std::is_move_assignable_v<value_t> && !std::is_copy_assignable_v<value_t>;
 
-} // namespace pars::net
+template<typename value_t>
+concept movable_only_c = std::movable<value_t> && !std::copyable<value_t>;
+} // namespace nngxx

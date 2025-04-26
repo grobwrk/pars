@@ -116,13 +116,13 @@ public:
   {
     auto guard = std::lock_guard{mtx_m};
 
-    auto mtx = mtxs_m.emplace(std::piecewise_construct,
-                              std::forward_as_tuple(key), std::tuple());
+    auto mtx = mtxs_m.try_emplace(key);
+
     if (!mtx.second)
       throw std::runtime_error(fmt::format(
         "Unable to emplace a new Resource Mutex [key: 0x{:X}]", key));
 
-    auto res = resources_m.emplace(key, std::forward<args_t>(args)...);
+    auto res = resources_m.try_emplace(key, std::forward<args_t>(args)...);
 
     if (!res.second)
     {

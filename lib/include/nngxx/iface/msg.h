@@ -29,61 +29,55 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "nngxx/iface/value.h"
+#include "nngxx/pipe.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
+#include <nng/nng.h>
 
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace nngxx
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
+struct msg_body;
+
+struct msg_header;
+
+} // namespace nngxx
+
+template<>
+struct clev::iface<nng_msg*> : nngxx::value<nng_msg*>
 {
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
+  using value::value;
+
+  [[nodiscard]] inline static nng_msg* empty() noexcept { return nullptr; }
+
+  [[nodiscard]] inline static clev::expected<void> destroy(nng_msg* v) noexcept
   {
+    return nngxx::invoke(nng_msg_free, v);
   }
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
+  [[nodiscard]] inline static clev::expected<void>
+  copy(nng_msg** d, const nng_msg* s) noexcept
   {
+    return nngxx::invoke(nng_msg_dup, d, s);
   }
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
+  [[nodiscard]] inline clev::expected<void> alloc(std::size_t sz) noexcept
   {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
+    return nngxx::invoke(nng_msg_alloc, &v, sz);
   }
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
-
-  /// The id of the underlying variant
-  int id() const
+  [[nodiscard]] inline const nngxx::pipe_view get_pipe() const noexcept
   {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
+    return nng_msg_get_pipe(v);
   }
 
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
+  inline void set_pipe(nngxx::pipe_view& p) noexcept { nng_msg_set_pipe(v, p); }
 
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
+  [[nodiscard]] inline nngxx::msg_body body() noexcept;
+
+  [[nodiscard]] inline const nngxx::msg_body body() const noexcept;
+
+  [[nodiscard]] inline nngxx::msg_header header() noexcept;
+
+  [[nodiscard]] inline const nngxx::msg_header header() const noexcept;
 };
-
-} // namespace pars::net

@@ -35,8 +35,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/context_registry.h"
 #include "pars/net/socket.h"
 
-#include <nngpp/protocol/rep0.h>
-
 namespace pars::net
 {
 
@@ -48,7 +46,7 @@ class rep
 public:
   /// Construct a rep
   rep(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nng::rep::v0::open()}
+    : sock_m{r, nngxx::rep::v0::make_socket().value_or_abort()}
     , ctx_registry_m{r, sock_m}
     , hf_registry_m{h}
   {
