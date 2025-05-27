@@ -14,7 +14,7 @@ sys.path.append(str(Path('_ext').resolve()))
 project = 'pars'
 copyright = ' 2025 Giuseppe Roberti'
 author = 'Giuseppe Roberti'
-release = '0.2.0'
+release = '0.2.0.99'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
