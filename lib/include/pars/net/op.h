@@ -62,7 +62,7 @@ public:
   explicit operator bool() { return static_cast<bool>(aio_m); }
 
   template<ev::event_c event_t, tool_c tool_t>
-  clev::expected<void> send(ev::enqueuer& r, tool_t& t, pipe p, event_t ev)
+  void send(ev::enqueuer& r, tool_t& t, pipe p, event_t ev)
   {
     auto m = ev::serialize::to_network(ev);
 
@@ -95,13 +95,12 @@ public:
       }
     };
 
-    return nngxx::make_aio(op::send_cb, this, std::move(m))
-      .and_assign_to(aio_m)
-      .and_then([&](auto aio) {
-        t.send_aio(aio);
+    // make aio - NOTE: pass this, cant move op
+    aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
 
-        return clev::expected<void>{};
-      });
+    // start send
+    aio_m.set_msg(std::move(m));
+    t.send_aio(aio_m);
   }
 
   template<tool_c tool_t>
