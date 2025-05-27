@@ -181,26 +181,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">static_assert</span>(std::copyable&lt;clev::value&lt;int&gt;&gt;);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">static_assert</span>(std::copyable&lt;clev::value&lt;int*&gt;&gt;);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">static_assert</span>(std::constructible_from&lt;clev::value&lt;int&gt;, <span class="keywordtype">int</span>&gt;);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">static_assert</span>(std::constructible_from&lt;clev::value&lt;int&gt;, <span class="keywordtype">int</span>&amp;&gt;);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">static_assert</span>(std::constructible_from&lt;clev::value&lt;int&gt;, <span class="keywordtype">int</span>&amp;&amp;&gt;);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">static_assert</span>(std::constructible_from&lt;const clev::value&lt;int&gt;, <span class="keywordtype">int</span>&gt;);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">static_assert</span>(std::constructible_from&lt;const clev::value&lt;int&gt;, <span class="keywordtype">int</span>&amp;&gt;);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">static_assert</span>(std::constructible_from&lt;const clev::value&lt;int&gt;, <span class="keywordtype">int</span>&amp;&amp;&gt;);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">static_assert</span>(std::constructible_from&lt;const clev::value&lt;int&gt;, <span class="keyword">const</span> <span class="keywordtype">int</span>&gt;);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">static_assert</span>(std::constructible_from&lt;const clev::value&lt;int&gt;, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp;&gt;);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">// FIXME: unfortunately we can create a non const value from a const one :/</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;, const int&gt;);</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;, const int&amp;&gt;);</span></div>
 <div class="ttc" id="aiface_8h_html"><div class="ttname"><a href="iface_8h.html">iface.h</a></div></div>
 <div class="ttc" id="anamespaceclev_html"><div class="ttname"><a href="namespaceclev.html">clev</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00038">err.h:39</a></div></div>
 <div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00036">iface.h:36</a></div></div>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 07:56:32 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 07:59:31 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">7</td>
@@ -115,26 +115,6 @@
              : static_assert(std::copyable&lt;clev::value&lt;int&gt;&gt;);
              : 
              : static_assert(std::copyable&lt;clev::value&lt;int*&gt;&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;clev::value&lt;int&gt;, int&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;clev::value&lt;int&gt;, int&amp;&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;clev::value&lt;int&gt;, int&amp;&amp;&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;const clev::value&lt;int&gt;, int&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;const clev::value&lt;int&gt;, int&amp;&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;const clev::value&lt;int&gt;, int&amp;&amp;&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;const clev::value&lt;int&gt;, const int&gt;);
-             : 
-             : static_assert(std::constructible_from&lt;const clev::value&lt;int&gt;, const int&amp;&gt;);
-             : 
-             : // FIXME: unfortunately we can create a non const value from a const one :/
-             : // static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;, const int&gt;);
-             : // static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;, const int&amp;&gt;);
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

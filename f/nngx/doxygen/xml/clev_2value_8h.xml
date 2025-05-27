@@ -627,26 +627,6 @@
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int&gt;&gt;);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int*&gt;&gt;);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;&gt;);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;&amp;&gt;);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;const<sp/>clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;const<sp/>clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;&gt;);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;const<sp/>clev::value&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;&amp;&gt;);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;const<sp/>clev::value&lt;int&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;const<sp/>clev::value&lt;int&gt;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;&gt;);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FIXME:<sp/>unfortunately<sp/>we<sp/>can<sp/>create<sp/>a<sp/>non<sp/>const<sp/>value<sp/>from<sp/>a<sp/>const<sp/>one<sp/>:/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;,<sp/>const<sp/>int&gt;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>static_assert(!std::constructible_from&lt;clev::value&lt;int&gt;,<sp/>const<sp/>int&amp;&gt;);</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/clev/value.h"/>
   </compounddef>
