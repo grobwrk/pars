@@ -10,24 +10,172 @@
     <includes local="no">sstream</includes>
     <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
     <incdepgraph>
-      <node id="8">
-        <label>pars/concept/event.h</label>
-        <link refid="lib_2include_2pars_2concept_2event_8h"/>
-        <childnode refid="9" relation="include">
+      <node id="11">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="10">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>clev/value.h</label>
+        <link refid="clev_2value_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
-      <node id="7">
-        <label>pars/concept/kind.h</label>
-        <link refid="concept_2kind_8h"/>
-        <childnode refid="8" relation="include">
+      <node id="8">
+        <label>nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -37,18 +185,18 @@
         </childnode>
         <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
       </node>
-      <node id="9">
+      <node id="30">
         <label>pars/ev/kind_decl.h</label>
         <link refid="kind__decl_8h"/>
         <childnode refid="2" relation="include">
@@ -59,11 +207,11 @@
         <link refid="klass_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -73,13 +221,13 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -90,59 +238,65 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="35">
         <label>pars/net/dir.h</label>
         <link refid="dir_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="32">
         <label>pars/net/hash.h</label>
         <link refid="hash_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="36">
         <label>cereal/types/vector.hpp</label>
       </node>
       <node id="4">
         <label>chrono</label>
       </node>
-      <node id="11">
+      <node id="17">
         <label>concepts</label>
       </node>
-      <node id="15">
+      <node id="34">
         <label>cstddef</label>
       </node>
-      <node id="18">
+      <node id="13">
+        <label>expected</label>
+      </node>
+      <node id="37">
         <label>fmt/base.h</label>
       </node>
-      <node id="14">
+      <node id="12">
         <label>fmt/format.h</label>
       </node>
-      <node id="20">
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="38">
         <label>iomanip</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
       </node>
-      <node id="10">
-        <label>nngpp/msg.h</label>
+      <node id="20">
+        <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="21">
+      <node id="39">
         <label>sstream</label>
       </node>
-      <node id="12">
+      <node id="31">
         <label>string_view</label>
       </node>
-      <node id="19">
-        <label>vector</label>
+      <node id="24">
+        <label>type_traits</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -330,7 +484,7 @@
       </node>
       <node id="18">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -405,7 +559,7 @@
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="43" refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacestd" kindref="compound">std</ref>::chrono::system_clock::time_point&gt;</highlight></codeline>
+<codeline lineno="43" refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;std::chrono::system_clock::time_point&gt;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="46" refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_1a7e1468a01134bb9df7dd5f500d617280" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_1a7e1468a01134bb9df7dd5f500d617280" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::chrono::system_clock::time_point&amp;<sp/>t,</highlight></codeline>
@@ -421,7 +575,7 @@
 <codeline lineno="56"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="59" refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacestd" kindref="compound">std</ref>::error_code&gt;<sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="59" refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;std::error_code&gt;<sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
 <codeline lineno="60"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="61" refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4_1a14de78e3d7774edb38f94cc3443296bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4_1a14de78e3d7774edb38f94cc3443296bc" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code&amp;<sp/>e,<sp/>fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
@@ -431,7 +585,7 @@
 <codeline lineno="66"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;pars::ev::event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="69" refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacestd" kindref="compound">std</ref>::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="69" refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;std::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="71" refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1ad49b073560bba2973d1c5ecd5a505465" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1ad49b073560bba2973d1c5ecd5a505465" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;event_t&gt;&amp;<sp/>x,<sp/>fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>

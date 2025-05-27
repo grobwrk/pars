@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">7</td>
+                     <td class="headerValue" width="10%">10</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -68,49 +68,53 @@
              : 
              : #include &quot;pars/init.h&quot;
              : 
-             : #include &lt;nngpp/error.h&gt;
-             : 
+             : #include &lt;expected&gt;
              : #include &lt;system_error&gt;
              : 
-             : namespace pars::net
+             : namespace pars
              : {
              : 
-             : static const std::error_category&amp; error_category() noexcept
+             : enum class error
+             : {
+             :   success = 0
+             : };
+             : 
+             : inline static const std::error_category&amp; error_category() noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  static struct : std::error_category</span>
              :   {
-<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;pars::net&quot;; }</span>
+<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;pars&quot;; }</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    virtual std::string message(int e) const override</span>
              :     {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return ::nng_strerror(e);</span>
-             :     }
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  } network_error_category;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      switch (static_cast&lt;error&gt;(e))</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      case error::success:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;success&quot;;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return network_error_category;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        break;</span>
+             :       }
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  } error_category;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return error_category;</span>
              : }
              : 
-             : } // namespace pars::net
-             : 
-             : namespace std
+             : inline std::error_code make_error_code(pars::error e) noexcept
              : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), pars::error_category());</span>
+             : }
+             : 
+             : } // namespace pars
              : 
              : template&lt;&gt;
-             : struct is_error_code_enum&lt;::nng::error&gt; : true_type
+             : struct std::is_error_code_enum&lt;pars::error&gt; : true_type
              : {
              : };
              : 
-             : } // namespace std
+             : static_assert(std::convertible_to&lt;pars::error, std::error_code&gt;);
              : 
-             : namespace nng
-             : {
-             : 
-             : inline std::error_code make_error_code(nng::error e) noexcept
-             : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), pars::net::error_category());</span>
-             : }
-             : 
-             : } // namespace nng
+             : static_assert(std::constructible_from&lt;std::error_code, pars::error&gt;);
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -66,10 +66,10 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/msg.h&quot;
+             : 
              : #include &quot;pars/concept/kind.h&quot;
              : #include &quot;pars/net/hash.h&quot;
-             : 
-             : #include &lt;nngpp/msg.h&gt;
              : 
              : #include &lt;string_view&gt;
              : 
@@ -108,9 +108,9 @@
              : };
              : 
              : template&lt;&gt;
-             : struct klass&lt;nng::msg&gt; : base_klass&lt;nng::msg&gt;
+             : struct klass&lt;nngxx::msg&gt; : base_klass&lt;nngxx::msg&gt;
              : {
-             :   using event_type = nng::msg;
+             :   using event_type = nngxx::msg;
              : 
              :   static constexpr std::string_view uuid =
              :     &quot;a7c09171-c503-4cb2-97e4-de8d3fe621b3&quot;;

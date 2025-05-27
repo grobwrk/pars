@@ -2,73 +2,242 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="nng_8h" kind="file" language="C++">
     <compoundname>nng.h</compoundname>
+    <includes refid="msg__header_8h" local="yes">nngxx/msg_header.h</includes>
+    <includes refid="nngxx_2pipe_8h" local="yes">nngxx/pipe.h</includes>
     <includes refid="hash_8h" local="yes">pars/net/hash.h</includes>
+    <includes refid="pars_2err_8h" local="yes">pars/err.h</includes>
     <includes local="no">fmt/format.h</includes>
-    <includes local="no">nngpp/error.h</includes>
-    <includes local="no">nngpp/msg.h</includes>
-    <includes local="no">nngpp/pipe_view.h</includes>
-    <includes local="no">nngpp/view.h</includes>
-    <includedby refid="pipe_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</includedby>
+    <includedby refid="pars_2net_2pipe_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
-        <link refid="nng_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
+      <node id="7">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>pars/init.h</label>
-        <link refid="init_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="12">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="6">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>pars/net/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="3" relation="include">
+      <node id="13">
+        <label>clev/value.h</label>
+        <link refid="clev_2value_8h"/>
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
+      </node>
+      <node id="15">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>chrono</label>
-      </node>
-      <node id="8">
-        <label>cstddef</label>
-      </node>
-      <node id="6">
-        <label>fmt/format.h</label>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="4">
-        <label>nng/nng.h</label>
+        <label>nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="9">
-        <label>nngpp/error.h</label>
+      <node id="23">
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
       </node>
-      <node id="7">
-        <label>nngpp/msg.h</label>
+      <node id="5">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nngxx/msg_header.h</label>
+        <link refid="msg__header_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>pars/err.h</label>
+        <link refid="pars_2err_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
+        <link refid="nng_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>pars/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>chrono</label>
+      </node>
+      <node id="14">
+        <label>concepts</label>
+      </node>
+      <node id="29">
+        <label>cstddef</label>
       </node>
       <node id="10">
-        <label>nngpp/pipe_view.h</label>
+        <label>expected</label>
+      </node>
+      <node id="8">
+        <label>fmt/format.h</label>
       </node>
       <node id="11">
-        <label>nngpp/view.h</label>
+        <label>functional</label>
+      </node>
+      <node id="9">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="17">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="31">
+        <label>system_error</label>
+      </node>
+      <node id="21">
+        <label>type_traits</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -274,7 +443,7 @@
       </node>
       <node id="2">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pipe_8h"/>
+        <link refid="pars_2net_2pipe_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
@@ -312,7 +481,7 @@
       </node>
       <node id="20">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
@@ -337,11 +506,8 @@
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1error_01_4" prot="public">fmt::formatter&lt; nng::error &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1exception_01_4" prot="public">fmt::formatter&lt; nng::exception &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1msg_01_4" prot="public">fmt::formatter&lt; nng::msg &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1view_01_4" prot="public">fmt::formatter&lt; nng::view &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4" prot="public">fmt::formatter&lt; nng::pipe_view &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4" prot="public">fmt::formatter&lt; nngxx::msg &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4" prot="public">fmt::formatter&lt; nngxx::pipe_view &gt;</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -378,86 +544,55 @@
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash_8h" kindref="compound">pars/net/hash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/error.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/msg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/pipe_view.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/view.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="41" refid="structfmt_1_1formatter_3_01nng_1_1error_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::error&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43" refid="structfmt_1_1formatter_3_01nng_1_1error_01_4_1a062dd2b72d53013f1cb160276248bc83" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nng_1_1error_01_4_1a062dd2b72d53013f1cb160276248bc83" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng::error&amp;<sp/>e,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}&quot;</highlight><highlight class="normal">,<sp/>nng::to_string(e));</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="51" refid="structfmt_1_1formatter_3_01nng_1_1exception_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::exception&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="53" refid="structfmt_1_1formatter_3_01nng_1_1exception_01_4_1a50d0111368e1f565bf6516d5609fd4b3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nng_1_1exception_01_4_1a50d0111368e1f565bf6516d5609fd4b3" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng::exception&amp;<sp/>e,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;nng::exception<sp/>during<sp/>{}<sp/>({})<sp/>-<sp/>{}]&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.who(),<sp/>e.get_error(),<sp/>e.what());</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="62" refid="structfmt_1_1formatter_3_01nng_1_1msg_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::msg&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="64" refid="structfmt_1_1formatter_3_01nng_1_1msg_01_4_1adda779dafa89979a13aefefb4dc7fa89" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nng_1_1msg_01_4_1adda779dafa89979a13aefefb4dc7fa89" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng::msg&amp;<sp/>m,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m.body().size()<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(std::size_t))</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;size:{}={}+{},<sp/>hash:&lt;error&gt;,<sp/>pipe:0x{:X}&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.header().size()<sp/>+<sp/>m.body().size(),<sp/>m.header().size(),<sp/>m.body().size(),</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.get_pipe().id());</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>h<sp/>=<sp/>pars::hash_from_msg(m);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;size:{}={}+{},<sp/>hash:0x{:X},<sp/>pipe:0x{:X}&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.header().size()<sp/>+<sp/>m.body().size(),<sp/>m.header().size(),<sp/>m.body().size(),</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h,<sp/>m.get_pipe().id());</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="87" refid="structfmt_1_1formatter_3_01nng_1_1view_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::view&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="89" refid="structfmt_1_1formatter_3_01nng_1_1view_01_4_1a21943c4f5be6290a3d2aa965cf798637" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nng_1_1view_01_4_1a21943c4f5be6290a3d2aa965cf798637" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng::view&amp;<sp/>v,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string_view{v.data&lt;char&gt;(),<sp/>v.size()});</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="98" refid="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::pipe_view&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="100" refid="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4_1a68da9080e197ad9336c976378060cfd5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4_1a68da9080e197ad9336c976378060cfd5" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng::pipe_view&amp;<sp/>p,<sp/>fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p)</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.id()<sp/>==<sp/>-1)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;ERROR&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;0x{:08X}&quot;</highlight><highlight class="normal">,<sp/>p.id());</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;empty-pipe&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="msg__header_8h" kindref="compound">nngxx/msg_header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2pipe_8h" kindref="compound">nngxx/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash_8h" kindref="compound">pars/net/hash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pars_2err_8h" kindref="compound">pars/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="42" refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4_1ad252a793b6bba6fc7c7b2c010a3bbc90" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4_1ad252a793b6bba6fc7c7b2c010a3bbc90" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>&amp;<sp/>m,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m.body().size()<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(std::size_t))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;size:{}={}+{},<sp/>hash:&lt;error&gt;,<sp/>pipe:0x{:X}&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.header().size()<sp/>+<sp/>m.body().size(),<sp/>m.header().size(),<sp/>m.body().size(),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.get_pipe().id());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>h<sp/>=<sp/>pars::hash_from_msg(m);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;size:{}={}+{},<sp/>hash:0x{:X},<sp/>pipe:0x{:X}&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.header().size()<sp/>+<sp/>m.body().size(),<sp/>m.header().size(),<sp/>m.body().size(),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h,<sp/>m.get_pipe().id());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="67" refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::pipe_view&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69" refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4_1adbf73caaac8d2330d9eedaa253bb8940" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4_1adbf73caaac8d2330d9eedaa253bb8940" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref>&amp;<sp/>p,<sp/>fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p.id()<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;ERROR&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;0x{:08X}&quot;</highlight><highlight class="normal">,<sp/>p.id());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;empty-pipe&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h"/>
   </compounddef>

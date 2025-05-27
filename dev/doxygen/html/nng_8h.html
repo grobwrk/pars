@@ -93,40 +93,105 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">nng.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="hash_8h_source.html">pars/net/hash.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="msg__header_8h_source.html">nngxx/msg_header.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="nngxx_2pipe_8h_source.html">nngxx/pipe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hash_8h_source.html">pars/net/hash.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pars_2err_8h_source.html">pars/err.h</a>&quot;</code><br />
 <code>#include &lt;fmt/format.h&gt;</code><br />
-<code>#include &lt;nngpp/error.h&gt;</code><br />
-<code>#include &lt;nngpp/msg.h&gt;</code><br />
-<code>#include &lt;nngpp/pipe_view.h&gt;</code><br />
-<code>#include &lt;nngpp/view.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for nng.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="nng_8h__incl.png" border="0" usemap="#a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8h" alt=""/></div>
 <map name="a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8h" id="a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8h">
-<area shape="rect" title=" " alt="" coords="284,5,460,67"/>
-<area shape="rect" href="hash_8h.html" title=" " alt="" coords="168,115,289,143"/>
-<area shape="poly" title=" " alt="" coords="326,70,263,109,260,104,323,65"/>
-<area shape="rect" title=" " alt="" coords="5,191,110,218"/>
-<area shape="poly" title=" " alt="" coords="285,63,221,86,158,117,115,148,81,181,78,177,112,144,155,113,218,81,283,58"/>
-<area shape="rect" title=" " alt="" coords="338,191,444,218"/>
-<area shape="poly" title=" " alt="" coords="362,68,353,104,352,123,355,142,373,177,368,179,350,143,346,123,347,103,356,67"/>
-<area shape="rect" title=" " alt="" coords="364,115,471,143"/>
-<area shape="poly" title=" " alt="" coords="390,66,407,100,402,102,385,69"/>
-<area shape="rect" title=" " alt="" coords="496,115,638,143"/>
-<area shape="poly" title=" " alt="" coords="438,65,526,106,524,111,436,70"/>
-<area shape="rect" title=" " alt="" coords="662,115,770,143"/>
-<area shape="poly" title=" " alt="" coords="461,58,652,108,651,113,460,63"/>
-<area shape="rect" href="init_8h.html" title=" " alt="" coords="134,191,221,218"/>
-<area shape="poly" title=" " alt="" coords="221,145,197,179,193,176,217,142"/>
-<area shape="poly" title=" " alt="" coords="199,146,103,187,101,182,197,141"/>
-<area shape="poly" title=" " alt="" coords="258,141,349,182,347,187,256,146"/>
-<area shape="rect" title=" " alt="" coords="244,191,314,218"/>
-<area shape="poly" title=" " alt="" coords="239,142,263,176,259,179,235,145"/>
-<area shape="rect" title=" " alt="" coords="84,266,170,294"/>
-<area shape="poly" title=" " alt="" coords="171,220,147,255,142,252,166,217"/>
-<area shape="rect" title=" " alt="" coords="194,266,260,294"/>
-<area shape="poly" title=" " alt="" coords="189,217,212,252,207,255,184,220"/>
+<area shape="rect" title=" " alt="" coords="525,5,702,67"/>
+<area shape="rect" href="msg__header_8h.html" title=" " alt="" coords="1254,115,1410,143"/>
+<area shape="poly" title=" " alt="" coords="702,46,1238,113,1238,118,701,51"/>
+<area shape="rect" title=" " alt="" coords="6,889,111,916"/>
+<area shape="poly" title=" " alt="" coords="525,46,373,61,287,74,203,91,126,112,64,138,40,152,23,168,12,185,8,203,8,735,12,774,22,812,47,874,42,876,17,813,7,775,3,736,3,203,7,183,19,165,37,148,62,133,124,107,201,86,286,69,372,56,525,41"/>
+<area shape="rect" href="nngxx_2pipe_8h.html" title=" " alt="" coords="378,418,483,445"/>
+<area shape="poly" title=" " alt="" coords="575,70,518,123,491,156,469,192,449,248,438,306,433,360,432,402,427,402,428,359,432,305,444,246,464,190,487,153,514,119,571,66"/>
+<area shape="rect" href="hash_8h.html" title=" " alt="" coords="553,115,674,143"/>
+<area shape="poly" title=" " alt="" coords="616,67,616,99,611,99,611,67"/>
+<area shape="rect" href="pars_2err_8h.html" title=" " alt="" coords="1088,115,1170,143"/>
+<area shape="poly" title=" " alt="" coords="702,50,1074,115,1073,120,702,56"/>
+<area shape="rect" href="msg_8h.html" title=" " alt="" coords="677,266,782,294"/>
+<area shape="poly" title=" " alt="" coords="1342,142,1357,179,1358,201,1348,220,1325,229,1275,237,1124,253,797,277,797,272,1123,248,1275,232,1324,224,1345,216,1352,200,1352,180,1337,144"/>
+<area shape="rect" href="iface_2msg_8h.html" title=" " alt="" coords="659,342,800,370"/>
+<area shape="poly" title=" " alt="" coords="732,295,732,326,727,326,727,295"/>
+<area shape="rect" href="nngxx_2iface_2value_8h.html" title=" " alt="" coords="655,569,804,597"/>
+<area shape="poly" title=" " alt="" coords="732,370,732,553,727,553,727,370"/>
+<area shape="rect" title=" " alt="" coords="615,889,700,916"/>
+<area shape="poly" title=" " alt="" coords="775,368,881,407,943,437,1002,472,1054,513,1074,536,1091,561,1103,587,1109,614,1108,643,1100,673,1073,733,1042,775,1001,809,945,843,888,869,826,886,767,897,716,902,715,897,766,891,825,881,886,864,943,838,998,804,1038,771,1068,730,1095,671,1103,642,1103,615,1098,588,1086,563,1070,540,1050,517,999,476,940,441,879,412,773,373"/>
+<area shape="poly" title=" " alt="" coords="676,373,500,416,498,411,675,368"/>
+<area shape="rect" href="own_8h.html" title=" " alt="" coords="144,645,235,672"/>
+<area shape="poly" title=" " alt="" coords="655,597,251,652,250,646,654,592"/>
+<area shape="rect" href="clev_2value_8h.html" title=" " alt="" coords="411,645,512,672"/>
+<area shape="poly" title=" " alt="" coords="682,600,524,643,523,638,681,595"/>
+<area shape="rect" href="concept_8h.html" title=" " alt="" coords="593,720,722,748"/>
+<area shape="poly" title=" " alt="" coords="780,595,815,608,846,625,857,636,864,647,865,660,858,674,833,698,803,715,770,727,737,733,736,728,769,721,801,711,830,694,854,671,859,659,859,649,853,639,843,629,813,613,778,600"/>
+<area shape="rect" href="opt_8h.html" title=" " alt="" coords="891,720,989,748"/>
+<area shape="poly" title=" " alt="" coords="805,584,881,589,961,600,1032,617,1058,629,1077,643,1084,656,1084,668,1079,679,1069,689,1040,706,1005,719,1003,714,1037,701,1065,685,1074,676,1079,667,1079,657,1073,646,1056,633,1030,622,961,605,880,594,804,589"/>
+<area shape="rect" href="opt__getter_8h.html" title=" " alt="" coords="919,645,1062,672"/>
+<area shape="poly" title=" " alt="" coords="777,595,930,637,929,643,775,600"/>
+<area shape="rect" href="opt__setter_8h.html" title=" " alt="" coords="586,645,728,672"/>
+<area shape="poly" title=" " alt="" coords="718,599,683,635,679,632,715,595"/>
+<area shape="rect" title=" " alt="" coords="753,645,844,672"/>
+<area shape="poly" title=" " alt="" coords="744,595,778,631,774,635,740,599"/>
+<area shape="rect" href="clev_2err_8h.html" title=" " alt="" coords="146,804,227,832"/>
+<area shape="poly" title=" " alt="" coords="192,673,190,789,184,789,186,673"/>
+<area shape="rect" href="iface_8h.html" title=" " alt="" coords="224,720,320,748"/>
+<area shape="poly" title=" " alt="" coords="206,671,248,708,244,712,202,675"/>
+<area shape="poly" title=" " alt="" coords="168,835,93,882,91,878,165,831"/>
+<area shape="poly" title=" " alt="" coords="228,825,298,838,600,889,599,894,297,843,227,830"/>
+<area shape="rect" title=" " alt="" coords="249,889,330,916"/>
+<area shape="poly" title=" " alt="" coords="205,831,263,877,259,881,202,835"/>
+<area shape="rect" title=" " alt="" coords="138,889,224,916"/>
+<area shape="poly" title=" " alt="" coords="188,833,186,873,181,873,183,833"/>
+<area shape="poly" title=" " alt="" coords="428,675,321,717,319,712,427,670"/>
+<area shape="rect" title=" " alt="" coords="508,804,588,832"/>
+<area shape="poly" title=" " alt="" coords="471,671,536,789,531,792,466,674"/>
+<area shape="poly" title=" " alt="" coords="660,748,660,873,655,873,655,748"/>
+<area shape="poly" title=" " alt="" coords="641,751,579,797,576,793,638,746"/>
+<area shape="poly" title=" " alt="" coords="944,749,940,794,932,820,916,843,882,862,830,877,716,897,715,892,829,872,880,857,913,839,927,818,935,793,938,748"/>
+<area shape="rect" title=" " alt="" coords="746,796,902,841"/>
+<area shape="poly" title=" " alt="" coords="923,751,869,789,866,784,920,746"/>
+<area shape="poly" title=" " alt="" coords="931,676,733,719,732,714,930,670"/>
+<area shape="poly" title=" " alt="" coords="984,674,960,709,956,706,979,671"/>
+<area shape="rect" href="nngxx_2err_8h.html" title=" " alt="" coords="345,720,439,748"/>
+<area shape="poly" title=" " alt="" coords="919,671,455,728,454,723,918,666"/>
+<area shape="poly" title=" " alt="" coords="360,751,234,801,232,796,358,746"/>
+<area shape="poly" title=" " alt="" coords="345,748,217,777,136,798,116,815,99,835,73,876,69,873,94,832,112,811,133,794,215,772,344,743"/>
+<area shape="poly" title=" " alt="" coords="404,747,442,791,468,816,497,838,549,865,601,884,599,889,547,870,495,843,465,820,438,795,400,750"/>
+<area shape="poly" title=" " alt="" coords="386,750,307,877,303,874,382,747"/>
+<area shape="poly" title=" " alt="" coords="660,673,660,705,655,705,655,673"/>
+<area shape="poly" title=" " alt="" coords="709,670,877,714,875,719,707,675"/>
+<area shape="poly" title=" " alt="" coords="611,675,454,718,453,713,609,670"/>
+<area shape="rect" href="nngxx_2iface_2pipe_8h.html" title=" " alt="" coords="360,493,501,521"/>
+<area shape="poly" title=" " alt="" coords="433,446,433,478,428,478,428,446"/>
+<area shape="poly" title=" " alt="" coords="485,519,661,562,660,567,484,524"/>
+<area shape="poly" title=" " alt="" coords="429,522,415,576,401,645,396,705,390,705,396,644,410,574,424,521"/>
+<area shape="rect" href="socket__decl_8h.html" title=" " alt="" coords="122,569,275,597"/>
+<area shape="poly" title=" " alt="" coords="390,524,256,566,254,561,388,519"/>
+<area shape="poly" title=" " alt="" coords="200,598,196,630,190,629,194,597"/>
+<area shape="poly" title=" " alt="" coords="178,599,160,614,143,631,133,651,135,672,149,698,166,715,213,746,262,774,314,799,421,840,520,870,601,888,599,893,519,875,419,845,312,804,260,779,211,750,162,719,145,701,129,673,128,650,138,628,156,610,175,595"/>
+<area shape="poly" title=" " alt="" coords="213,595,232,617,249,643,262,674,270,704,264,706,256,676,244,646,227,620,209,599"/>
+<area shape="poly" title=" " alt="" coords="579,146,468,193,397,230,338,266,289,302,247,341,211,385,178,436,146,497,113,570,86,654,71,739,63,816,61,873,56,873,58,816,65,738,81,652,108,568,141,495,173,434,207,382,243,337,286,298,335,262,395,226,466,188,577,141"/>
+<area shape="rect" href="msg__body_8h.html" title=" " alt="" coords="478,191,620,218"/>
+<area shape="poly" title=" " alt="" coords="604,145,573,181,569,177,600,141"/>
+<area shape="rect" href="init_8h.html" title=" " alt="" coords="1048,191,1134,218"/>
+<area shape="poly" title=" " alt="" coords="675,137,1033,192,1032,197,674,142"/>
+<area shape="rect" title=" " alt="" coords="644,191,713,218"/>
+<area shape="poly" title=" " alt="" coords="627,141,659,177,655,181,623,145"/>
+<area shape="poly" title=" " alt="" coords="583,216,685,258,683,263,581,221"/>
+<area shape="poly" title=" " alt="" coords="552,219,552,354,552,584,556,630,563,649,577,671,597,693,620,710,617,714,593,696,573,674,558,651,551,632,547,584,547,354,547,219"/>
+<area shape="poly" title=" " alt="" coords="486,221,433,239,380,266,358,284,341,304,329,328,325,355,325,584,330,619,342,652,374,706,370,709,337,654,325,620,320,584,320,354,324,326,336,301,355,280,378,262,431,234,485,216"/>
+<area shape="poly" title=" " alt="" coords="1102,217,1134,275,1148,313,1153,354,1153,433,1158,469,1169,497,1185,521,1203,543,1222,565,1239,590,1250,620,1255,657,1255,736,1250,756,1237,776,1217,793,1190,808,1123,835,1041,856,952,873,863,886,716,900,715,895,862,880,951,868,1039,851,1121,830,1188,803,1214,788,1233,772,1245,754,1249,735,1249,657,1245,621,1234,593,1218,569,1199,547,1181,525,1164,500,1152,470,1148,433,1148,355,1142,315,1129,277,1097,220"/>
+<area shape="rect" title=" " alt="" coords="1047,266,1113,294"/>
+<area shape="poly" title=" " alt="" coords="1091,219,1087,251,1081,251,1086,218"/>
+<area shape="poly" title=" " alt="" coords="1139,142,1157,177,1178,229,1196,290,1204,354,1204,660,1197,710,1179,746,1150,773,1112,791,1069,804,1020,816,969,828,915,843,866,856,801,867,641,884,346,902,345,896,641,879,800,861,865,851,914,838,967,822,1019,810,1067,799,1110,786,1147,768,1174,743,1192,708,1199,660,1199,355,1191,291,1173,231,1152,179,1134,144"/>
+<area shape="poly" title=" " alt="" coords="1125,144,1107,178,1102,176,1120,142"/>
+<area shape="rect" title=" " alt="" coords="1228,191,1335,218"/>
+<area shape="poly" title=" " alt="" coords="1158,141,1242,181,1240,186,1155,146"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -135,7 +200,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="nng_8h__dep__incl.png" border="0" usemap="#a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8hdep" alt=""/></div>
 <map name="a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8hdep" id="a_2home_2runner_2work_2pars_2pars_2lib_2include_2pars_2fmt_2nng_8hdep">
 <area shape="rect" title=" " alt="" coords="1379,5,1555,67"/>
-<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1379,115,1555,177"/>
+<area shape="rect" href="pars_2net_2pipe_8h.html" title=" " alt="" coords="1379,115,1555,177"/>
 <area shape="poly" title=" " alt="" coords="1470,83,1470,114,1464,114,1464,83"/>
 <area shape="rect" href="metadata_8h.html" title=" " alt="" coords="700,225,876,286"/>
 <area shape="poly" title=" " alt="" coords="1364,166,877,243,877,238,1363,161"/>
@@ -184,7 +249,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="889,1061,913,1079,933,1101,997,1285,1081,1539,1076,1541,992,1287,929,1103,909,1083,886,1065"/>
 <area shape="rect" href="op_8h.html" title=" " alt="" coords="1253,1102,1430,1164"/>
 <area shape="poly" title=" " alt="" coords="916,1038,1068,1065,1235,1099,1254,1104,1253,1109,1234,1105,1067,1070,915,1044"/>
-<area shape="rect" href="socket_8h.html" title=" " alt="" coords="1003,1212,1179,1273"/>
+<area shape="rect" href="pars_2net_2socket_8h.html" title=" " alt="" coords="1003,1212,1179,1273"/>
 <area shape="poly" title=" " alt="" coords="916,1058,952,1077,986,1100,1014,1126,1039,1155,1076,1210,1072,1213,1034,1158,1010,1129,983,1104,949,1082,913,1063"/>
 <area shape="rect" href="pull_8h.html" title=" " alt="" coords="397,1321,574,1383"/>
 <area shape="poly" title=" " alt="" coords="773,1067,517,1323,514,1319,770,1063"/>
@@ -245,15 +310,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nng_1_1error_01_4.html">fmt::formatter&lt; nng::error &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4.html">fmt::formatter&lt; nngxx::msg &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nng_1_1exception_01_4.html">fmt::formatter&lt; nng::exception &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nng_1_1msg_01_4.html">fmt::formatter&lt; nng::msg &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nng_1_1view_01_4.html">fmt::formatter&lt; nng::view &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4.html">fmt::formatter&lt; nng::pipe_view &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4.html">fmt::formatter&lt; nngxx::pipe_view &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

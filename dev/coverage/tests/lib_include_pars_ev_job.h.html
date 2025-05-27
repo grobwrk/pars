@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">12</td>
@@ -66,13 +66,12 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/msg.h&quot;
+             : 
              : #include &quot;pars/ev/kind.h&quot;
              : #include &quot;pars/ev/metadata.h&quot;
              : #include &quot;pars/ev/serializer.h&quot;
              : #include &quot;pars/ev/spec.h&quot;
-             : 
-             : #include &lt;nngpp/msg.h&gt;
-             : #include &lt;nngpp/view.h&gt;
              : 
              : #include &lt;any&gt;
              : #include &lt;type_traits&gt;
@@ -101,7 +100,7 @@
              : 
              :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
              :     requires(!is_same_kind_v&lt;kind_of, received&gt; ||
-             :              std::is_same_v&lt;event_t, nng::msg&gt;)
+             :              std::is_same_v&lt;event_t, nngxx::msg&gt;)
              :   kind_of&lt;event_t&gt; event()
              :   {
              :     return std::any_cast&lt;kind_of&lt;event_t&gt;&gt;(std::move(event_kind_m));
@@ -109,11 +108,11 @@
              : 
              :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
              :     requires(is_same_kind_v&lt;kind_of, received&gt; &amp;&amp;
-             :              !std::is_same_v&lt;event_t, nng::msg&gt;)
+             :              !std::is_same_v&lt;event_t, nngxx::msg&gt;)
              :   received&lt;event_t&gt; event()
              :   {
-             :     // get the received&lt;nng::msg&gt;
-             :     auto r = event&lt;received, nng::msg&gt;();
+             :     // get the received&lt;nngxx::msg&gt;
+             :     auto r = event&lt;received, nngxx::msg&gt;();
              : 
              :     auto&amp; md = r.md();
              : 
@@ -147,7 +146,7 @@
              :   requires kind_c&lt;kind_of&gt;
              : static std::size_t compute_spec_hash(const kind_of&lt;event_t&gt;&amp; ke)
              : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (std::is_same_v&lt;kind_of&lt;event_t&gt;, received&lt;nng::msg&gt;&gt;)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (std::is_same_v&lt;kind_of&lt;event_t&gt;, received&lt;nngxx::msg&gt;&gt;)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return ke.msg_hash();</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return spec&lt;kind_of&lt;event_t&gt;&gt;::hash;</span>

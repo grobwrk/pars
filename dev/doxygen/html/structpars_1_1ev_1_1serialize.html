@@ -99,19 +99,19 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a84525377e87d50e385713bd0f6b37db1" id="r_a84525377e87d50e385713bd0f6b37db1"><td class="memTemplParams" colspan="2">template&lt;event_c event_t&gt; </td></tr>
-<tr class="memitem:a84525377e87d50e385713bd0f6b37db1"><td class="memTemplItemLeft" align="right" valign="top">static nng::msg&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a84525377e87d50e385713bd0f6b37db1">to_network</a> (event_t &amp;ev)</td></tr>
-<tr class="separator:a84525377e87d50e385713bd0f6b37db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e30dbe1b94b270504b43116ca736292" id="r_a6e30dbe1b94b270504b43116ca736292"><td class="memTemplParams" colspan="2">template&lt;event_c event_t&gt; </td></tr>
-<tr class="memitem:a6e30dbe1b94b270504b43116ca736292"><td class="memTemplItemLeft" align="right" valign="top">static event_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6e30dbe1b94b270504b43116ca736292">to_event</a> (const nng::msg &amp;m)</td></tr>
-<tr class="separator:a6e30dbe1b94b270504b43116ca736292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e218ee1638d058d12c50b60c53c0c6" id="r_ad3e218ee1638d058d12c50b60c53c0c6"><td class="memTemplParams" colspan="2">template&lt;event_c event_t&gt; </td></tr>
+<tr class="memitem:ad3e218ee1638d058d12c50b60c53c0c6"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad3e218ee1638d058d12c50b60c53c0c6">to_network</a> (event_t &amp;ev)</td></tr>
+<tr class="separator:ad3e218ee1638d058d12c50b60c53c0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839317ecb4e438b12e2f6012ed4d4532" id="r_a839317ecb4e438b12e2f6012ed4d4532"><td class="memTemplParams" colspan="2">template&lt;event_c event_t&gt; </td></tr>
+<tr class="memitem:a839317ecb4e438b12e2f6012ed4d4532"><td class="memTemplItemLeft" align="right" valign="top">static event_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a839317ecb4e438b12e2f6012ed4d4532">to_event</a> (const <a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> &amp;m)</td></tr>
+<tr class="separator:a839317ecb4e438b12e2f6012ed4d4532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00048">48</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00049">49</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6e30dbe1b94b270504b43116ca736292" name="a6e30dbe1b94b270504b43116ca736292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e30dbe1b94b270504b43116ca736292">&#9670;&#160;</a></span>to_event()</h2>
+<a id="a839317ecb4e438b12e2f6012ed4d4532" name="a839317ecb4e438b12e2f6012ed4d4532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a839317ecb4e438b12e2f6012ed4d4532">&#9670;&#160;</a></span>to_event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +124,7 @@ template&lt;event_c event_t&gt; </div>
         <tr>
           <td class="memname">static event_t pars::ev::serialize::to_event </td>
           <td>(</td>
-          <td class="paramtype">const nng::msg &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -135,22 +135,20 @@ template&lt;event_c event_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00080">80</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>  {</div>
-<div class="line"><span class="lineno">   82</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
-<div class="line"><span class="lineno">   83</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keyword">auto</span> req_event_hash = uuid&lt;klass&lt;event_t&gt;&gt;::hash;</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    <span class="comment">// 2. check they correspond</span></div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span> (recv_event_hash - req_event_hash != 0)</div>
-<div class="line"><span class="lineno">   88</span>      <span class="keywordflow">throw</span> <span class="keyword">new</span> std::runtime_error(<span class="stringliteral">&quot;Requested event mismatch!&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>    <span class="comment">// 3. remove event hash</span></div>
-<div class="line"><span class="lineno">   91</span>    m.body().trim_u64();</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    <span class="comment">// 4. deserialize event</span></div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">auto</span> body = m.body();</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keyword">auto</span> view = std::string_view(body.data&lt;<span class="keywordtype">char</span>&gt;(), body.size());</div>
+<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00082">82</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>  {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
+<div class="line"><span class="lineno">   85</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keyword">auto</span> req_event_hash = uuid&lt;klass&lt;event_t&gt;&gt;::hash;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// 2. check they correspond</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (recv_event_hash - req_event_hash != 0)</div>
+<div class="line"><span class="lineno">   90</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Requested event mismatch!&quot;</span>);</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">// 3. deserialize event</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">auto</span> body = m.body();</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keyword">auto</span> view =</div>
+<div class="line"><span class="lineno">   95</span>      std::string_view(body.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(uint64_t), body.size());</div>
 <div class="line"><span class="lineno">   96</span>    <span class="keyword">auto</span> istring = std::ispanstream(view);</div>
 <div class="line"><span class="lineno">   97</span>    <span class="keyword">auto</span> istream = std::istream(istring.rdbuf());</div>
 <div class="line"><span class="lineno">   98</span>    <span class="keyword">auto</span> ar = cereal::BinaryInputArchive(istream);</div>
@@ -168,12 +166,12 @@ template&lt;event_c event_t&gt; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, <a class="el" href="flags_8h_source.html#l00041">pars::event</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="job_8h_source.html#l00076">pars::ev::job::event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="job_8h_source.html#l00075">pars::ev::job::event()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_cgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_cgraph" id="astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_cgraph">
+<div class="center"><img src="structpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_cgraph" alt=""/></div>
+<map name="astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_cgraph" id="astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,141,50"/>
 <area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="189,14,286,42"/>
 <area shape="poly" title=" " alt="" coords="141,25,173,25,173,30,141,30"/>
@@ -184,18 +182,18 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_icgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_icgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_icgraph" id="astructpars_1_1ev_1_1serialize_a6e30dbe1b94b270504b43116ca736292_icgraph">
+<div class="center"><img src="structpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_icgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_icgraph" alt=""/></div>
+<map name="astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_icgraph" id="astructpars_1_1ev_1_1serialize_a839317ecb4e438b12e2f6012ed4d4532_icgraph">
 <area shape="rect" title=" " alt="" coords="199,5,334,50"/>
-<area shape="rect" href="classpars_1_1ev_1_1job.html#a5a92965db4c873e87600ac9d7d0faada" title=" " alt="" coords="5,14,151,42"/>
+<area shape="rect" href="classpars_1_1ev_1_1job.html#a0122d84e10b147ac9d282e1ba87ff6f4" title=" " alt="" coords="5,14,151,42"/>
 <area shape="poly" title=" " alt="" coords="183,30,151,30,151,25,183,25"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a84525377e87d50e385713bd0f6b37db1" name="a84525377e87d50e385713bd0f6b37db1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84525377e87d50e385713bd0f6b37db1">&#9670;&#160;</a></span>to_network()</h2>
+<a id="ad3e218ee1638d058d12c50b60c53c0c6" name="ad3e218ee1638d058d12c50b60c53c0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e218ee1638d058d12c50b60c53c0c6">&#9670;&#160;</a></span>to_network()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +204,7 @@ template&lt;event_c event_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static nng::msg pars::ev::serialize::to_network </td>
+          <td class="memname">static <a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> pars::ev::serialize::to_network </td>
           <td>(</td>
           <td class="paramtype">event_t &amp;</td>          <td class="paramname"><span class="paramname"><em>ev</em></span></td><td>)</td>
           <td></td>
@@ -219,42 +217,43 @@ template&lt;event_c event_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00051">51</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>  {</div>
-<div class="line"><span class="lineno">   53</span>    <span class="comment">// 1. serialize the event to a stringstream</span></div>
-<div class="line"><span class="lineno">   54</span>    <span class="keyword">auto</span> ostring = std::ostringstream();</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keyword">auto</span> ostream = std::ostream(ostring.rdbuf());</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keyword">auto</span> ar = cereal::BinaryOutputArchive(ostream);</div>
-<div class="line"><span class="lineno">   57</span>    klass&lt;event_t&gt;::serialize(ev, ar);</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>    <span class="comment">// 2. compute the event_hash</span></div>
-<div class="line"><span class="lineno">   60</span>    <span class="keyword">auto</span> event_hash = uuid&lt;klass&lt;event_t&gt;&gt;::hash;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>    <span class="comment">// 3. create the nng::msg to hold the hash+event</span></div>
-<div class="line"><span class="lineno">   63</span>    <span class="keyword">auto</span> serialization = ostring.rdbuf()-&gt;view();</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keyword">auto</span> m = nng::make_msg(<span class="keyword">sizeof</span>(event_hash) + serialization.size());</div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">auto</span> b = m.body();</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    <span class="comment">// 4. append the event hash</span></div>
-<div class="line"><span class="lineno">   68</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;(), &amp;event_hash, <span class="keyword">sizeof</span>(event_hash));</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="comment">// 5. append the serialized event</span></div>
-<div class="line"><span class="lineno">   71</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(event_hash), serialization.data(),</div>
-<div class="line"><span class="lineno">   72</span>           serialization.size());</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>, <span class="stringliteral">&quot;Serialized Event [{}] to Message [{}]&quot;</span>, ev, m);</div>
+<p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00052">52</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>  {</div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment">// 1. serialize the event to a stringstream</span></div>
+<div class="line"><span class="lineno">   55</span>    <span class="keyword">auto</span> ostring = std::ostringstream();</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">auto</span> ostream = std::ostream(ostring.rdbuf());</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keyword">auto</span> ar = cereal::BinaryOutputArchive(ostream);</div>
+<div class="line"><span class="lineno">   58</span>    klass&lt;event_t&gt;::serialize(ev, ar);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment">// 2. compute the event_hash</span></div>
+<div class="line"><span class="lineno">   61</span>    <span class="keyword">auto</span> event_hash = uuid&lt;klass&lt;event_t&gt;&gt;::hash;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment">// 3. create the nngxx::msg to hold the hash+event</span></div>
+<div class="line"><span class="lineno">   64</span>    <span class="keyword">auto</span> serialization = ostring.rdbuf()-&gt;view();</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keyword">auto</span> m = nngxx::make_msg(<span class="keyword">sizeof</span>(event_hash) + serialization.size())</div>
+<div class="line"><span class="lineno">   66</span>               .value_or_abort();</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keyword">auto</span> b = m.body();</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">// 4. append the event hash</span></div>
+<div class="line"><span class="lineno">   70</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;(), &amp;event_hash, <span class="keyword">sizeof</span>(event_hash));</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    <span class="comment">// 5. append the serialized event</span></div>
+<div class="line"><span class="lineno">   73</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(event_hash), serialization.data(),</div>
+<div class="line"><span class="lineno">   74</span>           serialization.size());</div>
 <div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">   77</span>  }</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>, <span class="stringliteral">&quot;Serialized Event [{}] to Message [{}]&quot;</span>, ev, m);</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">   79</span>  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, <a class="el" href="flags_8h_source.html#l00041">pars::event</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00069">pars::net::op::send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00065">pars::net::op::send()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_cgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_cgraph" id="astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_cgraph">
+<div class="center"><img src="structpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_cgraph" alt=""/></div>
+<map name="astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_cgraph" id="astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,141,50"/>
 <area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="189,14,286,42"/>
 <area shape="poly" title=" " alt="" coords="141,25,173,25,173,30,141,30"/>
@@ -265,8 +264,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_icgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_icgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_icgraph" id="astructpars_1_1ev_1_1serialize_a84525377e87d50e385713bd0f6b37db1_icgraph">
+<div class="center"><img src="structpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_icgraph.png" border="0" usemap="#astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_icgraph" alt=""/></div>
+<map name="astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_icgraph" id="astructpars_1_1ev_1_1serialize_ad3e218ee1638d058d12c50b60c53c0c6_icgraph">
 <area shape="rect" title=" " alt="" coords="195,5,330,50"/>
 <area shape="rect" href="classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a" title=" " alt="" coords="5,14,147,42"/>
 <area shape="poly" title=" " alt="" coords="179,30,147,30,147,25,179,25"/>

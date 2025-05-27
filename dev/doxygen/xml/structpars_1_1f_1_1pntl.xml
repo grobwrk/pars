@@ -69,8 +69,20 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
+      <node id="5">
+        <label>clev::value&lt; nng_t &gt;</label>
+        <link refid="structclev_1_1value"/>
+      </node>
       <node id="3">
-        <label>nng::pipe_view</label>
+        <label>nngxx::pipe_view</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nngxx::value&lt; nng_pipe &gt;</label>
+        <link refid="structnngxx_1_1value"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="1">
         <label>pars::f::pntl&lt; tool_t &gt;</label>
@@ -78,7 +90,7 @@
         <childnode refid="2" relation="usage">
           <edgelabel>p</edgelabel>
         </childnode>
-        <childnode refid="4" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>t</edgelabel>
         </childnode>
       </node>
@@ -88,7 +100,7 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="6">
         <label>tool_t</label>
       </node>
     </collaborationgraph>

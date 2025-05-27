@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pipe_5fstate_0',['pipe_state',['../namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931',1,'pars_example::resource']]]
+  ['opt_0',['opt',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518eb',1,'nngxx']]],
+  ['opt_5foverload_1',['opt_overload',['../namespacenngxx.html#a006aeb45f262402ba1322f07dccd325f',1,'nngxx']]]
 ];

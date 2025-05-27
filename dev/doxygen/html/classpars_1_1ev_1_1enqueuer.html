@@ -114,9 +114,9 @@ requires kind_c&lt;kind_of&gt;</td></tr>
 <tr class="memitem:a87da6b8b8e3747e8db3284d5625cbcb0" id="r_a87da6b8b8e3747e8db3284d5625cbcb0"><td class="memTemplParams" colspan="2">template&lt;network_event_c event_t, net::tool_c tool_t&gt; </td></tr>
 <tr class="memitem:a87da6b8b8e3747e8db3284d5625cbcb0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a87da6b8b8e3747e8db3284d5625cbcb0">queue_sent</a> (event_t ev, int s_id, tool_t &amp;t, <a class="el" href="classpars_1_1net_1_1pipe.html">net::pipe</a> p)</td></tr>
 <tr class="separator:a87da6b8b8e3747e8db3284d5625cbcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b14e3046113f1234a6d731f595493fc" id="r_a4b14e3046113f1234a6d731f595493fc"><td class="memTemplParams" colspan="2">template&lt;net::tool_c tool_t&gt; </td></tr>
-<tr class="memitem:a4b14e3046113f1234a6d731f595493fc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4b14e3046113f1234a6d731f595493fc">queue_received</a> (nng::msg m, int s_id, tool_t &amp;t, <a class="el" href="classpars_1_1net_1_1pipe.html">net::pipe</a> p)</td></tr>
-<tr class="separator:a4b14e3046113f1234a6d731f595493fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13daefd8d14bf6fc8a30e646e1de1ee" id="r_ad13daefd8d14bf6fc8a30e646e1de1ee"><td class="memTemplParams" colspan="2">template&lt;net::tool_c tool_t&gt; </td></tr>
+<tr class="memitem:ad13daefd8d14bf6fc8a30e646e1de1ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad13daefd8d14bf6fc8a30e646e1de1ee">queue_received</a> (<a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m, int s_id, tool_t &amp;t, <a class="el" href="classpars_1_1net_1_1pipe.html">net::pipe</a> p)</td></tr>
+<tr class="separator:ad13daefd8d14bf6fc8a30e646e1de1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -189,7 +189,7 @@ template&lt;internal_event_c event_t&gt; </div>
 <div class="line"><span class="lineno">   55</span>  }</div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a97196dda48d93a21b7696d6e73e9266d"><div class="ttname"><a href="namespacepars_1_1ev.html#a97196dda48d93a21b7696d6e73e9266d">pars::ev::fired</a></div><div class="ttdeci">fired(event_t, metadata&lt; fired, event_t &gt;) -&gt; fired&lt; event_t &gt;</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="enqueuer_8h_source.html#l00060">queue_fire()</a>, <a class="el" href="op_8h_source.html#l00110">pars::net::op::recv()</a>, and <a class="el" href="op_8h_source.html#l00069">pars::net::op::send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="enqueuer_8h_source.html#l00060">queue_fire()</a>, <a class="el" href="op_8h_source.html#l00107">pars::net::op::recv()</a>, and <a class="el" href="op_8h_source.html#l00065">pars::net::op::send()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -254,7 +254,7 @@ template&lt;network_event_c event_t, net::tool_c tool_t&gt; </div>
 <div class="line"><span class="lineno">   71</span>    {</div>
 <div class="line"><span class="lineno">   72</span>      <span class="keywordflow">if</span> (dispatcher_m.terminating())</div>
 <div class="line"><span class="lineno">   73</span>      {</div>
-<div class="line"><span class="lineno">   74</span>        p.close();</div>
+<div class="line"><span class="lineno">   74</span>        p.close().or_abort();</div>
 <div class="line"><span class="lineno">   75</span> </div>
 <div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   77</span>      }</div>
@@ -271,14 +271,14 @@ template&lt;network_event_c event_t, net::tool_c tool_t&gt; </div>
 <div class="line"><span class="lineno">   88</span>    dispatcher_m.queue_back(<a class="code hl_function" href="namespacepars_1_1ev.html#a97196dda48d93a21b7696d6e73e9266d">fired</a>{std::move(ev), {s_id, t, p}});</div>
 <div class="line"><span class="lineno">   89</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="pipe_8h_source.html#l00063">pars::net::pipe::close()</a>.</p>
+<p class="reference">References <a class="el" href="clev_2err_8h_source.html#l00104">clev::expected&lt; void &gt;::or_abort()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpars_1_1ev_1_1enqueuer_ad264589532b3272d43dfaf3d0ad352ec_cgraph.png" border="0" usemap="#aclasspars_1_1ev_1_1enqueuer_ad264589532b3272d43dfaf3d0ad352ec_cgraph" alt=""/></div>
 <map name="aclasspars_1_1ev_1_1enqueuer_ad264589532b3272d43dfaf3d0ad352ec_cgraph" id="aclasspars_1_1ev_1_1enqueuer_ad264589532b3272d43dfaf3d0ad352ec_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,147,50"/>
-<area shape="rect" href="classpars_1_1net_1_1pipe.html#ac3042bc4a31373b835fcb16b38781de6" title=" " alt="" coords="195,14,351,42"/>
+<area shape="rect" href="structclev_1_1expected_3_01void_01_4.html#aca118ea682f6fd7f20aba2a23d5ca29c" title=" " alt="" coords="195,5,353,50"/>
 <area shape="poly" title=" " alt="" coords="147,25,179,25,179,30,147,30"/>
 </map>
 </div>
@@ -335,8 +335,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a4b14e3046113f1234a6d731f595493fc" name="a4b14e3046113f1234a6d731f595493fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b14e3046113f1234a6d731f595493fc">&#9670;&#160;</a></span>queue_received()</h2>
+<a id="ad13daefd8d14bf6fc8a30e646e1de1ee" name="ad13daefd8d14bf6fc8a30e646e1de1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13daefd8d14bf6fc8a30e646e1de1ee">&#9670;&#160;</a></span>queue_received()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +349,7 @@ template&lt;net::tool_c tool_t&gt; </div>
         <tr>
           <td class="memname">void pars::ev::enqueuer::queue_received </td>
           <td>(</td>
-          <td class="paramtype">nng::msg</td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -380,12 +380,12 @@ template&lt;net::tool_c tool_t&gt; </div>
 <div class="line"><span class="lineno">  101</span>  }</div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a275a1098a112d8f424e90916e6653713"><div class="ttname"><a href="namespacepars_1_1ev.html#a275a1098a112d8f424e90916e6653713">pars::ev::received</a></div><div class="ttdeci">received(event_t, metadata&lt; received, event_t &gt;) -&gt; received&lt; event_t &gt;</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00110">pars::net::op::recv()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00107">pars::net::op::recv()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpars_1_1ev_1_1enqueuer_a4b14e3046113f1234a6d731f595493fc_icgraph.png" border="0" usemap="#aclasspars_1_1ev_1_1enqueuer_a4b14e3046113f1234a6d731f595493fc_icgraph" alt=""/></div>
-<map name="aclasspars_1_1ev_1_1enqueuer_a4b14e3046113f1234a6d731f595493fc_icgraph" id="aclasspars_1_1ev_1_1enqueuer_a4b14e3046113f1234a6d731f595493fc_icgraph">
+<div class="center"><img src="classpars_1_1ev_1_1enqueuer_ad13daefd8d14bf6fc8a30e646e1de1ee_icgraph.png" border="0" usemap="#aclasspars_1_1ev_1_1enqueuer_ad13daefd8d14bf6fc8a30e646e1de1ee_icgraph" alt=""/></div>
+<map name="aclasspars_1_1ev_1_1enqueuer_ad13daefd8d14bf6fc8a30e646e1de1ee_icgraph" id="aclasspars_1_1ev_1_1enqueuer_ad13daefd8d14bf6fc8a30e646e1de1ee_icgraph">
 <area shape="rect" title=" " alt="" coords="192,5,333,50"/>
 <area shape="rect" href="classpars_1_1net_1_1op.html#a0ddb15b0640c63b94650cf12cd609a42" title=" " alt="" coords="5,14,144,42"/>
 <area shape="poly" title=" " alt="" coords="176,30,144,30,144,25,176,25"/>
@@ -439,7 +439,7 @@ template&lt;network_event_c event_t, net::tool_c tool_t&gt; </div>
 <div class="line"><span class="lineno">   95</span>  }</div>
 <div class="ttc" id="anamespacepars_1_1ev_html_aa9008ca4ace86f33edb3a0eefd008e36"><div class="ttname"><a href="namespacepars_1_1ev.html#aa9008ca4ace86f33edb3a0eefd008e36">pars::ev::sent</a></div><div class="ttdeci">sent(event_t, metadata&lt; sent, event_t &gt;) -&gt; sent&lt; event_t &gt;</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00069">pars::net::op::send()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="op_8h_source.html#l00065">pars::net::op::send()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -16,8 +16,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="92" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="92" bodyend="-1"/>
-        <referencedby refid="structpars_1_1ev_1_1network__error_1ab0fa2b409d1a204bd1383a93859239f4" compoundref="lib_2include_2pars_2ev_2event_8h" startline="95" endline="99">format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="93" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="structpars_1_1ev_1_1network__error_1ab0fa2b409d1a204bd1383a93859239f4" compoundref="lib_2include_2pars_2ev_2event_8h" startline="96" endline="100">format_to</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1network__error_1aea9df4dc9dc31277207f4e331faaf026" prot="public" static="no" mutable="no">
         <type><ref refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1" kindref="member">net::dir</ref></type>
@@ -31,8 +31,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="93" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="93" bodyend="-1"/>
-        <referencedby refid="structpars_1_1ev_1_1network__error_1ab0fa2b409d1a204bd1383a93859239f4" compoundref="lib_2include_2pars_2ev_2event_8h" startline="95" endline="99">format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="94" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="structpars_1_1ev_1_1network__error_1ab0fa2b409d1a204bd1383a93859239f4" compoundref="lib_2include_2pars_2ev_2event_8h" startline="96" endline="100">format_to</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -52,9 +52,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="95" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="95" bodyend="99"/>
-        <references refid="structpars_1_1ev_1_1network__error_1aea9df4dc9dc31277207f4e331faaf026" compoundref="lib_2include_2pars_2ev_2event_8h" startline="93">dir</references>
-        <references refid="structpars_1_1ev_1_1network__error_1acb9e86f799136b7c42c63913c6abd9c3" compoundref="lib_2include_2pars_2ev_2event_8h" startline="92">error</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="96" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="96" bodyend="100"/>
+        <references refid="structpars_1_1ev_1_1network__error_1aea9df4dc9dc31277207f4e331faaf026" compoundref="lib_2include_2pars_2ev_2event_8h" startline="94">dir</references>
+        <references refid="structpars_1_1ev_1_1network__error_1acb9e86f799136b7c42c63913c6abd9c3" compoundref="lib_2include_2pars_2ev_2event_8h" startline="93">error</references>
         <references refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275" compoundref="dir_8h" startline="39">pars::net::out</references>
       </memberdef>
     </sectiondef>
@@ -62,7 +62,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="90" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="91" bodyend="100"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="91" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="92" bodyend="101"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1network__error_1aea9df4dc9dc31277207f4e331faaf026" prot="public" virt="non-virtual"><scope>pars::ev::network_error</scope><name>dir</name></member>
       <member refid="structpars_1_1ev_1_1network__error_1acb9e86f799136b7c42c63913c6abd9c3" prot="public" virt="non-virtual"><scope>pars::ev::network_error</scope><name>error</name></member>

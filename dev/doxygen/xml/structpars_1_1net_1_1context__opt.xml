@@ -17,7 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" line="43" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" bodystart="43" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="58" endline="65">pars::net::context::set_options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="57" endline="64">pars::net::context::set_options</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" prot="public" static="no" mutable="no">
         <type>std::optional&lt; nng_duration &gt;</type>
@@ -32,7 +32,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" line="44" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" bodystart="44" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="58" endline="65">pars::net::context::set_options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="57" endline="64">pars::net::context::set_options</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

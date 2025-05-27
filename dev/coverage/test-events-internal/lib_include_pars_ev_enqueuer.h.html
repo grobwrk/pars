@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">14</td>
@@ -108,7 +108,7 @@
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (dispatcher_m.terminating())</span>
              :       {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        p.close();</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        p.close().or_abort();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return;</span>
              :       }
@@ -132,7 +132,7 @@
              :   }
              : 
              :   template&lt;net::tool_c tool_t&gt;
-             :   void queue_received(nng::msg m, int s_id, tool_t&amp; t, net::pipe p)
+             :   void queue_received(nngxx::msg m, int s_id, tool_t&amp; t, net::pipe p)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    dispatcher_m.queue_back(received{std::move(m), {s_id, t, p}});</span>
              :   }

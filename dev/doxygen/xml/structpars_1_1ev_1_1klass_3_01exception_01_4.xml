@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="143" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="143" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="144" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="144" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1klass_3_01exception_01_4_1a947d1e2fb681777339af05c03b51b345" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>bool</type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="146" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="146" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="147" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="147" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -83,7 +83,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="141" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="142" bodyend="147"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="142" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="143" bodyend="148"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; exception &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; exception &gt;</scope><name>exec_policy</name></member>

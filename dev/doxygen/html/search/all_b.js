@@ -14,7 +14,7 @@ var searchData=
   ['klass_3c_20exception_20_3e_11',['klass&lt; exception &gt;',['../structpars_1_1ev_1_1klass_3_01exception_01_4.html',1,'pars::ev']]],
   ['klass_3c_20init_20_3e_12',['klass&lt; init &gt;',['../structpars_1_1ev_1_1klass_3_01init_01_4.html',1,'pars::ev']]],
   ['klass_3c_20network_5ferror_20_3e_13',['klass&lt; network_error &gt;',['../structpars_1_1ev_1_1klass_3_01network__error_01_4.html',1,'pars::ev']]],
-  ['klass_3c_20nng_3a_3amsg_20_3e_14',['klass&lt; nng::msg &gt;',['../structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20nngxx_3a_3amsg_20_3e_14',['klass&lt; nngxx::msg &gt;',['../structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4.html',1,'pars::ev']]],
   ['klass_3c_20pipe_5fcreated_20_3e_15',['klass&lt; pipe_created &gt;',['../structpars_1_1ev_1_1klass_3_01pipe__created_01_4.html',1,'pars::ev']]],
   ['klass_3c_20pipe_5fremoved_20_3e_16',['klass&lt; pipe_removed &gt;',['../structpars_1_1ev_1_1klass_3_01pipe__removed_01_4.html',1,'pars::ev']]],
   ['klass_3c_20shutdown_20_3e_17',['klass&lt; shutdown &gt;',['../structpars_1_1ev_1_1klass_3_01shutdown_01_4.html',1,'pars::ev']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_5ftype_0',['value_type',['../structstd_1_1hash_3_01value__t_01_4.html#acf1d6ac49dc02f05e2652c5fcc64f214',1,'std::hash&lt; value_t &gt;']]]
+  ['nng_5ftype_0',['nng_type',['../structnngxx_1_1value.html#a71df3cb1aab02062f13578b9d9f985bc',1,'nngxx::value::nng_type'],['../structnngxx_1_1opt__getter.html#a4ea96e6634da74849c89fff7c9841ad3',1,'nngxx::opt_getter::nng_type'],['../structnngxx_1_1opt__setter.html#a3303b101a11cf2e8dd46a42175eeedb3',1,'nngxx::opt_setter::nng_type']]]
 ];

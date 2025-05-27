@@ -65,24 +65,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="49" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="50" bodyend="53"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="48" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="49" bodyend="52"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="func">
-      <memberdef kind="function" id="namespacepars_1_1net_1a3948381dc2d59831b966cfb4361f7eb4" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type>const std::error_category &amp;</type>
-        <definition>static const std::error_category &amp; pars::net::error_category</definition>
-        <argsstring>() noexcept</argsstring>
-        <name>error_category</name>
-        <qualifiedname>pars::net::error_category</qualifiedname>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacepars_1_1net_1ae5981715796cf677d35be33819d52267" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;, <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>)&gt;</type>
+        <definition>using pars::net::cb_f =  std::function&lt;void(clev::expected&lt;void&gt;, nngxx::msg)&gt;</definition>
+        <argsstring></argsstring>
+        <name>cb_f</name>
+        <qualifiedname>pars::net::cb_f</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="41" column="34" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="41" bodyend="54"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="51" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="51" bodyend="-1"/>
       </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">cmode</ref></type>
         <definition>static cmode pars::net::cmode_from_string</definition>
@@ -99,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="55" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="55" bodyend="65"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="54" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="54" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

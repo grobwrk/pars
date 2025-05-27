@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">3</td>
@@ -104,9 +104,9 @@
              : received(event_t, metadata&lt;received, event_t&gt;) -&gt; received&lt;event_t&gt;;
              : 
              : template&lt;&gt;
-             : struct received&lt;nng::msg&gt; : base_kind&lt;received, nng::msg&gt;
+             : struct received&lt;nngxx::msg&gt; : base_kind&lt;received, nngxx::msg&gt;
              : {
-             :   using event_type = nng::msg;
+             :   using event_type = nngxx::msg;
              : 
              :   using base_kind&lt;received, event_type&gt;::base_kind;
              : 

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="79" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="79" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="77" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1push_1a12d135ca6b47a70849a68f290b27f997" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref> &amp;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="80" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="80" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="78" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="78" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -55,9 +55,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="48" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="48" bodyend="52"/>
-        <references refid="classpars_1_1net_1_1push_1a624de566a91546b573341ee254ea6749" compoundref="push_8h" startline="48" endline="52">push</references>
-        <referencedby refid="classpars_1_1net_1_1push_1a624de566a91546b573341ee254ea6749" compoundref="push_8h" startline="48" endline="52">push</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="46" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="46" bodyend="50"/>
+        <references refid="classpars_1_1net_1_1push_1a624de566a91546b573341ee254ea6749" compoundref="push_8h" startline="46" endline="50">push</references>
+        <referencedby refid="classpars_1_1net_1_1push_1a624de566a91546b573341ee254ea6749" compoundref="push_8h" startline="46" endline="50">push</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1push_1a024082bb0f3b84066328976d720dfca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1net_1_1socket" kindref="compound">socket</ref> &amp;</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="55" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="55" bodyend="55"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="53" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="53" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1push_1a71137766af9f8cf0e6e28a24c84c00ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classpars_1_1net_1_1socket" kindref="compound">socket</ref> &amp;</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="58" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="58" bodyend="58"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="56" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="56" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1push_1ad81c586dec8e1f1d8fce0d0f5a1544b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="61" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="61" bodyend="61"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="59" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="59" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -140,8 +140,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="66" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="66" bodyend="69"/>
-        <references refid="classpars_1_1net_1_1push_1a8562c316cb7086e6e8f1bd4b7e5b46ee" compoundref="push_8h" startline="73" endline="76">insert</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="64" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="64" bodyend="67"/>
+        <references refid="classpars_1_1net_1_1push_1a8562c316cb7086e6e8f1bd4b7e5b46ee" compoundref="push_8h" startline="71" endline="74">insert</references>
         <references refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" compoundref="make__hf_8h" startline="58" endline="89">pars::ev::make_hf</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1push_1a8562c316cb7086e6e8f1bd4b7e5b46ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -173,8 +173,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="73" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="73" bodyend="76"/>
-        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="66" endline="69">on</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="71" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="71" bodyend="74"/>
+        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="64" endline="67">on</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -182,7 +182,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="44" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="45" bodyend="81"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/push.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/push.h" bodystart="43" bodyend="79"/>
     <listofallmembers>
       <member refid="classpars_1_1net_1_1push_1a12d135ca6b47a70849a68f290b27f997" prot="private" virt="non-virtual"><scope>pars::net::push</scope><name>hf_registry_m</name></member>
       <member refid="classpars_1_1net_1_1push_1a8562c316cb7086e6e8f1bd4b7e5b46ee" prot="public" virt="non-virtual"><scope>pars::net::push</scope><name>insert</name></member>

@@ -3,11 +3,8 @@
   <compounddef id="namespacefmt" kind="namespace" language="C++">
     <compoundname>fmt</compoundname>
     <innerclass refid="structfmt_1_1formatter_3_01foarmattable__t_01_4" prot="public">fmt::formatter&lt; foarmattable_t &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1error_01_4" prot="public">fmt::formatter&lt; nng::error &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1exception_01_4" prot="public">fmt::formatter&lt; nng::exception &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1msg_01_4" prot="public">fmt::formatter&lt; nng::msg &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1pipe__view_01_4" prot="public">fmt::formatter&lt; nng::pipe_view &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01nng_1_1view_01_4" prot="public">fmt::formatter&lt; nng::view &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4" prot="public">fmt::formatter&lt; nngxx::msg &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4" prot="public">fmt::formatter&lt; nngxx::pipe_view &gt;</innerclass>
     <innerclass refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4" prot="public">fmt::formatter&lt; std::chrono::system_clock::time_point &gt;</innerclass>
     <innerclass refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4" prot="public">fmt::formatter&lt; std::error_code &gt;</innerclass>
     <innerclass refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" prot="public">fmt::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;</innerclass>

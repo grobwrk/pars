@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['out_0',['out',['../namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275',1,'pars::net']]]
+  ['maxttl_0',['maxttl',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518eba048f3b86c37f62194df6002278fb8ead',1,'nngxx']]],
+  ['msgsize_1',['msgsize',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108afd864c5303e342cd062d0479af2ee92b',1,'nngxx']]]
 ];

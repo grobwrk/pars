@@ -134,7 +134,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html">   43</a></span><span class="keyword">struct </span>fmt::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::chrono::system_clock::time_point&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html">   43</a></span><span class="keyword">struct </span>fmt::formatter&lt;std::chrono::system_clock::time_point&gt;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  : fmt::formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
 <div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
@@ -154,7 +154,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1error__code_01_4.html">   59</a></span><span class="keyword">struct </span>fmt::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::error_code&gt; : fmt::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1error__code_01_4.html">   59</a></span><span class="keyword">struct </span>fmt::formatter&lt;std::error_code&gt; : fmt::formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1error__code_01_4.html#a14de78e3d7774edb38f94cc3443296bc">   61</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01std_1_1error__code_01_4.html#a14de78e3d7774edb38f94cc3443296bc">format</a>(<span class="keyword">const</span> std::error_code&amp; e, fmt::format_context&amp; ctx) <span class="keyword">const</span></div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">template</span>&lt;pars::ev::event_c event_t&gt;</div>
 <div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html">   69</a></span><span class="keyword">struct </span>fmt::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::shared_ptr&lt;event_t&gt;&gt; : fmt::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html">   69</a></span><span class="keyword">struct </span>fmt::formatter&lt;std::shared_ptr&lt;event_t&gt;&gt; : fmt::formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
 <div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ad49b073560bba2973d1c5ecd5a505465">   71</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ad49b073560bba2973d1c5ecd5a505465">format</a>(<span class="keyword">const</span> std::shared_ptr&lt;event_t&gt;&amp; x, fmt::format_context&amp; ctx) <span class="keyword">const</span></div>
@@ -184,7 +184,6 @@ $(function(){ initResizable(false); });
 </div>
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
 <div class="ttc" id="alib_2include_2pars_2ev_2event_8h_html"><div class="ttname"><a href="lib_2include_2pars_2ev_2event_8h.html">event.h</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="err_8h_source.html#l00058">err.h:59</a></div></div>
 <div class="ttc" id="astructfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_html_a7e1468a01134bb9df7dd5f500d617280"><div class="ttname"><a href="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#a7e1468a01134bb9df7dd5f500d617280">fmt::formatter&lt; std::chrono::system_clock::time_point &gt;::format</a></div><div class="ttdeci">auto format(const std::chrono::system_clock::time_point &amp;t, fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00046">stl.h:46</a></div></div>
 <div class="ttc" id="astructfmt_1_1formatter_3_01std_1_1error__code_01_4_html_a14de78e3d7774edb38f94cc3443296bc"><div class="ttname"><a href="structfmt_1_1formatter_3_01std_1_1error__code_01_4.html#a14de78e3d7774edb38f94cc3443296bc">fmt::formatter&lt; std::error_code &gt;::format</a></div><div class="ttdeci">auto format(const std::error_code &amp;e, fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00061">stl.h:61</a></div></div>
 <div class="ttc" id="astructfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_html_ad49b073560bba2973d1c5ecd5a505465"><div class="ttname"><a href="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ad49b073560bba2973d1c5ecd5a505465">fmt::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;::format</a></div><div class="ttdeci">auto format(const std::shared_ptr&lt; event_t &gt; &amp;x, fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00071">stl.h:71</a></div></div>

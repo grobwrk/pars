@@ -3,7 +3,7 @@
   <compounddef id="context__opt_8h" kind="file" language="C++">
     <compoundname>context_opt.h</compoundname>
     <includes refid="init_8h" local="yes">pars/init.h</includes>
-    <includes local="no">nngpp/core.h</includes>
+    <includes local="no">nng/nng.h</includes>
     <includes local="no">optional</includes>
     <includedby refid="context_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/context.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
@@ -21,9 +21,9 @@
         <link refid="context__opt_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -33,9 +33,6 @@
         <label>nng/nng.h</label>
       </node>
       <node id="5">
-        <label>nngpp/core.h</label>
-      </node>
-      <node id="6">
         <label>optional</label>
       </node>
     </incdepgraph>
@@ -166,7 +163,7 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>

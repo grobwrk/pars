@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['handler_5ff_0',['handler_f',['../namespacepars_1_1ev.html#a775df579549c610e3e2c8dae429f129c',1,'pars::ev']]],
-  ['hf_5farg_1',['hf_arg',['../namespacepars_1_1ev.html#ada8ba2faa8e8f8b6a385eb2156e52613',1,'pars::ev']]]
+  ['dialer_0',['dialer',['../namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042',1,'nngxx']]],
+  ['dialer_5fview_1',['dialer_view',['../namespacenngxx.html#a8256ea641b01c93a4617051a9946801b',1,'nngxx']]]
 ];

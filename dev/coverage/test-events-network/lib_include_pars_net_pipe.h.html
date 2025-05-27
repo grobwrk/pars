@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">7</td>
@@ -66,16 +66,17 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/pipe.h&quot;
+             : #include &quot;nngxx/socket.h&quot;
+             : 
              : #include &quot;pars/fmt/nng.h&quot;
              : 
              : #include &lt;fmt/format.h&gt;
-             : #include &lt;nngpp/pipe_view.h&gt;
-             : #include &lt;nngpp/socket_view.h&gt;
              : 
              : namespace pars::net
              : {
              : 
-             : class pipe : public nng::pipe_view
+             : class pipe : public nngxx::pipe_view
              : {
              : public:
              :   pipe()
@@ -84,8 +85,8 @@
              :   {
              :   }
              : 
-             :   pipe(nng::pipe_view pv) noexcept
-             :     : nng::pipe_view{pv.get()}
+             :   pipe(nngxx::pipe_view&amp; pv) noexcept
+             :     : nngxx::pipe_view{pv}
              :     , id_m{pv.id()}
              :     , socket_id_m{pv.get_socket().id()}
              :   {
@@ -95,13 +96,12 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return socket_id_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   operator bool() <span class="lineNoCov">{ return nng::pipe_view::operator bool(); }</span>
-             : 
-<span class="lineNoCov">      0 / 1 </span> :   void close() const noexcept <span class="lineNoCov">{ nng_pipe_close(p); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   operator bool() <span class="lineNoCov">{ return nngxx::pipe_view::operator bool(); }</span>
              : 
              :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{}&quot;, static_cast&lt;nng::pipe_view&gt;(*this));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{}&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          static_cast&lt;nngxx::pipe_view&gt;(*this));</span>
              :   }
              : 
              : private:

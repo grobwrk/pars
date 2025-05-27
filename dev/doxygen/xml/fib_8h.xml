@@ -14,13 +14,13 @@
         <link refid="fib_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -31,8 +31,6 @@
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -52,28 +50,25 @@
       <node id="6">
         <label>chrono</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>concepts</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>cstdint</label>
       </node>
       <node id="5">
         <label>nng/nng.h</label>
       </node>
-      <node id="7">
-        <label>nngpp/msg.h</label>
-      </node>
-      <node id="11">
+      <node id="10">
         <label>optional</label>
       </node>
-      <node id="12">
+      <node id="11">
         <label>stdexcept</label>
       </node>
-      <node id="13">
+      <node id="12">
         <label>stop_token</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>string_view</label>
       </node>
     </incdepgraph>
@@ -141,7 +136,7 @@
 <codeline lineno="42" refid="structpars__example_1_1compute_1_1stop__requested" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" kindref="member">stop_requested</ref><sp/>:<sp/>std::runtime_error</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="44" refid="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" kindref="member">stop_requested</ref>()</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="namespacestd" kindref="compound">std</ref>::runtime_error(</highlight><highlight class="stringliteral">&quot;Stop<sp/>requested!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Stop<sp/>requested!&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">};</highlight></codeline>

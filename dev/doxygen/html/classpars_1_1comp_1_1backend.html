@@ -217,8 +217,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00075">75</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   76</span>  {</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;[rep:{}]&quot;</span>, rep_m.sock());</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> fmt::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;[rep:{}]&quot;</span>, rep_m.sock());</div>
 <div class="line"><span class="lineno">   78</span>  }</div>
+<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -275,7 +276,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00053">53</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>  {</div>
-<div class="line"><span class="lineno">   55</span>    rep_m.sock().options(params.rep_opts);</div>
+<div class="line"><span class="lineno">   55</span>    rep_m.sock().set_options(params.rep_opts);</div>
 <div class="line"><span class="lineno">   56</span> </div>
 <div class="line"><span class="lineno">   57</span>    rep_m.ctxs().start_recv(params.num_ctxs);</div>
 <div class="line"><span class="lineno">   58</span>  }</div>

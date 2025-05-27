@@ -19,7 +19,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="51" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="51" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1aff1b8fae37edaa56bfafa6800db0079b" compoundref="socket_8h" startline="85" endline="98">pars::net::socket::options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="97">pars::net::socket::set_options</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" prot="public" static="no" mutable="no">
         <type>std::optional&lt; nng_duration &gt;</type>
@@ -35,7 +35,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="52" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="52" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1aff1b8fae37edaa56bfafa6800db0079b" compoundref="socket_8h" startline="85" endline="98">pars::net::socket::options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="97">pars::net::socket::set_options</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -54,7 +54,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="56" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="56" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1aff1b8fae37edaa56bfafa6800db0079b" compoundref="socket_8h" startline="85" endline="98">pars::net::socket::options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="97">pars::net::socket::set_options</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" prot="public" static="no" mutable="no">
         <type>std::optional&lt; nng_duration &gt;</type>
@@ -70,7 +70,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="57" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="57" bodyend="-1"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1aff1b8fae37edaa56bfafa6800db0079b" compoundref="socket_8h" startline="85" endline="98">pars::net::socket::options</referencedby>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="97">pars::net::socket::set_options</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

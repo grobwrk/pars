@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="86" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="86" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="87" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -68,7 +68,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="84" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="85" bodyend="88"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="85" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="86" bodyend="89"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; pipe_removed &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; pipe_removed &gt;</scope><name>exec_policy</name></member>

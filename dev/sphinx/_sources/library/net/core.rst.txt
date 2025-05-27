@@ -17,7 +17,7 @@ Core
 
 .. doxygenclass:: pars::net::tool_view
 
-.. doxygentypedef:: nng::cb_f
+.. doxygentypedef:: nngxx::cb_f
 
 .. doxygenenum:: pars::net::cmode
 

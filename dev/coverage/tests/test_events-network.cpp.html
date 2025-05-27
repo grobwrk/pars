@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">26</td>
+                     <td class="headerValue" width="10%">28</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
                    <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">26</td>
+                     <td class="headerValue" width="10%">28</td>
                    </tr>
                  </table>
                </td>
@@ -74,7 +74,7 @@
              : {
              : 
              : using NetworkEvents =
-             :   ::testing::Types&lt;nng::msg, ev::network_error, ev::creating_pipe,
+             :   ::testing::Types&lt;nngxx::msg, ev::network_error, ev::creating_pipe,
              :                    ev::pipe_created, ev::pipe_removed&gt;;
              : 
              : template&lt;typename event_t&gt;
@@ -110,11 +110,12 @@
            5</span> :   <span class="lineCov">if (std::default_initializable&lt;event_type&gt;)</span>
              :   {
              :     // we can instantiate event_type{} without specifing the type event_type
-           5</span> : <span class="lineCov">    ev::fired{event_type{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">    ev::fired{event_type{},</span>
+           5</span> : <span class="lineCov">              {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              : 
              :     // we can instantiate specifing the type event_type
            5</span> : <span class="lineCov">    ev::fired&lt;event_type&gt;{{},</span>
-           5</span> : <span class="lineCov">                          {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">                          {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              :   }
              : }
              : 
@@ -129,10 +130,11 @@
            5</span> :   <span class="lineCov">if (std::default_initializable&lt;event_type&gt;)</span>
              :   {
              :     // we can instantiate event_type{} without specifing the type event_type
-           5</span> : <span class="lineCov">    ev::sent{event_type{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">    ev::sent{event_type{}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              : 
              :     // we can instantiate specifing the type event_type
-           5</span> : <span class="lineCov">    ev::sent&lt;event_type&gt;{{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">    ev::sent&lt;event_type&gt;{{},</span>
+           5</span> : <span class="lineCov">                         {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              :   }
              : }
              : 
@@ -149,11 +151,11 @@
              :   {
              :     // we can instantiate event_type{} without specifing the type event_type
            5</span> : <span class="lineCov">    ev::received{event_type{},</span>
-           5</span> : <span class="lineCov">                 {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">                 {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              : 
              :     // we can instantiate specifing the type event_type
-           5</span> : <span class="lineCov">    ev::received&lt;event_type&gt;{{},</span>
-           5</span> : <span class="lineCov">                             {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};</span>
+           5</span> : <span class="lineCov">    ev::received&lt;event_type&gt;{</span>
+           5</span> : <span class="lineCov">      {}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
              :   }
              : }
              : 

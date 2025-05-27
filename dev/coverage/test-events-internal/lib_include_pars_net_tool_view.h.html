@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -68,9 +68,10 @@
              : 
              : #include &quot;pars/init.h&quot;
              : 
+             : #include &quot;nngxx/ctx.h&quot;
+             : #include &quot;nngxx/socket.h&quot;
+             : 
              : #include &lt;fmt/format.h&gt;
-             : #include &lt;nngpp/ctx_view.h&gt;
-             : #include &lt;nngpp/socket_view.h&gt;
              : 
              : #include &lt;typeinfo&gt;
              : #include &lt;variant&gt;
@@ -85,13 +86,13 @@
              : {
              : public:
              :   /// Construct a tool_view from an nng_ctx view
-             :   explicit tool_view(nng::ctx_view c)
+             :   explicit tool_view(nngxx::ctx_view c)
              :     : tool_m{c}
              :   {
              :   }
              : 
              :   /// Construct a tool_view from an nng_socket view
-             :   explicit tool_view(nng::socket_view s)
+             :   explicit tool_view(nngxx::socket_view s)
              :     : tool_m{s}
              :   {
              :   }
@@ -119,7 +120,7 @@
              : 
              : private:
              :   /// The underlying variant that represents either an nng_socket or nng_ctx
-             :   const std::variant&lt;nng::ctx_view, nng::socket_view&gt; tool_m;
+             :   const std::variant&lt;nngxx::ctx_view, nngxx::socket_view&gt; tool_m;
              : };
              : 
              : } // namespace pars::net

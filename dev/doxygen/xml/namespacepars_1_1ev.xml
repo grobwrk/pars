@@ -27,7 +27,7 @@
     <innerclass refid="structpars_1_1ev_1_1klass_3_01exception_01_4" prot="public">pars::ev::klass&lt; exception &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01init_01_4" prot="public">pars::ev::klass&lt; init &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01network__error_01_4" prot="public">pars::ev::klass&lt; network_error &gt;</innerclass>
-    <innerclass refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4" prot="public">pars::ev::klass&lt; nng::msg &gt;</innerclass>
+    <innerclass refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4" prot="public">pars::ev::klass&lt; nngxx::msg &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01pipe__created_01_4" prot="public">pars::ev::klass&lt; pipe_created &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01pipe__removed_01_4" prot="public">pars::ev::klass&lt; pipe_removed &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4" prot="public">pars::ev::klass&lt; shutdown &gt;</innerclass>
@@ -42,7 +42,7 @@
     <innerclass refid="structpars_1_1ev_1_1pipe__removed" prot="public">pars::ev::pipe_removed</innerclass>
     <innerclass refid="structpars_1_1ev_1_1received" prot="public">pars::ev::received</innerclass>
     <innerclass refid="structpars_1_1ev_1_1received_3_01event__t_01_4" prot="public">pars::ev::received&lt; event_t &gt;</innerclass>
-    <innerclass refid="structpars_1_1ev_1_1received_3_01nng_1_1msg_01_4" prot="public">pars::ev::received&lt; nng::msg &gt;</innerclass>
+    <innerclass refid="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4" prot="public">pars::ev::received&lt; nngxx::msg &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1runner" prot="public">pars::ev::runner</innerclass>
     <innerclass refid="structpars_1_1ev_1_1sent" prot="public">pars::ev::sent</innerclass>
     <innerclass refid="structpars_1_1ev_1_1sent_3_01event__t_01_4" prot="public">pars::ev::sent&lt; event_t &gt;</innerclass>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" bodystart="43" bodyend="46"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="40" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" bodystart="41" bodyend="44"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -207,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="111" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="111" bodyend="117"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="110" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="110" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1_1ev_1ac84637ef36e6c43e0f0fda9b9c55440e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="121" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="121" bodyend="127"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="120" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="120" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1_1ev_1aa9008ca4ace86f33edb3a0eefd008e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -361,16 +361,16 @@
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" line="58" column="11" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" bodystart="58" bodyend="89"/>
         <referencedby refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" compoundref="hf__registry_8h" startline="73" endline="76">pars::ev::hf_registry::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1pull_1a50522b569091475731c03c4bf0c7e09d" compoundref="pull_8h" startline="67" endline="70">pars::net::pull::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="66" endline="69">pars::net::push::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1rep_1a377c054cdfc47674f4b67f752b1fd3af" compoundref="rep_8h" startline="77" endline="80">pars::net::rep::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1req_1a6a931f98c4697d7cdab14d5bf8afefd0" compoundref="req_8h" startline="77" endline="80">pars::net::req::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1pull_1a50522b569091475731c03c4bf0c7e09d" compoundref="pull_8h" startline="65" endline="68">pars::net::pull::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="64" endline="67">pars::net::push::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1rep_1a377c054cdfc47674f4b67f752b1fd3af" compoundref="rep_8h" startline="75" endline="78">pars::net::rep::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1req_1a6a931f98c4697d7cdab14d5bf8afefd0" compoundref="req_8h" startline="75" endline="78">pars::net::req::on</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="39" column="1"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="37" column="1"/>
   </compounddef>
 </doxygen>

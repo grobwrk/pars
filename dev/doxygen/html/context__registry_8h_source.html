@@ -122,49 +122,49 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="context_8h.html">pars/net/context.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="socket_8h.html">pars/net/socket.h</a>&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="tool__view_8h.html">pars/net/tool_view.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;tuple&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html">   42</a></span><span class="keyword">class </span><a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">context_registry</a></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">   45</a></span>  <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">context_registry</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, <a class="code hl_class" href="classpars_1_1net_1_1socket.html">net::socket</a>&amp; s)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    : router_m{r}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    , sock_m{s}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="ctx_8h.html">nngxx/ctx.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="context_8h.html">pars/net/context.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="pars_2net_2socket_8h.html">pars/net/socket.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="tool__view_8h.html">pars/net/tool_view.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html">   44</a></span><span class="keyword">class </span><a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">context_registry</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">   47</a></span>  <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">context_registry</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, <a class="code hl_class" href="classpars_1_1net_1_1socket.html">net::socket</a>&amp; s)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    : router_m{r}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    , sock_m{s}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">   51</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">stop_all</a>()</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : ctx_map_m)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      c.second.stop();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">   53</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">stop_all</a>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : ctx_map_m)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      c.second.stop();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#af4ffa0b9a6c2329ef554a61edc3a8286">   57</a></span>  <span class="keyword">auto</span>&amp; <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#af4ffa0b9a6c2329ef554a61edc3a8286">emplace</a>()</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">auto</span> ctx = sock_m.make_ctx();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span> <span class="keywordtype">id</span> = ctx.id();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#a9d299ee8680f9f78d7d9a0beceef5a3a">   59</a></span>  <a class="code hl_class" href="classpars_1_1net_1_1context.html">context</a>&amp; <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#a9d299ee8680f9f78d7d9a0beceef5a3a">emplace</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span> ctx = sock_m.make_ctx();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> res = ctx_map_m.emplace(</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      std::piecewise_construct, std::forward_as_tuple(<span class="keywordtype">id</span>),</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      std::forward_as_tuple(router_m, std::move(ctx), sock_m));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> <span class="keywordtype">id</span> = ctx.id();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> res = ctx_map_m.try_emplace(<span class="keywordtype">id</span>, router_m, std::move(ctx), sock_m);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (!res.second)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">throw</span> <span class="keyword">new</span> std::runtime_error(<span class="stringliteral">&quot;Unable to emplace a context&quot;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unable to emplace a context&quot;</span>);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> res.first-&gt;second;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
@@ -173,11 +173,11 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#abb67afe058583427c71128533cd5cb42">   73</a></span>  <a class="code hl_class" href="classpars_1_1net_1_1context.html">context</a>&amp; <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#abb67afe058583427c71128533cd5cb42">of</a>(<span class="keyword">const</span> <a class="code hl_class" href="classpars_1_1net_1_1tool__view.html">net::tool_view</a>&amp; t)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a7b40907d5e853b77bcef640d7cde034b">type</a>() != <span class="keyword">typeid</span>(nng::ctx_view))</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">throw</span> <span class="keyword">new</span> std::runtime_error(<span class="stringliteral">&quot;We need a context here&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">if</span> (t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a7b40907d5e853b77bcef640d7cde034b">type</a>() != <span class="keyword">typeid</span>(<a class="code hl_typedef" href="namespacenngxx.html#ab5475443c737a2ce5ca5023d845ba66f">nngxx::ctx_view</a>))</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;We need a context here&quot;</span>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (ctx_map_m.find(t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">id</a>()) == ctx_map_m.end())</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">throw</span> <span class="keyword">new</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Unknown context {}&quot;</span>, t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">id</a>()));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Unknown context {}&quot;</span>, t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">id</a>()));</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> ctx_map_m.at(t.<a class="code hl_function" href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">id</a>());</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
@@ -187,7 +187,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context__registry.html#a15cd11ff729311912777eded34907288">   84</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#a15cd11ff729311912777eded34907288">start_recv</a>(<span class="keywordtype">int</span> num_ctxs)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_ctxs; ++i)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#af4ffa0b9a6c2329ef554a61edc3a8286">emplace</a>().recv();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_function" href="classpars_1_1net_1_1context__registry.html#a9d299ee8680f9f78d7d9a0beceef5a3a">emplace</a>().<a class="code hl_function" href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">recv</a>();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
 </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
@@ -201,18 +201,21 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>} <span class="comment">// namespace pars::net</span></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html">pars::ev::enqueuer</a></div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00042">enqueuer.h:43</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_a15cd11ff729311912777eded34907288"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#a15cd11ff729311912777eded34907288">pars::net::context_registry::start_recv</a></div><div class="ttdeci">void start_recv(int num_ctxs)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">context_registry.h:84</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_a33dc46a66145476a2efbdfbcc58a772b"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">pars::net::context_registry::stop_all</a></div><div class="ttdeci">void stop_all()</div><div class="ttdef"><b>Definition</b> <a href="#l00051">context_registry.h:51</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_a33dc46a66145476a2efbdfbcc58a772b"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#a33dc46a66145476a2efbdfbcc58a772b">pars::net::context_registry::stop_all</a></div><div class="ttdeci">void stop_all()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">context_registry.h:53</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_a9d299ee8680f9f78d7d9a0beceef5a3a"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#a9d299ee8680f9f78d7d9a0beceef5a3a">pars::net::context_registry::emplace</a></div><div class="ttdeci">context &amp; emplace()</div><div class="ttdef"><b>Definition</b> <a href="#l00059">context_registry.h:59</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_abb67afe058583427c71128533cd5cb42"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#abb67afe058583427c71128533cd5cb42">pars::net::context_registry::of</a></div><div class="ttdeci">context &amp; of(const net::tool_view &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="#l00073">context_registry.h:73</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_ac0ed0f395e588f201dac1a3454b3909f"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">pars::net::context_registry::context_registry</a></div><div class="ttdeci">context_registry(ev::enqueuer &amp;r, net::socket &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">context_registry.h:45</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_af4ffa0b9a6c2329ef554a61edc3a8286"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#af4ffa0b9a6c2329ef554a61edc3a8286">pars::net::context_registry::emplace</a></div><div class="ttdeci">auto &amp; emplace()</div><div class="ttdef"><b>Definition</b> <a href="#l00057">context_registry.h:57</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1context_html"><div class="ttname"><a href="classpars_1_1net_1_1context.html">pars::net::context</a></div><div class="ttdef"><b>Definition</b> <a href="context_8h_source.html#l00044">context.h:45</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1socket_html"><div class="ttname"><a href="classpars_1_1net_1_1socket.html">pars::net::socket</a></div><div class="ttdoc">Represents an nng_socket.</div><div class="ttdef"><b>Definition</b> <a href="socket_8h_source.html#l00070">socket.h:71</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html">pars::net::tool_view</a></div><div class="ttdoc">Represents an nng_socket or nng_ctx view.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00047">tool_view.h:48</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html_a19c28d6711327852e90fd486d37efd7a"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">pars::net::tool_view::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">The id of the underlying variant.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00072">tool_view.h:72</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html_a7b40907d5e853b77bcef640d7cde034b"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html#a7b40907d5e853b77bcef640d7cde034b">pars::net::tool_view::type</a></div><div class="ttdeci">const std::type_info &amp; type() const</div><div class="ttdoc">Get the std::type_info of the underlying variant.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00063">tool_view.h:63</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_ac0ed0f395e588f201dac1a3454b3909f"><div class="ttname"><a href="classpars_1_1net_1_1context__registry.html#ac0ed0f395e588f201dac1a3454b3909f">pars::net::context_registry::context_registry</a></div><div class="ttdeci">context_registry(ev::enqueuer &amp;r, net::socket &amp;s)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">context_registry.h:47</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context_html"><div class="ttname"><a href="classpars_1_1net_1_1context.html">pars::net::context</a></div><div class="ttdef"><b>Definition</b> <a href="context_8h_source.html#l00043">context.h:44</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context_html_a50de22a87a21f5c8070be3276bb8ff51"><div class="ttname"><a href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">pars::net::context::recv</a></div><div class="ttdeci">void recv()</div><div class="ttdef"><b>Definition</b> <a href="context_8h_source.html#l00082">context.h:82</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1socket_html"><div class="ttname"><a href="classpars_1_1net_1_1socket.html">pars::net::socket</a></div><div class="ttdoc">Represents an nng_socket.</div><div class="ttdef"><b>Definition</b> <a href="pars_2net_2socket_8h_source.html#l00069">socket.h:70</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html">pars::net::tool_view</a></div><div class="ttdoc">Represents an nng_socket or nng_ctx view.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00048">tool_view.h:49</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html_a19c28d6711327852e90fd486d37efd7a"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html#a19c28d6711327852e90fd486d37efd7a">pars::net::tool_view::id</a></div><div class="ttdeci">int id() const</div><div class="ttdoc">The id of the underlying variant.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00073">tool_view.h:73</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1tool__view_html_a7b40907d5e853b77bcef640d7cde034b"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html#a7b40907d5e853b77bcef640d7cde034b">pars::net::tool_view::type</a></div><div class="ttdeci">const std::type_info &amp; type() const</div><div class="ttdoc">Get the std::type_info of the underlying variant.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00064">tool_view.h:64</a></div></div>
 <div class="ttc" id="acontext_8h_html"><div class="ttname"><a href="context_8h.html">context.h</a></div></div>
+<div class="ttc" id="actx_8h_html"><div class="ttname"><a href="ctx_8h.html">ctx.h</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_ab5475443c737a2ce5ca5023d845ba66f"><div class="ttname"><a href="namespacenngxx.html#ab5475443c737a2ce5ca5023d845ba66f">nngxx::ctx_view</a></div><div class="ttdeci">clev::iface&lt; nng_ctx &gt; ctx_view</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00037">ctx.h:37</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
-<div class="ttc" id="asocket_8h_html"><div class="ttname"><a href="socket_8h.html">socket.h</a></div></div>
+<div class="ttc" id="apars_2net_2socket_8h_html"><div class="ttname"><a href="pars_2net_2socket_8h.html">socket.h</a></div></div>
 <div class="ttc" id="atool__view_8h_html"><div class="ttname"><a href="tool__view_8h.html">tool_view.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

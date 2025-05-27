@@ -66,7 +66,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" line="61" column="29" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" bodystart="61" bodyend="64"/>
-        <references refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" compoundref="lib_2include_2pars_2concept_2event_8h" startline="44">pars::ev::sync</references>
+        <references refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" compoundref="lib_2include_2pars_2concept_2event_8h" startline="42">pars::ev::sync</references>
         <referencedby refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" compoundref="example_2event_8h" startline="94" endline="100">pars::ev::klass&lt;::pars_example::event::fib_requested &gt;::exec_policy</referencedby>
       </memberdef>
     </sectiondef>

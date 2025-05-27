@@ -3,9 +3,9 @@
   <compounddef id="tool__view_8h" kind="file" language="C++">
     <compoundname>tool_view.h</compoundname>
     <includes refid="init_8h" local="yes">pars/init.h</includes>
+    <includes refid="ctx_8h" local="yes">nngxx/ctx.h</includes>
+    <includes refid="nngxx_2socket_8h" local="yes">nngxx/socket.h</includes>
     <includes local="no">fmt/format.h</includes>
-    <includes local="no">nngpp/ctx_view.h</includes>
-    <includes local="no">nngpp/socket_view.h</includes>
     <includes local="no">typeinfo</includes>
     <includes local="no">variant</includes>
     <includedby refid="net_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/concept/net.h</includedby>
@@ -13,6 +13,212 @@
     <includedby refid="context__registry_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
     <incdepgraph>
+      <node id="10">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="15">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>clev/value.h</label>
+        <link refid="clev_2value_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>nngxx/aio.h</label>
+        <link refid="aio_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nngxx/ctx.h</label>
+        <link refid="ctx_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>nngxx/iface/aio.h</label>
+        <link refid="iface_2aio_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nngxx/iface/ctx.h</label>
+        <link refid="iface_2ctx_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>nngxx/iface/socket.h</label>
+        <link refid="nngxx_2iface_2socket_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>nngxx/socket.h</label>
+        <link refid="nngxx_2socket_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>pars/init.h</label>
         <link refid="init_8h"/>
@@ -28,34 +234,52 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>chrono</label>
       </node>
-      <node id="5">
+      <node id="18">
+        <label>concepts</label>
+      </node>
+      <node id="12">
+        <label>expected</label>
+      </node>
+      <node id="11">
         <label>fmt/format.h</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
       </node>
-      <node id="6">
-        <label>nngpp/ctx_view.h</label>
+      <node id="32">
+        <label>nng/protocol/pipeline0/pull.h</label>
       </node>
-      <node id="7">
-        <label>nngpp/socket_view.h</label>
+      <node id="33">
+        <label>nng/protocol/pipeline0/push.h</label>
       </node>
-      <node id="8">
+      <node id="34">
+        <label>nng/protocol/reqrep0/rep.h</label>
+      </node>
+      <node id="21">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="24">
+        <label>type_traits</label>
+      </node>
+      <node id="35">
         <label>typeinfo</label>
       </node>
-      <node id="9">
+      <node id="36">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -294,7 +518,7 @@
       </node>
       <node id="17">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
@@ -372,51 +596,52 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/ctx_view.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/socket_view.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="classpars_1_1net_1_1tool__view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1net_1_1tool__view_1abfe7c0308303cadb349a60fccca5c0da" kindref="member">tool_view</ref></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="51" refid="classpars_1_1net_1_1tool__view_1abfe7c0308303cadb349a60fccca5c0da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1abfe7c0308303cadb349a60fccca5c0da" kindref="member">tool_view</ref>(nng::ctx_view<sp/>c)</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>tool_m{c}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="classpars_1_1net_1_1tool__view_1adc5826f8d75e3bfd03c8e50a73f926e4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1adc5826f8d75e3bfd03c8e50a73f926e4" kindref="member">tool_view</ref>(nng::socket_view<sp/>s)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>tool_m{s}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info&amp;<sp/><ref refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" kindref="member">type</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="64"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::ref(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(t));<sp/>},<sp/>tool_m);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tool_m.index()<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Context&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Socket&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="73"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t.id();<sp/>},<sp/>tool_m);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}<sp/>#{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>(),<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">());</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::variant&lt;nng::ctx_view,<sp/>nng::socket_view&gt;<sp/>tool_m;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ctx_8h" kindref="compound">nngxx/ctx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2socket_8h" kindref="compound">nngxx/socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classpars_1_1net_1_1tool__view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" kindref="member">tool_view</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" kindref="member">tool_view</ref>(<ref refid="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" kindref="member">nngxx::ctx_view</ref><sp/>c)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>tool_m{c}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" kindref="member">tool_view</ref>(<ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">nngxx::socket_view</ref><sp/>s)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>tool_m{s}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info&amp;<sp/><ref refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" kindref="member">type</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::ref(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(t));<sp/>},<sp/>tool_m);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tool_m.index()<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Context&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Socket&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="74"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t.id();<sp/>},<sp/>tool_m);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}<sp/>#{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>(),<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::variant&lt;nngxx::ctx_view,<sp/>nngxx::socket_view&gt;<sp/>tool_m;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h"/>
   </compounddef>

@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-internal - [...]/lib/include/nngxx/err.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-internal</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">12</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;clev/err.h&quot;
+             : 
+             : #include &lt;fmt/format.h&gt;
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : #include &lt;expected&gt;
+             : 
+             : namespace nngxx
+             : {
+             : 
+             : enum class err : int;
+             : 
+             : [[nodiscard]] inline static const std::error_category&amp; error_category() noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  static struct : std::error_category</span>
+             :   {
+<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;nngxx&quot;; }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    virtual std::string message(int e) const override</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return nng_strerror(e);</span>
+             :     }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  } error_category;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return error_category;</span>
+             : }
+             : 
+             : [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), error_category());</span>
+             : }
+             : 
+             : } // namespace nngxx
+             : 
+             : template&lt;&gt;
+             : struct std::is_error_code_enum&lt;nngxx::err&gt; : std::true_type
+             : {
+             : };
+             : 
+             : namespace nngxx
+             : {
+             : 
+             : enum class err
+             : {
+             :   success = 0,
+             :   intr = NNG_EINTR,
+             :   nomem = NNG_ENOMEM,
+             :   inval = NNG_EINVAL,
+             :   busy = NNG_EBUSY,
+             :   timedout = NNG_ETIMEDOUT,
+             :   connrefused = NNG_ECONNREFUSED,
+             :   closed = NNG_ECLOSED,
+             :   again = NNG_EAGAIN,
+             :   notsup = NNG_ENOTSUP,
+             :   addrinuse = NNG_EADDRINUSE,
+             :   state = NNG_ESTATE,
+             :   noent = NNG_ENOENT,
+             :   proto = NNG_EPROTO,
+             :   unreachable = NNG_EUNREACHABLE,
+             :   addrinval = NNG_EADDRINVAL,
+             :   perm = NNG_EPERM,
+             :   msgsize = NNG_EMSGSIZE,
+             :   connaborted = NNG_ECONNABORTED,
+             :   connreset = NNG_ECONNRESET,
+             :   canceled = NNG_ECANCELED,
+             :   nofiles = NNG_ENOFILES,
+             :   nospc = NNG_ENOSPC,
+             :   exist = NNG_EEXIST,
+             :   readonly = NNG_EREADONLY,
+             :   writeonly = NNG_EWRITEONLY,
+             :   crypto = NNG_ECRYPTO,
+             :   peerauth = NNG_EPEERAUTH,
+             :   noarg = NNG_ENOARG,
+             :   ambiguous = NNG_EAMBIGUOUS,
+             :   badtype = NNG_EBADTYPE,
+             :   connshut = NNG_ECONNSHUT,
+             :   internal = NNG_EINTERNAL,
+             :   syserr = NNG_ESYSERR,
+             :   tranerr = NNG_ETRANERR
+             : };
+             : 
+             : template&lt;typename ret_t, typename arg_t, typename... args_t&gt;
+             : [[nodiscard]] inline clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;&gt;
+             : make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::remove_pointer_t&lt;arg_t&gt; x;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return clev::make_expected&lt;err&gt;(f(&amp;x, args...)).transform_to(std::move(x));</span>
+             : }
+             : 
+             : template&lt;typename ret_t, typename... args_t&gt;
+             : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
+             :                                                  args_t... args) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return clev::make_expected&lt;err&gt;(f(args...));</span>
+             : }
+             : 
+             : template&lt;typename... args_t&gt;
+             : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(void (*f)(args_t...),
+             :                                                  args_t... args) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  f(args...);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
+             : }
+             : 
+             : } // namespace nngxx
+             : 
+             : static_assert(std::convertible_to&lt;nngxx::err, std::error_code&gt;);
+             : 
+             : static_assert(std::constructible_from&lt;std::error_code, nngxx::err&gt;);
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

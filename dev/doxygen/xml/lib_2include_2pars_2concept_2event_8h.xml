@@ -3,7 +3,6 @@
   <compounddef id="lib_2include_2pars_2concept_2event_8h" kind="file" language="C++">
     <compoundname>event.h</compoundname>
     <includes refid="kind__decl_8h" local="yes">pars/ev/kind_decl.h</includes>
-    <includes local="no">nngpp/msg.h</includes>
     <includes local="no">concepts</includes>
     <includes local="no">string_view</includes>
     <includedby refid="fib_8h" local="no">/home/runner/work/pars/pars/example/fib.h</includedby>
@@ -24,8 +23,6 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>pars/ev/kind_decl.h</label>
@@ -44,16 +41,13 @@
       <node id="5">
         <label>chrono</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>concepts</label>
       </node>
       <node id="4">
         <label>nng/nng.h</label>
       </node>
-      <node id="6">
-        <label>nngpp/msg.h</label>
-      </node>
-      <node id="8">
+      <node id="7">
         <label>string_view</label>
       </node>
     </incdepgraph>
@@ -388,7 +382,7 @@
       </node>
       <node id="20">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
@@ -453,78 +447,76 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kind__decl_8h" kindref="compound">pars/ev/kind_decl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/msg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="namespacepars_1_1ev" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kindref="member">executes</ref></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" kindref="member">sync</ref>,</highlight></codeline>
-<codeline lineno="45" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">async</ref></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">klass;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>event_t<sp/>is<sp/>an<sp/>event<sp/>if<sp/>klass&lt;event_t&gt;<sp/>meets<sp/>these<sp/>requirements</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="53" refid="conceptpars_1_1ev_1_1event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::default_initializable&lt;klass&lt;event_t&gt;&gt;;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::uuid</ref><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;const<sp/>std::string_view&amp;&gt;;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;const<sp/>bool&amp;&gt;;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;sent&gt;()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;received&gt;()</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;fired&gt;()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>internal<sp/>event<sp/>event_t<sp/>does<sp/>not<sp/>requires<sp/>network</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="66" refid="conceptpars_1_1ev_1_1internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/>!<ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref>;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>network<sp/>event<sp/>event_t<sp/>requires<sp/>network</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="71" refid="conceptpars_1_1ev_1_1network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c</ref><sp/>=<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref>;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>synchronous<sp/>event<sp/>event_t<sp/>requires<sp/>sync<sp/>exec_policy<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="75" refid="conceptpars_1_1ev_1_1sync__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;kind_of&gt;()<sp/>==<sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" kindref="member">executes::sync</ref>;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>synchronous<sp/>internal<sp/>event<sp/>event_t</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="81" refid="conceptpars_1_1ev_1_1sync__internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__internal__event__c" kindref="compound">sync_internal_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c&lt;event_t, kind_of&gt;</ref>;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>synchronous<sp/>network<sp/>event<sp/>event_t</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="86" refid="conceptpars_1_1ev_1_1sync__network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__network__event__c" kindref="compound">sync_network_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c&lt;event_t, kind_of&gt;</ref>;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>event<sp/>event_t<sp/>requires<sp/>async<sp/>exec_policy<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="91" refid="conceptpars_1_1ev_1_1async__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;kind_of&gt;()<sp/>==<sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">executes::async</ref>;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>internal<sp/>event<sp/>event_t<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="97" refid="conceptpars_1_1ev_1_1async__internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__internal__event__c" kindref="compound">async_internal_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c&lt;event_t, kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c&lt;event_t&gt;</ref>;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>network<sp/>event<sp/>event_t<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="102" refid="conceptpars_1_1ev_1_1async__network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__network__event__c" kindref="compound">async_network_event_c</ref><sp/>=</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c&lt;event_t, kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c&lt;event_t&gt;</ref>;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespacepars_1_1ev" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kindref="member">executes</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" kindref="member">sync</ref>,</highlight></codeline>
+<codeline lineno="43" refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">async</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">klass;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>event_t<sp/>is<sp/>an<sp/>event<sp/>if<sp/>klass&lt;event_t&gt;<sp/>meets<sp/>these<sp/>requirements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="51" refid="conceptpars_1_1ev_1_1event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::default_initializable&lt;klass&lt;event_t&gt;&gt;;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::uuid</ref><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;const<sp/>std::string_view&amp;&gt;;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;const<sp/>bool&amp;&gt;;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;sent&gt;()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;received&gt;()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>{<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;fired&gt;()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;executes&gt;;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>internal<sp/>event<sp/>event_t<sp/>does<sp/>not<sp/>requires<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="64" refid="conceptpars_1_1ev_1_1internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/>!<ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>network<sp/>event<sp/>event_t<sp/>requires<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="69" refid="conceptpars_1_1ev_1_1network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c</ref><sp/>=<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::requires_network</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>synchronous<sp/>event<sp/>event_t<sp/>requires<sp/>sync<sp/>exec_policy<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="73" refid="conceptpars_1_1ev_1_1sync__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;kind_of&gt;()<sp/>==<sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" kindref="member">executes::sync</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>synchronous<sp/>internal<sp/>event<sp/>event_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="79" refid="conceptpars_1_1ev_1_1sync__internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__internal__event__c" kindref="compound">sync_internal_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c&lt;event_t, kind_of&gt;</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>synchronous<sp/>network<sp/>event<sp/>event_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="84" refid="conceptpars_1_1ev_1_1sync__network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1sync__network__event__c" kindref="compound">sync_network_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1sync__event__c" kindref="compound">sync_event_c&lt;event_t, kind_of&gt;</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>event<sp/>event_t<sp/>requires<sp/>async<sp/>exec_policy<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="89" refid="conceptpars_1_1ev_1_1async__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass&lt;event_t&gt;::template</ref><sp/>exec_policy&lt;kind_of&gt;()<sp/>==<sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">executes::async</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>internal<sp/>event<sp/>event_t<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="95" refid="conceptpars_1_1ev_1_1async__internal__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__internal__event__c" kindref="compound">async_internal_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c&lt;event_t, kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1internal__event__c" kindref="compound">internal_event_c&lt;event_t&gt;</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>asynchronous<sp/>network<sp/>event<sp/>event_t<sp/>for<sp/>kind_of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="100" refid="conceptpars_1_1ev_1_1async__network__event__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1ev_1_1async__network__event__c" kindref="compound">async_network_event_c</ref><sp/>=</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="conceptpars_1_1ev_1_1async__event__c" kindref="compound">async_event_c&lt;event_t, kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1network__event__c" kindref="compound">network_event_c&lt;event_t&gt;</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h"/>
   </compounddef>

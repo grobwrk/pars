@@ -81,8 +81,8 @@
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" line="52" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" bodystart="52" bodyend="55"/>
         <referencedby refid="classpars_1_1ev_1_1enqueuer_1a1c2a3b1ea76c45174655c670fc8cd17f" compoundref="enqueuer_8h" startline="60" endline="63">queue_fire</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="110" endline="144">pars::net::op::recv</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="69" endline="107">pars::net::op::send</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1enqueuer_1a1c2a3b1ea76c45174655c670fc8cd17f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -166,7 +166,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" line="66" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" bodystart="66" bodyend="89"/>
-        <references refid="classpars_1_1net_1_1pipe_1ac3042bc4a31373b835fcb16b38781de6" compoundref="pipe_8h" startline="63" endline="63">pars::net::pipe::close</references>
+        <references refid="structclev_1_1expected_3_01void_01_4_1aca118ea682f6fd7f20aba2a23d5ca29c" compoundref="clev_2err_8h" startline="104" endline="108">clev::expected&lt; void &gt;::or_abort</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1enqueuer_1a87da6b8b8e3747e8db3284d5625cbcb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -209,9 +209,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" line="92" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" bodystart="92" bodyend="95"/>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="69" endline="107">pars::net::op::send</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classpars_1_1ev_1_1enqueuer_1a4b14e3046113f1234a6d731f595493fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classpars_1_1ev_1_1enqueuer_1ad13daefd8d14bf6fc8a30e646e1de1ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>net::tool_c</type>
@@ -221,11 +221,11 @@
         </templateparamlist>
         <type>void</type>
         <definition>void pars::ev::enqueuer::queue_received</definition>
-        <argsstring>(nng::msg m, int s_id, tool_t &amp;t, net::pipe p)</argsstring>
+        <argsstring>(nngxx::msg m, int s_id, tool_t &amp;t, net::pipe p)</argsstring>
         <name>queue_received</name>
         <qualifiedname>pars::ev::enqueuer::queue_received</qualifiedname>
         <param>
-          <type>nng::msg</type>
+          <type><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref></type>
           <declname>m</declname>
         </param>
         <param>
@@ -247,7 +247,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" line="98" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h" bodystart="98" bodyend="101"/>
-        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="110" endline="144">pars::net::op::recv</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -261,7 +261,7 @@
       <member refid="classpars_1_1ev_1_1enqueuer_1a0a53959cc5a6438acc10f81ebef96d9a" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_fire</name></member>
       <member refid="classpars_1_1ev_1_1enqueuer_1a1c2a3b1ea76c45174655c670fc8cd17f" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_fire</name></member>
       <member refid="classpars_1_1ev_1_1enqueuer_1ad264589532b3272d43dfaf3d0ad352ec" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_fire</name></member>
-      <member refid="classpars_1_1ev_1_1enqueuer_1a4b14e3046113f1234a6d731f595493fc" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_received</name></member>
+      <member refid="classpars_1_1ev_1_1enqueuer_1ad13daefd8d14bf6fc8a30e646e1de1ee" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_received</name></member>
       <member refid="classpars_1_1ev_1_1enqueuer_1a87da6b8b8e3747e8db3284d5625cbcb0" prot="public" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>queue_sent</name></member>
       <member refid="classpars_1_1ev_1_1enqueuer_1acbe60ac04261f62c0e514bce23ac4edf" prot="private" virt="non-virtual"><scope>pars::ev::enqueuer</scope><name>runner_m</name></member>
     </listofallmembers>

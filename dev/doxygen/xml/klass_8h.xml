@@ -2,9 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="klass_8h" kind="file" language="C++">
     <compoundname>klass.h</compoundname>
+    <includes refid="msg_8h" local="yes">nngxx/msg.h</includes>
     <includes refid="concept_2kind_8h" local="yes">pars/concept/kind.h</includes>
     <includes refid="hash_8h" local="yes">pars/net/hash.h</includes>
-    <includes local="no">nngpp/msg.h</includes>
     <includes local="no">string_view</includes>
     <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
     <includedby refid="ev_2kind_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/kind.h</includedby>
@@ -12,10 +12,10 @@
     <includedby refid="spec_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>pars/concept/event.h</label>
-        <link refid="lib_2include_2pars_2concept_2event_8h"/>
-        <childnode refid="4" relation="include">
+      <node id="6">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
@@ -24,18 +24,166 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>pars/concept/kind.h</label>
-        <link refid="concept_2kind_8h"/>
-        <childnode refid="3" relation="include">
+      <node id="11">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="5">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>clev/value.h</label>
+        <link refid="clev_2value_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
       </node>
       <node id="4">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
         <label>pars/ev/kind_decl.h</label>
         <link refid="kind__decl_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -43,53 +191,62 @@
         <link refid="klass_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="27">
         <label>pars/init.h</label>
         <link refid="init_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-      </node>
-      <node id="11">
-        <label>pars/net/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="28">
         <label>chrono</label>
       </node>
-      <node id="9">
+      <node id="13">
         <label>concepts</label>
       </node>
-      <node id="13">
+      <node id="32">
         <label>cstddef</label>
       </node>
-      <node id="12">
+      <node id="9">
+        <label>expected</label>
+      </node>
+      <node id="7">
         <label>fmt/format.h</label>
       </node>
-      <node id="6">
-        <label>nng/nng.h</label>
+      <node id="10">
+        <label>functional</label>
       </node>
       <node id="8">
-        <label>nngpp/msg.h</label>
+        <label>nng/nng.h</label>
       </node>
-      <node id="10">
+      <node id="16">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="29">
         <label>string_view</label>
+      </node>
+      <node id="20">
+        <label>type_traits</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -349,7 +506,7 @@
       </node>
       <node id="18">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -377,7 +534,7 @@
     <innerclass refid="structpars_1_1ev_1_1uuid" prot="public">pars::ev::uuid</innerclass>
     <innerclass refid="structpars_1_1ev_1_1base__klass" prot="public">pars::ev::base_klass</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass" prot="public">pars::ev::klass</innerclass>
-    <innerclass refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4" prot="public">pars::ev::klass&lt; nng::msg &gt;</innerclass>
+    <innerclass refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4" prot="public">pars::ev::klass&lt; nngxx::msg &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" prot="public">pars::ev::klass&lt; std::shared_ptr&lt; event_t &gt; &gt;</innerclass>
     <innernamespace refid="namespacepars">pars</innernamespace>
     <innernamespace refid="namespacepars_1_1ev">pars::ev</innernamespace>
@@ -417,10 +574,10 @@
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash_8h" kindref="compound">pars/net/hash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nngpp/msg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="msg_8h" kindref="compound">nngxx/msg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash_8h" kindref="compound">pars/net/hash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
@@ -457,16 +614,16 @@
 <codeline lineno="71"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="74" refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;<ref refid="namespacenng" kindref="compound">nng</ref>::msg&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;nng::msg&gt;</highlight></codeline>
+<codeline lineno="74" refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;nngxx::msg&gt;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="76" refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4_1abca71a63353d212648ea249a05ce0d2c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4_1abca71a63353d212648ea249a05ce0d2c" kindref="member">event_type</ref><sp/>=<sp/>nng::msg;</highlight></codeline>
+<codeline lineno="76" refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1abed071c29eeeab6d4a49fe987d866e0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1abed071c29eeeab6d4a49fe987d866e0e" kindref="member">event_type</ref><sp/>=<sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4_1a6414ce71ebc2dc4d5af22e8a292509d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_01nng_1_1msg_01_4_1a6414ce71ebc2dc4d5af22e8a292509d6" kindref="member">uuid</ref><sp/>=</highlight></codeline>
+<codeline lineno="78" refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1aa5cde3c25a9dc67a466d2237abbb6727" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1aa5cde3c25a9dc67a466d2237abbb6727" kindref="member">uuid</ref><sp/>=</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;a7c09171-c503-4cb2-97e4-de8d3fe621b3&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="83" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;<ref refid="namespacestd" kindref="compound">std</ref>::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;event_t&gt;</highlight></codeline>
+<codeline lineno="83" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;std::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;event_t&gt;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="85" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" kindref="member">event_type</ref><sp/>=<sp/>std::shared_ptr&lt;event_t&gt;;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>

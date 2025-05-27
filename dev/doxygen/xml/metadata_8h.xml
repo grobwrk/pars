@@ -4,13 +4,235 @@
     <compoundname>metadata.h</compoundname>
     <includes refid="lib_2include_2pars_2concept_2event_8h" local="yes">pars/concept/event.h</includes>
     <includes refid="concept_2kind_8h" local="yes">pars/concept/kind.h</includes>
-    <includes refid="pipe_8h" local="yes">pars/net/pipe.h</includes>
+    <includes refid="pars_2net_2pipe_8h" local="yes">pars/net/pipe.h</includes>
     <includes refid="tool__view_8h" local="yes">pars/net/tool_view.h</includes>
     <includes local="no">stop_token</includes>
     <includedby refid="job_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/job.h</includedby>
     <includedby refid="kind__base_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
     <incdepgraph>
+      <node id="14">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="19">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>clev/value.h</label>
+        <link refid="clev_2value_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>nngxx/aio.h</label>
+        <link refid="aio_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>nngxx/ctx.h</label>
+        <link refid="ctx_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>nngxx/iface/aio.h</label>
+        <link refid="iface_2aio_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>nngxx/iface/ctx.h</label>
+        <link refid="iface_2ctx_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>nngxx/iface/socket.h</label>
+        <link refid="nngxx_2iface_2socket_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>nngxx/msg_header.h</label>
+        <link refid="msg__header_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>nngxx/socket.h</label>
+        <link refid="nngxx_2socket_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
       <node id="2">
         <label>pars/concept/event.h</label>
         <link refid="lib_2include_2pars_2concept_2event_8h"/>
@@ -20,15 +242,23 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>pars/concept/kind.h</label>
         <link refid="concept_2kind_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>pars/err.h</label>
+        <link refid="pars_2err_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -42,29 +272,27 @@
         <link refid="metadata_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>pars/fmt/nng.h</label>
+        <link refid="nng_8h"/>
+        <childnode refid="39" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-      </node>
-      <node id="12">
-        <label>pars/fmt/nng.h</label>
-        <link refid="nng_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -75,89 +303,95 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="40">
         <label>pars/net/hash.h</label>
         <link refid="hash_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pars/net/pipe.h</label>
+        <link refid="pars_2net_2pipe_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="11">
-        <label>pars/net/pipe.h</label>
-        <link refid="pipe_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="20">
+      <node id="45">
         <label>pars/net/tool_view.h</label>
         <link refid="tool__view_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>chrono</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>concepts</label>
       </node>
-      <node id="15">
+      <node id="42">
         <label>cstddef</label>
       </node>
-      <node id="14">
+      <node id="16">
+        <label>expected</label>
+      </node>
+      <node id="15">
         <label>fmt/format.h</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
       </node>
       <node id="5">
         <label>nng/nng.h</label>
       </node>
-      <node id="21">
-        <label>nngpp/ctx_view.h</label>
+      <node id="35">
+        <label>nng/protocol/pipeline0/pull.h</label>
       </node>
-      <node id="16">
-        <label>nngpp/error.h</label>
+      <node id="36">
+        <label>nng/protocol/pipeline0/push.h</label>
       </node>
-      <node id="7">
-        <label>nngpp/msg.h</label>
-      </node>
-      <node id="17">
-        <label>nngpp/pipe_view.h</label>
-      </node>
-      <node id="19">
-        <label>nngpp/socket_view.h</label>
-      </node>
-      <node id="18">
-        <label>nngpp/view.h</label>
+      <node id="37">
+        <label>nng/protocol/reqrep0/rep.h</label>
       </node>
       <node id="24">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="50">
         <label>stop_token</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>string_view</label>
       </node>
-      <node id="22">
+      <node id="44">
+        <label>system_error</label>
+      </node>
+      <node id="27">
+        <label>type_traits</label>
+      </node>
+      <node id="48">
         <label>typeinfo</label>
       </node>
-      <node id="23">
+      <node id="49">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -380,7 +614,7 @@
       </node>
       <node id="18">
         <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
-        <link refid="socket_8h"/>
+        <link refid="pars_2net_2socket_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -467,7 +701,7 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pipe_8h" kindref="compound">pars/net/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pars_2net_2pipe_8h" kindref="compound">pars/net/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tool__view_8h" kindref="compound">pars/net/tool_view.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stop_token&gt;</highlight><highlight class="normal"></highlight></codeline>

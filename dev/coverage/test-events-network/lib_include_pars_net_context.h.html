@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">16</td>
@@ -66,14 +66,13 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/aio.h&quot;
+             : #include &quot;nngxx/ctx.h&quot;
+             : 
              : #include &quot;pars/ev/enqueuer.h&quot;
              : #include &quot;pars/net/context_opt.h&quot;
              : #include &quot;pars/net/op.h&quot;
              : #include &quot;pars/net/socket.h&quot;
-             : 
-             : #include &lt;nngpp/aio_view.h&gt;
-             : #include &lt;nngpp/ctx.h&gt;
-             : #include &lt;nngpp/pipe_view.h&gt;
              : 
              : namespace pars::net
              : {
@@ -81,7 +80,7 @@
              : class context
              : {
              : public:
-             :   context(ev::enqueuer&amp; r, nng::ctx&amp;&amp; c, const net::socket&amp; s)
+             :   context(ev::enqueuer&amp; r, nngxx::ctx&amp;&amp; c, const net::socket&amp; s)
              :     : router_m{r}
              :     , ctx_m{std::move(c)}
              :     , sock_m{s}
@@ -95,21 +94,21 @@
              :   void set_options(context_opt opts)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.recv_timeout)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_opt_ms(NNG_OPT_RECVTIMEO, *opts.recv_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_recv_timeout(*opts.recv_timeout).or_abort();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.send_timeout)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_opt_ms(NNG_OPT_SENDTIMEO, *opts.send_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_send_timeout(*opts.send_timeout).or_abort();</span>
              :   }
              : 
              :   context_opt options() const
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return {.recv_timeout = ctx_m.get_opt_ms(NNG_OPT_RECVTIMEO),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">            .send_timeout = ctx_m.get_opt_ms(NNG_OPT_SENDTIMEO)};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return {.recv_timeout = ctx_m.get_recv_timeout().value_or_abort(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">            .send_timeout = ctx_m.get_send_timeout().value_or_abort()};</span>
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void send_aio(nng::aio_view a) <span class="lineNoCov">{ ctx_m.send(a); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void send_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ ctx_m.send(a); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nng::aio_view a) <span class="lineNoCov">{ ctx_m.recv(a); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ ctx_m.recv(a); }</span>
              : 
              :   template&lt;ev::event_c event_t&gt;
              :   void send(event_t ev, pipe p)
@@ -135,7 +134,7 @@
              : private:
              :   ev::enqueuer&amp; router_m;
              :   op op_m;
-             :   nng::ctx ctx_m;
+             :   nngxx::ctx ctx_m;
              :   const net::socket&amp; sock_m;
              : };
              : 

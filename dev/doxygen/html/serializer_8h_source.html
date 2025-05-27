@@ -122,74 +122,74 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="lib_2include_2pars_2concept_2event_8h.html">pars/concept/event.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="klass_8h.html">pars/ev/klass.h</a>&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">pars/log.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;cereal/archives/binary.hpp&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;nngpp/msg.h&gt;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;istream&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;spanstream&gt;</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1ev.html">pars::ev</a></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html">   48</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1serialize.html">serialize</a></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">template</span>&lt;event_c event_t&gt;</div>
-<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html#a84525377e87d50e385713bd0f6b37db1">   51</a></span>  <span class="keyword">static</span> nng::msg <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#a84525377e87d50e385713bd0f6b37db1">to_network</a>(event_t&amp; <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// 1. serialize the event to a stringstream</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">auto</span> ostring = std::ostringstream();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">auto</span> ostream = std::ostream(ostring.rdbuf());</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">auto</span> ar = cereal::BinaryOutputArchive(ostream);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">klass&lt;event_t&gt;::serialize</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>, ar);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 2. compute the event_hash</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span> event_hash = <a class="code hl_struct" href="structpars_1_1ev_1_1uuid.html">uuid&lt;klass&lt;event_t&gt;</a>&gt;::hash;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// 3. create the nng::msg to hold the hash+event</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">auto</span> serialization = ostring.rdbuf()-&gt;view();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">auto</span> m = nng::make_msg(<span class="keyword">sizeof</span>(event_hash) + serialization.size());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> b = m.body();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// 4. append the event hash</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;(), &amp;event_hash, <span class="keyword">sizeof</span>(event_hash));</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// 5. append the serialized event</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(event_hash), serialization.data(),</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>           serialization.size());</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>, <span class="stringliteral">&quot;Serialized Event [{}] to Message [{}]&quot;</span>, <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>, m);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="msg_8h.html">nngxx/msg.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="lib_2include_2pars_2concept_2event_8h.html">pars/concept/event.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="klass_8h.html">pars/ev/klass.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">pars/log.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;cereal/archives/binary.hpp&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;istream&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;spanstream&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1ev.html">pars::ev</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html">   49</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1serialize.html">serialize</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keyword">template</span>&lt;event_c event_t&gt;</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">   52</a></span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">to_network</a>(event_t&amp; <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// 1. serialize the event to a stringstream</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">auto</span> ostring = std::ostringstream();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">auto</span> ostream = std::ostream(ostring.rdbuf());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">auto</span> ar = cereal::BinaryOutputArchive(ostream);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">klass&lt;event_t&gt;::serialize</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>, ar);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// 2. compute the event_hash</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">auto</span> event_hash = <a class="code hl_struct" href="structpars_1_1ev_1_1uuid.html">uuid&lt;klass&lt;event_t&gt;</a>&gt;::hash;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// 3. create the nngxx::msg to hold the hash+event</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">auto</span> serialization = ostring.rdbuf()-&gt;view();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> m = nngxx::make_msg(<span class="keyword">sizeof</span>(event_hash) + serialization.size())</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>               .value_or_abort();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">auto</span> b = m.body();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// 4. append the event hash</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;(), &amp;event_hash, <span class="keyword">sizeof</span>(event_hash));</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// 5. append the serialized event</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    memcpy(b.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(event_hash), serialization.data(),</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>           serialization.size());</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> m;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">lf::event</a>, <span class="stringliteral">&quot;Serialized Event [{}] to Message [{}]&quot;</span>, <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>, m);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> m;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">template</span>&lt;event_c event_t&gt;</div>
-<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html#a6e30dbe1b94b270504b43116ca736292">   80</a></span>  <span class="keyword">static</span> event_t <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#a6e30dbe1b94b270504b43116ca736292">to_event</a>(<span class="keyword">const</span> nng::msg&amp; m)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">auto</span> req_event_hash = <a class="code hl_struct" href="structpars_1_1ev_1_1uuid.html">uuid&lt;klass&lt;event_t&gt;</a>&gt;::hash;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// 2. check they correspond</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> (recv_event_hash - req_event_hash != 0)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="keywordflow">throw</span> <span class="keyword">new</span> std::runtime_error(<span class="stringliteral">&quot;Requested event mismatch!&quot;</span>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// 3. remove event hash</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    m.body().trim_u64();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// 4. deserialize event</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">auto</span> body = m.body();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">auto</span> view = std::string_view(body.data&lt;<span class="keywordtype">char</span>&gt;(), body.size());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">template</span>&lt;event_c event_t&gt;</div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html#a839317ecb4e438b12e2f6012ed4d4532">   82</a></span>  <span class="keyword">static</span> event_t <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#a839317ecb4e438b12e2f6012ed4d4532">to_event</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>&amp; m)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">auto</span> req_event_hash = <a class="code hl_struct" href="structpars_1_1ev_1_1uuid.html">uuid&lt;klass&lt;event_t&gt;</a>&gt;::hash;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// 2. check they correspond</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (recv_event_hash - req_event_hash != 0)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Requested event mismatch!&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// 3. deserialize event</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">auto</span> body = m.body();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">auto</span> view =</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      std::string_view(body.data&lt;<span class="keywordtype">char</span>&gt;() + <span class="keyword">sizeof</span>(uint64_t), body.size());</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">auto</span> istring = std::ispanstream(view);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">auto</span> istream = std::istream(istring.rdbuf());</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">auto</span> ar = cereal::BinaryInputArchive(istream);</div>
@@ -210,13 +210,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="alib_2include_2pars_2concept_2event_8h_html"><div class="ttname"><a href="lib_2include_2pars_2concept_2event_8h.html">event.h</a></div></div>
 <div class="ttc" id="alog_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
 <div class="ttc" id="alog_8h_html_ad71aeb03d03709c5072b99cb68c21992"><div class="ttname"><a href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a></div><div class="ttdeci">#define SL</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00061">log.h:61</a></div></div>
-<div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00039">event.h:40</a></div></div>
+<div class="ttc" id="amsg_8h_html"><div class="ttname"><a href="msg_8h.html">msg.h</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a4357aed4c68a9f7703914455abf07879"><div class="ttname"><a href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a></div><div class="ttdeci">clev::own&lt; nng_msg * &gt; msg</div><div class="ttdef"><b>Definition</b> <a href="msg_8h_source.html#l00039">msg.h:39</a></div></div>
+<div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00037">event.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">pars::lf::event</a></div><div class="ttdeci">@ event</div><div class="ttdef"><b>Definition</b> <a href="flags_8h_source.html#l00041">flags.h:41</a></div></div>
 <div class="ttc" id="anamespacepars_html_acf366c3b2c7f2027ca1f4694e783ecb1"><div class="ttname"><a href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a></div><div class="ttdeci">void debug(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00132">log.h:132</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1klass_html"><div class="ttname"><a href="structpars_1_1ev_1_1klass.html">pars::ev::klass</a></div><div class="ttdef"><b>Definition</b> <a href="klass_8h_source.html#l00068">klass.h:69</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1serialize_html"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html">pars::ev::serialize</a></div><div class="ttdef"><b>Definition</b> <a href="#l00048">serializer.h:49</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1serialize_html_a6e30dbe1b94b270504b43116ca736292"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html#a6e30dbe1b94b270504b43116ca736292">pars::ev::serialize::to_event</a></div><div class="ttdeci">static event_t to_event(const nng::msg &amp;m)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">serializer.h:80</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1serialize_html_a84525377e87d50e385713bd0f6b37db1"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html#a84525377e87d50e385713bd0f6b37db1">pars::ev::serialize::to_network</a></div><div class="ttdeci">static nng::msg to_network(event_t &amp;ev)</div><div class="ttdef"><b>Definition</b> <a href="#l00051">serializer.h:51</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1serialize_html"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html">pars::ev::serialize</a></div><div class="ttdef"><b>Definition</b> <a href="#l00049">serializer.h:50</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1serialize_html_a839317ecb4e438b12e2f6012ed4d4532"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html#a839317ecb4e438b12e2f6012ed4d4532">pars::ev::serialize::to_event</a></div><div class="ttdeci">static event_t to_event(const nngxx::msg &amp;m)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">serializer.h:82</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1serialize_html_ad3e218ee1638d058d12c50b60c53c0c6"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">pars::ev::serialize::to_network</a></div><div class="ttdeci">static nngxx::msg to_network(event_t &amp;ev)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">serializer.h:52</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1uuid_html"><div class="ttname"><a href="structpars_1_1ev_1_1uuid.html">pars::ev::uuid</a></div><div class="ttdef"><b>Definition</b> <a href="klass_8h_source.html#l00043">klass.h:44</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

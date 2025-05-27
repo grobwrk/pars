@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">70</td>
+                     <td class="headerValue" width="10%">71</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -66,16 +66,15 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/aio.h&quot;
+             : #include &quot;nngxx/ctx.h&quot;
+             : #include &quot;nngxx/dialer.h&quot;
+             : #include &quot;nngxx/listener.h&quot;
+             : #include &quot;nngxx/pipe.h&quot;
+             : 
              : #include &quot;pars/ev/enqueuer.h&quot;
              : #include &quot;pars/net/op.h&quot;
              : #include &quot;pars/net/socket_opt.h&quot;
-             : 
-             : #include &lt;nng/protocol/reqrep0/req.h&gt;
-             : #include &lt;nngpp/ctx.h&gt;
-             : #include &lt;nngpp/dialer.h&gt;
-             : #include &lt;nngpp/listener.h&gt;
-             : #include &lt;nngpp/pipe.h&gt;
-             : #include &lt;nngpp/socket.h&gt;
              : 
              : #include &lt;string_view&gt;
              : #include &lt;vector&gt;
@@ -98,7 +97,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if (str_view.compare(&quot;listen&quot;) == 0)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return cmode::listen;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  throw new std::runtime_error(fmt::format(&quot;Unable to parse {} to CMODE&quot;, str));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  throw std::runtime_error(fmt::format(&quot;Unable to parse {} to CMODE&quot;, str));</span>
              : }
              : 
              : /**
@@ -108,7 +107,7 @@
              : {
              : public:
              :   /// Construct a socket
-             :   socket(ev::enqueuer&amp; r, nng::socket&amp;&amp; s)
+             :   socket(ev::enqueuer&amp; r, nngxx::socket&amp;&amp; s)
              :     : router_m{r}
              :     , socket_m{std::move(s)}
              :   {
@@ -119,34 +118,34 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   operator tool_view() <span class="lineNoCov">{ return tool_view{socket_m}; }</span>
              : 
-             :   void options(const socket_opt opts)
+             :   void set_options(const socket_opt opts)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.recv_timeout)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_opt_ms(NNG_OPT_RECVTIMEO, *opts.recv_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_recv_timeout(*opts.recv_timeout).or_abort();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.send_timeout)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_opt_ms(NNG_OPT_SENDTIMEO, *opts.send_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_send_timeout(*opts.send_timeout).or_abort();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.req_resend_time)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_opt_ms(NNG_OPT_REQ_RESENDTIME, *opts.send_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_req_resend_time(*opts.req_resend_time).or_abort();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.req_resend_tick)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_opt_ms(NNG_OPT_REQ_RESENDTICK, *opts.send_timeout);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      socket_m.set_req_resend_tick(*opts.req_resend_tick).or_abort();</span>
              :   }
              : 
              :   socket_opt options() const
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return {</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .recv_timeout = socket_m.get_opt_ms(NNG_OPT_RECVTIMEO),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .send_timeout = socket_m.get_opt_ms(NNG_OPT_SENDTIMEO),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .req_resend_time = socket_m.get_opt_ms(NNG_OPT_REQ_RESENDTIME),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .req_resend_tick = socket_m.get_opt_ms(NNG_OPT_REQ_RESENDTICK),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .recv_timeout = socket_m.get_recv_timeout().value_or_abort(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .send_timeout = socket_m.get_send_timeout().value_or_abort(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .req_resend_time = socket_m.get_req_resend_time().value_or_abort(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      .req_resend_tick = socket_m.get_req_resend_tick().value_or_abort(),</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    };</span>
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void dial(const char* addr) <span class="lineNoCov">{ emplace_dialer(addr).start(); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void dial(const char* addr) <span class="lineNoCov">{ emplace_dialer(addr).start().or_abort(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void listen(const char* addr) <span class="lineNoCov">{ emplace_listener(addr).start(); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void listen(const char* addr) <span class="lineNoCov">{ emplace_listener(addr).start().or_abort(); }</span>
              : 
              :   void connect(const char* addr, const cmode mode)
              :   {
@@ -163,11 +162,11 @@
              :     }
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   nng::ctx make_ctx() const <span class="lineNoCov">{ return nng::make_ctx(socket_m); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   nngxx::ctx make_ctx() <span class="lineNoCov">{ return nngxx::make_ctx(socket_m).value_or_abort(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void send_aio(nng::aio_view a) <span class="lineNoCov">{ socket_m.send(a); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void send_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ socket_m.send(a); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nng::aio_view a) <span class="lineNoCov">{ socket_m.recv(a); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ socket_m.recv(a); }</span>
              : 
              :   template&lt;ev::event_c event_t&gt;
              :   void send(event_t ev, pipe p = {})
@@ -185,11 +184,7 @@
              : 
              :   const char* proto_name() const
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    const char* proto_name_ptr;</span>
-             : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    nng_socket_proto_name(socket_m.get(), &amp;proto_name_ptr);</span>
-             : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return proto_name_ptr;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return socket_m.proto_name().value_or(&quot;&lt;not-found&gt;&quot;);</span>
              :   }
              : 
              :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
@@ -200,7 +195,7 @@
              : private:
              :   void pipe_cb(nng_pipe cp, nng_pipe_ev ev)
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto pv = nng::pipe_view{cp};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto pv = nngxx::pipe_view{cp};</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    switch (ev)</span>
              :     {
@@ -239,27 +234,32 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    };</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // NOTE: pass this, cant move socket</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nng::pipe_ev::add_pre, pipe_cb, this);</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nng::pipe_ev::add_post, pipe_cb, this);</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nng::pipe_ev::rem_post, pipe_cb, this);</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nng::pipe_ev::num, pipe_cb, this);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nngxx::pipe_ev::add_pre, pipe_cb, this).or_abort();</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nngxx::pipe_ev::add_post, pipe_cb, this).or_abort();</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nngxx::pipe_ev::rem_post, pipe_cb, this).or_abort();</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    socket_m.pipe_notify(nngxx::pipe_ev::num, pipe_cb, this).or_abort();</span>
              :   }
              : 
-             :   nng::listener&amp; emplace_listener(const char* addr)
+             :   nngxx::listener&amp; emplace_listener(const char* addr)
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return listeners_m.emplace_back(socket_m, addr);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    listeners_m.push_back(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      nngxx::make_listener(socket_m, addr).value_or_abort());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return listeners_m.back();</span>
              :   }
              : 
-             :   nng::dialer&amp; emplace_dialer(const char* addr)
+             :   nngxx::dialer&amp; emplace_dialer(const char* addr)
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return dialers_m.emplace_back(socket_m, addr);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    dialers_m.push_back(nngxx::make_dialer(socket_m, addr).value_or_abort());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return dialers_m.back();</span>
              :   }
              : 
              :   ev::enqueuer&amp; router_m;
              :   op op_m;
-             :   nng::socket socket_m;
-             :   std::vector&lt;nng::dialer&gt; dialers_m;
-             :   std::vector&lt;nng::listener&gt; listeners_m;
+             :   nngxx::socket socket_m;
+             :   std::vector&lt;nngxx::dialer&gt; dialers_m;
+             :   std::vector&lt;nngxx::listener&gt; listeners_m;
              : };
              : 
              : } // namespace pars::net

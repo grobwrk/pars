@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="185" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="185" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="186" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="186" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1klass_3_01shutdown_01_4_1af870c3e4597ee34753f72bd12a6eb4a2" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>bool</type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="188" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="188" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="189" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="189" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -83,7 +83,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="183" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="184" bodyend="189"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="184" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="185" bodyend="190"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; shutdown &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; shutdown &gt;</scope><name>exec_policy</name></member>

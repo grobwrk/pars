@@ -1,14 +1,12 @@
 var searchData=
 [
-  ['pars_0',['pars',['../namespacepars.html',1,'']]],
-  ['pars_3a_3aapp_1',['app',['../namespacepars_1_1app.html',1,'pars']]],
-  ['pars_3a_3acomp_2',['comp',['../namespacepars_1_1comp.html',1,'pars']]],
-  ['pars_3a_3aev_3',['ev',['../namespacepars_1_1ev.html',1,'pars']]],
-  ['pars_3a_3af_4',['f',['../namespacepars_1_1f.html',1,'pars']]],
-  ['pars_3a_3anet_5',['net',['../namespacepars_1_1net.html',1,'pars']]],
-  ['pars_5fexample_6',['pars_example',['../namespacepars__example.html',1,'']]],
-  ['pars_5fexample_3a_3aapps_7',['apps',['../namespacepars__example_1_1apps.html',1,'pars_example']]],
-  ['pars_5fexample_3a_3acompute_8',['compute',['../namespacepars__example_1_1compute.html',1,'pars_example']]],
-  ['pars_5fexample_3a_3aevent_9',['event',['../namespacepars__example_1_1event.html',1,'pars_example']]],
-  ['pars_5fexample_3a_3aresource_10',['resource',['../namespacepars__example_1_1resource.html',1,'pars_example']]]
+  ['nngxx_0',['nngxx',['../namespacenngxx.html',1,'']]],
+  ['nngxx_3a_3apull_1',['pull',['../namespacenngxx_1_1pull.html',1,'nngxx']]],
+  ['nngxx_3a_3apull_3a_3av0_2',['v0',['../namespacenngxx_1_1pull_1_1v0.html',1,'nngxx::pull']]],
+  ['nngxx_3a_3apush_3',['push',['../namespacenngxx_1_1push.html',1,'nngxx']]],
+  ['nngxx_3a_3apush_3a_3av0_4',['v0',['../namespacenngxx_1_1push_1_1v0.html',1,'nngxx::push']]],
+  ['nngxx_3a_3arep_5',['rep',['../namespacenngxx_1_1rep.html',1,'nngxx']]],
+  ['nngxx_3a_3arep_3a_3av0_6',['v0',['../namespacenngxx_1_1rep_1_1v0.html',1,'nngxx::rep']]],
+  ['nngxx_3a_3areq_7',['req',['../namespacenngxx_1_1req.html',1,'nngxx']]],
+  ['nngxx_3a_3areq_3a_3av0_8',['v0',['../namespacenngxx_1_1req_1_1v0.html',1,'nngxx::req']]]
 ];

@@ -112,7 +112,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00109">109</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00110">110</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afa25c8fdedb450dee7f6f574838e6f9a" name="afa25c8fdedb450dee7f6f574838e6f9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa25c8fdedb450dee7f6f574838e6f9a">&#9670;&#160;</a></span>format_to()</h2>
@@ -138,13 +138,14 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00134">134</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>  {</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, <a class="code hl_function" href="#a14e2a82e67e6896df0c50c2189b2651c">str</a>());</div>
-<div class="line"><span class="lineno">  137</span>  }</div>
-<div class="ttc" id="astructpars_1_1ev_1_1exception_html_a14e2a82e67e6896df0c50c2189b2651c"><div class="ttname"><a href="#a14e2a82e67e6896df0c50c2189b2651c">pars::ev::exception::str</a></div><div class="ttdeci">std::string str() const</div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2ev_2event_8h_source.html#l00113">event.h:113</a></div></div>
+<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00135">135</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>  {</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">return</span> fmt::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;{}&quot;</span>, <a class="code hl_function" href="#a14e2a82e67e6896df0c50c2189b2651c">str</a>());</div>
+<div class="line"><span class="lineno">  138</span>  }</div>
+<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1exception_html_a14e2a82e67e6896df0c50c2189b2651c"><div class="ttname"><a href="#a14e2a82e67e6896df0c50c2189b2651c">pars::ev::exception::str</a></div><div class="ttdeci">std::string str() const</div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2ev_2event_8h_source.html#l00114">event.h:114</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00113">str()</a>.</p>
+<p class="reference">References <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00114">str()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -181,31 +182,31 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00113">113</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>  {</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>      std::rethrow_exception(<a class="code hl_variable" href="#a5403443e8f85a85550116e26d7ddd7b6">eptr</a>);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">catch</span> (nng::exception&amp; e)</div>
-<div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>      <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;{} during {}&quot;</span>, e.what(), e.who());</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">catch</span> (std::exception&amp; e)</div>
-<div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>      <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;{}&quot;</span>, e.what());</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">catch</span> (...)</div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unknown!&quot;</span>;</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;empty-exception&gt;&quot;</span>;</div>
-<div class="line"><span class="lineno">  132</span>  }</div>
-<div class="ttc" id="astructpars_1_1ev_1_1exception_html_a5403443e8f85a85550116e26d7ddd7b6"><div class="ttname"><a href="#a5403443e8f85a85550116e26d7ddd7b6">pars::ev::exception::eptr</a></div><div class="ttdeci">std::exception_ptr eptr</div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2ev_2event_8h_source.html#l00111">event.h:111</a></div></div>
+<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00114">114</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>  {</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  117</span>    {</div>
+<div class="line"><span class="lineno">  118</span>      std::rethrow_exception(<a class="code hl_variable" href="#a5403443e8f85a85550116e26d7ddd7b6">eptr</a>);</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">catch</span> (clev::exception&amp; e)</div>
+<div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;{}&quot;</span>, e.what());</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">catch</span> (std::exception&amp; e)</div>
+<div class="line"><span class="lineno">  125</span>    {</div>
+<div class="line"><span class="lineno">  126</span>      <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;{}&quot;</span>, e.what());</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unknown!&quot;</span>;</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&lt;empty-exception&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+<div class="ttc" id="astructpars_1_1ev_1_1exception_html_a5403443e8f85a85550116e26d7ddd7b6"><div class="ttname"><a href="#a5403443e8f85a85550116e26d7ddd7b6">pars::ev::exception::eptr</a></div><div class="ttdeci">std::exception_ptr eptr</div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2ev_2event_8h_source.html#l00112">event.h:112</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00111">eptr</a>.</p>
+<p class="reference">References <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00112">eptr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00134">format_to()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00135">format_to()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -232,9 +233,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00111">111</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00112">112</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00113">str()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00114">str()</a>.</p>
 
 </div>
 </div>

@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="46" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="45" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" prot="public" static="no">
         <templateparamlist>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="49" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="48" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars_1_1ev_1_1spec_1a19dc9a6ecc43008cad9731862167c765" prot="public" static="no">
         <type>kind_of_event_type::event_type</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="51" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="50" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-attrib">
@@ -72,8 +72,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="53" column="32" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="53" bodyend="-1"/>
-        <referencedby refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" compoundref="spec_8h" startline="56" endline="63">pars::ev::spec&lt; kind_of_event_t &gt;::format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="52" column="32" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" compoundref="spec_8h" startline="55" endline="62">pars::ev::spec&lt; kind_of_event_t &gt;::format_to</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -93,8 +93,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="56" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="56" bodyend="63"/>
-        <references refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" compoundref="spec_8h" startline="53">pars::ev::spec&lt; kind_of_event_t &gt;::hash</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="55" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="55" bodyend="62"/>
+        <references refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" compoundref="spec_8h" startline="52">pars::ev::spec&lt; kind_of_event_t &gt;::hash</references>
         <references refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" compoundref="nametype_8h" startline="37" endline="40">nametype</references>
       </memberdef>
     </sectiondef>
@@ -102,7 +102,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="43" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="44" bodyend="64"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/spec.h" bodystart="43" bodyend="63"/>
     <listofallmembers>
       <member refid="classpars_1_1ev_1_1spec_1a19dc9a6ecc43008cad9731862167c765" prot="public" virt="non-virtual"><scope>pars::ev::spec</scope><name>event_type</name></member>
       <member refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" prot="public" virt="non-virtual"><scope>pars::ev::spec</scope><name>format_to</name></member>

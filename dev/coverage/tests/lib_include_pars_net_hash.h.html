@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">27</td>
@@ -66,10 +66,11 @@
              : */
              : #pragma once
              : 
+             : #include &quot;nngxx/msg_body.h&quot;
+             : 
              : #include &quot;pars/init.h&quot;
              : 
              : #include &lt;fmt/format.h&gt;
-             : #include &lt;nngpp/msg.h&gt;
              : 
              : #include &lt;cstddef&gt;
              : 
@@ -82,12 +83,12 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  constexpr std::uint64_t prime{0x100000001B3};</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (uuid.size() != 36)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw new std::runtime_error(&quot;Invalid UUID [size mismatch]&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw std::runtime_error(&quot;Invalid UUID [size mismatch]&quot;);</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  for (auto i : {8, 13, 18, 23})</span>
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (uuid[i] != '-')</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw new std::runtime_error(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        fmt::format(&quot;Invalid UUID [missing separator {}]&quot;, i));</span>
              :   }
              : 
@@ -100,7 +101,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!(c &gt;= '0' &amp;&amp; c &lt;= '9') &amp;&amp; !(c &gt;= 'A' &amp;&amp; c &lt;= 'F') &amp;&amp;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        !(c &gt;= 'a' &amp;&amp; c &lt;= 'f'))</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw new std::runtime_error(&quot;Invalid UUID [non hex char found]&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(&quot;Invalid UUID [non hex char found]&quot;);</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto x = c - c &gt;= 'a' ? ('a' - 10) : (c &gt;= 'A' ? ('A' - 10) : '0');</span>
              : 
@@ -110,7 +111,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return result;</span>
              : }
              : 
-             : static std::size_t hash_from_msg(const nng::msg&amp; m)
+             : static std::size_t hash_from_msg(const nngxx::msg&amp; m)
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::size_t h;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (m)</span>

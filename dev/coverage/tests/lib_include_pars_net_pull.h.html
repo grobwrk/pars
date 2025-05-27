@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">3</td>
@@ -71,8 +71,6 @@
              : #include &quot;pars/ev/make_hf.h&quot;
              : #include &quot;pars/net/socket.h&quot;
              : 
-             : #include &lt;nngpp/protocol/pull0.h&gt;
-             : 
              : namespace pars::net
              : {
              : 
@@ -84,7 +82,7 @@
              : public:
              :   /// Construct a pull
              :   pull(ev::hf_registry&amp; h, ev::enqueuer&amp; r)
-             :     : sock_m{r, nng::pull::v0::open()}
+             :     : sock_m{r, nngxx::pull::v0::make_socket().value_or_abort()}
              :     , hf_registry_m{h}
              :   {
              :   }

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Apr 23 14:15:42 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 09:24:20 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -88,7 +88,7 @@
              :     net::socket_opt req_opts;
              :   };
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void init(const init_p&amp; params) <span class="lineNoCov">{ req_m.sock().options(params.req_opts); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void init(const init_p&amp; params) <span class="lineNoCov">{ req_m.sock().set_options(params.req_opts); }</span>
              : 
              :   struct connect_p
              :   {
