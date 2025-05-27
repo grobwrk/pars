@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1net_1_1socket" kind="class" language="C++" prot="public">
+    <compoundname>pars::net::socket</compoundname>
+    <includes refid="pars_2net_2socket_8h" local="no">socket.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a9c93d81fd4e866e0c5c1d91d13830356" prot="private" static="no" mutable="no">
+        <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+        <definition>ev::enqueuer&amp; pars::net::socket::router_m</definition>
+        <argsstring></argsstring>
+        <name>router_m</name>
+        <qualifiedname>pars::net::socket::router_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="221" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a58cfaa463236d18762b3efd9cd240a9f" prot="private" static="no" mutable="no">
+        <type><ref refid="classpars_1_1net_1_1op" kindref="compound">op</ref></type>
+        <definition>op pars::net::socket::op_m</definition>
+        <argsstring></argsstring>
+        <name>op_m</name>
+        <qualifiedname>pars::net::socket::op_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="222" column="6" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1socket_1ab24f59ff7ab5d3dd92d15de45debf62f" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" kindref="member">nngxx::socket</ref></type>
+        <definition>nngxx::socket pars::net::socket::socket_m</definition>
+        <argsstring></argsstring>
+        <name>socket_m</name>
+        <qualifiedname>pars::net::socket::socket_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="223" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a5c56e664284e4be64861c5d3bcf1bb1a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">nngxx::dialer</ref> &gt;</type>
+        <definition>std::vector&lt;nngxx::dialer&gt; pars::net::socket::dialers_m</definition>
+        <argsstring></argsstring>
+        <name>dialers_m</name>
+        <qualifiedname>pars::net::socket::dialers_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="224" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a7302888150207ba0bd196c4b4b0563dc" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">nngxx::listener</ref> &gt;</type>
+        <definition>std::vector&lt;nngxx::listener&gt; pars::net::socket::listeners_m</definition>
+        <argsstring></argsstring>
+        <name>listeners_m</name>
+        <qualifiedname>pars::net::socket::listeners_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="225" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a04f2ad388cb06c400892850bc38908ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::socket::socket</definition>
+        <argsstring>(ev::enqueuer &amp;r, nngxx::socket &amp;&amp;s)</argsstring>
+        <name>socket</name>
+        <qualifiedname>pars::net::socket::socket</qualifiedname>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" kindref="member">nngxx::socket</ref> &amp;&amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Construct a socket. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="73" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="73" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::socket::~socket</definition>
+        <argsstring>()</argsstring>
+        <name>~socket</name>
+        <qualifiedname>pars::net::socket::~socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="80" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="80" bodyend="80"/>
+        <references refid="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" compoundref="pars_2net_2socket_8h" startline="142" endline="142">stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1d2bfd0ed8969422204f7c0775098753" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::socket::operator tool_view</definition>
+        <argsstring>()</argsstring>
+        <name>operator tool_view</name>
+        <qualifiedname>pars::net::socket::operator tool_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="82" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::set_options</definition>
+        <argsstring>(const socket_opt opts)</argsstring>
+        <name>set_options</name>
+        <qualifiedname>pars::net::socket::set_options</qualifiedname>
+        <param>
+          <type>const <ref refid="structpars_1_1net_1_1socket__opt" kindref="compound">socket_opt</ref></type>
+          <declname>opts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="84" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="84" bodyend="97"/>
+        <references refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" compoundref="socket__opt_8h" startline="51">pars::net::socket_opt::recv_timeout</references>
+        <references refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" compoundref="socket__opt_8h" startline="57">pars::net::socket_opt::req_resend_tick</references>
+        <references refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" compoundref="socket__opt_8h" startline="56">pars::net::socket_opt::req_resend_time</references>
+        <references refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" compoundref="socket__opt_8h" startline="52">pars::net::socket_opt::send_timeout</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ad5a06ea8d8c8fd74a2988e4a2e03598e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1net_1_1socket__opt" kindref="compound">socket_opt</ref></type>
+        <definition>socket_opt pars::net::socket::options</definition>
+        <argsstring>() const</argsstring>
+        <name>options</name>
+        <qualifiedname>pars::net::socket::options</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="99" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="99" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::dial</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>dial</name>
+        <qualifiedname>pars::net::socket::dial</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="109" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ac86eb2bd9aeacb0e852a0189bc7e074e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::listen</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>listen</name>
+        <qualifiedname>pars::net::socket::listen</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="111" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::connect</definition>
+        <argsstring>(const char *addr, const cmode mode)</argsstring>
+        <name>connect</name>
+        <qualifiedname>pars::net::socket::connect</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">cmode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="113" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="113" bodyend="126"/>
+        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" compoundref="pars_2net_2socket_8h" startline="50">pars::net::dial</references>
+        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" compoundref="pars_2net_2socket_8h" startline="51">pars::net::listen</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1afbb51e4e4c45a6b0845e6d166c289c34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kindref="member">nngxx::ctx</ref></type>
+        <definition>nngxx::ctx pars::net::socket::make_ctx</definition>
+        <argsstring>()</argsstring>
+        <name>make_ctx</name>
+        <qualifiedname>pars::net::socket::make_ctx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="128" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a474843a8b434a93ba8a97dc8b819377e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::send_aio</definition>
+        <argsstring>(nngxx::aio_view &amp;a)</argsstring>
+        <name>send_aio</name>
+        <qualifiedname>pars::net::socket::send_aio</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kindref="member">nngxx::aio_view</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="130" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="130" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1aff3d822a390fd0d74ed27779ebd6f317" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::recv_aio</definition>
+        <argsstring>(nngxx::aio_view &amp;a)</argsstring>
+        <name>recv_aio</name>
+        <qualifiedname>pars::net::socket::recv_aio</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kindref="member">nngxx::aio_view</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="132" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a5a7f31a949fcd8a99f829b0c5e491329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ev::event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::net::socket::send</definition>
+        <argsstring>(event_t ev, pipe p={})</argsstring>
+        <name>send</name>
+        <qualifiedname>pars::net::socket::send</qualifiedname>
+        <param>
+          <type>event_t</type>
+          <declname>ev</declname>
+        </param>
+        <param>
+          <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">pipe</ref></type>
+          <declname>p</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="135" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a9ebfc30e5757d46d147b1d35da38fc2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::recv</definition>
+        <argsstring>()</argsstring>
+        <name>recv</name>
+        <qualifiedname>pars::net::socket::recv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="140" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>pars::net::socket::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="142" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="142" bodyend="142"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" compoundref="pars_2net_2socket_8h" startline="80" endline="80">~socket</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::net::socket::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <qualifiedname>pars::net::socket::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="144" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="144" bodyend="144"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" compoundref="pars_2net_2socket_8h" startline="146" endline="146">socket_id</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::net::socket::socket_id</definition>
+        <argsstring>() const</argsstring>
+        <name>socket_id</name>
+        <qualifiedname>pars::net::socket::socket_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="146" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="146" bodyend="146"/>
+        <references refid="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" compoundref="pars_2net_2socket_8h" startline="144" endline="144">id</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * pars::net::socket::proto_name</definition>
+        <argsstring>() const</argsstring>
+        <name>proto_name</name>
+        <qualifiedname>pars::net::socket::proto_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="148" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="148" bodyend="151"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a2b9ab30d61ab290fbf7f2923fc7b5943" compoundref="pars_2net_2socket_8h" startline="153" endline="156">format_to</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a2b9ab30d61ab290fbf7f2923fc7b5943" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::net::socket::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::net::socket::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="153" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="153" bodyend="156"/>
+        <references refid="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" compoundref="pars_2net_2socket_8h" startline="148" endline="151">proto_name</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1a49d0be781116515fd35eb45f95741e18" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::pipe_cb</definition>
+        <argsstring>(nng_pipe cp, nng_pipe_ev ev)</argsstring>
+        <name>pipe_cb</name>
+        <qualifiedname>pars::net::socket::pipe_cb</qualifiedname>
+        <param>
+          <type>nng_pipe</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>nng_pipe_ev</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="159" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="159" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ad9824777ab75046426dd99a3f76d0f62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::socket::register_pipe_notify</definition>
+        <argsstring>()</argsstring>
+        <name>register_pipe_notify</name>
+        <qualifiedname>pars::net::socket::register_pipe_notify</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="193" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="193" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1ab0849f043d55eac62e85e4804b36fcc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">nngxx::listener</ref> &amp;</type>
+        <definition>nngxx::listener &amp; pars::net::socket::emplace_listener</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>emplace_listener</name>
+        <qualifiedname>pars::net::socket::emplace_listener</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="206" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="206" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1socket_1aaf38e88ad5c88adfbbce7735523e2eff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">nngxx::dialer</ref> &amp;</type>
+        <definition>nngxx::dialer &amp; pars::net::socket::emplace_dialer</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>emplace_dialer</name>
+        <qualifiedname>pars::net::socket::emplace_dialer</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="214" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="214" bodyend="219"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents an nng_socket. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="69" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="70" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>connect</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>dial</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a5c56e664284e4be64861c5d3bcf1bb1a" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>dialers_m</name></member>
+      <member refid="classpars_1_1net_1_1socket_1aaf38e88ad5c88adfbbce7735523e2eff" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>emplace_dialer</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ab0849f043d55eac62e85e4804b36fcc5" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>emplace_listener</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a2b9ab30d61ab290fbf7f2923fc7b5943" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>format_to</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>id</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ac86eb2bd9aeacb0e852a0189bc7e074e" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>listen</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a7302888150207ba0bd196c4b4b0563dc" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>listeners_m</name></member>
+      <member refid="classpars_1_1net_1_1socket_1afbb51e4e4c45a6b0845e6d166c289c34" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>make_ctx</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a58cfaa463236d18762b3efd9cd240a9f" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>op_m</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a1d2bfd0ed8969422204f7c0775098753" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>operator tool_view</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ad5a06ea8d8c8fd74a2988e4a2e03598e" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>options</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a49d0be781116515fd35eb45f95741e18" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>pipe_cb</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>proto_name</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a9ebfc30e5757d46d147b1d35da38fc2e" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>recv</name></member>
+      <member refid="classpars_1_1net_1_1socket_1aff3d822a390fd0d74ed27779ebd6f317" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>recv_aio</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ad9824777ab75046426dd99a3f76d0f62" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>register_pipe_notify</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a9c93d81fd4e866e0c5c1d91d13830356" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>router_m</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a5a7f31a949fcd8a99f829b0c5e491329" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>send</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a474843a8b434a93ba8a97dc8b819377e" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>send_aio</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>set_options</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a04f2ad388cb06c400892850bc38908ff" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>socket</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>socket_id</name></member>
+      <member refid="classpars_1_1net_1_1socket_1ab24f59ff7ab5d3dd92d15de45debf62f" prot="private" virt="non-virtual"><scope>pars::net::socket</scope><name>socket_m</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>stop</name></member>
+      <member refid="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>~socket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

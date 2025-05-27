@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1expected_3_01void_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>clev::expected&lt; void &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::expected&lt; void, std::error_code &gt;</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::expected&lt; void, std::error_code &gt;</basecompoundref>
+    <includes refid="clev_2err_8h" local="no">err.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structclev_1_1expected_3_01void_01_4_1adbb7727e833b838a14b5d15570c83a7d" prot="private" static="no">
+        <type>std::expected&lt; void, std::error_code &gt;</type>
+        <definition>using clev::expected&lt; void &gt;::parent =  std::expected&lt;void, std::error_code&gt;</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>clev::expected&lt; void &gt;::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="99" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structclev_1_1expected_1a8d1074bc5505a4ac8466e27b80cf4f64" prot="private" static="no">
+        <type>std::expected&lt; void, std::error_code &gt;</type>
+        <definition>using clev::expected&lt; void &gt;::parent = </definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>clev::expected&lt; void &gt;::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="130" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structclev_1_1expected_1a3b0a99885068f426052c249d05850093" prot="private" static="no">
+        <type>parent::error_type</type>
+        <definition>using clev::expected&lt; void &gt;::error_type = </definition>
+        <argsstring></argsstring>
+        <name>error_type</name>
+        <qualifiedname>clev::expected&lt; void &gt;::error_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="132" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structclev_1_1expected_3_01void_01_4_1aca118ea682f6fd7f20aba2a23d5ca29c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>void</type>
+        <definition>void clev::expected&lt; void &gt;::or_abort</definition>
+        <argsstring>()</argsstring>
+        <name>or_abort</name>
+        <qualifiedname>clev::expected&lt; void &gt;::or_abort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="104" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="104" bodyend="108"/>
+        <referencedby refid="classpars_1_1ev_1_1enqueuer_1ad264589532b3272d43dfaf3d0ad352ec" compoundref="enqueuer_8h" startline="66" endline="89">pars::ev::enqueuer::queue_fire</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_3_01void_01_4_1a25663cb98061bb27746e02a7bfd0250a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void clev::expected&lt; void &gt;::or_exit</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>or_exit</name>
+        <qualifiedname>clev::expected&lt; void &gt;::or_exit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="110" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename to_value_t</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto clev::expected&lt; void &gt;::transform_to</definition>
+        <argsstring>(to_value_t &amp;&amp;v) &amp;&amp;noexcept</argsstring>
+        <name>transform_to</name>
+        <qualifiedname>clev::expected&lt; void &gt;::transform_to</qualifiedname>
+        <param>
+          <type>to_value_t &amp;&amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="117" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="117" bodyend="123"/>
+        <references refid="namespaceclev_1a4a8c676aa6064bd705f1b146c66b0167">clev::expected</references>
+        <referencedby refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" compoundref="nngxx_2err_8h" startline="115" endline="120">nngxx::make</referencedby>
+        <referencedby refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" compoundref="opt__getter_8h" startline="51" endline="142">nngxx::opt_getter&lt; opt_v, nng_t &gt;::operator()</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>expected::value_type &amp;</type>
+        <definition>expected::value_type &amp; clev::expected&lt; void &gt;::value_or_abort</definition>
+        <argsstring>() &amp;</argsstring>
+        <name>value_or_abort</name>
+        <qualifiedname>clev::expected&lt; void &gt;::value_or_abort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="138" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="138" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>expected::value_type &amp;&amp;</type>
+        <definition>expected::value_type &amp;&amp; clev::expected&lt; void &gt;::value_or_abort</definition>
+        <argsstring>() &amp;&amp;</argsstring>
+        <name>value_or_abort</name>
+        <qualifiedname>clev::expected&lt; void &gt;::value_or_abort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="147" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" prot="public" static="no" nodiscard="yes" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>const expected::value_type &amp;</type>
+        <definition>const expected::value_type &amp; clev::expected&lt; void &gt;::value_or_abort</definition>
+        <argsstring>() const &amp;</argsstring>
+        <name>value_or_abort</name>
+        <qualifiedname>clev::expected&lt; void &gt;::value_or_abort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="156" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="156" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" prot="public" static="no" nodiscard="yes" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>const expected::value_type &amp;&amp;</type>
+        <definition>const expected::value_type &amp;&amp; clev::expected&lt; void &gt;::value_or_abort</definition>
+        <argsstring>() const &amp;&amp;</argsstring>
+        <name>value_or_abort</name>
+        <qualifiedname>clev::expected&lt; void &gt;::value_or_abort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="165" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="165" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a85bb320ee64f4e18d04aaa7a5c186746" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">expected</ref>&lt; std::reference_wrapper&lt; void &gt; &gt;</type>
+        <definition>expected&lt; std::reference_wrapper&lt; void &gt; &gt; clev::expected&lt; void &gt;::and_assign_to</definition>
+        <argsstring>(void &amp;dest) &amp;&amp;noexcept</argsstring>
+        <name>and_assign_to</name>
+        <qualifiedname>clev::expected&lt; void &gt;::and_assign_to</qualifiedname>
+        <param>
+          <type>void &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="174" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="174" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto clev::expected&lt; void &gt;::and_then</definition>
+        <argsstring>(fn_t &amp;&amp;f) &amp;&amp;noexcept</argsstring>
+        <name>and_then</name>
+        <qualifiedname>clev::expected&lt; void &gt;::and_then</qualifiedname>
+        <param>
+          <type>fn_t &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="188" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="188" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto clev::expected&lt; void &gt;::transform_to</definition>
+        <argsstring>() &amp;&amp;noexcept</argsstring>
+        <name>transform_to</name>
+        <qualifiedname>clev::expected&lt; void &gt;::transform_to</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="206" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="206" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto clev::expected&lt; void &gt;::transform_to</definition>
+        <argsstring>(to_value_t &amp;&amp;v) &amp;&amp;noexcept</argsstring>
+        <name>transform_to</name>
+        <qualifiedname>clev::expected&lt; void &gt;::transform_to</qualifiedname>
+        <param>
+          <type>to_value_t &amp;&amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="215" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="215" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1expected_1afc903d688dd32154b8bec104f9e6b5be" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto clev::expected&lt; void &gt;::discard_value</definition>
+        <argsstring>() &amp;&amp;noexcept</argsstring>
+        <name>discard_value</name>
+        <qualifiedname>clev::expected&lt; void &gt;::discard_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="223" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="223" bodyend="229"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>clev::expected&lt; void &gt;</label>
+        <link refid="structclev_1_1expected_3_01void_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::expected&lt; void, std::error_code &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>clev::expected&lt; void &gt;</label>
+        <link refid="structclev_1_1expected_3_01void_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::expected&lt; void, std::error_code &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="96" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="97" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structclev_1_1expected_1a85bb320ee64f4e18d04aaa7a5c186746" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>and_assign_to</name></member>
+      <member refid="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>and_then</name></member>
+      <member refid="structclev_1_1expected_1afc903d688dd32154b8bec104f9e6b5be" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>discard_value</name></member>
+      <member refid="structclev_1_1expected_1a3b0a99885068f426052c249d05850093" prot="private" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>error_type</name></member>
+      <member refid="structclev_1_1expected_3_01void_01_4_1aca118ea682f6fd7f20aba2a23d5ca29c" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>or_abort</name></member>
+      <member refid="structclev_1_1expected_3_01void_01_4_1a25663cb98061bb27746e02a7bfd0250a" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>or_exit</name></member>
+      <member refid="structclev_1_1expected_3_01void_01_4_1adbb7727e833b838a14b5d15570c83a7d" prot="private" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>parent</name></member>
+      <member refid="structclev_1_1expected_1a8d1074bc5505a4ac8466e27b80cf4f64" prot="private" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>parent</name></member>
+      <member refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>transform_to</name></member>
+      <member refid="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>transform_to</name></member>
+      <member refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>transform_to</name></member>
+      <member refid="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>value_or_abort</name></member>
+      <member refid="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>value_or_abort</name></member>
+      <member refid="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>value_or_abort</name></member>
+      <member refid="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" prot="public" virt="non-virtual"><scope>clev::expected&lt; void &gt;</scope><name>value_or_abort</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

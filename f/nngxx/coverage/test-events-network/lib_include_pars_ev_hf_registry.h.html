@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-network - [...]/lib/include/pars/ev/hf_registry.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 08:05:48 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">4</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;pars/concept/kind.h&quot;
+             : #include &quot;pars/ev/job.h&quot;
+             : #include &quot;pars/ev/make_hf.h&quot;
+             : #include &quot;pars/ev/spec.h&quot;
+             : #include &quot;pars/fmt/formattable.h&quot;
+             : #include &quot;pars/log.h&quot;
+             : 
+             : #include &lt;mutex&gt;
+             : #include &lt;unordered_map&gt;
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : class runner;
+             : 
+             : } // namespace pars::ev
+             : 
+             : namespace pars::net
+             : {
+             : 
+             : class rep;
+             : class req;
+             : 
+             : } // namespace pars::net
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : using job_handler_f = std::function&lt;void(job)&gt;;
+             : 
+             : struct hf_registry
+             : {
+             : public:
+             :   hf_registry(runner&amp; r)
+             :     : runner_m{r}
+             :   {
+             :   }
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, ev::event_c event_t,
+             :            typename class_t&gt;
+             :     requires ev::kind_c&lt;kind_of&gt;
+             :   void on(void (class_t::*mem_fn)(hf_arg&lt;kind_of, event_t&gt;), class_t* self)
+             :   {
+             :     insert&lt;kind_of, event_t&gt;(make_hf(mem_fn, self));
+             :   }
+             : 
+             : private:
+             :   friend net::rep;
+             :   friend net::req;
+             :   friend runner;
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void insert(handler_f&lt;kind_of, event_t&gt; hf)
+             :   {
+             :     insert(0, std::move(hf));
+             :   }
+             : 
+             :   /// Insert an handler_f for a kind_of&lt;event_t&gt; on a socket s_id
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   void insert(int s_id, handler_f&lt;kind_of, event_t&gt; hf);
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   auto lock() <span class="lineNoCov">{ return std::unique_lock{mtx_m}; }</span>
+             : 
+             :   bool has_handler_for(int s_id, std::size_t spec_hash)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return handlers_m[s_id].contains(spec_hash);</span>
+             :   }
+             : 
+             :   const std::type_info* const type_for(std::size_t spec_hash)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return types_m[spec_hash];</span>
+             :   }
+             : 
+             :   const job_handler_f&amp; handler_for(int s_id, std::size_t spec_hash)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return handlers_m[s_id][spec_hash];</span>
+             :   }
+             : 
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :     requires kind_c&lt;kind_of&gt;
+             :   auto insert_jhf(int s_id, job_handler_f hf)
+             :   {
+             :     auto spec_hash = spec&lt;kind_of&lt;event_t&gt;&gt;::hash;
+             : 
+             :     if (!handlers_m[s_id].try_emplace(spec_hash, std::move(hf)).second)
+             :       throw std::runtime_error(fmt::format(
+             :         &quot;Unable to emplace the handler_f for Socket #{} and Spec {:X}&quot;, s_id,
+             :         spec_hash));
+             : 
+             :     // register the type for logging purpose
+             :     types_m[spec_hash] = &amp;typeid(kind_of&lt;event_t&gt;);
+             : 
+             :     pars::debug(SL, lf::event, &quot;Socket {}: Registered {}!&quot;, s_id,
+             :                 spec&lt;kind_of&lt;event_t&gt;&gt;{});
+             :   }
+             : 
+             :   std::mutex mtx_m; /// protects handlers_m, types_m
+             :   std::unordered_map&lt;int, std::unordered_map&lt;std::size_t, job_handler_f&gt;&gt;
+             :     handlers_m; ///&lt; job_handler_f of a spec hash
+             :   std::unordered_map&lt;std::size_t, const std::type_info*&gt;
+             :     types_m; ///&lt; type_info of a spec hash, for debugging purpose only
+             : 
+             :   runner&amp; runner_m;
+             : };
+             : 
+             : } // namespace pars::ev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

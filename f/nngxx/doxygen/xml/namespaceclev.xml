@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespaceclev" kind="namespace" language="C++">
+    <compoundname>clev</compoundname>
+    <innerclass refid="structclev_1_1exception" prot="public">clev::exception</innerclass>
+    <innerclass refid="structclev_1_1expected" prot="public">clev::expected</innerclass>
+    <innerclass refid="structclev_1_1expected_3_01void_01_4" prot="public">clev::expected&lt; void &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface" prot="public">clev::iface</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__aio_01_5_01_4" prot="public">clev::iface&lt; nng_aio * &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__ctx_01_4" prot="public">clev::iface&lt; nng_ctx &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__dialer_01_4" prot="public">clev::iface&lt; nng_dialer &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__listener_01_4" prot="public">clev::iface&lt; nng_listener &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__msg_01_5_01_4" prot="public">clev::iface&lt; nng_msg * &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__pipe_01_4" prot="public">clev::iface&lt; nng_pipe &gt;</innerclass>
+    <innerclass refid="structclev_1_1iface_3_01nng__socket_01_4" prot="public">clev::iface&lt; nng_socket &gt;</innerclass>
+    <innerclass refid="structclev_1_1is__expected__specialization" prot="public">clev::is_expected_specialization</innerclass>
+    <innerclass refid="structclev_1_1is__expected__specialization_3_01expected__t_3_01value__t_01_4_01_4" prot="public">clev::is_expected_specialization&lt; expected_t&lt; value_t &gt; &gt;</innerclass>
+    <innerclass refid="structclev_1_1own" prot="public">clev::own</innerclass>
+    <innerclass refid="structclev_1_1unexpected" prot="public">clev::unexpected</innerclass>
+    <innerclass refid="structclev_1_1value" prot="public">clev::value</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceclev_1a24d461a6f1667035ddcbcf4591180c3b" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool clev::clev_exception_disabled_v</definition>
+        <argsstring></argsstring>
+        <name>clev_exception_disabled_v</name>
+        <qualifiedname>clev::clev_exception_disabled_v</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="50" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceclev_1ac6cbc44586b9a0071f0db70322d6018d" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename expected_t</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool clev::is_expected_specialization_v</definition>
+        <argsstring></argsstring>
+        <name>is_expected_specialization_v</name>
+        <qualifiedname>clev::is_expected_specialization_v</qualifiedname>
+        <initializer>=
+  <ref refid="structclev_1_1is__expected__specialization" kindref="compound">is_expected_specialization</ref>&lt;expected_t&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="92" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" compoundref="clev_2err_8h" startline="188" endline="203">clev::expected&lt; value_t &gt;::and_then</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceclev_1a534fe5d8dfef03b5509aa3fa1846ff38" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clev::abort_now</definition>
+        <argsstring>(const std::error_code err)</argsstring>
+        <name>abort_now</name>
+        <qualifiedname>clev::abort_now</qualifiedname>
+        <param>
+          <type>const std::error_code</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="55" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1a4e7c968daf8f7fab7c1a1e491de4fa12" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clev::exit_now</definition>
+        <argsstring>(const std::error_code err) noexcept</argsstring>
+        <name>exit_now</name>
+        <qualifiedname>clev::exit_now</qualifiedname>
+        <param>
+          <type>const std::error_code</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="63" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1a4a8c676aa6064bd705f1b146c66b0167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename value_t</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>clev::expected</definition>
+        <argsstring>(value_t &amp;&amp;) -&gt; expected&lt; value_t &gt;</argsstring>
+        <name>expected</name>
+        <qualifiedname>clev::expected</qualifiedname>
+        <param>
+          <type>value_t &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="233" column="1" declfile="/home/runner/work/pars/pars/lib/include/clev/err.h" declline="233" declcolumn="1"/>
+        <referencedby refid="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" compoundref="clev_2err_8h" startline="206" endline="212">clev::expected&lt; value_t &gt;::transform_to</referencedby>
+        <referencedby refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" compoundref="clev_2err_8h" startline="215" endline="221">clev::expected&lt; value_t &gt;::transform_to</referencedby>
+        <referencedby refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="117" endline="123">clev::expected&lt; void &gt;::transform_to</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename enum_t</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; clev::make_expected</definition>
+        <argsstring>(const int e) noexcept</argsstring>
+        <name>make_expected</name>
+        <qualifiedname>clev::make_expected</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="236" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="236" bodyend="242"/>
+        <referencedby refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</referencedby>
+        <referencedby refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" compoundref="nngxx_2err_8h" startline="115" endline="120">nngxx::make</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="38" column="1"/>
+  </compounddef>
+</doxygen>

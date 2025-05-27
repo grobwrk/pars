@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/tests - [...]/lib/include/nngxx/iface/msg.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/tests</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 08:05:48 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">6</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">16.6 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">1</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;nngxx/iface/value.h&quot;
+             : #include &quot;nngxx/pipe.h&quot;
+             : 
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : namespace nngxx
+             : {
+             : 
+             : struct msg_body;
+             : 
+             : struct msg_header;
+             : 
+             : } // namespace nngxx
+             : 
+             : template&lt;&gt;
+             : struct clev::iface&lt;nng_msg*&gt; : nngxx::value&lt;nng_msg*&gt;
+             : {
+             :   using value::value;
+             : 
+          18</span> :   [[nodiscard]] inline static nng_msg* empty() noexcept <span class="lineCov">{ return nullptr; }</span>
+             : 
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_msg* v) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_free, v);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt;
+             :   copy(nng_msg** d, const nng_msg* s) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_dup, d, s);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; alloc(std::size_t sz) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_alloc, &amp;v, sz);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline const nngxx::pipe_view get_pipe() const noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nng_msg_get_pipe(v);</span>
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   inline void set_pipe(nngxx::pipe_view&amp; p) noexcept <span class="lineNoCov">{ nng_msg_set_pipe(v, p); }</span>
+             : 
+             :   [[nodiscard]] inline nngxx::msg_body body() noexcept;
+             : 
+             :   [[nodiscard]] inline const nngxx::msg_body body() const noexcept;
+             : 
+             :   [[nodiscard]] inline nngxx::msg_header header() noexcept;
+             : 
+             :   [[nodiscard]] inline const nngxx::msg_header header() const noexcept;
+             : };
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

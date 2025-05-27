@@ -1,0 +1,1157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacenngxx" kind="namespace" language="C++">
+    <compoundname>nngxx</compoundname>
+    <innerclass refid="structnngxx_1_1msg__body" prot="public">nngxx::msg_body</innerclass>
+    <innerclass refid="structnngxx_1_1msg__header" prot="public">nngxx::msg_header</innerclass>
+    <innerclass refid="structnngxx_1_1opt__getter" prot="public">nngxx::opt_getter</innerclass>
+    <innerclass refid="structnngxx_1_1opt__setter" prot="public">nngxx::opt_setter</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type" prot="public">nngxx::opt_to_nng_type</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1recvtimeo_01_4" prot="public">nngxx::opt_to_nng_type&lt; opt::recvtimeo &gt;</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__tick_01_4" prot="public">nngxx::opt_to_nng_type&lt; opt::req_resend_tick &gt;</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__time_01_4" prot="public">nngxx::opt_to_nng_type&lt; opt::req_resend_time &gt;</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sendtimeo_01_4" prot="public">nngxx::opt_to_nng_type&lt; opt::sendtimeo &gt;</innerclass>
+    <innerclass refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4" prot="public">nngxx::opt_to_nng_type&lt; opt::sockname &gt;</innerclass>
+    <innerclass refid="structnngxx_1_1value" prot="public">nngxx::value</innerclass>
+    <innernamespace refid="namespacenngxx_1_1pull">nngxx::pull</innernamespace>
+    <innernamespace refid="namespacenngxx_1_1push">nngxx::push</innernamespace>
+    <innernamespace refid="namespacenngxx_1_1rep">nngxx::rep</innernamespace>
+    <innernamespace refid="namespacenngxx_1_1req">nngxx::req</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>err</name>
+        <qualifiedname>nngxx::err</qualifiedname>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" prot="public">
+          <name>success</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6eb25cafd325fc432de73fe0d2881a90" prot="public">
+          <name>intr</name>
+          <initializer>= NNG_EINTR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c" prot="public">
+          <name>nomem</name>
+          <initializer>= NNG_ENOMEM</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a15e757c159904fb372bd77be464a4586" prot="public">
+          <name>inval</name>
+          <initializer>= NNG_EINVAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a8bc1b2f84252c3df4edd53e4aad097a7" prot="public">
+          <name>busy</name>
+          <initializer>= NNG_EBUSY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6bd1da51c3edc54d566604a43bdc1dbe" prot="public">
+          <name>timedout</name>
+          <initializer>= NNG_ETIMEDOUT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad8c5f74af7f29866068ca57008ed8388" prot="public">
+          <name>connrefused</name>
+          <initializer>= NNG_ECONNREFUSED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349e686330723975502e9ef4f939a5ac" prot="public">
+          <name>closed</name>
+          <initializer>= NNG_ECLOSED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a639849f6b368019778991b32434354fc" prot="public">
+          <name>again</name>
+          <initializer>= NNG_EAGAIN</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024" prot="public">
+          <name>notsup</name>
+          <initializer>= NNG_ENOTSUP</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd67aae71a38916d5ad00dd87692ab9a" prot="public">
+          <name>addrinuse</name>
+          <initializer>= NNG_EADDRINUSE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e" prot="public">
+          <name>state</name>
+          <initializer>= NNG_ESTATE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569" prot="public">
+          <name>noent</name>
+          <initializer>= NNG_ENOENT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349c85aae1d71151c001702f17a2b5f0" prot="public">
+          <name>proto</name>
+          <initializer>= NNG_EPROTO</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab748f56cf76526f8606d7463b9df9f2e" prot="public">
+          <name>unreachable</name>
+          <initializer>= NNG_EUNREACHABLE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9957561d3300a5c3c0a8d79e0703c480" prot="public">
+          <name>addrinval</name>
+          <initializer>= NNG_EADDRINVAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aca659200663cf654dc4410ed494451ee" prot="public">
+          <name>perm</name>
+          <initializer>= NNG_EPERM</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108afd864c5303e342cd062d0479af2ee92b" prot="public">
+          <name>msgsize</name>
+          <initializer>= NNG_EMSGSIZE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab9ca56d12de113e1babfacc263391aa4" prot="public">
+          <name>connaborted</name>
+          <initializer>= NNG_ECONNABORTED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a46b677b73a61d3c343db5c23ab4a2ab2" prot="public">
+          <name>connreset</name>
+          <initializer>= NNG_ECONNRESET</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad5c39a1d9aced393f835f334a1fb9206" prot="public">
+          <name>canceled</name>
+          <initializer>= NNG_ECANCELED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4" prot="public">
+          <name>nofiles</name>
+          <initializer>= NNG_ENOFILES</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272" prot="public">
+          <name>nospc</name>
+          <initializer>= NNG_ENOSPC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a035d02e56845b5a4979feabda0824f88" prot="public">
+          <name>exist</name>
+          <initializer>= NNG_EEXIST</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40" prot="public">
+          <name>readonly</name>
+          <initializer>= NNG_EREADONLY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aef1d48fe20b591902a50fa3ba5f7e88f" prot="public">
+          <name>writeonly</name>
+          <initializer>= NNG_EWRITEONLY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a5ae9b7f211e23aac3df5f2b8f3b8eada" prot="public">
+          <name>crypto</name>
+          <initializer>= NNG_ECRYPTO</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108af437fd2fc6626d7d27a0c6864402bf3b" prot="public">
+          <name>peerauth</name>
+          <initializer>= NNG_EPEERAUTH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d" prot="public">
+          <name>noarg</name>
+          <initializer>= NNG_ENOARG</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1f2a1ba9f974029c8e43ae8f59637f4c" prot="public">
+          <name>ambiguous</name>
+          <initializer>= NNG_EAMBIGUOUS</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a3caf72759b505eb34e97b1770a19c1d4" prot="public">
+          <name>badtype</name>
+          <initializer>= NNG_EBADTYPE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a561d9fe75aacd80a85dfdca62f8bdc77" prot="public">
+          <name>connshut</name>
+          <initializer>= NNG_ECONNSHUT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad1efad72dc5b17dc66a46767c32fff40" prot="public">
+          <name>internal</name>
+          <initializer>= NNG_EINTERNAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd5763c8ee2068e505915d3abf12c45c" prot="public">
+          <name>syserr</name>
+          <initializer>= NNG_ESYSERR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aba615b5939d7c8d16d9963d2f3dd3ef9" prot="public">
+          <name>tranerr</name>
+          <initializer>= NNG_ETRANERR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="74" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="75" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>opt</name>
+        <qualifiedname>nngxx::opt</qualifiedname>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba1d6e8f4eecb2a74918e1e929dd656651" prot="public">
+          <name>sockname</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebabdd166af3a63f7be696dd17a218a6ffb" prot="public">
+          <name>raw</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba7fabc1404929c9e521e4906f5192c2f0" prot="public">
+          <name>recvbuf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebad12eaa7e7b72ba78c5a2f780c736c4c9" prot="public">
+          <name>sendbuf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebabc82f77c123af69082d2df253e713013" prot="public">
+          <name>recvfd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebad82f3cb9c24f67f8ef646f2ecc39abef" prot="public">
+          <name>sendfd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab2ddbb134cb7393838de250c925b9058" prot="public">
+          <name>recvtimeo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba401401d015d8f1561c45f089ee3739ba" prot="public">
+          <name>sendtimeo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba46efa453cc1e3e067cc3c023d2b0a3fb" prot="public">
+          <name>locaddr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba1d67ce36148bd0a1a12b9d7437ea7a63" prot="public">
+          <name>remaddr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba572d4e421e5e6b9bc11d815e8a027112" prot="public">
+          <name>url</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba048f3b86c37f62194df6002278fb8ead" prot="public">
+          <name>maxttl</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab735b662e52a39fb9ad878b0a008bedb" prot="public">
+          <name>recvmaxsz</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba4f2f13a34fe86aa1017d0f85b2a99b8e" prot="public">
+          <name>reconnmint</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebace08d1a163044f25c42115dcb38f5632" prot="public">
+          <name>reconnmaxt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab7b347fbe1d28a4c06d671908c68c567" prot="public">
+          <name>peergid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba40575bf65c44003f590d6178df18b644" prot="public">
+          <name>peerpid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba4427d891e35b358ca126d1ddd7b97635" prot="public">
+          <name>peeruid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba35fea86bcebc0b4c9659baf44d66ee3b" prot="public">
+          <name>peerzoneid</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba24149147625fbb5f43ae591165967617" prot="public">
+          <name>req_resend_time</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebaea897a81a43c7a14ab13e1c2d9d0b4cf" prot="public">
+          <name>req_resend_tick</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" line="38" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" bodystart="39" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325f" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>opt_overload</name>
+        <qualifiedname>nngxx::opt_overload</qualifiedname>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" prot="public">
+          <name>integer</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" prot="public">
+          <name>boolean</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" prot="public">
+          <name>string</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" prot="public">
+          <name>size</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" prot="public">
+          <name>sockaddr</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" prot="public">
+          <name>duration</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" prot="public">
+          <name>uint64</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" line="67" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>pipe_ev</name>
+        <qualifiedname>nngxx::pipe_ev</qualifiedname>
+        <enumvalue id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a76b315b05657a3099896b07a17978946" prot="public">
+          <name>add_pre</name>
+          <initializer>= NNG_PIPE_EV_ADD_PRE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802ad7572fbaa2c6888951083ca5e414289f" prot="public">
+          <name>add_post</name>
+          <initializer>= NNG_PIPE_EV_ADD_POST</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a19b14640109dba7832348902bdc72924" prot="public">
+          <name>rem_post</name>
+          <initializer>= NNG_PIPE_EV_REM_POST</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a0fc3cfbc27e91ea60a787de13dae3e3c" prot="public">
+          <name>num</name>
+          <initializer>= NNG_PIPE_EV_NUM</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" bodystart="40" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_aio * &gt;</type>
+        <definition>using nngxx::aio_view =  clev::iface&lt;nng_aio*&gt;</definition>
+        <argsstring></argsstring>
+        <name>aio_view</name>
+        <qualifiedname>nngxx::aio_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_aio * &gt;</type>
+        <definition>using nngxx::aio =  clev::own&lt;nng_aio*&gt;</definition>
+        <argsstring></argsstring>
+        <name>aio</name>
+        <qualifiedname>nngxx::aio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_ctx &gt;</type>
+        <definition>using nngxx::ctx_view =  clev::iface&lt;nng_ctx&gt;</definition>
+        <argsstring></argsstring>
+        <name>ctx_view</name>
+        <qualifiedname>nngxx::ctx_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_ctx &gt;</type>
+        <definition>using nngxx::ctx =  clev::own&lt;nng_ctx&gt;</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <qualifiedname>nngxx::ctx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a8256ea641b01c93a4617051a9946801b" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_dialer &gt;</type>
+        <definition>using nngxx::dialer_view =  clev::iface&lt;nng_dialer&gt;</definition>
+        <argsstring></argsstring>
+        <name>dialer_view</name>
+        <qualifiedname>nngxx::dialer_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_dialer &gt;</type>
+        <definition>using nngxx::dialer =  clev::own&lt;nng_dialer&gt;</definition>
+        <argsstring></argsstring>
+        <name>dialer</name>
+        <qualifiedname>nngxx::dialer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1ad5189003a3b178e4e02ac3ac40335212" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_listener &gt;</type>
+        <definition>using nngxx::listener_view =  clev::iface&lt;nng_listener&gt;</definition>
+        <argsstring></argsstring>
+        <name>listener_view</name>
+        <qualifiedname>nngxx::listener_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_listener &gt;</type>
+        <definition>using nngxx::listener =  clev::own&lt;nng_listener&gt;</definition>
+        <argsstring></argsstring>
+        <name>listener</name>
+        <qualifiedname>nngxx::listener</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a8e6d1cfc74418ae3c9a465c340c1a8a8" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_msg * &gt;</type>
+        <definition>using nngxx::msg_view =  clev::iface&lt;nng_msg*&gt;</definition>
+        <argsstring></argsstring>
+        <name>msg_view</name>
+        <qualifiedname>nngxx::msg_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_msg * &gt;</type>
+        <definition>using nngxx::msg =  clev::own&lt;nng_msg*&gt;</definition>
+        <argsstring></argsstring>
+        <name>msg</name>
+        <qualifiedname>nngxx::msg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>opt</type>
+            <declname>o</declname>
+            <defname>o</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">opt_to_nng_type</ref>&lt; o &gt;::return_type</type>
+        <definition>using nngxx::opt_to_nng_type_t =  opt_to_nng_type&lt;o&gt;::return_type</definition>
+        <argsstring></argsstring>
+        <name>opt_to_nng_type_t</name>
+        <qualifiedname>nngxx::opt_to_nng_type_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" line="260" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_pipe &gt;</type>
+        <definition>using nngxx::pipe_view =  clev::iface&lt;nng_pipe&gt;</definition>
+        <argsstring></argsstring>
+        <name>pipe_view</name>
+        <qualifiedname>nngxx::pipe_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_socket &gt;</type>
+        <definition>using nngxx::socket_view =  clev::iface&lt;nng_socket&gt;</definition>
+        <argsstring></argsstring>
+        <name>socket_view</name>
+        <qualifiedname>nngxx::socket_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h" line="43" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" prot="public" static="no">
+        <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_socket &gt;</type>
+        <definition>using nngxx::socket =  clev::own&lt;nng_socket&gt;</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <qualifiedname>nngxx::socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h" line="45" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenngxx_1a32a1e21e50b267a3d0692e464c0dfedd" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void nngxx::sleep</definition>
+        <argsstring>(nng_duration ms, aio_view &amp;aio) noexcept</argsstring>
+        <name>sleep</name>
+        <qualifiedname>nngxx::sleep</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kindref="member">aio_view</ref> &amp;</type>
+          <declname>aio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="41" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1abf1e7df2fd9f119bc5805bead7180c3b" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref> &gt;</type>
+        <definition>static clev::expected&lt; aio &gt; nngxx::make_aio</definition>
+        <argsstring>(void(*cb)(void *), void *arg) noexcept</argsstring>
+        <name>make_aio</name>
+        <qualifiedname>nngxx::make_aio</qualifiedname>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="46" column="31" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a70f35bd836d0a359c41baea16cab054d" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref> &gt;</type>
+        <definition>static clev::expected&lt; aio &gt; nngxx::make_aio</definition>
+        <argsstring>(void(*cb)(void *), void *arg, msg m) noexcept</argsstring>
+        <name>make_aio</name>
+        <qualifiedname>nngxx::make_aio</qualifiedname>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">msg</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="53" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" bodystart="53" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a2bc0be4423cd53565345c15e68718993" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kindref="member">ctx</ref> &gt;</type>
+        <definition>static clev::expected&lt; ctx &gt; nngxx::make_ctx</definition>
+        <argsstring>(socket_view &amp;s) noexcept</argsstring>
+        <name>make_ctx</name>
+        <qualifiedname>nngxx::make_ctx</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">socket_view</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a5af84fe9ec9a75547077292cc3184ba3" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">dialer</ref> &gt;</type>
+        <definition>static clev::expected&lt; dialer &gt; nngxx::make_dialer</definition>
+        <argsstring>(socket_view &amp;s, const char *addr) noexcept</argsstring>
+        <name>make_dialer</name>
+        <qualifiedname>nngxx::make_dialer</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">socket_view</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/dialer.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1af7cc8648f9b781ceefa19bff3405c104" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const std::error_category &amp;</type>
+        <definition>static const std::error_category &amp; nngxx::error_category</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>error_category</name>
+        <qualifiedname>nngxx::error_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="44" column="42" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="44" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a45d6dbea9ed7507e7aef5ac8f827f2c3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::error_code</type>
+        <definition>std::error_code nngxx::make_error_code</definition>
+        <argsstring>(err e) noexcept</argsstring>
+        <name>make_error_code</name>
+        <qualifiedname>nngxx::make_error_code</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">err</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="59" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ret_t</type>
+          </param>
+          <param>
+            <type>typename arg_t</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; std::remove_pointer_t&lt; arg_t &gt; &gt;</type>
+        <definition>clev::expected&lt; std::remove_pointer_t&lt; arg_t &gt; &gt; nngxx::make</definition>
+        <argsstring>(ret_t(*f)(arg_t, args_t...), args_t... args) noexcept</argsstring>
+        <name>make</name>
+        <qualifiedname>nngxx::make</qualifiedname>
+        <param>
+          <type>ret_t(*)(arg_t, args_t...)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>args_t...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="115" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="115" bodyend="120"/>
+        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="236" endline="242">clev::make_expected</references>
+        <references refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="117" endline="123">clev::expected&lt; void &gt;::transform_to</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ret_t</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::invoke</definition>
+        <argsstring>(ret_t(*f)(args_t...), args_t... args) noexcept</argsstring>
+        <name>invoke</name>
+        <qualifiedname>nngxx::invoke</qualifiedname>
+        <param>
+          <type>ret_t(*)(args_t...)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>args_t...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="123" column="24" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="123" bodyend="127"/>
+        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="236" endline="242">clev::make_expected</references>
+        <referencedby refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="64" endline="84">nngxx::msg_body::append</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="115" endline="135">nngxx::msg_body::chop</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a39703ccc9d20a4094925e1c82d3c031c" compoundref="msg__body_8h" startline="137" endline="140">nngxx::msg_body::chop</referencedby>
+        <referencedby refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" compoundref="opt__getter_8h" startline="51" endline="142">nngxx::opt_getter&lt; opt_v, nng_t &gt;::operator()</referencedby>
+        <referencedby refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" compoundref="opt__setter_8h" startline="49" endline="122">nngxx::opt_setter&lt; opt_v, nng_t &gt;::operator()</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="87" endline="107">nngxx::msg_body::trim</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a37fc00c2c8ff16eb0e02f97eb0106a55" compoundref="msg__body_8h" startline="109" endline="112">nngxx::msg_body::trim</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a0c256ba910e505bd0bef5e615b5c8023" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::invoke</definition>
+        <argsstring>(void(*f)(args_t...), args_t... args) noexcept</argsstring>
+        <name>invoke</name>
+        <qualifiedname>nngxx::invoke</qualifiedname>
+        <param>
+          <type>void(*)(args_t...)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>args_t...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="130" column="24" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a5fb155c4d0007959b70c15da8b977905" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">listener</ref> &gt;</type>
+        <definition>static clev::expected&lt; listener &gt; nngxx::make_listener</definition>
+        <argsstring>(socket_view &amp;s, const char *addr) noexcept</argsstring>
+        <name>make_listener</name>
+        <qualifiedname>nngxx::make_listener</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">socket_view</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/listener.h" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a74aba1b204c6b21a428687aac0331e96" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">msg</ref> &gt;</type>
+        <definition>static clev::expected&lt; msg &gt; nngxx::make_msg</definition>
+        <argsstring>(std::size_t sz) noexcept</argsstring>
+        <name>make_msg</name>
+        <qualifiedname>nngxx::make_msg</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1ad51ba697120ad200420c7e4c0cc06c4c" prot="public" static="yes" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>opt</type>
+            <declname>o</declname>
+            <defname>o</defname>
+          </param>
+        </templateparamlist>
+        <type>const char *</type>
+        <definition>static constexpr const char * nngxx::opt_to_nng_value</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>opt_to_nng_value</name>
+        <qualifiedname>nngxx::opt_to_nng_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" line="79" column="30" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" bodystart="79" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a0c6c2858e79550e28173c494cddc4f00" prot="public" static="yes" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>opt</type>
+            <declname>o</declname>
+            <defname>o</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325f" kindref="member">opt_overload</ref></type>
+        <definition>static constexpr opt_overload nngxx::opt_to_nng_overload</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>opt_to_nng_overload</name>
+        <qualifiedname>nngxx::opt_to_nng_overload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" line="168" column="32" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/opt.h" bodystart="168" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1aedb473509a696bead2df6edbad24d96a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>nng_pipe_ev</type>
+        <definition>nng_pipe_ev nngxx::cast_pipe_ev</definition>
+        <argsstring>(pipe_ev ev) noexcept</argsstring>
+        <name>cast_pipe_ev</name>
+        <qualifiedname>nngxx::cast_pipe_ev</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" kindref="member">pipe_ev</ref></type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" line="47" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1a139f8ed3851ddee253cf8436255ffd49" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" kindref="member">pipe_ev</ref></type>
+        <definition>pipe_ev nngxx::cast_pipe_ev</definition>
+        <argsstring>(nng_pipe_ev ev) noexcept</argsstring>
+        <name>cast_pipe_ev</name>
+        <qualifiedname>nngxx::cast_pipe_ev</qualifiedname>
+        <param>
+          <type>nng_pipe_ev</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" line="52" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/pipe.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/aio.h" line="34" column="1"/>
+  </compounddef>
+</doxygen>

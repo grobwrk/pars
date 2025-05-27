@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-network - [...]/lib/include/nngxx/iface/value.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 08:05:48 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">14</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;clev/own.h&quot;
+             : #include &quot;clev/value.h&quot;
+             : #include &quot;nngxx/concept.h&quot;
+             : #include &quot;nngxx/opt.h&quot;
+             : #include &quot;nngxx/opt_getter.h&quot;
+             : #include &quot;nngxx/opt_setter.h&quot;
+             : 
+             : #include &lt;type_traits&gt;
+             : 
+             : namespace nngxx
+             : {
+             : 
+             : template&lt;nng_c nng_t&gt;
+             : struct value : clev::value&lt;nng_t&gt;
+             : {
+             :   using parent = clev::value&lt;nng_t&gt;;
+             : 
+             :   using parent::parent;
+             : 
+             :   using nng_type = parent::value_type;
+             : 
+             :   [[nodiscard]] inline static bool is_valid(nng_type v) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if constexpr (std::is_pointer_v&lt;nng_type&gt;)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return v != nullptr;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return v.id != 0;</span>
+             :   }
+             : 
+             :   /// @name options setters
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   set_recv_timeout(nng_duration d) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::recvtimeo&gt;(d);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   set_send_timeout(nng_duration d) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::sendtimeo&gt;(d);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   set_req_resend_time(nng_duration d) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::req_resend_time&gt;(d);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   set_req_resend_tick(nng_duration d) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::req_resend_tick&gt;(d);</span>
+             :   }
+             : 
+             :   /// @name options getters
+             : 
+             :   // TODO: use me
+             :   [[nodiscard]] inline clev::expected&lt;const char*&gt;
+             :   get_sock_name() const noexcept
+             :   {
+             :     return get_option&lt;opt::sockname&gt;();
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
+             :   get_recv_timeout() const noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::recvtimeo&gt;();</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
+             :   get_send_timeout() const noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::sendtimeo&gt;();</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
+             :   get_req_resend_time() const noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::req_resend_time&gt;();</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
+             :   get_req_resend_tick() const noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::req_resend_tick&gt;();</span>
+             :   }
+             : 
+             : private:
+             :   template&lt;opt opt_v, nng_value_c nng_value_t&gt;
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; set_option(nng_value_t val)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_setter&lt;opt_v, nng_type&gt;{}(parent::v, val);</span>
+             :   }
+             : 
+             :   template&lt;opt opt_v&gt;
+             :   [[nodiscard]] inline clev::expected&lt;opt_to_nng_type_t&lt;opt_v&gt;&gt;
+             :   get_option() const
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_getter&lt;opt_v, nng_type&gt;{}(parent::v);</span>
+             :   }
+             : };
+             : 
+             : } // namespace nngxx
+             : 
+             : static_assert(ownxx_own_is_really_needed_v);
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

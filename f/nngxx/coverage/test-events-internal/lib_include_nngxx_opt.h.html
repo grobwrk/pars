@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-internal - [...]/lib/include/nngxx/opt.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-internal</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 08:05:48 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">84</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;nng/nng.h&gt;
+             : #include &lt;nng/protocol/reqrep0/req.h&gt;
+             : 
+             : namespace nngxx
+             : {
+             : 
+             : enum class opt
+             : {
+             :   sockname,
+             :   raw,
+             :   // proto, // deprecated
+             :   // protoname, // deprecated
+             :   // peer, // deprecated
+             :   // peername, // deprecated
+             :   recvbuf,
+             :   sendbuf,
+             :   recvfd,
+             :   sendfd,
+             :   recvtimeo,
+             :   sendtimeo,
+             :   locaddr,
+             :   remaddr,
+             :   url,
+             :   maxttl,
+             :   recvmaxsz,
+             :   reconnmint,
+             :   reconnmaxt,
+             :   peergid,
+             :   peerpid,
+             :   peeruid,
+             :   peerzoneid,
+             :   req_resend_time,
+             :   req_resend_tick
+             : };
+             : 
+             : enum class opt_overload
+             : {
+             :   integer,
+             :   boolean,
+             :   string,
+             :   size,
+             :   sockaddr,
+             :   duration,
+             :   uint64
+             : };
+             : 
+             : template&lt;opt o&gt;
+             : [[nodiscard]] static constexpr const char* opt_to_nng_value() noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (o == opt::sockname)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_SOCKNAME;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::raw)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RAW;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvbuf)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECVBUF;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendbuf)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_SENDBUF;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvfd)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECVFD;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendfd)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_SENDFD;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvtimeo)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECVTIMEO;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendtimeo)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_SENDTIMEO;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::locaddr)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_LOCADDR;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::remaddr)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_REMADDR;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::url)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_URL;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::maxttl)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_MAXTTL;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvmaxsz)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECVMAXSZ;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::reconnmint)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECONNMINT;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::reconnmaxt)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_RECONNMAXT;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peergid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_PEER_GID;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peerpid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_PEER_UID;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peeruid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_PEER_UID;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peerzoneid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_PEER_ZONEID;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::req_resend_time)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_REQ_RESENDTIME;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::req_resend_tick)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_REQ_RESENDTICK;</span>
+             :   }
+             : }
+             : 
+             : template&lt;opt o&gt;
+             : [[nodiscard]] static constexpr opt_overload opt_to_nng_overload() noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (o == opt::sockname)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::string;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::raw)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::boolean;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvbuf)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::integer;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendbuf)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::integer;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvfd)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::integer;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendfd)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::integer;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvtimeo)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::sendtimeo)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::locaddr)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::sockaddr;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::remaddr)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::sockaddr;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::url)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::string;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::maxttl)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::integer;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::recvmaxsz)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::size;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::reconnmint)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::reconnmaxt)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peergid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::uint64;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peerpid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::uint64;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peeruid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::uint64;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::peerzoneid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::uint64;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::req_resend_time)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if constexpr (o == opt::req_resend_tick)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
+             :   }
+             : }
+             : 
+             : template&lt;opt o&gt;
+             : struct opt_to_nng_type;
+             : 
+             : template&lt;opt o&gt;
+             : using opt_to_nng_type_t = opt_to_nng_type&lt;o&gt;::return_type;
+             : 
+             : template&lt;&gt;
+             : struct opt_to_nng_type&lt;opt::sockname&gt;
+             : {
+             :   using return_type = const char*;
+             : };
+             : 
+             : template&lt;&gt;
+             : struct opt_to_nng_type&lt;opt::recvtimeo&gt;
+             : {
+             :   using return_type = nng_duration;
+             : };
+             : 
+             : template&lt;&gt;
+             : struct opt_to_nng_type&lt;opt::sendtimeo&gt;
+             : {
+             :   using return_type = nng_duration;
+             : };
+             : 
+             : template&lt;&gt;
+             : struct opt_to_nng_type&lt;opt::req_resend_time&gt;
+             : {
+             :   using return_type = nng_duration;
+             : };
+             : 
+             : template&lt;&gt;
+             : struct opt_to_nng_type&lt;opt::req_resend_tick&gt;
+             : {
+             :   using return_type = nng_duration;
+             : };
+             : 
+             : } // namespace nngxx
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>
