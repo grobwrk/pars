@@ -29,10 +29,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/msg.h"
+
 #include "pars/concept/kind.h"
 #include "pars/net/hash.h"
-
-#include <nngpp/msg.h>
 
 #include <string_view>
 
@@ -71,9 +71,9 @@ struct klass
 };
 
 template<>
-struct klass<nng::msg> : base_klass<nng::msg>
+struct klass<nngxx::msg> : base_klass<nngxx::msg>
 {
-  using event_type = nng::msg;
+  using event_type = nngxx::msg;
 
   static constexpr std::string_view uuid =
     "a7c09171-c503-4cb2-97e4-de8d3fe621b3";

@@ -34,8 +34,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/make_hf.h"
 #include "pars/net/socket.h"
 
-#include <nngpp/protocol/pull0.h>
-
 namespace pars::net
 {
 
@@ -47,7 +45,7 @@ class pull
 public:
   /// Construct a pull
   pull(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nng::pull::v0::open()}
+    : sock_m{r, nngxx::pull::v0::make_socket().value_or_abort()}
     , hf_registry_m{h}
   {
   }

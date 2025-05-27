@@ -29,61 +29,66 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "nngxx/iface/socket.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
+#include <nng/nng.h>
+#include <nng/protocol/pipeline0/pull.h>
+#include <nng/protocol/pipeline0/push.h>
+#include <nng/protocol/reqrep0/rep.h>
+#include <nng/protocol/reqrep0/req.h>
 
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+namespace nngxx
 {
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
+namespace rep::v0
 {
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
-  {
-  }
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
-  {
-  }
+[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+{
+  return nngxx::make(nng_rep0_open).transform_to<socket>();
+}
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
-  {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
-  }
+} // namespace rep::v0
 
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
+namespace req::v0
+{
 
-  /// The id of the underlying variant
-  int id() const
-  {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
-  }
+[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+{
+  return nngxx::make(nng_req0_open).transform_to<socket>();
+}
 
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
+} // namespace req::v0
 
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
-};
+namespace pull::v0
+{
 
-} // namespace pars::net
+[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+{
+  return nngxx::make(nng_pull0_open).transform_to<socket>();
+}
+
+} // namespace pull::v0
+
+namespace push::v0
+{
+
+[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+{
+  return nngxx::make(nng_push0_open).transform_to<socket>();
+}
+
+} // namespace push::v0
+
+} // namespace nngxx
+
+nngxx::socket_view nngxx::pipe_view::get_socket() const noexcept
+{
+  return nng_pipe_socket(v);
+}
+
+constexpr bool nngxx_socket_is_really_needed_v = true;
+
+static_assert(std::copyable<nngxx::socket_view>);
+
+static_assert(nngxx::move_only_constructible_c<nngxx::socket>);

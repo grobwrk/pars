@@ -29,14 +29,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/aio.h"
+#include "nngxx/ctx.h"
+
 #include "pars/ev/enqueuer.h"
 #include "pars/net/context_opt.h"
 #include "pars/net/op.h"
 #include "pars/net/socket.h"
-
-#include <nngpp/aio_view.h>
-#include <nngpp/ctx.h>
-#include <nngpp/pipe_view.h>
 
 namespace pars::net
 {
@@ -44,7 +43,7 @@ namespace pars::net
 class context
 {
 public:
-  context(ev::enqueuer& r, nng::ctx&& c, const net::socket& s)
+  context(ev::enqueuer& r, nngxx::ctx&& c, const net::socket& s)
     : router_m{r}
     , ctx_m{std::move(c)}
     , sock_m{s}
@@ -58,21 +57,21 @@ public:
   void set_options(context_opt opts)
   {
     if (opts.recv_timeout)
-      ctx_m.set_opt_ms(NNG_OPT_RECVTIMEO, *opts.recv_timeout);
+      ctx_m.set_recv_timeout(*opts.recv_timeout).or_abort();
 
     if (opts.send_timeout)
-      ctx_m.set_opt_ms(NNG_OPT_SENDTIMEO, *opts.send_timeout);
+      ctx_m.set_send_timeout(*opts.send_timeout).or_abort();
   }
 
   context_opt options() const
   {
-    return {.recv_timeout = ctx_m.get_opt_ms(NNG_OPT_RECVTIMEO),
-            .send_timeout = ctx_m.get_opt_ms(NNG_OPT_SENDTIMEO)};
+    return {.recv_timeout = ctx_m.get_recv_timeout().value_or_abort(),
+            .send_timeout = ctx_m.get_send_timeout().value_or_abort()};
   }
 
-  void send_aio(nng::aio_view a) { ctx_m.send(a); }
+  void send_aio(nngxx::aio_view& a) { ctx_m.send(a); }
 
-  void recv_aio(nng::aio_view a) { ctx_m.recv(a); }
+  void recv_aio(nngxx::aio_view& a) { ctx_m.recv(a); }
 
   template<ev::event_c event_t>
   void send(event_t ev, pipe p)
@@ -98,7 +97,7 @@ public:
 private:
   ev::enqueuer& router_m;
   op op_m;
-  nng::ctx ctx_m;
+  nngxx::ctx ctx_m;
   const net::socket& sock_m;
 };
 

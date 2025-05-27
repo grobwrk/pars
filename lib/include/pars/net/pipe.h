@@ -29,16 +29,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/pipe.h"
+#include "nngxx/socket.h"
+
 #include "pars/fmt/nng.h"
 
 #include <fmt/format.h>
-#include <nngpp/pipe_view.h>
-#include <nngpp/socket_view.h>
 
 namespace pars::net
 {
 
-class pipe : public nng::pipe_view
+class pipe : public nngxx::pipe_view
 {
 public:
   pipe()
@@ -47,8 +48,8 @@ public:
   {
   }
 
-  pipe(nng::pipe_view pv) noexcept
-    : nng::pipe_view{pv.get()}
+  pipe(nngxx::pipe_view& pv) noexcept
+    : nngxx::pipe_view{pv}
     , id_m{pv.id()}
     , socket_id_m{pv.get_socket().id()}
   {
@@ -58,13 +59,12 @@ public:
 
   int socket_id() const { return socket_id_m; }
 
-  operator bool() { return nng::pipe_view::operator bool(); }
-
-  void close() const noexcept { nng_pipe_close(p); }
+  operator bool() { return nngxx::pipe_view::operator bool(); }
 
   auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "{}", static_cast<nng::pipe_view>(*this));
+    return fmt::format_to(ctx.out(), "{}",
+                          static_cast<nngxx::pipe_view>(*this));
   }
 
 private:

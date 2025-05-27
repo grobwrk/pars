@@ -71,7 +71,7 @@ public:
     {
       if (dispatcher_m.terminating())
       {
-        p.close();
+        p.close().or_abort();
 
         return;
       }
@@ -95,7 +95,7 @@ public:
   }
 
   template<net::tool_c tool_t>
-  void queue_received(nng::msg m, int s_id, tool_t& t, net::pipe p)
+  void queue_received(nngxx::msg m, int s_id, tool_t& t, net::pipe p)
   {
     dispatcher_m.queue_back(received{std::move(m), {s_id, t, p}});
   }

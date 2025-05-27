@@ -33,11 +33,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/stl.h"
 #include "pars/net/dir.h"
 
+#include "clev/err.h"
+
 #include <cereal/types/vector.hpp>
 #include <fmt/base.h>
 
 #include <chrono>
-#include <vector>
 
 namespace pars::ev
 {
@@ -116,9 +117,9 @@ struct exception
     {
       std::rethrow_exception(eptr);
     }
-    catch (nng::exception& e)
+    catch (clev::exception& e)
     {
-      return fmt::format("{} during {}", e.what(), e.who());
+      return fmt::format("{}", e.what());
     }
     catch (std::exception& e)
     {

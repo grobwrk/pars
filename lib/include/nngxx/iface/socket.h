@@ -29,61 +29,45 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include "pars/init.h"
+#include "nngxx/aio.h"
+#include "nngxx/err.h"
+#include "nngxx/iface/value.h"
+#include "nngxx/pipe.h"
+#include "nngxx/socket_decl.h"
 
-#include "nngxx/ctx.h"
-#include "nngxx/socket.h"
-
-#include <fmt/format.h>
-
-#include <typeinfo>
-#include <variant>
-
-namespace pars::net
+template<>
+struct clev::iface<nng_socket> : nngxx::value<nng_socket>
 {
+  using value::value;
 
-/**
- * @brief Represents an nng_socket or nng_ctx view
- */
-class tool_view
-{
-public:
-  /// Construct a tool_view from an nng_ctx view
-  explicit tool_view(nngxx::ctx_view c)
-    : tool_m{c}
+  [[nodiscard]] inline static nng_socket empty() noexcept
   {
+    return NNG_SOCKET_INITIALIZER;
+  };
+
+  [[nodiscard]] inline static clev::expected<void>
+  destroy(nng_socket v) noexcept
+  {
+    return nngxx::invoke(nng_socket_close, v);
   }
 
-  /// Construct a tool_view from an nng_socket view
-  explicit tool_view(nngxx::socket_view s)
-    : tool_m{s}
+  [[nodiscard]] inline int id() const noexcept { return nng_socket_id(v); }
+
+  inline void send(nngxx::aio_view& a) noexcept { nng_send_aio(v, a); }
+
+  inline void recv(nngxx::aio_view& a) noexcept { nng_recv_aio(v, a); }
+
+  [[nodiscard]] inline clev::expected<void>
+  pipe_notify(nngxx::pipe_ev ev, nng_pipe_cb cb, void* arg) noexcept
   {
+    return nngxx::invoke(nng_pipe_notify, v, cast_pipe_ev(ev), cb, arg);
   }
 
-  /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
+  [[nodiscard]] inline clev::expected<const char*> proto_name() const noexcept
   {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
+    const char* proto_name;
+
+    return nngxx::invoke(nng_socket_proto_name, v, &proto_name)
+      .transform_to(std::move(proto_name));
   }
-
-  /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
-
-  /// The id of the underlying variant
-  int id() const
-  {
-    return std::visit([](const auto& t) { return t.id(); }, tool_m);
-  }
-
-  /// Formatter for debugging purpose
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{} #{}", who(), id());
-  }
-
-private:
-  /// The underlying variant that represents either an nng_socket or nng_ctx
-  const std::variant<nngxx::ctx_view, nngxx::socket_view> tool_m;
 };
-
-} // namespace pars::net

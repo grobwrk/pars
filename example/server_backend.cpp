@@ -162,7 +162,7 @@ private:
     }
     else
     {
-      md.pipe().close();
+      md.pipe().close().or_abort();
 
       pars::info(SL, "{}: Fired {}, Pipe Rejected! [# resources: {} >= {}]", md,
                  ev, resources_count, max_allowed);
@@ -314,7 +314,7 @@ private:
 
     resources.delete_resource(p.id());
 
-    p.close();
+    p.close().or_abort();
 
     auto& ctx = comp().rep().ctxs().of(md.tool());
 

@@ -29,6 +29,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/ctx.h"
+
 #include "pars/net/context.h"
 #include "pars/net/socket.h"
 #include "pars/net/tool_view.h"
@@ -54,29 +56,27 @@ public:
       c.second.stop();
   }
 
-  auto& emplace()
+  context& emplace()
   {
     auto ctx = sock_m.make_ctx();
 
     auto id = ctx.id();
 
-    auto res = ctx_map_m.emplace(
-      std::piecewise_construct, std::forward_as_tuple(id),
-      std::forward_as_tuple(router_m, std::move(ctx), sock_m));
+    auto res = ctx_map_m.try_emplace(id, router_m, std::move(ctx), sock_m);
 
     if (!res.second)
-      throw new std::runtime_error("Unable to emplace a context");
+      throw std::runtime_error("Unable to emplace a context");
 
     return res.first->second;
   }
 
   context& of(const net::tool_view& t)
   {
-    if (t.type() != typeid(nng::ctx_view))
-      throw new std::runtime_error("We need a context here");
+    if (t.type() != typeid(nngxx::ctx_view))
+      throw std::runtime_error("We need a context here");
 
     if (ctx_map_m.find(t.id()) == ctx_map_m.end())
-      throw new std::runtime_error(fmt::format("Unknown context {}", t.id()));
+      throw std::runtime_error(fmt::format("Unknown context {}", t.id()));
 
     return ctx_map_m.at(t.id());
   }

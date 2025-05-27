@@ -31,46 +31,50 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h"
 
-#include <nngpp/error.h>
-
+#include <expected>
 #include <system_error>
 
-namespace pars::net
+namespace pars
 {
 
-static const std::error_category& error_category() noexcept
+enum class error
+{
+  success = 0
+};
+
+inline static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
-    virtual const char* name() const noexcept override { return "pars::net"; }
+    virtual const char* name() const noexcept override { return "pars"; }
 
     virtual std::string message(int e) const override
     {
-      return ::nng_strerror(e);
-    }
-  } network_error_category;
+      switch (static_cast<error>(e))
+      {
+      case error::success:
+        return "success";
 
-  return network_error_category;
+        break;
+      }
+    }
+  } error_category;
+
+  return error_category;
 }
 
-} // namespace pars::net
-
-namespace std
+inline std::error_code make_error_code(pars::error e) noexcept
 {
+  return std::error_code(static_cast<int>(e), pars::error_category());
+}
+
+} // namespace pars
 
 template<>
-struct is_error_code_enum<::nng::error> : true_type
+struct std::is_error_code_enum<pars::error> : true_type
 {
 };
 
-} // namespace std
+static_assert(std::convertible_to<pars::error, std::error_code>);
 
-namespace nng
-{
-
-inline std::error_code make_error_code(nng::error e) noexcept
-{
-  return std::error_code(static_cast<int>(e), pars::net::error_category());
-}
-
-} // namespace nng
+static_assert(std::constructible_from<std::error_code, pars::error>);

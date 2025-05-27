@@ -6,7 +6,7 @@ Kinds
 .. doxygenstruct:: pars::ev::sent
 
 .. doxygenstruct:: pars::ev::received
-.. doxygenstruct:: pars::ev::received< nng::msg >
+.. doxygenstruct:: pars::ev::received< nngxx::msg >
 
 .. doxygenstruct:: pars::ev::common_kind
 

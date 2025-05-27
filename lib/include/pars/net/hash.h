@@ -29,10 +29,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/msg_body.h"
+
 #include "pars/init.h"
 
 #include <fmt/format.h>
-#include <nngpp/msg.h>
 
 #include <cstddef>
 
@@ -45,12 +46,12 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   constexpr std::uint64_t prime{0x100000001B3};
 
   if (uuid.size() != 36)
-    throw new std::runtime_error("Invalid UUID [size mismatch]");
+    throw std::runtime_error("Invalid UUID [size mismatch]");
 
   for (auto i : {8, 13, 18, 23})
   {
     if (uuid[i] != '-')
-      throw new std::runtime_error(
+      throw std::runtime_error(
         fmt::format("Invalid UUID [missing separator {}]", i));
   }
 
@@ -63,7 +64,7 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
 
     if (!(c >= '0' && c <= '9') && !(c >= 'A' && c <= 'F') &&
         !(c >= 'a' && c <= 'f'))
-      throw new std::runtime_error("Invalid UUID [non hex char found]");
+      throw std::runtime_error("Invalid UUID [non hex char found]");
 
     auto x = c - c >= 'a' ? ('a' - 10) : (c >= 'A' ? ('A' - 10) : '0');
 
@@ -73,7 +74,7 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   return result;
 }
 
-static std::size_t hash_from_msg(const nng::msg& m)
+static std::size_t hash_from_msg(const nngxx::msg& m)
 {
   std::size_t h;
   if (m)

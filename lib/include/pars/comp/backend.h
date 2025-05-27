@@ -52,7 +52,7 @@ public:
 
   void init(const init_p& params)
   {
-    rep_m.sock().options(params.rep_opts);
+    rep_m.sock().set_options(params.rep_opts);
 
     rep_m.ctxs().start_recv(params.num_ctxs);
   }

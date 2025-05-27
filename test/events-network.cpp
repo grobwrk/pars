@@ -37,7 +37,7 @@ namespace pars::tests
 {
 
 using NetworkEvents =
-  ::testing::Types<nng::msg, ev::network_error, ev::creating_pipe,
+  ::testing::Types<nngxx::msg, ev::network_error, ev::creating_pipe,
                    ev::pipe_created, ev::pipe_removed>;
 
 template<typename event_t>
@@ -73,11 +73,12 @@ TYPED_TEST(NetworkKinds, EventsCanBeFired)
   if (std::default_initializable<event_type>)
   {
     // we can instantiate event_type{} without specifing the type event_type
-    ev::fired{event_type{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+    ev::fired{event_type{},
+              {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
 
     // we can instantiate specifing the type event_type
     ev::fired<event_type>{{},
-                          {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+                          {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
   }
 }
 
@@ -92,10 +93,11 @@ TYPED_TEST(NetworkKinds, EventsCanBeSent)
   if (std::default_initializable<event_type>)
   {
     // we can instantiate event_type{} without specifing the type event_type
-    ev::sent{event_type{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+    ev::sent{event_type{}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
 
     // we can instantiate specifing the type event_type
-    ev::sent<event_type>{{}, {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+    ev::sent<event_type>{{},
+                         {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
   }
 }
 
@@ -112,11 +114,11 @@ TYPED_TEST(NetworkKinds, EventsCanBeReceived)
   {
     // we can instantiate event_type{} without specifing the type event_type
     ev::received{event_type{},
-                 {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+                 {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
 
     // we can instantiate specifing the type event_type
-    ev::received<event_type>{{},
-                             {1, net::tool_view{nng::ctx_view{}}, net::pipe{}}};
+    ev::received<event_type>{
+      {}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
   }
 }
 

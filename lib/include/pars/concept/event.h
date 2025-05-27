@@ -31,8 +31,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/ev/kind_decl.h"
 
-#include <nngpp/msg.h>
-
 #include <concepts>
 #include <string_view>
 
