@@ -33,7 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/stl.h"
 #include "pars/net/dir.h"
 
-#include "nngxx/err.h"
+#include "clev/err.h"
 
 #include <cereal/types/vector.hpp>
 #include <fmt/base.h>

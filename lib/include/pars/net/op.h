@@ -72,8 +72,7 @@ public:
     pars::debug(SL, lf::net, "{}: Send Message [{}]!", f::pntl{p, t}, m);
 
     // replace the callback with the new one
-    cb_m = [&, p, ev = std::move(ev)](clev::expected<void> res,
-                                      nngxx::msg m) mutable {
+    cb_m = [&, p](clev::expected<void> res, nngxx::msg m) mutable {
       if (res)
       {
         // NOTE: m is empty on success
@@ -138,7 +137,7 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::recv_cb, this).value_or_abort();
 
     // start recv
     t.recv_aio(aio_m);
@@ -155,7 +154,7 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::sleep_cb, this).value_or_abort();
 
     nngxx::sleep(ms, aio_m);
   }
@@ -165,7 +164,7 @@ public:
     stop();
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::sleep_cb, this).value_or_abort();
 
     nngxx::sleep(ms, aio_m);
   }
@@ -245,7 +244,7 @@ private:
 
     nngxx::msg msg;
 
-    if (res)
+    if (!res)
     {
       // take ownership of the message
       msg = self->aio_m.release_msg();
@@ -278,9 +277,10 @@ private:
   {
     auto self = static_cast<op*>(arg);
 
-    auto ok = self->aio_m.result();
+    auto res = self->aio_m.result();
 
-    self->cb_m(ok, nngxx::msg{});
+    if (res)
+      self->cb_m(res, nngxx::msg{});
   }
 
   nngxx::aio aio_m;
