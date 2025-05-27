@@ -1,0 +1,671 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="log_8h" kind="file" language="C++">
+    <compoundname>log.h</compoundname>
+    <includes refid="init_8h" local="yes">init.h</includes>
+    <includes local="no">fmt/format.h</includes>
+    <includes local="no">spdlog/common.h</includes>
+    <includes local="yes">config.h</includes>
+    <includes local="no">spdlog/spdlog.h</includes>
+    <includes local="no">spdlog/sinks/basic_file_sink.h</includes>
+    <includes local="no">spdlog/sinks/null_sink.h</includes>
+    <includes local="no">spdlog/sinks/stdout_color_sinks.h</includes>
+    <includes local="no">spdlog/sinks/syslog_sink.h</includes>
+    <includedby refid="resources_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/app/resources.h</includedby>
+    <includedby refid="setup_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/app/setup.h</includedby>
+    <includedby refid="single_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/app/single.h</includedby>
+    <includedby refid="state__machine_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/app/state_machine.h</includedby>
+    <includedby refid="dispatcher_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h</includedby>
+    <includedby refid="hf__registry_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</includedby>
+    <includedby refid="serializer_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/pars/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+      <node id="7">
+        <label>config.h</label>
+      </node>
+      <node id="5">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="3">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="6">
+        <label>spdlog/common.h</label>
+      </node>
+      <node id="9">
+        <label>spdlog/sinks/basic_file_sink.h</label>
+      </node>
+      <node id="10">
+        <label>spdlog/sinks/null_sink.h</label>
+      </node>
+      <node id="11">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="12">
+        <label>spdlog/sinks/syslog_sink.h</label>
+      </node>
+      <node id="8">
+        <label>spdlog/spdlog.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <link refid="client_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <link refid="example_2event_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <link refid="server__backend_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/resources.h</label>
+        <link refid="resources_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/setup.h</label>
+        <link refid="setup_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/single.h</label>
+        <link refid="single_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/state_machine.h</label>
+        <link refid="state__machine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</label>
+        <link refid="backend_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h</label>
+        <link refid="enqueuer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</label>
+        <link refid="hf__registry_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h</label>
+        <link refid="hf__registry____insert_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/job.h</label>
+        <link refid="job_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/runner.h</label>
+        <link refid="runner_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
+        <link refid="serializer_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/pars/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context.h</label>
+        <link refid="context_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</label>
+        <link refid="context__registry_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/op.h</label>
+        <link refid="op_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pull.h</label>
+        <link refid="pull_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/push.h</label>
+        <link refid="push_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/rep.h</label>
+        <link refid="rep_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/req.h</label>
+        <link refid="req_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
+        <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <link refid="pars_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacepars">pars</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="log_8h_1ae4fda6f71f35120e2ff48157fca961b5" prot="public" static="no">
+        <name>SPDLOG_ACTIVE_LEVEL</name>
+        <initializer>pars_log_level</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="44" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" compoundref="setup_8h" startline="56" endline="113">pars::app::with_default_setup::setup</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1ad7619991068e25b9950996b5054d05e5" prot="public" static="no">
+        <name>PARS_LOG_ENABLE_SYSLOG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="55" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1ad71aeb03d03709c5072b99cb68c21992" prot="public" static="no">
+        <name>SL</name>
+        <initializer>(spdlog::source_loc{__FILE__, __LINE__, SPDLOG_FUNCTION})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="61" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" compoundref="runner_8h" startline="174" endline="194">pars::ev::runner::associate_job_to_pipe</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" compoundref="state__machine_8h" startline="140" endline="151">pars::app::state_machine&lt; state_t &gt;::commit</referencedby>
+        <referencedby refid="classpars_1_1app_1_1resources_1a5c8091ebeeaad5483cdc9a56cd85420d" compoundref="resources_8h" startline="115" endline="138">pars::app::resources&lt; key_t, resource_t, mutex_t &gt;::emplace</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" compoundref="state__machine_8h" startline="118" endline="127">pars::app::state_machine&lt; state_t &gt;::next</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" compoundref="state__machine_8h" startline="175" endline="181">pars::app::state_machine&lt; state_t &gt;::reset</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" compoundref="state__machine_8h" startline="129" endline="138">pars::app::state_machine&lt; state_t &gt;::rollback</referencedby>
+        <referencedby refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" compoundref="single_8h" startline="91" endline="106">pars::app::single&lt; component_type &gt;::run</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="82" endline="106">pars::ev::serialize::to_event</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" compoundref="serializer_8h" startline="52" endline="79">pars::ev::serialize::to_network</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>(c)<sp/>2025<sp/>Giuseppe<sp/>Roberti.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/>modification,</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/>contributors</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>include<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/common.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>include<sp/>generated<sp/>config<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>include<sp/>spdlog</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>SPDLOG_ACTIVE_LEVEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="log_8h_1ae4fda6f71f35120e2ff48157fca961b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPDLOG_ACTIVE_LEVEL<sp/>pars_log_level</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/basic_file_sink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/null_sink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/stdout_color_sinks.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_WIN32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_LOG_ENABLE_MSVC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/msvc_sink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="log_8h_1ad7619991068e25b9950996b5054d05e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_LOG_ENABLE_SYSLOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/syslog_sink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>spdlog<sp/>helper<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SL<sp/>(spdlog::source_loc{__FILE__,<sp/>__LINE__,<sp/>SPDLOG_FUNCTION})</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars" kindref="compound">pars</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="67" refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">log</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::level::level_enum<sp/>lvl,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(pars_log_enabled)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pars_log_flags<sp/>&amp;<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::spdlog::log(loc,<sp/>lvl,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="79" refid="namespacepars_1a761b17f095b90f5f48d0aa8055915639" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::level_enum<sp/>lvl,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(pars_log_enabled)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pars_log_flags<sp/>&amp;<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>::spdlog::log(lvl,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="90" refid="namespacepars_1a3e1ac793caf43f39b98dbffe2e0ef6ca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">log</ref>(spdlog::source_loc<sp/>loc,<sp/>spdlog::level::level_enum<sp/>lvl,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" kindref="member">pars::lf::user</ref>,<sp/>lvl,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="97" refid="namespacepars_1af3e76142507bfacc41c503f304c6872c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">log</ref>(spdlog::level::level_enum<sp/>lvl,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" kindref="member">pars::lf::user</ref>,<sp/>lvl,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="104" refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" kindref="member">trace</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::trace,<sp/>fmt,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="112" refid="namespacepars_1ae36f259c17d7e27af8401cc015d4da9a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" kindref="member">trace</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::trace,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="119" refid="namespacepars_1ac0c535cd64e8249ce015015a3e2c29d3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" kindref="member">trace</ref>(spdlog::source_loc<sp/>loc,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::trace,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="126" refid="namespacepars_1a5ba40dded20a9b08e34f16deb54dd142" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" kindref="member">trace</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::trace,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="132" refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">debug</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::debug,<sp/>fmt,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="140" refid="namespacepars_1a4de5bf8cc82c033ff51ef3355789d725" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">debug</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::debug,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="147" refid="namespacepars_1ac82d32af273eb841f5167e93460cea85" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">debug</ref>(spdlog::source_loc<sp/>loc,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::debug,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="154" refid="namespacepars_1aec4276570022029a78240d6a590495e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">debug</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::debug,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="160" refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">info</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::info,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="167" refid="namespacepars_1a8953afafd4acb64a245b2054e61cffbb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">info</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::info,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="174" refid="namespacepars_1aeab1970c9a8b2beabfd2b776f3f49ac4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">info</ref>(spdlog::source_loc<sp/>loc,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::info,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="181" refid="namespacepars_1a2bf3a8112548e762cd77e8451906b170" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">info</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::info,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="187" refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" kindref="member">warn</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::warn,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="194" refid="namespacepars_1a4f97dd9a647e9dbc3d6440d04d0331c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" kindref="member">warn</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::warn,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="201" refid="namespacepars_1a2e422a9d1f4f4e72e0303720167ddafd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" kindref="member">warn</ref>(spdlog::source_loc<sp/>loc,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::warn,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="208" refid="namespacepars_1aa515f2fdb7fa82453ee2ed158aecb333" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" kindref="member">warn</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::warn,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="214" refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">err</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::err,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="221" refid="namespacepars_1a314ece1bcf5312db56fc8eece18023cf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">err</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::err,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="228" refid="namespacepars_1a1010a29ab068ef10dbba53f459efa3bb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">err</ref>(spdlog::source_loc<sp/>loc,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::err,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="235" refid="namespacepars_1a25898e1fe7cc5e1cbcfebc86fc2dc828" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">err</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::err,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="241" refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" kindref="member">critical</ref>(spdlog::source_loc<sp/>loc,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>loc,<sp/>spdlog::level::critical,<sp/>fmt,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="249" refid="namespacepars_1a311e94fc62155675008a3095e58bc1d8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" kindref="member">critical</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref>,<sp/>spdlog::level::critical,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="256" refid="namespacepars_1a5c96639854aeca4b1146d527a82600ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" kindref="member">critical</ref>(spdlog::source_loc<sp/>loc,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(loc,<sp/>spdlog::level::critical,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="263" refid="namespacepars_1acc5b23fc8231ef128b3d5e964a1dfe0d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" kindref="member">critical</ref>(spdlog::format_string_t&lt;args_t...&gt;<sp/>fmt,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><ref refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kindref="member">::pars::log</ref>(spdlog::level::critical,<sp/>fmt,<sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/log.h"/>
+  </compounddef>
+</doxygen>

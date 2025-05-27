@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1own" kind="struct" language="C++" prot="public">
+    <compoundname>clev::own</compoundname>
+    <basecompoundref refid="structclev_1_1iface" prot="public" virt="non-virtual">clev::iface&lt; wrap_t &gt;</basecompoundref>
+    <includes refid="own_8h" local="no">own.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename wrap_t</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structclev_1_1own_1a87d7f4e72bb9dfbfe1385783c7d3de0a" prot="public" static="no">
+        <type><ref refid="structclev_1_1iface" kindref="compound">iface</ref>&lt; wrap_t &gt;</type>
+        <definition>using clev::own&lt; wrap_t &gt;::parent =  iface&lt;wrap_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>clev::own::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="41" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structclev_1_1own_1af60b220cbcc36b4315b9c2f127eb5d18" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::own&lt; wrap_t &gt;::own</definition>
+        <argsstring>(const own &amp;rhs) noexcept</argsstring>
+        <name>own</name>
+        <qualifiedname>clev::own::own</qualifiedname>
+        <param>
+          <type>const <ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+    <requiresclause>requires(wrap_t* d, const wrap_t s) { { iface&lt;wrap_t&gt;::copy(d, s) } -&gt; std::convertible_to&lt;<ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt;void&gt;&gt;; }    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="45" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1a066283592e97e18e8da164abb32f7b18" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+        <definition>own &amp; clev::own&lt; wrap_t &gt;::operator=</definition>
+        <argsstring>(const own &amp;rhs) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>clev::own::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+    <requiresclause>requires(wrap_t* d, const wrap_t s) { { iface&lt;wrap_t&gt;::copy(d, s) } -&gt; std::convertible_to&lt;<ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt;void&gt;&gt;; }    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="53" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="53" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1a357e8cae94b4f00b1998851d0aa1325d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>clev::own&lt; wrap_t &gt;::own</definition>
+        <argsstring>(const own &amp;rhs)=delete</argsstring>
+        <name>own</name>
+        <qualifiedname>clev::own::own</qualifiedname>
+        <param>
+          <type>const <ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+    <requiresclause>(!requires(wrap_t* d, const wrap_t s) { { iface&lt;wrap_t&gt;::copy(d, s) } -&gt; std ::convertible_to&lt;<ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt;void&gt;&gt;; })    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="69" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1a12544a20f813c3f61b1585b9a1b44e3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+        <definition>own &amp; clev::own&lt; wrap_t &gt;::operator=</definition>
+        <argsstring>(const own &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>clev::own::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+        </param>
+    <requiresclause>(!requires(wrap_t* d, const wrap_t s) { { iface&lt;wrap_t&gt;::copy(d, s) } -&gt; std ::convertible_to&lt;<ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt;void&gt;&gt;; })    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="75" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::own&lt; wrap_t &gt;::own</definition>
+        <argsstring>(own &amp;&amp;rhs) noexcept</argsstring>
+        <name>own</name>
+        <qualifiedname>clev::own::own</qualifiedname>
+        <param>
+          <type><ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="81" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;</type>
+        <definition>own &amp; clev::own&lt; wrap_t &gt;::operator=</definition>
+        <argsstring>(own &amp;&amp;rhs) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>clev::own::operator=</qualifiedname>
+        <param>
+          <type><ref refid="structclev_1_1own" kindref="compound">own</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="91" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::own&lt; wrap_t &gt;::~own</definition>
+        <argsstring>()</argsstring>
+        <name>~own</name>
+        <qualifiedname>clev::own::~own</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="106" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>clev::iface&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1iface"/>
+      </node>
+      <node id="1">
+        <label>clev::own&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>clev::iface&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1iface"/>
+      </node>
+      <node id="1">
+        <label>clev::own&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="39" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="40" bodyend="111"/>
+    <listofallmembers>
+      <member refid="structclev_1_1own_1a066283592e97e18e8da164abb32f7b18" prot="public" virt="non-virtual"><scope>clev::own</scope><name>operator=</name></member>
+      <member refid="structclev_1_1own_1a12544a20f813c3f61b1585b9a1b44e3d" prot="public" virt="non-virtual"><scope>clev::own</scope><name>operator=</name></member>
+      <member refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" prot="public" virt="non-virtual"><scope>clev::own</scope><name>operator=</name></member>
+      <member refid="structclev_1_1own_1af60b220cbcc36b4315b9c2f127eb5d18" prot="public" virt="non-virtual"><scope>clev::own</scope><name>own</name></member>
+      <member refid="structclev_1_1own_1a357e8cae94b4f00b1998851d0aa1325d" prot="public" virt="non-virtual"><scope>clev::own</scope><name>own</name></member>
+      <member refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" prot="public" virt="non-virtual"><scope>clev::own</scope><name>own</name></member>
+      <member refid="structclev_1_1own_1a87d7f4e72bb9dfbfe1385783c7d3de0a" prot="public" virt="non-virtual"><scope>clev::own</scope><name>parent</name></member>
+      <member refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" prot="public" virt="non-virtual"><scope>clev::own</scope><name>~own</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/tests - [...]/lib/include/pars/app/setup.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/tests</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 09:57:52 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">31</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;pars/log.h&quot;
+             : 
+             : namespace pars::app
+             : {
+             : 
+             : struct with_default_setup
+             : {
+             : private:
+             :   const char* default_pattern()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return &quot;%^[%H:%M:%S.%f %z] [%6P %6t] [%L]: %$%v&quot;;</span>
+             :   }
+             : 
+             :   const char* default_pattern_with_source_loc()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return &quot;%^[%H:%M:%S.%f %z] [%6P %6t] [%L]: %$%v \x1b[90m(%s:%#)\x1b[0m&quot;;</span>
+             :   }
+             : 
+             : public:
+             :   void enable_source_loc_logging()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    spdlog::set_pattern(default_pattern_with_source_loc());</span>
+             :   }
+             : 
+             :   void setup()
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if constexpr (pars_log_enabled)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      using namespace spdlog;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      /// sinks</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::vector&lt;sink_ptr&gt; sinks;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto stderr_s = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if constexpr (pars_log_enable_stderr)</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        auto stderr_sink = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        sinks.push_back(stderr_s);</span>
+             :       }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if constexpr (pars_log_enable_file)</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        auto file_s = std::make_shared&lt;sinks::basic_file_sink_mt&gt;(&quot;pars.log&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        sinks.push_back(file_s);</span>
+             :       }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">#if defined(PARS_LOG_ENABLE_MSVC)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto msvc_s = std::make_shared&lt;sinks::msvc_sink_mt&gt;();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      sinks.push_back(msvc_s);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">#endif</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">#if defined(PARS_LOG_ENABLE_SYSLOG)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto syslog_s = std::make_shared&lt;sinks::syslog_sink_mt&gt;(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        &quot;pars&quot;, LOG_CONS | LOG_NDELAY, LOG_LOCAL2, true);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      sinks.push_back(syslog_s);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">#endif</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      /// register pars logger and set as default</span>
+             : 
+             :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        auto default_l = std::make_shared&lt;logger&gt;(&quot;pars&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        // default_l-&gt;set_pattern(default_pattern);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        default_l-&gt;sinks() = sinks;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        register_logger(default_l);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        set_pattern(default_pattern());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        set_default_logger(default_l);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        set_level(static_cast&lt;level::level_enum&gt;(SPDLOG_ACTIVE_LEVEL));</span>
+             :       }
+             :     }
+             :   }
+             : 
+             : protected:
+             :   with_default_setup() = default;
+             : };
+             : 
+             : } // namespace pars::app
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

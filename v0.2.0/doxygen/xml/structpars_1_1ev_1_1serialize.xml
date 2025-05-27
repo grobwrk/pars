@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1serialize" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::serialize</compoundname>
+    <includes refid="serializer_8h" local="no">serializer.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref></type>
+        <definition>static nngxx::msg pars::ev::serialize::to_network</definition>
+        <argsstring>(event_t &amp;ev)</argsstring>
+        <name>to_network</name>
+        <qualifiedname>pars::ev::serialize::to_network</qualifiedname>
+        <param>
+          <type>event_t &amp;</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" line="52" column="21" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" bodystart="52" bodyend="79"/>
+        <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="41">pars::event</references>
+        <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="61">SL</references>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+        </templateparamlist>
+        <type>event_t</type>
+        <definition>static event_t pars::ev::serialize::to_event</definition>
+        <argsstring>(const nngxx::msg &amp;m)</argsstring>
+        <name>to_event</name>
+        <qualifiedname>pars::ev::serialize::to_event</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" line="82" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" bodystart="82" bodyend="106"/>
+        <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="41">pars::event</references>
+        <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="61">SL</references>
+        <referencedby refid="classpars_1_1ev_1_1job_1a0122d84e10b147ac9d282e1ba87ff6f4" compoundref="job_8h" startline="75" endline="86">pars::ev::job::event</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" line="49" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h" bodystart="50" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" prot="public" virt="non-virtual"><scope>pars::ev::serialize</scope><name>to_event</name></member>
+      <member refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" prot="public" virt="non-virtual"><scope>pars::ev::serialize</scope><name>to_network</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

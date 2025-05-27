@@ -1,0 +1,1318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars" kind="namespace" language="C++">
+    <compoundname>pars</compoundname>
+    <innernamespace refid="namespacepars_1_1app">pars::app</innernamespace>
+    <innernamespace refid="namespacepars_1_1comp">pars::comp</innernamespace>
+    <innernamespace refid="namespacepars_1_1ev">pars::ev</innernamespace>
+    <innernamespace refid="namespacepars_1_1f">pars::f</innernamespace>
+    <innernamespace refid="namespacepars_1_1net">pars::net</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacepars_1afcdb266fe199935265e3d7a45b4edebf" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>error</name>
+        <qualifiedname>pars::error</qualifiedname>
+        <enumvalue id="namespacepars_1afcdb266fe199935265e3d7a45b4edebfa260ca9dd8a4577fc00b7bd5810298076" prot="public">
+          <name>success</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="40" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacepars_1a12232d6f4a47a54243d1c224c421b535" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>lf</name>
+        <qualifiedname>pars::lf</qualifiedname>
+        <enumvalue id="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" prot="public">
+          <name>app</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d" prot="public">
+          <name>comp</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" prot="public">
+          <name>event</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4" prot="public">
+          <name>net</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" prot="public">
+          <name>user</name>
+          <initializer>= 1073741824</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="38" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" prot="public" static="no">
+        <type>std::chrono::duration&lt; nng_duration, std::milli &gt;</type>
+        <definition>using pars::milli =  std::chrono::duration&lt;nng_duration, std::milli&gt;</definition>
+        <argsstring></argsstring>
+        <name>milli</name>
+        <qualifiedname>pars::milli</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/init.h" line="47" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/init.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepars_1ad73ed52b3bdd1722ed180f9a891685b8" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const std::error_category &amp;</type>
+        <definition>static const std::error_category &amp; pars::error_category</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>error_category</name>
+        <qualifiedname>pars::error_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="45" column="41" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="45" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a9890a23006e95b65b26c3eea237461b8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::error_code</type>
+        <definition>std::error_code pars::make_error_code</definition>
+        <argsstring>(pars::error e) noexcept</argsstring>
+        <name>make_error_code</name>
+        <qualifiedname>pars::make_error_code</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1afcdb266fe199935265e3d7a45b4edebf" kindref="member">pars::error</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/err.h" line="66" column="24" bodyfile="/home/runner/work/pars/pars/lib/include/pars/err.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::log</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::level::level_enum lvl, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>log</name>
+        <qualifiedname>pars::log</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="67" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="67" bodyend="76"/>
+        <referencedby refid="namespacepars_1a311e94fc62155675008a3095e58bc1d8" compoundref="log_8h" startline="249" endline="253">critical</referencedby>
+        <referencedby refid="namespacepars_1acc5b23fc8231ef128b3d5e964a1dfe0d" compoundref="log_8h" startline="263" endline="266">critical</referencedby>
+        <referencedby refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" compoundref="log_8h" startline="241" endline="246">critical</referencedby>
+        <referencedby refid="namespacepars_1a5c96639854aeca4b1146d527a82600ad" compoundref="log_8h" startline="256" endline="260">critical</referencedby>
+        <referencedby refid="namespacepars_1a4de5bf8cc82c033ff51ef3355789d725" compoundref="log_8h" startline="140" endline="144">debug</referencedby>
+        <referencedby refid="namespacepars_1aec4276570022029a78240d6a590495e6" compoundref="log_8h" startline="154" endline="157">debug</referencedby>
+        <referencedby refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">debug</referencedby>
+        <referencedby refid="namespacepars_1ac82d32af273eb841f5167e93460cea85" compoundref="log_8h" startline="147" endline="151">debug</referencedby>
+        <referencedby refid="namespacepars_1a314ece1bcf5312db56fc8eece18023cf" compoundref="log_8h" startline="221" endline="225">err</referencedby>
+        <referencedby refid="namespacepars_1a25898e1fe7cc5e1cbcfebc86fc2dc828" compoundref="log_8h" startline="235" endline="238">err</referencedby>
+        <referencedby refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">err</referencedby>
+        <referencedby refid="namespacepars_1a1010a29ab068ef10dbba53f459efa3bb" compoundref="log_8h" startline="228" endline="232">err</referencedby>
+        <referencedby refid="namespacepars_1a8953afafd4acb64a245b2054e61cffbb" compoundref="log_8h" startline="167" endline="171">info</referencedby>
+        <referencedby refid="namespacepars_1a2bf3a8112548e762cd77e8451906b170" compoundref="log_8h" startline="181" endline="184">info</referencedby>
+        <referencedby refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" compoundref="log_8h" startline="160" endline="164">info</referencedby>
+        <referencedby refid="namespacepars_1aeab1970c9a8b2beabfd2b776f3f49ac4" compoundref="log_8h" startline="174" endline="178">info</referencedby>
+        <referencedby refid="namespacepars_1af3e76142507bfacc41c503f304c6872c" compoundref="log_8h" startline="97" endline="101">log</referencedby>
+        <referencedby refid="namespacepars_1a3e1ac793caf43f39b98dbffe2e0ef6ca" compoundref="log_8h" startline="90" endline="94">log</referencedby>
+        <referencedby refid="namespacepars_1ae36f259c17d7e27af8401cc015d4da9a" compoundref="log_8h" startline="112" endline="116">trace</referencedby>
+        <referencedby refid="namespacepars_1a5ba40dded20a9b08e34f16deb54dd142" compoundref="log_8h" startline="126" endline="129">trace</referencedby>
+        <referencedby refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" compoundref="log_8h" startline="104" endline="109">trace</referencedby>
+        <referencedby refid="namespacepars_1ac0c535cd64e8249ce015015a3e2c29d3" compoundref="log_8h" startline="119" endline="123">trace</referencedby>
+        <referencedby refid="namespacepars_1a4f97dd9a647e9dbc3d6440d04d0331c9" compoundref="log_8h" startline="194" endline="198">warn</referencedby>
+        <referencedby refid="namespacepars_1aa515f2fdb7fa82453ee2ed158aecb333" compoundref="log_8h" startline="208" endline="211">warn</referencedby>
+        <referencedby refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" compoundref="log_8h" startline="187" endline="191">warn</referencedby>
+        <referencedby refid="namespacepars_1a2e422a9d1f4f4e72e0303720167ddafd" compoundref="log_8h" startline="201" endline="205">warn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a761b17f095b90f5f48d0aa8055915639" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::log</definition>
+        <argsstring>(pars::lf lf, spdlog::level::level_enum lvl, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>log</name>
+        <qualifiedname>pars::log</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="79" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="79" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a3e1ac793caf43f39b98dbffe2e0ef6ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::log</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::level::level_enum lvl, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>log</name>
+        <qualifiedname>pars::log</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="90" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="90" bodyend="94"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" compoundref="flags_8h" startline="43">user</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1af3e76142507bfacc41c503f304c6872c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::log</definition>
+        <argsstring>(spdlog::level::level_enum lvl, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>log</name>
+        <qualifiedname>pars::log</qualifiedname>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>lvl</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="97" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="97" bodyend="101"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" compoundref="flags_8h" startline="43">user</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::trace</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>trace</name>
+        <qualifiedname>pars::trace</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="104" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="104" bodyend="109"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ae36f259c17d7e27af8401cc015d4da9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::trace</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>trace</name>
+        <qualifiedname>pars::trace</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="112" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="112" bodyend="116"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ac0c535cd64e8249ce015015a3e2c29d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::trace</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>trace</name>
+        <qualifiedname>pars::trace</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="119" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="119" bodyend="123"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a5ba40dded20a9b08e34f16deb54dd142" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::trace</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>trace</name>
+        <qualifiedname>pars::trace</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="126" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="126" bodyend="129"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::debug</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>debug</name>
+        <qualifiedname>pars::debug</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="132" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="132" bodyend="137"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+        <referencedby refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" compoundref="runner_8h" startline="174" endline="194">pars::ev::runner::associate_job_to_pipe</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" compoundref="state__machine_8h" startline="140" endline="151">pars::app::state_machine&lt; state_t &gt;::commit</referencedby>
+        <referencedby refid="classpars_1_1app_1_1resources_1a5c8091ebeeaad5483cdc9a56cd85420d" compoundref="resources_8h" startline="115" endline="138">pars::app::resources&lt; key_t, resource_t, mutex_t &gt;::emplace</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" compoundref="state__machine_8h" startline="118" endline="127">pars::app::state_machine&lt; state_t &gt;::next</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" compoundref="state__machine_8h" startline="175" endline="181">pars::app::state_machine&lt; state_t &gt;::reset</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" compoundref="state__machine_8h" startline="129" endline="138">pars::app::state_machine&lt; state_t &gt;::rollback</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="82" endline="106">pars::ev::serialize::to_event</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" compoundref="serializer_8h" startline="52" endline="79">pars::ev::serialize::to_network</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a4de5bf8cc82c033ff51ef3355789d725" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::debug</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>debug</name>
+        <qualifiedname>pars::debug</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="140" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="140" bodyend="144"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ac82d32af273eb841f5167e93460cea85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::debug</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>debug</name>
+        <qualifiedname>pars::debug</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="147" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="147" bodyend="151"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1aec4276570022029a78240d6a590495e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::debug</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>debug</name>
+        <qualifiedname>pars::debug</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="154" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="154" bodyend="157"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::info</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>info</name>
+        <qualifiedname>pars::info</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="160" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="160" bodyend="164"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a8953afafd4acb64a245b2054e61cffbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::info</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>info</name>
+        <qualifiedname>pars::info</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="167" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="167" bodyend="171"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1aeab1970c9a8b2beabfd2b776f3f49ac4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::info</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>info</name>
+        <qualifiedname>pars::info</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="174" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="174" bodyend="178"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a2bf3a8112548e762cd77e8451906b170" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::info</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>info</name>
+        <qualifiedname>pars::info</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="181" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="181" bodyend="184"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ae9c123d9bd762fc73a673285d320d692" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::warn</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>warn</name>
+        <qualifiedname>pars::warn</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="187" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="187" bodyend="191"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a4f97dd9a647e9dbc3d6440d04d0331c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::warn</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>warn</name>
+        <qualifiedname>pars::warn</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="194" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="194" bodyend="198"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a2e422a9d1f4f4e72e0303720167ddafd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::warn</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>warn</name>
+        <qualifiedname>pars::warn</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="201" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="201" bodyend="205"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1aa515f2fdb7fa82453ee2ed158aecb333" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::warn</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>warn</name>
+        <qualifiedname>pars::warn</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="208" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="208" bodyend="211"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::err</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>err</name>
+        <qualifiedname>pars::err</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="214" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="214" bodyend="218"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+        <referencedby refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" compoundref="op_8h" startline="194" endline="194">pars::net::op::abort</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="101" endline="140">pars::ev::runner::exec</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
+        <referencedby refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" compoundref="single_8h" startline="91" endline="106">pars::app::single&lt; component_type &gt;::run</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a314ece1bcf5312db56fc8eece18023cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::err</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>err</name>
+        <qualifiedname>pars::err</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="221" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="221" bodyend="225"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a1010a29ab068ef10dbba53f459efa3bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::err</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>err</name>
+        <qualifiedname>pars::err</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="228" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="228" bodyend="232"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a25898e1fe7cc5e1cbcfebc86fc2dc828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::err</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>err</name>
+        <qualifiedname>pars::err</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="235" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="235" bodyend="238"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::critical</definition>
+        <argsstring>(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>critical</name>
+        <qualifiedname>pars::critical</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="241" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="241" bodyend="246"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a311e94fc62155675008a3095e58bc1d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::critical</definition>
+        <argsstring>(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>critical</name>
+        <qualifiedname>pars::critical</qualifiedname>
+        <param>
+          <type><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref></type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="249" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="249" bodyend="253"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a5c96639854aeca4b1146d527a82600ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::critical</definition>
+        <argsstring>(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>critical</name>
+        <qualifiedname>pars::critical</qualifiedname>
+        <param>
+          <type>spdlog::source_loc</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="256" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="256" bodyend="260"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1acc5b23fc8231ef128b3d5e964a1dfe0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::critical</definition>
+        <argsstring>(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</argsstring>
+        <name>critical</name>
+        <qualifiedname>pars::critical</qualifiedname>
+        <param>
+          <type>spdlog::format_string_t&lt; args_t... &gt;</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log.h" line="263" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log.h" bodystart="263" bodyend="266"/>
+        <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="67" endline="76">log</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a1a13b5432b2c4e8dfd7419135e02c6d2" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator|</definition>
+        <argsstring>(const lf &amp;a, const lf &amp;b)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>pars::operator|</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="46" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a350655391ff0c563873456fb2a18353a" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator|</definition>
+        <argsstring>(const int &amp;a, const lf &amp;b)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>pars::operator|</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="51" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a69a058579fef90f9fdf50ac62fa6c9be" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator|</definition>
+        <argsstring>(const lf &amp;a, const int &amp;b)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>pars::operator|</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="56" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ab213c1db00bcc4efa9c09a037b3153cb" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator&amp;</definition>
+        <argsstring>(const lf &amp;a, const int &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>pars::operator&amp;</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="61" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ae0c3e60dcf7f78296ff02693096f0556" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator&amp;</definition>
+        <argsstring>(const int &amp;a, const lf &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>pars::operator&amp;</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="66" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a352234c76416c9b4b9688594e5be8b9e" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static constexpr int pars::operator&amp;</definition>
+        <argsstring>(const lf &amp;a, const lf &amp;b)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>pars::operator&amp;</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">lf</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="71" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1a7e5d12501985d0fe55404f8e53d26676" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static constexpr std::size_t pars::hash_from_uuid</definition>
+        <argsstring>(const std::string_view &amp;uuid)</argsstring>
+        <name>hash_from_uuid</name>
+        <qualifiedname>pars::hash_from_uuid</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>uuid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/hash.h" line="43" column="30" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/hash.h" bodystart="43" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1ad481204c847db242e0b5f5bf1487a0a7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t pars::hash_from_msg</definition>
+        <argsstring>(const nngxx::msg &amp;m)</argsstring>
+        <name>hash_from_msg</name>
+        <qualifiedname>pars::hash_from_msg</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/hash.h" line="77" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/hash.h" bodystart="77" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/app/resources.h" line="40" column="1"/>
+  </compounddef>
+</doxygen>

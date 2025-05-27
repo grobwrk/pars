@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Network &#8212; pars 0.2.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css?v=279e0f84" />
+    <script src="../../_static/documentation_options.js?v=938c9ccc"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Core" href="core.html" />
+    <link rel="prev" title="Logging" href="../core/logging.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet"> -->
+<style type="text/css" media="screen">
+.small-fa {
+vertical-align: top;
+font-size:0.7em;
+margin: 2px 0px 0px 2px;
+}
+</style>
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="core.html" title="Core"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../core/logging.html" title="Logging"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pars 0.2.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Library</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Network</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="network">
+<h1>Network<a class="headerlink" href="#network" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="core.html">Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net6socketE"><code class="docutils literal notranslate"><span class="pre">pars::net::socket</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net10socket_optE"><code class="docutils literal notranslate"><span class="pre">pars::net::socket_opt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net7contextE"><code class="docutils literal notranslate"><span class="pre">pars::net::context</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net11context_optE"><code class="docutils literal notranslate"><span class="pre">pars::net::context_opt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net16context_registryE"><code class="docutils literal notranslate"><span class="pre">pars::net::context_registry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net2opE"><code class="docutils literal notranslate"><span class="pre">pars::net::op</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net4pipeE"><code class="docutils literal notranslate"><span class="pre">pars::net::pipe</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net9tool_viewE"><code class="docutils literal notranslate"><span class="pre">pars::net::tool_view</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net5cmodeE"><code class="docutils literal notranslate"><span class="pre">cmode</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net17cmode_from_stringEPKc"><code class="docutils literal notranslate"><span class="pre">cmode_from_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars3net3dirE"><code class="docutils literal notranslate"><span class="pre">dir</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars14hash_from_uuidERKNSt11string_viewE"><code class="docutils literal notranslate"><span class="pre">hash_from_uuid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html#_CPPv4N4pars13hash_from_msgERKN5nngxx3msgE"><code class="docutils literal notranslate"><span class="pre">hash_from_msg()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="protocols.html">Protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="protocols.html#_CPPv4N4pars3net3reqE"><code class="docutils literal notranslate"><span class="pre">pars::net::req</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols.html#_CPPv4N4pars3net3repE"><code class="docutils literal notranslate"><span class="pre">pars::net::rep</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols.html#_CPPv4N4pars3net4pushE"><code class="docutils literal notranslate"><span class="pre">pars::net::push</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="protocols.html#_CPPv4N4pars3net4pullE"><code class="docutils literal notranslate"><span class="pre">pars::net::pull</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="components.html#_CPPv4N4pars4comp6clientE"><code class="docutils literal notranslate"><span class="pre">pars::comp::client</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="components.html#_CPPv4N4pars4comp7backendE"><code class="docutils literal notranslate"><span class="pre">pars::comp::backend</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../core/logging.html"
+                          title="previous chapter">Logging</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="core.html"
+                          title="next chapter">Core</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/library/net/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="core.html" title="Core"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../core/logging.html" title="Logging"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pars 0.2.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Library</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Network</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright  2025 Giuseppe Roberti.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

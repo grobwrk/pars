@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars__example_1_1event" kind="namespace" language="C++">
+    <compoundname>pars_example::event</compoundname>
+    <innerclass refid="structpars__example_1_1event_1_1fib__computed" prot="public">pars_example::event::fib_computed</innerclass>
+    <innerclass refid="structpars__example_1_1event_1_1fib__requested" prot="public">pars_example::event::fib_requested</innerclass>
+    <innerclass refid="structpars__example_1_1event_1_1stop__compute" prot="public">pars_example::event::stop_compute</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/example/event.h" line="38" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1net_1_1op" kind="class" language="C++" prot="public">
+    <compoundname>pars::net::op</compoundname>
+    <includes refid="op_8h" local="no">op.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1net_1_1op_1ae7904f45b5ddcafa399133c24d4e11fc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">nngxx::aio</ref></type>
+        <definition>nngxx::aio pars::net::op::aio_m</definition>
+        <argsstring></argsstring>
+        <name>aio_m</name>
+        <qualifiedname>pars::net::op::aio_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="285" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1op_1a12311aad5a0859765e0205fcef31394f" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepars_1_1net_1ae5981715796cf677d35be33819d52267" kindref="member">cb_f</ref></type>
+        <definition>cb_f pars::net::op::cb_m</definition>
+        <argsstring></argsstring>
+        <name>cb_m</name>
+        <qualifiedname>pars::net::op::cb_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="286" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a5d31c5655ef3420fbcc9279203a0364d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::op::~op</definition>
+        <argsstring>()</argsstring>
+        <name>~op</name>
+        <qualifiedname>pars::net::op::~op</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="56" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1ac2e586be1d74ae91c29bae1f634e83c1" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::op::operator bool</definition>
+        <argsstring>()</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>pars::net::op::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="62" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>ev::event_c</type>
+            <declname>event_t</declname>
+            <defname>event_t</defname>
+          </param>
+          <param>
+            <type>tool_c</type>
+            <declname>tool_t</declname>
+            <defname>tool_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::net::op::send</definition>
+        <argsstring>(ev::enqueuer &amp;r, tool_t &amp;t, pipe p, event_t ev)</argsstring>
+        <name>send</name>
+        <qualifiedname>pars::net::op::send</qualifiedname>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>tool_t &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">pipe</ref></type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>event_t</type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="65" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="65" bodyend="104"/>
+        <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
+        <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
+        <references refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" compoundref="nametype_8h" startline="37" endline="40">nametype</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4" compoundref="flags_8h" startline="42">pars::net</references>
+        <references refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275" compoundref="dir_8h" startline="39">pars::net::out</references>
+        <references refid="classpars_1_1ev_1_1enqueuer_1a0a53959cc5a6438acc10f81ebef96d9a" compoundref="enqueuer_8h" startline="52" endline="55">pars::ev::enqueuer::queue_fire</references>
+        <references refid="classpars_1_1ev_1_1enqueuer_1a87da6b8b8e3747e8db3284d5625cbcb0" compoundref="enqueuer_8h" startline="92" endline="95">pars::ev::enqueuer::queue_sent</references>
+        <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="61">SL</references>
+        <references refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" compoundref="serializer_8h" startline="52" endline="79">pars::ev::serialize::to_network</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>tool_c</type>
+            <declname>tool_t</declname>
+            <defname>tool_t</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void pars::net::op::recv</definition>
+        <argsstring>(ev::enqueuer &amp;r, tool_t &amp;t)</argsstring>
+        <name>recv</name>
+        <qualifiedname>pars::net::op::recv</qualifiedname>
+        <param>
+          <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>tool_t &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="107" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="107" bodyend="143"/>
+        <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
+        <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
+        <references refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf" compoundref="dir_8h" startline="40">pars::net::in</references>
+        <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4" compoundref="flags_8h" startline="42">pars::net</references>
+        <references refid="classpars_1_1ev_1_1enqueuer_1a0a53959cc5a6438acc10f81ebef96d9a" compoundref="enqueuer_8h" startline="52" endline="55">pars::ev::enqueuer::queue_fire</references>
+        <references refid="classpars_1_1ev_1_1enqueuer_1ad13daefd8d14bf6fc8a30e646e1de1ee" compoundref="enqueuer_8h" startline="98" endline="101">pars::ev::enqueuer::queue_received</references>
+        <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="61">SL</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1aa4faf9415e3741de3afaf12d7d745d4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::sleep</definition>
+        <argsstring>(nng_duration ms, std::function&lt; void()&gt; f)</argsstring>
+        <name>sleep</name>
+        <qualifiedname>pars::net::op::sleep</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="145" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="145" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::reset_sleep</definition>
+        <argsstring>(nng_duration ms)</argsstring>
+        <name>reset_sleep</name>
+        <qualifiedname>pars::net::op::reset_sleep</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="161" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="161" bodyend="169"/>
+        <references refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" compoundref="op_8h" startline="234" endline="234">stop</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::error_code</type>
+        <definition>std::error_code pars::net::op::result</definition>
+        <argsstring>() const</argsstring>
+        <name>result</name>
+        <qualifiedname>pars::net::op::result</qualifiedname>
+        <briefdescription>
+<para>return result of asynchronous operation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+The nng_aio_result() returns the result of the operation associated with the handle aio. If the operation was successful, then 0 is returned. Otherwise a non-zero error code is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="179" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="179" bodyend="182"/>
+        <references refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="76">nngxx::success</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::abort</definition>
+        <argsstring>(nngxx::err err)</argsstring>
+        <name>abort</name>
+        <qualifiedname>pars::net::op::abort</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">nngxx::err</ref></type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+<para>abort asynchronous I/O operation </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>err</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindref="member">abort()</ref> function aborts an operation previously started with the handle aio.</para>
+<para>If the operation is aborted, then the callback for the handle will be called, and the function <ref refid="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" kindref="member">result()</ref> will return the error err. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="194" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="194" bodyend="194"/>
+        <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::cancel</definition>
+        <argsstring>()</argsstring>
+        <name>cancel</name>
+        <qualifiedname>pars::net::op::cancel</qualifiedname>
+        <briefdescription>
+<para>cancel asynchronous I/O operation </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The nng_aio_cancel() function aborts an operation previously started with the handle aio. If the operation is aborted, then the callback for the handle will be called, and the function nng_aio_result() will return the error NNG_ECANCELED.</para>
+<para>This function does not wait for the operation to be fully aborted, but returns immediately.</para>
+<para>If no operation is currently in progress (either because it has already finished, or no operation has been started yet), then this function has no effect.</para>
+<para>Same as abort(nngxx::error::canceled) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="213" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="213" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::wait</definition>
+        <argsstring>() const</argsstring>
+        <name>wait</name>
+        <qualifiedname>pars::net::op::wait</qualifiedname>
+        <briefdescription>
+<para>wait for asynchronous I/O operation </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The nng_aio_wait() function waits for an asynchronous I/O operation to complete. If the operation has not been started, or has already completed, then it returns immediately. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="222" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="222" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pars::net::op::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>pars::net::op::stop</qualifiedname>
+        <briefdescription>
+<para>stop asynchronous I/O operation </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" kindref="member">stop()</ref> function stops the asynchronous I/O operation associated with aio by aborting with NNG_ECANCELED, and then waits for it to complete or to be completely aborted, and for the callback associated with the aio to have completed executing.</para>
+<para>Same as <ref refid="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" kindref="member">cancel()</ref> + <ref refid="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642" kindref="member">wait()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="234" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="234" bodyend="234"/>
+        <referencedby refid="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" compoundref="op_8h" startline="161" endline="169">reset_sleep</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1ac873698d9d722a40340a82ad50e030f0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pars::net::op::send_cb</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>send_cb</name>
+        <qualifiedname>pars::net::op::send_cb</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="237" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="237" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a0b28be34fd0e84a49256dc5664e27b7a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pars::net::op::recv_cb</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>recv_cb</name>
+        <qualifiedname>pars::net::op::recv_cb</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="256" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="256" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1a834ff56fd5856b1b160a2f4299d51dfd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void pars::net::op::sleep_cb</definition>
+        <argsstring>(void *arg)</argsstring>
+        <name>sleep_cb</name>
+        <qualifiedname>pars::net::op::sleep_cb</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="275" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="275" bodyend="283"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="53" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="54" bodyend="287"/>
+    <listofallmembers>
+      <member refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>abort</name></member>
+      <member refid="classpars_1_1net_1_1op_1ae7904f45b5ddcafa399133c24d4e11fc" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>aio_m</name></member>
+      <member refid="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>cancel</name></member>
+      <member refid="classpars_1_1net_1_1op_1a12311aad5a0859765e0205fcef31394f" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>cb_m</name></member>
+      <member refid="classpars_1_1net_1_1op_1ac2e586be1d74ae91c29bae1f634e83c1" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>operator bool</name></member>
+      <member refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>recv</name></member>
+      <member refid="classpars_1_1net_1_1op_1a0b28be34fd0e84a49256dc5664e27b7a" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>recv_cb</name></member>
+      <member refid="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>reset_sleep</name></member>
+      <member refid="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>result</name></member>
+      <member refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>send</name></member>
+      <member refid="classpars_1_1net_1_1op_1ac873698d9d722a40340a82ad50e030f0" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>send_cb</name></member>
+      <member refid="classpars_1_1net_1_1op_1aa4faf9415e3741de3afaf12d7d745d4f" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>sleep</name></member>
+      <member refid="classpars_1_1net_1_1op_1a834ff56fd5856b1b160a2f4299d51dfd" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>sleep_cb</name></member>
+      <member refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>stop</name></member>
+      <member refid="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>wait</name></member>
+      <member refid="classpars_1_1net_1_1op_1a5d31c5655ef3420fbcc9279203a0364d" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>~op</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

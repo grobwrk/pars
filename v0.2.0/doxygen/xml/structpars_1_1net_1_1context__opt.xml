@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1net_1_1context__opt" kind="struct" language="C++" prot="public">
+    <compoundname>pars::net::context_opt</compoundname>
+    <includes refid="context__opt_8h" local="no">context_opt.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::context_opt::recv_timeout</definition>
+        <argsstring></argsstring>
+        <name>recv_timeout</name>
+        <qualifiedname>pars::net::context_opt::recv_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" line="43" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="57" endline="64">pars::net::context::set_options</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::context_opt::send_timeout</definition>
+        <argsstring></argsstring>
+        <name>send_timeout</name>
+        <qualifiedname>pars::net::context_opt::send_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" line="44" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" compoundref="context_8h" startline="57" endline="64">pars::net::context::set_options</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" line="41" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/context_opt.h" bodystart="42" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" prot="public" virt="non-virtual"><scope>pars::net::context_opt</scope><name>recv_timeout</name></member>
+      <member refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" prot="public" virt="non-virtual"><scope>pars::net::context_opt</scope><name>send_timeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

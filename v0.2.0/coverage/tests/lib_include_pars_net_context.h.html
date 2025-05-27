@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/tests - [...]/lib/include/pars/net/context.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/tests</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 09:57:52 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">16</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;nngxx/aio.h&quot;
+             : #include &quot;nngxx/ctx.h&quot;
+             : 
+             : #include &quot;pars/ev/enqueuer.h&quot;
+             : #include &quot;pars/net/context_opt.h&quot;
+             : #include &quot;pars/net/op.h&quot;
+             : #include &quot;pars/net/socket.h&quot;
+             : 
+             : namespace pars::net
+             : {
+             : 
+             : class context
+             : {
+             : public:
+             :   context(ev::enqueuer&amp; r, nngxx::ctx&amp;&amp; c, const net::socket&amp; s)
+             :     : router_m{r}
+             :     , ctx_m{std::move(c)}
+             :     , sock_m{s}
+             :   {
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   ~context() <span class="lineNoCov">{ stop(); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   operator tool_view() <span class="lineNoCov">{ return tool_view{ctx_m}; }</span>
+             : 
+             :   void set_options(context_opt opts)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.recv_timeout)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_recv_timeout(*opts.recv_timeout).or_abort();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.send_timeout)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_send_timeout(*opts.send_timeout).or_abort();</span>
+             :   }
+             : 
+             :   context_opt options() const
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return {.recv_timeout = ctx_m.get_recv_timeout().value_or_abort(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">            .send_timeout = ctx_m.get_send_timeout().value_or_abort()};</span>
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   void send_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ ctx_m.send(a); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ ctx_m.recv(a); }</span>
+             : 
+             :   template&lt;ev::event_c event_t&gt;
+             :   void send(event_t ev, pipe p)
+             :   {
+             :     op_m.send(router_m, *this, p, ev);
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   void recv() <span class="lineNoCov">{ op_m.recv(router_m, *this); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   void stop() <span class="lineNoCov">{ op_m.stop(); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   int id() const <span class="lineNoCov">{ return ctx_m.id(); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return sock_m.id(); }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   const net::socket&amp; sock() const <span class="lineNoCov">{ return sock_m; }</span>
+             : 
+             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;context #{}&quot;, id());</span>
+             :   }
+             : 
+             : private:
+             :   ev::enqueuer&amp; router_m;
+             :   op op_m;
+             :   nngxx::ctx ctx_m;
+             :   const net::socket&amp; sock_m;
+             : };
+             : 
+             : } // namespace pars::net
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

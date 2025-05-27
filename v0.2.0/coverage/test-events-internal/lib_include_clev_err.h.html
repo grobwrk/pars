@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-internal - [...]/lib/include/clev/err.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-internal</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Tue May 27 09:57:52 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">33</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;fmt/format.h&gt;
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : #include &lt;expected&gt;
+             : #include &lt;functional&gt;
+             : 
+             : namespace clev
+             : {
+             : 
+             : struct exception : std::runtime_error
+             : {
+             :   explicit exception(std::error_code code) noexcept
+             :     : std::runtime_error(code.message())
+             :   {
+             :   }
+             : };
+             : 
+             : #if __cpp_exceptions &lt; 199711
+             : constexpr static bool clev_exception_disabled_v = true;
+             : #else
+             : constexpr static bool clev_exception_disabled_v = false;
+             : #endif
+             : inline static void
+             : abort_now(const std::error_code err) noexcept(clev_exception_disabled_v)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (clev_exception_disabled_v)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    std::quick_exit(err.value());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw exception{err};</span>
+             : }
+             : 
+             : inline static void exit_now(const std::error_code err) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::quick_exit(err.value());</span>
+             : }
+             : 
+             : struct unexpected : std::unexpected&lt;std::error_code&gt;
+             : {
+             : private:
+             :   using parent = std::unexpected&lt;std::error_code&gt;;
+             : 
+             : public:
+             :   using parent::parent;
+             : };
+             : 
+             : template&lt;typename value_t&gt;
+             : struct expected;
+             : 
+             : template&lt;typename&gt;
+             : struct is_expected_specialization : std::false_type
+             : {
+             : };
+             : 
+             : template&lt;template&lt;typename&gt; typename expected_t, typename value_t&gt;
+             : struct is_expected_specialization&lt;expected_t&lt;value_t&gt;&gt;
+             :   : std::is_same&lt;expected_t&lt;value_t&gt;, expected&lt;value_t&gt;&gt;
+             : {
+             : };
+             : 
+             : template&lt;typename expected_t&gt;
+             : inline constexpr bool is_expected_specialization_v =
+             :   is_expected_specialization&lt;expected_t&gt;::value;
+             : 
+             : template&lt;&gt;
+             : struct expected&lt;void&gt; : public std::expected&lt;void, std::error_code&gt;
+             : {
+             : private:
+             :   using parent = std::expected&lt;void, std::error_code&gt;;
+             : 
+             : public:
+             :   using parent::parent;
+             : 
+             :   constexpr void or_abort() noexcept(clev_exception_disabled_v)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      abort_now(expected::error());</span>
+             :   }
+             : 
+             :   constexpr void or_exit() noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      exit_now(expected::error());</span>
+             :   }
+             : 
+             :   template&lt;typename to_value_t&gt;
+             :   [[nodiscard]] auto transform_to(to_value_t&amp;&amp; v) &amp;&amp; noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return expected&lt;to_value_t&gt;(std::move(v));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return expected&lt;to_value_t&gt;(unexpected(std::move(parent::error())));</span>
+             :   }
+             : };
+             : 
+             : template&lt;typename value_t&gt;
+             : struct expected : public std::expected&lt;value_t, std::error_code&gt;
+             : {
+             : private:
+             :   using parent = std::expected&lt;value_t, std::error_code&gt;;
+             : 
+             :   using error_type = parent::error_type;
+             : 
+             : public:
+             :   using parent::parent;
+             : 
+             :   [[nodiscard]] expected::value_type&amp;
+             :   value_or_abort() &amp; noexcept(clev_exception_disabled_v)
+             :   {
+             :     if (!*this)
+             :       abort_now(expected::error());
+             : 
+             :     return expected::value();
+             :   }
+             : 
+             :   [[nodiscard]] expected::value_type&amp;&amp;
+             :   value_or_abort() &amp;&amp; noexcept(clev_exception_disabled_v)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      abort_now(expected::error());</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::move(expected::value());</span>
+             :   }
+             : 
+             :   [[nodiscard]] constexpr const expected::value_type&amp;
+             :   value_or_abort() const&amp; noexcept(clev_exception_disabled_v)
+             :   {
+             :     if (!*this)
+             :       abort_now(expected::error());
+             : 
+             :     return expected::value();
+             :   }
+             : 
+             :   [[nodiscard]] constexpr const expected::value_type&amp;&amp;
+             :   value_or_abort() const&amp;&amp; noexcept(clev_exception_disabled_v)
+             :   {
+             :     if (!*this)
+             :       abort_now(expected::error());
+             : 
+             :     return std::move(expected::value());
+             :   }
+             : 
+             :   [[nodiscard]] expected&lt;std::reference_wrapper&lt;value_t&gt;&gt;
+             :   and_assign_to(value_t&amp; dest) &amp;&amp; noexcept
+             :   {
+             :     if (*this)
+             :     {
+             :       dest = std::move(expected::value());
+             : 
+             :       return std::ref(dest);
+             :     }
+             : 
+             :     return unexpected{std::move(expected::error())};
+             :   }
+             : 
+             :   template&lt;typename fn_t&gt;
+             :     requires std::is_constructible_v&lt;error_type, error_type&amp;&gt;
+             :   [[nodiscard]] auto and_then(fn_t&amp;&amp; f) &amp;&amp; noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    using exp_t = std::remove_cvref_t&lt;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::invoke_result_t&lt;fn_t, decltype(std::move(expected::value()))&gt;&gt;;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    static_assert(is_expected_specialization_v&lt;exp_t&gt;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  &quot;expected&lt;value_t&gt;::and_then(fn_t) must specialize&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    static_assert(std::is_same_v&lt;typename exp_t::error_type, error_type&gt;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  &quot;expected&lt;value_t&gt;::and_then(fn_t) requires same error&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::invoke(std::forward&lt;fn_t&gt;(f), std::move(expected::value()));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return exp_t{std::unexpect, std::move(expected::error())};</span>
+             :   }
+             : 
+             :   template&lt;typename to_value_t&gt;
+             :   [[nodiscard]] auto transform_to() &amp;&amp; noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (*this)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return expected&lt;to_value_t&gt;(std::move(parent::value()));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return expected&lt;to_value_t&gt;(unexpected(std::move(parent::error())));</span>
+             :   }
+             : 
+             :   template&lt;typename to_value_t&gt;
+             :   [[nodiscard]] auto transform_to(to_value_t&amp;&amp; v) &amp;&amp; noexcept
+             :   {
+             :     if (*this)
+             :       return expected&lt;value_t&gt;(std::move(v));
+             :     else
+             :       return std::move(*this);
+             :   }
+             : 
+             :   [[nodiscard]] auto discard_value() &amp;&amp; noexcept
+             :   {
+             :     if (*this)
+             :       return expected&lt;void&gt;{};
+             :     else
+             :       return expected&lt;void&gt;{std::unexpect, expected::error()};
+             :   }
+             : };
+             : 
+             : template&lt;typename value_t&gt;
+             : expected(value_t&amp;&amp;) -&gt; expected&lt;value_t&gt;;
+             : 
+             : template&lt;typename enum_t&gt;
+             : inline clev::expected&lt;void&gt; make_expected(const int e) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (e != 0)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return clev::unexpected(static_cast&lt;enum_t&gt;(e));</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
+             : }
+             : 
+             : } // namespace clev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

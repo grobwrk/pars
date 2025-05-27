@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutorial &#8212; pars 0.2.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
+    <script src="../_static/documentation_options.js?v=938c9ccc"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="../examples/index.html" />
+    <link rel="prev" title="Index" href="../index.html" />
+ 
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet"> -->
+<style type="text/css" media="screen">
+.small-fa {
+vertical-align: top;
+font-size:0.7em;
+margin: 2px 0px 0px 2px;
+}
+</style>
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../examples/index.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Index"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
+<section id="create-an-application-from-scratch">
+<h2>Create an application from scratch<a class="headerlink" href="#create-an-application-from-scratch" title="Link to this heading">¶</a></h2>
+<p>If you want to create an application that uses pars, you can conveniently use the <code class="docutils literal notranslate"><span class="pre">pars-app-template</span></code>:</p>
+<section id="using-github-web">
+<h3>Using GitHub web<a class="headerlink" href="#using-github-web" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>open <a class="reference external" href="https://github.com/grobwrk/pars-app-template">https://github.com/grobwrk/pars-app-template</a></p></li>
+<li><p>click on <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">this</span> <span class="pre">template</span></code></p></li>
+<li><p>then <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">repository</span></code></p></li>
+<li><p>complete the procedure by naming your repository</p></li>
+<li><p>follow the instructions in the <code class="docutils literal notranslate"><span class="pre">Develop</span> <span class="pre">a</span> <span class="pre">pars</span> <span class="pre">application</span></code> section</p></li>
+</ol>
+</section>
+<section id="using-git">
+<h3>Using git<a class="headerlink" href="#using-git" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>create the repository somewhere, say it’s <code class="docutils literal notranslate"><span class="pre">git&#64;somewhere:somebody/my-pars-app.git</span></code></p></li>
+<li><p>clone the template <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/grobwrk/pars-app-template</span> <span class="pre">my-pars-app</span></code></p></li>
+<li><p>change directory to it <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">my-pars-app</span></code></p></li>
+<li><p>set origin url <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">set-url</span> <span class="pre">origin</span> <span class="pre">git&#64;somewhere:somebody/my-pars-app.git</span></code></p></li>
+<li><p>push set upstream <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span></code></p></li>
+<li><p>follow the instructions in the <code class="docutils literal notranslate"><span class="pre">Develop</span> <span class="pre">a</span> <span class="pre">pars</span> <span class="pre">application</span></code> section</p></li>
+</ol>
+</section>
+</section>
+<section id="integrate-pars-into-your-application">
+<h2>Integrate pars into your application<a class="headerlink" href="#integrate-pars-into-your-application" title="Link to this heading">¶</a></h2>
+<p>At the moment we only support vcpkg.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re not using vcpkg in your project, you’re welcoming to contribute on extending the build systems that pars support.</p>
+</div>
+<section id="install-vcpkg-and-my-vcpkg-triplets">
+<h3>Install vcpkg and my-vcpkg-triplets<a class="headerlink" href="#install-vcpkg-and-my-vcpkg-triplets" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>install vcpkg (<a class="reference external" href="https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash">https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash</a>)</p></li>
+<li><p>make sure that you set <code class="docutils literal notranslate"><span class="pre">VCPKG_ROOT</span></code> environment variable</p></li>
+<li><p>install my-vcpkg-triplets to <code class="docutils literal notranslate"><span class="pre">${VCPKG_ROOT}/../my-vcpkg-triplets</span></code> by cloning the repository (<a class="reference external" href="https://github.com/Neumann-A/my-vcpkg-triplets">https://github.com/Neumann-A/my-vcpkg-triplets</a>)</p></li>
+</ol>
+</section>
+<section id="add-pars-overlay-to-your-project">
+<h3>Add pars overlay to your project<a class="headerlink" href="#add-pars-overlay-to-your-project" title="Link to this heading">¶</a></h3>
+<p>At the moment of writing the pars project is not yet published on the vcpkg repository. Follow these steps to add it as an overlay to your vcpkg base project:</p>
+<ol class="arabic simple">
+<li><p>create the folder <code class="docutils literal notranslate"><span class="pre">ports/pars</span></code></p></li>
+<li><p>copy there the files <code class="docutils literal notranslate"><span class="pre">portfile.cmake</span></code> and <code class="docutils literal notranslate"><span class="pre">vcpkg.json</span></code> from the repository <a class="reference external" href="https://github.com/grobwrk/pars-app-template">https://github.com/grobwrk/pars-app-template</a></p></li>
+<li><p>enable the overlay by adding it in the <code class="docutils literal notranslate"><span class="pre">overlay-ports</span></code> of the <code class="docutils literal notranslate"><span class="pre">vcpkg-configuration.json</span></code> file:</p></li>
+</ol>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;overlay-ports&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;./ports/pars&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="add-pars-port">
+<h3>Add pars port<a class="headerlink" href="#add-pars-port" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>run <code class="docutils literal notranslate"><span class="pre">vcpkg</span> <span class="pre">add</span> <span class="pre">port</span> <span class="pre">pars</span></code></p></li>
+<li><p>include <code class="docutils literal notranslate"><span class="pre">&lt;pars/pars.h&gt;</span></code></p></li>
+<li><p>build the project</p></li>
+</ol>
+</section>
+</section>
+<section id="develop-a-pars-application">
+<h2>Develop a pars application<a class="headerlink" href="#develop-a-pars-application" title="Link to this heading">¶</a></h2>
+<section id="using-cmake">
+<h3>Using CMake<a class="headerlink" href="#using-cmake" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>change directory to where your project is</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--list-presets</span></code></p></li>
+<li><p>choose a presets from the list, let’s say <code class="docutils literal notranslate"><span class="pre">linux-debug-llvm</span></code></p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--preset</span> <span class="pre">linux-debug-llvm</span></code></p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">cmake</span> <span class="pre">--build</span> <span class="pre">out/build/linux-debug-llvm</span></code></p></li>
+</ol>
+</section>
+<section id="using-qt-creator">
+<h3>Using Qt Creator<a class="headerlink" href="#using-qt-creator" title="Link to this heading">¶</a></h3>
+<p>This procesure was tested on <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator</span> <span class="pre">16.0.0</span></code>:</p>
+<ol class="arabic simple">
+<li><p>start <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator</span></code></p></li>
+<li><p>navigate where the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> of your project is</p></li>
+<li><p>open it</p></li>
+<li><p>on the configure page, select the LLVM kits</p></li>
+<li><p>click <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Project</span></code></p></li>
+<li><p>build the project</p></li>
+</ol>
+</section>
+<section id="using-visual-studio">
+<h3>Using Visual Studio<a class="headerlink" href="#using-visual-studio" title="Link to this heading">¶</a></h3>
+<p>This procedure was tested on <code class="docutils literal notranslate"><span class="pre">Microsoft</span> <span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">Community</span> <span class="pre">2022</span> <span class="pre">(64-bit)</span></code> version <code class="docutils literal notranslate"><span class="pre">17.13.6</span></code>.</p>
+<ol class="arabic simple">
+<li><p>start <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code></p></li>
+<li><p>click <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">a</span> <span class="pre">Local</span> <span class="pre">Folder</span></code></p></li>
+<li><p>open the root directory of your project</p></li>
+<li><p>click <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">&gt;</span> <span class="pre">CMake</span> <span class="pre">Workspace</span> <span class="pre">Settings</span></code></p></li>
+<li><p>turn <code class="docutils literal notranslate"><span class="pre">enableCmake</span></code> from <code class="docutils literal notranslate"><span class="pre">false</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p>save</p></li>
+<li><p>build the project</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tutorial</a><ul>
+<li><a class="reference internal" href="#create-an-application-from-scratch">Create an application from scratch</a><ul>
+<li><a class="reference internal" href="#using-github-web">Using GitHub web</a></li>
+<li><a class="reference internal" href="#using-git">Using git</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#integrate-pars-into-your-application">Integrate pars into your application</a><ul>
+<li><a class="reference internal" href="#install-vcpkg-and-my-vcpkg-triplets">Install vcpkg and my-vcpkg-triplets</a></li>
+<li><a class="reference internal" href="#add-pars-overlay-to-your-project">Add pars overlay to your project</a></li>
+<li><a class="reference internal" href="#add-pars-port">Add pars port</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#develop-a-pars-application">Develop a pars application</a><ul>
+<li><a class="reference internal" href="#using-cmake">Using CMake</a></li>
+<li><a class="reference internal" href="#using-qt-creator">Using Qt Creator</a></li>
+<li><a class="reference internal" href="#using-visual-studio">Using Visual Studio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">Index</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../examples/index.html"
+                          title="next chapter">Examples</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/tutorial/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../examples/index.html" title="Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Index"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright  2025 Giuseppe Roberti.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+  </body>
+</html>

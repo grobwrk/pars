@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1iface" kind="struct" language="C++" prot="public">
+    <compoundname>clev::iface</compoundname>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_aio * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_ctx &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_dialer &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_listener &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_msg * &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; nng_socket &gt;</derivedcompoundref>
+    <derivedcompoundref refid="structclev_1_1own" prot="public" virt="non-virtual">clev::own&lt; wrap_t &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename wrap_t</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>clev::iface&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1iface"/>
+      </node>
+      <node id="2">
+        <label>clev::own&lt; nng_aio * &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>clev::own&lt; nng_ctx &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>clev::own&lt; nng_dialer &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>clev::own&lt; nng_listener &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>clev::own&lt; nng_msg * &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>clev::own&lt; nng_socket &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>clev::own&lt; wrap_t &gt;</label>
+        <link refid="structclev_1_1own"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/iface.h" line="36" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/iface.h" bodystart="36" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
