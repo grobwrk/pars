@@ -5,7 +5,7 @@
     <includes refid="klass_8h" local="yes">pars/ev/klass.h</includes>
     <includes refid="stl_8h" local="yes">pars/fmt/stl.h</includes>
     <includes refid="dir_8h" local="yes">pars/net/dir.h</includes>
-    <includes refid="nngxx_2err_8h" local="yes">nngxx/err.h</includes>
+    <includes refid="clev_2err_8h" local="yes">clev/err.h</includes>
     <includes local="no">cereal/types/vector.hpp</includes>
     <includes local="no">fmt/base.h</includes>
     <includes local="no">chrono</includes>
@@ -193,7 +193,7 @@
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
         </childnode>
@@ -571,7 +571,7 @@
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stl_8h" kindref="compound">pars/fmt/stl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dir_8h" kindref="compound">pars/net/dir.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2err_8h" kindref="compound">nngxx/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clev_2err_8h" kindref="compound">clev/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cereal/types/vector.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/base.h&gt;</highlight><highlight class="normal"></highlight></codeline>

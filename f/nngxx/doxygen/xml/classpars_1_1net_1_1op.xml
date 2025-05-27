@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="65" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="65" bodyend="106"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="65" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="65" bodyend="105"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
         <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
         <references refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" compoundref="nametype_8h" startline="37" endline="40">nametype</references>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="109" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="109" bodyend="145"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="108" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="108" bodyend="144"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="132" endline="137">pars::debug</references>
         <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
         <references refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf" compoundref="dir_8h" startline="40">pars::net::in</references>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="147" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="147" bodyend="161"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="146" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="146" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -187,8 +187,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="163" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="163" bodyend="171"/>
-        <references refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" compoundref="op_8h" startline="236" endline="236">stop</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="162" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="162" bodyend="170"/>
+        <references refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" compoundref="op_8h" startline="235" endline="235">stop</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::error_code</type>
@@ -206,7 +206,7 @@ The nng_aio_result() returns the result of the operation associated with the han
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="181" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="181" bodyend="184"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="180" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="180" bodyend="183"/>
         <references refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="76">nngxx::success</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -236,7 +236,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="196" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="196" bodyend="196"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="195" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="195" bodyend="195"/>
         <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="214" endline="218">pars::err</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -256,7 +256,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="215" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="215" bodyend="215"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="214" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="214" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -272,7 +272,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="224" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="224" bodyend="224"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="223" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="223" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -289,8 +289,8 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="236" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="236" bodyend="236"/>
-        <referencedby refid="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" compoundref="op_8h" startline="163" endline="171">reset_sleep</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="235" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="235" bodyend="235"/>
+        <referencedby refid="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" compoundref="op_8h" startline="162" endline="170">reset_sleep</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -310,7 +310,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="239" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="239" bodyend="256"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="238" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="238" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a0b28be34fd0e84a49256dc5664e27b7a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -328,7 +328,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="258" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="258" bodyend="275"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="257" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="257" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a834ff56fd5856b1b160a2f4299d51dfd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="277" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="277" bodyend="284"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="276" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="276" bodyend="284"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

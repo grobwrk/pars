@@ -8,6 +8,7 @@
     <includes local="no">functional</includes>
     <includedby refid="own_8h" local="yes">/home/runner/work/pars/pars/lib/include/clev/own.h</includedby>
     <includedby refid="nngxx_2err_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/err.h</includedby>
+    <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>/home/runner/work/pars/pars/lib/include/clev/err.h</label>
@@ -63,6 +64,8 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -123,8 +126,6 @@
         <childnode refid="58" relation="include">
         </childnode>
         <childnode refid="59" relation="include">
-        </childnode>
-        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>

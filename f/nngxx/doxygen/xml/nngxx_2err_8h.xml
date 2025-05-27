@@ -14,7 +14,6 @@
     <includedby refid="msg__body_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/msg_body.h</includedby>
     <includedby refid="opt__getter_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/opt_getter.h</includedby>
     <includedby refid="opt__setter_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/opt_setter.h</includedby>
-    <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
     <includedby refid="op_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/op.h</includedby>
     <incdepgraph>
       <node id="2">
@@ -127,8 +126,6 @@
         <childnode refid="54" relation="include">
         </childnode>
         <childnode refid="56" relation="include">
-        </childnode>
-        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
