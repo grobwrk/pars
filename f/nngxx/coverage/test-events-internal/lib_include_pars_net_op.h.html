@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 08:40:18 2025 </td>
+                     <td class="headerValue" width="15%">Tue May 27 08:56:55 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">63</td>
@@ -99,7 +99,7 @@
 <span class="lineNoCov">      0 / 1 </span> :   explicit operator bool() <span class="lineNoCov">{ return static_cast&lt;bool&gt;(aio_m); }</span>
              : 
              :   template&lt;ev::event_c event_t, tool_c tool_t&gt;
-             :   clev::expected&lt;void&gt; send(ev::enqueuer&amp; r, tool_t&amp; t, pipe p, event_t ev)
+             :   void send(ev::enqueuer&amp; r, tool_t&amp; t, pipe p, event_t ev)
              :   {
              :     auto m = ev::serialize::to_network(ev);
              : 
@@ -132,13 +132,12 @@
              :       }
              :     };
              : 
-             :     return nngxx::make_aio(op::send_cb, this, std::move(m))
-             :       .and_assign_to(aio_m)
-             :       .and_then([&amp;](auto aio) {
-             :         t.send_aio(aio);
+             :     // make aio - NOTE: pass this, cant move op
+             :     aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
              : 
-             :         return clev::expected&lt;void&gt;{};
-             :       });
+             :     // start send
+             :     aio_m.set_msg(std::move(m));
+             :     t.send_aio(aio_m);
              :   }
              : 
              :   template&lt;tool_c tool_t&gt;

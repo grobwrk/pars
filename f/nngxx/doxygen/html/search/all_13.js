@@ -2,7 +2,7 @@ var searchData=
 [
   ['save_5ftool_0',['save_tool',['../structpars__example_1_1resource_1_1pipe__resource.html#a4ea9dff649a7419b4c4c4af19a7f4767',1,'pars_example::resource::pipe_resource']]],
   ['self_5ftype_1',['self_type',['../classpars_1_1app_1_1single.html#a16a90aa8cba44a9613d0d114b27413f1',1,'pars::app::single']]],
-  ['send_2',['send',['../classpars_1_1net_1_1context.html#ab93a9163b25d90e2f7c9111af489bab4',1,'pars::net::context::send()'],['../classpars_1_1net_1_1op.html#a574e79b0747edbac09985ea52caebd26',1,'pars::net::op::send()'],['../classpars_1_1net_1_1socket.html#a5a7f31a949fcd8a99f829b0c5e491329',1,'pars::net::socket::send()']]],
+  ['send_2',['send',['../classpars_1_1net_1_1context.html#ab93a9163b25d90e2f7c9111af489bab4',1,'pars::net::context::send()'],['../classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a',1,'pars::net::op::send()'],['../classpars_1_1net_1_1socket.html#a5a7f31a949fcd8a99f829b0c5e491329',1,'pars::net::socket::send()']]],
   ['send_5faio_3',['send_aio',['../classpars_1_1net_1_1context.html#a3e52ff9f741089ebb88a2245a738eb27',1,'pars::net::context::send_aio()'],['../classpars_1_1net_1_1socket.html#a474843a8b434a93ba8a97dc8b819377e',1,'pars::net::socket::send_aio()']]],
   ['send_5ftimeout_4',['send_timeout',['../structpars_1_1net_1_1context__opt.html#a814e9edceca15cf4da49ddfc82a7ba79',1,'pars::net::context_opt::send_timeout'],['../structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28',1,'pars::net::socket_opt::send_timeout']]],
   ['sendbuf_5',['sendbuf',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518ebad12eaa7e7b72ba78c5a2f780c736c4c9',1,'nngxx']]],
