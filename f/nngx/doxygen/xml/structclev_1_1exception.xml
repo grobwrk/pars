@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1exception" kind="struct" language="C++" prot="public">
+    <compoundname>clev::exception</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::runtime_error</basecompoundref>
+    <includes refid="clev_2err_8h" local="no">err.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::exception::exception</definition>
+        <argsstring>(std::error_code code) noexcept</argsstring>
+        <name>exception</name>
+        <qualifiedname>clev::exception::exception</qualifiedname>
+        <param>
+          <type>std::error_code</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="43" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="43" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>clev::exception</label>
+        <link refid="structclev_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>clev::exception</label>
+        <link refid="structclev_1_1exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="41" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="42" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" prot="public" virt="non-virtual"><scope>clev::exception</scope><name>exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

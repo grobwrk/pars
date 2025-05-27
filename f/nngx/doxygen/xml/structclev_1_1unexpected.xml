@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1unexpected" kind="struct" language="C++" prot="public">
+    <compoundname>clev::unexpected</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::unexpected&lt; std::error_code &gt;</basecompoundref>
+    <includes refid="clev_2err_8h" local="no">err.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structclev_1_1unexpected_1aa068f55caedb3a72a0e9070b846a60a0" prot="private" static="no">
+        <type>std::unexpected&lt; std::error_code &gt;</type>
+        <definition>using clev::unexpected::parent =  std::unexpected&lt;std::error_code&gt;</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>clev::unexpected::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="71" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>clev::unexpected</label>
+        <link refid="structclev_1_1unexpected"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::unexpected&lt; std::error_code &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>clev::unexpected</label>
+        <link refid="structclev_1_1unexpected"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::unexpected&lt; std::error_code &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="68" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="69" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structclev_1_1unexpected_1aa068f55caedb3a72a0e9070b846a60a0" prot="private" virt="non-virtual"><scope>clev::unexpected</scope><name>parent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

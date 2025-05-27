@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacestd" kind="namespace" language="C++">
+    <compoundname>std</compoundname>
+    <innerclass refid="structstd_1_1hash_3_01value__t_01_4" prot="public">std::hash&lt; value_t &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4" prot="public">std::is_error_code_enum&lt; nngxx::err &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__error__code__enum_3_01pars_1_1error_01_4" prot="public">std::is_error_code_enum&lt; pars::error &gt;</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>
