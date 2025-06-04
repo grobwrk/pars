@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-network - [...]/lib/include/pars/net/hash.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Wed Jun  4 13:52:50 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">27</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;nngxx/msg_body.h&quot;
+             : 
+             : #include &quot;pars/init.h&quot;
+             : 
+             : #include &lt;fmt/format.h&gt;
+             : 
+             : #include &lt;cstddef&gt;
+             : 
+             : namespace pars
+             : {
+             : 
+             : static constexpr std::size_t hash_from_uuid(const std::string_view&amp; uuid)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  // see Fowler-Noll-Vo hash function</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  constexpr std::uint64_t prime{0x100000001B3};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (uuid.size() != 36)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw std::runtime_error(&quot;Invalid UUID [size mismatch]&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  for (auto i : {8, 13, 18, 23})</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (uuid[i] != '-')</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        fmt::format(&quot;Invalid UUID [missing separator {}]&quot;, i));</span>
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::uint64_t result{0xcbf29ce484222325};</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  for (const auto&amp; c : uuid)</span>
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (c == '-')</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      continue;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (!(c &gt;= '0' &amp;&amp; c &lt;= '9') &amp;&amp; !(c &gt;= 'A' &amp;&amp; c &lt;= 'F') &amp;&amp;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        !(c &gt;= 'a' &amp;&amp; c &lt;= 'f'))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(&quot;Invalid UUID [non hex char found]&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto x = c - c &gt;= 'a' ? ('a' - 10) : (c &gt;= 'A' ? ('A' - 10) : '0');</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    result = (result * prime) ^ x;</span>
+             :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return result;</span>
+             : }
+             : 
+             : static std::size_t hash_from_msg(const nngxx::msg&amp; m)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::size_t h;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (m)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (m.body().size() &gt;= sizeof(h))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      memcpy(&amp;h, m.body().data&lt;char&gt;(), sizeof(h));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      h = 0xffffffffffffffff;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    h = 0x0000000000000000;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return h;</span>
+             : }
+             : 
+             : } // namespace pars
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

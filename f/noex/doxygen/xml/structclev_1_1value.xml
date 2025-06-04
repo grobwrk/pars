@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structclev_1_1value" kind="struct" language="C++" prot="public">
+    <compoundname>clev::value</compoundname>
+    <includes refid="clev_2value_8h" local="no">value.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename value_t</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" prot="public" static="no">
+        <type>value_t</type>
+        <definition>using clev::value&lt; value_t &gt;::value_type =  value_t</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>clev::value::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="40" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" static="no" mutable="no">
+        <type><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref></type>
+        <definition>value_type clev::value&lt; value_t &gt;::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <qualifiedname>clev::value::v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="71" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::value&lt; value_t &gt;::value</definition>
+        <argsstring>(value_type v) noexcept</argsstring>
+        <name>value</name>
+        <qualifiedname>clev::value::value</qualifiedname>
+        <param>
+          <type><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="42" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::value&lt; value_t &gt;::value</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>value</name>
+        <qualifiedname>clev::value::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="47" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::value&lt; value_t &gt;::operator value_type</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>operator value_type</name>
+        <qualifiedname>clev::value::operator value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="52" column="4" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::value&lt; value_t &gt;::operator const value_type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator const value_type</name>
+        <qualifiedname>clev::value::operator const value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="54" column="4" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref></type>
+        <definition>value_type clev::value&lt; value_t &gt;::release</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>release</name>
+        <qualifiedname>clev::value::release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="56" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="56" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" prot="public" static="no" nodiscard="yes" const="yes" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>clev::value&lt; value_t &gt;::operator bool</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>clev::value::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="65" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="65" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/clev/value.h" line="38" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/clev/value.h" bodystart="39" bodyend="72"/>
+    <listofallmembers>
+      <member refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" prot="public" virt="non-virtual"><scope>clev::value</scope><name>operator bool</name></member>
+      <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" virt="non-virtual"><scope>clev::value</scope><name>operator const value_type</name></member>
+      <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" virt="non-virtual"><scope>clev::value</scope><name>operator value_type</name></member>
+      <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" virt="non-virtual"><scope>clev::value</scope><name>release</name></member>
+      <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" virt="non-virtual"><scope>clev::value</scope><name>v</name></member>
+      <member refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" prot="public" virt="non-virtual"><scope>clev::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" prot="public" virt="non-virtual"><scope>clev::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" prot="public" virt="non-virtual"><scope>clev::value</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

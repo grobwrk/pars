@@ -1,0 +1,1269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="classpars_1_1comp_1_1backend" kind="class"><name>pars::comp::backend</name>
+    <member refid="classpars_1_1comp_1_1backend_1a348c8595d7b0cd6b8fe0cf0f18f477ce" kind="variable"><name>rep_m</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1ab901b1c10e6add798b1163758751fa3c" kind="function"><name>backend</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1a4b06442c5e9952ef67e4e7bf59e388b0" kind="function"><name>init</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1aa11d1ab3cf22cdd6e5c6d7bd58eb0388" kind="function"><name>connect</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1ace178941233809489ef08320b5c36cc3" kind="function"><name>rep</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1a25281327a7df4eda9ad9241bf97d3fa0" kind="function"><name>graceful_terminate</name></member>
+    <member refid="classpars_1_1comp_1_1backend_1a5e25cb9689a788971572dd74185375d9" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__async__metadata" kind="struct"><name>pars::ev::base_async_metadata</name>
+    <member refid="structpars_1_1ev_1_1base__async__metadata_1a4d681012ad8bc833a8f94e623b9d79f7" kind="variable"><name>stop_token_m</name></member>
+    <member refid="structpars_1_1ev_1_1base__async__metadata_1ac954ee8bc9c5f4ecd84c9ae297104651" kind="function"><name>stop_token</name></member>
+    <member refid="structpars_1_1ev_1_1base__async__metadata_1a80b24abc46c9cf5906f84557d6613e0c" kind="function"><name>set_stop_token</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__internal__metadata" kind="struct"><name>pars::ev::base_internal_metadata</name>
+    <member refid="structpars_1_1ev_1_1base__internal__metadata_1acf22900ab6acdaf6b81bdbf338b5f60a" kind="function"><name>base_internal_metadata</name></member>
+    <member refid="structpars_1_1ev_1_1base__internal__metadata_1af2252340bb476d355c220d75a4091072" kind="function"><name>socket_id</name></member>
+    <member refid="structpars_1_1ev_1_1base__internal__metadata_1a8c00558082735e50994677efc599bd6d" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__kind" kind="struct"><name>pars::ev::base_kind</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__kind_3_01kind__of_00_01event__t_01_4" kind="struct"><name>pars::ev::base_kind&lt; kind_of, event_t &gt;</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__klass" kind="struct"><name>pars::ev::base_klass</name>
+    <member refid="structpars_1_1ev_1_1base__klass_1ae1eaee5b7694cae6e0fd3f5787ce7186" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1base__klass_1a7ab5d044bcbadd3017c73657a8c71183" kind="variable"><name>requires_network</name></member>
+    <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" kind="function"><name>exec_policy</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__network__metadata" kind="struct"><name>pars::ev::base_network_metadata</name>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1a9bc822d33f43737756ab3f5fad7c4022" kind="variable"><name>id_m</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1af9a27fa81fbe30b72e106f8f8554f0ed" kind="variable"><name>tool_m</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1a3e574e2519354d471ad5e55995bfbbce" kind="variable"><name>pipe_m</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1af645a2d0b86932aed49dcdaf95d23ad7" kind="function"><name>base_network_metadata</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" kind="function"><name>tool</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1af3308f6b93c8eea0b4080fe1cf3ed645" kind="function"><name>pipe</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1aec9b611f1aa51eccc4645424434f4dac" kind="function"><name>pipe</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1ac095a80cf47c3bb70482e591da4eccc3" kind="function"><name>socket_id</name></member>
+    <member refid="structpars_1_1ev_1_1base__network__metadata_1a7e5407543837c5680957e0ccdcc15e23" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1base__sync__metadata" kind="struct"><name>pars::ev::base_sync_metadata</name>
+  </compound>
+  <compound refid="classpars_1_1comp_1_1client" kind="class"><name>pars::comp::client</name>
+    <member refid="classpars_1_1comp_1_1client_1aa8f6647a69206ea300ded5102c550459" kind="variable"><name>req_m</name></member>
+    <member refid="classpars_1_1comp_1_1client_1a8dc663bfdb9b7339f49791175d16c551" kind="function"><name>client</name></member>
+    <member refid="classpars_1_1comp_1_1client_1a8deaba7552fb2b92df1b39734e44e171" kind="function"><name>req</name></member>
+    <member refid="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" kind="function"><name>init</name></member>
+    <member refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" kind="function"><name>connect</name></member>
+    <member refid="classpars_1_1comp_1_1client_1a2757a5dfbae6dbceaab73314c6b965ed" kind="function"><name>graceful_terminate</name></member>
+  </compound>
+  <compound refid="classpars__example_1_1apps_1_1client" kind="class"><name>pars_example::apps::client</name>
+    <member refid="classpars__example_1_1apps_1_1client_1aa9d5ead54339f4738344321d5b407835" kind="typedef"><name>parent_type</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" kind="typedef"><name>self</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a055d26e33c6bcc04433ea101df4f2864" kind="variable"><name>req_recv_timeout</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a28488dbd99185cbeee1830ff0f90b242" kind="variable"><name>req_send_timeout</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a48735cc5de36aed2d448d95efb4a9ca5" kind="variable"><name>connect_p</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" kind="variable"><name>work_id</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" kind="variable"><name>fast_fib</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a85cdc9bd734e4841d085ef604a4ab209" kind="variable"><name>n</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1abd29b4d43a0e05778f43c3054e1a5e79" kind="variable"><name>state</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a934b7e78084c00a74c9282b7dbdbf4ef" kind="function"><name>usage</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" kind="function"><name>startup</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1aaba1ed98e686ce79aba4810d7491850d" kind="function"><name>initialize</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a86c6c063bd87aeef6ddeb9ad1c48305b" kind="function"><name>send_work</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a34b6776d72c7ff29ce388d19b77b0f99" kind="function"><name>recv_answer</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a2338f51f150eec5897d13a5a2176704b" kind="function"><name>terminate</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1ad655b8656dd6d5f9368318371c9782dd" kind="function"><name>terminate</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a2dea7fd29d4fab76a9f538a5048c2505" kind="function"><name>terminate</name></member>
+    <member refid="classpars__example_1_1apps_1_1client_1a19178b502c43909a38d406dcf2e09faa" kind="function"><name>terminate</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1common__kind" kind="struct"><name>pars::ev::common_kind</name>
+    <member refid="structpars_1_1ev_1_1common__kind_1a927893fac05943e48256935aecc33979" kind="typedef"><name>kind_type</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1ac648f20f1ebff638a4269ea514f0fbcd" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1aedd3fb812f5a8c9a2042cfb498feecb2" kind="typedef"><name>metadata_type</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" kind="variable"><name>event_m</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" kind="variable"><name>metadata_m</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" kind="function"><name>event</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" kind="function"><name>event</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" kind="function"><name>md</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1a23e499a282cc1c382b4e89091c13e1c0" kind="function"><name>as_tuple</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" kind="function"><name>common_kind</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1common__metadata" kind="struct"><name>pars::ev::common_metadata</name>
+    <member refid="structpars_1_1ev_1_1common__metadata_1a3d2e91e6ca8aa87b179333523c01a4b5" kind="typedef"><name>kind_type</name></member>
+    <member refid="structpars_1_1ev_1_1common__metadata_1a973c4629afbbd33926ee4b5b08ca1355" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1common__metadata_1a4c3159d57133321f3340a8bd3d28db2a" kind="variable"><name>job_id_m</name></member>
+    <member refid="structpars_1_1ev_1_1common__metadata_1a4860a130b04eec7ab3cadf5927910d19" kind="function"><name>job_id</name></member>
+    <member refid="structpars_1_1ev_1_1common__metadata_1a88bb366503f598f110f72c528acf9ad7" kind="function"><name>set_job_id</name></member>
+  </compound>
+  <compound refid="structpars_1_1comp_1_1backend_1_1connect__p" kind="struct"><name>pars::comp::backend::connect_p</name>
+    <member refid="structpars_1_1comp_1_1backend_1_1connect__p_1a144d7bd4c0321d7f85ded5e74759a78a" kind="variable"><name>service_cmode</name></member>
+    <member refid="structpars_1_1comp_1_1backend_1_1connect__p_1acd3862109757ae57b684ad55eb734fb5" kind="variable"><name>service_addr</name></member>
+  </compound>
+  <compound refid="structpars_1_1comp_1_1client_1_1connect__p" kind="struct"><name>pars::comp::client::connect_p</name>
+    <member refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" kind="variable"><name>service_cmode</name></member>
+    <member refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" kind="variable"><name>service_addr</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1context" kind="class"><name>pars::net::context</name>
+    <member refid="classpars_1_1net_1_1context_1a73dbb7233370d7e66311b47f61b7695f" kind="variable"><name>router_m</name></member>
+    <member refid="classpars_1_1net_1_1context_1a022cf8abe4797a81405891d045ddc92b" kind="variable"><name>op_m</name></member>
+    <member refid="classpars_1_1net_1_1context_1a2680f13033834d47ff043413a7fa4799" kind="variable"><name>ctx_m</name></member>
+    <member refid="classpars_1_1net_1_1context_1adca1b3ffb45bc4fb617caccbf7235bfd" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1context_1a3da40ee1b53ebad0eabc4f609db4ac9f" kind="function"><name>context</name></member>
+    <member refid="classpars_1_1net_1_1context_1aa972739a825381e5a987bc5ee2b47849" kind="function"><name>~context</name></member>
+    <member refid="classpars_1_1net_1_1context_1ac78d9beb9ebaf66e9ba3b470436c6835" kind="function"><name>operator tool_view</name></member>
+    <member refid="classpars_1_1net_1_1context_1adbc20989e68e6aa5b5edd0399dbe2396" kind="function"><name>set_options</name></member>
+    <member refid="classpars_1_1net_1_1context_1a121e18a8538a0aa3f8d4f1a4f5b0d2d9" kind="function"><name>options</name></member>
+    <member refid="classpars_1_1net_1_1context_1a3e52ff9f741089ebb88a2245a738eb27" kind="function"><name>send_aio</name></member>
+    <member refid="classpars_1_1net_1_1context_1a4b067a924f46b846ebd4ff651bae782a" kind="function"><name>recv_aio</name></member>
+    <member refid="classpars_1_1net_1_1context_1ab93a9163b25d90e2f7c9111af489bab4" kind="function"><name>send</name></member>
+    <member refid="classpars_1_1net_1_1context_1a50de22a87a21f5c8070be3276bb8ff51" kind="function"><name>recv</name></member>
+    <member refid="classpars_1_1net_1_1context_1ae85758aec6bcd5b74843ec857fa620b6" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1context_1a1b38d5507e3052dfed0f1695a5e8e763" kind="function"><name>id</name></member>
+    <member refid="classpars_1_1net_1_1context_1a711dd6d4e2d0bd4a7302672956436861" kind="function"><name>socket_id</name></member>
+    <member refid="classpars_1_1net_1_1context_1ad139db4bcba3294c91658c4322455dd4" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1context_1a58098fcdd732040e3d7aade8dcd8e73e" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1net_1_1context__opt" kind="struct"><name>pars::net::context_opt</name>
+    <member refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" kind="variable"><name>recv_timeout</name></member>
+    <member refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" kind="variable"><name>send_timeout</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1context__registry" kind="class"><name>pars::net::context_registry</name>
+    <member refid="classpars_1_1net_1_1context__registry_1ad3ec5366a60ad125f4b9a7cf6b9c8ba2" kind="variable"><name>router_m</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1a67b297d31ce2c65f0f6d4123162fec62" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1a00c29e296063436e32723c57af9a899d" kind="variable"><name>ctx_map_m</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1ac0ed0f395e588f201dac1a3454b3909f" kind="function"><name>context_registry</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1a33dc46a66145476a2efbdfbcc58a772b" kind="function"><name>stop_all</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1a9d299ee8680f9f78d7d9a0beceef5a3a" kind="function"><name>emplace</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" kind="function"><name>of</name></member>
+    <member refid="classpars_1_1net_1_1context__registry_1a15cd11ff729311912777eded34907288" kind="function"><name>start_recv</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1creating__pipe" kind="struct"><name>pars::ev::creating_pipe</name>
+    <member refid="structpars_1_1ev_1_1creating__pipe_1a7ed699b532e60e04fdab78196638316d" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="classpars_1_1ev_1_1dispatcher" kind="class"><name>pars::ev::dispatcher</name>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a26b8a90f31bbd71c2b1479ad1621f2a9" kind="variable"><name>mtx_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1afe24fcff1882e4013d7b7ab1546f08bf" kind="variable"><name>cond_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a4152f8ed67fa75873604f0d070e07b9c" kind="variable"><name>terminate_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1ad08973bcd026afa1867d5fef6301c9af" kind="variable"><name>running_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a82fc53a8df1cc51618300efc434f0710" kind="variable"><name>runner_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1ac065f92adaa6851f98c0bade4f287465" kind="function"><name>run</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a5334c54f56b52d2a4fce00046ed498ec" kind="function"><name>stop_running</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1aad27e6a4d1f1d4a0b6d2b11cb670f0bf" kind="function"><name>terminate_now</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a8562b93eda4c4b31dd3feb9e505b6c68" kind="function"><name>terminating</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a581fb655ce10de32d140fc39e4c93bed" kind="function"><name>next_job</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a059e56d9293806221b6f216f4499a319" kind="variable"><name>queue_m</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1ad8f8faeb81501b8662022f9a556442b8" kind="function"><name>queue_back</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a3813f60af8ed6ece055a8ad4906777ee" kind="function"><name>queue_front</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a4749d9bd00b7636ad46aa6b355e9dab9" kind="function"><name>queue</name></member>
+    <member refid="classpars_1_1ev_1_1dispatcher_1a43b9315b37007dc8efd70555f340b195" kind="function"><name>dispatcher</name></member>
+  </compound>
+  <compound refid="classpars_1_1ev_1_1enqueuer" kind="class"><name>pars::ev::enqueuer</name>
+    <member refid="classpars_1_1ev_1_1enqueuer_1a6935d0e6c6cc9b9d26a2d9e9cc1cf5c0" kind="variable"><name>dispatcher_m</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1acbe60ac04261f62c0e514bce23ac4edf" kind="variable"><name>runner_m</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1afcb08497dc4a413ea2aaab4627fa42b6" kind="function"><name>enqueuer</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1a0a53959cc5a6438acc10f81ebef96d9a" kind="function"><name>queue_fire</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1a1c2a3b1ea76c45174655c670fc8cd17f" kind="function"><name>queue_fire</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1a53d4cd0f815aa32bc96bdfe2f47e14e9" kind="function"><name>queue_fire</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1a87da6b8b8e3747e8db3284d5625cbcb0" kind="function"><name>queue_sent</name></member>
+    <member refid="classpars_1_1ev_1_1enqueuer_1ad13daefd8d14bf6fc8a30e646e1de1ee" kind="function"><name>queue_received</name></member>
+  </compound>
+  <compound refid="structclev_1_1exception" kind="struct"><name>clev::exception</name>
+    <member refid="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" kind="function"><name>exception</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1exception" kind="struct"><name>pars::ev::exception</name>
+    <member refid="structpars_1_1ev_1_1exception_1a5403443e8f85a85550116e26d7ddd7b6" kind="variable"><name>eptr</name></member>
+    <member refid="structpars_1_1ev_1_1exception_1a14e2a82e67e6896df0c50c2189b2651c" kind="function"><name>str</name></member>
+    <member refid="structpars_1_1ev_1_1exception_1afa25c8fdedb450dee7f6f574838e6f9a" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars__example_1_1event_1_1fib__computed" kind="struct"><name>pars_example::event::fib_computed</name>
+    <member refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kind="variable"><name>work_id</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kind="variable"><name>fib_n</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars__example_1_1event_1_1fib__requested" kind="struct"><name>pars_example::event::fib_requested</name>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kind="variable"><name>work_id</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kind="variable"><name>n</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kind="variable"><name>use_fast_fib</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1a7ea1b55cbd2c00292d7123e98a400fbf" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1fired" kind="struct"><name>pars::ev::fired</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1fired_3_01event__t_01_4" kind="struct"><name>pars::ev::fired&lt; event_t &gt;</name>
+    <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1a448090447eea5d1c905012e65eed5628" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1ace11a04bca0c29a955ead1497a7d1c5f" kind="variable"><name>uuid</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01foarmattable__t_01_4" kind="struct"><name>fmt::formatter&lt; foarmattable_t &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01foarmattable__t_01_4_1a957faa1033d59cc1f6cbaa6de3e50afc" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4" kind="struct"><name>fmt::formatter&lt; nngxx::msg &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4_1ad252a793b6bba6fc7c7b2c010a3bbc90" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4" kind="struct"><name>fmt::formatter&lt; nngxx::pipe_view &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01nngxx_1_1pipe__view_01_4_1adbf73caaac8d2330d9eedaa253bb8940" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4" kind="struct"><name>fmt::formatter&lt; std::chrono::system_clock::time_point &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_1a7e1468a01134bb9df7dd5f500d617280" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4" kind="struct"><name>fmt::formatter&lt; std::error_code &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01std_1_1error__code_01_4_1a14de78e3d7774edb38f94cc3443296bc" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" kind="struct"><name>fmt::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;</name>
+    <member refid="structfmt_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1ad49b073560bba2973d1c5ecd5a505465" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4" kind="struct"><name>fmt::formatter&lt;::pars::f::lf &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_1aa10c7d2b678f1df7f6cada61064ff13b" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4" kind="struct"><name>fmt::formatter&lt;::pars::lf &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4_1acb3c92edda1791ba7da7ca6eda433c74" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars_1_1net_1_1dir_01_4" kind="struct"><name>fmt::formatter&lt;::pars::net::dir &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars_1_1net_1_1dir_01_4_1a7fd670971441a5c241eadf4e096b8f2d" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4" kind="struct"><name>fmt::formatter&lt;::pars_example::resource::client_state &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1a5562f7e4e3674da4a9d2ab1be165e996" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4" kind="struct"><name>fmt::formatter&lt;::pars_example::resource::pipe_state &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1a1f3c4a297f9a1ad4ca21e11c74c91c50" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4" kind="struct"><name>fmt::formatter&lt;::pars_example::resource::server_state &gt;</name>
+    <member refid="structfmt_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a1e72b3643dff2836773ea310c862e3a9" kind="function"><name>format</name></member>
+  </compound>
+  <compound refid="structstd_1_1hash_3_01value__t_01_4" kind="struct"><name>std::hash&lt; value_t &gt;</name>
+    <member refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kind="typedef"><name>value_type</name></member>
+    <member refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1hf__registry" kind="struct"><name>pars::ev::hf_registry</name>
+    <member refid="structpars_1_1ev_1_1hf__registry_1af449b50921b27b730c3cfeda9a90350d" kind="variable"><name>runner</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a65d1029a85cb585d67ff554fec6b5fe2" kind="variable"><name>mtx_m</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a4e15a0fb205948ff243b4bc820ec82a9" kind="variable"><name>handlers_m</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1ab3c4aa502195c971b4f3bde2ddfbfabd" kind="variable"><name>types_m</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a95e42b3a5122d85ba28862cb0bbad825" kind="variable"><name>runner_m</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kind="function"><name>hf_registry</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" kind="function"><name>on</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kind="function"><name>insert</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" kind="function"><name>insert</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1ae322a41c65296eabf259043c68998000" kind="function"><name>lock</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1aeb7247422a982dfff59c9790497fad52" kind="function"><name>has_handler_for</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1ae58ce5d65f318a09383e0ac2c5e790bc" kind="function"><name>type_for</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a10a1078f691f3475dae9932dba015b40" kind="function"><name>handler_for</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a76d9cba74173bab2c73b09c679d09b82" kind="function"><name>insert_jhf</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1hf__traits" kind="struct"><name>pars::ev::hf_traits</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4" kind="struct"><name>pars::ev::hf_traits&lt; return_t(class_t::*)(hf_arg&lt; kind_of, event_t &gt;)&gt;</name>
+    <member refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ad91e57a05069ad1f34f3f43d38149977" kind="typedef"><name>return_type</name></member>
+    <member refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1a2b3814cef5fb52ffcd88b6f893fdf2af" kind="typedef"><name>class_type</name></member>
+    <member refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1aac7a88c0da7d47b021ca83a340fe99d5" kind="typedef"><name>kind_type</name></member>
+    <member refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab8d06b4c0be48dc0fae4c97c72a2d5a3" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab603d8a33e64771045cd4087da50fbaf" kind="variable"><name>arity</name></member>
+  </compound>
+  <compound refid="structclev_1_1iface" kind="struct"><name>clev::iface</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1init" kind="struct"><name>pars::ev::init</name>
+    <member refid="structpars_1_1ev_1_1init_1a31fc6b1a39a347a3f7b460471f1753cc" kind="variable"><name>creation_time</name></member>
+    <member refid="structpars_1_1ev_1_1init_1ac52bc879371c91880fa6c8249258844b" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1comp_1_1backend_1_1init__p" kind="struct"><name>pars::comp::backend::init_p</name>
+    <member refid="structpars_1_1comp_1_1backend_1_1init__p_1a5a09b6183d2661c9b22008faedaf11e8" kind="variable"><name>num_ctxs</name></member>
+    <member refid="structpars_1_1comp_1_1backend_1_1init__p_1aee962c0dafcb2cfbb88e292347e1bc38" kind="variable"><name>rep_opts</name></member>
+  </compound>
+  <compound refid="structpars_1_1comp_1_1client_1_1init__p" kind="struct"><name>pars::comp::client::init_p</name>
+    <member refid="structpars_1_1comp_1_1client_1_1init__p_1a25561076de1efda65570c043f7ca7dd2" kind="variable"><name>req_opts</name></member>
+  </compound>
+  <compound refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4" kind="struct"><name>std::is_error_code_enum&lt; nngxx::err &gt;</name>
+  </compound>
+  <compound refid="structstd_1_1is__error__code__enum_3_01pars_1_1error_01_4" kind="struct"><name>std::is_error_code_enum&lt; pars::error &gt;</name>
+  </compound>
+  <compound refid="classpars_1_1ev_1_1job" kind="class"><name>pars::ev::job</name>
+    <member refid="classpars_1_1ev_1_1job_1a194b79e7d94a585e3dbe21016cb79195" kind="variable"><name>id_m</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a868c4d1c315bb779cc55c56279357f9b" kind="variable"><name>socket_id_m</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ab42f12b6b289f44e78368413ae7a2b0a" kind="variable"><name>spec_hash_m</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a7eba37a7fcecf8c0abd17a62a953af45" kind="variable"><name>event_kind_m</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ac43b053c2dd5a098a6ae8625ad212b4a" kind="function"><name>job</name></member>
+    <member refid="classpars_1_1ev_1_1job_1aa18aab9927053d1b0a498ef41eb39d60" kind="function"><name>job</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ab67f241a9dbf282aa591d5348af0405f" kind="function"><name>job</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a93a52ee39b5fcd82c5d62b34efbd059b" kind="function"><name>operator=</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a7543ef2b21ff5e3383300eaef165784a" kind="function"><name>operator=</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ad7c83976aae98c66fe618f4f00a98582" kind="function"><name>event</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a0122d84e10b147ac9d282e1ba87ff6f4" kind="function"><name>event</name></member>
+    <member refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" kind="function"><name>id</name></member>
+    <member refid="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" kind="function"><name>socket_id</name></member>
+    <member refid="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" kind="function"><name>spec_hash</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ac99bbb4d6833af6990ca0f06b26a36ce" kind="function"><name>format_to</name></member>
+    <member refid="classpars_1_1ev_1_1job_1ae742efe1daa7a551317a916871ecaf7e" kind="function"><name>set_id</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass" kind="struct"><name>pars::ev::klass</name>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01creating__pipe_01_4" kind="struct"><name>pars::ev::klass&lt; creating_pipe &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01creating__pipe_01_4_1a4a04378557dd83eae274f2d3fa16d9ab" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01exception_01_4" kind="struct"><name>pars::ev::klass&lt; exception &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01exception_01_4_1a42106f457e3f2885bf0eab96753080ca" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01exception_01_4_1a947d1e2fb681777339af05c03b51b345" kind="variable"><name>requires_network</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01init_01_4" kind="struct"><name>pars::ev::klass&lt; init &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01init_01_4_1ad22ed083f2b5aff254085c29ae8fa801" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01init_01_4_1a118652f7759a7264d0533c0f084cfc6f" kind="variable"><name>requires_network</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01network__error_01_4" kind="struct"><name>pars::ev::klass&lt; network_error &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01network__error_01_4_1a2a60b885195d9159ca4a26be9d4255cb" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4" kind="struct"><name>pars::ev::klass&lt; nngxx::msg &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1abed071c29eeeab6d4a49fe987d866e0e" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1aa5cde3c25a9dc67a466d2237abbb6727" kind="variable"><name>uuid</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01pipe__created_01_4" kind="struct"><name>pars::ev::klass&lt; pipe_created &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01pipe__created_01_4_1a888bd03ba83c9513e1e6a2d440d59a20" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01pipe__removed_01_4" kind="struct"><name>pars::ev::klass&lt; pipe_removed &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01pipe__removed_01_4_1ae5b74356bdd447cfb7f7cdec7ffaa454" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4" kind="struct"><name>pars::ev::klass&lt; shutdown &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4_1a634ed67ea28a0e51d203530663cd17f3" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4_1af870c3e4597ee34753f72bd12a6eb4a2" kind="variable"><name>requires_network</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" kind="struct"><name>pars::ev::klass&lt; std::shared_ptr&lt; event_t &gt; &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a44ec1901e21e3cc13b9b535436adff3b" kind="typedef"><name>inner_event_type</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a5ab32f8d625cca4b251b856051bce3bf" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" kind="function"><name>exec_policy</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a74ccbc18385835089ead7f256f85c66b" kind="function"><name>serialize</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" kind="function"><name>exec_policy</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::stop_compute &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1f_1_1lf" kind="struct"><name>pars::f::lf</name>
+    <member refid="structpars_1_1f_1_1lf_1a3fec4a8870f3469699b72376f2b4ad05" kind="variable"><name>val</name></member>
+    <member refid="structpars_1_1f_1_1lf_1a6a4d878ac1a52abd57c4fcdb0a020141" kind="function"><name>lf</name></member>
+    <member refid="structpars_1_1f_1_1lf_1a09f72ea56a5365328e263f20f7dbfc8c" kind="function"><name>lf</name></member>
+  </compound>
+  <compound refid="structpars_1_1app_1_1lockable" kind="struct"><name>pars::app::lockable</name>
+    <member refid="structpars_1_1app_1_1lockable_1a55f35a3363fc412e13a9e558142ea664" kind="typedef"><name>resource_type</name></member>
+    <member refid="structpars_1_1app_1_1lockable_1a431dc4dbab379c2642cbd042236c9840" kind="typedef"><name>mutex_type</name></member>
+    <member refid="structpars_1_1app_1_1lockable_1ae5039a1664784dc3ddecff88e9a4a5af" kind="variable"><name>resource</name></member>
+    <member refid="structpars_1_1app_1_1lockable_1a5a2adeeabcf05de480ceb6abf4254c29" kind="variable"><name>mutex</name></member>
+  </compound>
+  <compound refid="structpars_1_1app_1_1locked" kind="struct"><name>pars::app::locked</name>
+    <member refid="structpars_1_1app_1_1locked_1a9a2b0736b77c5ead8eee71be6f9d75d4" kind="typedef"><name>resource_type</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a65b4d9f23e5af3b79faea17d1ac7bfc1" kind="typedef"><name>mutex_type</name></member>
+    <member refid="structpars_1_1app_1_1locked_1aa6252d8af3fb66a2cd64d827b80ae233" kind="typedef"><name>key_type</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a0cb43ef1bc99fe453a8c925e3ba9264b" kind="typedef"><name>lock_type</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a0958477db8878b0a82109ae5c786cb84" kind="variable"><name>lockable_m</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a29d9636f49cafe269168a86bfbcbdea7" kind="variable"><name>key_m</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a261fde89be5126e1b4531fcc728bd2ca" kind="variable"><name>guard_m</name></member>
+    <member refid="structpars_1_1app_1_1locked_1aafbfde1583496ba5b1d5e238f80d6c57" kind="function"><name>locked</name></member>
+    <member refid="structpars_1_1app_1_1locked_1a39271a8cafcc169b5d87ea72101ab085" kind="function"><name>resource</name></member>
+    <member refid="structpars_1_1app_1_1locked_1ab90f23af2da4590b24aa6088bd7ffb73" kind="function"><name>guard</name></member>
+    <member refid="structpars_1_1app_1_1locked_1ae567b61bdb1515e2240afacdd2305511" kind="function"><name>key</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1metadata" kind="struct"><name>pars::ev::metadata</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4" kind="struct"><name>pars::ev::metadata&lt; kind_of, event_t &gt;</name>
+    <member refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4_1acf22900ab6acdaf6b81bdbf338b5f60a" kind="function"><name>base_internal_metadata</name></member>
+    <member refid="structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4_1af645a2d0b86932aed49dcdaf95d23ad7" kind="function"><name>base_network_metadata</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1msg__body" kind="struct"><name>nngxx::msg_body</name>
+    <member refid="structnngxx_1_1msg__body_1aad1dc04eec648720b2fc287cc584381f" kind="variable"><name>m</name></member>
+    <member refid="structnngxx_1_1msg__body_1a77f09ae0f945a2b10295930698e06e23" kind="function"><name>msg_body</name></member>
+    <member refid="structnngxx_1_1msg__body_1a7f8e7856e9c7eaeb28c13efc1f463bce" kind="function"><name>size</name></member>
+    <member refid="structnngxx_1_1msg__body_1aa65996beca5a71017f3f3e34e5ae8440" kind="function"><name>data</name></member>
+    <member refid="structnngxx_1_1msg__body_1a6317e2c382142b260c7ad298ee8a3909" kind="function"><name>data</name></member>
+    <member refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" kind="function"><name>append</name></member>
+    <member refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" kind="function"><name>trim</name></member>
+    <member refid="structnngxx_1_1msg__body_1a37fc00c2c8ff16eb0e02f97eb0106a55" kind="function"><name>trim</name></member>
+    <member refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" kind="function"><name>chop</name></member>
+    <member refid="structnngxx_1_1msg__body_1a39703ccc9d20a4094925e1c82d3c031c" kind="function"><name>chop</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1msg__header" kind="struct"><name>nngxx::msg_header</name>
+    <member refid="structnngxx_1_1msg__header_1a195781d06ebae36420aa72c2c98f7224" kind="variable"><name>m</name></member>
+    <member refid="structnngxx_1_1msg__header_1aac53caeeb370e479a0283d120df01588" kind="function"><name>msg_header</name></member>
+    <member refid="structnngxx_1_1msg__header_1a5b119a683d9b771ff7f776ff16482af2" kind="function"><name>size</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1network__error" kind="struct"><name>pars::ev::network_error</name>
+    <member refid="structpars_1_1ev_1_1network__error_1acb9e86f799136b7c42c63913c6abd9c3" kind="variable"><name>error</name></member>
+    <member refid="structpars_1_1ev_1_1network__error_1aea9df4dc9dc31277207f4e331faaf026" kind="variable"><name>dir</name></member>
+    <member refid="structpars_1_1ev_1_1network__error_1ab0fa2b409d1a204bd1383a93859239f4" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1op" kind="class"><name>pars::net::op</name>
+    <member refid="classpars_1_1net_1_1op_1ae7904f45b5ddcafa399133c24d4e11fc" kind="variable"><name>aio_m</name></member>
+    <member refid="classpars_1_1net_1_1op_1a12311aad5a0859765e0205fcef31394f" kind="variable"><name>cb_m</name></member>
+    <member refid="classpars_1_1net_1_1op_1a5d31c5655ef3420fbcc9279203a0364d" kind="function"><name>~op</name></member>
+    <member refid="classpars_1_1net_1_1op_1ac2e586be1d74ae91c29bae1f634e83c1" kind="function"><name>operator bool</name></member>
+    <member refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" kind="function"><name>send</name></member>
+    <member refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" kind="function"><name>recv</name></member>
+    <member refid="classpars_1_1net_1_1op_1aa4faf9415e3741de3afaf12d7d745d4f" kind="function"><name>sleep</name></member>
+    <member refid="classpars_1_1net_1_1op_1a2446b1fe90b25c360faa68eb924cead1" kind="function"><name>reset_sleep</name></member>
+    <member refid="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" kind="function"><name>result</name></member>
+    <member refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kind="function"><name>abort</name></member>
+    <member refid="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" kind="function"><name>cancel</name></member>
+    <member refid="classpars_1_1net_1_1op_1a999df689810aaaea5175916d3cf87642" kind="function"><name>wait</name></member>
+    <member refid="classpars_1_1net_1_1op_1a048b4ab3d8cf67102f05bd0d885b75fe" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1op_1ac873698d9d722a40340a82ad50e030f0" kind="function"><name>send_cb</name></member>
+    <member refid="classpars_1_1net_1_1op_1a0b28be34fd0e84a49256dc5664e27b7a" kind="function"><name>recv_cb</name></member>
+    <member refid="classpars_1_1net_1_1op_1a834ff56fd5856b1b160a2f4299d51dfd" kind="function"><name>sleep_cb</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__getter" kind="struct"><name>nngxx::opt_getter</name>
+    <member refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kind="typedef"><name>nng_type</name></member>
+    <member refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kind="typedef"><name>return_type</name></member>
+    <member refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" kind="variable"><name>opt</name></member>
+    <member refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kind="variable"><name>overload</name></member>
+    <member refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__setter" kind="struct"><name>nngxx::opt_setter</name>
+    <member refid="structnngxx_1_1opt__setter_1a3303b101a11cf2e8dd46a42175eeedb3" kind="typedef"><name>nng_type</name></member>
+    <member refid="structnngxx_1_1opt__setter_1ab03b5262fffaf48994787de1b815d3d7" kind="variable"><name>opt</name></member>
+    <member refid="structnngxx_1_1opt__setter_1a7a460bcdf2ebf73db792bec869e0c0a6" kind="variable"><name>overload</name></member>
+    <member refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type" kind="struct"><name>nngxx::opt_to_nng_type</name>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1recvtimeo_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::recvtimeo &gt;</name>
+    <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1recvtimeo_01_4_1af97911f51f561b0284ef65f12855fb26" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__tick_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::req_resend_tick &gt;</name>
+    <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__tick_01_4_1a4bda8f62a0e08cbcb7976c5c4cc9e543" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__time_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::req_resend_time &gt;</name>
+    <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__time_01_4_1ad1ed6eb2a5ef42157ba90ce11c522ec9" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sendtimeo_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::sendtimeo &gt;</name>
+    <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sendtimeo_01_4_1afd6f1b9fe0d211b062720738525e549f" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::sockname &gt;</name>
+    <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4_1a3510214b265e6edd0f39f04906aa5bcb" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structclev_1_1own" kind="struct"><name>clev::own</name>
+    <member refid="structclev_1_1own_1a87d7f4e72bb9dfbfe1385783c7d3de0a" kind="typedef"><name>parent</name></member>
+    <member refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kind="function"><name>own</name></member>
+    <member refid="structclev_1_1own_1a6b8f08bbf890ac79314e29c473cd2e9f" kind="function"><name>operator=</name></member>
+    <member refid="structclev_1_1own_1a893e3e9dce06fd161c82849ab0b58f8e" kind="function"><name>own</name></member>
+    <member refid="structclev_1_1own_1a2a7eaa804d5490db9c8aada11d09f2bb" kind="function"><name>operator=</name></member>
+    <member refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" kind="function"><name>own</name></member>
+    <member refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" kind="function"><name>operator=</name></member>
+    <member refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" kind="function"><name>~own</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1pipe" kind="class"><name>pars::net::pipe</name>
+    <member refid="classpars_1_1net_1_1pipe_1ae7350b18b92f44b8faa2d71f23f6db73" kind="variable"><name>id_m</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1a20987788fedf5f659f6d1cf85ca5b651" kind="variable"><name>socket_id_m</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1ab231de0a3773ad95409c1b9626acdc06" kind="function"><name>pipe</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1a8a0d6c9a0c02551f4d4498659984c4d3" kind="function"><name>pipe</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1a1e8d61f123efea7d9656bd7bcefbbc65" kind="function"><name>id</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1ab1ca71a4da0bf477ca46e1b68c35db54" kind="function"><name>socket_id</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1afb345e75cb7c7604d433373f45fbe6ee" kind="function"><name>operator bool</name></member>
+    <member refid="classpars_1_1net_1_1pipe_1a808dda688a244d875dfbbd19e05a74ba" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1pipe__created" kind="struct"><name>pars::ev::pipe_created</name>
+    <member refid="structpars_1_1ev_1_1pipe__created_1a7bfdde95e5d1929615ab2d94a4f60513" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1pipe__removed" kind="struct"><name>pars::ev::pipe_removed</name>
+    <member refid="structpars_1_1ev_1_1pipe__removed_1a08c2caa726d4de4ec91a2d1f129e4df9" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars__example_1_1resource_1_1pipe__resource" kind="struct"><name>pars_example::resource::pipe_resource</name>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a7b6c7b0c3fbe8e28855ba1af3679b217" kind="variable"><name>state</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a3d553a756b7de19b570e8217279dcebd" kind="variable"><name>tool_m</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" kind="function"><name>pipe_resource</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a1c506cd95e11ea614c1b866cd508f353" kind="function"><name>pipe_resource</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1aa733ea2100d3c902c9b6342fd4301fd6" kind="function"><name>pipe_resource</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a4ea9dff649a7419b4c4c4af19a7f4767" kind="function"><name>save_tool</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1acf5cf594b1ec3da92b861bf645887bbe" kind="function"><name>load_tool</name></member>
+  </compound>
+  <compound refid="structpars_1_1f_1_1pntl" kind="struct"><name>pars::f::pntl</name>
+    <member refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" kind="variable"><name>p</name></member>
+    <member refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" kind="variable"><name>t</name></member>
+    <member refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1pull" kind="class"><name>pars::net::pull</name>
+    <member refid="classpars_1_1net_1_1pull_1a1027976cdb0873fb16ed476a8b7314e7" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a42e8d2900323e17c70bc3a4b3a2f08a5" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a502a3385908f4b1490091dcef6f5409c" kind="function"><name>pull</name></member>
+    <member refid="classpars_1_1net_1_1pull_1af52b600077e74d2b381d672672e1478a" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a5e08887deea547c4e83daea708742d8c" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a006479b46ed40a7334d4dc547d53c105" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a50522b569091475731c03c4bf0c7e09d" kind="function"><name>on</name></member>
+    <member refid="classpars_1_1net_1_1pull_1a868d2745f1580dda9dc21b7b6d900b0e" kind="function"><name>insert</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1push" kind="class"><name>pars::net::push</name>
+    <member refid="classpars_1_1net_1_1push_1a971b03d804cb83debcd503168ecefd1c" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1push_1a12d135ca6b47a70849a68f290b27f997" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1push_1a624de566a91546b573341ee254ea6749" kind="function"><name>push</name></member>
+    <member refid="classpars_1_1net_1_1push_1a024082bb0f3b84066328976d720dfca5" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1push_1a71137766af9f8cf0e6e28a24c84c00ee" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1push_1ad81c586dec8e1f1d8fce0d0f5a1544b6" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" kind="function"><name>on</name></member>
+    <member refid="classpars_1_1net_1_1push_1a8562c316cb7086e6e8f1bd4b7e5b46ee" kind="function"><name>insert</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1received" kind="struct"><name>pars::ev::received</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1received_3_01event__t_01_4" kind="struct"><name>pars::ev::received&lt; event_t &gt;</name>
+    <member refid="structpars_1_1ev_1_1received_3_01event__t_01_4_1a4ca13a5ce29beeefb7f39e15a696c585" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1received_3_01event__t_01_4_1a8e2fe314913a3c5dc14e7c6f9f7a6f86" kind="variable"><name>uuid</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4" kind="struct"><name>pars::ev::received&lt; nngxx::msg &gt;</name>
+    <member refid="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4_1a3d37ab06ae958afee549e4b90fa9b28e" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4_1aa7d5dcf79a10270af1dddd632c6f9481" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4_1ae590b5039fab845ae5c712c397f5e390" kind="function"><name>msg_hash</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1rep" kind="class"><name>pars::net::rep</name>
+    <member refid="classpars_1_1net_1_1rep_1ab7090f6a8345bd1bafff26cd6efa3d87" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a3e6436dffdeab88ef02eabc758b1e63a" kind="variable"><name>ctx_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1rep_1aecb6672d6ab4c00005d0eb4aface2010" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a284b5974f44bc4efcfaf10ddc7092c84" kind="function"><name>rep</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a696f324aa9f71c2dcdc827131ebb9c65" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a31d1130d17dab32f9ca58c687fc3701a" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1rep_1aaa581beb2d28bf34490490031e413e4e" kind="function"><name>ctxs</name></member>
+    <member refid="classpars_1_1net_1_1rep_1ac2af20222c0ed123ff0e8b39ede5dc56" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a377c054cdfc47674f4b67f752b1fd3af" kind="function"><name>on</name></member>
+    <member refid="classpars_1_1net_1_1rep_1a99208b80c0caeaf6e3b2ea03c9935ca3" kind="function"><name>insert</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1req" kind="class"><name>pars::net::req</name>
+    <member refid="classpars_1_1net_1_1req_1a7920a6afea6f8497e9f6d7ed6a3fd272" kind="variable"><name>sock_m</name></member>
+    <member refid="classpars_1_1net_1_1req_1a1a35c576d50370e331bae32c6d15761c" kind="variable"><name>ctx_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1req_1a5b04e082a740567ac49b6530f9c9df1a" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="classpars_1_1net_1_1req_1a8871b95cd9cd1b1402e4ac8b395ff8b6" kind="function"><name>req</name></member>
+    <member refid="classpars_1_1net_1_1req_1a7a3bb300eed4ce1525321ec0fe0051eb" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1req_1a986b7220cacd7147eff99c4e0bb4a98d" kind="function"><name>sock</name></member>
+    <member refid="classpars_1_1net_1_1req_1aaeeaa4cb56135833056f3992f0fbc1f0" kind="function"><name>ctxs</name></member>
+    <member refid="classpars_1_1net_1_1req_1a66cc985bc0f374ee1db8562fed9f6d22" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1req_1a6a931f98c4697d7cdab14d5bf8afefd0" kind="function"><name>on</name></member>
+    <member refid="classpars_1_1net_1_1req_1ac8f5c7b9f5ece4053109f35eb19a632c" kind="function"><name>insert</name></member>
+  </compound>
+  <compound refid="classpars_1_1app_1_1resources" kind="class"><name>pars::app::resources</name>
+    <member refid="classpars_1_1app_1_1resources_1ab848c73436876e6aab03435bd1c927e3" kind="typedef"><name>key_type</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a30e8f3dde30a2d25000532b660fb4638" kind="typedef"><name>resource_type</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a2685a2f197a3188a9445c9b953468bba" kind="typedef"><name>mutex_type</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a284c7e8cfe0d015c30c59214441fa94d" kind="variable"><name>mtx_m</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a44b9eeb89dd7c5d861c844f015804dd5" kind="variable"><name>mtxs_m</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a1323d010e5b5ec4a4535ca6ebf4641a0" kind="variable"><name>resources_m</name></member>
+    <member refid="classpars_1_1app_1_1resources_1ac9e8ce692f9cc5160673466441f1767c" kind="function"><name>resources</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a2e23693794833a2132b8f2b0f7472958" kind="function"><name>count</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a15142e9918be4fbf91d1c7121e5bcd17" kind="function"><name>contains</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a75257805bb039b3b3089058c828f491e" kind="function"><name>find_or_emplace</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a5c8091ebeeaad5483cdc9a56cd85420d" kind="function"><name>emplace</name></member>
+    <member refid="classpars_1_1app_1_1resources_1ae6eca187cf0223ab3e81981233872d8a" kind="function"><name>locked_resource</name></member>
+    <member refid="classpars_1_1app_1_1resources_1ab7d9f4955306027ac7d06f47878e20ef" kind="function"><name>delete_resource</name></member>
+    <member refid="classpars_1_1app_1_1resources_1a27852f38fd0314f9dedaa4db5cfab1ad" kind="function"><name>find_locked</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1runner" kind="struct"><name>pars::ev::runner</name>
+    <member refid="structpars_1_1ev_1_1runner_1a3e8d4b441a58c1d6b40cad75f0d34aa3" kind="typedef"><name>futures_value_type</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1ab02adab34bf6cd4cb56884c51e00dd0d" kind="variable"><name>mtx_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1af4c6e2bc357b089ca75f12bf407113fe" kind="variable"><name>futures_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1ac33db9e975f302f06ffa9fa371c10dff" kind="variable"><name>threads_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1ab1a5e6e09ba073aeaf658ae1caeaf8c5" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a0c688b1809b0b39fd053a1270ed91e34" kind="variable"><name>pipe_jobs_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1aa4f3b178807eb2d0dd53d16be889ba6d" kind="variable"><name>next_job_id_m</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a349df8c8d06a15a6ab9bd2dde7f85c3d" kind="function"><name>runner</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a530562da38da9d1236803c670705959e" kind="function"><name>next_job_id</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" kind="function"><name>start_thread</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1aa0c18ceb9e196d984b868cacf5a08940" kind="function"><name>count_threads</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a1335c45a40aca1a69e435fa8f269fdcd" kind="function"><name>stop_all_threads</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a48007dd1644ccce4952c31c0b5987a62" kind="function"><name>can_exec</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" kind="function"><name>exec</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" kind="function"><name>exec</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" kind="function"><name>add_pipe</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" kind="function"><name>remove_pipe</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" kind="function"><name>associate_job_to_pipe</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1ae49e83074f4032f87e7bbd2d47bf3ed9" kind="function"><name>stop_thread</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a59ff92e9ac2c1b8de0367c63b73282d0" kind="function"><name>stop_runnings</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1aea3e1cbc7c90537c98bd501d4a398b77" kind="function"><name>process_futures</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a72f555920399c74fb832d95e82074703" kind="function"><name>process_exception</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a869abc3c2aa23288cce10bbf8f1179d1" kind="function"><name>request_stop</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a46bdf5b71968ea88d87c9cfc242d072c" kind="function"><name>thread_running</name></member>
+    <member refid="structpars_1_1ev_1_1runner_1a86323743d9192a264008da8a43e6fd15" kind="function"><name>stop_possible</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1sent" kind="struct"><name>pars::ev::sent</name>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1sent_3_01event__t_01_4" kind="struct"><name>pars::ev::sent&lt; event_t &gt;</name>
+    <member refid="structpars_1_1ev_1_1sent_3_01event__t_01_4_1a4799e4cb6341f39d0d3f3aed67b92672" kind="typedef"><name>event_type</name></member>
+    <member refid="structpars_1_1ev_1_1sent_3_01event__t_01_4_1a5c0dfcaeb3edebc9d48cf99585bedba0" kind="variable"><name>uuid</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1serialize" kind="struct"><name>pars::ev::serialize</name>
+    <member refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" kind="function"><name>to_network</name></member>
+    <member refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" kind="function"><name>to_event</name></member>
+  </compound>
+  <compound refid="classpars__example_1_1apps_1_1server__backend" kind="class"><name>pars_example::apps::server_backend</name>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a4c059d355400630f905fbed7683c0d62" kind="typedef"><name>parent_type</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a961e05515ccffe1c8c2f16d332753548" kind="typedef"><name>self</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a6c9dbea1608c09b5a804641d296a092f" kind="variable"><name>cleanup_timeout</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1af72042ac311b5d54e8057b555aacdcfa" kind="variable"><name>rep_recv_timeout</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1aa33c6f4468c80bb8d4335e6778869578" kind="variable"><name>rep_send_timeout</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a84bb76792c419b5998d142dbecb366e0" kind="variable"><name>connect_p</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a10cf008d1ca47c6e8d9942c0b96e51cc" kind="variable"><name>max_allowed</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a87b0b6aed8eebf41f7a1479e4df1f64a" kind="variable"><name>max_served</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a9532ce52f8406b930a196b28aff8decd" kind="variable"><name>tot_served</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a59e3e4691ef250fee3e64a948c7e73ca" kind="variable"><name>state</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1ad49cc6821b9d22d4c9d469c5f098f202" kind="variable"><name>resources</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1ab13d5c9453306aa62bd79cd313e39975" kind="function"><name>startup</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1af25fb536374b2a81a6373f34e279c6c9" kind="function"><name>initialize</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1ad9f2faa15f0dd1ac6290c4b78ea50177" kind="function"><name>accept_pipe</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1af54ba0df2eec648d2d1682cac81ebda3" kind="function"><name>log_new_pipe</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a08300c9556fd4522279e54e504b6f7a7" kind="function"><name>log_rem_pipe</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a9889b3d74e55b28805f129601c0b8105" kind="function"><name>fire_compute</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a92fca6a00289a15b49fb81fc5e53640b" kind="function"><name>compute_answer</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a66f2a5ee0adbdd962315af16b5c84537" kind="function"><name>recv_next</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a82b4c706e47efc6e0700d22d5ca04020" kind="function"><name>close_pipe</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1a4cc47118b3aa055f7d15ce9a16646b55" kind="function"><name>terminate</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1shutdown" kind="struct"><name>pars::ev::shutdown</name>
+    <member refid="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" kind="variable"><name>creation_time</name></member>
+    <member refid="structpars_1_1ev_1_1shutdown_1ad486265bf3e58fbea2b2fc2584c7ded5" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="classpars_1_1app_1_1single" kind="class"><name>pars::app::single</name>
+    <member refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kind="typedef"><name>component_type</name></member>
+    <member refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" kind="typedef"><name>self_type</name></member>
+    <member refid="classpars_1_1app_1_1single_1ab561414edc81174297b55458ede270dc" kind="variable"><name>runner_m</name></member>
+    <member refid="classpars_1_1app_1_1single_1ab45bc50530c61422f72ede69dc464d15" kind="variable"><name>hf_registry_m</name></member>
+    <member refid="classpars_1_1app_1_1single_1adc2b397366329a906ee6cd21d4a0717a" kind="variable"><name>dispatcher_m</name></member>
+    <member refid="classpars_1_1app_1_1single_1a8b491dad13258319cc9905ee793cfbb9" kind="variable"><name>router_m</name></member>
+    <member refid="classpars_1_1app_1_1single_1ab03deb3c9caab841397e8ba15897bf97" kind="variable"><name>component_m</name></member>
+    <member refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kind="function"><name>single</name></member>
+    <member refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" kind="function"><name>exec</name></member>
+    <member refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" kind="function"><name>comp</name></member>
+    <member refid="classpars_1_1app_1_1single_1a2d155acd16d58aabacf954ab7adb867e" kind="function"><name>router</name></member>
+    <member refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kind="function"><name>hfs</name></member>
+    <member refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" kind="function"><name>startup</name></member>
+    <member refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" kind="function"><name>graceful_terminate</name></member>
+    <member refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" kind="function"><name>terminate_now</name></member>
+    <member refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" kind="function"><name>stop_job_thread</name></member>
+    <member refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1socket" kind="class"><name>pars::net::socket</name>
+    <member refid="classpars_1_1net_1_1socket_1a9c93d81fd4e866e0c5c1d91d13830356" kind="variable"><name>router_m</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a58cfaa463236d18762b3efd9cd240a9f" kind="variable"><name>op_m</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ab24f59ff7ab5d3dd92d15de45debf62f" kind="variable"><name>socket_m</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a5c56e664284e4be64861c5d3bcf1bb1a" kind="variable"><name>dialers_m</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a7302888150207ba0bd196c4b4b0563dc" kind="variable"><name>listeners_m</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a04f2ad388cb06c400892850bc38908ff" kind="function"><name>socket</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" kind="function"><name>~socket</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a1d2bfd0ed8969422204f7c0775098753" kind="function"><name>operator tool_view</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" kind="function"><name>set_options</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ad5a06ea8d8c8fd74a2988e4a2e03598e" kind="function"><name>options</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f" kind="function"><name>dial</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ac86eb2bd9aeacb0e852a0189bc7e074e" kind="function"><name>listen</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c" kind="function"><name>connect</name></member>
+    <member refid="classpars_1_1net_1_1socket_1afbb51e4e4c45a6b0845e6d166c289c34" kind="function"><name>make_ctx</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a474843a8b434a93ba8a97dc8b819377e" kind="function"><name>send_aio</name></member>
+    <member refid="classpars_1_1net_1_1socket_1aff3d822a390fd0d74ed27779ebd6f317" kind="function"><name>recv_aio</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a5a7f31a949fcd8a99f829b0c5e491329" kind="function"><name>send</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a9ebfc30e5757d46d147b1d35da38fc2e" kind="function"><name>recv</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" kind="function"><name>stop</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" kind="function"><name>id</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" kind="function"><name>socket_id</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" kind="function"><name>proto_name</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a2b9ab30d61ab290fbf7f2923fc7b5943" kind="function"><name>format_to</name></member>
+    <member refid="classpars_1_1net_1_1socket_1a49d0be781116515fd35eb45f95741e18" kind="function"><name>pipe_cb</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ad9824777ab75046426dd99a3f76d0f62" kind="function"><name>register_pipe_notify</name></member>
+    <member refid="classpars_1_1net_1_1socket_1ab0849f043d55eac62e85e4804b36fcc5" kind="function"><name>emplace_listener</name></member>
+    <member refid="classpars_1_1net_1_1socket_1aaf38e88ad5c88adfbbce7735523e2eff" kind="function"><name>emplace_dialer</name></member>
+  </compound>
+  <compound refid="structpars_1_1net_1_1socket__opt" kind="struct"><name>pars::net::socket_opt</name>
+    <member refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" kind="variable"><name>recv_timeout</name></member>
+    <member refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" kind="variable"><name>send_timeout</name></member>
+    <member refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" kind="variable"><name>req_resend_time</name></member>
+    <member refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" kind="variable"><name>req_resend_tick</name></member>
+  </compound>
+  <compound refid="classpars_1_1ev_1_1spec" kind="class"><name>pars::ev::spec</name>
+    <member refid="classpars_1_1ev_1_1spec_1a34b174db9977dd376976477a8cbbc7cc" kind="typedef"><name>kind_of_event_type</name></member>
+    <member refid="classpars_1_1ev_1_1spec_1aa4f550ff2ce20954caca9f34325d2938" kind="typedef"><name>kind_type</name></member>
+    <member refid="classpars_1_1ev_1_1spec_1a19dc9a6ecc43008cad9731862167c765" kind="typedef"><name>event_type</name></member>
+    <member refid="classpars_1_1ev_1_1spec_1a3b407e23adddea84d0725df0a812607c" kind="variable"><name>hash</name></member>
+    <member refid="classpars_1_1ev_1_1spec_1a687a863807ab68c98c9a0303373535dd" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1app_1_1state__machine" kind="struct"><name>pars::app::state_machine</name>
+    <member refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kind="typedef"><name>state_type</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a9550997e2a74b43620881d96f453ba19" kind="variable"><name>state_m</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1ad7301b3ac55ac50bbb59a186e90c51df" kind="variable"><name>next_m</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kind="function"><name>state_machine</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" kind="function"><name>ensure</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" kind="function"><name>ensure</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kind="function"><name>next</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" kind="function"><name>rollback</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" kind="function"><name>commit</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1afdc3ee0c8292b9c19b39e0d98db81c23" kind="function"><name>tx</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" kind="function"><name>tx</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" kind="function"><name>tx</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" kind="function"><name>current</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" kind="function"><name>reset</name></member>
+  </compound>
+  <compound refid="structpars_1_1app_1_1state__tx" kind="struct"><name>pars::app::state_tx</name>
+    <member refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" kind="typedef"><name>state_type</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1a891a33bb70ea407c8c6a0b600b30e6e8" kind="variable"><name>sm_m</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1ae63e1d519fd3cb3d54e588943994ed88" kind="variable"><name>done_m</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" kind="function"><name>state_tx</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1a997e8e2b6c46219260dada045fa2a9b0" kind="function"><name>~state_tx</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1a23acdc35c47ae1d1ee933add8c11a050" kind="function"><name>commit</name></member>
+    <member refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" kind="function"><name>rollback</name></member>
+  </compound>
+  <compound refid="structpars__example_1_1event_1_1stop__compute" kind="struct"><name>pars_example::event::stop_compute</name>
+    <member refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kind="variable"><name>pipe_id</name></member>
+    <member refid="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars__example_1_1compute_1_1stop__requested" kind="struct"><name>pars_example::compute::stop_requested</name>
+    <member refid="structpars__example_1_1compute_1_1stop__requested_1a97a7e0d5da1ccc2e4fc6f5776104bedb" kind="function"><name>stop_requested</name></member>
+  </compound>
+  <compound refid="classpars_1_1net_1_1tool__view" kind="class"><name>pars::net::tool_view</name>
+    <member refid="classpars_1_1net_1_1tool__view_1a28a2ca4ad4e0f41b1ad2fd5e7c566f63" kind="variable"><name>tool_m</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" kind="function"><name>tool_view</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" kind="function"><name>tool_view</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" kind="function"><name>type</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kind="function"><name>who</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" kind="function"><name>id</name></member>
+    <member refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" kind="function"><name>format_to</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1uuid" kind="struct"><name>pars::ev::uuid</name>
+    <member refid="structpars_1_1ev_1_1uuid_1ac5abc8e335137a2e116a028d7a52186e" kind="typedef"><name>class_type</name></member>
+    <member refid="structpars_1_1ev_1_1uuid_1aa7a2a5ef8dc172663d3b55eca2ca0f08" kind="variable"><name>hash</name></member>
+  </compound>
+  <compound refid="structclev_1_1value" kind="struct"><name>clev::value</name>
+    <member refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kind="typedef"><name>value_type</name></member>
+    <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kind="variable"><name>v</name></member>
+    <member refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kind="function"><name>value</name></member>
+    <member refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" kind="function"><name>value</name></member>
+    <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" kind="function"><name>operator value_type</name></member>
+    <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" kind="function"><name>operator const value_type</name></member>
+    <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" kind="function"><name>release</name></member>
+    <member refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" kind="function"><name>operator bool</name></member>
+  </compound>
+  <compound refid="structnngxx_1_1value" kind="struct"><name>nngxx::value</name>
+    <member refid="structnngxx_1_1value_1af30971c7a83b97e329e43e710f32bb77" kind="function"><name>set_recv_timeout</name></member>
+    <member refid="structnngxx_1_1value_1a43a4c510082149064b9488904c42eadb" kind="function"><name>set_send_timeout</name></member>
+    <member refid="structnngxx_1_1value_1af2b321c4adb6db8168dea51e2bfec15a" kind="function"><name>set_req_resend_time</name></member>
+    <member refid="structnngxx_1_1value_1ae305c3da0cbd2f3179c857f83d3912fb" kind="function"><name>set_req_resend_tick</name></member>
+    <member refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" kind="function"><name>get_sock_name</name></member>
+    <member refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" kind="function"><name>get_recv_timeout</name></member>
+    <member refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" kind="function"><name>get_send_timeout</name></member>
+    <member refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" kind="function"><name>get_req_resend_time</name></member>
+    <member refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" kind="function"><name>get_req_resend_tick</name></member>
+    <member refid="structnngxx_1_1value_1a6ac1f4798a108f6998e6a01c35e05038" kind="function"><name>set_option</name></member>
+    <member refid="structnngxx_1_1value_1ad201de15e94667601dfabec557502110" kind="function"><name>get_option</name></member>
+    <member refid="structnngxx_1_1value_1a9e45aa75049d93cfbfbe9bcd82b75833" kind="typedef"><name>parent</name></member>
+    <member refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" kind="typedef"><name>nng_type</name></member>
+    <member refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" kind="function"><name>is_valid</name></member>
+  </compound>
+  <compound refid="structpars_1_1app_1_1with__default__setup" kind="struct"><name>pars::app::with_default_setup</name>
+    <member refid="structpars_1_1app_1_1with__default__setup_1a0f06a6ccfac9e8af5b58263fb99b290b" kind="function"><name>default_pattern</name></member>
+    <member refid="structpars_1_1app_1_1with__default__setup_1a4763ca936de88cf86d069121db19453a" kind="function"><name>default_pattern_with_source_loc</name></member>
+    <member refid="structpars_1_1app_1_1with__default__setup_1a11ad0a06ff6c0e16378facb9b7d92f9c" kind="function"><name>enable_source_loc_logging</name></member>
+    <member refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" kind="function"><name>setup</name></member>
+    <member refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" kind="function"><name>with_default_setup</name></member>
+  </compound>
+  <compound refid="conceptformattable__c" kind="concept"><name>formattable_c</name>
+  </compound>
+  <compound refid="concepthashable__c" kind="concept"><name>hashable_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1movable__only__c" kind="concept"><name>nngxx::movable_only_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1move__only__assignable__c" kind="concept"><name>nngxx::move_only_assignable_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1move__only__constructible__c" kind="concept"><name>nngxx::move_only_constructible_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1nng__c" kind="concept"><name>nngxx::nng_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1nng__value__c" kind="concept"><name>nngxx::nng_value_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1nng__with__get__opt__c" kind="concept"><name>nngxx::nng_with_get_opt_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1nng__with__set__opt__c" kind="concept"><name>nngxx::nng_with_set_opt_c</name>
+  </compound>
+  <compound refid="conceptnngxx_1_1uint__c" kind="concept"><name>nngxx::uint_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1async__event__c" kind="concept"><name>pars::ev::async_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1async__internal__event__c" kind="concept"><name>pars::ev::async_internal_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1async__kind__c" kind="concept"><name>pars::ev::async_kind_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1async__network__event__c" kind="concept"><name>pars::ev::async_network_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1event__c" kind="concept"><name>pars::ev::event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1internal__event__c" kind="concept"><name>pars::ev::internal_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1kind__c" kind="concept"><name>pars::ev::kind_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1network__event__c" kind="concept"><name>pars::ev::network_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1sync__event__c" kind="concept"><name>pars::ev::sync_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1sync__internal__event__c" kind="concept"><name>pars::ev::sync_internal_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1sync__kind__c" kind="concept"><name>pars::ev::sync_kind_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1ev_1_1sync__network__event__c" kind="concept"><name>pars::ev::sync_network_event_c</name>
+  </compound>
+  <compound refid="conceptpars_1_1net_1_1tool__c" kind="concept"><name>pars::net::tool_c</name>
+  </compound>
+  <compound refid="namespaceclev" kind="namespace"><name>clev</name>
+    <member refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kind="typedef"><name>unexpected</name></member>
+    <member refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kind="typedef"><name>expected</name></member>
+    <member refid="namespaceclev_1a24d461a6f1667035ddcbcf4591180c3b" kind="variable"><name>clev_exception_disabled_v</name></member>
+    <member refid="namespaceclev_1ad67cce0e67480f49f7693411297575bc" kind="function"><name>abort_now</name></member>
+    <member refid="namespaceclev_1a4e7c968daf8f7fab7c1a1e491de4fa12" kind="function"><name>exit_now</name></member>
+    <member refid="namespaceclev_1ade5250094fcbd2e2f25e8968d6fcd08f" kind="function"><name>abort_now</name></member>
+    <member refid="namespaceclev_1ab6bee7921e6872a5538b015c7a09cdbf" kind="function"><name>exit_now</name></member>
+    <member refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" kind="function"><name>make_unexpected</name></member>
+    <member refid="namespaceclev_1a15c55fa3a6d6170235687de697524350" kind="function"><name>make_expected</name></member>
+  </compound>
+  <compound refid="namespacefmt" kind="namespace"><name>fmt</name>
+  </compound>
+  <compound refid="namespacenngxx" kind="namespace"><name>nngxx</name>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kind="enum"><name>err</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" kind="enumvalue"><name>success</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6eb25cafd325fc432de73fe0d2881a90" kind="enumvalue"><name>intr</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c" kind="enumvalue"><name>nomem</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a15e757c159904fb372bd77be464a4586" kind="enumvalue"><name>inval</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a8bc1b2f84252c3df4edd53e4aad097a7" kind="enumvalue"><name>busy</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6bd1da51c3edc54d566604a43bdc1dbe" kind="enumvalue"><name>timedout</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad8c5f74af7f29866068ca57008ed8388" kind="enumvalue"><name>connrefused</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349e686330723975502e9ef4f939a5ac" kind="enumvalue"><name>closed</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a639849f6b368019778991b32434354fc" kind="enumvalue"><name>again</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024" kind="enumvalue"><name>notsup</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd67aae71a38916d5ad00dd87692ab9a" kind="enumvalue"><name>addrinuse</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e" kind="enumvalue"><name>state</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569" kind="enumvalue"><name>noent</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349c85aae1d71151c001702f17a2b5f0" kind="enumvalue"><name>proto</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab748f56cf76526f8606d7463b9df9f2e" kind="enumvalue"><name>unreachable</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9957561d3300a5c3c0a8d79e0703c480" kind="enumvalue"><name>addrinval</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aca659200663cf654dc4410ed494451ee" kind="enumvalue"><name>perm</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108afd864c5303e342cd062d0479af2ee92b" kind="enumvalue"><name>msgsize</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab9ca56d12de113e1babfacc263391aa4" kind="enumvalue"><name>connaborted</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a46b677b73a61d3c343db5c23ab4a2ab2" kind="enumvalue"><name>connreset</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad5c39a1d9aced393f835f334a1fb9206" kind="enumvalue"><name>canceled</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4" kind="enumvalue"><name>nofiles</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272" kind="enumvalue"><name>nospc</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a035d02e56845b5a4979feabda0824f88" kind="enumvalue"><name>exist</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40" kind="enumvalue"><name>readonly</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aef1d48fe20b591902a50fa3ba5f7e88f" kind="enumvalue"><name>writeonly</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a5ae9b7f211e23aac3df5f2b8f3b8eada" kind="enumvalue"><name>crypto</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108af437fd2fc6626d7d27a0c6864402bf3b" kind="enumvalue"><name>peerauth</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d" kind="enumvalue"><name>noarg</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1f2a1ba9f974029c8e43ae8f59637f4c" kind="enumvalue"><name>ambiguous</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a3caf72759b505eb34e97b1770a19c1d4" kind="enumvalue"><name>badtype</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a561d9fe75aacd80a85dfdca62f8bdc77" kind="enumvalue"><name>connshut</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad1efad72dc5b17dc66a46767c32fff40" kind="enumvalue"><name>internal</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd5763c8ee2068e505915d3abf12c45c" kind="enumvalue"><name>syserr</name></member>
+    <member refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aba615b5939d7c8d16d9963d2f3dd3ef9" kind="enumvalue"><name>tranerr</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" kind="enum"><name>opt</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba1d6e8f4eecb2a74918e1e929dd656651" kind="enumvalue"><name>sockname</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebabdd166af3a63f7be696dd17a218a6ffb" kind="enumvalue"><name>raw</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba7fabc1404929c9e521e4906f5192c2f0" kind="enumvalue"><name>recvbuf</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebad12eaa7e7b72ba78c5a2f780c736c4c9" kind="enumvalue"><name>sendbuf</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebabc82f77c123af69082d2df253e713013" kind="enumvalue"><name>recvfd</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebad82f3cb9c24f67f8ef646f2ecc39abef" kind="enumvalue"><name>sendfd</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab2ddbb134cb7393838de250c925b9058" kind="enumvalue"><name>recvtimeo</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba401401d015d8f1561c45f089ee3739ba" kind="enumvalue"><name>sendtimeo</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba46efa453cc1e3e067cc3c023d2b0a3fb" kind="enumvalue"><name>locaddr</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba1d67ce36148bd0a1a12b9d7437ea7a63" kind="enumvalue"><name>remaddr</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba572d4e421e5e6b9bc11d815e8a027112" kind="enumvalue"><name>url</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba048f3b86c37f62194df6002278fb8ead" kind="enumvalue"><name>maxttl</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab735b662e52a39fb9ad878b0a008bedb" kind="enumvalue"><name>recvmaxsz</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba4f2f13a34fe86aa1017d0f85b2a99b8e" kind="enumvalue"><name>reconnmint</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebace08d1a163044f25c42115dcb38f5632" kind="enumvalue"><name>reconnmaxt</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebab7b347fbe1d28a4c06d671908c68c567" kind="enumvalue"><name>peergid</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba40575bf65c44003f590d6178df18b644" kind="enumvalue"><name>peerpid</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba4427d891e35b358ca126d1ddd7b97635" kind="enumvalue"><name>peeruid</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba35fea86bcebc0b4c9659baf44d66ee3b" kind="enumvalue"><name>peerzoneid</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eba24149147625fbb5f43ae591165967617" kind="enumvalue"><name>req_resend_time</name></member>
+    <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518ebaea897a81a43c7a14ab13e1c2d9d0b4cf" kind="enumvalue"><name>req_resend_tick</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325f" kind="enum"><name>opt_overload</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kind="enumvalue"><name>integer</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kind="enumvalue"><name>boolean</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kind="enumvalue"><name>string</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kind="enumvalue"><name>size</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kind="enumvalue"><name>sockaddr</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kind="enumvalue"><name>duration</name></member>
+    <member refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kind="enumvalue"><name>uint64</name></member>
+    <member refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" kind="enum"><name>pipe_ev</name></member>
+    <member refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a76b315b05657a3099896b07a17978946" kind="enumvalue"><name>add_pre</name></member>
+    <member refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802ad7572fbaa2c6888951083ca5e414289f" kind="enumvalue"><name>add_post</name></member>
+    <member refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a19b14640109dba7832348902bdc72924" kind="enumvalue"><name>rem_post</name></member>
+    <member refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802a0fc3cfbc27e91ea60a787de13dae3e3c" kind="enumvalue"><name>num</name></member>
+    <member refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kind="typedef"><name>aio_view</name></member>
+    <member refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kind="typedef"><name>aio</name></member>
+    <member refid="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" kind="typedef"><name>ctx_view</name></member>
+    <member refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kind="typedef"><name>ctx</name></member>
+    <member refid="namespacenngxx_1a8256ea641b01c93a4617051a9946801b" kind="typedef"><name>dialer_view</name></member>
+    <member refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kind="typedef"><name>dialer</name></member>
+    <member refid="namespacenngxx_1ad5189003a3b178e4e02ac3ac40335212" kind="typedef"><name>listener_view</name></member>
+    <member refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kind="typedef"><name>listener</name></member>
+    <member refid="namespacenngxx_1a8e6d1cfc74418ae3c9a465c340c1a8a8" kind="typedef"><name>msg_view</name></member>
+    <member refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kind="typedef"><name>msg</name></member>
+    <member refid="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" kind="typedef"><name>opt_to_nng_type_t</name></member>
+    <member refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kind="typedef"><name>pipe_view</name></member>
+    <member refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kind="typedef"><name>socket_view</name></member>
+    <member refid="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" kind="typedef"><name>socket</name></member>
+    <member refid="namespacenngxx_1a32a1e21e50b267a3d0692e464c0dfedd" kind="function"><name>sleep</name></member>
+    <member refid="namespacenngxx_1abf1e7df2fd9f119bc5805bead7180c3b" kind="function"><name>make_aio</name></member>
+    <member refid="namespacenngxx_1a70f35bd836d0a359c41baea16cab054d" kind="function"><name>make_aio</name></member>
+    <member refid="namespacenngxx_1a2bc0be4423cd53565345c15e68718993" kind="function"><name>make_ctx</name></member>
+    <member refid="namespacenngxx_1a5af84fe9ec9a75547077292cc3184ba3" kind="function"><name>make_dialer</name></member>
+    <member refid="namespacenngxx_1af7cc8648f9b781ceefa19bff3405c104" kind="function"><name>error_category</name></member>
+    <member refid="namespacenngxx_1a45d6dbea9ed7507e7aef5ac8f827f2c3" kind="function"><name>make_error_code</name></member>
+    <member refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kind="function"><name>make</name></member>
+    <member refid="namespacenngxx_1a0416b7440ce59d889ef96e1106bbdb8d" kind="function"><name>read</name></member>
+    <member refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kind="function"><name>invoke</name></member>
+    <member refid="namespacenngxx_1a0c256ba910e505bd0bef5e615b5c8023" kind="function"><name>invoke</name></member>
+    <member refid="namespacenngxx_1a5fb155c4d0007959b70c15da8b977905" kind="function"><name>make_listener</name></member>
+    <member refid="namespacenngxx_1a74aba1b204c6b21a428687aac0331e96" kind="function"><name>make_msg</name></member>
+    <member refid="namespacenngxx_1ad51ba697120ad200420c7e4c0cc06c4c" kind="function"><name>opt_to_nng_value</name></member>
+    <member refid="namespacenngxx_1a0c6c2858e79550e28173c494cddc4f00" kind="function"><name>opt_to_nng_overload</name></member>
+    <member refid="namespacenngxx_1aedb473509a696bead2df6edbad24d96a" kind="function"><name>cast_pipe_ev</name></member>
+    <member refid="namespacenngxx_1a139f8ed3851ddee253cf8436255ffd49" kind="function"><name>cast_pipe_ev</name></member>
+  </compound>
+  <compound refid="namespacenngxx_1_1pull" kind="namespace"><name>nngxx::pull</name>
+  </compound>
+  <compound refid="namespacenngxx_1_1pull_1_1v0" kind="namespace"><name>nngxx::pull::v0</name>
+    <member refid="namespacenngxx_1_1pull_1_1v0_1ac00935274060b9e6428657d7b5d17d6c" kind="function"><name>make_socket</name></member>
+  </compound>
+  <compound refid="namespacenngxx_1_1push" kind="namespace"><name>nngxx::push</name>
+  </compound>
+  <compound refid="namespacenngxx_1_1push_1_1v0" kind="namespace"><name>nngxx::push::v0</name>
+    <member refid="namespacenngxx_1_1push_1_1v0_1ac3d395ca9f3a37074c33391859789bad" kind="function"><name>make_socket</name></member>
+  </compound>
+  <compound refid="namespacenngxx_1_1rep" kind="namespace"><name>nngxx::rep</name>
+  </compound>
+  <compound refid="namespacenngxx_1_1rep_1_1v0" kind="namespace"><name>nngxx::rep::v0</name>
+    <member refid="namespacenngxx_1_1rep_1_1v0_1a70457ee14ffccdf3c701b94a8325258e" kind="function"><name>make_socket</name></member>
+  </compound>
+  <compound refid="namespacenngxx_1_1req" kind="namespace"><name>nngxx::req</name>
+  </compound>
+  <compound refid="namespacenngxx_1_1req_1_1v0" kind="namespace"><name>nngxx::req::v0</name>
+    <member refid="namespacenngxx_1_1req_1_1v0_1a3a4213920ed34f6bc28c3c76c180668b" kind="function"><name>make_socket</name></member>
+  </compound>
+  <compound refid="namespacepars" kind="namespace"><name>pars</name>
+    <member refid="namespacepars_1afcdb266fe199935265e3d7a45b4edebf" kind="enum"><name>error</name></member>
+    <member refid="namespacepars_1afcdb266fe199935265e3d7a45b4edebfa260ca9dd8a4577fc00b7bd5810298076" kind="enumvalue"><name>success</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kind="enum"><name>lf</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kind="enumvalue"><name>app</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d" kind="enumvalue"><name>comp</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kind="enumvalue"><name>event</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4" kind="enumvalue"><name>net</name></member>
+    <member refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee" kind="enumvalue"><name>user</name></member>
+    <member refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kind="typedef"><name>milli</name></member>
+    <member refid="namespacepars_1ad73ed52b3bdd1722ed180f9a891685b8" kind="function"><name>error_category</name></member>
+    <member refid="namespacepars_1a9890a23006e95b65b26c3eea237461b8" kind="function"><name>make_error_code</name></member>
+    <member refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" kind="function"><name>log</name></member>
+    <member refid="namespacepars_1a761b17f095b90f5f48d0aa8055915639" kind="function"><name>log</name></member>
+    <member refid="namespacepars_1a3e1ac793caf43f39b98dbffe2e0ef6ca" kind="function"><name>log</name></member>
+    <member refid="namespacepars_1af3e76142507bfacc41c503f304c6872c" kind="function"><name>log</name></member>
+    <member refid="namespacepars_1aa361cc2292e3e2c6cab5a420cdaa1044" kind="function"><name>trace</name></member>
+    <member refid="namespacepars_1ae36f259c17d7e27af8401cc015d4da9a" kind="function"><name>trace</name></member>
+    <member refid="namespacepars_1ac0c535cd64e8249ce015015a3e2c29d3" kind="function"><name>trace</name></member>
+    <member refid="namespacepars_1a5ba40dded20a9b08e34f16deb54dd142" kind="function"><name>trace</name></member>
+    <member refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kind="function"><name>debug</name></member>
+    <member refid="namespacepars_1a4de5bf8cc82c033ff51ef3355789d725" kind="function"><name>debug</name></member>
+    <member refid="namespacepars_1ac82d32af273eb841f5167e93460cea85" kind="function"><name>debug</name></member>
+    <member refid="namespacepars_1aec4276570022029a78240d6a590495e6" kind="function"><name>debug</name></member>
+    <member refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kind="function"><name>info</name></member>
+    <member refid="namespacepars_1a8953afafd4acb64a245b2054e61cffbb" kind="function"><name>info</name></member>
+    <member refid="namespacepars_1aeab1970c9a8b2beabfd2b776f3f49ac4" kind="function"><name>info</name></member>
+    <member refid="namespacepars_1a2bf3a8112548e762cd77e8451906b170" kind="function"><name>info</name></member>
+    <member refid="namespacepars_1ae9c123d9bd762fc73a673285d320d692" kind="function"><name>warn</name></member>
+    <member refid="namespacepars_1a4f97dd9a647e9dbc3d6440d04d0331c9" kind="function"><name>warn</name></member>
+    <member refid="namespacepars_1a2e422a9d1f4f4e72e0303720167ddafd" kind="function"><name>warn</name></member>
+    <member refid="namespacepars_1aa515f2fdb7fa82453ee2ed158aecb333" kind="function"><name>warn</name></member>
+    <member refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kind="function"><name>err</name></member>
+    <member refid="namespacepars_1a314ece1bcf5312db56fc8eece18023cf" kind="function"><name>err</name></member>
+    <member refid="namespacepars_1a1010a29ab068ef10dbba53f459efa3bb" kind="function"><name>err</name></member>
+    <member refid="namespacepars_1a25898e1fe7cc5e1cbcfebc86fc2dc828" kind="function"><name>err</name></member>
+    <member refid="namespacepars_1adf272f9dfe4dd9a4c778ec1668b010a3" kind="function"><name>critical</name></member>
+    <member refid="namespacepars_1a311e94fc62155675008a3095e58bc1d8" kind="function"><name>critical</name></member>
+    <member refid="namespacepars_1a5c96639854aeca4b1146d527a82600ad" kind="function"><name>critical</name></member>
+    <member refid="namespacepars_1acc5b23fc8231ef128b3d5e964a1dfe0d" kind="function"><name>critical</name></member>
+    <member refid="namespacepars_1a1a13b5432b2c4e8dfd7419135e02c6d2" kind="function"><name>operator|</name></member>
+    <member refid="namespacepars_1a350655391ff0c563873456fb2a18353a" kind="function"><name>operator|</name></member>
+    <member refid="namespacepars_1a69a058579fef90f9fdf50ac62fa6c9be" kind="function"><name>operator|</name></member>
+    <member refid="namespacepars_1ab213c1db00bcc4efa9c09a037b3153cb" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacepars_1ae0c3e60dcf7f78296ff02693096f0556" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacepars_1a352234c76416c9b4b9688594e5be8b9e" kind="function"><name>operator&amp;</name></member>
+    <member refid="namespacepars_1a7e5d12501985d0fe55404f8e53d26676" kind="function"><name>hash_from_uuid</name></member>
+    <member refid="namespacepars_1ad481204c847db242e0b5f5bf1487a0a7" kind="function"><name>hash_from_msg</name></member>
+  </compound>
+  <compound refid="namespacepars_1_1app" kind="namespace"><name>pars::app</name>
+  </compound>
+  <compound refid="namespacepars_1_1comp" kind="namespace"><name>pars::comp</name>
+  </compound>
+  <compound refid="namespacepars_1_1ev" kind="namespace"><name>pars::ev</name>
+    <member refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kind="enum"><name>executes</name></member>
+    <member refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c" kind="enumvalue"><name>sync</name></member>
+    <member refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kind="enumvalue"><name>async</name></member>
+    <member refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kind="typedef"><name>job_handler_f</name></member>
+    <member refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kind="typedef"><name>hf_arg</name></member>
+    <member refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kind="typedef"><name>handler_f</name></member>
+    <member refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" kind="variable"><name>is_same_kind_v</name></member>
+    <member refid="namespacepars_1_1ev_1af4b588b6e73576f4d4e0618665fa35e5" kind="function"><name>compute_spec_hash</name></member>
+    <member refid="namespacepars_1_1ev_1ac84637ef36e6c43e0f0fda9b9c55440e" kind="function"><name>make_job</name></member>
+    <member refid="namespacepars_1_1ev_1aa9008ca4ace86f33edb3a0eefd008e36" kind="function"><name>sent</name></member>
+    <member refid="namespacepars_1_1ev_1a275a1098a112d8f424e90916e6653713" kind="function"><name>received</name></member>
+    <member refid="namespacepars_1_1ev_1a97196dda48d93a21b7696d6e73e9266d" kind="function"><name>fired</name></member>
+    <member refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kind="function"><name>make_hf</name></member>
+  </compound>
+  <compound refid="namespacepars_1_1f" kind="namespace"><name>pars::f</name>
+  </compound>
+  <compound refid="namespacepars_1_1net" kind="namespace"><name>pars::net</name>
+    <member refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1" kind="enum"><name>dir</name></member>
+    <member refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275" kind="enumvalue"><name>out</name></member>
+    <member refid="namespacepars_1_1net_1a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf" kind="enumvalue"><name>in</name></member>
+    <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kind="enum"><name>cmode</name></member>
+    <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kind="enumvalue"><name>dial</name></member>
+    <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" kind="enumvalue"><name>listen</name></member>
+    <member refid="namespacepars_1_1net_1ae5981715796cf677d35be33819d52267" kind="typedef"><name>cb_f</name></member>
+    <member refid="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" kind="function"><name>cmode_from_string</name></member>
+  </compound>
+  <compound refid="namespacepars__example" kind="namespace"><name>pars_example</name>
+  </compound>
+  <compound refid="namespacepars__example_1_1apps" kind="namespace"><name>pars_example::apps</name>
+  </compound>
+  <compound refid="namespacepars__example_1_1compute" kind="namespace"><name>pars_example::compute</name>
+    <member refid="namespacepars__example_1_1compute_1aac60029fd2626d454a76e5b814e6d58a" kind="function"><name>slow_fib</name></member>
+    <member refid="namespacepars__example_1_1compute_1aba38a566535e118eeb2b93a8204332dc" kind="function"><name>fast_fib</name></member>
+    <member refid="namespacepars__example_1_1compute_1a97cdcc6055ddbef15858b3d64004b6bc" kind="function"><name>fib</name></member>
+  </compound>
+  <compound refid="namespacepars__example_1_1event" kind="namespace"><name>pars_example::event</name>
+  </compound>
+  <compound refid="namespacepars__example_1_1resource" kind="namespace"><name>pars_example::resource</name>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09a" kind="enum"><name>client_state</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aaee20fd29e100990f661f3f1479c19647" kind="enumvalue"><name>creating</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aaa3e2304d22f59d6319f6314a4a5130b8" kind="enumvalue"><name>initializing</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aa3bebb2f89180b03fa5ae736665f648d9" kind="enumvalue"><name>started</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aa3d81fa3a6bdbe4e2811123b871a19ca6" kind="enumvalue"><name>sending_work</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aa034e9987cd855c476e93315ef2b5b525" kind="enumvalue"><name>waiting_work_done</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aa2a70c8fd8851eaaa0859ec3fde42b9db" kind="enumvalue"><name>terminating</name></member>
+    <member refid="namespacepars__example_1_1resource_1a095a3419767bbbc2eb761adb7779d09aadd4b8c762f1258f89c4383961c5be121" kind="enumvalue"><name>terminated</name></member>
+    <member refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7b" kind="enum"><name>server_state</name></member>
+    <member refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7baee20fd29e100990f661f3f1479c19647" kind="enumvalue"><name>creating</name></member>
+    <member refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7baa3e2304d22f59d6319f6314a4a5130b8" kind="enumvalue"><name>initializing</name></member>
+    <member refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7ba75101dcdfc88455bcafc9e53e0b06689" kind="enumvalue"><name>running</name></member>
+    <member refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7ba2a70c8fd8851eaaa0859ec3fde42b9db" kind="enumvalue"><name>terminating</name></member>
+    <member refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931" kind="enum"><name>pipe_state</name></member>
+    <member refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931aee54ea693106cb380b38298ef54b6412" kind="enumvalue"><name>waiting_work</name></member>
+    <member refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931ac327b49efdca2668f28cd7b4beee54b3" kind="enumvalue"><name>working</name></member>
+    <member refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931a6b2ded51d81a4403d8a4bd25fa1e57ee" kind="enumvalue"><name>done</name></member>
+    <member refid="namespacepars__example_1_1resource_1abe56db55737be85fa7985a1213ead931a378d95ecf2b9fdd9ca580f62115badb8" kind="enumvalue"><name>failing</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="client_8cpp" kind="file"><name>client.cpp</name>
+    <member refid="client_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="common_8h" kind="file"><name>common.h</name>
+    <member refid="common_8h_1a0309fff2c27bd9c255d5255478ae34a5" kind="variable"><name>enable_compute_fib_async</name></member>
+  </compound>
+  <compound refid="fib_8h" kind="file"><name>fib.h</name>
+  </compound>
+  <compound refid="server__backend_8cpp" kind="file"><name>server_backend.cpp</name>
+    <member refid="server__backend_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="iface_8h" kind="file"><name>iface.h</name>
+  </compound>
+  <compound refid="own_8h" kind="file"><name>own.h</name>
+    <member refid="own_8h_1aab6b74c3d0fb7f0e1822bdff39a8a6c5" kind="variable"><name>ownxx_own_is_really_needed_v</name></member>
+  </compound>
+  <compound refid="concept_8h" kind="file"><name>concept.h</name>
+  </compound>
+  <compound refid="ctx_8h" kind="file"><name>ctx.h</name>
+  </compound>
+  <compound refid="iface_2ctx_8h" kind="file"><name>ctx.h</name>
+  </compound>
+  <compound refid="clev_2err_8h" kind="file"><name>err.h</name>
+    <member refid="clev_2err_8h_1a2e3af1de29e4213f21f020dd96886f5d" kind="define"><name>CLEV_HAS_EXCEPTIONS</name></member>
+  </compound>
+  <compound refid="nngxx_2err_8h" kind="file"><name>err.h</name>
+  </compound>
+  <compound refid="pars_2err_8h" kind="file"><name>err.h</name>
+  </compound>
+  <compound refid="aio_8h" kind="file"><name>aio.h</name>
+  </compound>
+  <compound refid="iface_2aio_8h" kind="file"><name>aio.h</name>
+  </compound>
+  <compound refid="dialer_8h" kind="file"><name>dialer.h</name>
+  </compound>
+  <compound refid="iface_2dialer_8h" kind="file"><name>dialer.h</name>
+  </compound>
+  <compound refid="iface_2listener_8h" kind="file"><name>listener.h</name>
+  </compound>
+  <compound refid="listener_8h" kind="file"><name>listener.h</name>
+  </compound>
+  <compound refid="iface_2msg_8h" kind="file"><name>msg.h</name>
+  </compound>
+  <compound refid="msg_8h" kind="file"><name>msg.h</name>
+  </compound>
+  <compound refid="nngxx_2iface_2pipe_8h" kind="file"><name>pipe.h</name>
+  </compound>
+  <compound refid="nngxx_2pipe_8h" kind="file"><name>pipe.h</name>
+  </compound>
+  <compound refid="pars_2net_2pipe_8h" kind="file"><name>pipe.h</name>
+  </compound>
+  <compound refid="nngxx_2iface_2socket_8h" kind="file"><name>socket.h</name>
+  </compound>
+  <compound refid="nngxx_2socket_8h" kind="file"><name>socket.h</name>
+    <member refid="nngxx_2socket_8h_1ad5405cb6988304b4819775b78f6c4acc" kind="variable"><name>nngxx_socket_is_really_needed_v</name></member>
+  </compound>
+  <compound refid="pars_2net_2socket_8h" kind="file"><name>socket.h</name>
+  </compound>
+  <compound refid="clev_2value_8h" kind="file"><name>value.h</name>
+  </compound>
+  <compound refid="nngxx_2iface_2value_8h" kind="file"><name>value.h</name>
+  </compound>
+  <compound refid="msg__body_8h" kind="file"><name>msg_body.h</name>
+  </compound>
+  <compound refid="msg__header_8h" kind="file"><name>msg_header.h</name>
+  </compound>
+  <compound refid="opt_8h" kind="file"><name>opt.h</name>
+  </compound>
+  <compound refid="opt__getter_8h" kind="file"><name>opt_getter.h</name>
+  </compound>
+  <compound refid="opt__setter_8h" kind="file"><name>opt_setter.h</name>
+  </compound>
+  <compound refid="socket__decl_8h" kind="file"><name>socket_decl.h</name>
+  </compound>
+  <compound refid="resources_8h" kind="file"><name>resources.h</name>
+  </compound>
+  <compound refid="setup_8h" kind="file"><name>setup.h</name>
+  </compound>
+  <compound refid="single_8h" kind="file"><name>single.h</name>
+  </compound>
+  <compound refid="state__machine_8h" kind="file"><name>state_machine.h</name>
+  </compound>
+  <compound refid="backend_8h" kind="file"><name>backend.h</name>
+  </compound>
+  <compound refid="client_8h" kind="file"><name>client.h</name>
+  </compound>
+  <compound refid="example_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="lib_2include_2pars_2concept_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="lib_2include_2pars_2ev_2event_8h" kind="file"><name>event.h</name>
+  </compound>
+  <compound refid="concept_2formattable_8h" kind="file"><name>formattable.h</name>
+  </compound>
+  <compound refid="fmt_2formattable_8h" kind="file"><name>formattable.h</name>
+  </compound>
+  <compound refid="hashable_8h" kind="file"><name>hashable.h</name>
+  </compound>
+  <compound refid="concept_2kind_8h" kind="file"><name>kind.h</name>
+  </compound>
+  <compound refid="ev_2kind_8h" kind="file"><name>kind.h</name>
+  </compound>
+  <compound refid="net_8h" kind="file"><name>net.h</name>
+  </compound>
+  <compound refid="dispatcher_8h" kind="file"><name>dispatcher.h</name>
+  </compound>
+  <compound refid="enqueuer_8h" kind="file"><name>enqueuer.h</name>
+  </compound>
+  <compound refid="hf__registry_8h" kind="file"><name>hf_registry.h</name>
+  </compound>
+  <compound refid="hf__registry____insert_8h" kind="file"><name>hf_registry__insert.h</name>
+  </compound>
+  <compound refid="job_8h" kind="file"><name>job.h</name>
+  </compound>
+  <compound refid="kind__base_8h" kind="file"><name>kind_base.h</name>
+  </compound>
+  <compound refid="kind__decl_8h" kind="file"><name>kind_decl.h</name>
+  </compound>
+  <compound refid="klass_8h" kind="file"><name>klass.h</name>
+  </compound>
+  <compound refid="make__hf_8h" kind="file"><name>make_hf.h</name>
+  </compound>
+  <compound refid="metadata_8h" kind="file"><name>metadata.h</name>
+    <member refid="metadata_8h_1a5bc80ac2bf0bc145f66dcf22ab77f4db" kind="define"><name>PARS_MD</name></member>
+  </compound>
+  <compound refid="runner_8h" kind="file"><name>runner.h</name>
+  </compound>
+  <compound refid="serializer_8h" kind="file"><name>serializer.h</name>
+  </compound>
+  <compound refid="spec_8h" kind="file"><name>spec.h</name>
+  </compound>
+  <compound refid="helpers_8h" kind="file"><name>helpers.h</name>
+  </compound>
+  <compound refid="nng_8h" kind="file"><name>nng.h</name>
+  </compound>
+  <compound refid="stl_8h" kind="file"><name>stl.h</name>
+  </compound>
+  <compound refid="init_8h" kind="file"><name>init.h</name>
+    <member refid="init_8h_1af08ec37a8c99d747fb60fa15bc28678b" kind="define"><name>_CRT_SECURE_NO_WARNINGS</name></member>
+  </compound>
+  <compound refid="log_8h" kind="file"><name>log.h</name>
+    <member refid="log_8h_1ae4fda6f71f35120e2ff48157fca961b5" kind="define"><name>SPDLOG_ACTIVE_LEVEL</name></member>
+    <member refid="log_8h_1ad7619991068e25b9950996b5054d05e5" kind="define"><name>PARS_LOG_ENABLE_SYSLOG</name></member>
+    <member refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kind="define"><name>SL</name></member>
+  </compound>
+  <compound refid="demangle_8h" kind="file"><name>demangle.h</name>
+    <member refid="demangle_8h_1ad02552d0a98f7dd4450d41c156857961" kind="function"><name>demangle</name></member>
+  </compound>
+  <compound refid="flags_8h" kind="file"><name>flags.h</name>
+  </compound>
+  <compound refid="nametype_8h" kind="file"><name>nametype.h</name>
+    <member refid="nametype_8h_1a38dd383b4a7349ba3771309bc3bafa13" kind="function"><name>nametype</name></member>
+    <member refid="nametype_8h_1a44cf2292d98aa52f62494578e2c8cf80" kind="function"><name>nametype</name></member>
+  </compound>
+  <compound refid="context_8h" kind="file"><name>context.h</name>
+  </compound>
+  <compound refid="context__opt_8h" kind="file"><name>context_opt.h</name>
+  </compound>
+  <compound refid="context__registry_8h" kind="file"><name>context_registry.h</name>
+  </compound>
+  <compound refid="dir_8h" kind="file"><name>dir.h</name>
+  </compound>
+  <compound refid="hash_8h" kind="file"><name>hash.h</name>
+  </compound>
+  <compound refid="op_8h" kind="file"><name>op.h</name>
+  </compound>
+  <compound refid="pull_8h" kind="file"><name>pull.h</name>
+  </compound>
+  <compound refid="push_8h" kind="file"><name>push.h</name>
+  </compound>
+  <compound refid="rep_8h" kind="file"><name>rep.h</name>
+  </compound>
+  <compound refid="req_8h" kind="file"><name>req.h</name>
+  </compound>
+  <compound refid="socket__opt_8h" kind="file"><name>socket_opt.h</name>
+  </compound>
+  <compound refid="tool__view_8h" kind="file"><name>tool_view.h</name>
+  </compound>
+  <compound refid="pars_8h" kind="file"><name>pars.h</name>
+  </compound>
+  <compound refid="dir_d78138f64fa1281cc4d5674365f8996f" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/app</name>
+  </compound>
+  <compound refid="dir_7fdf9d038045b73e2c237e42c5922da2" kind="dir"><name>/home/runner/work/pars/pars/lib/include/clev</name>
+  </compound>
+  <compound refid="dir_aaad551a02cce75ca49bf48bd98ac2a5" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/comp</name>
+  </compound>
+  <compound refid="dir_2d7454e8a84ae26d386e33a25bbce53b" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/concept</name>
+  </compound>
+  <compound refid="dir_eca6d53aa86e592f662bde1c2283f1f5" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/ev</name>
+  </compound>
+  <compound refid="dir_cfafba98a580ce4b62f8a6fa96d7cbb0" kind="dir"><name>/home/runner/work/pars/pars/example</name>
+  </compound>
+  <compound refid="dir_d4440504d0cc13c3b381d5d91f356936" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/fmt</name>
+  </compound>
+  <compound refid="dir_a7a1c8c48ead8bb73f1634df893baa1d" kind="dir"><name>/home/runner/work/pars/pars/lib/include/nngxx/iface</name>
+  </compound>
+  <compound refid="dir_5a30104352ef4255dc24354b02eb2d20" kind="dir"><name>/home/runner/work/pars/pars/lib/include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>/home/runner/work/pars/pars/lib</name>
+  </compound>
+  <compound refid="dir_2f2ea1850b379ce39e80e65156de07b7" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/log</name>
+  </compound>
+  <compound refid="dir_b226a2db4af0c8a921722f1826220d82" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars/net</name>
+  </compound>
+  <compound refid="dir_11335132a5b40579406e58b1f54b1d1a" kind="dir"><name>/home/runner/work/pars/pars/lib/include/nngxx</name>
+  </compound>
+  <compound refid="dir_2cddebf4b6c4c76c4b4b548caa536eef" kind="dir"><name>/home/runner/work/pars/pars/lib/include/pars</name>
+  </compound>
+</doxygenindex>

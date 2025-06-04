@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-network - [...]/lib/include/pars/log/flags.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Wed Jun  4 13:52:50 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">26</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;spdlog/spdlog.h&gt;
+             : 
+             : namespace pars
+             : {
+             : 
+             : enum class lf
+             : {
+             :   app = 1,
+             :   comp = 2,
+             :   event = 4,
+             :   net = 8,
+             :   user = 1073741824,
+             : };
+             : 
+             : constexpr static int operator|(const lf&amp; a, const lf&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return static_cast&lt;int&gt;(a) | static_cast&lt;int&gt;(b);</span>
+             : }
+             : 
+             : constexpr static int operator|(const int&amp; a, const lf&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return a | static_cast&lt;int&gt;(b);</span>
+             : }
+             : 
+             : constexpr static int operator|(const lf&amp; a, const int&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return static_cast&lt;int&gt;(a) | b;</span>
+             : }
+             : 
+             : constexpr static int operator&amp;(const lf&amp; a, const int&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return static_cast&lt;int&gt;(a) &amp; b;</span>
+             : }
+             : 
+             : constexpr static int operator&amp;(const int&amp; a, const lf&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return a &amp; static_cast&lt;int&gt;(b);</span>
+             : }
+             : 
+             : constexpr static int operator&amp;(const lf&amp; a, const lf&amp; b)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return static_cast&lt;int&gt;(a) &amp; static_cast&lt;int&gt;(b);</span>
+             : }
+             : 
+             : namespace f
+             : {
+             : 
+             : struct lf
+             : {
+             :   lf(::pars::lf flags)
+             :     : val{static_cast&lt;int&gt;(flags)}
+             :   {
+             :   }
+             : 
+             :   lf(int flags)
+             :     : val{flags}
+             :   {
+             :   }
+             : 
+             :   int val;
+             : };
+             : 
+             : } // namespace f
+             : 
+             : } // namespace pars
+             : 
+             : template&lt;&gt;
+             : struct fmt::formatter&lt;::pars::lf&gt; : formatter&lt;std::string&gt;
+             : {
+             :   auto format(const ::pars::lf&amp; flag, format_context&amp; ctx) const
+             :     -&gt; decltype(ctx.out())
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    switch (flag)</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::app:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;app&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::comp:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;comp&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::event:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;event&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::net:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;net&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::user:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;user&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    default:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;&lt;lf-{}&gt;&quot;, static_cast&lt;int&gt;(flag));</span>
+             :     }
+             :   }
+             : };
+             : 
+             : template&lt;&gt;
+             : struct fmt::formatter&lt;::pars::f::lf&gt; : formatter&lt;std::string&gt;
+             : {
+             :   auto format(const ::pars::f::lf&amp; flags, format_context&amp; ctx) const
+             :     -&gt; decltype(ctx.out())
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto it = ctx.out();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (const auto&amp; f : {::pars::lf::app, ::pars::lf::comp, ::pars::lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          ::pars::lf::net, ::pars::lf::user})</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (!(flags.val &amp; f))</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        continue;</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      it = fmt::format_to(it, &quot; {}&quot;, f);</span>
+             :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return it;</span>
+             :   }
+             : };
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

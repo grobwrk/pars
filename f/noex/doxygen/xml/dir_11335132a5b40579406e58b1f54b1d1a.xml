@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_11335132a5b40579406e58b1f54b1d1a" kind="dir">
+    <compoundname>/home/runner/work/pars/pars/lib/include/nngxx</compoundname>
+    <innerdir refid="dir_a7a1c8c48ead8bb73f1634df893baa1d">/home/runner/work/pars/pars/lib/include/nngxx/iface</innerdir>
+    <innerfile refid="aio_8h">aio.h</innerfile>
+    <innerfile refid="concept_8h">concept.h</innerfile>
+    <innerfile refid="ctx_8h">ctx.h</innerfile>
+    <innerfile refid="dialer_8h">dialer.h</innerfile>
+    <innerfile refid="nngxx_2err_8h">err.h</innerfile>
+    <innerfile refid="listener_8h">listener.h</innerfile>
+    <innerfile refid="msg_8h">msg.h</innerfile>
+    <innerfile refid="msg__body_8h">msg_body.h</innerfile>
+    <innerfile refid="msg__header_8h">msg_header.h</innerfile>
+    <innerfile refid="opt_8h">opt.h</innerfile>
+    <innerfile refid="opt__getter_8h">opt_getter.h</innerfile>
+    <innerfile refid="opt__setter_8h">opt_setter.h</innerfile>
+    <innerfile refid="nngxx_2pipe_8h">pipe.h</innerfile>
+    <innerfile refid="nngxx_2socket_8h">socket.h</innerfile>
+    <innerfile refid="socket__decl_8h">socket_decl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-internal - [...]/lib/include/clev/err.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-internal</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Wed Jun  4 13:52:50 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">17</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">0.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">0</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;fmt/format.h&gt;
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : #include &lt;expected&gt;
+             : #include &lt;functional&gt;
+             : 
+             : namespace clev
+             : {
+             : 
+             : struct exception : std::runtime_error
+             : {
+             :   explicit exception(std::error_code code) noexcept
+             :     : std::runtime_error(code.message())
+             :   {
+             :   }
+             : };
+             : 
+             : #if __cpp_exceptions &lt; 199711
+             : #define CLEV_HAS_EXCEPTIONS false
+             : #else
+             : #define CLEV_HAS_EXCEPTIONS true
+             : #endif
+             : 
+             : constexpr static bool clev_exception_disabled_v = !(CLEV_HAS_EXCEPTIONS);
+             : 
+             : inline static void
+             : abort_now(const std::error_code err,
+             :           const std::string_view msg = &quot;&quot;) noexcept(clev_exception_disabled_v)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (clev_exception_disabled_v)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    std::quick_exit(err.value());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw exception{err};</span>
+             : }
+             : 
+             : inline static void exit_now(const std::error_code err) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::quick_exit(err.value());</span>
+             : }
+             : 
+             : using unexpected = std::unexpected&lt;std::error_code&gt;;
+             : 
+             : template&lt;typename value_t&gt;
+             : using expected = std::expected&lt;value_t, std::error_code&gt;;
+             : 
+             : template&lt;typename value_t = void&gt;
+             : inline static auto
+             : abort_now(const std::string_view msg = &quot;&quot;) noexcept(clev_exception_disabled_v)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return [=](const std::error_code err) -&gt; expected&lt;value_t&gt; {</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    abort_now(err, msg);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return unexpected{err};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  };</span>
+             : }
+             : 
+             : template&lt;typename value_t = void&gt;
+             : inline static auto exit_now() noexcept(clev_exception_disabled_v)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return [](const std::error_code err) -&gt; expected&lt;value_t&gt; {</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    exit_now(err);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return unexpected{err};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  };</span>
+             : }
+             : 
+             : 
+             : template&lt;typename enum_t&gt;
+             : inline clev::unexpected make_unexpected(const int err) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return clev::unexpected{static_cast&lt;enum_t&gt;(err)};</span>
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : inline clev::expected&lt;void&gt; make_expected(const int err) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (err != 0)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return make_unexpected&lt;enum_t&gt;(err);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
+             : }
+             : 
+             : } // namespace clev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

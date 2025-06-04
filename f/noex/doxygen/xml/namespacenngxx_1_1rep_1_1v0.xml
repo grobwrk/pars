@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacenngxx_1_1rep_1_1v0" kind="namespace" language="C++">
+    <compoundname>nngxx::rep::v0</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenngxx_1_1rep_1_1v0_1a70457ee14ffccdf3c701b94a8325258e" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" kindref="member">socket</ref> &gt;</type>
+        <definition>static clev::expected&lt; socket &gt; nngxx::rep::v0::make_socket</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>make_socket</name>
+        <qualifiedname>nngxx::rep::v0::make_socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/socket.h" line="46" column="31" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/socket.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/socket.h" line="43" column="1"/>
+  </compounddef>
+</doxygen>

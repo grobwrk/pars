@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-events-network - [...]/test/events-network.cpp</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-events-network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Wed Jun  4 13:52:50 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">28</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">100.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">28</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #include &lt;pars/pars.h&gt;
+             : 
+             : #include &lt;gtest/gtest.h&gt;
+             : 
+             : #include &lt;type_traits&gt;
+             : 
+             : namespace pars::tests
+             : {
+             : 
+             : using NetworkEvents =
+             :   ::testing::Types&lt;nngxx::msg, ev::network_error, ev::creating_pipe,
+             :                    ev::pipe_created, ev::pipe_removed&gt;;
+             : 
+             : template&lt;typename event_t&gt;
+             : struct NetworkKinds : testing::Test
+             : {
+             :   using event_type = event_t;
+             : };
+             : 
+             : TYPED_TEST_SUITE(NetworkKinds, NetworkEvents);
+             : 
+             : TYPED_TEST(NetworkKinds, EventsAreRecognized)
+             : {
+           5</span> : <span class="lineCov">  using event_type = NetworkKinds&lt;TypeParam&gt;::event_type;</span>
+             : 
+             :   // event_type is recognized as and event
+           5</span> :   <span class="lineCov">EXPECT_TRUE(ev::event_c&lt;event_type&gt;);</span>
+             : 
+             :   // event_type do requires network data
+           5</span> :   <span class="lineCov">EXPECT_TRUE(ev::klass&lt;event_type&gt;::requires_network);</span>
+             : 
+             :   // event_type is recognized as an network_event_c
+           5</span> :   <span class="lineCov">EXPECT_TRUE(ev::network_event_c&lt;event_type&gt;);</span>
+             : }
+             : 
+             : TYPED_TEST(NetworkKinds, EventsCanBeFired)
+             : {
+           5</span> : <span class="lineCov">  using event_type = NetworkKinds&lt;TypeParam&gt;::event_type;</span>
+             : 
+             :   // we can instantiate a fired&lt;event_type&gt;
+           5</span> :   <span class="lineCov">EXPECT_TRUE((std::is_constructible_v&lt;ev::fired&lt;event_type&gt;, event_type,</span>
+           5</span> : <span class="lineCov">                                       ev::metadata&lt;ev::fired, event_type&gt;&gt;));</span>
+             : 
+           5</span> :   <span class="lineCov">if (std::default_initializable&lt;event_type&gt;)</span>
+             :   {
+             :     // we can instantiate event_type{} without specifing the type event_type
+           5</span> : <span class="lineCov">    ev::fired{event_type{},</span>
+           5</span> : <span class="lineCov">              {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             : 
+             :     // we can instantiate specifing the type event_type
+           5</span> : <span class="lineCov">    ev::fired&lt;event_type&gt;{{},</span>
+           5</span> : <span class="lineCov">                          {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             :   }
+             : }
+             : 
+             : TYPED_TEST(NetworkKinds, EventsCanBeSent)
+             : {
+           5</span> : <span class="lineCov">  using event_type = NetworkKinds&lt;TypeParam&gt;::event_type;</span>
+             : 
+             :   // we can instantiate a sent&lt;event_type&gt;
+           5</span> :   <span class="lineCov">EXPECT_TRUE((std::is_constructible_v&lt;ev::sent&lt;event_type&gt;, event_type,</span>
+           5</span> : <span class="lineCov">                                       ev::metadata&lt;ev::sent, event_type&gt;&gt;));</span>
+             : 
+           5</span> :   <span class="lineCov">if (std::default_initializable&lt;event_type&gt;)</span>
+             :   {
+             :     // we can instantiate event_type{} without specifing the type event_type
+           5</span> : <span class="lineCov">    ev::sent{event_type{}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             : 
+             :     // we can instantiate specifing the type event_type
+           5</span> : <span class="lineCov">    ev::sent&lt;event_type&gt;{{},</span>
+           5</span> : <span class="lineCov">                         {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             :   }
+             : }
+             : 
+             : TYPED_TEST(NetworkKinds, EventsCanBeReceived)
+             : {
+           5</span> : <span class="lineCov">  using event_type = NetworkKinds&lt;TypeParam&gt;::event_type;</span>
+             : 
+             :   // we can instantiate a received&lt;event_type&gt;
+           5</span> :   <span class="lineCov">EXPECT_TRUE(</span>
+           5</span> : <span class="lineCov">    (std::is_constructible_v&lt;ev::received&lt;event_type&gt;, event_type,</span>
+           5</span> : <span class="lineCov">                             ev::metadata&lt;ev::received, event_type&gt;&gt;));</span>
+             : 
+           5</span> :   <span class="lineCov">if (std::default_initializable&lt;event_type&gt;)</span>
+             :   {
+             :     // we can instantiate event_type{} without specifing the type event_type
+           5</span> : <span class="lineCov">    ev::received{event_type{},</span>
+           5</span> : <span class="lineCov">                 {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             : 
+             :     // we can instantiate specifing the type event_type
+           5</span> : <span class="lineCov">    ev::received&lt;event_type&gt;{</span>
+           5</span> : <span class="lineCov">      {}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};</span>
+             :   }
+             : }
+             : 
+             : } // namespace pars::tests
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

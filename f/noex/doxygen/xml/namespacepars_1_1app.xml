@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars_1_1app" kind="namespace" language="C++">
+    <compoundname>pars::app</compoundname>
+    <innerclass refid="structpars_1_1app_1_1lockable" prot="public">pars::app::lockable</innerclass>
+    <innerclass refid="structpars_1_1app_1_1locked" prot="public">pars::app::locked</innerclass>
+    <innerclass refid="classpars_1_1app_1_1resources" prot="public">pars::app::resources</innerclass>
+    <innerclass refid="classpars_1_1app_1_1single" prot="public">pars::app::single</innerclass>
+    <innerclass refid="structpars_1_1app_1_1state__machine" prot="public">pars::app::state_machine</innerclass>
+    <innerclass refid="structpars_1_1app_1_1state__tx" prot="public">pars::app::state_tx</innerclass>
+    <innerclass refid="structpars_1_1app_1_1with__default__setup" prot="public">pars::app::with_default_setup</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/app/resources.h" line="40" column="1"/>
+  </compounddef>
+</doxygen>

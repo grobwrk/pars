@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structnngxx_1_1value" kind="struct" language="C++" prot="public">
+    <compoundname>nngxx::value</compoundname>
+    <basecompoundref refid="structclev_1_1value" prot="public" virt="non-virtual">clev::value&lt; nng_t &gt;</basecompoundref>
+    <includes refid="nngxx_2iface_2value_8h" local="no">value.h</includes>
+    <templateparamlist>
+      <param>
+        <type>nng_c</type>
+        <declname>nng_t</declname>
+        <defname>nng_t</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="user-defined">
+      <header>options setters</header>
+      <memberdef kind="function" id="structnngxx_1_1value_1af30971c7a83b97e329e43e710f32bb77" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::value&lt; nng_t &gt;::set_recv_timeout</definition>
+        <argsstring>(nng_duration d) noexcept</argsstring>
+        <name>set_recv_timeout</name>
+        <qualifiedname>nngxx::value::set_recv_timeout</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="64" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1a43a4c510082149064b9488904c42eadb" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::value&lt; nng_t &gt;::set_send_timeout</definition>
+        <argsstring>(nng_duration d) noexcept</argsstring>
+        <name>set_send_timeout</name>
+        <qualifiedname>nngxx::value::set_send_timeout</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="70" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1af2b321c4adb6db8168dea51e2bfec15a" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::value&lt; nng_t &gt;::set_req_resend_time</definition>
+        <argsstring>(nng_duration d) noexcept</argsstring>
+        <name>set_req_resend_time</name>
+        <qualifiedname>nngxx::value::set_req_resend_time</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="76" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1ae305c3da0cbd2f3179c857f83d3912fb" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::value&lt; nng_t &gt;::set_req_resend_tick</definition>
+        <argsstring>(nng_duration d) noexcept</argsstring>
+        <name>set_req_resend_tick</name>
+        <qualifiedname>nngxx::value::set_req_resend_tick</qualifiedname>
+        <param>
+          <type>nng_duration</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="82" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>options getters</header>
+      <memberdef kind="function" id="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; const char * &gt;</type>
+        <definition>clev::expected&lt; const char * &gt; nngxx::value&lt; nng_t &gt;::get_sock_name</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_sock_name</name>
+        <qualifiedname>nngxx::value::get_sock_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="91" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; nng_duration &gt;</type>
+        <definition>clev::expected&lt; nng_duration &gt; nngxx::value&lt; nng_t &gt;::get_recv_timeout</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_recv_timeout</name>
+        <qualifiedname>nngxx::value::get_recv_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="97" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; nng_duration &gt;</type>
+        <definition>clev::expected&lt; nng_duration &gt; nngxx::value&lt; nng_t &gt;::get_send_timeout</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_send_timeout</name>
+        <qualifiedname>nngxx::value::get_send_timeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="103" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; nng_duration &gt;</type>
+        <definition>clev::expected&lt; nng_duration &gt; nngxx::value&lt; nng_t &gt;::get_req_resend_time</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_req_resend_time</name>
+        <qualifiedname>nngxx::value::get_req_resend_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="109" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; nng_duration &gt;</type>
+        <definition>clev::expected&lt; nng_duration &gt; nngxx::value&lt; nng_t &gt;::get_req_resend_tick</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_req_resend_tick</name>
+        <qualifiedname>nngxx::value::get_req_resend_tick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="115" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1a6ac1f4798a108f6998e6a01c35e05038" prot="private" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" kindref="member">opt</ref></type>
+            <declname>opt_v</declname>
+            <defname>opt_v</defname>
+          </param>
+          <param>
+            <type>nng_value_c</type>
+            <declname>nng_value_t</declname>
+            <defname>nng_value_t</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;</type>
+        <definition>clev::expected&lt; void &gt; nngxx::value&lt; nng_t &gt;::set_option</definition>
+        <argsstring>(nng_value_t val)</argsstring>
+        <name>set_option</name>
+        <qualifiedname>nngxx::value::set_option</qualifiedname>
+        <param>
+          <type>nng_value_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="122" column="26" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="structnngxx_1_1value_1ad201de15e94667601dfabec557502110" prot="private" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" kindref="member">opt</ref></type>
+            <declname>opt_v</declname>
+            <defname>opt_v</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; <ref refid="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" kindref="member">opt_to_nng_type_t</ref>&lt; opt_v &gt; &gt;</type>
+        <definition>clev::expected&lt; opt_to_nng_type_t&lt; opt_v &gt; &gt; nngxx::value&lt; nng_t &gt;::get_option</definition>
+        <argsstring>() const</argsstring>
+        <name>get_option</name>
+        <qualifiedname>nngxx::value::get_option</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="129" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="129" bodyend="132"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structnngxx_1_1value_1a9e45aa75049d93cfbfbe9bcd82b75833" prot="public" static="no">
+        <type><ref refid="structclev_1_1value" kindref="compound">clev::value</ref>&lt; nng_t &gt;</type>
+        <definition>using nngxx::value&lt; nng_t &gt;::parent =  clev::value&lt;nng_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>nngxx::value::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="47" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" prot="public" static="no">
+        <type><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">parent::value_type</ref></type>
+        <definition>using nngxx::value&lt; nng_t &gt;::nng_type =  parent::value_type</definition>
+        <argsstring></argsstring>
+        <name>nng_type</name>
+        <qualifiedname>nngxx::value::nng_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="51" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool nngxx::value&lt; nng_t &gt;::is_valid</definition>
+        <argsstring>(nng_type v) noexcept</argsstring>
+        <name>is_valid</name>
+        <qualifiedname>nngxx::value::is_valid</qualifiedname>
+        <param>
+          <type><ref refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" kindref="member">nng_type</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="53" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="53" bodyend="59"/>
+        <references refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" compoundref="clev_2value_8h" startline="71">clev::value&lt; nng_t &gt;::v</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>clev::value&lt; nng_t &gt;</label>
+        <link refid="structclev_1_1value"/>
+      </node>
+      <node id="1">
+        <label>nngxx::value&lt; nng_t &gt;</label>
+        <link refid="structnngxx_1_1value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>clev::value&lt; nng_t &gt;</label>
+        <link refid="structclev_1_1value"/>
+      </node>
+      <node id="1">
+        <label>nngxx::value&lt; nng_t &gt;</label>
+        <link refid="structnngxx_1_1value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" line="45" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h" bodystart="46" bodyend="133"/>
+    <listofallmembers>
+      <member refid="structnngxx_1_1value_1ad201de15e94667601dfabec557502110" prot="private" virt="non-virtual"><scope>nngxx::value</scope><name>get_option</name></member>
+      <member refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>get_recv_timeout</name></member>
+      <member refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>get_req_resend_tick</name></member>
+      <member refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>get_req_resend_time</name></member>
+      <member refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>get_send_timeout</name></member>
+      <member refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>get_sock_name</name></member>
+      <member refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>is_valid</name></member>
+      <member refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>nng_type</name></member>
+      <member refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator bool</name></member>
+      <member refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator bool</name></member>
+      <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator const value_type</name></member>
+      <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator const value_type</name></member>
+      <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator value_type</name></member>
+      <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>operator value_type</name></member>
+      <member refid="structnngxx_1_1value_1a9e45aa75049d93cfbfbe9bcd82b75833" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>parent</name></member>
+      <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>release</name></member>
+      <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>release</name></member>
+      <member refid="structnngxx_1_1value_1a6ac1f4798a108f6998e6a01c35e05038" prot="private" virt="non-virtual"><scope>nngxx::value</scope><name>set_option</name></member>
+      <member refid="structnngxx_1_1value_1af30971c7a83b97e329e43e710f32bb77" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>set_recv_timeout</name></member>
+      <member refid="structnngxx_1_1value_1ae305c3da0cbd2f3179c857f83d3912fb" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>set_req_resend_tick</name></member>
+      <member refid="structnngxx_1_1value_1af2b321c4adb6db8168dea51e2bfec15a" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>set_req_resend_time</name></member>
+      <member refid="structnngxx_1_1value_1a43a4c510082149064b9488904c42eadb" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>set_send_timeout</name></member>
+      <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" virt="non-virtual"><scope>nngxx::value</scope><name>v</name></member>
+      <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" virt="non-virtual"><scope>nngxx::value</scope><name>v</name></member>
+      <member refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" prot="public" virt="non-virtual"><scope>nngxx::value</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
