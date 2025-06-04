@@ -44,7 +44,9 @@ class push
 public:
   /// Construct a push
   push(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::push::v0::make_socket().value_or_abort()}
+    : sock_m{r, nngxx::push::v0::make_socket()
+                  .or_else(clev::abort_now<nngxx::socket>())
+                  .value()}
     , hf_registry_m{h}
   {
   }

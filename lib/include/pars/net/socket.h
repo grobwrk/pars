@@ -84,31 +84,50 @@ public:
   void set_options(const socket_opt opts)
   {
     if (opts.recv_timeout)
-      socket_m.set_recv_timeout(*opts.recv_timeout).or_abort();
+      socket_m.set_recv_timeout(*opts.recv_timeout).or_else(clev::abort_now());
 
     if (opts.send_timeout)
-      socket_m.set_send_timeout(*opts.send_timeout).or_abort();
+      socket_m.set_send_timeout(*opts.send_timeout).or_else(clev::abort_now());
 
     if (opts.req_resend_time)
-      socket_m.set_req_resend_time(*opts.req_resend_time).or_abort();
+      socket_m.set_req_resend_time(*opts.req_resend_time)
+        .or_else(clev::abort_now());
 
     if (opts.req_resend_tick)
-      socket_m.set_req_resend_tick(*opts.req_resend_tick).or_abort();
+      socket_m.set_req_resend_tick(*opts.req_resend_tick)
+        .or_else(clev::abort_now());
   }
 
   socket_opt options() const
   {
     return {
-      .recv_timeout = socket_m.get_recv_timeout().value_or_abort(),
-      .send_timeout = socket_m.get_send_timeout().value_or_abort(),
-      .req_resend_time = socket_m.get_req_resend_time().value_or_abort(),
-      .req_resend_tick = socket_m.get_req_resend_tick().value_or_abort(),
+      .recv_timeout = socket_m.get_recv_timeout()
+                        .or_else(clev::abort_now<nng_duration>())
+                        .value(),
+
+      .send_timeout = socket_m.get_send_timeout()
+                        .or_else(clev::abort_now<nng_duration>())
+                        .value(),
+
+      .req_resend_time = socket_m.get_req_resend_time()
+                           .or_else(clev::abort_now<nng_duration>())
+                           .value(),
+
+      .req_resend_tick = socket_m.get_req_resend_tick()
+                           .or_else(clev::abort_now<nng_duration>())
+                           .value(),
     };
   }
 
-  void dial(const char* addr) { emplace_dialer(addr).start().or_abort(); }
+  void dial(const char* addr)
+  {
+    emplace_dialer(addr).start().or_else(clev::abort_now());
+  }
 
-  void listen(const char* addr) { emplace_listener(addr).start().or_abort(); }
+  void listen(const char* addr)
+  {
+    emplace_listener(addr).start().or_else(clev::abort_now());
+  }
 
   void connect(const char* addr, const cmode mode)
   {
@@ -125,7 +144,12 @@ public:
     }
   }
 
-  nngxx::ctx make_ctx() { return nngxx::make_ctx(socket_m).value_or_abort(); }
+  nngxx::ctx make_ctx()
+  {
+    return nngxx::make_ctx(socket_m)
+      .or_else(clev::abort_now<nngxx::ctx>())
+      .value();
+  }
 
   void send_aio(nngxx::aio_view& a) { socket_m.send(a); }
 
@@ -196,24 +220,35 @@ private:
       static_cast<socket*>(self)->pipe_cb(p, ev);
     };
 
-    // NOTE: pass this, cant move socket
-    socket_m.pipe_notify(nngxx::pipe_ev::add_pre, pipe_cb, this).or_abort();
-    socket_m.pipe_notify(nngxx::pipe_ev::add_post, pipe_cb, this).or_abort();
-    socket_m.pipe_notify(nngxx::pipe_ev::rem_post, pipe_cb, this).or_abort();
-    socket_m.pipe_notify(nngxx::pipe_ev::num, pipe_cb, this).or_abort();
+    // NOTE: in the following calles we pass this, hence we cant move socket
+
+    socket_m.pipe_notify(nngxx::pipe_ev::add_pre, pipe_cb, this)
+      .or_else(clev::abort_now());
+
+    socket_m.pipe_notify(nngxx::pipe_ev::add_post, pipe_cb, this)
+      .or_else(clev::abort_now());
+
+    socket_m.pipe_notify(nngxx::pipe_ev::rem_post, pipe_cb, this)
+      .or_else(clev::abort_now());
+
+    socket_m.pipe_notify(nngxx::pipe_ev::num, pipe_cb, this)
+      .or_else(clev::abort_now());
   }
 
   nngxx::listener& emplace_listener(const char* addr)
   {
-    listeners_m.push_back(
-      nngxx::make_listener(socket_m, addr).value_or_abort());
+    listeners_m.push_back(nngxx::make_listener(socket_m, addr)
+                            .or_else(clev::abort_now<nngxx::listener>())
+                            .value());
 
     return listeners_m.back();
   }
 
   nngxx::dialer& emplace_dialer(const char* addr)
   {
-    dialers_m.push_back(nngxx::make_dialer(socket_m, addr).value_or_abort());
+    dialers_m.push_back(nngxx::make_dialer(socket_m, addr)
+                          .or_else(clev::abort_now<nngxx::dialer>())
+                          .value());
 
     return dialers_m.back();
   }

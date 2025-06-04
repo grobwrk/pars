@@ -46,16 +46,16 @@ inline static void sleep(nng_duration ms, aio_view& aio) noexcept
 [[nodiscard]] inline static clev::expected<aio> make_aio(void (*cb)(void*),
                                                          void* arg) noexcept
 {
-  return aio::alloc(cb, arg).transform_to<aio>();
+  return aio::alloc(cb, arg);
 }
 
 [[nodiscard]] inline static clev::expected<aio>
 make_aio(void (*cb)(void*), void* arg, msg m) noexcept
 {
-  return make_aio(cb, arg).and_then([&](aio op) {
+  return make_aio(cb, arg).and_then([&](aio op) -> clev::expected<aio> {
     op.set_msg(std::move(m));
 
-    return clev::expected{std::move(op)};
+    return std::move(op);
   });
 }
 

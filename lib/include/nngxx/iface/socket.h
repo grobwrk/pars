@@ -65,9 +65,7 @@ struct clev::iface<nng_socket> : nngxx::value<nng_socket>
 
   [[nodiscard]] inline clev::expected<const char*> proto_name() const noexcept
   {
-    const char* proto_name;
-
-    return nngxx::invoke(nng_socket_proto_name, v, &proto_name)
-      .transform_to(std::move(proto_name));
+    return nngxx::read<const char*>(
+      std::bind(nng_socket_proto_name, v, std::placeholders::_1));
   }
 };

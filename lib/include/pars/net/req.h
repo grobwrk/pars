@@ -46,7 +46,9 @@ class req
 public:
   /// Construct a req
   req(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::req::v0::make_socket().value_or_abort()}
+    : sock_m{r, nngxx::req::v0::make_socket()
+                  .or_else(clev::abort_now<nngxx::socket>())
+                  .value()}
     , ctx_registry_m{r, sock_m}
     , hf_registry_m{h}
   {

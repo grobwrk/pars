@@ -51,11 +51,10 @@ struct clev::iface<nng_dialer> : nngxx::value<nng_dialer>
     return nngxx::invoke(nng_dialer_close, d);
   }
 
-  [[nodiscard]] inline clev::expected<void> create(nngxx::socket_view& s,
-                                                   const char* addr) noexcept
+  [[nodiscard]] inline static clev::expected<nng_dialer>
+  create(nngxx::socket_view& s, const char* addr) noexcept
   {
-    return nngxx::invoke(nng_dialer_create, &v, static_cast<nng_socket>(s),
-                         addr);
+    return nngxx::make(nng_dialer_create, static_cast<nng_socket>(s), addr);
   }
 
   [[nodiscard]] inline clev::expected<void> start(int flags = 0) noexcept

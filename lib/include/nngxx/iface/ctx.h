@@ -50,16 +50,17 @@ struct clev::iface<nng_ctx> : nngxx::value<nng_ctx>
     return nngxx::invoke(nng_ctx_close, v);
   }
 
+  [[nodiscard]] static inline clev::expected<nng_ctx>
+  open(nngxx::socket_view& s) noexcept
+  {
+    return nngxx::make(nng_ctx_open, static_cast<nng_socket>(s));
+  }
+
   [[nodiscard]] inline int id() const noexcept { return nng_ctx_id(v); }
 
   inline void send(nngxx::aio_view& a) noexcept { nng_ctx_send(v, a); }
 
   inline void recv(nngxx::aio_view& a) noexcept { nng_ctx_recv(v, a); }
-
-  [[nodiscard]] inline clev::expected<void> open(nngxx::socket_view& s) noexcept
-  {
-    return nngxx::invoke(nng_ctx_open, &v, static_cast<nng_socket>(s));
-  }
 };
 
 static_assert(nngxx_socket_is_really_needed_v);

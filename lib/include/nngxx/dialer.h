@@ -41,9 +41,7 @@ using dialer = clev::own<nng_dialer>;
 [[nodiscard]] inline static clev::expected<dialer>
 make_dialer(socket_view& s, const char* addr) noexcept
 {
-  auto ret = dialer{};
-
-  return ret.create(s, addr).transform_to(std::move(ret));
+  return dialer::create(s, addr);
 }
 
 } // namespace nngxx

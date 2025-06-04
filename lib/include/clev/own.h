@@ -44,44 +44,44 @@ struct own : iface<wrap_t>
 
   own(const own& rhs) noexcept
     requires requires(wrap_t* d, const wrap_t s) {
-    { iface<wrap_t>::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
+      { own::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
     }
   {
-    iface<wrap_t>::copy(&(own::v), rhs.v).or_exit();
+    own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
   }
 
   own& operator=(const own& rhs) noexcept
     requires requires(wrap_t* d, const wrap_t s) {
-    { iface<wrap_t>::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
+      { own::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
     }
   {
     if (this == &rhs)
       return *this;
 
     if (*this)
-      iface<wrap_t>::destroy(own::v).or_exit();
+      own::destroy(own::v).or_else(clev::exit_now());
 
-    iface<wrap_t>::copy(&(own::v), rhs.v).or_exit();
+    own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
 
     return *this;
   }
 
   own(const own& rhs)
     requires(!requires(wrap_t* d, const wrap_t s) {
-    { iface<wrap_t>::copy(d, s) } -> std ::convertible_to<clev::expected<void>>;
+              { own::copy(d, s) } -> std ::convertible_to<clev::expected<void>>;
             })
   = delete;
 
   own& operator=(const own&)
     requires(!requires(wrap_t* d, const wrap_t s) {
-    { iface<wrap_t>::copy(d, s) } -> std ::convertible_to<clev::expected<void>>;
+              { own::copy(d, s) } -> std ::convertible_to<clev::expected<void>>;
             })
   = delete;
 
   own(own&& rhs) noexcept
   {
     if (*this)
-      own::destroy(own::v).or_exit();
+      own::destroy(own::v).or_else(clev::exit_now());
 
     own::v = rhs.v;
 
@@ -93,7 +93,7 @@ struct own : iface<wrap_t>
     if (this != &rhs)
     {
       if (*this)
-        own::destroy(own::v).or_exit();
+        own::destroy(own::v).or_else(clev::exit_now());
 
       own::v = rhs.v;
 
@@ -106,7 +106,7 @@ struct own : iface<wrap_t>
   ~own()
   {
     if (*this)
-      own::destroy(own::v).or_exit();
+      own::destroy(own::v).or_else(clev::exit_now());
   }
 };
 

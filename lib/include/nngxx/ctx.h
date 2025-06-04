@@ -41,9 +41,7 @@ using ctx = clev::own<nng_ctx>;
 [[nodiscard]] inline static clev::expected<ctx>
 make_ctx(socket_view& s) noexcept
 {
-  auto ret = ctx{};
-
-  return ret.open(s).transform_to(std::move(ret));
+  return ctx::open(s);
 }
 
 } // namespace nngxx

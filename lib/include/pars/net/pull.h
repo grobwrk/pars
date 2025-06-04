@@ -45,7 +45,9 @@ class pull
 public:
   /// Construct a pull
   pull(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::pull::v0::make_socket().value_or_abort()}
+    : sock_m{r, nngxx::pull::v0::make_socket()
+                  .or_else(clev::abort_now<nngxx::socket>())
+                  .value()}
     , hf_registry_m{h}
   {
   }

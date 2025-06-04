@@ -41,9 +41,7 @@ using msg = clev::own<nng_msg*>;
 [[nodiscard]] inline static clev::expected<msg>
 make_msg(std::size_t sz) noexcept
 {
-  auto ret = msg{};
-
-  return ret.alloc(sz).transform_to(std::move(ret));
+  return msg::alloc(sz);
 }
 
 } // namespace nngxx

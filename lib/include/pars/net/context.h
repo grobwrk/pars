@@ -57,16 +57,21 @@ public:
   void set_options(context_opt opts)
   {
     if (opts.recv_timeout)
-      ctx_m.set_recv_timeout(*opts.recv_timeout).or_abort();
+      ctx_m.set_recv_timeout(*opts.recv_timeout).or_else(clev::abort_now());
 
     if (opts.send_timeout)
-      ctx_m.set_send_timeout(*opts.send_timeout).or_abort();
+      ctx_m.set_send_timeout(*opts.send_timeout).or_else(clev::abort_now());
   }
 
   context_opt options() const
   {
-    return {.recv_timeout = ctx_m.get_recv_timeout().value_or_abort(),
-            .send_timeout = ctx_m.get_send_timeout().value_or_abort()};
+    return {.recv_timeout = ctx_m.get_recv_timeout()
+                              .or_else(clev::abort_now<nng_duration>())
+                              .value(),
+
+            .send_timeout = ctx_m.get_send_timeout()
+                              .or_else(clev::abort_now<nng_duration>())
+                              .value()};
   }
 
   void send_aio(nngxx::aio_view& a) { ctx_m.send(a); }

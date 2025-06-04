@@ -71,7 +71,7 @@ public:
     {
       if (dispatcher_m.terminating())
       {
-        p.close().or_abort();
+        p.close().or_else(clev::abort_now());
 
         return;
       }

@@ -114,9 +114,31 @@ template<typename ret_t, typename arg_t, typename... args_t>
 [[nodiscard]] inline clev::expected<std::remove_pointer_t<arg_t>>
 make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
 {
-  std::remove_pointer_t<arg_t> x;
+  using return_type = decltype(make(f, args...));
 
-  return clev::make_expected<err>(f(&x, args...)).transform_to(std::move(x));
+  using value_type = return_type::value_type;
+
+  return return_type{}.and_then([&](value_type v) -> return_type {
+    if (auto e = f(&v, args...); e)
+      return clev::make_unexpected<err>(e);
+
+    return v;
+  });
+}
+
+template<typename return_t>
+[[nodiscard]] inline auto read(auto f) noexcept -> clev::expected<return_t>
+{
+  using return_type = clev::expected<return_t>;
+
+  using value_type = return_type::value_type;
+
+  return return_type{}.and_then([=](value_type v) -> return_type {
+    if (auto e = f(&v); e)
+      return clev::make_unexpected<err>(e);
+
+    return v;
+  });
 }
 
 template<typename ret_t, typename... args_t>

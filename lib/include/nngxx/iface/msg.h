@@ -61,9 +61,10 @@ struct clev::iface<nng_msg*> : nngxx::value<nng_msg*>
     return nngxx::invoke(nng_msg_dup, d, s);
   }
 
-  [[nodiscard]] inline clev::expected<void> alloc(std::size_t sz) noexcept
+  [[nodiscard]] inline static clev::expected<nng_msg*>
+  alloc(std::size_t sz) noexcept
   {
-    return nngxx::invoke(nng_msg_alloc, &v, sz);
+    return nngxx::make(nng_msg_alloc, sz);
   }
 
   [[nodiscard]] inline const nngxx::pipe_view get_pipe() const noexcept

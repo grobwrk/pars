@@ -41,7 +41,7 @@ using listener = clev::own<nng_listener>;
 [[nodiscard]] inline static clev::expected<listener>
 make_listener(socket_view& s, const char* addr) noexcept
 {
-  return listener::create(s, addr).transform_to<listener>();
+  return listener::create(s, addr);
 }
 
 } // namespace nngxx

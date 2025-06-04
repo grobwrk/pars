@@ -96,7 +96,9 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::send_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::send_cb, this)
+              .or_else(clev::abort_now<nngxx::aio>())
+              .value();
 
     // start send
     aio_m.set_msg(std::move(m));
@@ -136,7 +138,9 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::recv_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::recv_cb, this)
+              .or_else(clev::abort_now<nngxx::aio>())
+              .value();
 
     // start recv
     t.recv_aio(aio_m);
@@ -153,7 +157,9 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::sleep_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::sleep_cb, this)
+              .or_else(clev::abort_now<nngxx::aio>())
+              .value();
 
     nngxx::sleep(ms, aio_m);
   }
@@ -163,7 +169,9 @@ public:
     stop();
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::sleep_cb, this).value_or_abort();
+    aio_m = nngxx::make_aio(op::sleep_cb, this)
+              .or_else(clev::abort_now<nngxx::aio>())
+              .value();
 
     nngxx::sleep(ms, aio_m);
   }

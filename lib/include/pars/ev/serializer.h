@@ -63,7 +63,8 @@ struct serialize
     // 3. create the nngxx::msg to hold the hash+event
     auto serialization = ostring.rdbuf()->view();
     auto m = nngxx::make_msg(sizeof(event_hash) + serialization.size())
-               .value_or_abort();
+               .or_else(clev::abort_now<nngxx::msg>())
+               .value();
     auto b = m.body();
 
     // 4. append the event hash

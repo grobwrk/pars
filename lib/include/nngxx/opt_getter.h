@@ -136,9 +136,9 @@ struct opt_getter
         get = nng_pipe_get_addr;
     }
 
-    return_type val;
 
-    return nngxx::invoke(get, obj, opt, &val).transform_to(std::move(val));
+    return nngxx::read<return_type>(
+      std::bind(get, obj, opt, std::placeholders::_1));
   }
 };
 

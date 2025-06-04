@@ -45,7 +45,7 @@ namespace rep::v0
 
 [[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_rep0_open).transform_to<socket>();
+  return nngxx::make(nng_rep0_open);
 }
 
 } // namespace rep::v0
@@ -55,7 +55,7 @@ namespace req::v0
 
 [[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_req0_open).transform_to<socket>();
+  return nngxx::make(nng_req0_open);
 }
 
 } // namespace req::v0
@@ -65,7 +65,7 @@ namespace pull::v0
 
 [[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_pull0_open).transform_to<socket>();
+  return nngxx::make(nng_pull0_open);
 }
 
 } // namespace pull::v0
@@ -75,7 +75,7 @@ namespace push::v0
 
 [[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_push0_open).transform_to<socket>();
+  return nngxx::make(nng_push0_open);
 }
 
 } // namespace push::v0
