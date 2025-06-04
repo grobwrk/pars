@@ -53,7 +53,7 @@ struct clev::iface<nng_pipe> : nngxx::value<nng_pipe>
 
   [[nodiscard]] inline nngxx::socket_view get_socket() const noexcept;
 
-  [[nodiscard]] inline clev::expected<void> close() const noexcept
+  [[nodiscard]] inline clev::expected<void> close() noexcept
   {
     return destroy(v);
   }

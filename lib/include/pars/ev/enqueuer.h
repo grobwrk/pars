@@ -63,7 +63,7 @@ public:
   }
 
   template<network_event_c event_t, net::tool_c tool_t>
-  void queue_fire(event_t ev, const int s_id, tool_t& t, const net::pipe& p)
+  void queue_fire(event_t ev, const int s_id, tool_t& t, net::pipe p)
   {
     if constexpr (std::is_same_v<event_t, creating_pipe> ||
                   std::is_same_v<event_t, pipe_created> ||

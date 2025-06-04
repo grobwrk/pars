@@ -79,6 +79,8 @@ struct base_network_metadata
 
   const net::tool_view& tool() const { return tool_m; }
 
+  net::pipe& pipe() { return pipe_m; }
+
   const net::pipe& pipe() const { return pipe_m; }
 
   int socket_id() const { return id_m; }
