@@ -32,9 +32,14 @@
         "CMAKE_CXX_COMPILER": "cl.exe"
       },
       "condition": {
-        "type": "matches",
-        "string": "$env{VSCMD_VER}",
-        "regex": ".+"
+        "type": "anyOf",
+        "conditions": [
+          {
+            "type": "equals",
+            "lhs": "WIN32",
+            "rhs": "1"
+          }
+        ]
       }
     },
     {
