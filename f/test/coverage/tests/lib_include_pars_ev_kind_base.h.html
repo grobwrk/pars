@@ -17,14 +17,14 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 14:49:49 2025 </td>
+                     <td class="headerValue" width="15%">Sun Jun  8 17:00:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">4</td>
+                     <td class="headerValue" width="10%">3</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">50.0 %</td>
+                   <td class="headerValue" width="15%">66.6 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
                      <td class="headerValue" width="10%">2</td>
@@ -88,7 +88,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   const event_type&amp; event() const <span class="lineNoCov">{ return event_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   metadata_type&amp; md() <span class="lineNoCov">{ return metadata_m; }</span>
+             :   metadata_type&amp; md() { return metadata_m; }
              : 
              :   std::tuple&lt;const event_type&amp;, metadata_type&amp;&gt; as_tuple()
              :   {

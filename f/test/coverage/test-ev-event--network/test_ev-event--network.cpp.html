@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 14:49:49 2025 </td>
+                     <td class="headerValue" width="15%">Sun Jun  8 17:00:57 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">28</td>
@@ -64,11 +64,13 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #include &lt;pars/pars.h&gt;
-             : 
              : #include &lt;gtest/gtest.h&gt;
              : 
              : #include &lt;type_traits&gt;
+             : 
+             : #include &quot;pars/ev/event.h&quot;
+             : #include &quot;pars/ev/kind.h&quot;
+             : #include &quot;pars/ev/metadata.h&quot;
              : 
              : namespace pars::tests
              : {

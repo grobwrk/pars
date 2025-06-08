@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 14:49:49 2025 </td>
+                     <td class="headerValue" width="15%">Sun Jun  8 17:00:57 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">17</td>
+                     <td class="headerValue" width="10%">13</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -115,11 +115,11 @@
              : inline static auto
              : abort_now(const std::string_view msg = &quot;&quot;) noexcept(clev_exception_disabled_v)
              : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return [=](const std::error_code err) -&gt; expected&lt;value_t&gt; {</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    abort_now(err, msg);</span>
+             :   return [=](const std::error_code err) -&gt; expected&lt;value_t&gt; {
+             :     abort_now(err, msg);
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return unexpected{err};</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  };</span>
+             :     return unexpected{err};
+             :   };
              : }
              : 
              : template&lt;typename value_t = void&gt;
