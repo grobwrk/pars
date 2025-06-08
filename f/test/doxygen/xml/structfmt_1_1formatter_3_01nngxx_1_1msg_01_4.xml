@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>fmt::formatter&lt; nngxx::msg &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">fmt::formatter&lt; std::string &gt;</basecompoundref>
+    <includes refid="nng_8h" local="no">nng.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4_1ad252a793b6bba6fc7c7b2c010a3bbc90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) fmt::formatter&lt; nngxx::msg &gt;::format</definition>
+        <argsstring>(const nngxx::msg &amp;m, format_context &amp;ctx) const</argsstring>
+        <name>format</name>
+        <qualifiedname>fmt::formatter&lt; nngxx::msg &gt;::format</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h" line="44" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h" bodystart="44" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>fmt::formatter&lt; nngxx::msg &gt;</label>
+        <link refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fmt::formatter&lt; std::string &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>fmt::formatter&lt; nngxx::msg &gt;</label>
+        <link refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fmt::formatter&lt; std::string &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h" bodystart="43" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structfmt_1_1formatter_3_01nngxx_1_1msg_01_4_1ad252a793b6bba6fc7c7b2c010a3bbc90" prot="public" virt="non-virtual"><scope>fmt::formatter&lt; nngxx::msg &gt;</scope><name>format</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

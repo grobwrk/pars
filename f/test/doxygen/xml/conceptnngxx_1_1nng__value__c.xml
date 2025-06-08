@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptnngxx_1_1nng__value__c" kind="concept">
+    <compoundname>nngxx::nng_value_c</compoundname>
+    <includes refid="concept_8h" local="no">concept.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename nng_value_t</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename nng_value_t&gt;
+concept <ref refid="conceptnngxx_1_1nng__value__c" kindref="compound">nngxx::nng_value_c</ref> =  std::same_as&lt;nng_value_t, nng_duration&gt; ||
+                      std::same_as&lt;nng_value_t, nng_sockaddr&gt; ||
+                      std::same_as&lt;nng_value_t, const char*&gt;    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/concept.h" line="40" column="1"/>
+  </compounddef>
+</doxygen>

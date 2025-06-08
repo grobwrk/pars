@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-ev-event--network - [...]/lib/include/pars/ev/kind_base.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-ev-event--network</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Sun Jun  8 14:49:49 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">4</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">50.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">2</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &quot;pars/concept/event.h&quot;
+             : #include &quot;pars/concept/kind.h&quot;
+             : #include &quot;pars/ev/metadata.h&quot;
+             : 
+             : namespace pars::ev
+             : {
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct common_kind
+             : {
+             :   template&lt;typename event2_t&gt;
+             :   using kind_type = kind_of&lt;event2_t&gt;;
+             : 
+             :   using event_type = event_t;
+             : 
+             :   using metadata_type = metadata&lt;kind_of, event_t&gt;;
+             : 
+             :   event_type&amp; event() { return event_m; }
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   const event_type&amp; event() const <span class="lineNoCov">{ return event_m; }</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> :   metadata_type&amp; md() <span class="lineNoCov">{ return metadata_m; }</span>
+             : 
+             :   std::tuple&lt;const event_type&amp;, metadata_type&amp;&gt; as_tuple()
+             :   {
+             :     return std::forward_as_tuple(event_m, metadata_m);
+             :   }
+             : 
+             :   common_kind(event_type e, metadata_type md)
+          30</span> :     : <span class="lineCov">event_m{std::move(e)}</span>
+          30</span> :     , <span class="lineCov">metadata_m{std::move(md)}</span>
+             :   {
+             :   }
+             : 
+             : protected:
+             :   event_type event_m;
+             :   metadata_type metadata_m;
+             : };
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct base_kind;
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of,
+             :          sync_internal_event_c&lt;kind_of&gt; event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct base_kind&lt;kind_of, event_t&gt; : common_kind&lt;kind_of, event_t&gt;
+             : {
+             :   using common_kind&lt;kind_of, event_t&gt;::common_kind;
+             : };
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of,
+             :          sync_network_event_c&lt;kind_of&gt; event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct base_kind&lt;kind_of, event_t&gt; : common_kind&lt;kind_of, event_t&gt;
+             : {
+             :   using common_kind&lt;kind_of, event_t&gt;::common_kind;
+             : };
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of,
+             :          async_internal_event_c&lt;kind_of&gt; event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct base_kind&lt;kind_of, event_t&gt; : common_kind&lt;kind_of, event_t&gt;
+             : {
+             :   using common_kind&lt;kind_of, event_t&gt;::common_kind;
+             : };
+             : 
+             : template&lt;template&lt;typename&gt; typename kind_of,
+             :          async_network_event_c&lt;kind_of&gt; event_t&gt;
+             :   requires kind_c&lt;kind_of&gt;
+             : struct base_kind&lt;kind_of, event_t&gt; : common_kind&lt;kind_of, event_t&gt;
+             : {
+             :   using common_kind&lt;kind_of, event_t&gt;::common_kind;
+             : };
+             : 
+             : } // namespace pars::ev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

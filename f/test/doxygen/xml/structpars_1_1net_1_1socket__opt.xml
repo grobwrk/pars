@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1net_1_1socket__opt" kind="struct" language="C++" prot="public">
+    <compoundname>pars::net::socket_opt</compoundname>
+    <includes refid="socket__opt_8h" local="no">socket_opt.h</includes>
+    <sectiondef kind="user-defined">
+      <header>nng_socket Options</header>
+      <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::socket_opt::recv_timeout</definition>
+        <argsstring></argsstring>
+        <name>recv_timeout</name>
+        <qualifiedname>pars::net::socket_opt::recv_timeout</qualifiedname>
+        <briefdescription>
+<para>NNG_OPT_RECVTIMEO. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="51" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="99">pars::net::socket::set_options</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::socket_opt::send_timeout</definition>
+        <argsstring></argsstring>
+        <name>send_timeout</name>
+        <qualifiedname>pars::net::socket_opt::send_timeout</qualifiedname>
+        <briefdescription>
+<para>NNG_OPT_SENDTIMEO. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="52" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="99">pars::net::socket::set_options</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>nng_req Options</header>
+      <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::socket_opt::req_resend_time</definition>
+        <argsstring></argsstring>
+        <name>req_resend_time</name>
+        <qualifiedname>pars::net::socket_opt::req_resend_time</qualifiedname>
+        <briefdescription>
+<para>NNG_OPT_REQ_RESENDTIME. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="56" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="99">pars::net::socket::set_options</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" prot="public" static="no" mutable="no">
+        <type>std::optional&lt; nng_duration &gt;</type>
+        <definition>std::optional&lt;nng_duration&gt; pars::net::socket_opt::req_resend_tick</definition>
+        <argsstring></argsstring>
+        <name>req_resend_tick</name>
+        <qualifiedname>pars::net::socket_opt::req_resend_tick</qualifiedname>
+        <briefdescription>
+<para>NNG_OPT_REQ_RESENDTICK. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="57" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" compoundref="pars_2net_2socket_8h" startline="84" endline="99">pars::net::socket::set_options</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the options that can be configured for a given socket. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>These can be nng_options for an nng_socket, or they can be options of the nng_req protocol. </para>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" line="47" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h" bodystart="48" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" prot="public" virt="non-virtual"><scope>pars::net::socket_opt</scope><name>recv_timeout</name></member>
+      <member refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" prot="public" virt="non-virtual"><scope>pars::net::socket_opt</scope><name>req_resend_tick</name></member>
+      <member refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" prot="public" virt="non-virtual"><scope>pars::net::socket_opt</scope><name>req_resend_time</name></member>
+      <member refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" prot="public" virt="non-virtual"><scope>pars::net::socket_opt</scope><name>send_timeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

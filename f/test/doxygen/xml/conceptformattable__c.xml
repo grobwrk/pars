@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptformattable__c" kind="concept">
+    <compoundname>formattable_c</compoundname>
+    <includes refid="concept_2formattable_8h" local="no">formattable.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename value_t</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename value_t&gt;
+concept <ref refid="conceptformattable__c" kindref="compound">formattable_c</ref> =  requires(const value_t&amp; x, fmt::format_context&amp; ctx) {
+  { x.format_to(ctx) } -&gt; std::same_as&lt;decltype(ctx.out())&gt;;
+}    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/formattable.h" line="39" column="1"/>
+  </compounddef>
+</doxygen>

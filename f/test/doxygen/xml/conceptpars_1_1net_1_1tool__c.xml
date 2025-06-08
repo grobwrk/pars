@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptpars_1_1net_1_1tool__c" kind="concept">
+    <compoundname>pars::net::tool_c</compoundname>
+    <includes refid="net_8h" local="no">net.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename value_t</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename value_t&gt;
+concept <ref refid="conceptpars_1_1net_1_1tool__c" kindref="compound">pars::net::tool_c</ref> =  requires {
+  requires std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::socket&gt; ||
+             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::context&gt; ||
+             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::tool_view&gt;;
+}    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/net.h" line="45" column="1"/>
+  </compounddef>
+</doxygen>

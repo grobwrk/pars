@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1net_1_1tool__view" kind="class" language="C++" prot="public">
+    <compoundname>pars::net::tool_view</compoundname>
+    <includes refid="tool__view_8h" local="no">tool_view.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1net_1_1tool__view_1a28a2ca4ad4e0f41b1ad2fd5e7c566f63" prot="private" static="no" mutable="no">
+        <type>const std::variant&lt; <ref refid="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" kindref="member">nngxx::ctx_view</ref>, <ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">nngxx::socket_view</ref> &gt;</type>
+        <definition>const std::variant&lt;nngxx::ctx_view, nngxx::socket_view&gt; pars::net::tool_view::tool_m</definition>
+        <argsstring></argsstring>
+        <name>tool_m</name>
+        <qualifiedname>pars::net::tool_view::tool_m</qualifiedname>
+        <briefdescription>
+<para>The underlying variant that represents either an nng_socket or nng_ctx. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="89" column="22" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::tool_view::tool_view</definition>
+        <argsstring>(nngxx::ctx_view c)</argsstring>
+        <name>tool_view</name>
+        <qualifiedname>pars::net::tool_view::tool_view</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" kindref="member">nngxx::ctx_view</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpars_1_1net_1_1tool__view" kindref="compound">tool_view</ref> from an nng_ctx view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="52" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::tool_view::tool_view</definition>
+        <argsstring>(nngxx::socket_view s)</argsstring>
+        <name>tool_view</name>
+        <qualifiedname>pars::net::tool_view::tool_view</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">nngxx::socket_view</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="classpars_1_1net_1_1tool__view" kindref="compound">tool_view</ref> from an nng_socket view. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="58" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::type_info &amp;</type>
+        <definition>const std::type_info &amp; pars::net::tool_view::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>pars::net::tool_view::type</qualifiedname>
+        <briefdescription>
+<para>Get the std::type_info of the underlying variant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="64" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="64" bodyend="67"/>
+        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="73" endline="82">pars::net::context_registry::of</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * pars::net::tool_view::who</definition>
+        <argsstring>() const</argsstring>
+        <name>who</name>
+        <qualifiedname>pars::net::tool_view::who</qualifiedname>
+        <briefdescription>
+<para>Get a string that represents the type of the underlying variant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="70" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="70" bodyend="73"/>
+        <referencedby refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" compoundref="tool__view_8h" startline="82" endline="85">format_to</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::net::tool_view::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <qualifiedname>pars::net::tool_view::id</qualifiedname>
+        <briefdescription>
+<para>The id of the underlying variant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="76" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="76" bodyend="79"/>
+        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="73" endline="82">pars::net::context_registry::of</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::net::tool_view::format_to</definition>
+        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::net::tool_view::format_to</qualifiedname>
+        <param>
+          <type>fmt::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Formatter for debugging purpose. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="82" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="82" bodyend="85"/>
+        <references refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" compoundref="tool__view_8h" startline="70" endline="73">who</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents an nng_socket or nng_ctx view. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" line="48" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h" bodystart="49" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>format_to</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>id</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1a28a2ca4ad4e0f41b1ad2fd5e7c566f63" prot="private" virt="non-virtual"><scope>pars::net::tool_view</scope><name>tool_m</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1ab812e0ae2a5fc700c4b4fd10192b93f3" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>tool_view</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>tool_view</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>type</name></member>
+      <member refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>who</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

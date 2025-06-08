@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptpars_1_1ev_1_1async__network__event__c" kind="concept">
+    <compoundname>pars::ev::async_network_event_c</compoundname>
+    <includes refid="lib_2include_2pars_2concept_2event_8h" local="no">event.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename event_t</type>
+      </param>
+      <param>
+        <type>template&lt; typename &gt; typename</type>
+        <declname>kind_of</declname>
+        <defname>kind_of</defname>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename event_t, template&lt; typename &gt; typename kind_of&gt;
+concept <ref refid="conceptpars_1_1ev_1_1async__network__event__c" kindref="compound">pars::ev::async_network_event_c</ref> = 
+  async_event_c&lt;event_t, kind_of&gt; &amp;&amp; network_event_c&lt;event_t&gt;    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/event.h" line="100" column="1"/>
+  </compounddef>
+</doxygen>

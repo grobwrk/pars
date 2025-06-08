@@ -1,0 +1,776 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="nngxx_2err_8h" kind="file" language="C++">
+    <compoundname>err.h</compoundname>
+    <includes refid="clev_2err_8h" local="yes">clev/err.h</includes>
+    <includes local="no">fmt/format.h</includes>
+    <includes local="no">nng/nng.h</includes>
+    <includes local="no">expected</includes>
+    <includedby refid="iface_2aio_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/aio.h</includedby>
+    <includedby refid="iface_2dialer_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/dialer.h</includedby>
+    <includedby refid="iface_2listener_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/listener.h</includedby>
+    <includedby refid="nngxx_2iface_2pipe_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</includedby>
+    <includedby refid="nngxx_2iface_2socket_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/socket.h</includedby>
+    <includedby refid="msg__body_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/msg_body.h</includedby>
+    <includedby refid="opt__getter_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/opt_getter.h</includedby>
+    <includedby refid="opt__setter_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/opt_setter.h</includedby>
+    <includedby refid="op_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/op.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>clev/err.h</label>
+        <link refid="clev_2err_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>expected</label>
+      </node>
+      <node id="3">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>nng/nng.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <link refid="client_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <link refid="common_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <link refid="example_2event_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <link refid="server__backend_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/aio.h</label>
+        <link refid="aio_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/ctx.h</label>
+        <link refid="ctx_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/dialer.h</label>
+        <link refid="dialer_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/err.h</label>
+        <link refid="nngxx_2err_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/aio.h</label>
+        <link refid="iface_2aio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/ctx.h</label>
+        <link refid="iface_2ctx_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/dialer.h</label>
+        <link refid="iface_2dialer_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/listener.h</label>
+        <link refid="iface_2listener_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/msg.h</label>
+        <link refid="iface_2msg_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
+        <link refid="nngxx_2iface_2pipe_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/socket.h</label>
+        <link refid="nngxx_2iface_2socket_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/listener.h</label>
+        <link refid="listener_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
+        <link refid="msg__header_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/socket.h</label>
+        <link refid="nngxx_2socket_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/runner/work/pars/pars/lib/include/pars/app/single.h</label>
+        <link refid="single_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</label>
+        <link refid="backend_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/runner/work/pars/pars/lib/include/pars/comp/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/runner/work/pars/pars/lib/include/pars/concept/net.h</label>
+        <link refid="net_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h</label>
+        <link refid="enqueuer_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/event.h</label>
+        <link refid="lib_2include_2pars_2ev_2event_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</label>
+        <link refid="hf__registry_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h</label>
+        <link refid="hf__registry____insert_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/job.h</label>
+        <link refid="job_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/kind.h</label>
+        <link refid="ev_2kind_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h</label>
+        <link refid="kind__base_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/klass.h</label>
+        <link refid="klass_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h</label>
+        <link refid="metadata_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/runner.h</label>
+        <link refid="runner_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
+        <link refid="serializer_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
+        <link refid="spec_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
+        <link refid="nng_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
+        <link refid="stl_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context.h</label>
+        <link refid="context_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</label>
+        <link refid="context__registry_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/op.h</label>
+        <link refid="op_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
+        <link refid="pars_2net_2pipe_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pull.h</label>
+        <link refid="pull_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/push.h</label>
+        <link refid="push_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/rep.h</label>
+        <link refid="rep_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/req.h</label>
+        <link refid="req_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
+        <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h</label>
+        <link refid="tool__view_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <link refid="pars_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4" prot="public">std::is_error_code_enum&lt; nngxx::err &gt;</innerclass>
+    <innernamespace refid="namespacenngxx">nngxx</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>(c)<sp/>2025<sp/>Giuseppe<sp/>Roberti.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without<sp/>modification,</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,<sp/>this</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the<sp/>documentation<sp/>and/or</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">3.<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>copyright<sp/>holder<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/>contributors</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software<sp/>without</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>HOLDER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clev_2err_8h" kindref="compound">clev/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;expected&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx" kindref="compound">nngxx</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">err</ref><sp/>:<sp/>int;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_category&amp;<sp/>error_category()<sp/>noexcept</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>struct<sp/>:<sp/>std::error_category</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name()<sp/>const<sp/>noexcept</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;nngxx&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/>message(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>e)</highlight><highlight class="keyword"><sp/>const<sp/>override</highlight></codeline>
+<codeline lineno="51"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nng_strerror(e);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}<sp/>error_category;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>error_category;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="namespacenngxx_1a45d6dbea9ed7507e7aef5ac8f827f2c3" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::error_code<sp/><ref refid="namespacenngxx_1a45d6dbea9ed7507e7aef5ac8f827f2c3" kindref="member">make_error_code</ref>(<ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">err</ref><sp/>e)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::error_code(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(e),<sp/>error_category());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="67" refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::is_error_code_enum&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::err&gt;<sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx" kindref="compound">nngxx</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">err</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" kindref="member">success</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="77" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6eb25cafd325fc432de73fe0d2881a90" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6eb25cafd325fc432de73fe0d2881a90" kindref="member">intr</ref><sp/>=<sp/>NNG_EINTR,</highlight></codeline>
+<codeline lineno="78" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c" kindref="member">nomem</ref><sp/>=<sp/>NNG_ENOMEM,</highlight></codeline>
+<codeline lineno="79" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a15e757c159904fb372bd77be464a4586" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a15e757c159904fb372bd77be464a4586" kindref="member">inval</ref><sp/>=<sp/>NNG_EINVAL,</highlight></codeline>
+<codeline lineno="80" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a8bc1b2f84252c3df4edd53e4aad097a7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a8bc1b2f84252c3df4edd53e4aad097a7" kindref="member">busy</ref><sp/>=<sp/>NNG_EBUSY,</highlight></codeline>
+<codeline lineno="81" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6bd1da51c3edc54d566604a43bdc1dbe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a6bd1da51c3edc54d566604a43bdc1dbe" kindref="member">timedout</ref><sp/>=<sp/>NNG_ETIMEDOUT,</highlight></codeline>
+<codeline lineno="82" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad8c5f74af7f29866068ca57008ed8388" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad8c5f74af7f29866068ca57008ed8388" kindref="member">connrefused</ref><sp/>=<sp/>NNG_ECONNREFUSED,</highlight></codeline>
+<codeline lineno="83" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349e686330723975502e9ef4f939a5ac" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349e686330723975502e9ef4f939a5ac" kindref="member">closed</ref><sp/>=<sp/>NNG_ECLOSED,</highlight></codeline>
+<codeline lineno="84" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a639849f6b368019778991b32434354fc" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a639849f6b368019778991b32434354fc" kindref="member">again</ref><sp/>=<sp/>NNG_EAGAIN,</highlight></codeline>
+<codeline lineno="85" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024" kindref="member">notsup</ref><sp/>=<sp/>NNG_ENOTSUP,</highlight></codeline>
+<codeline lineno="86" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd67aae71a38916d5ad00dd87692ab9a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd67aae71a38916d5ad00dd87692ab9a" kindref="member">addrinuse</ref><sp/>=<sp/>NNG_EADDRINUSE,</highlight></codeline>
+<codeline lineno="87" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e" kindref="member">state</ref><sp/>=<sp/>NNG_ESTATE,</highlight></codeline>
+<codeline lineno="88" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569" kindref="member">noent</ref><sp/>=<sp/>NNG_ENOENT,</highlight></codeline>
+<codeline lineno="89" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349c85aae1d71151c001702f17a2b5f0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a349c85aae1d71151c001702f17a2b5f0" kindref="member">proto</ref><sp/>=<sp/>NNG_EPROTO,</highlight></codeline>
+<codeline lineno="90" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab748f56cf76526f8606d7463b9df9f2e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab748f56cf76526f8606d7463b9df9f2e" kindref="member">unreachable</ref><sp/>=<sp/>NNG_EUNREACHABLE,</highlight></codeline>
+<codeline lineno="91" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9957561d3300a5c3c0a8d79e0703c480" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a9957561d3300a5c3c0a8d79e0703c480" kindref="member">addrinval</ref><sp/>=<sp/>NNG_EADDRINVAL,</highlight></codeline>
+<codeline lineno="92" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aca659200663cf654dc4410ed494451ee" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aca659200663cf654dc4410ed494451ee" kindref="member">perm</ref><sp/>=<sp/>NNG_EPERM,</highlight></codeline>
+<codeline lineno="93" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108afd864c5303e342cd062d0479af2ee92b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108afd864c5303e342cd062d0479af2ee92b" kindref="member">msgsize</ref><sp/>=<sp/>NNG_EMSGSIZE,</highlight></codeline>
+<codeline lineno="94" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab9ca56d12de113e1babfacc263391aa4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ab9ca56d12de113e1babfacc263391aa4" kindref="member">connaborted</ref><sp/>=<sp/>NNG_ECONNABORTED,</highlight></codeline>
+<codeline lineno="95" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a46b677b73a61d3c343db5c23ab4a2ab2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a46b677b73a61d3c343db5c23ab4a2ab2" kindref="member">connreset</ref><sp/>=<sp/>NNG_ECONNRESET,</highlight></codeline>
+<codeline lineno="96" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad5c39a1d9aced393f835f334a1fb9206" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad5c39a1d9aced393f835f334a1fb9206" kindref="member">canceled</ref><sp/>=<sp/>NNG_ECANCELED,</highlight></codeline>
+<codeline lineno="97" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4" kindref="member">nofiles</ref><sp/>=<sp/>NNG_ENOFILES,</highlight></codeline>
+<codeline lineno="98" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272" kindref="member">nospc</ref><sp/>=<sp/>NNG_ENOSPC,</highlight></codeline>
+<codeline lineno="99" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a035d02e56845b5a4979feabda0824f88" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a035d02e56845b5a4979feabda0824f88" kindref="member">exist</ref><sp/>=<sp/>NNG_EEXIST,</highlight></codeline>
+<codeline lineno="100" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40" kindref="member">readonly</ref><sp/>=<sp/>NNG_EREADONLY,</highlight></codeline>
+<codeline lineno="101" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aef1d48fe20b591902a50fa3ba5f7e88f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aef1d48fe20b591902a50fa3ba5f7e88f" kindref="member">writeonly</ref><sp/>=<sp/>NNG_EWRITEONLY,</highlight></codeline>
+<codeline lineno="102" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a5ae9b7f211e23aac3df5f2b8f3b8eada" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a5ae9b7f211e23aac3df5f2b8f3b8eada" kindref="member">crypto</ref><sp/>=<sp/>NNG_ECRYPTO,</highlight></codeline>
+<codeline lineno="103" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108af437fd2fc6626d7d27a0c6864402bf3b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108af437fd2fc6626d7d27a0c6864402bf3b" kindref="member">peerauth</ref><sp/>=<sp/>NNG_EPEERAUTH,</highlight></codeline>
+<codeline lineno="104" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d" kindref="member">noarg</ref><sp/>=<sp/>NNG_ENOARG,</highlight></codeline>
+<codeline lineno="105" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1f2a1ba9f974029c8e43ae8f59637f4c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a1f2a1ba9f974029c8e43ae8f59637f4c" kindref="member">ambiguous</ref><sp/>=<sp/>NNG_EAMBIGUOUS,</highlight></codeline>
+<codeline lineno="106" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a3caf72759b505eb34e97b1770a19c1d4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a3caf72759b505eb34e97b1770a19c1d4" kindref="member">badtype</ref><sp/>=<sp/>NNG_EBADTYPE,</highlight></codeline>
+<codeline lineno="107" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a561d9fe75aacd80a85dfdca62f8bdc77" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a561d9fe75aacd80a85dfdca62f8bdc77" kindref="member">connshut</ref><sp/>=<sp/>NNG_ECONNSHUT,</highlight></codeline>
+<codeline lineno="108" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad1efad72dc5b17dc66a46767c32fff40" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108ad1efad72dc5b17dc66a46767c32fff40" kindref="member">internal</ref><sp/>=<sp/>NNG_EINTERNAL,</highlight></codeline>
+<codeline lineno="109" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd5763c8ee2068e505915d3abf12c45c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108abd5763c8ee2068e505915d3abf12c45c" kindref="member">syserr</ref><sp/>=<sp/>NNG_ESYSERR,</highlight></codeline>
+<codeline lineno="110" refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aba615b5939d7c8d16d9963d2f3dd3ef9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108aba615b5939d7c8d16d9963d2f3dd3ef9" kindref="member">tranerr</ref><sp/>=<sp/>NNG_ETRANERR</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ret_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>arg_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;</ref>&gt;</highlight></codeline>
+<codeline lineno="115" refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" refkind="member"><highlight class="normal"><ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">make</ref>(ret_t<sp/>(*f)(arg_t,<sp/>args_t...),<sp/>args_t...<sp/>args)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref><sp/>=<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">make</ref>(f,<sp/>args...));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">value_type<sp/>=<sp/>return_type::value_type;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref>{}.and_then([&amp;](value_type<sp/>v)<sp/>-&gt;<sp/><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>=<sp/>f(&amp;v,<sp/>args...);<sp/>e)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" kindref="member">clev::make_unexpected&lt;err&gt;</ref>(e);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>return_t&gt;</highlight></codeline>
+<codeline lineno="130" refid="namespacenngxx_1a0416b7440ce59d889ef96e1106bbdb8d" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a0416b7440ce59d889ef96e1106bbdb8d" kindref="member">read</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;return_t&gt;</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref><sp/>=<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;return_t&gt;</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">value_type<sp/>=<sp/>return_type::value_type;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref>{}.and_then([=](value_type<sp/>v)<sp/>-&gt;<sp/><ref refid="structnngxx_1_1opt__to__nng__type" kindref="compound">return_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>e<sp/>=<sp/>f(&amp;v);<sp/>e)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" kindref="member">clev::make_unexpected&lt;err&gt;</ref>(e);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ret_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="145" refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">invoke</ref>(ret_t<sp/>(*f)(args_t...),</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t...<sp/>args)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a15c55fa3a6d6170235687de697524350" kindref="member">clev::make_expected&lt;err&gt;</ref>(f(args...));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="152" refid="namespacenngxx_1a0c256ba910e505bd0bef5e615b5c8023" refkind="member"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">invoke</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*f)(args_t...),</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>args_t...<sp/>args)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>f(args...);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::convertible_to&lt;nngxx::err,<sp/>std::error_code&gt;);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::constructible_from&lt;std::error_code,<sp/>nngxx::err&gt;);</highlight></codeline>
+    </programlisting>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h"/>
+  </compounddef>
+</doxygen>
