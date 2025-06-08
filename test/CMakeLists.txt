@@ -5,15 +5,17 @@ include(GoogleTest)
 
 set(
   PARS_TESTS
-  "events-internal.cpp"
-  "events-network.cpp"
+  "ev-event--internal.cpp"
+  "ev-event--network.cpp"
+  "nngxx-msg.cpp"
 )
 
 foreach (TEST_SOURCE ${PARS_TESTS})
   string(REPLACE ".cpp" "" TEST_NAME ${TEST_SOURCE})
   set(TEST_TARGET "test-${TEST_NAME}")
+  file(GLOB TEST_HEADERS "${TEST_NAME}*.h")
 
-  add_executable(${TEST_TARGET} ${TEST_SOURCE})
+  add_executable(${TEST_TARGET} ${TEST_SOURCE} ${TEST_HEADERS})
   target_link_libraries(${TEST_TARGET} PUBLIC pars)
 
   if (${PARS_BUILD_COVERAGE})

@@ -27,50 +27,56 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#include <pars/pars.h>
 
-#include "nngxx/pipe.h"
-#include "nngxx/socket.h"
+#include <gtest/gtest.h>
 
-#include "pars/fmt/nng.h"
+#include <type_traits>
 
-#include <fmt/format.h>
-
-namespace pars::net
+namespace pars::tests
 {
 
-class pipe : public nngxx::pipe_view
+using internal_events = ::testing::Types<ev::init, ev::exception>;
+
+template<typename event_t>
+struct internal_kinds : testing::Test
 {
-public:
-  pipe()
-    : id_m{0}
-    , socket_id_m{0}
-  {
-  }
-
-  pipe(nngxx::pipe_view& pv) noexcept
-    : nngxx::pipe_view{pv}
-    , id_m{pv.id()}
-    , socket_id_m{pv.get_socket().id()}
-  {
-  }
-
-  int id() const noexcept { return id_m; }
-
-  [[nodiscard]] int socket_id() const { return socket_id_m; }
-
-  explicit operator bool() { return nngxx::pipe_view::operator bool(); }
-
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{}",
-                          static_cast<const nngxx::pipe_view&>(*this));
-  }
-
-private:
-  const int id_m;
-
-  const int socket_id_m;
+  using event_type = event_t;
 };
 
-} // namespace pars::net
+TYPED_TEST_SUITE(internal_kinds, internal_events);
+
+TYPED_TEST(internal_kinds, are_recognized)
+{
+  using event_type = internal_kinds<TypeParam>::event_type;
+
+  // event_type is recognized as and event
+  EXPECT_TRUE(ev::event_c<event_type>);
+
+  // event_type do not require network data
+  EXPECT_FALSE(ev::klass<event_type>::requires_network);
+
+  // event_type is recognized as an internal_event_c
+  EXPECT_TRUE(ev::internal_event_c<event_type>);
+}
+
+TYPED_TEST(internal_kinds, can_be_fired)
+{
+  using event_type = internal_kinds<TypeParam>::event_type;
+
+  // we can instantiate a fired<event_type>
+  EXPECT_TRUE((std::is_constructible_v<ev::fired<event_type>, event_type,
+                                       ev::metadata<ev::fired, event_type>>));
+
+  if (std::default_initializable<event_type>)
+  {
+    // we can instantiate from event_type{} without specifying the type
+    // event_type
+    ev::fired{event_type{}, {}};
+
+    // we can instantiate specifying the type event_type
+    ev::fired<event_type>{{}, {}};
+  }
+}
+
+} // namespace pars::tests

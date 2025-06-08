@@ -36,21 +36,21 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::tests
 {
 
-using NetworkEvents =
+using network_events =
   ::testing::Types<nngxx::msg, ev::network_error, ev::creating_pipe,
                    ev::pipe_created, ev::pipe_removed>;
 
 template<typename event_t>
-struct NetworkKinds : testing::Test
+struct network_kinds : testing::Test
 {
   using event_type = event_t;
 };
 
-TYPED_TEST_SUITE(NetworkKinds, NetworkEvents);
+TYPED_TEST_SUITE(network_kinds, network_events);
 
-TYPED_TEST(NetworkKinds, EventsAreRecognized)
+TYPED_TEST(network_kinds, are_recognized)
 {
-  using event_type = NetworkKinds<TypeParam>::event_type;
+  using event_type = network_kinds<TypeParam>::event_type;
 
   // event_type is recognized as and event
   EXPECT_TRUE(ev::event_c<event_type>);
@@ -62,9 +62,9 @@ TYPED_TEST(NetworkKinds, EventsAreRecognized)
   EXPECT_TRUE(ev::network_event_c<event_type>);
 }
 
-TYPED_TEST(NetworkKinds, EventsCanBeFired)
+TYPED_TEST(network_kinds, can_be_fired)
 {
-  using event_type = NetworkKinds<TypeParam>::event_type;
+  using event_type = network_kinds<TypeParam>::event_type;
 
   // we can instantiate a fired<event_type>
   EXPECT_TRUE((std::is_constructible_v<ev::fired<event_type>, event_type,
@@ -82,9 +82,9 @@ TYPED_TEST(NetworkKinds, EventsCanBeFired)
   }
 }
 
-TYPED_TEST(NetworkKinds, EventsCanBeSent)
+TYPED_TEST(network_kinds, can_be_sent)
 {
-  using event_type = NetworkKinds<TypeParam>::event_type;
+  using event_type = network_kinds<TypeParam>::event_type;
 
   // we can instantiate a sent<event_type>
   EXPECT_TRUE((std::is_constructible_v<ev::sent<event_type>, event_type,
@@ -101,9 +101,9 @@ TYPED_TEST(NetworkKinds, EventsCanBeSent)
   }
 }
 
-TYPED_TEST(NetworkKinds, EventsCanBeReceived)
+TYPED_TEST(network_kinds, can_be_received)
 {
-  using event_type = NetworkKinds<TypeParam>::event_type;
+  using event_type = network_kinds<TypeParam>::event_type;
 
   // we can instantiate a received<event_type>
   EXPECT_TRUE(

@@ -55,32 +55,51 @@ struct msg_body
   }
 
   template<typename char_t>
-  [[nodiscard]] inline char_t* const data() const noexcept
+  [[nodiscard]] inline const char_t* data() const noexcept
   {
-    return static_cast<char_t* const>(nng_msg_body(m));
+    return static_cast<const char_t*>(nng_msg_body(m));
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<uint_t> append() noexcept
+  [[nodiscard]] inline clev::expected<void> append(uint_t x) noexcept
   {
-    uint_t x;
-
-    int (*append)(nng_msg*, uint_t*);
+    int (*append)(nng_msg*, uint_t);
 
     if constexpr (std::is_same_v<uint_t, uint16_t>)
     {
-      append = nng_msg_append;
+      append = nng_msg_append_u16;
     }
     else if constexpr (std::is_same_v<uint_t, uint32_t>)
     {
-      append = nng_msg_trim_u32;
+      append = nng_msg_append_u32;
     }
     else if constexpr (std::is_same_v<uint_t, uint64_t>)
     {
-      append = nng_msg_trim_u64;
+      append = nng_msg_append_u64;
     }
 
-    return nngxx::invoke(append, m, &x);
+    return nngxx::invoke(append, m, x);
+  }
+
+  template<uint_c uint_t>
+  [[nodiscard]] inline clev::expected<void> insert(uint_t x) noexcept
+  {
+    int (*insert)(nng_msg*, uint_t);
+
+    if constexpr (std::is_same_v<uint_t, uint16_t>)
+    {
+      insert = nng_msg_insert_u16;
+    }
+    else if constexpr (std::is_same_v<uint_t, uint32_t>)
+    {
+      insert = nng_msg_insert_u32;
+    }
+    else if constexpr (std::is_same_v<uint_t, uint64_t>)
+    {
+      insert = nng_msg_insert_u64;
+    }
+
+    return nngxx::invoke(insert, m, x);
   }
 
   template<uint_c uint_t>
@@ -103,7 +122,7 @@ struct msg_body
       trim = nng_msg_trim_u64;
     }
 
-    return nngxx::invoke(trim, m, &x);
+    return nngxx::invoke(trim, m, &x).transform([&]() { return x; });
   }
 
   [[nodiscard]] inline clev::expected<void> trim(std::size_t sz) noexcept
@@ -131,12 +150,30 @@ struct msg_body
       chop = nng_msg_chop_u64;
     }
 
-    return nngxx::invoke(chop, m, &x);
+    return nngxx::invoke(chop, m, &x).transform([&]() { return x; });
   }
 
   [[nodiscard]] inline clev::expected<void> chop(std::size_t sz) noexcept
   {
     return nngxx::invoke(nng_msg_chop, m, sz);
+  }
+
+  template<uint_c uint_t>
+  [[nodiscard]] inline clev::expected<uint_t> read() const noexcept
+  {
+    uint_t v;
+
+    std::memcpy(static_cast<void*>(&v), data<void>(), sizeof(decltype(v)));
+
+    return v;
+  }
+
+  template<uint_c uint_t>
+  [[nodiscard]] inline clev::expected<void> write(uint_t v) noexcept
+  {
+    std::memcpy(data<void>(), static_cast<void*>(&v), sizeof(decltype(v)));
+
+    return {};
   }
 
 private:

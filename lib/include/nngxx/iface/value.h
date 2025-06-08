@@ -134,4 +134,4 @@ private:
 
 } // namespace nngxx
 
-static_assert(ownxx_own_is_really_needed_v);
+static_assert(clev_own_is_really_needed_v);

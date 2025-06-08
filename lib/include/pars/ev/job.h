@@ -85,11 +85,11 @@ public:
       metadata<received, event_t>{md.socket_id(), md.tool(), md.pipe()}};
   }
 
-  std::size_t id() const { return id_m; }
+  [[nodiscard]] std::size_t id() const { return id_m; }
 
-  int socket_id() const { return socket_id_m; }
+  [[nodiscard]] int socket_id() const { return socket_id_m; }
 
-  std::size_t spec_hash() const { return spec_hash_m; }
+  [[nodiscard]] std::size_t spec_hash() const { return spec_hash_m; }
 
   auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
   {

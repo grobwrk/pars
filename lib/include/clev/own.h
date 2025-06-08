@@ -47,7 +47,7 @@ struct own : iface<wrap_t>
       { own::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
     }
   {
-    own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
+    std::ignore = own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
   }
 
   own& operator=(const own& rhs) noexcept
@@ -81,7 +81,7 @@ struct own : iface<wrap_t>
   own(own&& rhs) noexcept
   {
     if (*this)
-      own::destroy(own::v).or_else(clev::exit_now());
+      std::ignore = own::destroy(own::v).or_else(clev::exit_now());
 
     own::v = rhs.v;
 
@@ -93,7 +93,7 @@ struct own : iface<wrap_t>
     if (this != &rhs)
     {
       if (*this)
-        own::destroy(own::v).or_else(clev::exit_now());
+        std::ignore = own::destroy(own::v).or_else(clev::exit_now());
 
       own::v = rhs.v;
 
@@ -106,10 +106,10 @@ struct own : iface<wrap_t>
   ~own()
   {
     if (*this)
-      own::destroy(own::v).or_else(clev::exit_now());
+      std::ignore = own::destroy(own::v).or_else(clev::exit_now());
   }
 };
 
 } // namespace clev
 
-static constexpr bool ownxx_own_is_really_needed_v = true;
+static constexpr bool clev_own_is_really_needed_v = true;

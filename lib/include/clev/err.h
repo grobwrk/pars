@@ -95,7 +95,6 @@ inline static auto exit_now() noexcept(clev_exception_disabled_v)
   };
 }
 
-
 template<typename enum_t>
 inline clev::unexpected make_unexpected(const int err) noexcept
 {

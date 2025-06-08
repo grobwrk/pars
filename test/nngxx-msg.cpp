@@ -27,56 +27,30 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#include <pars/pars.h>
 
-#include <gtest/gtest.h>
+#include "nngxx-msg.h"
 
-#include <type_traits>
-
-namespace pars::tests
+TEST_F(nngxx_msg, main_ctor)
 {
-
-using InternalEvents = ::testing::Types<ev::init, ev::exception>;
-
-template<typename event_t>
-struct InternalKinds : testing::Test
-{
-  using event_type = event_t;
-};
-
-TYPED_TEST_SUITE(InternalKinds, InternalEvents);
-
-TYPED_TEST(InternalKinds, EventsAreRecognized)
-{
-  using event_type = InternalKinds<TypeParam>::event_type;
-
-  // event_type is recognized as and event
-  EXPECT_TRUE(ev::event_c<event_type>);
-
-  // event_type do not requires network data
-  EXPECT_FALSE(ev::klass<event_type>::requires_network);
-
-  // event_type is recognized as an internal_event_c
-  EXPECT_TRUE(ev::internal_event_c<event_type>);
+  expect_invalid(invalid_msg);
 }
 
-TYPED_TEST(InternalKinds, EventsCanBeFired)
+TEST_F(nngxx_msg, make_msg)
 {
-  using event_type = InternalKinds<TypeParam>::event_type;
-
-  // we can instantiate a fired<event_type>
-  EXPECT_TRUE((std::is_constructible_v<ev::fired<event_type>, event_type,
-                                       ev::metadata<ev::fired, event_type>>));
-
-  if (std::default_initializable<event_type>)
-  {
-    // we can instantiate from event_type{} without specifing the type
-    // event_type
-    ev::fired{event_type{}, {}};
-
-    // we can instantiate specifing the type event_type
-    ev::fired<event_type>{{}, {}};
-  }
+  expect_valid_empty(valid_empty_msg);
 }
 
-} // namespace pars::tests
+TEST_F(nngxx_msg, copy_ctor)
+{
+  auto m{valid_empty_msg};
+
+  expect_valid_empty(m);
+}
+
+TEST_F(nngxx_msg, move_ctor)
+{
+  auto m_rhs{valid_nonempty_msg};
+  auto m{std::move(m_rhs)};
+
+  expect_valid_nonempty(m);
+}

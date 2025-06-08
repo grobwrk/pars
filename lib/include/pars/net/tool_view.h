@@ -61,16 +61,19 @@ public:
   }
 
   /// Get the std::type_info of the underlying variant
-  const std::type_info& type() const
+  [[nodiscard]] const std::type_info& type() const
   {
     return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
   }
 
   /// Get a string that represents the type of the underlying variant
-  const char* who() const { return tool_m.index() == 0 ? "Context" : "Socket"; }
+  [[nodiscard]] const char* who() const
+  {
+    return tool_m.index() == 0 ? "Context" : "Socket";
+  }
 
   /// The id of the underlying variant
-  int id() const
+  [[nodiscard]] int id() const
   {
     return std::visit([](const auto& t) { return t.id(); }, tool_m);
   }

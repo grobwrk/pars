@@ -27,50 +27,44 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#include <gtest/gtest.h>
 
-#include "nngxx/pipe.h"
-#include "nngxx/socket.h"
+#include "nngxx/msg.h"
+#include "nngxx/msg_body.h"
+#include "nngxx/msg_header.h"
 
-#include "pars/fmt/nng.h"
+using namespace nngxx;
 
-#include <fmt/format.h>
-
-namespace pars::net
+class nngxx_msg : public ::testing::Test
 {
+protected:
+  nngxx::msg invalid_msg;
 
-class pipe : public nngxx::pipe_view
-{
-public:
-  pipe()
-    : id_m{0}
-    , socket_id_m{0}
+  nngxx::msg valid_empty_msg = nngxx::make_msg(0).value();
+
+  uint64_t value = 42;
+
+  nngxx::msg valid_nonempty_msg =
+    nngxx::make_msg(sizeof(decltype(value)))
+      .and_then([&](nngxx::msg m) {
+        return m.body().write(value).transform([&]() { return std::move(m); });
+      })
+      .value();
+
+  static void expect_invalid(const nngxx::msg& m) { EXPECT_FALSE(m); }
+
+  static void expect_valid_empty(const nngxx::msg& m)
   {
+    EXPECT_TRUE(m);
+    EXPECT_EQ(m.body().size(), 0);
+    EXPECT_EQ(m.header().size(), 0);
   }
 
-  pipe(nngxx::pipe_view& pv) noexcept
-    : nngxx::pipe_view{pv}
-    , id_m{pv.id()}
-    , socket_id_m{pv.get_socket().id()}
+  void expect_valid_nonempty(const nngxx::msg& m) const
   {
+    EXPECT_TRUE(m);
+    EXPECT_EQ(m.body().size(), 8);
+    EXPECT_EQ(m.body().read<uint64_t>().value(), value);
+    EXPECT_EQ(m.header().size(), 0);
   }
-
-  int id() const noexcept { return id_m; }
-
-  [[nodiscard]] int socket_id() const { return socket_id_m; }
-
-  explicit operator bool() { return nngxx::pipe_view::operator bool(); }
-
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
-  {
-    return fmt::format_to(ctx.out(), "{}",
-                          static_cast<const nngxx::pipe_view&>(*this));
-  }
-
-private:
-  const int id_m;
-
-  const int socket_id_m;
 };
-
-} // namespace pars::net
