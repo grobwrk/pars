@@ -45,9 +45,9 @@ struct clev::iface<nng_ctx> : nngxx::value<nng_ctx>
     return NNG_CTX_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_ctx v) noexcept
+  [[nodiscard]] inline static clev::expected<void> destroy(nng_ctx* v) noexcept
   {
-    return nngxx::invoke(nng_ctx_close, v);
+    return nngxx::invoke(nng_ctx_close, *v);
   }
 
   [[nodiscard]] static inline clev::expected<nng_ctx>

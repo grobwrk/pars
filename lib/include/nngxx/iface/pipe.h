@@ -43,10 +43,10 @@ struct clev::iface<nng_pipe> : nngxx::value<nng_pipe>
     return NNG_PIPE_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_type v) noexcept
+  [[nodiscard]] inline static clev::expected<void> destroy(nng_pipe* v) noexcept
   {
-    // TODO: because we can close(), we should check it's open before
-    return nngxx::invoke(nng_pipe_close, v);
+    // TODO: because we can close(), should we check it's open before closing?
+    return nngxx::invoke(nng_pipe_close, *v);
   }
 
   [[nodiscard]] inline int id() const noexcept { return nng_pipe_id(v); }
@@ -55,6 +55,6 @@ struct clev::iface<nng_pipe> : nngxx::value<nng_pipe>
 
   [[nodiscard]] inline clev::expected<void> close() noexcept
   {
-    return destroy(v);
+    return destroy(&v);
   }
 };

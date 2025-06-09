@@ -38,18 +38,11 @@ using namespace nngxx;
 class nngxx_msg : public ::testing::Test
 {
 protected:
-  nngxx::msg invalid_msg;
+  nngxx::msg make_invalid_msg() { return nngxx::msg{}; }
 
-  nngxx::msg valid_empty_msg = nngxx::make_msg(0).value();
+  nngxx::msg make_valid_empty_msg() { return nngxx::make_msg(0).value(); }
 
-  uint64_t value = 42;
-
-  nngxx::msg valid_nonempty_msg =
-    nngxx::make_msg(sizeof(decltype(value)))
-      .and_then([&](nngxx::msg m) {
-        return m.body().write(value).transform([&]() { return std::move(m); });
-      })
-      .value();
+  nngxx::msg make_valid_nonempty_msg() { return nngxx::make_msg(1).value(); }
 
   static void expect_invalid(const nngxx::msg& m) { EXPECT_FALSE(m); }
 
@@ -60,11 +53,20 @@ protected:
     EXPECT_EQ(m.header().size(), 0);
   }
 
-  void expect_valid_nonempty(const nngxx::msg& m) const
+  void expect_valid_nonempty(const nngxx::msg& m,
+                             std::optional<uint64_t> v = {}) const
   {
+    using value_type = decltype(v)::value_type;
+
     EXPECT_TRUE(m);
-    EXPECT_EQ(m.body().size(), 8);
-    EXPECT_EQ(m.body().read<uint64_t>().value(), value);
+    EXPECT_EQ(m.body().size(), 1);
     EXPECT_EQ(m.header().size(), 0);
+  }
+
+  void expect_resource_addr(const nngxx::msg& m, const nng_msg* const expected)
+  {
+    auto m_addr = static_cast<const nng_msg* const>(m);
+
+    EXPECT_EQ(m_addr, expected);
   }
 };

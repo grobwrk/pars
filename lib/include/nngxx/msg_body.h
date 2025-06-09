@@ -139,7 +139,7 @@ struct msg_body
 
     if constexpr (std::is_same_v<uint_t, uint16_t>)
     {
-      chop = nng_msg_chop;
+      chop = nng_msg_chop_u16;
     }
     else if constexpr (std::is_same_v<uint_t, uint32_t>)
     {

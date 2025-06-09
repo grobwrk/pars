@@ -46,9 +46,9 @@ struct clev::iface<nng_listener> : nngxx::value<nng_listener>
   };
 
   [[nodiscard]] inline static clev::expected<void>
-  destroy(nng_listener l) noexcept
+  destroy(nng_listener* l) noexcept
   {
-    return nngxx::invoke(nng_listener_close, l);
+    return nngxx::invoke(nng_listener_close, *l);
   }
 
   [[nodiscard]] inline static clev::expected<nng_listener>

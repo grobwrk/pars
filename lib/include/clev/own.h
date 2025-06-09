@@ -47,7 +47,8 @@ struct own : iface<wrap_t>
       { own::copy(d, s) } -> std::convertible_to<clev::expected<void>>;
     }
   {
-    std::ignore = own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
+    if (rhs)
+      std::ignore = own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
   }
 
   own& operator=(const own& rhs) noexcept
@@ -59,9 +60,10 @@ struct own : iface<wrap_t>
       return *this;
 
     if (*this)
-      own::destroy(own::v).or_else(clev::exit_now());
+      own::destroy(&(own::v)).or_else(clev::exit_now());
 
-    own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
+    if (rhs)
+      own::copy(&(own::v), rhs.v).or_else(clev::exit_now());
 
     return *this;
   }
@@ -80,9 +82,6 @@ struct own : iface<wrap_t>
 
   own(own&& rhs) noexcept
   {
-    if (*this)
-      std::ignore = own::destroy(own::v).or_else(clev::exit_now());
-
     own::v = rhs.v;
 
     rhs.v = own::empty();
@@ -90,15 +89,10 @@ struct own : iface<wrap_t>
 
   own& operator=(own&& rhs) noexcept
   {
-    if (this != &rhs)
-    {
-      if (*this)
-        std::ignore = own::destroy(own::v).or_else(clev::exit_now());
+    if (this == &rhs)
+      return *this;
 
-      own::v = rhs.v;
-
-      rhs.v = own::empty();
-    };
+    std::swap(own::v, rhs.v);
 
     return *this;
   }
@@ -106,7 +100,7 @@ struct own : iface<wrap_t>
   ~own()
   {
     if (*this)
-      std::ignore = own::destroy(own::v).or_else(clev::exit_now());
+      std::ignore = own::destroy(&(own::v)).or_else(clev::exit_now());
   }
 };
 

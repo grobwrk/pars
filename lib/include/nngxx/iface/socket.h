@@ -46,9 +46,9 @@ struct clev::iface<nng_socket> : nngxx::value<nng_socket>
   };
 
   [[nodiscard]] inline static clev::expected<void>
-  destroy(nng_socket v) noexcept
+  destroy(nng_socket* v) noexcept
   {
-    return nngxx::invoke(nng_socket_close, v);
+    return nngxx::invoke(nng_socket_close, *v);
   }
 
   [[nodiscard]] inline int id() const noexcept { return nng_socket_id(v); }
