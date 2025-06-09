@@ -339,6 +339,18 @@ TEST_F(nngxx_msg, move_assign_invalid_valid)
   expect_resource_addr(m2, m1_addr);
 }
 
+/// FUNC: release()
+
+TEST_F(nngxx_msg, release)
+{
+  auto m = make_valid_empty_msg();
+
+  auto m_ptr = m.release();
+
+  EXPECT_FALSE(m);
+  EXPECT_TRUE(m_ptr != nullptr);
+}
+
 /// FUNC: set_pipe(), get_pipe()
 
 TEST_F(nngxx_msg, pipe)
