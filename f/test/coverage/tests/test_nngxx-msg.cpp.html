@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">188</td>
+                     <td class="headerValue" width="10%">192</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
                    <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">188</td>
+                     <td class="headerValue" width="10%">192</td>
                    </tr>
                  </table>
                </td>
@@ -374,6 +374,18 @@
              : 
            1</span> : <span class="lineCov">  expect_resource_addr(m1, m2_addr);</span>
            1</span> : <span class="lineCov">  expect_resource_addr(m2, m1_addr);</span>
+             : }
+             : 
+             : /// FUNC: release()
+             : 
+             : TEST_F(nngxx_msg, release)
+             : {
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> : <span class="lineCov">  auto m_ptr = m.release();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(m);</span>
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m_ptr != nullptr);</span>
              : }
              : 
              : /// FUNC: set_pipe(), get_pipe()

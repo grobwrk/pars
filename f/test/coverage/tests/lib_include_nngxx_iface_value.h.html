@@ -17,14 +17,14 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">1</td>
+                     <td class="headerValue" width="10%">11</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">100.0 %</td>
+                   <td class="headerValue" width="15%">9.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -100,25 +100,25 @@
              :   [[nodiscard]] inline clev::expected&lt;void&gt;
              :   set_recv_timeout(nng_duration d) noexcept
              :   {
-             :     return set_option&lt;opt::recvtimeo&gt;(d);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::recvtimeo&gt;(d);</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt;
              :   set_send_timeout(nng_duration d) noexcept
              :   {
-             :     return set_option&lt;opt::sendtimeo&gt;(d);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::sendtimeo&gt;(d);</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt;
              :   set_req_resend_time(nng_duration d) noexcept
              :   {
-             :     return set_option&lt;opt::req_resend_time&gt;(d);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::req_resend_time&gt;(d);</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt;
              :   set_req_resend_tick(nng_duration d) noexcept
              :   {
-             :     return set_option&lt;opt::req_resend_tick&gt;(d);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return set_option&lt;opt::req_resend_tick&gt;(d);</span>
              :   }
              : 
              :   /// @name options getters
@@ -133,39 +133,39 @@
              :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
              :   get_recv_timeout() const noexcept
              :   {
-             :     return get_option&lt;opt::recvtimeo&gt;();
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::recvtimeo&gt;();</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
              :   get_send_timeout() const noexcept
              :   {
-             :     return get_option&lt;opt::sendtimeo&gt;();
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::sendtimeo&gt;();</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
              :   get_req_resend_time() const noexcept
              :   {
-             :     return get_option&lt;opt::req_resend_time&gt;();
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::req_resend_time&gt;();</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;nng_duration&gt;
              :   get_req_resend_tick() const noexcept
              :   {
-             :     return get_option&lt;opt::req_resend_tick&gt;();
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return get_option&lt;opt::req_resend_tick&gt;();</span>
              :   }
              : 
              : private:
              :   template&lt;opt opt_v, nng_value_c nng_value_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;void&gt; set_option(nng_value_t val)
              :   {
-             :     return opt_setter&lt;opt_v, nng_type&gt;{}(parent::v, val);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_setter&lt;opt_v, nng_type&gt;{}(parent::v, val);</span>
              :   }
              : 
              :   template&lt;opt opt_v&gt;
              :   [[nodiscard]] inline clev::expected&lt;opt_to_nng_type_t&lt;opt_v&gt;&gt;
              :   get_option() const
              :   {
-             :     return opt_getter&lt;opt_v, nng_type&gt;{}(parent::v);
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_getter&lt;opt_v, nng_type&gt;{}(parent::v);</span>
              :   }
              : };
              : 

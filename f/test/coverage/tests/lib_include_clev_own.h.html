@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">17</td>
@@ -119,9 +119,9 @@
              : 
              :   own(own&amp;&amp; rhs) noexcept
              :   {
-          34</span> : <span class="lineCov">    own::v = rhs.v;</span>
+          35</span> : <span class="lineCov">    own::v = rhs.v;</span>
              : 
-          34</span> : <span class="lineCov">    rhs.v = own::empty();</span>
+          35</span> : <span class="lineCov">    rhs.v = own::empty();</span>
              :   }
              : 
              :   own&amp; operator=(own&amp;&amp; rhs) noexcept
@@ -136,8 +136,8 @@
              : 
              :   ~own()
              :   {
-          92</span> : <span class="lineCov">    if (*this)</span>
-          92</span> :       <span class="lineCov">std::ignore = own::destroy(&amp;(own::v)).or_else(clev::exit_now())</span>;
+          94</span> : <span class="lineCov">    if (*this)</span>
+          94</span> :       <span class="lineCov">std::ignore = own::destroy(&amp;(own::v)).or_else(clev::exit_now())</span>;
              :   }
              : };
              : 

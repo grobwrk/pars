@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">34</td>
@@ -204,16 +204,16 @@
              : [[nodiscard]] inline clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;&gt;
              : make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
              : {
-          30</span> : <span class="lineCov">  using return_type = decltype(make(f, args...));</span>
+          31</span> : <span class="lineCov">  using return_type = decltype(make(f, args...));</span>
              : 
-          30</span> : <span class="lineCov">  using value_type = return_type::value_type;</span>
+          31</span> : <span class="lineCov">  using value_type = return_type::value_type;</span>
              : 
-          30</span> : <span class="lineCov">  return return_type{}.and_then([&amp;](value_type v) -&gt; return_type </span>{
-          30</span> : <span class="lineCov">    if (auto e = f(&amp;v, args...); e)</span>
+          31</span> : <span class="lineCov">  return return_type{}.and_then([&amp;](value_type v) -&gt; return_type </span>{
+          31</span> : <span class="lineCov">    if (auto e = f(&amp;v, args...); e)</span>
 <span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">return clev::make_unexpected&lt;c::err&gt;(e)</span>;
              : 
-          30</span> :     <span class="lineCov">return v</span>;
-          30</span> : <span class="lineCov">  });</span>
+          31</span> :     <span class="lineCov">return v</span>;
+          31</span> : <span class="lineCov">  });</span>
              : }
              : 
              : template&lt;typename return_t&gt;

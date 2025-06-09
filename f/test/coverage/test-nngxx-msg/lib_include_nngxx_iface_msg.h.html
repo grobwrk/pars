@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">9</td>
@@ -85,7 +85,7 @@
              : {
              :   using value::value;
              : 
-         109</span> :   [[nodiscard]] inline static nng_msg* empty() noexcept <span class="lineCov">{ return nullptr; }</span>
+         112</span> :   [[nodiscard]] inline static nng_msg* empty() noexcept <span class="lineCov">{ return nullptr; }</span>
              : 
              :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_msg** v) noexcept
              :   {
@@ -105,7 +105,7 @@
              :   [[nodiscard]] inline static clev::expected&lt;nng_msg*&gt;
              :   alloc(std::size_t sz) noexcept
              :   {
-          30</span> : <span class="lineCov">    return nngxx::make(nng_msg_alloc, sz);</span>
+          31</span> : <span class="lineCov">    return nngxx::make(nng_msg_alloc, sz);</span>
              :   }
              : 
              :   [[nodiscard]] inline const nngxx::pipe_view get_pipe() const noexcept

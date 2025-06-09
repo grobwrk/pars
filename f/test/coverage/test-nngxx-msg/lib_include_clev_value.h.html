@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">5</td>
+                     <td class="headerValue" width="10%">8</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
                    <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">5</td>
+                     <td class="headerValue" width="10%">8</td>
                    </tr>
                  </table>
                </td>
@@ -77,26 +77,26 @@
              :   using value_type = value_t;
              : 
              :   value(value_type v) noexcept
-          80</span> :     : <span class="lineCov">v{v}</span>
+          82</span> :     : <span class="lineCov">v{v}</span>
              :   {
              :   }
              : 
              :   value() noexcept
-          41</span> :     : <span class="lineCov">value{iface&lt;value_type&gt;::empty()}</span>
+          42</span> :     : <span class="lineCov">value{iface&lt;value_type&gt;::empty()}</span>
              :   {
              :   }
              : 
-          98</span> :   [[nodiscard]] operator value_type() noexcept <span class="lineCov">{ return v; }</span>
+         101</span> :   [[nodiscard]] operator value_type() noexcept <span class="lineCov">{ return v; }</span>
              : 
           13</span> :   [[nodiscard]] operator const value_type() const noexcept <span class="lineCov">{ return v; }</span>
              : 
              :   [[nodiscard]] value_type release() noexcept
              :   {
-             :     auto ret = v;
+           1</span> : <span class="lineCov">    auto ret = v;</span>
              : 
-             :     v = iface&lt;value_type&gt;::empty();
+           1</span> : <span class="lineCov">    v = iface&lt;value_type&gt;::empty();</span>
              : 
-             :     return ret;
+           1</span> : <span class="lineCov">    return ret;</span>
              :   }
              : 
              :   [[nodiscard]] explicit operator bool() const noexcept

@@ -7,3 +7,5 @@
 - [test-ev-event--network](test-ev-event--network/index.html)
 
 - [test-nngxx-msg](test-nngxx-msg/index.html)
+
+- [test-pars](test-pars/index.html)

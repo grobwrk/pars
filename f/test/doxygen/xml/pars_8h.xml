@@ -1225,6 +1225,22 @@
         </childnode>
       </node>
     </invincdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="pars_8h_1acf68aad6aad0bc195d48721a2d2be701" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool pars_included_v</definition>
+        <argsstring></argsstring>
+        <name>pars_included_v</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/pars.h" line="76" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/pars/pars.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -1304,6 +1320,8 @@
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pars_2net_2socket_8h" kindref="compound">pars/net/socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="socket__opt_8h" kindref="compound">pars/net/socket_opt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tool__view_8h" kindref="compound">pars/net/tool_view.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pars_included_v<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/pars.h"/>
   </compounddef>
