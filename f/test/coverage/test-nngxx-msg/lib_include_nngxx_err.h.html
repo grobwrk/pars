@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">17</td>
+                     <td class="headerValue" width="10%">27</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">52.9 %</td>
+                   <td class="headerValue" width="15%">55.5 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">9</td>
+                     <td class="headerValue" width="10%">15</td>
                    </tr>
                  </table>
                </td>
@@ -76,13 +76,54 @@
              : namespace nngxx
              : {
              : 
+             : namespace cpp
+             : {
+             : 
+             : enum class err : int;
+             : 
+             : enum class err
+             : {
+             :   invalid_memory = 1
+             : };
+             : 
+             : [[nodiscard]] inline static const std::error_category&amp; error_category() noexcept
+             : {
+           4</span> : <span class="lineCov">  static struct : std::error_category</span>
+             :   {
+<span class="lineNoCov">      1 / 2 </span> : <span class="linePartCov">    virtual const char* name() const noexcept override </span><span class="lineNoCov">{ return &quot;nngxx&quot;; }</span>
+             : 
+           4</span> : <span class="lineCov">    virtual std::string message(int e) const override</span>
+             :     {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      switch (static_cast&lt;err&gt;(e))</span>
+             :       {
+<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">case err::invalid_memory:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;invalid memory&quot;</span>;
+             : 
+<span class="lineNoCov">      0 / 1 </span> :         <span class="lineNoCov">break</span>;
+             :       }
+             :     }
+           4</span> : <span class="lineCov">  } error_category;</span>
+             : 
+           4</span> : <span class="lineCov">  return error_category;</span>
+             : }
+             : 
+             : [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
+             : {
+           4</span> : <span class="lineCov">  return std::error_code(static_cast&lt;int&gt;(e), error_category());</span>
+             : }
+             : 
+             : } // namespace cpp
+             : 
+             : namespace c
+             : {
+             : 
              : enum class err : int;
              : 
              : [[nodiscard]] inline static const std::error_category&amp; error_category() noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  static struct : std::error_category</span>
              :   {
-<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;nngxx&quot;; }</span>
+<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;nng&quot;; }</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    virtual std::string message(int e) const override</span>
              :     {
@@ -98,14 +139,24 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), error_category());</span>
              : }
              : 
+             : } // namespace c
+             : 
              : } // namespace nngxx
              : 
              : template&lt;&gt;
-             : struct std::is_error_code_enum&lt;nngxx::err&gt; : std::true_type
+             : struct std::is_error_code_enum&lt;nngxx::cpp::err&gt; : std::true_type
+             : {
+             : };
+             : 
+             : template&lt;&gt;
+             : struct std::is_error_code_enum&lt;nngxx::c::err&gt; : std::true_type
              : {
              : };
              : 
              : namespace nngxx
+             : {
+             : 
+             : namespace c
              : {
              : 
              : enum class err
@@ -147,20 +198,22 @@
              :   tranerr = NNG_ETRANERR
              : };
              : 
+             : }
+             : 
              : template&lt;typename ret_t, typename arg_t, typename... args_t&gt;
              : [[nodiscard]] inline clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;&gt;
              : make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
              : {
-           8</span> : <span class="lineCov">  using return_type = decltype(make(f, args...));</span>
+          30</span> : <span class="lineCov">  using return_type = decltype(make(f, args...));</span>
              : 
-           8</span> : <span class="lineCov">  using value_type = return_type::value_type;</span>
+          30</span> : <span class="lineCov">  using value_type = return_type::value_type;</span>
              : 
-           8</span> : <span class="lineCov">  return return_type{}.and_then([&amp;](value_type v) -&gt; return_type </span>{
-           8</span> : <span class="lineCov">    if (auto e = f(&amp;v, args...); e)</span>
-<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">return clev::make_unexpected&lt;err&gt;(e)</span>;
+          30</span> : <span class="lineCov">  return return_type{}.and_then([&amp;](value_type v) -&gt; return_type </span>{
+          30</span> : <span class="lineCov">    if (auto e = f(&amp;v, args...); e)</span>
+<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">return clev::make_unexpected&lt;c::err&gt;(e)</span>;
              : 
-           8</span> :     <span class="lineCov">return v</span>;
-           8</span> : <span class="lineCov">  });</span>
+          30</span> :     <span class="lineCov">return v</span>;
+          30</span> : <span class="lineCov">  });</span>
              : }
              : 
              : template&lt;typename return_t&gt;
@@ -172,7 +225,7 @@
              : 
              :   return return_type{}.and_then([=](value_type v) -&gt; return_type {
              :     if (auto e = f(&amp;v); e)
-             :       return clev::make_unexpected&lt;err&gt;(e);
+             :       return clev::make_unexpected&lt;c::err&gt;(e);
              : 
              :     return v;
              :   });
@@ -182,23 +235,23 @@
              : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
              :                                                  args_t... args) noexcept
              : {
-           2</span> : <span class="lineCov">  return clev::make_expected&lt;err&gt;(f(args...));</span>
+          20</span> : <span class="lineCov">  return clev::make_expected&lt;c::err&gt;(f(args...));</span>
              : }
              : 
              : template&lt;typename... args_t&gt;
              : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(void (*f)(args_t...),
              :                                                  args_t... args) noexcept
              : {
-          10</span> : <span class="lineCov">  f(args...);</span>
+          40</span> : <span class="lineCov">  f(args...);</span>
              : 
-          10</span> : <span class="lineCov">  return {};</span>
+          40</span> : <span class="lineCov">  return {};</span>
              : }
              : 
              : } // namespace nngxx
              : 
-             : static_assert(std::convertible_to&lt;nngxx::err, std::error_code&gt;);
+             : static_assert(std::convertible_to&lt;nngxx::c::err, std::error_code&gt;);
              : 
-             : static_assert(std::constructible_from&lt;std::error_code, nngxx::err&gt;);
+             : static_assert(std::constructible_from&lt;std::error_code, nngxx::c::err&gt;);
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

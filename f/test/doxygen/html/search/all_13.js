@@ -55,7 +55,7 @@ var searchData=
   ['start_5fthread_52',['start_thread',['../structpars_1_1ev_1_1runner.html#abcf0dc254df4dc39ccd71d1f995f5d27',1,'pars::ev::runner']]],
   ['started_53',['started',['../namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09aa3bebb2f89180b03fa5ae736665f648d9',1,'pars_example::resource']]],
   ['startup_54',['startup',['../classpars_1_1app_1_1single.html#a4726da2778bc7b1f9f4e5312d8b19fbb',1,'pars::app::single']]],
-  ['state_55',['state',['../structpars__example_1_1resource_1_1pipe__resource.html#a7b6c7b0c3fbe8e28855ba1af3679b217',1,'pars_example::resource::pipe_resource::state'],['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e',1,'nngxx::state']]],
+  ['state_55',['state',['../structpars__example_1_1resource_1_1pipe__resource.html#a7b6c7b0c3fbe8e28855ba1af3679b217',1,'pars_example::resource::pipe_resource::state'],['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a9ed39e2ea931586b6a985a6942ef573e',1,'nngxx::c::state']]],
   ['state_5fmachine_56',['state_machine',['../structpars_1_1app_1_1state__machine.html',1,'pars::app::state_machine&lt; state_t &gt;'],['../structpars_1_1app_1_1state__machine.html#aff763284da63f5b8dc792dacf8e3f7e1',1,'pars::app::state_machine::state_machine()']]],
   ['state_5fmachine_2eh_57',['state_machine.h',['../state__machine_8h.html',1,'']]],
   ['state_5fmachine_3c_20client_5fstate_20_3e_58',['state_machine&lt; client_state &gt;',['../structpars_1_1app_1_1state__machine.html',1,'pars::app']]],
@@ -76,11 +76,11 @@ var searchData=
   ['stop_5ftoken_73',['stop_token',['../structpars_1_1ev_1_1base__async__metadata.html#ac954ee8bc9c5f4ecd84c9ae297104651',1,'pars::ev::base_async_metadata']]],
   ['str_74',['str',['../structpars_1_1ev_1_1exception.html#a14e2a82e67e6896df0c50c2189b2651c',1,'pars::ev::exception']]],
   ['string_75',['string',['../namespacenngxx.html#a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21',1,'nngxx']]],
-  ['success_76',['success',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076',1,'nngxx::success'],['../namespacepars.html#afcdb266fe199935265e3d7a45b4edebfa260ca9dd8a4577fc00b7bd5810298076',1,'pars::success']]],
+  ['success_76',['success',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076',1,'nngxx::c::success'],['../namespacepars.html#afcdb266fe199935265e3d7a45b4edebfa260ca9dd8a4577fc00b7bd5810298076',1,'pars::success']]],
   ['sync_77',['sync',['../namespacepars_1_1ev.html#a5d83a3f8137beca4555739cbaae1d8a8a63ad9d34f3503826e5f649ae6b7ac92c',1,'pars::ev']]],
   ['sync_5fevent_5fc_78',['sync_event_c',['../conceptpars_1_1ev_1_1sync__event__c.html',1,'pars::ev']]],
   ['sync_5finternal_5fevent_5fc_79',['sync_internal_event_c',['../conceptpars_1_1ev_1_1sync__internal__event__c.html',1,'pars::ev']]],
   ['sync_5fkind_5fc_80',['sync_kind_c',['../conceptpars_1_1ev_1_1sync__kind__c.html',1,'pars::ev']]],
   ['sync_5fnetwork_5fevent_5fc_81',['sync_network_event_c',['../conceptpars_1_1ev_1_1sync__network__event__c.html',1,'pars::ev']]],
-  ['syserr_82',['syserr',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108abd5763c8ee2068e505915d3abf12c45c',1,'nngxx']]]
+  ['syserr_82',['syserr',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2abd5763c8ee2068e505915d3abf12c45c',1,'nngxx::c']]]
 ];

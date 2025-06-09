@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -90,7 +90,7 @@
              :   [[nodiscard]] inline static bool is_valid(nng_type v) noexcept
              :   {
              :     if constexpr (std::is_pointer_v&lt;nng_type&gt;)
-           4</span> :       <span class="lineCov">return v != nullptr</span>;
+          43</span> :       <span class="lineCov">return v != nullptr</span>;
              :     else
              :       return v.id != 0;
              :   }

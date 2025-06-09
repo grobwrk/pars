@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">9</td>
+                     <td class="headerValue" width="10%">13</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
                    <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">9</td>
+                     <td class="headerValue" width="10%">13</td>
                    </tr>
                  </table>
                </td>
@@ -75,35 +75,48 @@
              : class nngxx_msg : public ::testing::Test
              : {
              : protected:
-             :   nngxx::msg invalid_msg;
+           9</span> :   nngxx::msg make_invalid_msg() <span class="lineCov">{ return nngxx::msg{}; }</span>
              : 
-             :   nngxx::msg valid_empty_msg = nngxx::make_msg(0).value();
+             :   nngxx::msg make_valid_empty_msg(std::size_t sz = 0)
+             :   {
+          26</span> : <span class="lineCov">    return nngxx::make_msg(sz).value();</span>
+             :   }
              : 
-             :   uint64_t value = 42;
+           1</span> :   nngxx::msg make_valid_nonempty_msg() <span class="lineCov">{ return make_valid_empty_msg(1); }</span>
              : 
-             :   nngxx::msg valid_nonempty_msg =
-             :     nngxx::make_msg(sizeof(decltype(value)))
-             :       .and_then([&amp;](nngxx::msg m) {
-           4</span> : <span class="lineCov">        return m.body().write(value).transform([&amp;]() { return std::move(m); });</span>
-             :       })
-             :       .value();
-             : 
-           1</span> :   static void expect_invalid(const nngxx::msg&amp; m) { <span class="lineCov">EXPECT_FALSE(m); }</span>
+          13</span> :   static void expect_invalid(const nngxx::msg&amp; m) { <span class="lineCov">EXPECT_FALSE(m); }</span>
              : 
              :   static void expect_valid_empty(const nngxx::msg&amp; m)
              :   {
-           2</span> :     <span class="lineCov">EXPECT_TRUE(m);</span>
-           2</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 0);</span>
-           2</span> :     <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
+          16</span> :     <span class="lineCov">EXPECT_TRUE(m);</span>
+          16</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 0);</span>
+          16</span> :     <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
              :   }
              : 
-             :   void expect_valid_nonempty(const nngxx::msg&amp; m) const
+             :   void expect_valid_nonempty(const nngxx::msg&amp; m,
+             :                              std::optional&lt;uint64_t&gt; v = {}) const
              :   {
-           1</span> :     <span class="lineCov">EXPECT_TRUE(m);</span>
-           1</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 8);</span>
-           1</span> :     <span class="lineCov">EXPECT_EQ(m.body().read&lt;uint64_t&gt;().value(), value);</span>
-           1</span> :     <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
+           6</span> : <span class="lineCov">    using value_type = decltype(v)::value_type;</span>
+             : 
+           6</span> :     <span class="lineCov">EXPECT_TRUE(m);</span>
+           6</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 1);</span>
+           6</span> :     <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
              :   }
+             : 
+             :   void expect_resource_addr(const nngxx::msg&amp; m, const nng_msg* const expected)
+             :   {
+          13</span> : <span class="lineCov">    auto m_addr = static_cast&lt;const nng_msg* const&gt;(m);</span>
+             : 
+          13</span> :     <span class="lineCov">EXPECT_EQ(m_addr, expected);</span>
+             :   }
+             : };
+             : 
+             : using uints = ::testing::Types&lt;uint16_t, uint32_t, uint64_t&gt;;
+             : 
+             : template&lt;uint_c uint_t&gt;
+             : struct nngxx_msg_typed : public nngxx_msg
+             : {
+             :   using uint_type = uint_t;
              : };
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

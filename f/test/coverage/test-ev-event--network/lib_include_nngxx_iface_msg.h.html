@@ -17,14 +17,14 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">6</td>
+                     <td class="headerValue" width="10%">9</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">16.6 %</td>
+                   <td class="headerValue" width="15%">11.1 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -87,9 +87,13 @@
              : 
           18</span> :   [[nodiscard]] inline static nng_msg* empty() noexcept <span class="lineCov">{ return nullptr; }</span>
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_msg* v) noexcept
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_msg** v) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_free, v);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_free, *v).and_then([&amp;]() </span>{
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      *v = empty();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return clev::expected&lt;void&gt;{};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    });</span>
              :   }
              : 
              :   [[nodiscard]] inline static clev::expected&lt;void&gt;

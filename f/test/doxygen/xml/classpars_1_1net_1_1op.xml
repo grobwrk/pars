@@ -207,16 +207,16 @@ The nng_aio_result() returns the result of the operation associated with the han
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="187" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="187" bodyend="190"/>
-        <references refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="76">nngxx::success</references>
+        <references refid="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="127">nngxx::c::success</references>
       </memberdef>
-      <memberdef kind="function" id="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classpars_1_1net_1_1op_1aa166126574589e60fea989eb1053b177" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void pars::net::op::abort</definition>
-        <argsstring>(nngxx::err err)</argsstring>
+        <argsstring>(nngxx::c::err err)</argsstring>
         <name>abort</name>
         <qualifiedname>pars::net::op::abort</qualifiedname>
         <param>
-          <type><ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">nngxx::err</ref></type>
+          <type><ref refid="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2" kindref="member">nngxx::c::err</ref></type>
           <declname>err</declname>
         </param>
         <briefdescription>
@@ -231,7 +231,7 @@ The nng_aio_result() returns the result of the operation associated with the han
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindref="member">abort()</ref> function aborts an operation previously started with the handle aio.</para>
+The <ref refid="classpars_1_1net_1_1op_1aa166126574589e60fea989eb1053b177" kindref="member">abort()</ref> function aborts an operation previously started with the handle aio.</para>
 <para>If the operation is aborted, then the callback for the handle will be called, and the function <ref refid="classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29" kindref="member">result()</ref> will return the error err. </para>
         </detaileddescription>
         <inbodydescription>
@@ -252,7 +252,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
 <para>The nng_aio_cancel() function aborts an operation previously started with the handle aio. If the operation is aborted, then the callback for the handle will be called, and the function nng_aio_result() will return the error NNG_ECANCELED.</para>
 <para>This function does not wait for the operation to be fully aborted, but returns immediately.</para>
 <para>If no operation is currently in progress (either because it has already finished, or no operation has been started yet), then this function has no effect.</para>
-<para>Same as abort(nngxx::error::canceled) </para>
+<para>Same as abort(nngxx::c::err::canceled) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -355,7 +355,7 @@ The <ref refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" kindr
     </detaileddescription>
     <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="53" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="54" bodyend="295"/>
     <listofallmembers>
-      <member refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>abort</name></member>
+      <member refid="classpars_1_1net_1_1op_1aa166126574589e60fea989eb1053b177" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>abort</name></member>
       <member refid="classpars_1_1net_1_1op_1ae7904f45b5ddcafa399133c24d4e11fc" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>aio_m</name></member>
       <member refid="classpars_1_1net_1_1op_1ab8f9068c426947274537212d8716a828" prot="public" virt="non-virtual"><scope>pars::net::op</scope><name>cancel</name></member>
       <member refid="classpars_1_1net_1_1op_1a12311aad5a0859765e0205fcef31394f" prot="private" virt="non-virtual"><scope>pars::net::op</scope><name>cb_m</name></member>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['backend_0',['backend',['../classpars_1_1comp_1_1backend.html',1,'pars::comp::backend'],['../classpars_1_1comp_1_1backend.html#ab901b1c10e6add798b1163758751fa3c',1,'pars::comp::backend::backend()']]],
   ['backend_2eh_1',['backend.h',['../backend_8h.html',1,'']]],
-  ['badtype_2',['badtype',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a3caf72759b505eb34e97b1770a19c1d4',1,'nngxx']]],
+  ['badtype_2',['badtype',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a3caf72759b505eb34e97b1770a19c1d4',1,'nngxx::c']]],
   ['base_5fasync_5fmetadata_3',['base_async_metadata',['../structpars_1_1ev_1_1base__async__metadata.html',1,'pars::ev']]],
   ['base_5finternal_5fmetadata_4',['base_internal_metadata',['../structpars_1_1ev_1_1base__internal__metadata.html',1,'pars::ev::base_internal_metadata'],['../structpars_1_1ev_1_1base__internal__metadata.html#acf22900ab6acdaf6b81bdbf338b5f60a',1,'pars::ev::base_internal_metadata::base_internal_metadata()'],['../structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4.html#acf22900ab6acdaf6b81bdbf338b5f60a',1,'pars::ev::metadata&lt; kind_of, event_t &gt;::base_internal_metadata()']]],
   ['base_5fkind_5',['base_kind',['../structpars_1_1ev_1_1base__kind.html',1,'pars::ev']]],
@@ -26,5 +26,5 @@ var searchData=
   ['base_5fnetwork_5fmetadata_23',['base_network_metadata',['../structpars_1_1ev_1_1base__network__metadata.html',1,'pars::ev::base_network_metadata'],['../structpars_1_1ev_1_1base__network__metadata.html#af645a2d0b86932aed49dcdaf95d23ad7',1,'pars::ev::base_network_metadata::base_network_metadata()'],['../structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4.html#af645a2d0b86932aed49dcdaf95d23ad7',1,'pars::ev::metadata&lt; kind_of, event_t &gt;::base_network_metadata()']]],
   ['base_5fsync_5fmetadata_24',['base_sync_metadata',['../structpars_1_1ev_1_1base__sync__metadata.html',1,'pars::ev']]],
   ['boolean_25',['boolean',['../namespacenngxx.html#a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27',1,'nngxx']]],
-  ['busy_26',['busy',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a8bc1b2f84252c3df4edd53e4aad097a7',1,'nngxx']]]
+  ['busy_26',['busy',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a8bc1b2f84252c3df4edd53e4aad097a7',1,'nngxx::c']]]
 ];

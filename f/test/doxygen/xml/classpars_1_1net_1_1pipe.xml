@@ -183,7 +183,7 @@
     <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe.h" bodystart="43" bodyend="74"/>
     <listofallmembers>
       <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1af72420126c1ae6a24bcb1b18c54357ce" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>close</name></member>
-      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a043a39f8aacf53cd16ccc1c7a0228c7b" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>destroy</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a7de1cea6ebfffc2526040a109a1c3ae1" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>destroy</name></member>
       <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a565152864bfbbd8538648cd7ff6214d7" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>empty</name></member>
       <member refid="classpars_1_1net_1_1pipe_1a808dda688a244d875dfbbd19e05a74ba" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>format_to</name></member>
       <member refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>get_recv_timeout</name></member>

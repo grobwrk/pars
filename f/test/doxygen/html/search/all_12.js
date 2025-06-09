@@ -1,8 +1,8 @@
 var searchData=
 [
   ['raw_0',['raw',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518ebabdd166af3a63f7be696dd17a218a6ffb',1,'nngxx']]],
-  ['read_1',['read',['../structnngxx_1_1msg__body.html#a35de1deb5ddff2313c6086b8d146ca22',1,'nngxx::msg_body::read()'],['../namespacenngxx.html#a0416b7440ce59d889ef96e1106bbdb8d',1,'nngxx::read(auto f) noexcept -&gt; clev::expected&lt; return_t &gt;']]],
-  ['readonly_2',['readonly',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40',1,'nngxx']]],
+  ['read_1',['read',['../structnngxx_1_1msg__body.html#a92b14c7088d943083172b1c464b9fe88',1,'nngxx::msg_body::read()'],['../namespacenngxx.html#a0416b7440ce59d889ef96e1106bbdb8d',1,'nngxx::read()']]],
+  ['readonly_2',['readonly',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a336ebbb2179beaa7340a4f1620f3af40',1,'nngxx::c']]],
   ['received_3',['received',['../structpars_1_1ev_1_1received.html',1,'pars::ev::received&lt; typename &gt;'],['../namespacepars_1_1ev.html#a275a1098a112d8f424e90916e6653713',1,'pars::ev::received(event_t, metadata&lt; received, event_t &gt;) -&gt; received&lt; event_t &gt;']]],
   ['received_3c_20event_5ft_20_3e_4',['received&lt; event_t &gt;',['../structpars_1_1ev_1_1received_3_01event__t_01_4.html',1,'pars::ev']]],
   ['received_3c_20nngxx_3a_3amsg_20_3e_5',['received&lt; nngxx::msg &gt;',['../structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html',1,'pars::ev']]],

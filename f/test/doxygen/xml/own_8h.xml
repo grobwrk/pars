@@ -587,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="115" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="115" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/own.h" line="109" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/clev/own.h" bodystart="109" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -644,72 +644,66 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::copy(&amp;(own::v),<sp/>rhs.v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="structclev_1_1own_1a6b8f08bbf890ac79314e29c473cd2e9f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1a6b8f08bbf890ac79314e29c473cd2e9f" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>&amp;rhs)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>own::destroy(own::v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>own::copy(&amp;(own::v),<sp/>rhs.v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="structclev_1_1own_1a893e3e9dce06fd161c82849ab0b58f8e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1a893e3e9dce06fd161c82849ab0b58f8e" kindref="member">own</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/>rhs)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!</highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std<sp/>::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="structclev_1_1own_1a2a7eaa804d5490db9c8aada11d09f2bb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1a2a7eaa804d5490db9c8aada11d09f2bb" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!</highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std<sp/>::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" kindref="member">own</ref>(<ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::destroy(own::v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>own::v<sp/>=<sp/>rhs.v;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>rhs.v<sp/>=<sp/>own::empty();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" kindref="member">operator=</ref>(<ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rhs)</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::destroy(own::v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>own::v<sp/>=<sp/>rhs.v;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rhs)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::copy(&amp;(own::v),<sp/>rhs.v).or_else(clev::exit_now());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structclev_1_1own_1a6b8f08bbf890ac79314e29c473cd2e9f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1a6b8f08bbf890ac79314e29c473cd2e9f" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>own::destroy(&amp;(own::v)).or_else(clev::exit_now());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rhs)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>own::copy(&amp;(own::v),<sp/>rhs.v).or_else(clev::exit_now());</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structclev_1_1own_1a893e3e9dce06fd161c82849ab0b58f8e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1a893e3e9dce06fd161c82849ab0b58f8e" kindref="member">own</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/>rhs)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!</highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std<sp/>::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="structclev_1_1own_1a2a7eaa804d5490db9c8aada11d09f2bb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1a2a7eaa804d5490db9c8aada11d09f2bb" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!</highlight><highlight class="keyword">requires</highlight><highlight class="normal">(wrap_t*<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>wrap_t<sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>own::copy(d,<sp/>s)<sp/>}<sp/>-&gt;<sp/>std<sp/>::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1a7dbc844c1c55e277002e19babb2bb548" kindref="member">own</ref>(<ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>own::v<sp/>=<sp/>rhs.v;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>rhs.v<sp/>=<sp/>own::empty();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;<sp/><ref refid="structclev_1_1own_1aaccd0dc18ff1604bb70822ca4887604a" kindref="member">operator=</ref>(<ref refid="structclev_1_1own_1af79ced15a76218a9d9768248efe4ee06" kindref="member">own</ref>&amp;&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>&amp;rhs)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>std::swap(own::v,<sp/>rhs.v);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rhs.v<sp/>=<sp/>own::empty();</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100" refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" kindref="member">~own</ref>()</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::destroy(&amp;(own::v)).or_else(clev::exit_now());</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1own_1adc1f2cfae32066365a0f3095aa9d22ff" kindref="member">~own</ref>()</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ignore<sp/>=<sp/>own::destroy(own::v).or_else(clev::exit_now());</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clev_own_is_really_needed_v<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clev_own_is_really_needed_v<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/clev/own.h"/>
   </compounddef>

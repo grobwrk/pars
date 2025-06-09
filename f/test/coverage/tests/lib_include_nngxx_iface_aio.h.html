@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">12</td>
+                     <td class="headerValue" width="10%">15</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -79,9 +79,13 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   inline static nng_aio* empty() noexcept <span class="lineNoCov">{ return nullptr; }</span>
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_aio* v) noexcept
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_aio** v) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_aio_free, v);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_aio_free, *v).and_then([&amp;]() {</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      *v = empty();</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return clev::expected&lt;void&gt;{};</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    });</span>
              :   }
              : 
              :   [[nodiscard]] inline static clev::expected&lt;nng_aio*&gt; alloc(void (*cb)(void*),
@@ -92,7 +96,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   inline void wait() const noexcept <span class="lineNoCov">{ nng_aio_wait(v); }</span>
              : 
-             :   inline void abort(nngxx::err err) noexcept
+             :   inline void abort(nngxx::c::err err) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    nng_aio_abort(v, static_cast&lt;int&gt;(err));</span>
              :   }

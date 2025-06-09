@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a682fc3ba4a5d66e254de07722bbe29" id="r_a8a682fc3ba4a5d66e254de07722bbe29"><td class="memItemLeft" align="right" valign="top">std::error_code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a682fc3ba4a5d66e254de07722bbe29">result</a> () const</td></tr>
 <tr class="memdesc:a8a682fc3ba4a5d66e254de07722bbe29"><td class="mdescLeft">&#160;</td><td class="mdescRight">return result of asynchronous operation  <br /></td></tr>
 <tr class="separator:a8a682fc3ba4a5d66e254de07722bbe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05b5e3333dae1a6c9a0117c12bcad2b" id="r_ab05b5e3333dae1a6c9a0117c12bcad2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab05b5e3333dae1a6c9a0117c12bcad2b">abort</a> (<a class="el" href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108">nngxx::err</a> <a class="el" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">err</a>)</td></tr>
-<tr class="memdesc:ab05b5e3333dae1a6c9a0117c12bcad2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">abort asynchronous I/O operation  <br /></td></tr>
-<tr class="separator:ab05b5e3333dae1a6c9a0117c12bcad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa166126574589e60fea989eb1053b177" id="r_aa166126574589e60fea989eb1053b177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa166126574589e60fea989eb1053b177">abort</a> (<a class="el" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a> <a class="el" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">err</a>)</td></tr>
+<tr class="memdesc:aa166126574589e60fea989eb1053b177"><td class="mdescLeft">&#160;</td><td class="mdescRight">abort asynchronous I/O operation  <br /></td></tr>
+<tr class="separator:aa166126574589e60fea989eb1053b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8f9068c426947274537212d8716a828" id="r_ab8f9068c426947274537212d8716a828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8f9068c426947274537212d8716a828">cancel</a> ()</td></tr>
 <tr class="memdesc:ab8f9068c426947274537212d8716a828"><td class="mdescLeft">&#160;</td><td class="mdescRight">cancel asynchronous I/O operation  <br /></td></tr>
 <tr class="separator:ab8f9068c426947274537212d8716a828"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,8 +165,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab05b5e3333dae1a6c9a0117c12bcad2b" name="ab05b5e3333dae1a6c9a0117c12bcad2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab05b5e3333dae1a6c9a0117c12bcad2b">&#9670;&#160;</a></span>abort()</h2>
+<a id="aa166126574589e60fea989eb1053b177" name="aa166126574589e60fea989eb1053b177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa166126574589e60fea989eb1053b177">&#9670;&#160;</a></span>abort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +177,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void pars::net::op::abort </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108">nngxx::err</a></td>          <td class="paramname"><span class="paramname"><em>err</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a></td>          <td class="paramname"><span class="paramname"><em>err</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>The <a class="el" href="#ab05b5e3333dae1a6c9a0117c12bcad2b" title="abort asynchronous I/O operation">abort()</a> function aborts an operation previously started with the handle aio.</p>
+<p>The <a class="el" href="#aa166126574589e60fea989eb1053b177" title="abort asynchronous I/O operation">abort()</a> function aborts an operation previously started with the handle aio.</p>
 <p>If the operation is aborted, then the callback for the handle will be called, and the function <a class="el" href="#a8a682fc3ba4a5d66e254de07722bbe29" title="return result of asynchronous operation">result()</a> will return the error err. </p>
 
 <p class="definition">Definition at line <a class="el" href="op_8h_source.html#l00202">202</a> of file <a class="el" href="op_8h_source.html">op.h</a>.</p>
@@ -206,8 +206,8 @@ Public Member Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpars_1_1net_1_1op_ab05b5e3333dae1a6c9a0117c12bcad2b_cgraph.png" border="0" usemap="#aclasspars_1_1net_1_1op_ab05b5e3333dae1a6c9a0117c12bcad2b_cgraph" alt=""/></div>
-<map name="aclasspars_1_1net_1_1op_ab05b5e3333dae1a6c9a0117c12bcad2b_cgraph" id="aclasspars_1_1net_1_1op_ab05b5e3333dae1a6c9a0117c12bcad2b_cgraph">
+<div class="center"><img src="classpars_1_1net_1_1op_aa166126574589e60fea989eb1053b177_cgraph.png" border="0" usemap="#aclasspars_1_1net_1_1op_aa166126574589e60fea989eb1053b177_cgraph" alt=""/></div>
+<map name="aclasspars_1_1net_1_1op_aa166126574589e60fea989eb1053b177_cgraph" id="aclasspars_1_1net_1_1op_aa166126574589e60fea989eb1053b177_cgraph">
 <area shape="rect" title="abort asynchronous I/O operation" alt="" coords="5,5,150,33"/>
 <area shape="rect" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f" title=" " alt="" coords="198,5,273,33"/>
 <area shape="poly" title=" " alt="" coords="150,16,182,16,182,22,150,22"/>
@@ -245,7 +245,7 @@ Here is the call graph for this function:</div>
 <p>The nng_aio_cancel() function aborts an operation previously started with the handle aio. If the operation is aborted, then the callback for the handle will be called, and the function nng_aio_result() will return the error NNG_ECANCELED.</p>
 <p>This function does not wait for the operation to be fully aborted, but returns immediately.</p>
 <p>If no operation is currently in progress (either because it has already finished, or no operation has been started yet), then this function has no effect.</p>
-<p>Same as abort(nngxx::error::canceled) </p>
+<p>Same as abort(nngxx::c::err::canceled) </p>
 
 <p class="definition">Definition at line <a class="el" href="op_8h_source.html#l00221">221</a> of file <a class="el" href="op_8h_source.html">op.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  221</span>{ aio_m.cancel(); }</div>
@@ -458,11 +458,11 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="op_8h_source.html#l00187">187</a> of file <a class="el" href="op_8h_source.html">op.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  188</span>  {</div>
-<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">return</span> aio_m.result().error_or(<a class="code hl_enumvalue" href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076">nngxx::err::success</a>);</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">return</span> aio_m.result().error_or(<a class="code hl_enumvalue" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076">nngxx::c::err::success</a>);</div>
 <div class="line"><span class="lineno">  190</span>  }</div>
-<div class="ttc" id="anamespacenngxx_html_aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076"><div class="ttname"><a href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a260ca9dd8a4577fc00b7bd5810298076">nngxx::err::success</a></div><div class="ttdeci">@ success</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00076">err.h:76</a></div></div>
+<div class="ttc" id="anamespacenngxx_1_1c_html_a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076"><div class="ttname"><a href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076">nngxx::c::err::success</a></div><div class="ttdeci">@ success</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00127">err.h:127</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00076">nngxx::success</a>.</p>
+<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::c::success</a>.</p>
 
 </div>
 </div>

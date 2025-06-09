@@ -3,7 +3,8 @@
   <compounddef id="namespacestd" kind="namespace" language="C++">
     <compoundname>std</compoundname>
     <innerclass refid="structstd_1_1hash_3_01value__t_01_4" prot="public">std::hash&lt; value_t &gt;</innerclass>
-    <innerclass refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4" prot="public">std::is_error_code_enum&lt; nngxx::err &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1c_1_1err_01_4" prot="public">std::is_error_code_enum&lt; nngxx::c::err &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__error__code__enum_3_01nngxx_1_1cpp_1_1err_01_4" prot="public">std::is_error_code_enum&lt; nngxx::cpp::err &gt;</innerclass>
     <innerclass refid="structstd_1_1is__error__code__enum_3_01pars_1_1error_01_4" prot="public">std::is_error_code_enum&lt; pars::error &gt;</innerclass>
     <briefdescription>
     </briefdescription>

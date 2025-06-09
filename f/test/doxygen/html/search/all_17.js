@@ -8,6 +8,6 @@ var searchData=
   ['with_5fdefault_5fsetup_5',['with_default_setup',['../structpars_1_1app_1_1with__default__setup.html',1,'pars::app::with_default_setup'],['../structpars_1_1app_1_1with__default__setup.html#a8ed90269f5f66e4774fe1facdd9b8ae4',1,'pars::app::with_default_setup::with_default_setup()']]],
   ['work_5fid_6',['work_id',['../structpars__example_1_1event_1_1fib__requested.html#a81c89f1cce3f1fad3eac4db790e149c6',1,'pars_example::event::fib_requested::work_id'],['../structpars__example_1_1event_1_1fib__computed.html#a71cc7067474b9f96bc401f177b1db751',1,'pars_example::event::fib_computed::work_id']]],
   ['working_7',['working',['../namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931ac327b49efdca2668f28cd7b4beee54b3',1,'pars_example::resource']]],
-  ['write_8',['write',['../structnngxx_1_1msg__body.html#a053d5c82a5c4e50de3b327e9bd6b4fb3',1,'nngxx::msg_body']]],
-  ['writeonly_9',['writeonly',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108aef1d48fe20b591902a50fa3ba5f7e88f',1,'nngxx']]]
+  ['write_8',['write',['../structnngxx_1_1msg__body.html#a974c6d631c6e7d11fabf67d0a1bfc23a',1,'nngxx::msg_body']]],
+  ['writeonly_9',['writeonly',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2aef1d48fe20b591902a50fa3ba5f7e88f',1,'nngxx::c']]]
 ];

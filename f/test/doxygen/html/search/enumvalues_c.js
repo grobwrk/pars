@@ -1,7 +1,7 @@
 var searchData=
 [
   ['raw_0',['raw',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518ebabdd166af3a63f7be696dd17a218a6ffb',1,'nngxx']]],
-  ['readonly_1',['readonly',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a336ebbb2179beaa7340a4f1620f3af40',1,'nngxx']]],
+  ['readonly_1',['readonly',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a336ebbb2179beaa7340a4f1620f3af40',1,'nngxx::c']]],
   ['reconnmaxt_2',['reconnmaxt',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518ebace08d1a163044f25c42115dcb38f5632',1,'nngxx']]],
   ['reconnmint_3',['reconnmint',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518eba4f2f13a34fe86aa1017d0f85b2a99b8e',1,'nngxx']]],
   ['recvbuf_4',['recvbuf',['../namespacenngxx.html#a44167f96e21edbf03593ad2f27c518eba7fabc1404929c9e521e4906f5192c2f0',1,'nngxx']]],

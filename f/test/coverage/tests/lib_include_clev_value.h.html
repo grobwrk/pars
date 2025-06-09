@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">7</td>
+                     <td class="headerValue" width="10%">8</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">57.1 %</td>
+                   <td class="headerValue" width="15%">62.5 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">4</td>
+                     <td class="headerValue" width="10%">5</td>
                    </tr>
                  </table>
                </td>
@@ -77,18 +77,18 @@
              :   using value_type = value_t;
              : 
              :   value(value_type v) noexcept
-          60</span> :     : <span class="lineCov">v{v}</span>
+          92</span> :     : <span class="lineCov">v{v}</span>
              :   {
              :   }
              : 
              :   value() noexcept
-          95</span> :     : <span class="lineCov">value{iface&lt;value_type&gt;::empty()}</span>
+         113</span> :     : <span class="lineCov">value{iface&lt;value_type&gt;::empty()}</span>
              :   {
              :   }
              : 
-          66</span> :   [[nodiscard]] operator value_type() noexcept <span class="lineCov">{ return v; }</span>
+         110</span> :   [[nodiscard]] operator value_type() noexcept <span class="lineCov">{ return v; }</span>
              : 
-             :   [[nodiscard]] operator const value_type() const noexcept { return v; }
+          13</span> :   [[nodiscard]] operator const value_type() const noexcept <span class="lineCov">{ return v; }</span>
              : 
              :   [[nodiscard]] value_type release() noexcept
              :   {
@@ -101,7 +101,7 @@
              : 
              :   [[nodiscard]] explicit operator bool() const noexcept
              :   {
-           4</span> : <span class="lineCov">    return iface&lt;value_type&gt;::is_valid(v);</span>
+          43</span> : <span class="lineCov">    return iface&lt;value_type&gt;::is_valid(v);</span>
              :   }
              : 
              : protected:

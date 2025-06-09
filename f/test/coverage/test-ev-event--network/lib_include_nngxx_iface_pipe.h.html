@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -80,10 +80,10 @@
           30</span> : <span class="lineCov">    return NNG_PIPE_INITIALIZER;</span>
              :   };
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_type v) noexcept
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_pipe* v) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // TODO: because we can close(), we should check it's open before</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_pipe_close, v);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // TODO: because we can close(), should we check it's open before closing?</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_pipe_close, *v);</span>
              :   }
              : 
 <span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] inline int id() const noexcept <span class="lineNoCov">{ return nng_pipe_id(v); }</span>
@@ -92,7 +92,7 @@
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt; close() noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return destroy(v);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return destroy(&amp;v);</span>
              :   }
              : };
 </pre>

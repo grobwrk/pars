@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">13</td>
+                     <td class="headerValue" width="10%">42</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">84.6 %</td>
+                   <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">11</td>
+                     <td class="headerValue" width="10%">42</td>
                    </tr>
                  </table>
                </td>
@@ -76,141 +76,162 @@
              : struct msg_body
              : {
              :   msg_body(nng_msg* m) noexcept
-           8</span> :     : m<span class="lineCov">{m}</span>
+          53</span> :     : m<span class="lineCov">{m}</span>
              :   {
              :   }
              : 
              :   [[nodiscard]] inline std::size_t size() const noexcept
              :   {
-           3</span> : <span class="lineCov">    return nng_msg_len(m);</span>
+          37</span> : <span class="lineCov">    return nng_msg_len(m);</span>
              :   }
              : 
              :   template&lt;typename char_t&gt;
              :   [[nodiscard]] inline char_t* data() noexcept
              :   {
-           4</span> : <span class="lineCov">    return static_cast&lt;char_t*&gt;(nng_msg_body(m));</span>
+           2</span> : <span class="lineCov">    return static_cast&lt;char_t*&gt;(nng_msg_body(m));</span>
              :   }
              : 
              :   template&lt;typename char_t&gt;
              :   [[nodiscard]] inline const char_t* data() const noexcept
              :   {
-           1</span> : <span class="lineCov">    return static_cast&lt;const char_t*&gt;(nng_msg_body(m));</span>
+           4</span> : <span class="lineCov">    return static_cast&lt;const char_t*&gt;(nng_msg_body(m));</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;void&gt; append(uint_t x) noexcept
              :   {
-             :     int (*append)(nng_msg*, uint_t);
+           3</span> : <span class="lineCov">    int (*append)(nng_msg*, uint_t);</span>
              : 
              :     if constexpr (std::is_same_v&lt;uint_t, uint16_t&gt;)
              :     {
-             :       append = nng_msg_append_u16;
+           1</span> : <span class="lineCov">      append = nng_msg_append_u16;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint32_t&gt;)
              :     {
-             :       append = nng_msg_append_u32;
+           1</span> : <span class="lineCov">      append = nng_msg_append_u32;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint64_t&gt;)
              :     {
-             :       append = nng_msg_append_u64;
+           1</span> : <span class="lineCov">      append = nng_msg_append_u64;</span>
              :     }
              : 
-             :     return nngxx::invoke(append, m, x);
+           3</span> : <span class="lineCov">    return nngxx::invoke(append, m, x);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; append(const void* val,
+             :                                                    std::size_t sz) noexcept
+             :   {
+           1</span> : <span class="lineCov">    return nngxx::invoke(nng_msg_append, m, val, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(uint_t x) noexcept
              :   {
-             :     int (*insert)(nng_msg*, uint_t);
+           3</span> : <span class="lineCov">    int (*insert)(nng_msg*, uint_t);</span>
              : 
              :     if constexpr (std::is_same_v&lt;uint_t, uint16_t&gt;)
              :     {
-             :       insert = nng_msg_insert_u16;
+           1</span> : <span class="lineCov">      insert = nng_msg_insert_u16;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint32_t&gt;)
              :     {
-             :       insert = nng_msg_insert_u32;
+           1</span> : <span class="lineCov">      insert = nng_msg_insert_u32;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint64_t&gt;)
              :     {
-             :       insert = nng_msg_insert_u64;
+           1</span> : <span class="lineCov">      insert = nng_msg_insert_u64;</span>
              :     }
              : 
-             :     return nngxx::invoke(insert, m, x);
+           3</span> : <span class="lineCov">    return nngxx::invoke(insert, m, x);</span>
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(const void* val,
+             :                                                    std::size_t sz) noexcept
+             :   {
+           1</span> : <span class="lineCov">    return nngxx::invoke(nng_msg_insert, m, val, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; trim() noexcept
              :   {
-             :     uint_t x;
+           3</span> : <span class="lineCov">    uint_t x;</span>
              : 
-             :     int (*trim)(nng_msg*, uint_t*);
+           3</span> : <span class="lineCov">    int (*trim)(nng_msg*, uint_t*);</span>
              : 
              :     if constexpr (std::is_same_v&lt;uint_t, uint16_t&gt;)
              :     {
-             :       trim = nng_msg_trim_u16;
+           1</span> : <span class="lineCov">      trim = nng_msg_trim_u16;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint32_t&gt;)
              :     {
-             :       trim = nng_msg_trim_u32;
+           1</span> : <span class="lineCov">      trim = nng_msg_trim_u32;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint64_t&gt;)
              :     {
-             :       trim = nng_msg_trim_u64;
+           1</span> : <span class="lineCov">      trim = nng_msg_trim_u64;</span>
              :     }
              : 
-             :     return nngxx::invoke(trim, m, &amp;x).transform([&amp;]() { return x; });
+           3</span> : <span class="lineCov">    return nngxx::invoke(trim, m, &amp;x).transform([&amp;]() { return x; });</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt; trim(std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_trim, m, sz);</span>
+           1</span> : <span class="lineCov">    return nngxx::invoke(nng_msg_trim, m, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; chop() noexcept
              :   {
-             :     uint_t x;
+           3</span> : <span class="lineCov">    uint_t x;</span>
              : 
-             :     int (*chop)(nng_msg*, uint_t*);
+           3</span> : <span class="lineCov">    int (*chop)(nng_msg*, uint_t*);</span>
              : 
              :     if constexpr (std::is_same_v&lt;uint_t, uint16_t&gt;)
              :     {
-             :       chop = nng_msg_chop;
+           1</span> : <span class="lineCov">      chop = nng_msg_chop_u16;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint32_t&gt;)
              :     {
-             :       chop = nng_msg_chop_u32;
+           1</span> : <span class="lineCov">      chop = nng_msg_chop_u32;</span>
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint64_t&gt;)
              :     {
-             :       chop = nng_msg_chop_u64;
+           1</span> : <span class="lineCov">      chop = nng_msg_chop_u64;</span>
              :     }
              : 
-             :     return nngxx::invoke(chop, m, &amp;x).transform([&amp;]() { return x; });
+           3</span> : <span class="lineCov">    return nngxx::invoke(chop, m, &amp;x).transform([&amp;]() { return x; });</span>
              :   }
              : 
              :   [[nodiscard]] inline clev::expected&lt;void&gt; chop(std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_chop, m, sz);</span>
+           1</span> : <span class="lineCov">    return nngxx::invoke(nng_msg_chop, m, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; read() const noexcept
+             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt;
+             :   read(const std::size_t offset = 0) const noexcept
              :   {
-           1</span> : <span class="lineCov">    uint_t v;</span>
+           5</span> : <span class="lineCov">    uint_t v;</span>
              : 
-           1</span> : <span class="lineCov">    std::memcpy(static_cast&lt;void*&gt;(&amp;v), data&lt;void&gt;(), sizeof(decltype(v)));</span>
+           5</span> : <span class="lineCov">    if (offset + sizeof(decltype(v)) &gt; size())</span>
+           5</span> :       <span class="lineCov">return clev::unexpected{nngxx::cpp::err::invalid_memory}</span>;
              : 
-           1</span> : <span class="lineCov">    return v;</span>
+           4</span> :     <span class="lineCov">std::memcpy(&amp;v, data&lt;char&gt;() + offset, sizeof(decltype(v)));</span>
+             : 
+           5</span> : <span class="lineCov">    return v</span>;
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; write(uint_t v) noexcept
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   write(uint_t v, const std::size_t offset = 0) noexcept
              :   {
-           4</span> : <span class="lineCov">    std::memcpy(data&lt;void&gt;(), static_cast&lt;void*&gt;(&amp;v), sizeof(decltype(v)));</span>
+           3</span> : <span class="lineCov">    if (offset + sizeof(decltype(v)) &gt; size())</span>
+           3</span> :       <span class="lineCov">return clev::unexpected{nngxx::cpp::err::invalid_memory}</span>;
              : 
-           4</span> : <span class="lineCov">    return {};</span>
+           2</span> :     <span class="lineCov">std::memcpy(data&lt;char&gt;() + offset, static_cast&lt;void*&gt;(&amp;v),</span>
+           2</span> : <span class="lineCov">                sizeof(decltype(v)));</span>
+             : 
+           3</span> : <span class="lineCov">    return {}</span>;
              :   }
              : 
              : private:
@@ -221,12 +242,12 @@
              : 
              : nngxx::msg_body nngxx::msg_view::body() noexcept
              : {
-           4</span> : <span class="lineCov">  return nngxx::msg_body{v};</span>
+          30</span> : <span class="lineCov">  return nngxx::msg_body{v};</span>
              : }
              : 
              : const nngxx::msg_body nngxx::msg_view::body() const noexcept
              : {
-           4</span> : <span class="lineCov">  return nngxx::msg_body{v};</span>
+          23</span> : <span class="lineCov">  return nngxx::msg_body{v};</span>
              : }
              : 
              : static_assert(std::copyable&lt;nngxx::msg_body&gt;);

@@ -142,93 +142,87 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      { own::copy(d, s) } -&gt; std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::ignore = own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (rhs)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      std::ignore = own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">   53</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; rhs) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">requires</span> <span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      { own::copy(d, s) } -&gt; std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;rhs)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      own::destroy(own::v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">   54</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">requires</span> <span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      { own::copy(d, s) } -&gt; std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;rhs)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      own::destroy(&amp;(own::v)).or_else(clev::exit_now());</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (rhs)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
 </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a893e3e9dce06fd161c82849ab0b58f8e">   69</a></span>  <a class="code hl_function" href="structclev_1_1own.html#a893e3e9dce06fd161c82849ab0b58f8e">own</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; rhs)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">requires</span>(!<span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>              { own::copy(d, s) } -&gt; std ::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            })</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a2a7eaa804d5490db9c8aada11d09f2bb">   75</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#a2a7eaa804d5490db9c8aada11d09f2bb">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">requires</span>(!<span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>              { own::copy(d, s) } -&gt; std ::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            })</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">   81</a></span>  <a class="code hl_function" href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">own</a>(<a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      std::ignore = own::destroy(own::v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    own::v = rhs.v;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    rhs.v = own::empty();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a893e3e9dce06fd161c82849ab0b58f8e">   71</a></span>  <a class="code hl_function" href="structclev_1_1own.html#a893e3e9dce06fd161c82849ab0b58f8e">own</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; rhs)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">requires</span>(!<span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>              { own::copy(d, s) } -&gt; std ::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            })</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a2a7eaa804d5490db9c8aada11d09f2bb">   77</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#a2a7eaa804d5490db9c8aada11d09f2bb">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">requires</span>(!<span class="keyword">requires</span>(wrap_t* d, <span class="keyword">const</span> wrap_t s) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>              { own::copy(d, s) } -&gt; std ::convertible_to&lt;clev::expected&lt;void&gt;&gt;;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            })</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">   83</a></span>  <a class="code hl_function" href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">own</a>(<a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    own::v = rhs.v;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    rhs.v = own::empty();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">   91</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">operator=</a>(<a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;rhs)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::ignore = own::destroy(own::v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      own::v = rhs.v;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">   90</a></span>  <a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp; <a class="code hl_function" href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">operator=</a>(<a class="code hl_function" href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">own</a>&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;rhs)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::swap(own::v, rhs.v);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  }</div>
+</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      rhs.v = own::empty();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    };</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">  100</a></span>  <a class="code hl_function" href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">~own</a>()</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      std::ignore = own::destroy(&amp;(own::v)).or_else(clev::exit_now());</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
 </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">  106</a></span>  <a class="code hl_function" href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">~own</a>()</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      std::ignore = own::destroy(own::v).or_else(clev::exit_now());</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
 </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
-</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>} <span class="comment">// namespace clev</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> clev_own_is_really_needed_v = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace clev</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> clev_own_is_really_needed_v = <span class="keyword">true</span>;</div>
 <div class="ttc" id="aclev_2err_8h_html"><div class="ttname"><a href="clev_2err_8h.html">err.h</a></div></div>
 <div class="ttc" id="aiface_8h_html"><div class="ttname"><a href="iface_8h.html">iface.h</a></div></div>
 <div class="ttc" id="anamespaceclev_html"><div class="ttname"><a href="namespaceclev.html">clev</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00038">err.h:39</a></div></div>
 <div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00036">iface.h:36</a></div></div>
 <div class="ttc" id="astructclev_1_1own_html_a2a7eaa804d5490db9c8aada11d09f2bb"><div class="ttname"><a href="structclev_1_1own.html#a2a7eaa804d5490db9c8aada11d09f2bb">clev::own::operator=</a></div><div class="ttdeci">own &amp; operator=(const own &amp;)=delete</div></div>
-<div class="ttc" id="astructclev_1_1own_html_a6b8f08bbf890ac79314e29c473cd2e9f"><div class="ttname"><a href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">clev::own::operator=</a></div><div class="ttdeci">own &amp; operator=(const own &amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00053">own.h:53</a></div></div>
-<div class="ttc" id="astructclev_1_1own_html_a7dbc844c1c55e277002e19babb2bb548"><div class="ttname"><a href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">clev::own::own</a></div><div class="ttdeci">own(own &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00081">own.h:81</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html_a6b8f08bbf890ac79314e29c473cd2e9f"><div class="ttname"><a href="structclev_1_1own.html#a6b8f08bbf890ac79314e29c473cd2e9f">clev::own::operator=</a></div><div class="ttdeci">own &amp; operator=(const own &amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00054">own.h:54</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html_a7dbc844c1c55e277002e19babb2bb548"><div class="ttname"><a href="structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548">clev::own::own</a></div><div class="ttdeci">own(own &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00083">own.h:83</a></div></div>
 <div class="ttc" id="astructclev_1_1own_html_a87d7f4e72bb9dfbfe1385783c7d3de0a"><div class="ttname"><a href="structclev_1_1own.html#a87d7f4e72bb9dfbfe1385783c7d3de0a">clev::own::parent</a></div><div class="ttdeci">iface&lt; wrap_t &gt; parent</div><div class="ttdef"><b>Definition</b> <a href="#l00041">own.h:41</a></div></div>
 <div class="ttc" id="astructclev_1_1own_html_a893e3e9dce06fd161c82849ab0b58f8e"><div class="ttname"><a href="structclev_1_1own.html#a893e3e9dce06fd161c82849ab0b58f8e">clev::own::own</a></div><div class="ttdeci">own(const own &amp;rhs)=delete</div></div>
-<div class="ttc" id="astructclev_1_1own_html_aaccd0dc18ff1604bb70822ca4887604a"><div class="ttname"><a href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">clev::own::operator=</a></div><div class="ttdeci">own &amp; operator=(own &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00091">own.h:91</a></div></div>
-<div class="ttc" id="astructclev_1_1own_html_adc1f2cfae32066365a0f3095aa9d22ff"><div class="ttname"><a href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">clev::own::~own</a></div><div class="ttdeci">~own()</div><div class="ttdef"><b>Definition</b> <a href="#l00106">own.h:106</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html_aaccd0dc18ff1604bb70822ca4887604a"><div class="ttname"><a href="structclev_1_1own.html#aaccd0dc18ff1604bb70822ca4887604a">clev::own::operator=</a></div><div class="ttdeci">own &amp; operator=(own &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00090">own.h:90</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html_adc1f2cfae32066365a0f3095aa9d22ff"><div class="ttname"><a href="structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff">clev::own::~own</a></div><div class="ttdeci">~own()</div><div class="ttdef"><b>Definition</b> <a href="#l00100">own.h:100</a></div></div>
 <div class="ttc" id="astructclev_1_1own_html_af79ced15a76218a9d9768248efe4ee06"><div class="ttname"><a href="structclev_1_1own.html#af79ced15a76218a9d9768248efe4ee06">clev::own::own</a></div><div class="ttdeci">own(const own &amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00045">own.h:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

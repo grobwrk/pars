@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">7</td>
+                     <td class="headerValue" width="10%">188</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
                    <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">7</td>
+                     <td class="headerValue" width="10%">188</td>
                    </tr>
                  </table>
                </td>
@@ -67,29 +67,467 @@
              : 
              : #include &quot;nngxx-msg.h&quot;
              : 
+             : /// CTOR: msg()
+             : 
              : TEST_F(nngxx_msg, main_ctor)
              : {
-           1</span> : <span class="lineCov">  expect_invalid(invalid_msg);</span>
+           1</span> : <span class="lineCov">  nngxx::msg m{};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m);</span>
              : }
              : 
-             : TEST_F(nngxx_msg, make_msg)
+             : /// CTOR: msg(nng_msg*)
+             : 
+             : TEST_F(nngxx_msg, value_ctor_invalid)
              : {
-           1</span> : <span class="lineCov">  expect_valid_empty(valid_empty_msg);</span>
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+             : 
+           1</span> : <span class="lineCov">  nngxx::msg m{m_ptr};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m);</span>
              : }
              : 
-             : TEST_F(nngxx_msg, copy_ctor)
+             : TEST_F(nngxx_msg, value_ctor_valid_empty)
              : {
-           1</span> : <span class="lineCov">  auto m{valid_empty_msg};</span>
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 0);</span>
+             : 
+           1</span> : <span class="lineCov">  nngxx::msg m{m_ptr};</span>
              : 
            1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
              : }
              : 
-             : TEST_F(nngxx_msg, move_ctor)
+             : TEST_F(nngxx_msg, value_ctor_valid_nonempty)
              : {
-           1</span> : <span class="lineCov">  auto m_rhs{valid_nonempty_msg};</span>
-           1</span> : <span class="lineCov">  auto m{std::move(m_rhs)};</span>
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 1);</span>
+             : 
+           1</span> : <span class="lineCov">  nngxx::msg m{m_ptr};</span>
              : 
            1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// CTOR: msg(const msg&amp;)
+             : 
+             : TEST_F(nngxx_msg, copy_ctor_invalid)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nngxx::msg m_from{m_ptr};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m{m_from};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_ctor_valid_empty)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 0);</span>
+           1</span> : <span class="lineCov">  nngxx::msg m_from{m_ptr};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m{m_from};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_ctor_valid_nonempty)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 1);</span>
+           1</span> : <span class="lineCov">  nngxx::msg m_from{m_ptr};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m{m_from};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// CTOR: msg(msg&amp;&amp;)
+             : 
+             : TEST_F(nngxx_msg, move_ctor_invalid)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nngxx::msg m{nngxx::msg{m_ptr}};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_ctor_valid_empty)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 0);</span>
+           1</span> : <span class="lineCov">  nngxx::msg m{nngxx::msg{m_ptr}};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_ctor_valid_nonempty)
+             : {
+           1</span> : <span class="lineCov">  nng_msg* m_ptr = nullptr;</span>
+           1</span> : <span class="lineCov">  nng_msg_alloc(&amp;m_ptr, 1);</span>
+           1</span> : <span class="lineCov">  nngxx::msg m{nngxx::msg{m_ptr}};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// FUNC: alloc()
+             : 
+             : TEST_F(nngxx_msg, alloc_valid_empty)
+             : {
+           1</span> : <span class="lineCov">  auto m = nngxx::msg::alloc(0).value();</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, alloc_valid_nonempty)
+             : {
+           1</span> : <span class="lineCov">  auto m = nngxx::msg::alloc(1).value();</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// FUNC: make_msg()
+             : 
+             : TEST_F(nngxx_msg, make_msg_empty)
+             : {
+           1</span> : <span class="lineCov">  auto m = nngxx::make_msg(0).value();</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, make_msg_nonempty)
+             : {
+           1</span> : <span class="lineCov">  auto m = nngxx::make_msg(1).value();</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// ***** NOW WE CAN START USING make_msg IN TEST ***** ///
+             : 
+             : TEST_F(nngxx_msg, make_invalid_msg)
+             : {
+           1</span> : <span class="lineCov">  auto m{make_invalid_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, make_valid_empty_msg)
+             : {
+           1</span> : <span class="lineCov">  auto m{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, make_valid_nonempty_msg)
+             : {
+           1</span> : <span class="lineCov">  auto m{make_valid_nonempty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_nonempty(m);</span>
+             : }
+             : 
+             : /// FUNC: operator=(const msg&amp;)
+             : 
+             : TEST_F(nngxx_msg, copy_assign_self)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;const nng_msg* const&gt;(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  m1 = m1;</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_assign_invalid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_invalid_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_invalid_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = m1;</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m1);</span>
+           1</span> : <span class="lineCov">  expect_invalid(m2);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_assign_valid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;const nng_msg* const&gt;(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = m1;</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_valid_empty(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_assign_valid_invalid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_invalid_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;const nng_msg* const&gt;(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = m1;</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_valid_empty(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, copy_assign_invalid_valid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_invalid_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;const nng_msg* const&gt;(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = m1;</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m1);</span>
+           1</span> : <span class="lineCov">  expect_invalid(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m1_addr);</span>
+             : }
+             : 
+             : /// FUNC: operator=(msg&amp;&amp;)
+             : 
+             : TEST_F(nngxx_msg, move_assign_self)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;const nng_msg* const&gt;(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  m1 = std::move(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_assign_invalid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_invalid_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_invalid_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;nng_msg*&gt;(m1);</span>
+           1</span> : <span class="lineCov">  auto m2_addr = static_cast&lt;nng_msg*&gt;(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = std::move(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m1);</span>
+           1</span> : <span class="lineCov">  expect_invalid(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m2_addr);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m2, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_assign_valid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;nng_msg*&gt;(m1);</span>
+           1</span> : <span class="lineCov">  auto m2_addr = static_cast&lt;nng_msg*&gt;(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = std::move(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_valid_empty(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m2_addr);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m2, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_assign_valid_invalid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_valid_empty_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_invalid_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;nng_msg*&gt;(m1);</span>
+           1</span> : <span class="lineCov">  auto m2_addr = static_cast&lt;nng_msg*&gt;(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = std::move(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_invalid(m1);</span>
+           1</span> : <span class="lineCov">  expect_valid_empty(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m2_addr);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m2, m1_addr);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, move_assign_invalid_valid)
+             : {
+           1</span> : <span class="lineCov">  auto m1{make_invalid_msg()};</span>
+           1</span> : <span class="lineCov">  auto m2{make_valid_empty_msg()};</span>
+             : 
+           1</span> : <span class="lineCov">  auto m1_addr = static_cast&lt;nng_msg*&gt;(m1);</span>
+           1</span> : <span class="lineCov">  auto m2_addr = static_cast&lt;nng_msg*&gt;(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  m2 = std::move(m1);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_valid_empty(m1);</span>
+           1</span> : <span class="lineCov">  expect_invalid(m2);</span>
+             : 
+           1</span> : <span class="lineCov">  expect_resource_addr(m1, m2_addr);</span>
+           1</span> : <span class="lineCov">  expect_resource_addr(m2, m1_addr);</span>
+             : }
+             : 
+             : /// FUNC: set_pipe(), get_pipe()
+             : 
+             : TEST_F(nngxx_msg, pipe)
+             : {
+           1</span> : <span class="lineCov">  auto pv = nngxx::pipe_view{nng_pipe{255}};</span>
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.get_pipe().id(), -1);</span>
+             : 
+           1</span> :   <span class="lineCov">m.set_pipe(pv);</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.get_pipe().id(), 255);</span>
+             : }
+             : 
+             : /// FUNC: header()
+             : 
+             : TEST_F(nngxx_msg, header_empty)
+             : {
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(static_cast&lt;const msg*&gt;(&amp;m)-&gt;header().size(), 0);</span>
+             : }
+             : 
+             : /// FUNC: body()
+             : 
+             : TEST_F(nngxx_msg, body_empty)
+             : {
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().size(), 0);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(static_cast&lt;const msg*&gt;(&amp;m)-&gt;body().size(), 0);</span>
+             : }
+             : 
+             : /// FUNC: body().write(), body().read()
+             : 
+             : TEST_F(nngxx_msg, write_read)
+             : {
+           1</span> : <span class="lineCov">  auto c = uint64_t{42};</span>
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg(sizeof(c) * 2);</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m.body().write(c));</span>
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m.body().write(c + 1, sizeof(c)));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().size(), 2 * sizeof(c));</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.header().size(), 0);</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().read&lt;decltype(c)&gt;().value(), c);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().read&lt;decltype(c)&gt;(sizeof(c)).value(), c + 1);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, write_error)
+             : {
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> : <span class="lineCov">  auto ret = m.body().write(uint64_t{42});</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(ret);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(ret.error(), nngxx::cpp::err::invalid_memory);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, read_error)
+             : {
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> : <span class="lineCov">  auto ret = m.body().read&lt;uint64_t&gt;();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(ret);</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(ret.error(), nngxx::cpp::err::invalid_memory);</span>
+             : }
+             : 
+             : /// FUNC: body().insert(), body().trim()
+             : 
+             : TYPED_TEST_SUITE(nngxx_msg_typed, uints);
+             : 
+             : TYPED_TEST(nngxx_msg_typed, insert_trim)
+             : {
+           3</span> : <span class="lineCov">  using class_type = nngxx_msg_typed&lt;TypeParam&gt;;</span>
+           3</span> : <span class="lineCov">  using uint_type = class_type::uint_type;</span>
+             : 
+           3</span> : <span class="lineCov">  auto v = uint_type{std::numeric_limits&lt;uint_type&gt;::max()};</span>
+           3</span> : <span class="lineCov">  auto m = class_type::make_valid_empty_msg();</span>
+             : 
+           3</span> :   <span class="lineCov">EXPECT_TRUE(m.body().insert(v));</span>
+           3</span> :   <span class="lineCov">auto ret = m.body().template trim&lt;decltype(v)&gt;();</span>
+             : 
+           3</span> :   <span class="lineCov">EXPECT_TRUE(ret);</span>
+           3</span> :   <span class="lineCov">EXPECT_EQ(ret.value(), v);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, insert_trim_sz)
+             : {
+           1</span> : <span class="lineCov">  const uint8_t vs[2] = {10, 11};</span>
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m.body().insert(static_cast&lt;const void*&gt;(vs), 2));</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().size(), 2);</span>
+             : 
+             :   {
+           1</span> : <span class="lineCov">    auto ret = m.body().read&lt;uint16_t&gt;();</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(ret);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(ret.value(), vs[1] * 256 + vs[0]);</span>
+             :   }
+             : 
+             :   {
+           1</span> : <span class="lineCov">    auto ret = m.body().trim(2);</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(ret);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 0);</span>
+             :   }
+             : }
+             : 
+             : /// FUNC: body().append(), body().chop()
+             : 
+             : TYPED_TEST(nngxx_msg_typed, append_chop)
+             : {
+           3</span> : <span class="lineCov">  using class_type = nngxx_msg_typed&lt;TypeParam&gt;;</span>
+           3</span> : <span class="lineCov">  using uint_type = class_type::uint_type;</span>
+             : 
+           3</span> : <span class="lineCov">  auto v = uint_type{std::numeric_limits&lt;uint_type&gt;::max()};</span>
+           3</span> : <span class="lineCov">  auto m = class_type::make_valid_empty_msg();</span>
+             : 
+           3</span> :   <span class="lineCov">EXPECT_TRUE(m.body().append(v));</span>
+           3</span> :   <span class="lineCov">auto ret = m.body().template chop&lt;decltype(v)&gt;();</span>
+             : 
+           3</span> :   <span class="lineCov">EXPECT_TRUE(ret);</span>
+           3</span> :   <span class="lineCov">EXPECT_EQ(ret.value(), v);</span>
+             : }
+             : 
+             : TEST_F(nngxx_msg, append_chop_sz)
+             : {
+           1</span> : <span class="lineCov">  const uint8_t vs[2] = {10, 11};</span>
+           1</span> : <span class="lineCov">  auto m = make_valid_empty_msg();</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(m.body().append(static_cast&lt;const void*&gt;(vs), 2));</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(m.body().size(), 2);</span>
+             : 
+             :   {
+           1</span> : <span class="lineCov">    auto ret = m.body().read&lt;uint16_t&gt;();</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(ret);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(ret.value(), vs[1] * 256 + vs[0]);</span>
+             :   }
+             : 
+             :   {
+           1</span> : <span class="lineCov">    auto ret = m.body().chop(2);</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(ret);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(m.body().size(), 0);</span>
+             :   }
              : }
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

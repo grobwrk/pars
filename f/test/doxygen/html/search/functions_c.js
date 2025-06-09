@@ -3,7 +3,7 @@ var searchData=
   ['main_0',['main',['../client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;client.cpp'],['../server__backend_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;server_backend.cpp']]],
   ['make_1',['make',['../namespacenngxx.html#a6dcda4e7167a6344f7a17aff3428a0f7',1,'nngxx']]],
   ['make_5fctx_2',['make_ctx',['../classpars_1_1net_1_1socket.html#afbb51e4e4c45a6b0845e6d166c289c34',1,'pars::net::socket']]],
-  ['make_5ferror_5fcode_3',['make_error_code',['../namespacenngxx.html#a45d6dbea9ed7507e7aef5ac8f827f2c3',1,'nngxx::make_error_code()'],['../namespacepars.html#a9890a23006e95b65b26c3eea237461b8',1,'pars::make_error_code()']]],
+  ['make_5ferror_5fcode_3',['make_error_code',['../namespacenngxx_1_1cpp.html#afb1055c34770912880b69fd01eb28967',1,'nngxx::cpp::make_error_code()'],['../namespacenngxx_1_1c.html#ab5efdf930e7f62bb30e557a40afc40e1',1,'nngxx::c::make_error_code()'],['../namespacepars.html#a9890a23006e95b65b26c3eea237461b8',1,'pars::make_error_code()']]],
   ['make_5fexpected_4',['make_expected',['../namespaceclev.html#a15c55fa3a6d6170235687de697524350',1,'clev']]],
   ['make_5fhf_5',['make_hf',['../namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a',1,'pars::ev']]],
   ['make_5funexpected_6',['make_unexpected',['../namespaceclev.html#a803de362491e89460bcb066fdd2eebd9',1,'clev']]],

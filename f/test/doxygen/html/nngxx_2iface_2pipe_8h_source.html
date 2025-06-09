@@ -136,10 +136,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> NNG_PIPE_INITIALIZER;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  };</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a> destroy(nng_type v) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a> destroy(nng_pipe* v) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// TODO: because we can close(), we should check it&#39;s open before</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_pipe_close, v);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// TODO: because we can close(), should we check it&#39;s open before closing?</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_pipe_close, *v);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">int</span> id() const noexcept { <span class="keywordflow">return</span> nng_pipe_id(v); }</div>
@@ -148,11 +148,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  [[nodiscard]] inline clev::<a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected</a>&lt;<span class="keywordtype">void</span>&gt; close() noexcept</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> destroy(v);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> destroy(&amp;v);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
 <div class="ttc" id="anamespaceclev_html_a1b8e73a508830ad95f581539abd9f8fa"><div class="ttname"><a href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected</a></div><div class="ttdeci">std::expected&lt; value_t, std::error_code &gt; expected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00075">err.h:75</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a8a6b6659b84f0d49b6edf6571a929204"><div class="ttname"><a href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00145">err.h:145</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a8a6b6659b84f0d49b6edf6571a929204"><div class="ttname"><a href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00198">err.h:198</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="socket__decl_8h_source.html#l00043">socket_decl.h:43</a></div></div>
 <div class="ttc" id="anngxx_2err_8h_html"><div class="ttname"><a href="nngxx_2err_8h.html">err.h</a></div></div>
 <div class="ttc" id="anngxx_2iface_2value_8h_html"><div class="ttname"><a href="nngxx_2iface_2value_8h.html">value.h</a></div></div>

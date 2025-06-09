@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">12</td>
@@ -125,7 +125,7 @@
              : template&lt;typename value_t = void&gt;
              : inline static auto exit_now() noexcept(clev_exception_disabled_v)
              : {
-          12</span> : <span class="lineCov">  return [](const std::error_code err) -&gt; expected&lt;value_t&gt; </span>{
+          44</span> : <span class="lineCov">  return [](const std::error_code err) -&gt; expected&lt;value_t&gt; </span>{
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    exit_now(err);</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return unexpected{err};</span>
@@ -141,10 +141,10 @@
              : template&lt;typename enum_t&gt;
              : inline clev::expected&lt;void&gt; make_expected(const int err) noexcept
              : {
-           2</span> : <span class="lineCov">  if (err != 0)</span>
+          20</span> : <span class="lineCov">  if (err != 0)</span>
 <span class="lineNoCov">      0 / 1 </span> :     <span class="lineNoCov">return make_unexpected&lt;enum_t&gt;(err)</span>;
              : 
-           2</span> :   <span class="lineCov">return {}</span>;
+          20</span> :   <span class="lineCov">return {}</span>;
              : }
              : 
              : } // namespace clev

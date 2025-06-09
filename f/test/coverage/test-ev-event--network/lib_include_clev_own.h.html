@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">6</td>
+                     <td class="headerValue" width="10%">4</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">66.6 %</td>
+                   <td class="headerValue" width="15%">75.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">4</td>
+                     <td class="headerValue" width="10%">3</td>
                    </tr>
                  </table>
                </td>
@@ -84,7 +84,8 @@
              :       { own::copy(d, s) } -&gt; std::convertible_to&lt;clev::expected&lt;void&gt;&gt;;
              :     }
              :   {
-             :     std::ignore = own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());
+             :     if (rhs)
+             :       std::ignore = own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());
              :   }
              : 
              :   own&amp; operator=(const own&amp; rhs) noexcept
@@ -96,9 +97,10 @@
              :       return *this;
              : 
              :     if (*this)
-             :       own::destroy(own::v).or_else(clev::exit_now());
+             :       own::destroy(&amp;(own::v)).or_else(clev::exit_now());
              : 
-             :     own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());
+             :     if (rhs)
+             :       own::copy(&amp;(own::v), rhs.v).or_else(clev::exit_now());
              : 
              :     return *this;
              :   }
@@ -117,9 +119,6 @@
              : 
              :   own(own&amp;&amp; rhs) noexcept
              :   {
-           6</span> : <span class="lineCov">    if (*this)</span>
-<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">std::ignore = own::destroy(own::v).or_else(clev::exit_now())</span>;
-             : 
            6</span> : <span class="lineCov">    own::v = rhs.v;</span>
              : 
            6</span> : <span class="lineCov">    rhs.v = own::empty();</span>
@@ -127,15 +126,10 @@
              : 
              :   own&amp; operator=(own&amp;&amp; rhs) noexcept
              :   {
-             :     if (this != &amp;rhs)
-             :     {
-             :       if (*this)
-             :         std::ignore = own::destroy(own::v).or_else(clev::exit_now());
+             :     if (this == &amp;rhs)
+             :       return *this;
              : 
-             :       own::v = rhs.v;
-             : 
-             :       rhs.v = own::empty();
-             :     };
+             :     std::swap(own::v, rhs.v);
              : 
              :     return *this;
              :   }
@@ -143,7 +137,7 @@
              :   ~own()
              :   {
           12</span> : <span class="lineCov">    if (*this)</span>
-<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">std::ignore = own::destroy(own::v).or_else(clev::exit_now())</span>;
+<span class="lineNoCov">      0 / 1 </span> :       <span class="lineNoCov">std::ignore = own::destroy(&amp;(own::v)).or_else(clev::exit_now())</span>;
              :   }
              : };
              : 

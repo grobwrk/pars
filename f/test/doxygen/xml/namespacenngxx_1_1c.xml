@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacenngxx_1_1c" kind="namespace" language="C++">
+    <compoundname>nngxx::c</compoundname>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>err</name>
+        <qualifiedname>nngxx::c::err</qualifiedname>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076" prot="public">
+          <name>success</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a6eb25cafd325fc432de73fe0d2881a90" prot="public">
+          <name>intr</name>
+          <initializer>= NNG_EINTR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a48462bf68223692233cb4c435857b51c" prot="public">
+          <name>nomem</name>
+          <initializer>= NNG_ENOMEM</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a15e757c159904fb372bd77be464a4586" prot="public">
+          <name>inval</name>
+          <initializer>= NNG_EINVAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a8bc1b2f84252c3df4edd53e4aad097a7" prot="public">
+          <name>busy</name>
+          <initializer>= NNG_EBUSY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a6bd1da51c3edc54d566604a43bdc1dbe" prot="public">
+          <name>timedout</name>
+          <initializer>= NNG_ETIMEDOUT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ad8c5f74af7f29866068ca57008ed8388" prot="public">
+          <name>connrefused</name>
+          <initializer>= NNG_ECONNREFUSED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a349e686330723975502e9ef4f939a5ac" prot="public">
+          <name>closed</name>
+          <initializer>= NNG_ECLOSED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a639849f6b368019778991b32434354fc" prot="public">
+          <name>again</name>
+          <initializer>= NNG_EAGAIN</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a1278df30d3176909a05d7b21107f1024" prot="public">
+          <name>notsup</name>
+          <initializer>= NNG_ENOTSUP</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2abd67aae71a38916d5ad00dd87692ab9a" prot="public">
+          <name>addrinuse</name>
+          <initializer>= NNG_EADDRINUSE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a9ed39e2ea931586b6a985a6942ef573e" prot="public">
+          <name>state</name>
+          <initializer>= NNG_ESTATE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a29443764e911c3e9cebd000261680569" prot="public">
+          <name>noent</name>
+          <initializer>= NNG_ENOENT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a349c85aae1d71151c001702f17a2b5f0" prot="public">
+          <name>proto</name>
+          <initializer>= NNG_EPROTO</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ab748f56cf76526f8606d7463b9df9f2e" prot="public">
+          <name>unreachable</name>
+          <initializer>= NNG_EUNREACHABLE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a9957561d3300a5c3c0a8d79e0703c480" prot="public">
+          <name>addrinval</name>
+          <initializer>= NNG_EADDRINVAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2aca659200663cf654dc4410ed494451ee" prot="public">
+          <name>perm</name>
+          <initializer>= NNG_EPERM</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2afd864c5303e342cd062d0479af2ee92b" prot="public">
+          <name>msgsize</name>
+          <initializer>= NNG_EMSGSIZE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ab9ca56d12de113e1babfacc263391aa4" prot="public">
+          <name>connaborted</name>
+          <initializer>= NNG_ECONNABORTED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a46b677b73a61d3c343db5c23ab4a2ab2" prot="public">
+          <name>connreset</name>
+          <initializer>= NNG_ECONNRESET</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ad5c39a1d9aced393f835f334a1fb9206" prot="public">
+          <name>canceled</name>
+          <initializer>= NNG_ECANCELED</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2acdaa420d494bc174ff24a34929d43eb4" prot="public">
+          <name>nofiles</name>
+          <initializer>= NNG_ENOFILES</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a0ae2143b77b7b156ba54c8bb1a8a8272" prot="public">
+          <name>nospc</name>
+          <initializer>= NNG_ENOSPC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a035d02e56845b5a4979feabda0824f88" prot="public">
+          <name>exist</name>
+          <initializer>= NNG_EEXIST</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a336ebbb2179beaa7340a4f1620f3af40" prot="public">
+          <name>readonly</name>
+          <initializer>= NNG_EREADONLY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2aef1d48fe20b591902a50fa3ba5f7e88f" prot="public">
+          <name>writeonly</name>
+          <initializer>= NNG_EWRITEONLY</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a5ae9b7f211e23aac3df5f2b8f3b8eada" prot="public">
+          <name>crypto</name>
+          <initializer>= NNG_ECRYPTO</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2af437fd2fc6626d7d27a0c6864402bf3b" prot="public">
+          <name>peerauth</name>
+          <initializer>= NNG_EPEERAUTH</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ae32400cd073a316ce87cb14f72e9807d" prot="public">
+          <name>noarg</name>
+          <initializer>= NNG_ENOARG</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a1f2a1ba9f974029c8e43ae8f59637f4c" prot="public">
+          <name>ambiguous</name>
+          <initializer>= NNG_EAMBIGUOUS</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a3caf72759b505eb34e97b1770a19c1d4" prot="public">
+          <name>badtype</name>
+          <initializer>= NNG_EBADTYPE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a561d9fe75aacd80a85dfdca62f8bdc77" prot="public">
+          <name>connshut</name>
+          <initializer>= NNG_ECONNSHUT</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2ad1efad72dc5b17dc66a46767c32fff40" prot="public">
+          <name>internal</name>
+          <initializer>= NNG_EINTERNAL</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2abd5763c8ee2068e505915d3abf12c45c" prot="public">
+          <name>syserr</name>
+          <initializer>= NNG_ESYSERR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2aba615b5939d7c8d16d9963d2f3dd3ef9" prot="public">
+          <name>tranerr</name>
+          <initializer>= NNG_ETRANERR</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="125" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="126" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenngxx_1_1c_1a687ceb9443aa1b0c7ccad0ee4046eb0e" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const std::error_category &amp;</type>
+        <definition>static const std::error_category &amp; nngxx::c::error_category</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>error_category</name>
+        <qualifiedname>nngxx::c::error_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="85" column="42" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="85" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenngxx_1_1c_1ab5efdf930e7f62bb30e557a40afc40e1" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::error_code</type>
+        <definition>std::error_code nngxx::c::make_error_code</definition>
+        <argsstring>(err e) noexcept</argsstring>
+        <name>make_error_code</name>
+        <qualifiedname>nngxx::c::make_error_code</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2" kindref="member">err</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="100" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="80" column="1"/>
+  </compounddef>
+</doxygen>

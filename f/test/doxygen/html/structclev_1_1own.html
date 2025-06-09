@@ -194,8 +194,9 @@ template&lt;typename wrap_t&gt; </div>
 <div class="line"><span class="lineno">   47</span>      { <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(<a class="code hl_struct" href="structclev_1_1own.html">d</a>, <a class="code hl_struct" href="structclev_1_1own.html">s</a>) } -&gt; <a class="code hl_struct" href="structclev_1_1own.html">std::convertible_to&lt;clev::expected&lt;void&gt;</a>&gt;;</div>
 <div class="line"><span class="lineno">   48</span>    }</div>
 <div class="line"><span class="lineno">   49</span>  {</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>), <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">   51</span>  }</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
+<div class="line"><span class="lineno">   51</span>      <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>), <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
+<div class="line"><span class="lineno">   52</span>  }</div>
 <div class="ttc" id="astructclev_1_1own_html"><div class="ttname"><a href="structclev_1_1own.html">clev::own</a></div><div class="ttdef"><b>Definition</b> <a href="own_8h_source.html#l00039">own.h:40</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -252,15 +253,12 @@ template&lt;typename wrap_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00081">81</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>  {</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   84</span>      <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    <a class="code hl_struct" href="structclev_1_1own.html">own::v</a> = <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v;</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v = <a class="code hl_struct" href="structclev_1_1own.html">own::empty</a>();</div>
-<div class="line"><span class="lineno">   89</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00083">83</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>  {</div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_struct" href="structclev_1_1own.html">own::v</a> = <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v = <a class="code hl_struct" href="structclev_1_1own.html">own::empty</a>();</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -289,11 +287,11 @@ template&lt;typename wrap_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00106">106</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>  {</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">  109</span>      <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">  110</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00100">100</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>  {</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">  103</span>      <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>)).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
+<div class="line"><span class="lineno">  104</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -350,21 +348,22 @@ template&lt;typename wrap_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00053">53</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                 {</div>
-<div class="line"><span class="lineno">   55</span>      { <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(<a class="code hl_struct" href="structclev_1_1own.html">d</a>, <a class="code hl_struct" href="structclev_1_1own.html">s</a>) } -&gt; <a class="code hl_struct" href="structclev_1_1own.html">std::convertible_to&lt;clev::expected&lt;void&gt;</a>&gt;;</div>
-<div class="line"><span class="lineno">   56</span>    }</div>
-<div class="line"><span class="lineno">   57</span>  {</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
-<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   62</span>      <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>), <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">   67</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00054">54</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                                 {</div>
+<div class="line"><span class="lineno">   56</span>      { <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(<a class="code hl_struct" href="structclev_1_1own.html">d</a>, <a class="code hl_struct" href="structclev_1_1own.html">s</a>) } -&gt; <a class="code hl_struct" href="structclev_1_1own.html">std::convertible_to&lt;clev::expected&lt;void&gt;</a>&gt;;</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>  {</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
+<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   63</span>      <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>)).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">if</span> (<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
+<div class="line"><span class="lineno">   66</span>      <a class="code hl_struct" href="structclev_1_1own.html">own::copy</a>(&amp;(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>), <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -393,20 +392,15 @@ template&lt;typename wrap_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00091">91</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   92</span>  {</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> != &amp;<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
-<div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">if</span> (*<span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   96</span>        <a class="code hl_struct" href="structclev_1_1own.html">std::ignore</a> = <a class="code hl_struct" href="structclev_1_1own.html">own::destroy</a>(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>).or_else(<a class="code hl_struct" href="structclev_1_1own.html">clev::exit_now</a>());</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>      <a class="code hl_struct" href="structclev_1_1own.html">own::v</a> = <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v;</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>      <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v = <a class="code hl_struct" href="structclev_1_1own.html">own::empty</a>();</div>
-<div class="line"><span class="lineno">  101</span>    };</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  104</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="own_8h_source.html#l00090">90</a> of file <a class="el" href="own_8h_source.html">own.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>  {</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;<a class="code hl_struct" href="structclev_1_1own.html">rhs</a>)</div>
+<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_struct" href="structclev_1_1own.html">std::swap</a>(<a class="code hl_struct" href="structclev_1_1own.html">own::v</a>, <a class="code hl_struct" href="structclev_1_1own.html">rhs</a>.v);</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   98</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

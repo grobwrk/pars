@@ -695,7 +695,7 @@
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exit_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::quick_exit(<ref refid="namespacenngxx_1aa5f67031328417cc6203a01a3d688108" kindref="member">err</ref>.value());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::quick_exit(<ref refid="namespacenngxx_1_1cpp_1a675fe8d0efb36801fc4a93482cdc9cb8" kindref="member">err</ref>.value());</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72" refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref><sp/>=<sp/>std::unexpected&lt;std::error_code&gt;;</highlight></codeline>

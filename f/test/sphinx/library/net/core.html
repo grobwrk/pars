@@ -368,11 +368,11 @@ The nng_aio_result() returns the result of the operation associated with the han
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2op5abortEN5nngxx3errE">
-<span id="_CPPv3N4pars3net2op5abortEN5nngxx3errE"></span><span id="_CPPv2N4pars3net2op5abortEN5nngxx3errE"></span><span id="pars::net::op::abort__nngxx::err"></span><span class="target" id="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">abort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nngxx</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">err</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2op5abortEN5nngxx3errE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4pars3net2op5abortEN5nngxx1c3errE">
+<span id="_CPPv3N4pars3net2op5abortEN5nngxx1c3errE"></span><span id="_CPPv2N4pars3net2op5abortEN5nngxx1c3errE"></span><span id="pars::net::op::abort__nngxx::c::err"></span><span class="target" id="classpars_1_1net_1_1op_1aa166126574589e60fea989eb1053b177"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">abort</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">nngxx</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">err</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4pars3net2op5abortEN5nngxx1c3errE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>abort asynchronous I/O operation </p>
 <p>
-The <a class="reference internal" href="#classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b"><span class="std std-ref">abort()</span></a> function aborts an operation previously started with the handle aio.</p>
+The <a class="reference internal" href="#classpars_1_1net_1_1op_1aa166126574589e60fea989eb1053b177"><span class="std std-ref">abort()</span></a> function aborts an operation previously started with the handle aio.</p>
 <p>If the operation is aborted, then the callback for the handle will be called, and the function <a class="reference internal" href="#classpars_1_1net_1_1op_1a8a682fc3ba4a5d66e254de07722bbe29"><span class="std std-ref">result()</span></a> will return the error err. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -388,7 +388,7 @@ The <a class="reference internal" href="#classpars_1_1net_1_1op_1ab05b5e3333dae1
 <p>The nng_aio_cancel() function aborts an operation previously started with the handle aio. If the operation is aborted, then the callback for the handle will be called, and the function nng_aio_result() will return the error NNG_ECANCELED.</p>
 <p>This function does not wait for the operation to be fully aborted, but returns immediately.</p>
 <p>If no operation is currently in progress (either because it has already finished, or no operation has been started yet), then this function has no effect.</p>
-<p>Same as abort(nngxx::error::canceled) </p>
+<p>Same as abort(nngxx::c::err::canceled) </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -622,7 +622,7 @@ The <a class="reference internal" href="#classpars_1_1net_1_1op_1ab05b5e3333dae1
 <li><a class="reference internal" href="#_CPPv4N4pars3net2op5sleepE12nng_durationNSt8functionIFvvEEE"><code class="docutils literal notranslate"><span class="pre">sleep()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N4pars3net2op11reset_sleepE12nng_duration"><code class="docutils literal notranslate"><span class="pre">reset_sleep()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4NK4pars3net2op6resultEv"><code class="docutils literal notranslate"><span class="pre">result()</span></code></a></li>
-<li><a class="reference internal" href="#_CPPv4N4pars3net2op5abortEN5nngxx3errE"><code class="docutils literal notranslate"><span class="pre">abort()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N4pars3net2op5abortEN5nngxx1c3errE"><code class="docutils literal notranslate"><span class="pre">abort()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N4pars3net2op6cancelEv"><code class="docutils literal notranslate"><span class="pre">cancel()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4NK4pars3net2op4waitEv"><code class="docutils literal notranslate"><span class="pre">wait()</span></code></a></li>
 <li><a class="reference internal" href="#_CPPv4N4pars3net2op4stopEv"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>

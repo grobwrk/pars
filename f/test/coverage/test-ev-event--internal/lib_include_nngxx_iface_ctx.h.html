@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">6</td>
@@ -82,9 +82,9 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_CTX_INITIALIZER;</span>
              :   };
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_ctx v) noexcept
+             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_ctx* v) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_ctx_close, v);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_ctx_close, *v);</span>
              :   }
              : 
              :   [[nodiscard]] static inline clev::expected&lt;nng_ctx&gt;

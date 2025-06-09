@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">6</td>
+                     <td class="headerValue" width="10%">8</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -118,6 +118,12 @@
              :     return nngxx::invoke(append, m, x);
              :   }
              : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; append(const void* val,
+             :                                                    std::size_t sz) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_append, m, val, sz);</span>
+             :   }
+             : 
              :   template&lt;uint_c uint_t&gt;
              :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(uint_t x) noexcept
              :   {
@@ -137,6 +143,12 @@
              :     }
              : 
              :     return nngxx::invoke(insert, m, x);
+             :   }
+             : 
+             :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(const void* val,
+             :                                                    std::size_t sz) noexcept
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_insert, m, val, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
@@ -176,7 +188,7 @@
              : 
              :     if constexpr (std::is_same_v&lt;uint_t, uint16_t&gt;)
              :     {
-             :       chop = nng_msg_chop;
+             :       chop = nng_msg_chop_u16;
              :     }
              :     else if constexpr (std::is_same_v&lt;uint_t, uint32_t&gt;)
              :     {
@@ -196,19 +208,28 @@
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; read() const noexcept
+             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt;
+             :   read(const std::size_t offset = 0) const noexcept
              :   {
              :     uint_t v;
              : 
-             :     std::memcpy(static_cast&lt;void*&gt;(&amp;v), data&lt;void&gt;(), sizeof(decltype(v)));
+             :     if (offset + sizeof(decltype(v)) &gt; size())
+             :       return clev::unexpected{nngxx::cpp::err::invalid_memory};
+             : 
+             :     std::memcpy(&amp;v, data&lt;char&gt;() + offset, sizeof(decltype(v)));
              : 
              :     return v;
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; write(uint_t v) noexcept
+             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   write(uint_t v, const std::size_t offset = 0) noexcept
              :   {
-             :     std::memcpy(data&lt;void&gt;(), static_cast&lt;void*&gt;(&amp;v), sizeof(decltype(v)));
+             :     if (offset + sizeof(decltype(v)) &gt; size())
+             :       return clev::unexpected{nngxx::cpp::err::invalid_memory};
+             : 
+             :     std::memcpy(data&lt;char&gt;() + offset, static_cast&lt;void*&gt;(&amp;v),
+             :                 sizeof(decltype(v)));
              : 
              :     return {};
              :   }

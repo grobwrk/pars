@@ -17,17 +17,17 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Sun Jun  8 17:06:09 2025 </td>
+                     <td class="headerValue" width="15%">Mon Jun  9 14:59:33 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">75.0 %</td>
+                   <td class="headerValue" width="15%">100.0 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">3</td>
+                     <td class="headerValue" width="10%">4</td>
                    </tr>
                  </table>
                </td>
@@ -74,13 +74,13 @@
              : struct msg_header
              : {
              :   msg_header(nng_msg* m) noexcept
-           3</span> :     : m<span class="lineCov">{m}</span>
+          25</span> :     : m<span class="lineCov">{m}</span>
              :   {
              :   }
              : 
              :   [[nodiscard]] inline std::size_t size() const noexcept
              :   {
-           3</span> : <span class="lineCov">    return nng_msg_header_len(m);</span>
+          25</span> : <span class="lineCov">    return nng_msg_header_len(m);</span>
              :   }
              : 
              : private:
@@ -91,12 +91,12 @@
              : 
              : nngxx::msg_header nngxx::msg_view::header() noexcept
              : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return nngxx::msg_header{v};</span>
+           2</span> : <span class="lineCov">  return nngxx::msg_header{v};</span>
              : }
              : 
              : const nngxx::msg_header nngxx::msg_view::header() const noexcept
              : {
-           3</span> : <span class="lineCov">  return nngxx::msg_header{v};</span>
+          23</span> : <span class="lineCov">  return nngxx::msg_header{v};</span>
              : }
              : 
              : static_assert(std::copyable&lt;nngxx::msg_header&gt;);
