@@ -72,3 +72,5 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/socket.h"
 #include "pars/net/socket_opt.h"
 #include "pars/net/tool_view.h"
+
+constexpr static bool pars_included_v = true;

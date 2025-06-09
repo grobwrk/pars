@@ -8,6 +8,7 @@ set(
   "ev-event--internal.cpp"
   "ev-event--network.cpp"
   "nngxx-msg.cpp"
+  "pars.cpp"
 )
 
 foreach (TEST_SOURCE ${PARS_TESTS})
