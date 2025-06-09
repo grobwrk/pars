@@ -59,7 +59,7 @@ struct clev::iface<nng_aio*> : nngxx::value<nng_aio*>
 
   inline void wait() const noexcept { nng_aio_wait(v); }
 
-  inline void abort(nngxx::err err) noexcept
+  inline void abort(nngxx::c::err err) noexcept
   {
     nng_aio_abort(v, static_cast<int>(err));
   }

@@ -81,6 +81,12 @@ struct msg_body
     return nngxx::invoke(append, m, x);
   }
 
+  [[nodiscard]] inline clev::expected<void> append(const void* val,
+                                                   std::size_t sz) noexcept
+  {
+    return nngxx::invoke(nng_msg_append, m, val, sz);
+  }
+
   template<uint_c uint_t>
   [[nodiscard]] inline clev::expected<void> insert(uint_t x) noexcept
   {
@@ -100,6 +106,12 @@ struct msg_body
     }
 
     return nngxx::invoke(insert, m, x);
+  }
+
+  [[nodiscard]] inline clev::expected<void> insert(const void* val,
+                                                   std::size_t sz) noexcept
+  {
+    return nngxx::invoke(nng_msg_insert, m, val, sz);
   }
 
   template<uint_c uint_t>
@@ -159,19 +171,28 @@ struct msg_body
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<uint_t> read() const noexcept
+  [[nodiscard]] inline clev::expected<uint_t>
+  read(const std::size_t offset = 0) const noexcept
   {
     uint_t v;
 
-    std::memcpy(static_cast<void*>(&v), data<void>(), sizeof(decltype(v)));
+    if (offset + sizeof(decltype(v)) > size())
+      return clev::unexpected{nngxx::cpp::err::invalid_memory};
+
+    std::memcpy(&v, data<char>() + offset, sizeof(decltype(v)));
 
     return v;
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<void> write(uint_t v) noexcept
+  [[nodiscard]] inline clev::expected<void>
+  write(uint_t v, const std::size_t offset = 0) noexcept
   {
-    std::memcpy(data<void>(), static_cast<void*>(&v), sizeof(decltype(v)));
+    if (offset + sizeof(decltype(v)) > size())
+      return clev::unexpected{nngxx::cpp::err::invalid_memory};
+
+    std::memcpy(data<char>() + offset, static_cast<void*>(&v),
+                sizeof(decltype(v)));
 
     return {};
   }

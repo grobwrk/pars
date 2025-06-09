@@ -186,7 +186,7 @@ public:
    */
   std::error_code result() const
   {
-    return aio_m.result().error_or(nngxx::err::success);
+    return aio_m.result().error_or(nngxx::c::err::success);
   }
 
   /**
@@ -199,7 +199,7 @@ public:
    * If the operation is aborted, then the callback for the handle will be
    * called, and the function result() will return the error err.
    */
-  void abort(nngxx::err err) { aio_m.abort(err); }
+  void abort(nngxx::c::err err) { aio_m.abort(err); }
 
   /**
    * @brief cancel asynchronous I/O operation
@@ -216,7 +216,7 @@ public:
    * finished, or no operation has been started yet), then this function has no
    * effect.
    *
-   * Same as abort(nngxx::error::canceled)
+   * Same as abort(nngxx::c::err::canceled)
    */
   void cancel() { aio_m.cancel(); }
 

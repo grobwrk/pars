@@ -39,13 +39,54 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace nngxx
 {
 
+namespace cpp
+{
+
 enum class err : int;
+
+enum class err
+{
+  invalid_memory = 1
+};
 
 [[nodiscard]] inline static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
     virtual const char* name() const noexcept override { return "nngxx"; }
+
+    virtual std::string message(int e) const override
+    {
+      switch (static_cast<err>(e))
+      {
+      case err::invalid_memory:
+        return "invalid memory";
+
+        break;
+      }
+    }
+  } error_category;
+
+  return error_category;
+}
+
+[[nodiscard]] inline std::error_code make_error_code(err e) noexcept
+{
+  return std::error_code(static_cast<int>(e), error_category());
+}
+
+} // namespace cpp
+
+namespace c
+{
+
+enum class err : int;
+
+[[nodiscard]] inline static const std::error_category& error_category() noexcept
+{
+  static struct : std::error_category
+  {
+    virtual const char* name() const noexcept override { return "nng"; }
 
     virtual std::string message(int e) const override
     {
@@ -61,14 +102,24 @@ enum class err : int;
   return std::error_code(static_cast<int>(e), error_category());
 }
 
+} // namespace c
+
 } // namespace nngxx
 
 template<>
-struct std::is_error_code_enum<nngxx::err> : std::true_type
+struct std::is_error_code_enum<nngxx::cpp::err> : std::true_type
+{
+};
+
+template<>
+struct std::is_error_code_enum<nngxx::c::err> : std::true_type
 {
 };
 
 namespace nngxx
+{
+
+namespace c
 {
 
 enum class err
@@ -110,6 +161,8 @@ enum class err
   tranerr = NNG_ETRANERR
 };
 
+}
+
 template<typename ret_t, typename arg_t, typename... args_t>
 [[nodiscard]] inline clev::expected<std::remove_pointer_t<arg_t>>
 make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
@@ -120,7 +173,7 @@ make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
 
   return return_type{}.and_then([&](value_type v) -> return_type {
     if (auto e = f(&v, args...); e)
-      return clev::make_unexpected<err>(e);
+      return clev::make_unexpected<c::err>(e);
 
     return v;
   });
@@ -135,7 +188,7 @@ template<typename return_t>
 
   return return_type{}.and_then([=](value_type v) -> return_type {
     if (auto e = f(&v); e)
-      return clev::make_unexpected<err>(e);
+      return clev::make_unexpected<c::err>(e);
 
     return v;
   });
@@ -145,7 +198,7 @@ template<typename ret_t, typename... args_t>
 [[nodiscard]] inline clev::expected<void> invoke(ret_t (*f)(args_t...),
                                                  args_t... args) noexcept
 {
-  return clev::make_expected<err>(f(args...));
+  return clev::make_expected<c::err>(f(args...));
 }
 
 template<typename... args_t>
@@ -159,6 +212,6 @@ template<typename... args_t>
 
 } // namespace nngxx
 
-static_assert(std::convertible_to<nngxx::err, std::error_code>);
+static_assert(std::convertible_to<nngxx::c::err, std::error_code>);
 
-static_assert(std::constructible_from<std::error_code, nngxx::err>);
+static_assert(std::constructible_from<std::error_code, nngxx::c::err>);

@@ -373,3 +373,122 @@ TEST_F(nngxx_msg, body_empty)
   EXPECT_EQ(static_cast<const msg*>(&m)->body().size(), 0);
 }
 
+/// FUNC: body().write(), body().read()
+
+TEST_F(nngxx_msg, write_read)
+{
+  auto c = uint64_t{42};
+  auto m = make_valid_empty_msg(sizeof(c) * 2);
+
+  EXPECT_TRUE(m.body().write(c));
+  EXPECT_TRUE(m.body().write(c + 1, sizeof(c)));
+
+  EXPECT_TRUE(m);
+  EXPECT_EQ(m.body().size(), 2 * sizeof(c));
+  EXPECT_EQ(m.header().size(), 0);
+
+  EXPECT_EQ(m.body().read<decltype(c)>().value(), c);
+  EXPECT_EQ(m.body().read<decltype(c)>(sizeof(c)).value(), c + 1);
+}
+
+TEST_F(nngxx_msg, write_error)
+{
+  auto m = make_valid_empty_msg();
+
+  auto ret = m.body().write(uint64_t{42});
+
+  EXPECT_FALSE(ret);
+  EXPECT_EQ(ret.error(), nngxx::cpp::err::invalid_memory);
+}
+
+TEST_F(nngxx_msg, read_error)
+{
+  auto m = make_valid_empty_msg();
+
+  auto ret = m.body().read<uint64_t>();
+
+  EXPECT_FALSE(ret);
+  EXPECT_EQ(ret.error(), nngxx::cpp::err::invalid_memory);
+}
+
+/// FUNC: body().insert(), body().trim()
+
+TYPED_TEST_SUITE(nngxx_msg_typed, uints);
+
+TYPED_TEST(nngxx_msg_typed, insert_trim)
+{
+  using class_type = nngxx_msg_typed<TypeParam>;
+  using uint_type = class_type::uint_type;
+
+  auto v = uint_type{std::numeric_limits<uint_type>::max()};
+  auto m = class_type::make_valid_empty_msg();
+
+  EXPECT_TRUE(m.body().insert(v));
+  auto ret = m.body().template trim<decltype(v)>();
+
+  EXPECT_TRUE(ret);
+  EXPECT_EQ(ret.value(), v);
+}
+
+TEST_F(nngxx_msg, insert_trim_sz)
+{
+  const uint8_t vs[2] = {10, 11};
+  auto m = make_valid_empty_msg();
+
+  EXPECT_TRUE(m.body().insert(static_cast<const void*>(vs), 2));
+  EXPECT_EQ(m.body().size(), 2);
+
+  {
+    auto ret = m.body().read<uint16_t>();
+
+    EXPECT_TRUE(ret);
+    EXPECT_EQ(ret.value(), vs[1] * 256 + vs[0]);
+  }
+
+  {
+    auto ret = m.body().trim(2);
+
+    EXPECT_TRUE(ret);
+    EXPECT_EQ(m.body().size(), 0);
+  }
+}
+
+/// FUNC: body().append(), body().chop()
+
+TYPED_TEST(nngxx_msg_typed, append_chop)
+{
+  using class_type = nngxx_msg_typed<TypeParam>;
+  using uint_type = class_type::uint_type;
+
+  auto v = uint_type{std::numeric_limits<uint_type>::max()};
+  auto m = class_type::make_valid_empty_msg();
+
+  EXPECT_TRUE(m.body().append(v));
+  auto ret = m.body().template chop<decltype(v)>();
+
+  EXPECT_TRUE(ret);
+  EXPECT_EQ(ret.value(), v);
+}
+
+TEST_F(nngxx_msg, append_chop_sz)
+{
+  const uint8_t vs[2] = {10, 11};
+  auto m = make_valid_empty_msg();
+
+  EXPECT_TRUE(m.body().append(static_cast<const void*>(vs), 2));
+  EXPECT_EQ(m.body().size(), 2);
+
+  {
+    auto ret = m.body().read<uint16_t>();
+
+    EXPECT_TRUE(ret);
+    EXPECT_EQ(ret.value(), vs[1] * 256 + vs[0]);
+  }
+
+  {
+    auto ret = m.body().chop(2);
+
+    EXPECT_TRUE(ret);
+    EXPECT_EQ(m.body().size(), 0);
+  }
+}

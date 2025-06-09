@@ -40,9 +40,12 @@ class nngxx_msg : public ::testing::Test
 protected:
   nngxx::msg make_invalid_msg() { return nngxx::msg{}; }
 
-  nngxx::msg make_valid_empty_msg() { return nngxx::make_msg(0).value(); }
+  nngxx::msg make_valid_empty_msg(std::size_t sz = 0)
+  {
+    return nngxx::make_msg(sz).value();
+  }
 
-  nngxx::msg make_valid_nonempty_msg() { return nngxx::make_msg(1).value(); }
+  nngxx::msg make_valid_nonempty_msg() { return make_valid_empty_msg(1); }
 
   static void expect_invalid(const nngxx::msg& m) { EXPECT_FALSE(m); }
 
@@ -69,4 +72,12 @@ protected:
 
     EXPECT_EQ(m_addr, expected);
   }
+};
+
+using uints = ::testing::Types<uint16_t, uint32_t, uint64_t>;
+
+template<uint_c uint_t>
+struct nngxx_msg_typed : public nngxx_msg
+{
+  using uint_type = uint_t;
 };
