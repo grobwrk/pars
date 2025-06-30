@@ -29,11 +29,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include <fmt/format.h>
 #include <nng/nng.h>
 
 #include <expected>
-#include <functional>
+#include <stdexcept>
+#include <system_error>
 
 namespace clev
 {

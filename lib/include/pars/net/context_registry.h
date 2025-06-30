@@ -35,6 +35,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/socket.h"
 #include "pars/net/tool_view.h"
 
+#include <format>
 #include <tuple>
 #include <unordered_map>
 
@@ -76,7 +77,7 @@ public:
       throw std::runtime_error("We need a context here");
 
     if (ctx_map_m.find(t.id()) == ctx_map_m.end())
-      throw std::runtime_error(fmt::format("Unknown context {}", t.id()));
+      throw std::runtime_error(std::format("Unknown context {}", t.id()));
 
     return ctx_map_m.at(t.id());
   }

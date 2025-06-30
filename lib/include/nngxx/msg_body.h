@@ -33,6 +33,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "nngxx/err.h"
 #include "nngxx/msg.h"
 
+#include <cstring>
+
 namespace nngxx
 {
 

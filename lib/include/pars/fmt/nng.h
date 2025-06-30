@@ -36,17 +36,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/err.h"
 
-#include <fmt/format.h>
+#include <format>
 
 template<>
-struct fmt::formatter<nngxx::msg> : formatter<std::string>
+struct std::formatter<nngxx::msg> : formatter<std::string>
 {
   auto format(const nngxx::msg& m, format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (m.body().size() < sizeof(std::size_t))
     {
-      return fmt::format_to(
+      return std::format_to(
         ctx.out(), "size:{}={}+{}, hash:<error>, pipe:0x{:X}",
         m.header().size() + m.body().size(), m.header().size(), m.body().size(),
         m.get_pipe().id());
@@ -55,7 +55,7 @@ struct fmt::formatter<nngxx::msg> : formatter<std::string>
     {
       std::size_t h = pars::hash_from_msg(m);
 
-      return fmt::format_to(
+      return std::format_to(
         ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
         m.header().size() + m.body().size(), m.header().size(), m.body().size(),
         h, m.get_pipe().id());
@@ -64,17 +64,17 @@ struct fmt::formatter<nngxx::msg> : formatter<std::string>
 };
 
 template<>
-struct fmt::formatter<nngxx::pipe_view> : formatter<std::string>
+struct std::formatter<nngxx::pipe_view> : formatter<std::string>
 {
-  auto format(const nngxx::pipe_view& p, fmt::format_context& ctx) const
+  auto format(const nngxx::pipe_view& p, std::format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (p)
       if (p.id() == -1)
-        return fmt::format_to(ctx.out(), "<ERROR>");
+        return std::format_to(ctx.out(), "<ERROR>");
       else
-        return fmt::format_to(ctx.out(), "0x{:08X}", p.id());
+        return std::format_to(ctx.out(), "0x{:08X}", p.id());
     else
-      return fmt::format_to(ctx.out(), "<empty-pipe>");
+      return std::format_to(ctx.out(), "<empty-pipe>");
   }
 };

@@ -92,8 +92,8 @@ private:
 } // namespace pars_example::resource
 
 template<>
-struct fmt::formatter<::pars_example::resource::client_state>
-  : fmt::formatter<std::string>
+struct std::formatter<::pars_example::resource::client_state>
+  : std::formatter<std::string>
 {
   auto format(const ::pars_example::resource::client_state& s,
               format_context& ctx) const -> decltype(ctx.out())
@@ -138,8 +138,8 @@ struct fmt::formatter<::pars_example::resource::client_state>
 };
 
 template<>
-struct fmt::formatter<::pars_example::resource::server_state>
-  : fmt::formatter<std::string>
+struct std::formatter<::pars_example::resource::server_state>
+  : std::formatter<std::string>
 {
   auto format(const ::pars_example::resource::server_state& s,
               format_context& ctx) const -> decltype(ctx.out())
@@ -172,8 +172,8 @@ struct fmt::formatter<::pars_example::resource::server_state>
 };
 
 template<>
-struct fmt::formatter<::pars_example::resource::pipe_state>
-  : fmt::formatter<std::string>
+struct std::formatter<::pars_example::resource::pipe_state>
+  : std::formatter<std::string>
 {
   auto format(const ::pars_example::resource::pipe_state& s,
               format_context& ctx) const -> decltype(ctx.out())

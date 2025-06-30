@@ -29,7 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include <fmt/format.h>
+#include <format>
 
 namespace pars::net
 {
@@ -43,12 +43,12 @@ enum class dir
 }
 
 template<>
-struct fmt::formatter<::pars::net::dir> : fmt::formatter<std::string>
+struct std::formatter<::pars::net::dir> : std::formatter<std::string>
 {
-  auto format(const ::pars::net::dir& d, fmt::format_context& ctx) const
+  auto format(const ::pars::net::dir& d, std::format_context& ctx) const
     -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "{}",
+    return std::format_to(ctx.out(), "{}",
                           d == ::pars::net::dir::in ? "receiving" : "sending");
   }
 };

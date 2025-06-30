@@ -31,7 +31,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "clev/err.h"
 
-#include <fmt/format.h>
 #include <nng/nng.h>
 
 #include <expected>

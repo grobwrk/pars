@@ -37,6 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/spec.h"
 
 #include <any>
+#include <format>
 #include <type_traits>
 
 namespace pars::ev
@@ -91,9 +92,9 @@ public:
 
   [[nodiscard]] std::size_t spec_hash() const { return spec_hash_m; }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "spec:0x{:X}", spec_hash());
+    return std::format_to(ctx.out(), "spec:0x{:X}", spec_hash());
   }
 
   void set_id(std::size_t id) { id_m = id; }

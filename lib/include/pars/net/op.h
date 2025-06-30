@@ -40,8 +40,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/helpers.h"
 #include "pars/net/dir.h"
 
-#include <spdlog/spdlog.h>
-
 #include <expected>
 #include <functional>
 

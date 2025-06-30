@@ -31,10 +31,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/concept/formattable.h"
 
-#include <fmt/format.h>
+#include <format>
 
 template<formattable_c foarmattable_t>
-struct fmt::formatter<foarmattable_t> : fmt::formatter<std::string>
+struct std::formatter<foarmattable_t> : std::formatter<std::string>
 {
   auto format(const foarmattable_t& x, format_context& ctx) const
     -> decltype(ctx.out())

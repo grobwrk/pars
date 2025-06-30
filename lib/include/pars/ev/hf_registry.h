@@ -36,6 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/formattable.h"
 #include "pars/log.h"
 
+#include <format>
 #include <mutex>
 #include <unordered_map>
 
@@ -116,7 +117,7 @@ private:
     auto spec_hash = spec<kind_of<event_t>>::hash;
 
     if (!handlers_m[s_id].try_emplace(spec_hash, std::move(hf)).second)
-      throw std::runtime_error(fmt::format(
+      throw std::runtime_error(std::format(
         "Unable to emplace the handler_f for Socket #{} and Spec {:X}", s_id,
         spec_hash));
 

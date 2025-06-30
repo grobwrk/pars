@@ -31,9 +31,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "init.h"
 
-// include fmt
-#include <fmt/format.h>
-
 #include <spdlog/common.h>
 
 // include generated config file

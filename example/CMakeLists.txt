@@ -9,8 +9,8 @@ add_executable(client
   "common.h"
   "event.h"
 )
-target_link_libraries(client PUBLIC pars spdlog::spdlog)
-target_include_directories(client PUBLIC pars spdlog::spdlog)
+target_link_libraries(client PUBLIC pars)
+target_include_directories(client PUBLIC pars)
 # enable_sanitizer (client address)
 # enable_sanitizer (client thread)
 
@@ -20,7 +20,7 @@ add_executable(server_backend
   "event.h"
   "fib.h"
 )
-target_link_libraries(server_backend PUBLIC pars spdlog::spdlog)
-target_include_directories(server_backend PUBLIC pars spdlog::spdlog)
+target_link_libraries(server_backend PUBLIC pars)
+target_include_directories(server_backend PUBLIC pars)
 # enable_sanitizer (server_backend address)
 # enable_sanitizer (server_backend thread)
