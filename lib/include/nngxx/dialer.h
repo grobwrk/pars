@@ -38,7 +38,7 @@ using dialer_view = clev::iface<nng_dialer>;
 
 using dialer = clev::own<nng_dialer>;
 
-[[nodiscard]] inline static clev::expected<dialer>
+[[nodiscard]] static clev::expected<dialer>
 make_dialer(socket_view& s, const char* addr) noexcept
 {
   return dialer::create(s, addr);

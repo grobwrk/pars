@@ -38,23 +38,21 @@ struct clev::iface<nng_pipe> : nngxx::value<nng_pipe>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_type empty() noexcept
+  [[nodiscard]] static nng_type empty() noexcept
   {
     return NNG_PIPE_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_pipe* v) noexcept
+  // ReSharper disable once CppParameterMayBeConstPtrOrRef
+  [[nodiscard]] static expected<void> destroy(nng_pipe* v) noexcept
   {
     // TODO: because we can close(), should we check it's open before closing?
     return nngxx::invoke(nng_pipe_close, *v);
   }
 
-  [[nodiscard]] inline int id() const noexcept { return nng_pipe_id(v); }
+  [[nodiscard]] int id() const noexcept { return nng_pipe_id(v); }
 
-  [[nodiscard]] inline nngxx::socket_view get_socket() const noexcept;
+  [[nodiscard]] nngxx::socket_view get_socket() const noexcept;
 
-  [[nodiscard]] inline clev::expected<void> close() noexcept
-  {
-    return destroy(&v);
-  }
+  [[nodiscard]] expected<void> close() noexcept { return destroy(&v); }
 };

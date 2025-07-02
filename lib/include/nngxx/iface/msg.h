@@ -48,41 +48,40 @@ struct clev::iface<nng_msg*> : nngxx::value<nng_msg*>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_msg* empty() noexcept { return nullptr; }
+  [[nodiscard]] static nng_msg* empty() noexcept { return nullptr; }
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_msg** v) noexcept
+  [[nodiscard]] static expected<void> destroy(nng_msg** v) noexcept
   {
-    return nngxx::invoke(nng_msg_free, *v).and_then([&]() {
+    return nngxx::invoke(nng_msg_free, *v).and_then(invoke([&] {
       *v = empty();
-
-      return clev::expected<void>{};
-    });
+    }));
   }
 
-  [[nodiscard]] inline static clev::expected<void>
-  copy(nng_msg** d, const nng_msg* s) noexcept
+  [[nodiscard]] static expected<void> copy(nng_msg** d,
+                                           const nng_msg* s) noexcept
   {
     return nngxx::invoke(nng_msg_dup, d, s);
   }
 
-  [[nodiscard]] inline static clev::expected<nng_msg*>
-  alloc(std::size_t sz) noexcept
+  [[nodiscard]] static expected<nng_msg*> alloc(const std::size_t sz) noexcept
   {
     return nngxx::make(nng_msg_alloc, sz);
   }
 
-  [[nodiscard]] inline const nngxx::pipe_view get_pipe() const noexcept
+  // ReSharper disable once CppConstValueFunctionReturnType
+  [[nodiscard]] const nngxx::pipe_view get_pipe() const noexcept
   {
     return nng_msg_get_pipe(v);
   }
 
-  inline void set_pipe(nngxx::pipe_view& p) noexcept { nng_msg_set_pipe(v, p); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void set_pipe(nngxx::pipe_view& p) noexcept { nng_msg_set_pipe(v, p); }
 
-  [[nodiscard]] inline nngxx::msg_body body() noexcept;
+  [[nodiscard]] nngxx::msg_body body() noexcept;
 
-  [[nodiscard]] inline const nngxx::msg_body body() const noexcept;
+  [[nodiscard]] const nngxx::msg_body body() const noexcept;
 
-  [[nodiscard]] inline nngxx::msg_header header() noexcept;
+  [[nodiscard]] nngxx::msg_header header() noexcept;
 
-  [[nodiscard]] inline const nngxx::msg_header header() const noexcept;
+  [[nodiscard]] const nngxx::msg_header header() const noexcept;
 };

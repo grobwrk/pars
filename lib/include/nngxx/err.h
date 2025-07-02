@@ -45,16 +45,17 @@ enum class err : int;
 
 enum class err
 {
-  invalid_memory = 1
+  invalid_memory = 1,
+  unknown_option
 };
 
-[[nodiscard]] inline static const std::error_category& error_category() noexcept
+[[nodiscard]] static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
-    virtual const char* name() const noexcept override { return "nngxx"; }
+    [[nodiscard]] const char* name() const noexcept override { return "nngxx"; }
 
-    virtual std::string message(int e) const override
+    [[nodiscard]] std::string message(const int e) const override
     {
       switch (static_cast<err>(e))
       {
@@ -62,6 +63,8 @@ enum class err
         return "invalid memory";
 
         break;
+      default:
+        return "unknown";
       }
     }
   } error_category;
@@ -71,7 +74,7 @@ enum class err
 
 [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
 {
-  return std::error_code(static_cast<int>(e), error_category());
+  return {static_cast<int>(e), error_category()};
 }
 
 } // namespace cpp
@@ -81,13 +84,13 @@ namespace c
 
 enum class err : int;
 
-[[nodiscard]] inline static const std::error_category& error_category() noexcept
+[[nodiscard]] static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
-    virtual const char* name() const noexcept override { return "nng"; }
+    [[nodiscard]] const char* name() const noexcept override { return "nng"; }
 
-    virtual std::string message(int e) const override
+    [[nodiscard]] std::string message(const int e) const override
     {
       return nng_strerror(e);
     }
@@ -98,7 +101,7 @@ enum class err : int;
 
 [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
 {
-  return std::error_code(static_cast<int>(e), error_category());
+  return {static_cast<int>(e), error_category()};
 }
 
 } // namespace c
@@ -163,12 +166,12 @@ enum class err
 }
 
 template<typename ret_t, typename arg_t, typename... args_t>
-[[nodiscard]] inline clev::expected<std::remove_pointer_t<arg_t>>
+[[nodiscard]] clev::expected<std::remove_pointer_t<arg_t>>
 make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
 {
   using return_type = decltype(make(f, args...));
 
-  using value_type = return_type::value_type;
+  using value_type = typename return_type::value_type;
 
   return return_type{}.and_then([&](value_type v) -> return_type {
     if (auto e = f(&v, args...); e)
@@ -179,11 +182,11 @@ make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
 }
 
 template<typename return_t>
-[[nodiscard]] inline auto read(auto f) noexcept -> clev::expected<return_t>
+[[nodiscard]] auto read(auto f) noexcept -> clev::expected<return_t>
 {
   using return_type = clev::expected<return_t>;
 
-  using value_type = return_type::value_type;
+  using value_type = typename return_type::value_type;
 
   return return_type{}.and_then([=](value_type v) -> return_type {
     if (auto e = f(&v); e)
@@ -194,15 +197,15 @@ template<typename return_t>
 }
 
 template<typename ret_t, typename... args_t>
-[[nodiscard]] inline clev::expected<void> invoke(ret_t (*f)(args_t...),
-                                                 args_t... args) noexcept
+[[nodiscard]] clev::expected<void> invoke(ret_t (*f)(args_t...),
+                                          args_t... args) noexcept
 {
   return clev::make_expected<c::err>(f(args...));
 }
 
 template<typename... args_t>
-[[nodiscard]] inline clev::expected<void> invoke(void (*f)(args_t...),
-                                                 args_t... args) noexcept
+[[nodiscard]] clev::expected<void> invoke(void (*f)(args_t...),
+                                          args_t... args) noexcept
 {
   f(args...);
 

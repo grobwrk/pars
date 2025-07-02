@@ -38,8 +38,7 @@ using msg_view = clev::iface<nng_msg*>;
 
 using msg = clev::own<nng_msg*>;
 
-[[nodiscard]] inline static clev::expected<msg>
-make_msg(std::size_t sz) noexcept
+[[nodiscard]] static clev::expected<msg> make_msg(const std::size_t sz) noexcept
 {
   return msg::alloc(sz);
 }

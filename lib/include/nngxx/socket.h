@@ -29,6 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "nngxx/iface/pipe.h"
 #include "nngxx/iface/socket.h"
 
 #include <nng/nng.h>
@@ -43,9 +44,9 @@ namespace nngxx
 namespace rep::v0
 {
 
-[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+[[nodiscard]] static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_rep0_open);
+  return make(nng_rep0_open);
 }
 
 } // namespace rep::v0
@@ -53,9 +54,9 @@ namespace rep::v0
 namespace req::v0
 {
 
-[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+[[nodiscard]] static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_req0_open);
+  return make(nng_req0_open);
 }
 
 } // namespace req::v0
@@ -63,9 +64,9 @@ namespace req::v0
 namespace pull::v0
 {
 
-[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+[[nodiscard]] static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_pull0_open);
+  return make(nng_pull0_open);
 }
 
 } // namespace pull::v0
@@ -73,16 +74,16 @@ namespace pull::v0
 namespace push::v0
 {
 
-[[nodiscard]] inline static clev::expected<socket> make_socket() noexcept
+[[nodiscard]] static clev::expected<socket> make_socket() noexcept
 {
-  return nngxx::make(nng_push0_open);
+  return make(nng_push0_open);
 }
 
 } // namespace push::v0
 
 } // namespace nngxx
 
-nngxx::socket_view nngxx::pipe_view::get_socket() const noexcept
+inline nngxx::socket_view nngxx::pipe_view::get_socket() const noexcept
 {
   return nng_pipe_socket(v);
 }

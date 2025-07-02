@@ -40,24 +40,24 @@ struct clev::iface<nng_listener> : nngxx::value<nng_listener>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_listener empty() noexcept
+  [[nodiscard]] static nng_listener empty() noexcept
   {
     return NNG_LISTENER_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void>
-  destroy(nng_listener* l) noexcept
+  [[nodiscard]] static expected<void> destroy(const nng_listener* l) noexcept
   {
     return nngxx::invoke(nng_listener_close, *l);
   }
 
-  [[nodiscard]] inline static clev::expected<nng_listener>
-  create(nngxx::socket_view& s, const char* addr) noexcept
+  [[nodiscard]] static expected<nng_listener> create(nngxx::socket_view& s,
+                                                     const char* addr) noexcept
   {
     return nngxx::make(nng_listener_create, static_cast<nng_socket>(s), addr);
   }
 
-  [[nodiscard]] inline clev::expected<void> start(int flags = 0) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] expected<void> start(const int flags = 0) noexcept
   {
     return nngxx::invoke(nng_listener_start, v, flags);
   }

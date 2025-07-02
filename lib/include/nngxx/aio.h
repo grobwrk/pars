@@ -38,19 +38,19 @@ using aio_view = clev::iface<nng_aio*>;
 
 using aio = clev::own<nng_aio*>;
 
-inline static void sleep(nng_duration ms, aio_view& aio) noexcept
+static void sleep(const nng_duration ms, aio_view& aio) noexcept
 {
   nng_sleep_aio(ms, aio);
 }
 
-[[nodiscard]] inline static clev::expected<aio> make_aio(void (*cb)(void*),
-                                                         void* arg) noexcept
+[[nodiscard]] static clev::expected<aio> make_aio(void (*cb)(void*),
+                                                  void* arg) noexcept
 {
   return aio::alloc(cb, arg);
 }
 
-[[nodiscard]] inline static clev::expected<aio>
-make_aio(void (*cb)(void*), void* arg, msg m) noexcept
+[[nodiscard]] static clev::expected<aio> make_aio(void (*cb)(void*), void* arg,
+                                                  msg m) noexcept
 {
   return make_aio(cb, arg).and_then([&](aio op) -> clev::expected<aio> {
     op.set_msg(std::move(m));

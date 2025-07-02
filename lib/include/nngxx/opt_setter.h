@@ -46,8 +46,8 @@ struct opt_setter
   static constexpr auto overload = opt_to_nng_overload<opt_v>();
 
   template<nng_value_c nng_value_t>
-  [[nodiscard]] inline clev::expected<void> operator()(nng_type obj,
-                                                       nng_value_t val) noexcept
+  [[nodiscard]] clev::expected<void> operator()(nng_type obj,
+                                                nng_value_t val) noexcept
   {
     int (*set)(nng_type, const char*, nng_value_t);
 

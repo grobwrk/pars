@@ -29,8 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include <nng/nng.h>
-
 #include <expected>
 #include <stdexcept>
 #include <system_error>
@@ -38,9 +36,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace clev
 {
 
-struct exception : std::runtime_error
+struct exception final : std::runtime_error
 {
-  explicit exception(std::error_code code) noexcept
+  explicit exception(const std::error_code code) noexcept
     : std::runtime_error(code.message())
   {
   }
@@ -54,7 +52,7 @@ struct exception : std::runtime_error
 
 constexpr static bool clev_exception_disabled_v = !(CLEV_HAS_EXCEPTIONS);
 
-inline static void
+static void
 abort_now(const std::error_code err,
           const std::string_view msg = "") noexcept(clev_exception_disabled_v)
 {
@@ -64,7 +62,7 @@ abort_now(const std::error_code err,
     throw exception{err};
 }
 
-inline static void exit_now(const std::error_code err) noexcept
+static void exit_now(const std::error_code err) noexcept
 {
   std::quick_exit(err.value());
 }
@@ -75,7 +73,7 @@ template<typename value_t>
 using expected = std::expected<value_t, std::error_code>;
 
 template<typename value_t = void>
-inline static auto
+static auto
 abort_now(const std::string_view msg = "") noexcept(clev_exception_disabled_v)
 {
   return [=](const std::error_code err) -> expected<value_t> {
@@ -86,7 +84,7 @@ abort_now(const std::string_view msg = "") noexcept(clev_exception_disabled_v)
 }
 
 template<typename value_t = void>
-inline static auto exit_now() noexcept(clev_exception_disabled_v)
+static auto exit_now() noexcept(clev_exception_disabled_v)
 {
   return [](const std::error_code err) -> expected<value_t> {
     exit_now(err);
@@ -95,14 +93,25 @@ inline static auto exit_now() noexcept(clev_exception_disabled_v)
   };
 }
 
-template<typename enum_t>
-inline clev::unexpected make_unexpected(const int err) noexcept
+static constexpr expected<void> done = {};
+
+auto invoke(auto f)
 {
-  return clev::unexpected{static_cast<enum_t>(err)};
+  return [f]<typename... args_t>(args_t&&... v) {
+    f(std::forward<args_t>(v)...);
+
+    return done;
+  };
 }
 
 template<typename enum_t>
-inline clev::expected<void> make_expected(const int err) noexcept
+unexpected make_unexpected(const int err) noexcept
+{
+  return unexpected{static_cast<enum_t>(err)};
+}
+
+template<typename enum_t>
+expected<void> make_expected(const int err) noexcept
 {
   if (err != 0)
     return make_unexpected<enum_t>(err);

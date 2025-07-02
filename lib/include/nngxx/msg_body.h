@@ -33,37 +33,32 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "nngxx/err.h"
 #include "nngxx/msg.h"
 
-#include <cstring>
-
 namespace nngxx
 {
 
 struct msg_body
 {
-  msg_body(nng_msg* m) noexcept
+  explicit msg_body(nng_msg* m) noexcept
     : m{m}
   {
   }
 
-  [[nodiscard]] inline std::size_t size() const noexcept
-  {
-    return nng_msg_len(m);
-  }
+  [[nodiscard]] std::size_t size() const noexcept { return nng_msg_len(m); }
 
   template<typename char_t>
-  [[nodiscard]] inline char_t* data() noexcept
+  [[nodiscard]] char_t* data() noexcept
   {
     return static_cast<char_t*>(nng_msg_body(m));
   }
 
   template<typename char_t>
-  [[nodiscard]] inline const char_t* data() const noexcept
+  [[nodiscard]] const char_t* data() const noexcept
   {
     return static_cast<const char_t*>(nng_msg_body(m));
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<void> append(uint_t x) noexcept
+  [[nodiscard]] clev::expected<void> append(uint_t x) noexcept
   {
     int (*append)(nng_msg*, uint_t);
 
@@ -80,17 +75,18 @@ struct msg_body
       append = nng_msg_append_u64;
     }
 
-    return nngxx::invoke(append, m, x);
+    return invoke(append, m, x);
   }
 
-  [[nodiscard]] inline clev::expected<void> append(const void* val,
-                                                   std::size_t sz) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] clev::expected<void> append(const void* val,
+                                            const std::size_t sz) noexcept
   {
-    return nngxx::invoke(nng_msg_append, m, val, sz);
+    return invoke(nng_msg_append, m, val, sz);
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<void> insert(uint_t x) noexcept
+  [[nodiscard]] clev::expected<void> insert(uint_t x) noexcept
   {
     int (*insert)(nng_msg*, uint_t);
 
@@ -107,17 +103,18 @@ struct msg_body
       insert = nng_msg_insert_u64;
     }
 
-    return nngxx::invoke(insert, m, x);
+    return invoke(insert, m, x);
   }
 
-  [[nodiscard]] inline clev::expected<void> insert(const void* val,
-                                                   std::size_t sz) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] clev::expected<void> insert(const void* val,
+                                            const std::size_t sz) noexcept
   {
-    return nngxx::invoke(nng_msg_insert, m, val, sz);
+    return invoke(nng_msg_insert, m, val, sz);
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<uint_t> trim() noexcept
+  [[nodiscard]] clev::expected<uint_t> trim() noexcept
   {
     uint_t x;
 
@@ -136,16 +133,17 @@ struct msg_body
       trim = nng_msg_trim_u64;
     }
 
-    return nngxx::invoke(trim, m, &x).transform([&]() { return x; });
+    return invoke(trim, m, &x).transform([&] { return x; });
   }
 
-  [[nodiscard]] inline clev::expected<void> trim(std::size_t sz) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] clev::expected<void> trim(const std::size_t sz) noexcept
   {
-    return nngxx::invoke(nng_msg_trim, m, sz);
+    return invoke(nng_msg_trim, m, sz);
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<uint_t> chop() noexcept
+  [[nodiscard]] clev::expected<uint_t> chop() noexcept
   {
     uint_t x;
 
@@ -164,22 +162,23 @@ struct msg_body
       chop = nng_msg_chop_u64;
     }
 
-    return nngxx::invoke(chop, m, &x).transform([&]() { return x; });
+    return invoke(chop, m, &x).transform([&] { return x; });
   }
 
-  [[nodiscard]] inline clev::expected<void> chop(std::size_t sz) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] clev::expected<void> chop(const std::size_t sz) noexcept
   {
-    return nngxx::invoke(nng_msg_chop, m, sz);
+    return invoke(nng_msg_chop, m, sz);
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<uint_t>
+  [[nodiscard]] clev::expected<uint_t>
   read(const std::size_t offset = 0) const noexcept
   {
     uint_t v;
 
     if (offset + sizeof(decltype(v)) > size())
-      return clev::unexpected{nngxx::cpp::err::invalid_memory};
+      return clev::unexpected{cpp::err::invalid_memory};
 
     std::memcpy(&v, data<char>() + offset, sizeof(decltype(v)));
 
@@ -187,11 +186,11 @@ struct msg_body
   }
 
   template<uint_c uint_t>
-  [[nodiscard]] inline clev::expected<void>
+  [[nodiscard]] clev::expected<void>
   write(uint_t v, const std::size_t offset = 0) noexcept
   {
     if (offset + sizeof(decltype(v)) > size())
-      return clev::unexpected{nngxx::cpp::err::invalid_memory};
+      return clev::unexpected{cpp::err::invalid_memory};
 
     std::memcpy(data<char>() + offset, static_cast<void*>(&v),
                 sizeof(decltype(v)));
@@ -205,12 +204,13 @@ private:
 
 } // namespace nngxx
 
-nngxx::msg_body nngxx::msg_view::body() noexcept
+inline nngxx::msg_body nngxx::msg_view::body() noexcept
 {
   return nngxx::msg_body{v};
 }
 
-const nngxx::msg_body nngxx::msg_view::body() const noexcept
+// ReSharper disable once CppConstValueFunctionReturnType
+inline const nngxx::msg_body nngxx::msg_view::body() const noexcept
 {
   return nngxx::msg_body{v};
 }

@@ -48,9 +48,9 @@ struct value : clev::value<nng_t>
 
   using parent::parent;
 
-  using nng_type = parent::value_type;
+  using nng_type = typename parent::value_type;
 
-  [[nodiscard]] inline static bool is_valid(nng_type v) noexcept
+  [[nodiscard]] static bool is_valid(nng_type v) noexcept
   {
     if constexpr (std::is_pointer_v<nng_type>)
       return v != nullptr;
@@ -60,26 +60,26 @@ struct value : clev::value<nng_t>
 
   /// @name options setters
 
-  [[nodiscard]] inline clev::expected<void>
-  set_recv_timeout(nng_duration d) noexcept
+  [[nodiscard]] clev::expected<void>
+  set_recv_timeout(const nng_duration d) noexcept
   {
     return set_option<opt::recvtimeo>(d);
   }
 
-  [[nodiscard]] inline clev::expected<void>
-  set_send_timeout(nng_duration d) noexcept
+  [[nodiscard]] clev::expected<void>
+  set_send_timeout(const nng_duration d) noexcept
   {
     return set_option<opt::sendtimeo>(d);
   }
 
-  [[nodiscard]] inline clev::expected<void>
-  set_req_resend_time(nng_duration d) noexcept
+  [[nodiscard]] clev::expected<void>
+  set_req_resend_time(const nng_duration d) noexcept
   {
     return set_option<opt::req_resend_time>(d);
   }
 
-  [[nodiscard]] inline clev::expected<void>
-  set_req_resend_tick(nng_duration d) noexcept
+  [[nodiscard]] clev::expected<void>
+  set_req_resend_tick(const nng_duration d) noexcept
   {
     return set_option<opt::req_resend_tick>(d);
   }
@@ -87,31 +87,28 @@ struct value : clev::value<nng_t>
   /// @name options getters
 
   // TODO: use me
-  [[nodiscard]] inline clev::expected<const char*>
-  get_sock_name() const noexcept
+  [[nodiscard]] clev::expected<const char*> get_sock_name() const noexcept
   {
     return get_option<opt::sockname>();
   }
 
-  [[nodiscard]] inline clev::expected<nng_duration>
-  get_recv_timeout() const noexcept
+  [[nodiscard]] clev::expected<nng_duration> get_recv_timeout() const noexcept
   {
     return get_option<opt::recvtimeo>();
   }
 
-  [[nodiscard]] inline clev::expected<nng_duration>
-  get_send_timeout() const noexcept
+  [[nodiscard]] clev::expected<nng_duration> get_send_timeout() const noexcept
   {
     return get_option<opt::sendtimeo>();
   }
 
-  [[nodiscard]] inline clev::expected<nng_duration>
+  [[nodiscard]] clev::expected<nng_duration>
   get_req_resend_time() const noexcept
   {
     return get_option<opt::req_resend_time>();
   }
 
-  [[nodiscard]] inline clev::expected<nng_duration>
+  [[nodiscard]] clev::expected<nng_duration>
   get_req_resend_tick() const noexcept
   {
     return get_option<opt::req_resend_tick>();
@@ -119,14 +116,13 @@ struct value : clev::value<nng_t>
 
 private:
   template<opt opt_v, nng_value_c nng_value_t>
-  [[nodiscard]] inline clev::expected<void> set_option(nng_value_t val)
+  [[nodiscard]] clev::expected<void> set_option(nng_value_t val)
   {
     return opt_setter<opt_v, nng_type>{}(parent::v, val);
   }
 
   template<opt opt_v>
-  [[nodiscard]] inline clev::expected<opt_to_nng_type_t<opt_v>>
-  get_option() const
+  [[nodiscard]] clev::expected<opt_to_nng_type_t<opt_v>> get_option() const
   {
     return opt_getter<opt_v, nng_type>{}(parent::v);
   }

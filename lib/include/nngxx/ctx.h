@@ -38,8 +38,7 @@ using ctx_view = clev::iface<nng_ctx>;
 
 using ctx = clev::own<nng_ctx>;
 
-[[nodiscard]] inline static clev::expected<ctx>
-make_ctx(socket_view& s) noexcept
+[[nodiscard]] static clev::expected<ctx> make_ctx(socket_view& s) noexcept
 {
   return ctx::open(s);
 }

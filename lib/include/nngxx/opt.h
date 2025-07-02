@@ -29,6 +29,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "err.h"
+
 #include <nng/nng.h>
 #include <nng/protocol/reqrep0/req.h>
 
@@ -162,6 +164,10 @@ template<opt o>
   {
     return NNG_OPT_REQ_RESENDTICK;
   }
+
+  clev::abort_now(cpp::err::unknown_option, "Unknown option");
+
+  return {};
 }
 
 template<opt o>
@@ -251,13 +257,17 @@ template<opt o>
   {
     return opt_overload::duration;
   }
+
+  clev::abort_now(cpp::err::unknown_option, "Unknown option");
+
+  return {};
 }
 
 template<opt o>
 struct opt_to_nng_type;
 
 template<opt o>
-using opt_to_nng_type_t = opt_to_nng_type<o>::return_type;
+using opt_to_nng_type_t = typename opt_to_nng_type<o>::return_type;
 
 template<>
 struct opt_to_nng_type<opt::sockname>

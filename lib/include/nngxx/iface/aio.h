@@ -40,50 +40,51 @@ struct clev::iface<nng_aio*> : nngxx::value<nng_aio*>
 {
   using value::value;
 
-  inline static nng_aio* empty() noexcept { return nullptr; }
+  static nng_aio* empty() noexcept { return nullptr; }
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_aio** v) noexcept
+  [[nodiscard]] static expected<void> destroy(nng_aio** v) noexcept
   {
-    return nngxx::invoke(nng_aio_free, *v).and_then([&]() {
+    return nngxx::invoke(nng_aio_free, *v).and_then(invoke([&] {
       *v = empty();
-
-      return clev::expected<void>{};
-    });
+    }));
   }
 
-  [[nodiscard]] inline static clev::expected<nng_aio*> alloc(void (*cb)(void*),
-                                                             void* arg) noexcept
+  [[nodiscard]] static expected<nng_aio*> alloc(void (*cb)(void*),
+                                                void* arg) noexcept
   {
     return nngxx::make(nng_aio_alloc, cb, arg);
   }
 
-  inline void wait() const noexcept { nng_aio_wait(v); }
+  void wait() const noexcept { nng_aio_wait(v); }
 
-  inline void abort(nngxx::c::err err) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void abort(nngxx::c::err err) noexcept
   {
     nng_aio_abort(v, static_cast<int>(err));
   }
 
-  inline void cancel() noexcept { nng_aio_cancel(v); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void cancel() noexcept { nng_aio_cancel(v); }
 
-  inline void stop() noexcept { nng_aio_stop(v); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void stop() noexcept { nng_aio_stop(v); }
 
-  [[nodiscard]] inline nngxx::msg release_msg() noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] nngxx::msg release_msg() noexcept
   {
-    auto m = nng_aio_get_msg(v);
+    const auto m = nng_aio_get_msg(v);
 
     nng_aio_set_msg(v, nullptr);
 
     return m;
   }
 
-  [[nodiscard]] inline clev::expected<void> result() const noexcept
+  [[nodiscard]] expected<void> result() const noexcept
   {
+    // clev::exec_on(&result, *this)
     return nngxx::invoke(nng_aio_result, v);
   }
 
-  inline void set_msg(nngxx::msg m) noexcept
-  {
-    nng_aio_set_msg(v, m.release());
-  }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void set_msg(nngxx::msg m) noexcept { nng_aio_set_msg(v, m.release()); }
 };

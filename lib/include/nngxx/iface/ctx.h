@@ -40,27 +40,25 @@ struct clev::iface<nng_ctx> : nngxx::value<nng_ctx>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_ctx empty() noexcept
-  {
-    return NNG_CTX_INITIALIZER;
-  };
+  [[nodiscard]] static nng_ctx empty() noexcept { return NNG_CTX_INITIALIZER; };
 
-  [[nodiscard]] inline static clev::expected<void> destroy(nng_ctx* v) noexcept
+  [[nodiscard]] static expected<void> destroy(const nng_ctx* v) noexcept
   {
     return nngxx::invoke(nng_ctx_close, *v);
   }
 
-  [[nodiscard]] static inline clev::expected<nng_ctx>
-  open(nngxx::socket_view& s) noexcept
+  [[nodiscard]] static expected<nng_ctx> open(nngxx::socket_view& s) noexcept
   {
     return nngxx::make(nng_ctx_open, static_cast<nng_socket>(s));
   }
 
-  [[nodiscard]] inline int id() const noexcept { return nng_ctx_id(v); }
+  [[nodiscard]] int id() const noexcept { return nng_ctx_id(v); }
 
-  inline void send(nngxx::aio_view& a) noexcept { nng_ctx_send(v, a); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void send(nngxx::aio_view& a) noexcept { nng_ctx_send(v, a); }
 
-  inline void recv(nngxx::aio_view& a) noexcept { nng_ctx_recv(v, a); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void recv(nngxx::aio_view& a) noexcept { nng_ctx_recv(v, a); }
 };
 
 static_assert(nngxx_socket_is_really_needed_v);

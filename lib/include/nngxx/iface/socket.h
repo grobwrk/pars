@@ -33,37 +33,39 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "nngxx/err.h"
 #include "nngxx/iface/value.h"
 #include "nngxx/pipe.h"
-#include "nngxx/socket_decl.h"
 
 template<>
 struct clev::iface<nng_socket> : nngxx::value<nng_socket>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_socket empty() noexcept
+  [[nodiscard]] static nng_socket empty() noexcept
   {
     return NNG_SOCKET_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void>
-  destroy(nng_socket* v) noexcept
+  // ReSharper disable once CppParameterMayBeConstPtrOrRef
+  [[nodiscard]] static expected<void> destroy(nng_socket* v) noexcept
   {
     return nngxx::invoke(nng_socket_close, *v);
   }
 
-  [[nodiscard]] inline int id() const noexcept { return nng_socket_id(v); }
+  [[nodiscard]] int id() const noexcept { return nng_socket_id(v); }
 
-  inline void send(nngxx::aio_view& a) noexcept { nng_send_aio(v, a); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void send(nngxx::aio_view& a) noexcept { nng_send_aio(v, a); }
 
-  inline void recv(nngxx::aio_view& a) noexcept { nng_recv_aio(v, a); }
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  void recv(nngxx::aio_view& a) noexcept { nng_recv_aio(v, a); }
 
-  [[nodiscard]] inline clev::expected<void>
-  pipe_notify(nngxx::pipe_ev ev, nng_pipe_cb cb, void* arg) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] expected<void>
+  pipe_notify(const nngxx::pipe_ev ev, const nng_pipe_cb cb, void* arg) noexcept
   {
     return nngxx::invoke(nng_pipe_notify, v, cast_pipe_ev(ev), cb, arg);
   }
 
-  [[nodiscard]] inline clev::expected<const char*> proto_name() const noexcept
+  [[nodiscard]] expected<const char*> proto_name() const noexcept
   {
     return nngxx::read<const char*>(
       std::bind(nng_socket_proto_name, v, std::placeholders::_1));

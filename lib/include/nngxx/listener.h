@@ -38,7 +38,7 @@ using listener_view = clev::iface<nng_listener>;
 
 using listener = clev::own<nng_listener>;
 
-[[nodiscard]] inline static clev::expected<listener>
+[[nodiscard]] static clev::expected<listener>
 make_listener(socket_view& s, const char* addr) noexcept
 {
   return listener::create(s, addr);

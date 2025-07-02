@@ -36,12 +36,12 @@ namespace nngxx
 
 struct msg_header
 {
-  msg_header(nng_msg* m) noexcept
+  explicit msg_header(nng_msg* m) noexcept
     : m{m}
   {
   }
 
-  [[nodiscard]] inline std::size_t size() const noexcept
+  [[nodiscard]] std::size_t size() const noexcept
   {
     return nng_msg_header_len(m);
   }
@@ -52,12 +52,13 @@ private:
 
 } // namespace nngxx
 
-nngxx::msg_header nngxx::msg_view::header() noexcept
+inline nngxx::msg_header nngxx::msg_view::header() noexcept
 {
   return nngxx::msg_header{v};
 }
 
-const nngxx::msg_header nngxx::msg_view::header() const noexcept
+// ReSharper disable once CppConstValueFunctionReturnType
+inline const nngxx::msg_header nngxx::msg_view::header() const noexcept
 {
   return nngxx::msg_header{v};
 }

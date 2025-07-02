@@ -40,24 +40,24 @@ struct clev::iface<nng_dialer> : nngxx::value<nng_dialer>
 {
   using value::value;
 
-  [[nodiscard]] inline static nng_dialer empty() noexcept
+  [[nodiscard]] static nng_dialer empty() noexcept
   {
     return NNG_DIALER_INITIALIZER;
   };
 
-  [[nodiscard]] inline static clev::expected<void>
-  destroy(nng_dialer* d) noexcept
+  [[nodiscard]] static expected<void> destroy(const nng_dialer* d) noexcept
   {
     return nngxx::invoke(nng_dialer_close, *d);
   }
 
-  [[nodiscard]] inline static clev::expected<nng_dialer>
-  create(nngxx::socket_view& s, const char* addr) noexcept
+  [[nodiscard]] static expected<nng_dialer> create(nngxx::socket_view& s,
+                                                   const char* addr) noexcept
   {
     return nngxx::make(nng_dialer_create, static_cast<nng_socket>(s), addr);
   }
 
-  [[nodiscard]] inline clev::expected<void> start(int flags = 0) noexcept
+  // ReSharper disable once CppMemberFunctionMayBeConst
+  [[nodiscard]] expected<void> start(const int flags = 0) noexcept
   {
     return nngxx::invoke(nng_dialer_start, v, flags);
   }

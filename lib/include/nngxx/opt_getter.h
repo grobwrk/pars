@@ -47,8 +47,7 @@ struct opt_getter
 
   using return_type = opt_to_nng_type_t<opt_v>;
 
-  [[nodiscard]] inline clev::expected<return_type>
-  operator()(nng_type obj) noexcept
+  [[nodiscard]] clev::expected<return_type> operator()(nng_type obj) noexcept
   {
     int (*get)(nng_type, const char*, return_type*);
 
@@ -135,7 +134,6 @@ struct opt_getter
       else if constexpr (overload == opt_overload::sockaddr)
         get = nng_pipe_get_addr;
     }
-
 
     return nngxx::read<return_type>(
       std::bind(get, obj, opt, std::placeholders::_1));

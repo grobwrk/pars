@@ -69,4 +69,5 @@ concept move_only_assignable_c =
 
 template<typename value_t>
 concept movable_only_c = std::movable<value_t> && !std::copyable<value_t>;
+
 } // namespace nngxx
