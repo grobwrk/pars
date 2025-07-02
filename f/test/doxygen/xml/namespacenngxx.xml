@@ -664,7 +664,7 @@
         <references refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" compoundref="clev_2err_8h" startline="108" endline="111">clev::make_unexpected</references>
         <referencedby refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" compoundref="opt__getter_8h" startline="50" endline="140">nngxx::opt_getter&lt; opt_v, nng_t &gt;::operator()</referencedby>
       </memberdef>
-      <memberdef kind="function" id="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename ret_t</type>
@@ -688,13 +688,14 @@
           <type>args_t...</type>
           <declname>args</declname>
         </param>
+    <requiresclause>(!std::is_same_v&lt;ret_t, void&gt;)    </requiresclause>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="200" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="200" bodyend="204"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="201" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="201" bodyend="205"/>
         <references refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" compoundref="clev_2err_8h" startline="114" endline="120">clev::make_expected</references>
         <referencedby refid="structnngxx_1_1msg__body_1a4c0ea0cca359c8a4c334007bb9d85128" compoundref="msg__body_8h" startline="84" endline="88">nngxx::msg_body::append</referencedby>
         <referencedby refid="structnngxx_1_1msg__body_1aaaa539865ac45e2e517d734891c2ff85" compoundref="msg__body_8h" startline="63" endline="81">nngxx::msg_body::append</referencedby>
@@ -733,7 +734,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="207" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="207" bodyend="213"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="208" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="208" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a5fb155c4d0007959b70c15da8b977905" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">listener</ref> &gt;</type>

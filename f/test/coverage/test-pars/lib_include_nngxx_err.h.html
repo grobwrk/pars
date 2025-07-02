@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:16:14 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">36</td>
@@ -234,6 +234,7 @@
              : }
              : 
              : template&lt;typename ret_t, typename... args_t&gt;
+             :   requires(!std::is_same_v&lt;ret_t, void&gt;)
              : [[nodiscard]] clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
              :                                           args_t... args) noexcept
              : {

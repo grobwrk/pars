@@ -18,7 +18,7 @@ var searchData=
   ['inval_15',['inval',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a15e757c159904fb372bd77be464a4586',1,'nngxx::c']]],
   ['invalid_5fmemory_16',['invalid_memory',['../namespacenngxx_1_1cpp.html#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3',1,'nngxx::cpp']]],
   ['invalid_5fuuid_17',['invalid_uuid',['../namespacepars.html#afcdb266fe199935265e3d7a45b4edebfa8628bbec21aae425790e99664e431edc',1,'pars']]],
-  ['invoke_18',['invoke',['../namespaceclev.html#ab4b069772a2454357f6a59a47cfaddf6',1,'clev::invoke()'],['../namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204',1,'nngxx::invoke(ret_t(*f)(args_t...), args_t... args) noexcept'],['../namespacenngxx.html#a0c256ba910e505bd0bef5e615b5c8023',1,'nngxx::invoke(void(*f)(args_t...), args_t... args) noexcept']]],
+  ['invoke_18',['invoke',['../namespaceclev.html#ab4b069772a2454357f6a59a47cfaddf6',1,'clev::invoke()'],['../namespacenngxx.html#a9bc3de731878413a108495d43a72ce9a',1,'nngxx::invoke(ret_t(*f)(args_t...), args_t... args) noexcept'],['../namespacenngxx.html#a0c256ba910e505bd0bef5e615b5c8023',1,'nngxx::invoke(void(*f)(args_t...), args_t... args) noexcept']]],
   ['is_5ferror_5fcode_5fenum_3c_20nngxx_3a_3ac_3a_3aerr_20_3e_19',['is_error_code_enum&lt; nngxx::c::err &gt;',['../structstd_1_1is__error__code__enum_3_01nngxx_1_1c_1_1err_01_4.html',1,'std']]],
   ['is_5ferror_5fcode_5fenum_3c_20nngxx_3a_3acpp_3a_3aerr_20_3e_20',['is_error_code_enum&lt; nngxx::cpp::err &gt;',['../structstd_1_1is__error__code__enum_3_01nngxx_1_1cpp_1_1err_01_4.html',1,'std']]],
   ['is_5ferror_5fcode_5fenum_3c_20pars_3a_3aerror_20_3e_21',['is_error_code_enum&lt; pars::error &gt;',['../structstd_1_1is__error__code__enum_3_01pars_1_1error_01_4.html',1,'std']]],

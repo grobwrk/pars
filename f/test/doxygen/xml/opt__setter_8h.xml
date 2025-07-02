@@ -713,7 +713,7 @@
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set<sp/>=<sp/>nng_dialer_set_addr;</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(set,<sp/>obj,<sp/><ref refid="structnngxx_1_1opt__setter_1ab03b5262fffaf48994787de1b815d3d7" kindref="member">opt</ref>,<sp/>val);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" kindref="member">nngxx::invoke</ref>(set,<sp/>obj,<sp/><ref refid="structnngxx_1_1opt__setter_1ab03b5262fffaf48994787de1b815d3d7" kindref="member">opt</ref>,<sp/>val);</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="123"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
