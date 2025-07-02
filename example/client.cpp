@@ -35,10 +35,9 @@ namespace pars_example::apps
 using namespace event;
 using namespace resource;
 
-/// Runs the client component as an single application (req)
-class client : public app::single<comp::client>
+/// Runs the client component as a single application (req)
+class client final : public app::single<comp::client>
 {
-private:
   /// @name Types
 
   using parent_type = self_type;
@@ -58,7 +57,8 @@ private:
 
   /// @name App State
 
-  app::state_machine<client_state> state = {client_state::creating};
+  app::state_machine<client_state> state =
+    app::state_machine{client_state::creating};
 
   /// @name Constructors
 
@@ -66,13 +66,13 @@ private:
 
   /// @name Initialization
 
-  void usage()
+  static void usage()
   {
     throw std::invalid_argument(
       "Usage: ./client service_cmode service_addr work_id fast_or_slow N");
   }
 
-  void startup(int argc, char** argv) override
+  void startup(const int argc, char** argv) override
   {
     enable_source_loc_logging();
 

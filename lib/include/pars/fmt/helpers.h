@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include "pars/concept/net.h"
-#include "pars/net/pipe.h"
+#include "pars/net/pipe_view.h"
 
 #include <format>
 
@@ -41,7 +41,7 @@ namespace pars::f
 template<net::tool_c tool_t>
 struct pntl
 {
-  net::pipe p;
+  net::pipe_view p;
   tool_t& t;
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())

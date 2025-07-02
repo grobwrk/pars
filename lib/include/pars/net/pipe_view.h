@@ -29,37 +29,39 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "pars/fmt/nng.h"
+
 #include "nngxx/pipe.h"
 #include "nngxx/socket.h"
-
-#include "pars/fmt/nng.h"
 
 #include <format>
 
 namespace pars::net
 {
 
-class pipe : public nngxx::pipe_view
+class pipe_view : public nngxx::pipe_view
 {
 public:
-  pipe()
+  pipe_view()
     : id_m{0}
     , socket_id_m{0}
   {
   }
 
-  pipe(const nngxx::pipe_view& pv) noexcept
+  // ReSharper disable once CppNonExplicitConvertingConstructor
+  pipe_view( // NOLINT(*-explicit-constructor)
+    const nngxx::pipe_view& pv) noexcept
     : nngxx::pipe_view{pv}
     , id_m{pv.id()}
     , socket_id_m{pv.get_socket().id()}
   {
   }
 
-  int id() const noexcept { return id_m; }
+  [[nodiscard]] int id() const noexcept { return id_m; }
 
   [[nodiscard]] int socket_id() const { return socket_id_m; }
 
-  explicit operator bool() { return nngxx::pipe_view::operator bool(); }
+  explicit operator bool() const { return nngxx::pipe_view::operator bool(); }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {

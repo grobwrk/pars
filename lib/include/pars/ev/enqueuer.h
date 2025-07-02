@@ -63,7 +63,7 @@ public:
   }
 
   template<network_event_c event_t, net::tool_c tool_t>
-  void queue_fire(event_t ev, const int s_id, tool_t& t, net::pipe p)
+  void queue_fire(event_t ev, const int s_id, tool_t& t, net::pipe_view p)
   {
     if constexpr (std::is_same_v<event_t, creating_pipe> ||
                   std::is_same_v<event_t, pipe_created> ||
@@ -89,13 +89,13 @@ public:
   }
 
   template<network_event_c event_t, net::tool_c tool_t>
-  void queue_sent(event_t ev, int s_id, tool_t& t, net::pipe p)
+  void queue_sent(event_t ev, int s_id, tool_t& t, net::pipe_view p)
   {
     dispatcher_m.queue_back(sent{std::move(ev), {s_id, t, p}});
   }
 
   template<net::tool_c tool_t>
-  void queue_received(nngxx::msg m, int s_id, tool_t& t, net::pipe p)
+  void queue_received(nngxx::msg m, int s_id, tool_t& t, net::pipe_view p)
   {
     dispatcher_m.queue_back(received{std::move(m), {s_id, t, p}});
   }

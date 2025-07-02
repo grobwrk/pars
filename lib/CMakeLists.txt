@@ -47,7 +47,7 @@ set(PARS_HEADERS
   "include/pars/net/dir.h"
   "include/pars/net/hash.h"
   "include/pars/net/op.h"
-  "include/pars/net/pipe.h"
+  "include/pars/net/pipe_view.h"
   "include/pars/net/pull.h"
   "include/pars/net/push.h"
   "include/pars/net/rep.h"

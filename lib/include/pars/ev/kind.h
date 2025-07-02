@@ -71,16 +71,16 @@ struct received<nngxx::msg> : base_kind<received, nngxx::msg>
 {
   using event_type = nngxx::msg;
 
-  using base_kind<received, event_type>::base_kind;
+  using base_kind::base_kind;
 
   static constexpr std::string_view uuid =
     "b63dab32-1bc2-46ef-9ca0-0e1530f5c026";
 
-  std::size_t msg_hash() const
+  [[nodiscard]] std::size_t msg_hash() const
   {
-    auto h1 = hash_from_uuid(uuid);
+    constexpr auto h1 = hash_from_uuid(uuid);
 
-    auto h2 = hash_from_msg(event());
+    const auto h2 = hash_from_msg(event());
 
     return h1 ^ (h2 << 1);
   }

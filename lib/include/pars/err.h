@@ -41,20 +41,21 @@ enum class error
   success = 0
 };
 
-inline static const std::error_category& error_category() noexcept
+static const std::error_category& error_category() noexcept
 {
   static struct : std::error_category
   {
-    virtual const char* name() const noexcept override { return "pars"; }
+    [[nodiscard]] const char* name() const noexcept override { return "pars"; }
 
-    virtual std::string message(int e) const override
+    [[nodiscard]] std::string message(int e) const override
     {
       switch (static_cast<error>(e))
       {
       case error::success:
         return "success";
 
-        break;
+      default:
+        return "unknown";
       }
     }
   } error_category;
@@ -62,9 +63,9 @@ inline static const std::error_category& error_category() noexcept
   return error_category;
 }
 
-inline std::error_code make_error_code(pars::error e) noexcept
+inline std::error_code make_error_code(error e) noexcept
 {
-  return std::error_code(static_cast<int>(e), pars::error_category());
+  return {static_cast<int>(e), error_category()};
 }
 
 } // namespace pars

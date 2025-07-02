@@ -83,7 +83,7 @@ struct state_machine
 {
   using state_type = state_t;
 
-  state_machine(state_type s)
+  explicit state_machine(state_type s)
     : state_m{s}
   {
   }
@@ -111,7 +111,7 @@ struct state_machine
   {
     if (state_m != s)
       throw std::runtime_error(
-        std::format("Wrong State \"{}\" [must be \"{}\"]", state_m, s));
+        std::format(R"(Wrong State "{}" [must be "{}"])", state_m, s));
   }
 
   void next(state_type s)
@@ -119,8 +119,7 @@ struct state_machine
     if (next_m)
       throw std::runtime_error("Another transition in progress!");
 
-    pars::debug(SL, lf::app, "Start transition from \"{}\" to \"{}\"", state_m,
-                s);
+    debug(SL, lf::app, R"(Start transition from "{}" to "{}")", state_m, s);
 
     next_m = s;
   }
@@ -130,8 +129,8 @@ struct state_machine
     if (!next_m)
       throw std::runtime_error("Rollback while no transition!");
 
-    pars::debug(SL, lf::app, "Rollback transition from \"{}\" to \"{}\"",
-                state_m, *next_m);
+    debug(SL, lf::app, R"(Rollback transition from "{}" to "{}")", state_m,
+          *next_m);
 
     next_m.reset();
   }
@@ -141,8 +140,8 @@ struct state_machine
     if (!next_m)
       throw std::runtime_error("Commit while no transition!");
 
-    pars::debug(SL, lf::app, "Commit transition from \"{}\" to \"{}\"", state_m,
-                *next_m);
+    debug(SL, lf::app, R"(Commit transition from "{}" to "{}")", state_m,
+          *next_m);
 
     state_m = *next_m;
 
@@ -173,8 +172,8 @@ struct state_machine
 
   void reset()
   {
-    pars::debug(SL, lf::app, "Reset State to \"{}\" [was \"{}\"]",
-                state_type::INITIALIZING, state_m);
+    debug(SL, lf::app, R"(Reset State to "{}" [was "{}"])",
+          state_type::INITIALIZING, state_m);
 
     state_m = state_type::INITIALIZING;
   }

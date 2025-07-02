@@ -54,11 +54,10 @@ enum class cmode
 
 static cmode cmode_from_string(const char* str)
 {
-  auto str_view = std::string_view(str);
-
-  if (str_view.compare("dial") == 0)
+  if (const auto str_view = std::string_view(str); str_view == "dial")
     return cmode::dial;
-  else if (str_view.compare("listen") == 0)
+
+  else if (str_view == "listen")
     return cmode::listen;
 
   throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
@@ -80,7 +79,11 @@ public:
 
   ~socket() { stop(); }
 
-  operator tool_view() { return tool_view{socket_m}; }
+  // ReSharper disable once CppNonExplicitConversionOperator
+  operator tool_view() const // NOLINT(*-explicit-constructor)
+  {
+    return tool_view{socket_m};
+  }
 
   void set_options(const socket_opt opts)
   {
@@ -99,7 +102,7 @@ public:
         .or_else(clev::abort_now());
   }
 
-  socket_opt options() const
+  [[nodiscard]] socket_opt options() const
   {
     return {
       .recv_timeout = socket_m.get_recv_timeout()
@@ -157,7 +160,7 @@ public:
   void recv_aio(nngxx::aio_view& a) { socket_m.recv(a); }
 
   template<ev::event_c event_t>
-  void send(event_t ev, pipe p = {})
+  void send(event_t ev, pipe_view p = {})
   {
     op_m.send(router_m, *this, p, ev);
   }
@@ -166,11 +169,11 @@ public:
 
   void stop() { op_m.stop(); }
 
-  int id() const { return socket_m.id(); }
+  [[nodiscard]] int id() const { return socket_m.id(); }
 
-  int socket_id() const { return id(); }
+  [[nodiscard]] int socket_id() const { return id(); }
 
-  const char* proto_name() const
+  [[nodiscard]] const char* proto_name() const
   {
     return socket_m.proto_name().value_or("<not-found>");
   }
@@ -181,35 +184,35 @@ public:
   }
 
 private:
-  void pipe_cb(nng_pipe cp, nng_pipe_ev ev)
+  void pipe_cb(const nng_pipe cp, const nng_pipe_ev ev)
   {
-    auto pv = nngxx::pipe_view{cp};
+    const auto pv = nngxx::pipe_view{cp};
 
     switch (ev)
     {
     case NNG_PIPE_EV_ADD_PRE: {
-      pars::debug(SL, lf::net, "Pipe 0x{:X} creating! [{}]", pv.id(), *this);
+      debug(SL, lf::net, "Pipe 0x{:X} creating! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::creating_pipe{}, id(), *this, net::pipe{pv});
+      router_m.queue_fire(ev::creating_pipe{}, id(), *this, net::pipe_view{pv});
     }
     break;
 
     case NNG_PIPE_EV_ADD_POST: {
-      pars::debug(SL, lf::net, "Pipe 0x{:X} created! [{}]", pv.id(), *this);
+      debug(SL, lf::net, "Pipe 0x{:X} created! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_created{}, id(), *this, net::pipe{pv});
+      router_m.queue_fire(ev::pipe_created{}, id(), *this, net::pipe_view{pv});
     }
     break;
 
     case NNG_PIPE_EV_REM_POST: {
-      pars::debug(SL, lf::net, "Pipe 0x{:X} removed! [{}]", pv.id(), *this);
+      debug(SL, lf::net, "Pipe 0x{:X} removed! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_removed{}, id(), *this, net::pipe{pv});
+      router_m.queue_fire(ev::pipe_removed{}, id(), *this, net::pipe_view{pv});
     }
     break;
 
     case NNG_PIPE_EV_NUM: {
-      pars::debug(SL, lf::net, "Pipe 0x{:X} num notified", pv.id());
+      debug(SL, lf::net, "Pipe 0x{:X} num notified", pv.id());
     }
     break;
     }
@@ -221,7 +224,7 @@ private:
       static_cast<socket*>(self)->pipe_cb(p, ev);
     };
 
-    // NOTE: in the following calles we pass this, hence we cant move socket
+    // NOTE: in the following calls we pass this, hence we cant move socket
 
     socket_m.pipe_notify(nngxx::pipe_ev::add_pre, pipe_cb, this)
       .or_else(clev::abort_now());

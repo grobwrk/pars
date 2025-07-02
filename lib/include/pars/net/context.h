@@ -54,9 +54,13 @@ public:
 
   ~context() { stop(); }
 
-  operator tool_view() { return tool_view{ctx_m}; }
+  // ReSharper disable once CppNonExplicitConversionOperator
+  operator tool_view() const // NOLINT(*-explicit-constructor)
+  {
+    return tool_view{ctx_m};
+  }
 
-  void set_options(context_opt opts)
+  void set_options(const context_opt opts)
   {
     if (opts.recv_timeout)
       ctx_m.set_recv_timeout(*opts.recv_timeout).or_else(clev::abort_now());
@@ -65,7 +69,7 @@ public:
       ctx_m.set_send_timeout(*opts.send_timeout).or_else(clev::abort_now());
   }
 
-  context_opt options() const
+  [[nodiscard]] context_opt options() const
   {
     return {.recv_timeout = ctx_m.get_recv_timeout()
                               .or_else(clev::abort_now<nng_duration>())
@@ -81,7 +85,7 @@ public:
   void recv_aio(nngxx::aio_view& a) { ctx_m.recv(a); }
 
   template<ev::event_c event_t>
-  void send(event_t ev, pipe p)
+  void send(event_t ev, pipe_view p)
   {
     op_m.send(router_m, *this, p, ev);
   }
@@ -90,11 +94,11 @@ public:
 
   void stop() { op_m.stop(); }
 
-  int id() const { return ctx_m.id(); }
+  [[nodiscard]] int id() const { return ctx_m.id(); }
 
-  int socket_id() const { return sock_m.id(); }
+  [[nodiscard]] int socket_id() const { return sock_m.id(); }
 
-  const net::socket& sock() const { return sock_m; }
+  [[nodiscard]] const socket& sock() const { return sock_m; }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
@@ -105,7 +109,7 @@ private:
   ev::enqueuer& router_m;
   op op_m;
   nngxx::ctx ctx_m;
-  const net::socket& sock_m;
+  const socket& sock_m;
 };
 
 } // namespace pars::net

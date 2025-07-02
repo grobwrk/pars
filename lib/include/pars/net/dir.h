@@ -45,7 +45,7 @@ enum class dir
 template<>
 struct std::formatter<::pars::net::dir> : std::formatter<std::string>
 {
-  auto format(const ::pars::net::dir& d, std::format_context& ctx) const
+  static auto format(const ::pars::net::dir& d, std::format_context& ctx)
     -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "{}",

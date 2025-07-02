@@ -63,7 +63,8 @@ public:
   /// Get the std::type_info of the underlying variant
   [[nodiscard]] const std::type_info& type() const
   {
-    return std::visit([](auto& t) { return std::ref(typeid(t)); }, tool_m);
+    return std::visit([]<typename T>(T&) { return std::ref(typeid(T)); },
+                      tool_m);
   }
 
   /// Get a string that represents the type of the underlying variant

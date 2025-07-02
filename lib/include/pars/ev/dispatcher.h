@@ -46,14 +46,14 @@ namespace pars::ev
 class dispatcher
 {
 public:
-  dispatcher(runner& r)
+  explicit dispatcher(runner& r)
     : runner_m{r}
   {
   }
 
   /// @name Running Jobs
 
-  void run()
+  [[noreturn]] void run()
   {
     running_m = true;
 
@@ -65,8 +65,10 @@ public:
 
       cond_m.wait(lock, [&]() { return !queue_m.empty() || !running_m; });
 
+      // ReSharper disable once CppDFAConstantConditions
       if (!running_m)
       {
+        // ReSharper disable once CppDFAUnreachableCode
         cond_m.wait(lock, [&]() { return terminate_m; });
 
         return;
@@ -76,6 +78,8 @@ public:
 
       runner_m.exec(next_job(lock));
     }
+
+    // ReSharper disable once CppDFAUnreachableCode
   }
 
   void stop_running()
@@ -119,9 +123,10 @@ public:
     auto guard = std::lock_guard{mtx_m};
 
     queue(std::move(ke),
-          std::bind(std::mem_fn<void(decltype(queue_m)::value_type&&)>(
-                      &decltype(queue_m)::push_back),
-                    &queue_m, std::placeholders::_1));
+          std::bind( // NOLINT(*-avoid-bind)
+            std::mem_fn<void(decltype(queue_m)::value_type&&)>(
+              &decltype(queue_m)::push_back),
+            &queue_m, std::placeholders::_1));
   }
 
   template<template<typename> typename kind_of, event_c event_t>
@@ -131,9 +136,10 @@ public:
     auto guard = std::lock_guard{mtx_m};
 
     queue(std::move(ke),
-          std::bind(std::mem_fn<void(decltype(queue_m)::value_type&&)>(
-                      &decltype(queue_m)::push_front),
-                    &queue_m, std::placeholders::_1));
+          std::bind( // NOLINT(*-avoid-bind)
+            std::mem_fn<void(decltype(queue_m)::value_type&&)>(
+              &decltype(queue_m)::push_front),
+            &queue_m, std::placeholders::_1));
   }
 
 private:
@@ -151,7 +157,7 @@ private:
     queue_m.pop_front();
 
     // we would like to use exec(next_job(std::move(lock)))
-    // but it is implementation-defined wether the lock moved into next_job
+    // but it is implementation-defined whether the lock moved into next_job
     // is destroyed before exec is executed or not
     // https://eel.is/c++draft/expr.call#6.sentence-10
 
@@ -162,7 +168,7 @@ private:
   }
 
   bool terminate_m{false}; ///< terminate run and exit
-  bool running_m{false};   ///< wether we're running jobs
+  bool running_m{false};   ///< whether we're running jobs
   runner& runner_m;
 
   /// @name Managing Queue
@@ -180,7 +186,7 @@ private:
 
     if constexpr (internal_event_c<event_t>)
     {
-      pars::debug(SL, lf::event, "Job #{} pushed [# jobs: {}]", j_id,
+      debug(SL, lf::event, "Job #{} pushed [# jobs: {}]", j_id,
                   queue_m.size());
     }
     else if constexpr (network_event_c<event_t>)
@@ -189,7 +195,7 @@ private:
 
       runner_m.associate_job_to_pipe(j_id, p_id);
 
-      pars::debug(SL, lf::event,
+      debug(SL, lf::event,
                   "Job #{} pushed and associated with Pipe {:X} [# jobs: {}]",
                   j_id, p_id, queue_m.size());
     }

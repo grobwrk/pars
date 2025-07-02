@@ -76,11 +76,11 @@ TYPED_TEST(network_kinds, can_be_fired)
   {
     // we can instantiate event_type{} without specifing the type event_type
     ev::fired{event_type{},
-              {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+              {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
 
     // we can instantiate specifing the type event_type
     ev::fired<event_type>{{},
-                          {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+                          {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
   }
 }
 
@@ -95,11 +95,11 @@ TYPED_TEST(network_kinds, can_be_sent)
   if (std::default_initializable<event_type>)
   {
     // we can instantiate event_type{} without specifing the type event_type
-    ev::sent{event_type{}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+    ev::sent{event_type{}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
 
     // we can instantiate specifing the type event_type
     ev::sent<event_type>{{},
-                         {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+                         {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
   }
 }
 
@@ -116,11 +116,11 @@ TYPED_TEST(network_kinds, can_be_received)
   {
     // we can instantiate event_type{} without specifing the type event_type
     ev::received{event_type{},
-                 {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+                 {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
 
     // we can instantiate specifing the type event_type
     ev::received<event_type>{
-      {}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe{}}};
+      {}, {1, net::tool_view{nngxx::ctx_view{}}, net::pipe_view{}}};
   }
 }
 

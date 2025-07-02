@@ -36,7 +36,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/tool_view.h"
 
 #include <format>
-#include <tuple>
 #include <unordered_map>
 
 namespace pars::net
@@ -53,22 +52,23 @@ public:
 
   void stop_all()
   {
-    for (auto& c : ctx_map_m)
-      c.second.stop();
+    for (auto& val : ctx_map_m | std::views::values)
+      val.stop();
   }
 
   context& emplace()
   {
     auto ctx = sock_m.make_ctx();
 
-    auto id = ctx.id();
+    const auto id = ctx.id();
 
-    auto res = ctx_map_m.try_emplace(id, router_m, std::move(ctx), sock_m);
+    auto [fst, snd] =
+      ctx_map_m.try_emplace(id, router_m, std::move(ctx), sock_m);
 
-    if (!res.second)
+    if (!snd)
       throw std::runtime_error("Unable to emplace a context");
 
-    return res.first->second;
+    return fst->second;
   }
 
   context& of(const net::tool_view& t)
@@ -76,13 +76,13 @@ public:
     if (t.type() != typeid(nngxx::ctx_view))
       throw std::runtime_error("We need a context here");
 
-    if (ctx_map_m.find(t.id()) == ctx_map_m.end())
+    if (!ctx_map_m.contains(t.id()))
       throw std::runtime_error(std::format("Unknown context {}", t.id()));
 
     return ctx_map_m.at(t.id());
   }
 
-  void start_recv(int num_ctxs)
+  void start_recv(const int num_ctxs)
   {
     for (int i = 0; i < num_ctxs; ++i)
       emplace().recv();

@@ -59,7 +59,7 @@ concept event_c = requires {
   { klass<event_t>::template exec_policy<fired>() } -> std::same_as<executes>;
 };
 
-// an internal event event_t does not requires network
+// an internal event event_t does not require network
 template<typename event_t>
 concept internal_event_c =
   event_c<event_t> && !klass<event_t>::requires_network;
@@ -79,7 +79,7 @@ template<typename event_t, template<typename> typename kind_of>
 concept sync_internal_event_c =
   internal_event_c<event_t> && sync_event_c<event_t, kind_of>;
 
-// an synchronous network event event_t
+// a synchronous network event event_t
 template<typename event_t, template<typename> typename kind_of>
 concept sync_network_event_c =
   network_event_c<event_t> && sync_event_c<event_t, kind_of>;

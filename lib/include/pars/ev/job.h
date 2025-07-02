@@ -46,7 +46,7 @@ namespace pars::ev
 class job
 {
 public:
-  job(std::size_t j_id, int s_id, std::size_t h, std::any ke)
+  job(const std::size_t j_id, const int s_id, const std::size_t h, std::any ke)
     : id_m{j_id}
     , socket_id_m{s_id}
     , spec_hash_m{h}
@@ -97,7 +97,7 @@ public:
     return std::format_to(ctx.out(), "spec:0x{:X}", spec_hash());
   }
 
-  void set_id(std::size_t id) { id_m = id; }
+  void set_id(const std::size_t id) { id_m = id; }
 
 private:
   std::size_t id_m;

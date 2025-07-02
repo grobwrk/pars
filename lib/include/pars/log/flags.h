@@ -78,12 +78,12 @@ namespace f
 
 struct lf
 {
-  lf(::pars::lf flags)
+  explicit lf(const pars::lf flags)
     : val{static_cast<int>(flags)}
   {
   }
 
-  lf(int flags)
+  explicit lf(const int flags)
     : val{flags}
   {
   }
@@ -98,7 +98,7 @@ struct lf
 template<>
 struct std::formatter<::pars::lf> : formatter<std::string>
 {
-  auto format(const ::pars::lf& flag, format_context& ctx) const
+  static auto format(const ::pars::lf& flag, format_context& ctx)
     -> decltype(ctx.out())
   {
     switch (flag)
@@ -122,7 +122,7 @@ struct std::formatter<::pars::lf> : formatter<std::string>
 template<>
 struct std::formatter<::pars::f::lf> : formatter<std::string>
 {
-  auto format(const ::pars::f::lf& flags, format_context& ctx) const
+  static auto format(const ::pars::f::lf& flags, format_context& ctx)
     -> decltype(ctx.out())
   {
     auto it = ctx.out();

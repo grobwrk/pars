@@ -43,7 +43,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::ev
 {
 
-class runner;
+struct runner;
 
 } // namespace pars::ev
 
@@ -95,19 +95,21 @@ private:
 
   auto lock() { return std::unique_lock{mtx_m}; }
 
-  bool has_handler_for(int s_id, std::size_t spec_hash)
+  bool has_handler_for(const int s_id, const std::size_t spec_hash) const
   {
-    return handlers_m[s_id].contains(spec_hash);
+    return handlers_m.at(s_id).contains(spec_hash);
   }
 
-  const std::type_info* const type_for(std::size_t spec_hash)
+  // ReSharper disable once CppConstValueFunctionReturnType
+  const std::type_info* const type_for(const std::size_t spec_hash) const
   {
-    return types_m[spec_hash];
+    return types_m.at(spec_hash);
   }
 
-  const job_handler_f& handler_for(int s_id, std::size_t spec_hash)
+  const job_handler_f& handler_for(const int s_id,
+                                   const std::size_t spec_hash) const
   {
-    return handlers_m[s_id][spec_hash];
+    return handlers_m.at(s_id).at(spec_hash);
   }
 
   template<template<typename> typename kind_of, event_c event_t>
@@ -124,8 +126,8 @@ private:
     // register the type for logging purpose
     types_m[spec_hash] = &typeid(kind_of<event_t>);
 
-    pars::debug(SL, lf::event, "Socket {}: Registered {}!", s_id,
-                spec<kind_of<event_t>>{});
+    debug(SL, lf::event, "Socket {}: Registered {}!", s_id,
+          spec<kind_of<event_t>>{});
   }
 
   std::mutex mtx_m; /// protects handlers_m, types_m

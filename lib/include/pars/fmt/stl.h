@@ -31,8 +31,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h"
 
-#include "pars/ev/event.h"
-
 #include <chrono>
 #include <format>
 #include <iomanip>
@@ -42,10 +40,10 @@ template<>
 struct std::formatter<std::chrono::system_clock::time_point>
   : std::formatter<std::string>
 {
-  auto format(const std::chrono::system_clock::time_point& t,
-              std::format_context& ctx) const -> decltype(ctx.out())
+  static auto format(const std::chrono::system_clock::time_point& t,
+                     std::format_context& ctx) -> decltype(ctx.out())
   {
-    auto t2 = std::chrono::system_clock::to_time_t(t);
+    const auto t2 = std::chrono::system_clock::to_time_t(t);
 
     std::ostringstream oss;
     oss << std::put_time(std::localtime(&t2), "%F %T");
@@ -57,7 +55,7 @@ struct std::formatter<std::chrono::system_clock::time_point>
 template<>
 struct std::formatter<std::error_code> : std::formatter<std::string>
 {
-  auto format(const std::error_code& e, std::format_context& ctx) const
+  static auto format(const std::error_code& e, std::format_context& ctx)
     -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "{}", e.message());
@@ -65,14 +63,15 @@ struct std::formatter<std::error_code> : std::formatter<std::string>
 };
 
 template<pars::ev::event_c event_t>
-struct std::formatter<std::shared_ptr<event_t>> : std::formatter<std::string>
+struct std::formatter<std::shared_ptr<event_t>> // NOLINT(*-dcl58-cpp)
+  : std::formatter<std::string>
 {
   auto format(const std::shared_ptr<event_t>& x, std::format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (x)
       return std::format_to(ctx.out(), "{}", *x);
-    else
-      return std::format_to(ctx.out(), "<empty-shared_ptr>");
+
+    return std::format_to(ctx.out(), "<empty-shared_ptr>");
   }
 };

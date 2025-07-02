@@ -36,6 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <format>
 #include <functional>
 #include <future>
+#include <ranges>
 #include <thread>
 #include <unordered_map>
 
@@ -44,8 +45,7 @@ namespace pars::ev
 
 struct runner
 {
-public:
-  runner(hf_registry& hfs)
+  explicit runner(hf_registry& hfs)
     : hf_registry_m{hfs}
   {
   }
@@ -63,9 +63,10 @@ public:
 
     futures_m.emplace_back(j_id, s_id, spec_hash, task.get_future());
 
-    auto th_res = threads_m.try_emplace(j_id, std::move(task), std::move(j));
+    auto [fst, snd] =
+      threads_m.try_emplace(j_id, std::move(task), std::move(j));
 
-    if (!th_res.second)
+    if (!snd)
       futures_m.pop_back();
   }
 
@@ -80,10 +81,10 @@ public:
   {
     auto guard = std::lock_guard{mtx_m};
 
-    for (const auto& t : threads_m)
+    for (const auto& key : threads_m | std::views::keys)
     {
-      if (stop_possible(t.first))
-        request_stop(t.first);
+      if (stop_possible(key))
+        request_stop(key);
     }
 
     while (!futures_m.empty())
@@ -92,7 +93,7 @@ public:
     pipe_jobs_m.clear();
   }
 
-  bool can_exec(int s_id, std::size_t spec_hash)
+  bool can_exec(const int s_id, const std::size_t spec_hash) const
   {
     auto lock = hf_registry_m.lock();
 
@@ -109,10 +110,10 @@ public:
 
     if (!hf_registry_m.has_handler_for(s_id, spec_hash))
     {
-      pars::err(SL, lf::event,
-                "Unable to find handler for Spec 0x{:X} on Socket {}, skip "
-                "message ...",
-                spec_hash, s_id);
+      err(SL, lf::event,
+          "Unable to find handler for Spec 0x{:X} on Socket {}, skip "
+          "message ...",
+          spec_hash, s_id);
 
       return;
     }
@@ -121,8 +122,8 @@ public:
 
     lock.unlock();
 
-    pars::debug(SL, lf::event, "Job #{}: Running Handler [{}]", j.id(),
-                demangle(hf_registry_m.type_for(spec_hash)->name()));
+    debug(SL, lf::event, "Job #{}: Running Handler [{}]", j.id(),
+          demangle(hf_registry_m.type_for(spec_hash)->name()));
 
     try
     {
@@ -147,7 +148,7 @@ public:
     exec(make_job(next_job_id(), std::move(ke)));
   }
 
-  void add_pipe(const net::pipe& p)
+  void add_pipe(const net::pipe_view& p)
   {
     auto guard = std::lock_guard{mtx_m};
 
@@ -157,11 +158,11 @@ public:
   }
 
   /// stop all running and remove all pending jobs for pipe p
-  void remove_pipe(const net::pipe& p)
+  void remove_pipe(const net::pipe_view& p)
   {
     auto guard = std::lock_guard{mtx_m};
 
-    auto p_id = p.id();
+    const auto p_id = p.id();
 
     if (!pipe_jobs_m.at(p_id).empty())
     {
@@ -188,9 +189,9 @@ public:
     {
       pipe_jobs_m.at(p_id).push_back(j_id);
 
-      pars::debug(SL, lf::event,
-                  "Job #{} pushed and associated to Pipe {:X} [# size: {}]",
-                  j_id, p_id, pipe_jobs_m.at(p_id).size());
+      debug(SL, lf::event,
+            "Job #{} pushed and associated to Pipe {:X} [# size: {}]", j_id,
+            p_id, pipe_jobs_m.at(p_id).size());
     }
   }
 
@@ -203,7 +204,8 @@ public:
   }
 
 private:
-  std::unordered_set<std::size_t> stop_runnings(std::vector<std::size_t> j_ids)
+  std::unordered_set<std::size_t>
+  stop_runnings(const std::vector<std::size_t>& j_ids)
   {
     std::unordered_set<std::size_t> pending_jobs;
 
@@ -240,16 +242,16 @@ private:
         }
         catch (...)
         {
-          pars::debug(SL, lf::event,
-                      "Job #{}: Throws, processing exceptions !!", j_id);
+          debug(SL, lf::event, "Job #{}: Throws, processing exceptions !!",
+                j_id);
 
           process_exception(s_id, spec_hash);
         }
 
         threads_m.erase(j_id);
 
-        pars::debug(SL, lf::event, "Job #{}: Done! [# futures: {}]", j_id,
-                    futures_m.size());
+        debug(SL, lf::event, "Job #{}: Done! [# futures: {}]", j_id,
+              futures_m.size());
 
         it = futures_m.erase(it);
       }
@@ -262,7 +264,7 @@ private:
 
   void process_exception(auto s_id, auto spec_hash)
   {
-    auto e_ptr = std::current_exception();
+    const auto e_ptr = std::current_exception();
 
     try
     {
@@ -270,13 +272,12 @@ private:
     }
     catch (std::exception& e)
     {
-      pars::err(SL, lf::event, "Handler for 0x{:X} throws: {}", spec_hash,
-                e.what());
+      err(SL, lf::event, "Handler for 0x{:X} throws: {}", spec_hash, e.what());
     }
     catch (...)
     {
-      pars::err(SL, lf::event, "Handler for 0x{:X} throws: Unknown Exception",
-                spec_hash);
+      err(SL, lf::event, "Handler for 0x{:X} throws: Unknown Exception",
+          spec_hash);
     }
 
     auto e_hash = spec<fired<exception>>::hash;
@@ -296,14 +297,13 @@ private:
     }
     catch (std::exception& e)
     {
-      pars::err(SL, lf::event, "Exception Handler for 0x{:X} throws: {}",
-                spec_hash, e.what());
+      err(SL, lf::event, "Exception Handler for 0x{:X} throws: {}", spec_hash,
+          e.what());
     }
     catch (...)
     {
-      pars::err(SL, lf::event,
-                "Exeption Handler for 0x{:X} throws: Unknown Exception",
-                spec_hash);
+      err(SL, lf::event,
+          "Exception Handler for 0x{:X} throws: Unknown Exception", spec_hash);
     }
   }
 
@@ -312,14 +312,14 @@ private:
     threads_m[j_id].get_stop_source().request_stop();
   }
 
-  bool thread_running(const std::size_t j_id)
+  bool thread_running(const std::size_t j_id) const
   {
     return threads_m.contains(j_id);
   }
 
-  bool stop_possible(const std::size_t j_id)
+  bool stop_possible(const std::size_t j_id) const
   {
-    return threads_m[j_id].get_stop_token().stop_possible();
+    return threads_m.at(j_id).get_stop_token().stop_possible();
   }
 
   std::mutex mtx_m; ///< protects futures_m, threads_m

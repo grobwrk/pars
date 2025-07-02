@@ -42,7 +42,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <spdlog/spdlog.h>
 
 #include <spdlog/sinks/basic_file_sink.h>
-#include <spdlog/sinks/null_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 
 #if defined(_WIN32)
@@ -61,203 +60,206 @@ namespace pars
 {
 
 template<typename... args_t>
-inline void log(spdlog::source_loc loc, pars::lf lf,
-                spdlog::level::level_enum lvl,
-                spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void log(spdlog::source_loc loc, const lf flags, spdlog::level::level_enum lvl,
+         spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   if constexpr (pars_log_enabled)
   {
-    if (pars_log_flags & lf)
+    if (pars_log_flags & flags)
       ::spdlog::log(loc, lvl, fmt, std::forward<args_t>(args)...);
   }
 }
 
 template<typename... args_t>
-inline void log(pars::lf lf, spdlog::level::level_enum lvl,
-                spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void log(const lf flags, spdlog::level::level_enum lvl,
+         spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   if constexpr (pars_log_enabled)
   {
-    if (pars_log_flags & lf)
+    if (pars_log_flags & flags)
       ::spdlog::log(lvl, fmt, std::forward<args_t>(args)...);
   }
 }
 
 template<typename... args_t>
-inline void log(spdlog::source_loc loc, spdlog::level::level_enum lvl,
-                spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void log(spdlog::source_loc loc, spdlog::level::level_enum lvl,
+         spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, pars::lf::user, lvl, fmt, std::forward<args_t>(args)...);
+  ::pars::log(loc, lf::user, lvl, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void log(spdlog::level::level_enum lvl,
-                spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void log(spdlog::level::level_enum lvl, spdlog::format_string_t<args_t...> fmt,
+         args_t&&... args)
 {
-  ::pars::log(pars::lf::user, lvl, fmt, std::forward<args_t>(args)...);
+  ::pars::log(lf::user, lvl, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void trace(spdlog::source_loc loc, pars::lf lf,
-                  spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void trace(spdlog::source_loc loc, const lf flags,
+           spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, lf, spdlog::level::trace, fmt,
+  ::pars::log(loc, flags, spdlog::level::trace, fmt,
               std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void trace(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                  args_t&&... args)
+void trace(const lf flags, spdlog::format_string_t<args_t...> fmt,
+           args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::trace, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::trace, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void trace(spdlog::source_loc loc,
-                  spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void trace(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+           args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::trace, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void trace(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void trace(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::trace, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void debug(spdlog::source_loc loc, pars::lf lf,
-                  spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void debug(spdlog::source_loc loc, const lf flags,
+           spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, lf, spdlog::level::debug, fmt,
+  ::pars::log(loc, flags, spdlog::level::debug, fmt,
               std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void debug(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                  args_t&&... args)
+void debug(const lf flags, spdlog::format_string_t<args_t...> fmt,
+           args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::debug, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::debug, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void debug(spdlog::source_loc loc,
-                  spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void debug(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+           args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::debug, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void debug(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void debug(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::debug, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void info(spdlog::source_loc loc, pars::lf lf,
-                 spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void info(spdlog::source_loc loc, const lf flags,
+          spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, lf, spdlog::level::info, fmt, std::forward<args_t>(args)...);
+  ::pars::log(loc, flags, spdlog::level::info, fmt,
+              std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void info(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                 args_t&&... args)
+void info(const lf flags, spdlog::format_string_t<args_t...> fmt,
+          args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::info, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::info, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void info(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
-                 args_t&&... args)
+void info(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+          args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::info, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void info(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void info(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::info, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void warn(spdlog::source_loc loc, pars::lf lf,
-                 spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void warn(spdlog::source_loc loc, const lf flags,
+          spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, lf, spdlog::level::warn, fmt, std::forward<args_t>(args)...);
+  ::pars::log(loc, flags, spdlog::level::warn, fmt,
+              std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void warn(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                 args_t&&... args)
+void warn(const lf flags, spdlog::format_string_t<args_t...> fmt,
+          args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::warn, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::warn, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void warn(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
-                 args_t&&... args)
+void warn(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+          args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::warn, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void warn(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void warn(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::warn, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void err(spdlog::source_loc loc, pars::lf lf,
-                spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void err(spdlog::source_loc loc, const lf flags,
+         spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(loc, lf, spdlog::level::err, fmt, std::forward<args_t>(args)...);
+  ::pars::log(loc, flags, spdlog::level::err, fmt,
+              std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void err(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                args_t&&... args)
+void err(const lf flags, spdlog::format_string_t<args_t...> fmt,
+         args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::err, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::err, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void err(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
-                args_t&&... args)
+void err(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+         args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::err, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void err(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void err(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::err, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void critical(spdlog::source_loc loc, pars::lf lf,
-                     spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void critical(spdlog::source_loc loc, const lf flags,
+              spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
-  ::pars::log(lf, loc, spdlog::level::critical, fmt,
+  ::pars::log(flags, loc, spdlog::level::critical, fmt,
               std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void critical(pars::lf lf, spdlog::format_string_t<args_t...> fmt,
-                     args_t&&... args)
+void critical(const lf flags, spdlog::format_string_t<args_t...> fmt,
+              args_t&&... args)
 {
-  ::pars::log(lf, spdlog::level::critical, fmt, std::forward<args_t>(args)...);
+  ::pars::log(flags, spdlog::level::critical, fmt,
+              std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void critical(spdlog::source_loc loc,
-                     spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void critical(spdlog::source_loc loc, spdlog::format_string_t<args_t...> fmt,
+              args_t&&... args)
 {
   ::pars::log(loc, spdlog::level::critical, fmt, std::forward<args_t>(args)...);
 }
 
 template<typename... args_t>
-inline void critical(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
+void critical(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 {
   ::pars::log(spdlog::level::critical, fmt, std::forward<args_t>(args)...);
 }

@@ -46,7 +46,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::net
 {
 
-using cb_f = std::function<void(clev::expected<void>, nngxx::msg)>;
+using cb_f = std::function<void(const clev::expected<void>&, nngxx::msg)>;
 
 class op
 {
@@ -57,25 +57,26 @@ public:
       aio_m.wait();
   }
 
-  explicit operator bool() { return static_cast<bool>(aio_m); }
+  explicit operator bool() { return aio_m; }
 
   template<ev::event_c event_t, tool_c tool_t>
-  void send(ev::enqueuer& r, tool_t& t, pipe p, event_t ev)
+  void send(ev::enqueuer& r, tool_t& t, pipe_view p, event_t ev)
   {
     auto m = ev::serialize::to_network(ev);
 
     if (p)
       m.set_pipe(p);
 
-    pars::debug(SL, lf::net, "{}: Send Message [{}]!", f::pntl{p, t}, m);
+    debug(SL, lf::net, "{}: Send Message [{}]!", f::pntl{p, t}, m);
 
     // replace the callback with the new one
-    cb_m = [&, p](clev::expected<void> res, nngxx::msg m) mutable {
+    cb_m = [&, p](const clev::expected<void>& res, nngxx::msg m_sent) mutable {
       if (res)
       {
         // NOTE: m is empty on success
 
-        pars::debug(SL, lf::net, "{}: Sent Event [{}]!", f::pntl{p, t}, ev);
+        debug(SL, // NOLINT(*-lambda-function-name)
+              lf::net, "{}: Sent Event [{}]!", f::pntl{p, t}, ev);
 
         r.queue_sent(std::move(ev), t.socket_id(), t, p);
       }
@@ -83,10 +84,11 @@ public:
       {
         // NOTE: m is not empty on failure
 
-        auto pv = m.get_pipe();
+        auto pv = m_sent.get_pipe();
 
-        pars::err(SL, lf::net, "{}: Error Sending {}! [msg:{},err:{}]",
-                  f::pntl{pv, t}, nametype(ev), m, res.error());
+        err(SL, // NOLINT(*-lambda-function-name)
+            lf::net, "{}: Error Sending {}! [msg:{},err:{}]", f::pntl{pv, t},
+            nametype(ev), m_sent, res.error());
 
         r.queue_fire(ev::network_error{res.error(), dir::out}, t.socket_id(), t,
                      pv);
@@ -106,18 +108,18 @@ public:
   template<tool_c tool_t>
   void recv(ev::enqueuer& r, tool_t& t)
   {
-    pars::debug(SL, lf::net, "{}: Receive Message!", f::pntl{{}, t});
+    debug(SL, lf::net, "{}: Receive Message!", f::pntl{{}, t});
 
     // replace the operation with the new one
-    cb_m = [&](clev::expected<void> res, nngxx::msg m) {
+    cb_m = [&](const clev::expected<void>& res, nngxx::msg m) {
       if (res)
       {
         // NOTE: m is not empty on success
 
         auto pv = m.get_pipe();
 
-        pars::debug(SL, lf::net, "{}: Received Message! [{}]", f::pntl{pv, t},
-                    m);
+        debug(SL, // NOLINT(*-lambda-function-name)
+              lf::net, "{}: Received Message! [{}]", f::pntl{pv, t}, m);
 
         r.queue_received(std::move(m), t.socket_id(), t, pv);
       }
@@ -127,8 +129,8 @@ public:
 
         auto pv = nngxx::pipe_view();
 
-        pars::err(SL, lf::net, "{}: Error Receiving! [{}]", f::pntl{pv, t},
-                  res.error());
+        err(SL, // NOLINT(*-lambda-function-name)
+            lf::net, "{}: Error Receiving! [{}]", f::pntl{pv, t}, res.error());
 
         r.queue_fire(ev::network_error{res.error(), dir::in}, t.socket_id(), t,
                      pv);
@@ -144,9 +146,9 @@ public:
     t.recv_aio(aio_m);
   }
 
-  void sleep(nng_duration ms, std::function<void()> f)
+  void sleep(const nng_duration ms, const std::function<void()>& f)
   {
-    cb_m = [&, f](clev::expected<void> res, nngxx::msg m) {
+    cb_m = [&, f](const clev::expected<void>& res, nngxx::msg) {
       if (res)
       {
         // the sleep completed successfully, execute f
@@ -155,14 +157,14 @@ public:
     };
 
     // make aio - NOTE: pass this, cant move op
-    aio_m = nngxx::make_aio(op::sleep_cb, this)
+    aio_m = nngxx::make_aio(sleep_cb, this)
               .or_else(clev::abort_now<nngxx::aio>())
               .value();
 
     nngxx::sleep(ms, aio_m);
   }
 
-  void reset_sleep(nng_duration ms)
+  void reset_sleep(const nng_duration ms)
   {
     stop();
 
@@ -180,9 +182,9 @@ public:
    *
    * The nng_aio_result() returns the result of the operation associated with
    * the handle aio. If the operation was successful, then 0 is returned.
-   * Otherwise a non-zero error code is returned.
+   * Otherwise, a non-zero error code is returned.
    */
-  std::error_code result() const
+  [[nodiscard]] std::error_code result() const
   {
     return aio_m.result().error_or(nngxx::c::err::success);
   }
@@ -197,7 +199,7 @@ public:
    * If the operation is aborted, then the callback for the handle will be
    * called, and the function result() will return the error err.
    */
-  void abort(nngxx::c::err err) { aio_m.abort(err); }
+  void abort(const nngxx::c::err err) { aio_m.abort(err); }
 
   /**
    * @brief cancel asynchronous I/O operation
@@ -242,9 +244,10 @@ public:
 private:
   static void send_cb(void* arg)
   {
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto self = static_cast<op*>(arg);
 
-    // get the result
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto res = self->aio_m.result();
 
     nngxx::msg msg;
@@ -261,9 +264,10 @@ private:
 
   static void recv_cb(void* arg)
   {
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto self = static_cast<op*>(arg);
 
-    // get the result
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto res = self->aio_m.result();
 
     nngxx::msg msg;
@@ -280,11 +284,11 @@ private:
 
   static void sleep_cb(void* arg)
   {
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto self = static_cast<op*>(arg);
 
-    auto res = self->aio_m.result();
-
-    if (res)
+    // ReSharper disable once CppLocalVariableMayBeConst
+    if (auto res = self->aio_m.result())
       self->cb_m(res, nngxx::msg{});
   }
 

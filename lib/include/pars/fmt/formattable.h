@@ -33,10 +33,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <format>
 
-template<formattable_c foarmattable_t>
-struct std::formatter<foarmattable_t> : std::formatter<std::string>
+template<formattable_c formattable_t>
+struct std::formatter<formattable_t> // NOLINT(*-dcl58-cpp)
+  : std::formatter<std::string>
 {
-  auto format(const foarmattable_t& x, format_context& ctx) const
+  static auto format(const formattable_t& x, format_context& ctx)
     -> decltype(ctx.out())
   {
     return x.format_to(ctx);

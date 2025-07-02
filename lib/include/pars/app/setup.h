@@ -37,23 +37,25 @@ namespace pars::app
 struct with_default_setup
 {
 private:
-  const char* default_pattern()
+  static const char* default_pattern()
   {
     return "%^[%H:%M:%S.%f %z] [%6P %6t] [%L]: %$%v";
   }
 
-  const char* default_pattern_with_source_loc()
+  static const char* default_pattern_with_source_loc()
   {
     return "%^[%H:%M:%S.%f %z] [%6P %6t] [%L]: %$%v \x1b[90m(%s:%#)\x1b[0m";
   }
 
 public:
-  void enable_source_loc_logging()
+  virtual ~with_default_setup() = default;
+
+  static void enable_source_loc_logging()
   {
     spdlog::set_pattern(default_pattern_with_source_loc());
   }
 
-  void setup()
+  static void setup()
   {
     if constexpr (pars_log_enabled)
     {
@@ -63,24 +65,23 @@ public:
 
       std::vector<sink_ptr> sinks;
 
-      auto stderr_s = std::make_shared<sinks::stderr_color_sink_mt>();
-
       if constexpr (pars_log_enable_stderr)
       {
-        auto stderr_sink = std::make_shared<sinks::stderr_color_sink_mt>();
+        const auto stderr_s = std::make_shared<sinks::stderr_color_sink_mt>();
 
         sinks.push_back(stderr_s);
       }
 
       if constexpr (pars_log_enable_file)
       {
-        auto file_s = std::make_shared<sinks::basic_file_sink_mt>("pars.log");
+        const auto file_s =
+          std::make_shared<sinks::basic_file_sink_mt>("pars.log");
 
         sinks.push_back(file_s);
       }
 
 #if defined(PARS_LOG_ENABLE_MSVC)
-      auto msvc_s = std::make_shared<sinks::msvc_sink_mt>();
+      const auto msvc_s = std::make_shared<sinks::msvc_sink_mt>();
 
       sinks.push_back(msvc_s);
 #endif
@@ -95,11 +96,10 @@ public:
       /// register pars logger and set as default
 
       {
-        auto default_l = std::make_shared<logger>("pars");
+        const auto default_l =
+          std::make_shared<logger>("pars", sinks.begin(), sinks.end());
 
         // default_l->set_pattern(default_pattern);
-
-        default_l->sinks() = sinks;
 
         register_logger(default_l);
 

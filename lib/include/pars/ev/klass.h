@@ -55,7 +55,7 @@ struct base_klass
   /// by default, an event_t requires network
   static constexpr bool requires_network = true;
 
-  /// an event_t executes synchronously in every possibile kind_of<event_t>
+  /// an event_t executes synchronously in every possible kind_of<event_t>
   template<template<typename> typename kind_of>
     requires kind_c<kind_of>
   static constexpr executes exec_policy()

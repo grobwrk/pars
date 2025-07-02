@@ -39,7 +39,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <cstring>
 #include <istream>
-#include <ostream>
 #include <spanstream>
 #include <sstream>
 #include <string_view>
@@ -53,6 +52,7 @@ struct serialize
   static nngxx::msg to_network(event_t& ev)
   {
     // 1. serialize the event to a stringstream
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto ostring = std::ostringstream();
     auto ostream = std::ostream(ostring.rdbuf());
     auto ar = cereal::BinaryOutputArchive(ostream);
@@ -62,20 +62,20 @@ struct serialize
     auto event_hash = uuid<klass<event_t>>::hash;
 
     // 3. create the nngxx::msg to hold the hash+event
-    auto serialization = ostring.rdbuf()->view();
+    const auto serialization = ostring.rdbuf()->view();
     auto m = nngxx::make_msg(sizeof(event_hash) + serialization.size())
                .or_else(clev::abort_now<nngxx::msg>())
                .value();
     auto b = m.body();
 
     // 4. append the event hash
-    std::memcpy(b.template data<char>(), &event_hash, sizeof(event_hash));
+    std::memcpy(b.data<char>(), &event_hash, sizeof(event_hash));
 
     // 5. append the serialized event
-    std::memcpy(b.template data<char>() + sizeof(event_hash),
-                serialization.data(), serialization.size());
+    std::memcpy(b.data<char>() + sizeof(event_hash), serialization.data(),
+                serialization.size());
 
-    pars::debug(SL, lf::event, "Serialized Event [{}] to Message [{}]", ev, m);
+    debug(SL, lf::event, "Serialized Event [{}] to Message [{}]", ev, m);
 
     return m;
   }
@@ -95,6 +95,7 @@ struct serialize
     auto body = m.body();
     auto view =
       std::string_view(body.data<char>() + sizeof(uint64_t), body.size());
+    // ReSharper disable once CppLocalVariableMayBeConst
     auto istring = std::ispanstream(view);
     auto istream = std::istream(istring.rdbuf());
     auto ar = cereal::BinaryInputArchive(istream);
@@ -102,7 +103,7 @@ struct serialize
     auto ev = event_t{};
     klass<event_t>::serialize(ev, ar);
 
-    pars::debug(SL, lf::event, "Serialized Message [{}] to Event [{}]", m, ev);
+    debug(SL, lf::event, "Serialized Message [{}] to Event [{}]", m, ev);
 
     return ev;
   }

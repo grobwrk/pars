@@ -45,7 +45,7 @@ namespace pars::ev
 
 struct creating_pipe
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto format_to(std::format_context& ctx) -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "creating_pipe()");
   }
@@ -60,7 +60,7 @@ struct klass<creating_pipe> : base_klass<creating_pipe>
 
 struct pipe_created
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto format_to(std::format_context& ctx) -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "pipe_created()");
   }
@@ -75,7 +75,7 @@ struct klass<pipe_created> : base_klass<pipe_created>
 
 struct pipe_removed
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto format_to(std::format_context& ctx) -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "pipe_removed()");
   }
@@ -111,7 +111,7 @@ struct exception
 {
   std::exception_ptr eptr;
 
-  std::string str() const
+  [[nodiscard]] std::string str() const
   {
     try
     {
@@ -129,7 +129,6 @@ struct exception
     {
       return "Unknown!";
     }
-    return "<empty-exception>";
   }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())

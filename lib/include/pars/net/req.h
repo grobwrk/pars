@@ -30,6 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include "pars/ev/enqueuer.h"
+// ReSharper disable once CppUnusedIncludeDirective
 #include "pars/ev/hf_registry__insert.h"
 #include "pars/ev/make_hf.h"
 #include "pars/net/context_registry.h"
@@ -58,7 +59,7 @@ public:
   socket& sock() { return sock_m; }
 
   /// Get the socket
-  const socket& sock() const { return sock_m; }
+  [[nodiscard]] const socket& sock() const { return sock_m; }
 
   /// Get the context_registry
   context_registry& ctxs() { return ctx_registry_m; }

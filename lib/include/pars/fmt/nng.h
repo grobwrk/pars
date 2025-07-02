@@ -34,14 +34,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/net/hash.h"
 
-#include "pars/err.h"
-
 #include <format>
 
 template<>
 struct std::formatter<nngxx::msg> : formatter<std::string>
 {
-  auto format(const nngxx::msg& m, format_context& ctx) const
+  static auto format(const nngxx::msg& m, format_context& ctx)
     -> decltype(ctx.out())
   {
     if (m.body().size() < sizeof(std::size_t))
@@ -51,30 +49,30 @@ struct std::formatter<nngxx::msg> : formatter<std::string>
         m.header().size() + m.body().size(), m.header().size(), m.body().size(),
         m.get_pipe().id());
     }
-    else
-    {
-      std::size_t h = pars::hash_from_msg(m);
 
-      return std::format_to(
-        ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
-        m.header().size() + m.body().size(), m.header().size(), m.body().size(),
-        h, m.get_pipe().id());
-    }
+    std::size_t h = pars::hash_from_msg(m);
+
+    return std::format_to(ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
+                          m.header().size() + m.body().size(),
+                          m.header().size(), m.body().size(), h,
+                          m.get_pipe().id());
   }
 };
 
 template<>
 struct std::formatter<nngxx::pipe_view> : formatter<std::string>
 {
-  auto format(const nngxx::pipe_view& p, std::format_context& ctx) const
+  static auto format(const nngxx::pipe_view& p, std::format_context& ctx)
     -> decltype(ctx.out())
   {
     if (p)
+    {
       if (p.id() == -1)
         return std::format_to(ctx.out(), "<ERROR>");
-      else
-        return std::format_to(ctx.out(), "0x{:08X}", p.id());
-    else
-      return std::format_to(ctx.out(), "<empty-pipe>");
+
+      return std::format_to(ctx.out(), "0x{:08X}", p.id());
+    }
+
+    return std::format_to(ctx.out(), "<empty-pipe>");
   }
 };

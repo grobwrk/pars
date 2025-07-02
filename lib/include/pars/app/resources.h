@@ -86,7 +86,7 @@ public:
   using resource_type = resource_t;
   using mutex_type = mutex_t;
 
-  resources() {}
+  resources() = default;
 
   std::size_t count()
   {
@@ -131,7 +131,7 @@ public:
         std::format("Unable to emplace a new Resource [key: 0x{:X}]", key));
     }
 
-    pars::debug(SL, lf::app, "Emplaced Resource [key: 0x{:X}]", key);
+    debug(SL, lf::app, "Emplaced Resource [key: 0x{:X}]", key);
 
     return locked{lockable{res.first->second, mtx.first->second}, key};
   }
@@ -144,10 +144,10 @@ public:
 
   void delete_resource(key_type k)
   {
-    auto guard = std::lock_guard{mtx_m};
+    auto mtx_guard = std::lock_guard{mtx_m};
 
     {
-      auto guard = std::lock_guard{mtxs_m.at(k)};
+      auto mtxs_guard = std::lock_guard{mtxs_m.at(k)};
 
       resources_m.erase(k);
     }

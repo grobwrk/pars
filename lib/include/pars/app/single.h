@@ -55,7 +55,7 @@ public:
   {
   }
 
-  int exec(int argc, char** argv)
+  int exec(const int argc, char** argv)
   {
     atexit(nng_fini);
 
@@ -98,8 +98,7 @@ protected:
     }
     catch (std::exception& e)
     {
-      pars::err(SL, lf::app, "Error while running single application: {}",
-                e.what());
+      err(SL, lf::app, "Error while running single application: {}", e.what());
 
       return EXIT_FAILURE;
     }

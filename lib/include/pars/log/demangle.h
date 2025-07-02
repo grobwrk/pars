@@ -44,7 +44,7 @@ static const std::string demangle(const char* name)
   return status == 0 ? str.get() : name;
 }
 #else
-static const std::string demangle(const char* name)
+static std::string demangle(const char* name)
 {
   return name;
 }

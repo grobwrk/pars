@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
-#include "pars/net/pipe.h"
+#include "pars/net/pipe_view.h"
 #include "pars/net/tool_view.h"
 
 #include <format>
@@ -49,9 +49,9 @@ struct common_metadata
 
   using event_type = event_t;
 
-  int job_id() const { return job_id_m; }
+  [[nodiscard]] int job_id() const { return job_id_m; }
 
-  void set_job_id(int j_id) { job_id_m = j_id; }
+  void set_job_id(const int j_id) { job_id_m = j_id; }
 
 private:
   int job_id_m;
@@ -59,11 +59,11 @@ private:
 
 struct base_internal_metadata
 {
-  base_internal_metadata() {}
+  base_internal_metadata() = default;
 
-  int socket_id() const { return 0; }
+  static int socket_id() { return 0; }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto format_to(std::format_context& ctx) -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "<internal-metadata>");
   }
@@ -71,20 +71,21 @@ struct base_internal_metadata
 
 struct base_network_metadata
 {
-  base_network_metadata(int s_id, net::tool_view t, net::pipe p)
+  base_network_metadata(const int s_id, const net::tool_view t,
+                        const net::pipe_view p)
     : id_m{s_id}
     , tool_m{t}
     , pipe_m{p}
   {
   }
 
-  const net::tool_view& tool() const { return tool_m; }
+  [[nodiscard]] const net::tool_view& tool() const { return tool_m; }
 
-  net::pipe& pipe() { return pipe_m; }
+  [[nodiscard]] net::pipe_view& pipe() { return pipe_m; }
 
-  const net::pipe& pipe() const { return pipe_m; }
+  [[nodiscard]] const net::pipe_view& pipe() const { return pipe_m; }
 
-  int socket_id() const { return id_m; }
+  [[nodiscard]] int socket_id() const { return id_m; }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
@@ -96,7 +97,7 @@ struct base_network_metadata
 private:
   int id_m;
   net::tool_view tool_m;
-  net::pipe pipe_m;
+  net::pipe_view pipe_m;
 };
 
 struct base_sync_metadata
@@ -105,9 +106,9 @@ struct base_sync_metadata
 
 struct base_async_metadata
 {
-  std::stop_token stop_token() const { return stop_token_m; }
+  [[nodiscard]] std::stop_token stop_token() const { return stop_token_m; }
 
-  void set_stop_token(std::stop_token tk) { stop_token_m = tk; }
+  void set_stop_token(const std::stop_token& tk) { stop_token_m = tk; }
 
 private:
   std::stop_token stop_token_m;

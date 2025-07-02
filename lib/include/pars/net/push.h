@@ -30,6 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include "pars/ev/enqueuer.h"
+// ReSharper disable once CppUnusedIncludeDirective
 #include "pars/ev/hf_registry__insert.h"
 #include "pars/net/socket.h"
 

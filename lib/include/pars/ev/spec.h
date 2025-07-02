@@ -32,8 +32,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/klass.h"
 #include "pars/log/nametype.h"
 
-#include <cereal/cereal.hpp>
-
 #include <format>
 
 namespace pars::ev
@@ -46,9 +44,9 @@ public:
   using kind_of_event_type = kind_of_event_t;
 
   template<typename event_t>
-  using kind_type = kind_of_event_type::template kind_type<event_t>;
+  using kind_type = typename kind_of_event_type::template kind_type<event_t>;
 
-  using event_type = kind_of_event_type::event_type;
+  using event_type = typename kind_of_event_type::event_type;
 
   static constexpr std::size_t hash =
     uuid<kind_type<event_type>>::hash ^ (uuid<klass<event_type>>::hash << 1);

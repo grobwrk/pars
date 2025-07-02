@@ -52,8 +52,8 @@ using handler_f = std::move_only_function<void(hf_arg<kind_of, event_t>)>;
 template<
   typename mem_fn_t,
   template<typename> typename kind_of = hf_traits<mem_fn_t>::template kind_type,
-  typename event_t = hf_traits<mem_fn_t>::event_type,
-  typename class_t = hf_traits<mem_fn_t>::class_type>
+  typename event_t = typename hf_traits<mem_fn_t>::event_type,
+  typename class_t = typename hf_traits<mem_fn_t>::class_type>
   requires kind_c<kind_of> && event_c<event_t>
 handler_f<kind_of, event_t> make_hf(mem_fn_t& mem_fn, class_t* self)
 {
@@ -82,6 +82,12 @@ handler_f<kind_of, event_t> make_hf(mem_fn_t& mem_fn, class_t* self)
   {
     return handler_f<kind_of, event_t>(
       std::bind(mem_fn, static_cast<class_t*>(self), _1, _2));
+  }
+  else
+  {
+    clev::abort_now(error::unreachable, "Unreachable Reached");
+
+    return {};
   }
 
   static_assert(std::ratio_less_equal_v<std::ratio<arity>, std::ratio<2>>,

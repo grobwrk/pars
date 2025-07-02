@@ -29,14 +29,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
+#include "pars/err.h"
+
 #include "nngxx/msg_body.h"
 
-#include "pars/init.h"
-
 #include <format>
-
-#include <cstddef>
-#include <cstring>
 
 namespace pars
 {
@@ -44,30 +41,31 @@ namespace pars
 static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
 {
   // see Fowler-Noll-Vo hash function
-  constexpr std::uint64_t prime{0x100000001B3};
 
   if (uuid.size() != 36)
-    throw std::runtime_error("Invalid UUID [size mismatch]");
+    clev::abort_now(error::invalid_uuid, "Invalid UUID [size mismatch]");
 
   for (auto i : {8, 13, 18, 23})
   {
     if (uuid[i] != '-')
-      throw std::runtime_error(
-        std::format("Invalid UUID [missing separator {}]", i));
+      clev::abort_now(error::invalid_uuid,
+                      std::format("Invalid UUID [missing separator {}]", i));
   }
 
   std::uint64_t result{0xcbf29ce484222325};
 
   for (const auto& c : uuid)
   {
+    constexpr std::uint64_t prime{0x100000001B3};
+
     if (c == '-')
       continue;
 
     if (!(c >= '0' && c <= '9') && !(c >= 'A' && c <= 'F') &&
         !(c >= 'a' && c <= 'f'))
-      throw std::runtime_error("Invalid UUID [non hex char found]");
+      clev::abort_now(error::invalid_uuid, "Invalid UUID [non hex char found]");
 
-    auto x = c - c >= 'a' ? ('a' - 10) : (c >= 'A' ? ('A' - 10) : '0');
+    const auto x = c - (c >= 'a' ? ('a' - 10) : (c >= 'A' ? ('A' - 10) : '0'));
 
     result = (result * prime) ^ x;
   }

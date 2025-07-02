@@ -37,9 +37,8 @@ using namespace event;
 using namespace resource;
 
 /// Runs the backend component as a single application (rep).
-class server_backend : public app::single<comp::backend>
+class server_backend final : public app::single<comp::backend>
 {
-private:
   /// @name Types
 
   using parent_type = self_type;
@@ -60,8 +59,9 @@ private:
   /// @name App State
 
   std::atomic<int> tot_served{0}; ///< total client served
-  app::state_machine<server_state> state = {server_state::creating};
   app::resources<int, pipe_resource> resources;
+  app::state_machine<server_state> state =
+    app::state_machine{server_state::creating};
 
   /// @name Constructors
 
@@ -69,7 +69,7 @@ private:
 
   /// @name Initialization
 
-  void startup(int argc, char** argv) override
+  void startup(const int argc, char** argv) override
   {
     enable_source_loc_logging();
 
