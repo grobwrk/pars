@@ -62,7 +62,6 @@ enum class err
       case err::invalid_memory:
         return "invalid memory";
 
-        break;
       default:
         return "unknown";
       }
@@ -218,3 +217,7 @@ template<typename... args_t>
 static_assert(std::convertible_to<nngxx::c::err, std::error_code>);
 
 static_assert(std::constructible_from<std::error_code, nngxx::c::err>);
+
+static_assert(std::convertible_to<nngxx::cpp::err, std::error_code>);
+
+static_assert(std::constructible_from<std::error_code, nngxx::cpp::err>);
