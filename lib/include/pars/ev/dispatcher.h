@@ -53,12 +53,13 @@ public:
 
   /// @name Running Jobs
 
-  [[noreturn]] void run()
+  void run()
   {
     running_m = true;
 
     queue_back(fired{init{}, {}});
 
+    // ReSharper disable once CppDFAEndlessLoop
     for (;;)
     {
       auto lock = std::unique_lock{mtx_m};
