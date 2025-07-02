@@ -197,6 +197,7 @@ template<typename return_t>
 }
 
 template<typename ret_t, typename... args_t>
+  requires(!std::is_same_v<ret_t, void>)
 [[nodiscard]] clev::expected<void> invoke(ret_t (*f)(args_t...),
                                           args_t... args) noexcept
 {
