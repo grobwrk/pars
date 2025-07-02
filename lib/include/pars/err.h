@@ -38,7 +38,9 @@ namespace pars
 
 enum class error
 {
-  success = 0
+  success = 0,
+  invalid_uuid,
+  unreachable
 };
 
 static const std::error_category& error_category() noexcept
