@@ -98,6 +98,7 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a675fe8d0efb36801fc4a93482cdc9cb8" id="r_a675fe8d0efb36801fc4a93482cdc9cb8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a675fe8d0efb36801fc4a93482cdc9cb8">err</a> { <a class="el" href="#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3">invalid_memory</a> = 1
+, <a class="el" href="#a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b">unknown_option</a>
  }</td></tr>
 <tr class="separator:a675fe8d0efb36801fc4a93482cdc9cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -128,13 +129,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3" name="a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3"></a>invalid_memory&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b" name="a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b"></a>unknown_option&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="nngxx_2err_8h_source.html#l00047">47</a> of file <a class="el" href="nngxx_2err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
-<div class="line"><span class="lineno">   49</span>  <a class="code hl_enumvalue" href="#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3">invalid_memory</a> = 1</div>
+<p class="definition">Definition at line <a class="el" href="nngxx_2err_8h_source.html#l00046">46</a> of file <a class="el" href="nngxx_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>  <a class="code hl_enumvalue" href="#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3">invalid_memory</a> = 1,</div>
+<div class="line"><span class="lineno">   49</span>  <a class="code hl_enumvalue" href="#a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b">unknown_option</a></div>
 <div class="line"><span class="lineno">   50</span>};</div>
-<div class="ttc" id="anamespacenngxx_1_1cpp_html_a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3"><div class="ttname"><a href="#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3">nngxx::cpp::err::invalid_memory</a></div><div class="ttdeci">@ invalid_memory</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00049">err.h:49</a></div></div>
+<div class="ttc" id="anamespacenngxx_1_1cpp_html_a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b"><div class="ttname"><a href="#a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b">nngxx::cpp::err::unknown_option</a></div><div class="ttdeci">@ unknown_option</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00049">err.h:49</a></div></div>
+<div class="ttc" id="anamespacenngxx_1_1cpp_html_a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3"><div class="ttname"><a href="#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3">nngxx::cpp::err::invalid_memory</a></div><div class="ttdeci">@ invalid_memory</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00048">err.h:48</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -162,10 +166,10 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="nngxx_2err_8h_source.html#l00073">73</a> of file <a class="el" href="nngxx_2err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
-<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">return</span> std::error_code(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(e), error_category());</div>
-<div class="line"><span class="lineno">   76</span>}</div>
+<p class="definition">Definition at line <a class="el" href="nngxx_2err_8h_source.html#l00075">75</a> of file <a class="el" href="nngxx_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(e), error_category()};</div>
+<div class="line"><span class="lineno">   78</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

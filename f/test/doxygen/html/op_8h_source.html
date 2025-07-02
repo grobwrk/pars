@@ -125,7 +125,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="aio_8h.html">nngxx/aio.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="nngxx_2err_8h.html">nngxx/err.h</a>&quot;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="msg_8h.html">nngxx/msg.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="nngxx_2pipe_8h.html">nngxx/pipe.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="pipe_8h.html">nngxx/pipe.h</a>&quot;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="enqueuer_8h.html">pars/ev/enqueuer.h</a>&quot;</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="lib_2include_2pars_2ev_2event_8h.html">pars/ev/event.h</a>&quot;</span></div>
@@ -133,59 +133,59 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="helpers_8h.html">pars/fmt/helpers.h</a>&quot;</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="dir_8h.html">pars/net/dir.h</a>&quot;</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;spdlog/spdlog.h&gt;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &lt;expected&gt;</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;expected&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacepars_1_1net.html#a8d4f829cc278540043474384a62cb800">   49</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacepars_1_1net.html#a8d4f829cc278540043474384a62cb800">cb_f</a> = std::function&lt;void(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a>&amp;, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>)&gt;;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacepars_1_1net.html#ae5981715796cf677d35be33819d52267">   51</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacepars_1_1net.html#ae5981715796cf677d35be33819d52267">cb_f</a> = std::function&lt;void(<a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a>, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>)&gt;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html">   53</a></span><span class="keyword">class </span><a class="code hl_class" href="classpars_1_1net_1_1op.html">op</a></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">   56</a></span>  <a class="code hl_function" href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">~op</a>()</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (aio_m)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      aio_m.wait();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="classpars_1_1net_1_1op.html">op</a></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">   54</a></span>  <a class="code hl_function" href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">~op</a>()</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (aio_m)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      aio_m.wait();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
 </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#ac2e586be1d74ae91c29bae1f634e83c1">   60</a></span>  <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> aio_m; }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#ac2e586be1d74ae91c29bae1f634e83c1">   62</a></span>  <span class="keyword">explicit</span> <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(aio_m); }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">template</span>&lt;ev::event_c event_t, tool_c tool_t&gt;</div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a">   65</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a">send</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, tool_t&amp; t, <a class="code hl_class" href="classpars_1_1net_1_1pipe.html">pipe</a> p, event_t <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">auto</span> m = <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">ev::serialize::to_network</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (p)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      m.set_pipe(p);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">template</span>&lt;ev::event_c event_t, tool_c tool_t&gt;</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#aae40e62e2e0b1e4ae1094510d00549cb">   63</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#aae40e62e2e0b1e4ae1094510d00549cb">send</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, tool_t&amp; t, <a class="code hl_class" href="classpars_1_1net_1_1pipe__view.html">pipe_view</a> p, event_t <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> m = <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">ev::serialize::to_network</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (p)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      m.set_pipe(p);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Send Message [{}]!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{p, t}, m);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Send Message [{}]!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{p, t}, m);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// replace the callback with the new one</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    cb_m = [&amp;, p](<a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a> res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m) <span class="keyword">mutable</span> {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">if</span> (res)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="comment">// NOTE: m is empty on success</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Sent Event [{}]!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{p, t}, <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#a87da6b8b8e3747e8db3284d5625cbcb0">queue_sent</a>(std::move(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>), t.socket_id(), t, p);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">// NOTE: m is not empty on failure</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">auto</span> pv = m.get_pipe();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_function" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">pars::err</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Error Sending {}! [msg:{},err:{}]&quot;</span>,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                  <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t}, <a class="code hl_function" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>), m, res.error());</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// replace the callback with the new one</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    cb_m = [&amp;, p](<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a>&amp; res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m_sent) <span class="keyword">mutable</span> {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordflow">if</span> (res)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="comment">// NOTE: m is empty on success</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <span class="comment">// NOLINT(*-lambda-function-name)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>              <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Sent Event [{}]!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{p, t}, <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#a44d6ab5093ee485c48b9cafd8095d5cd">queue_sent</a>(std::move(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>), t.socket_id(), t, p);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// NOTE: m is not empty on failure</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">auto</span> pv = m_sent.get_pipe();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_function" href="namespacepars.html#a4e16bdcf69c442d6565433e30407f291">err</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <span class="comment">// NOLINT(*-lambda-function-name)</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Error Sending {}! [msg:{},err:{}]&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t},</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_function" href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a>(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>), m_sent, res.error());</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#a0a53959cc5a6438acc10f81ebef96d9a">queue_fire</a>(<a class="code hl_struct" href="structpars_1_1ev_1_1network__error.html">ev::network_error</a>{res.error(), <a class="code hl_enumvalue" href="namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275">dir::out</a>}, t.socket_id(), t,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                     pv);</div>
@@ -207,20 +207,20 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a0ddb15b0640c63b94650cf12cd609a42">  109</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a0ddb15b0640c63b94650cf12cd609a42">recv</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, tool_t&amp; t)</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Receive Message!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{{}, t});</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Receive Message!&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{{}, t});</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// replace the operation with the new one</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    cb_m = [&amp;](<a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a> res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    cb_m = [&amp;](<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a>&amp; res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">if</span> (res)</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="comment">// NOTE: m is not empty on success</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">auto</span> pv = m.get_pipe();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Received Message! [{}]&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t},</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    m);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <span class="comment">// NOLINT(*-lambda-function-name)</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>              <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Received Message! [{}]&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t}, m);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#ad13daefd8d14bf6fc8a30e646e1de1ee">queue_received</a>(std::move(m), t.socket_id(), t, pv);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#a2ebe6546a41226af2f8c9ad818df8caf">queue_received</a>(std::move(m), t.socket_id(), t, pv);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      {</div>
@@ -228,8 +228,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keyword">auto</span> pv = <a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a>();</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">pars::err</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Error Receiving! [{}]&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t},</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                  res.error());</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="namespacepars.html#a4e16bdcf69c442d6565433e30407f291">err</a>(<a class="code hl_define" href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a>, <span class="comment">// NOLINT(*-lambda-function-name)</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">lf::net</a>, <span class="stringliteral">&quot;{}: Error Receiving! [{}]&quot;</span>, <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">f::pntl</a>{pv, t}, res.error());</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        r.<a class="code hl_function" href="classpars_1_1ev_1_1enqueuer.html#a0a53959cc5a6438acc10f81ebef96d9a">queue_fire</a>(<a class="code hl_struct" href="structpars_1_1ev_1_1network__error.html">ev::network_error</a>{res.error(), <a class="code hl_enumvalue" href="namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf">dir::in</a>}, t.socket_id(), t,</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                     pv);</div>
@@ -247,9 +247,9 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#aa4faf9415e3741de3afaf12d7d745d4f">  149</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#aa4faf9415e3741de3afaf12d7d745d4f">sleep</a>(nng_duration ms, std::function&lt;<span class="keywordtype">void</span>()&gt; <a class="code hl_namespace" href="namespacepars_1_1f.html">f</a>)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a83b37bcbcbe9c7183bcb0fef905de593">  149</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a83b37bcbcbe9c7183bcb0fef905de593">sleep</a>(<span class="keyword">const</span> nng_duration ms, <span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; <a class="code hl_namespace" href="namespacepars_1_1f.html">f</a>)</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    cb_m = [&amp;, <a class="code hl_namespace" href="namespacepars_1_1f.html">f</a>](<a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a> res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    cb_m = [&amp;, <a class="code hl_namespace" href="namespacepars_1_1f.html">f</a>](<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;void&gt;</a>&amp; res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <span class="keywordflow">if</span> (res)</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">// the sleep completed successfully, execute f</span></div>
@@ -258,7 +258,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    };</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// make aio - NOTE: pass this, cant move op</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    aio_m = nngxx::make_aio(op::sleep_cb, <span class="keyword">this</span>)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    aio_m = nngxx::make_aio(sleep_cb, <span class="keyword">this</span>)</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>              .or_else(clev::abort_now&lt;nngxx::aio&gt;())</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>              .value();</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
@@ -267,7 +267,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a2446b1fe90b25c360faa68eb924cead1">  167</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a2446b1fe90b25c360faa68eb924cead1">reset_sleep</a>(nng_duration ms)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a95bc710afbdd68ef21420feff67b4dab">  167</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a95bc710afbdd68ef21420feff67b4dab">reset_sleep</a>(<span class="keyword">const</span> nng_duration ms)</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_function" href="classpars_1_1net_1_1op.html#a048b4ab3d8cf67102f05bd0d885b75fe">stop</a>();</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
@@ -281,13 +281,13 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
 <div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a8a682fc3ba4a5d66e254de07722bbe29">  187</a></span>  std::error_code <a class="code hl_function" href="classpars_1_1net_1_1op.html#a8a682fc3ba4a5d66e254de07722bbe29">result</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a8a682fc3ba4a5d66e254de07722bbe29">  187</a></span>  [[nodiscard]] std::error_code <a class="code hl_function" href="classpars_1_1net_1_1op.html#a8a682fc3ba4a5d66e254de07722bbe29">result</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">return</span> aio_m.result().error_or(<a class="code hl_enumvalue" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076">nngxx::c::err::success</a>);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  }</div>
 </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#aa166126574589e60fea989eb1053b177">  202</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#aa166126574589e60fea989eb1053b177">abort</a>(<a class="code hl_enumeration" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a> <a class="code hl_function" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">err</a>) { aio_m.abort(<a class="code hl_function" href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">err</a>); }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#a0eafd5fd94ae7d6714bcc66f3c5c3392">  202</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#a0eafd5fd94ae7d6714bcc66f3c5c3392">abort</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a> <a class="code hl_function" href="namespacepars.html#a4e16bdcf69c442d6565433e30407f291">err</a>) { aio_m.abort(<a class="code hl_function" href="namespacepars.html#a4e16bdcf69c442d6565433e30407f291">err</a>); }</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1op.html#ab8f9068c426947274537212d8716a828">  221</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1op.html#ab8f9068c426947274537212d8716a828">cancel</a>() { aio_m.cancel(); }</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
@@ -298,99 +298,101 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> send_cb(<span class="keywordtype">void</span>* arg)</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classpars_1_1net_1_1op.html">op</a>*<span class="keyword">&gt;</span>(arg);</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="comment">// get the result</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keyword">auto</span> res = self-&gt;aio_m.result();</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> msg;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">if</span> (!res)</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="comment">// take ownership of the message</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      msg = self-&gt;aio_m.release_msg();</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// execute the callback passing ownership of the message</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    self-&gt;cb_m(res, std::move(msg));</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> recv_cb(<span class="keywordtype">void</span>* arg)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span>op*<span class="keyword">&gt;</span>(arg);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// get the result</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">auto</span> res = self-&gt;aio_m.result();</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> msg;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="classpars_1_1net_1_1op.html">op</a>*<span class="keyword">&gt;</span>(arg);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">auto</span> res = self-&gt;aio_m.result();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> msg;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">if</span> (!res)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="comment">// take ownership of the message</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      msg = self-&gt;aio_m.release_msg();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// execute the callback passing ownership of the message</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    self-&gt;cb_m(res, std::move(msg));</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> recv_cb(<span class="keywordtype">void</span>* arg)</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span>op*<span class="keyword">&gt;</span>(arg);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keyword">auto</span> res = self-&gt;aio_m.result();</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">if</span> (res)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      <span class="comment">// take ownership of the message</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      msg = self-&gt;aio_m.release_msg();</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="comment">// execute the callback passing ownership of the message</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    self-&gt;cb_m(res, std::move(msg));</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> sleep_cb(<span class="keywordtype">void</span>* arg)</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span>op*<span class="keyword">&gt;</span>(arg);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">auto</span> res = self-&gt;aio_m.result();</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordflow">if</span> (res)</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      self-&gt;cb_m(res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>{});</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <a class="code hl_typedef" href="namespacenngxx.html#ab046ed26677d7cb8c2b76b1a4869eec2">nngxx::aio</a> aio_m;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <a class="code hl_typedef" href="namespacepars_1_1net.html#ae5981715796cf677d35be33819d52267">cb_f</a> cb_m;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>};</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> msg;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">if</span> (res)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      <span class="comment">// take ownership of the message</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      msg = self-&gt;aio_m.release_msg();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="comment">// execute the callback passing ownership of the message</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    self-&gt;cb_m(res, std::move(msg));</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> sleep_cb(<span class="keywordtype">void</span>* arg)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keyword">auto</span> self = <span class="keyword">static_cast&lt;</span>op*<span class="keyword">&gt;</span>(arg);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="comment">// ReSharper disable once CppLocalVariableMayBeConst</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> res = self-&gt;aio_m.result())</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      self-&gt;cb_m(res, <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>{});</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <a class="code hl_typedef" href="namespacenngxx.html#ab046ed26677d7cb8c2b76b1a4869eec2">nngxx::aio</a> aio_m;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <a class="code hl_typedef" href="namespacepars_1_1net.html#a8d4f829cc278540043474384a62cb800">cb_f</a> cb_m;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>};</div>
 </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>} <span class="comment">// namespace pars::net</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>} <span class="comment">// namespace pars::net</span></div>
 <div class="ttc" id="aaio_8h_html"><div class="ttname"><a href="aio_8h.html">aio.h</a></div></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html">pars::ev::enqueuer</a></div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00042">enqueuer.h:43</a></div></div>
 <div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html_a0a53959cc5a6438acc10f81ebef96d9a"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html#a0a53959cc5a6438acc10f81ebef96d9a">pars::ev::enqueuer::queue_fire</a></div><div class="ttdeci">void queue_fire(event_t ev)</div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00052">enqueuer.h:52</a></div></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html_a87da6b8b8e3747e8db3284d5625cbcb0"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html#a87da6b8b8e3747e8db3284d5625cbcb0">pars::ev::enqueuer::queue_sent</a></div><div class="ttdeci">void queue_sent(event_t ev, int s_id, tool_t &amp;t, net::pipe p)</div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00092">enqueuer.h:92</a></div></div>
-<div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html_ad13daefd8d14bf6fc8a30e646e1de1ee"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html#ad13daefd8d14bf6fc8a30e646e1de1ee">pars::ev::enqueuer::queue_received</a></div><div class="ttdeci">void queue_received(nngxx::msg m, int s_id, tool_t &amp;t, net::pipe p)</div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00098">enqueuer.h:98</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html"><div class="ttname"><a href="classpars_1_1net_1_1op.html">pars::net::op</a></div><div class="ttdef"><b>Definition</b> <a href="#l00053">op.h:54</a></div></div>
+<div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html_a2ebe6546a41226af2f8c9ad818df8caf"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html#a2ebe6546a41226af2f8c9ad818df8caf">pars::ev::enqueuer::queue_received</a></div><div class="ttdeci">void queue_received(nngxx::msg m, int s_id, tool_t &amp;t, net::pipe_view p)</div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00098">enqueuer.h:98</a></div></div>
+<div class="ttc" id="aclasspars_1_1ev_1_1enqueuer_html_a44d6ab5093ee485c48b9cafd8095d5cd"><div class="ttname"><a href="classpars_1_1ev_1_1enqueuer.html#a44d6ab5093ee485c48b9cafd8095d5cd">pars::ev::enqueuer::queue_sent</a></div><div class="ttdeci">void queue_sent(event_t ev, int s_id, tool_t &amp;t, net::pipe_view p)</div><div class="ttdef"><b>Definition</b> <a href="enqueuer_8h_source.html#l00092">enqueuer.h:92</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html"><div class="ttname"><a href="classpars_1_1net_1_1op.html">pars::net::op</a></div><div class="ttdef"><b>Definition</b> <a href="#l00051">op.h:52</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1op_html_a048b4ab3d8cf67102f05bd0d885b75fe"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a048b4ab3d8cf67102f05bd0d885b75fe">pars::net::op::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">stop asynchronous I/O operation</div><div class="ttdef"><b>Definition</b> <a href="#l00242">op.h:242</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html_a059616e41c3a51c66b18b051fcf52c4a"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a">pars::net::op::send</a></div><div class="ttdeci">void send(ev::enqueuer &amp;r, tool_t &amp;t, pipe p, event_t ev)</div><div class="ttdef"><b>Definition</b> <a href="#l00065">op.h:65</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1op_html_a0ddb15b0640c63b94650cf12cd609a42"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a0ddb15b0640c63b94650cf12cd609a42">pars::net::op::recv</a></div><div class="ttdeci">void recv(ev::enqueuer &amp;r, tool_t &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="#l00109">op.h:109</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html_a2446b1fe90b25c360faa68eb924cead1"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a2446b1fe90b25c360faa68eb924cead1">pars::net::op::reset_sleep</a></div><div class="ttdeci">void reset_sleep(nng_duration ms)</div><div class="ttdef"><b>Definition</b> <a href="#l00167">op.h:167</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html_a5d31c5655ef3420fbcc9279203a0364d"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">pars::net::op::~op</a></div><div class="ttdeci">~op()</div><div class="ttdef"><b>Definition</b> <a href="#l00056">op.h:56</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html_a0eafd5fd94ae7d6714bcc66f3c5c3392"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a0eafd5fd94ae7d6714bcc66f3c5c3392">pars::net::op::abort</a></div><div class="ttdeci">void abort(const nngxx::c::err err)</div><div class="ttdoc">abort asynchronous I/O operation</div><div class="ttdef"><b>Definition</b> <a href="#l00202">op.h:202</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html_a5d31c5655ef3420fbcc9279203a0364d"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d">pars::net::op::~op</a></div><div class="ttdeci">~op()</div><div class="ttdef"><b>Definition</b> <a href="#l00054">op.h:54</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html_a83b37bcbcbe9c7183bcb0fef905de593"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a83b37bcbcbe9c7183bcb0fef905de593">pars::net::op::sleep</a></div><div class="ttdeci">void sleep(const nng_duration ms, const std::function&lt; void()&gt; &amp;f)</div><div class="ttdef"><b>Definition</b> <a href="#l00149">op.h:149</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1op_html_a8a682fc3ba4a5d66e254de07722bbe29"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a8a682fc3ba4a5d66e254de07722bbe29">pars::net::op::result</a></div><div class="ttdeci">std::error_code result() const</div><div class="ttdoc">return result of asynchronous operation</div><div class="ttdef"><b>Definition</b> <a href="#l00187">op.h:187</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html_a95bc710afbdd68ef21420feff67b4dab"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a95bc710afbdd68ef21420feff67b4dab">pars::net::op::reset_sleep</a></div><div class="ttdeci">void reset_sleep(const nng_duration ms)</div><div class="ttdef"><b>Definition</b> <a href="#l00167">op.h:167</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1op_html_a999df689810aaaea5175916d3cf87642"><div class="ttname"><a href="classpars_1_1net_1_1op.html#a999df689810aaaea5175916d3cf87642">pars::net::op::wait</a></div><div class="ttdeci">void wait() const</div><div class="ttdoc">wait for asynchronous I/O operation</div><div class="ttdef"><b>Definition</b> <a href="#l00230">op.h:230</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html_aa166126574589e60fea989eb1053b177"><div class="ttname"><a href="classpars_1_1net_1_1op.html#aa166126574589e60fea989eb1053b177">pars::net::op::abort</a></div><div class="ttdeci">void abort(nngxx::c::err err)</div><div class="ttdoc">abort asynchronous I/O operation</div><div class="ttdef"><b>Definition</b> <a href="#l00202">op.h:202</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1op_html_aa4faf9415e3741de3afaf12d7d745d4f"><div class="ttname"><a href="classpars_1_1net_1_1op.html#aa4faf9415e3741de3afaf12d7d745d4f">pars::net::op::sleep</a></div><div class="ttdeci">void sleep(nng_duration ms, std::function&lt; void()&gt; f)</div><div class="ttdef"><b>Definition</b> <a href="#l00149">op.h:149</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1op_html_aae40e62e2e0b1e4ae1094510d00549cb"><div class="ttname"><a href="classpars_1_1net_1_1op.html#aae40e62e2e0b1e4ae1094510d00549cb">pars::net::op::send</a></div><div class="ttdeci">void send(ev::enqueuer &amp;r, tool_t &amp;t, pipe_view p, event_t ev)</div><div class="ttdef"><b>Definition</b> <a href="#l00063">op.h:63</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1op_html_ab8f9068c426947274537212d8716a828"><div class="ttname"><a href="classpars_1_1net_1_1op.html#ab8f9068c426947274537212d8716a828">pars::net::op::cancel</a></div><div class="ttdeci">void cancel()</div><div class="ttdoc">cancel asynchronous I/O operation</div><div class="ttdef"><b>Definition</b> <a href="#l00221">op.h:221</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1pipe_html"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html">pars::net::pipe</a></div><div class="ttdef"><b>Definition</b> <a href="pars_2net_2pipe_8h_source.html#l00042">pipe.h:43</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1pipe__view_html"><div class="ttname"><a href="classpars_1_1net_1_1pipe__view.html">pars::net::pipe_view</a></div><div class="ttdef"><b>Definition</b> <a href="pipe__view_8h_source.html#l00042">pipe_view.h:43</a></div></div>
 <div class="ttc" id="adir_8h_html"><div class="ttname"><a href="dir_8h.html">dir.h</a></div></div>
 <div class="ttc" id="aenqueuer_8h_html"><div class="ttname"><a href="enqueuer_8h.html">enqueuer.h</a></div></div>
 <div class="ttc" id="ahelpers_8h_html"><div class="ttname"><a href="helpers_8h.html">helpers.h</a></div></div>
 <div class="ttc" id="alib_2include_2pars_2ev_2event_8h_html"><div class="ttname"><a href="lib_2include_2pars_2ev_2event_8h.html">event.h</a></div></div>
-<div class="ttc" id="alog_8h_html_ad71aeb03d03709c5072b99cb68c21992"><div class="ttname"><a href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a></div><div class="ttdeci">#define SL</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00061">log.h:61</a></div></div>
+<div class="ttc" id="alog_8h_html_ad71aeb03d03709c5072b99cb68c21992"><div class="ttname"><a href="log_8h.html#ad71aeb03d03709c5072b99cb68c21992">SL</a></div><div class="ttdeci">#define SL</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00057">log.h:57</a></div></div>
 <div class="ttc" id="amsg_8h_html"><div class="ttname"><a href="msg_8h.html">msg.h</a></div></div>
-<div class="ttc" id="anamespaceclev_html_a1b8e73a508830ad95f581539abd9f8fa"><div class="ttname"><a href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected</a></div><div class="ttdeci">std::expected&lt; value_t, std::error_code &gt; expected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00075">err.h:75</a></div></div>
-<div class="ttc" id="anamespacenngxx_1_1c_html_a146c7f28291fe71a40ba4f98bf7c30c2"><div class="ttname"><a href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00125">err.h:126</a></div></div>
-<div class="ttc" id="anamespacenngxx_1_1c_html_a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076"><div class="ttname"><a href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076">nngxx::c::err::success</a></div><div class="ttdeci">@ success</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00127">err.h:127</a></div></div>
+<div class="ttc" id="anamespaceclev_html_a1b8e73a508830ad95f581539abd9f8fa"><div class="ttname"><a href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected</a></div><div class="ttdeci">std::expected&lt; value_t, std::error_code &gt; expected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00073">err.h:73</a></div></div>
+<div class="ttc" id="anamespacenngxx_1_1c_html_a146c7f28291fe71a40ba4f98bf7c30c2"><div class="ttname"><a href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2">nngxx::c::err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00127">err.h:128</a></div></div>
+<div class="ttc" id="anamespacenngxx_1_1c_html_a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076"><div class="ttname"><a href="namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076">nngxx::c::err::success</a></div><div class="ttdeci">@ success</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00129">err.h:129</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_a4357aed4c68a9f7703914455abf07879"><div class="ttname"><a href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a></div><div class="ttdeci">clev::own&lt; nng_msg * &gt; msg</div><div class="ttdef"><b>Definition</b> <a href="msg_8h_source.html#l00039">msg.h:39</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_aafdaa64936251b53768712113f7c3e18"><div class="ttname"><a href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a></div><div class="ttdeci">clev::iface&lt; nng_pipe &gt; pipe_view</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2pipe_8h_source.html#l00037">pipe.h:37</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_aafdaa64936251b53768712113f7c3e18"><div class="ttname"><a href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a></div><div class="ttdeci">clev::iface&lt; nng_pipe &gt; pipe_view</div><div class="ttdef"><b>Definition</b> <a href="pipe_8h_source.html#l00037">pipe.h:37</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_ab046ed26677d7cb8c2b76b1a4869eec2"><div class="ttname"><a href="namespacenngxx.html#ab046ed26677d7cb8c2b76b1a4869eec2">nngxx::aio</a></div><div class="ttdeci">clev::own&lt; nng_aio * &gt; aio</div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00039">aio.h:39</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00037">event.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00037">helpers.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html_a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf"><div class="ttname"><a href="namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1a13b5bfe96f3e2fe411c9f66f4a582adf">pars::net::dir::in</a></div><div class="ttdeci">@ in</div><div class="ttdef"><b>Definition</b> <a href="dir_8h_source.html#l00040">dir.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html_a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275"><div class="ttname"><a href="namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275">pars::net::dir::out</a></div><div class="ttdeci">@ out</div><div class="ttdef"><b>Definition</b> <a href="dir_8h_source.html#l00039">dir.h:39</a></div></div>
-<div class="ttc" id="anamespacepars_1_1net_html_ae5981715796cf677d35be33819d52267"><div class="ttname"><a href="namespacepars_1_1net.html#ae5981715796cf677d35be33819d52267">pars::net::cb_f</a></div><div class="ttdeci">std::function&lt; void(clev::expected&lt; void &gt;, nngxx::msg)&gt; cb_f</div><div class="ttdef"><b>Definition</b> <a href="#l00051">op.h:51</a></div></div>
+<div class="ttc" id="anamespacepars_1_1net_html_a8d4f829cc278540043474384a62cb800"><div class="ttname"><a href="namespacepars_1_1net.html#a8d4f829cc278540043474384a62cb800">pars::net::cb_f</a></div><div class="ttdeci">std::function&lt; void(const clev::expected&lt; void &gt; &amp;, nngxx::msg)&gt; cb_f</div><div class="ttdef"><b>Definition</b> <a href="#l00049">op.h:49</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">pars::lf::net</a></div><div class="ttdeci">@ net</div><div class="ttdef"><b>Definition</b> <a href="flags_8h_source.html#l00042">flags.h:42</a></div></div>
-<div class="ttc" id="anamespacepars_html_a2f1cf1eb41879a6841dc516a92bcf35f"><div class="ttname"><a href="namespacepars.html#a2f1cf1eb41879a6841dc516a92bcf35f">pars::err</a></div><div class="ttdeci">void err(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00214">log.h:214</a></div></div>
-<div class="ttc" id="anamespacepars_html_acf366c3b2c7f2027ca1f4694e783ecb1"><div class="ttname"><a href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a></div><div class="ttdeci">void debug(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00132">log.h:132</a></div></div>
+<div class="ttc" id="anamespacepars_html_a1eb41d705e7d6a7cb4b577cb9928a82a"><div class="ttname"><a href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">pars::debug</a></div><div class="ttdeci">void debug(spdlog::source_loc loc, const lf flags, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00127">log.h:127</a></div></div>
+<div class="ttc" id="anamespacepars_html_a4e16bdcf69c442d6565433e30407f291"><div class="ttname"><a href="namespacepars.html#a4e16bdcf69c442d6565433e30407f291">pars::err</a></div><div class="ttdeci">void err(spdlog::source_loc loc, const lf flags, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00211">log.h:211</a></div></div>
 <div class="ttc" id="anametype_8h_html_a38dd383b4a7349ba3771309bc3bafa13"><div class="ttname"><a href="nametype_8h.html#a38dd383b4a7349ba3771309bc3bafa13">nametype</a></div><div class="ttdeci">std::string nametype()</div><div class="ttdef"><b>Definition</b> <a href="nametype_8h_source.html#l00037">nametype.h:37</a></div></div>
 <div class="ttc" id="anngxx_2err_8h_html"><div class="ttname"><a href="nngxx_2err_8h.html">err.h</a></div></div>
-<div class="ttc" id="anngxx_2pipe_8h_html"><div class="ttname"><a href="nngxx_2pipe_8h.html">pipe.h</a></div></div>
+<div class="ttc" id="apipe_8h_html"><div class="ttname"><a href="pipe_8h.html">pipe.h</a></div></div>
 <div class="ttc" id="aserializer_8h_html"><div class="ttname"><a href="serializer_8h.html">serializer.h</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1network__error_html"><div class="ttname"><a href="structpars_1_1ev_1_1network__error.html">pars::ev::network_error</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2ev_2event_8h_source.html#l00091">event.h:92</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1serialize_html_ad3e218ee1638d058d12c50b60c53c0c6"><div class="ttname"><a href="structpars_1_1ev_1_1serialize.html#ad3e218ee1638d058d12c50b60c53c0c6">pars::ev::serialize::to_network</a></div><div class="ttdeci">static nngxx::msg to_network(event_t &amp;ev)</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00052">serializer.h:52</a></div></div>

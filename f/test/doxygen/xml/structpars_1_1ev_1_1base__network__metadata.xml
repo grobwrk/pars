@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="96" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="98" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1base__network__metadata_1af9a27fa81fbe30b72e106f8f8554f0ed" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref></type>
@@ -32,11 +32,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="97" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="99" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="99" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="structpars_1_1ev_1_1base__network__metadata_1a3e574e2519354d471ad5e55995bfbbce" prot="private" static="no" mutable="no">
-        <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref></type>
-        <definition>net::pipe pars::ev::base_network_metadata::pipe_m</definition>
+      <memberdef kind="variable" id="structpars_1_1ev_1_1base__network__metadata_1a84e20d3c1b44389ab09c64c435c16368" prot="private" static="no" mutable="no">
+        <type><ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref></type>
+        <definition>net::pipe_view pars::ev::base_network_metadata::pipe_m</definition>
         <argsstring></argsstring>
         <name>pipe_m</name>
         <qualifiedname>pars::ev::base_network_metadata::pipe_m</qualifiedname>
@@ -46,26 +46,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="98" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="98" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="100" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="100" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1af645a2d0b86932aed49dcdaf95d23ad7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1afef313b9ab94dc6f8b8d9560285842a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>pars::ev::base_network_metadata::base_network_metadata</definition>
-        <argsstring>(int s_id, net::tool_view t, net::pipe p)</argsstring>
+        <argsstring>(const int s_id, const net::tool_view t, const net::pipe_view p)</argsstring>
         <name>base_network_metadata</name>
         <qualifiedname>pars::ev::base_network_metadata::base_network_metadata</qualifiedname>
         <param>
-          <type>int</type>
+          <type>const int</type>
           <declname>s_id</declname>
         </param>
         <param>
-          <type><ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref></type>
+          <type>const <ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref></type>
           <declname>t</declname>
         </param>
         <param>
-          <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref></type>
+          <type>const <ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref></type>
           <declname>p</declname>
         </param>
         <briefdescription>
@@ -74,9 +74,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="73" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="73" bodyend="78"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="74" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="74" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref> &amp;</type>
         <definition>const net::tool_view &amp; pars::ev::base_network_metadata::tool</definition>
         <argsstring>() const</argsstring>
@@ -88,12 +88,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="80" column="24" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="80" bodyend="80"/>
-        <referencedby refid="structpars_1_1ev_1_1base__network__metadata_1a7e5407543837c5680957e0ccdcc15e23" compoundref="metadata_8h" startline="88" endline="93">format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="82" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="82" bodyend="82"/>
+        <referencedby refid="structpars_1_1ev_1_1base__network__metadata_1ac17772fd7a8fce68fa71306f228a5a00" compoundref="metadata_8h" startline="90" endline="95">format_to</referencedby>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1af3308f6b93c8eea0b4080fe1cf3ed645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref> &amp;</type>
-        <definition>net::pipe &amp; pars::ev::base_network_metadata::pipe</definition>
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1a68e18f22618d8bf8476629acd3b61ff4" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref> &amp;</type>
+        <definition>net::pipe_view &amp; pars::ev::base_network_metadata::pipe</definition>
         <argsstring>()</argsstring>
         <name>pipe</name>
         <qualifiedname>pars::ev::base_network_metadata::pipe</qualifiedname>
@@ -103,12 +103,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="82" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="82" bodyend="82"/>
-        <referencedby refid="structpars_1_1ev_1_1base__network__metadata_1a7e5407543837c5680957e0ccdcc15e23" compoundref="metadata_8h" startline="88" endline="93">format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="84" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="84" bodyend="84"/>
+        <referencedby refid="structpars_1_1ev_1_1base__network__metadata_1ac17772fd7a8fce68fa71306f228a5a00" compoundref="metadata_8h" startline="90" endline="95">format_to</referencedby>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1aec9b611f1aa51eccc4645424434f4dac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref> &amp;</type>
-        <definition>const net::pipe &amp; pars::ev::base_network_metadata::pipe</definition>
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1ab3a946cd1f2752ed2d94955685049bf7" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref> &amp;</type>
+        <definition>const net::pipe_view &amp; pars::ev::base_network_metadata::pipe</definition>
         <argsstring>() const</argsstring>
         <name>pipe</name>
         <qualifiedname>pars::ev::base_network_metadata::pipe</qualifiedname>
@@ -118,9 +118,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="84" column="19" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="84" bodyend="84"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="86" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="86" bodyend="86"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1ac095a80cf47c3bb70482e591da4eccc3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1ac095a80cf47c3bb70482e591da4eccc3" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int pars::ev::base_network_metadata::socket_id</definition>
         <argsstring>() const</argsstring>
@@ -132,16 +132,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="86" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="86" bodyend="86"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="88" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="88" bodyend="88"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1a7e5407543837c5680957e0ccdcc15e23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__network__metadata_1ac17772fd7a8fce68fa71306f228a5a00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
         <definition>decltype(ctx.out()) pars::ev::base_network_metadata::format_to</definition>
-        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
         <name>format_to</name>
         <qualifiedname>pars::ev::base_network_metadata::format_to</qualifiedname>
         <param>
-          <type>fmt::format_context &amp;</type>
+          <type>std::format_context &amp;</type>
           <declname>ctx</declname>
         </param>
         <briefdescription>
@@ -150,9 +150,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="88" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="88" bodyend="93"/>
-        <references refid="structpars_1_1ev_1_1base__network__metadata_1af3308f6b93c8eea0b4080fe1cf3ed645" compoundref="metadata_8h" startline="82" endline="82">pipe</references>
-        <references refid="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" compoundref="metadata_8h" startline="80" endline="80">tool</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="90" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="90" bodyend="95"/>
+        <references refid="structpars_1_1ev_1_1base__network__metadata_1a68e18f22618d8bf8476629acd3b61ff4" compoundref="metadata_8h" startline="84" endline="84">pipe</references>
+        <references refid="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" compoundref="metadata_8h" startline="82" endline="82">tool</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -173,14 +173,14 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="71" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="72" bodyend="99"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="72" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="73" bodyend="101"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1base__network__metadata_1af645a2d0b86932aed49dcdaf95d23ad7" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>base_network_metadata</name></member>
-      <member refid="structpars_1_1ev_1_1base__network__metadata_1a7e5407543837c5680957e0ccdcc15e23" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>format_to</name></member>
+      <member refid="structpars_1_1ev_1_1base__network__metadata_1afef313b9ab94dc6f8b8d9560285842a2" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>base_network_metadata</name></member>
+      <member refid="structpars_1_1ev_1_1base__network__metadata_1ac17772fd7a8fce68fa71306f228a5a00" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>format_to</name></member>
       <member refid="structpars_1_1ev_1_1base__network__metadata_1a9bc822d33f43737756ab3f5fad7c4022" prot="private" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>id_m</name></member>
-      <member refid="structpars_1_1ev_1_1base__network__metadata_1af3308f6b93c8eea0b4080fe1cf3ed645" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe</name></member>
-      <member refid="structpars_1_1ev_1_1base__network__metadata_1aec9b611f1aa51eccc4645424434f4dac" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe</name></member>
-      <member refid="structpars_1_1ev_1_1base__network__metadata_1a3e574e2519354d471ad5e55995bfbbce" prot="private" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe_m</name></member>
+      <member refid="structpars_1_1ev_1_1base__network__metadata_1a68e18f22618d8bf8476629acd3b61ff4" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe</name></member>
+      <member refid="structpars_1_1ev_1_1base__network__metadata_1ab3a946cd1f2752ed2d94955685049bf7" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe</name></member>
+      <member refid="structpars_1_1ev_1_1base__network__metadata_1a84e20d3c1b44389ab09c64c435c16368" prot="private" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>pipe_m</name></member>
       <member refid="structpars_1_1ev_1_1base__network__metadata_1ac095a80cf47c3bb70482e591da4eccc3" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>socket_id</name></member>
       <member refid="structpars_1_1ev_1_1base__network__metadata_1a9c203f5bea285a03610fbbbd0cb9d849" prot="public" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>tool</name></member>
       <member refid="structpars_1_1ev_1_1base__network__metadata_1af9a27fa81fbe30b72e106f8f8554f0ed" prot="private" virt="non-virtual"><scope>pars::ev::base_network_metadata</scope><name>tool_m</name></member>

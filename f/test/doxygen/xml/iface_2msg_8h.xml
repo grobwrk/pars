@@ -3,7 +3,7 @@
   <compounddef id="iface_2msg_8h" kind="file" language="C++">
     <compoundname>msg.h</compoundname>
     <includes refid="nngxx_2iface_2value_8h" local="yes">nngxx/iface/value.h</includes>
-    <includes refid="nngxx_2pipe_8h" local="yes">nngxx/pipe.h</includes>
+    <includes refid="pipe_8h" local="yes">nngxx/pipe.h</includes>
     <includes local="no">nng/nng.h</includes>
     <includedby refid="msg_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/msg.h</includedby>
     <incdepgraph>
@@ -16,10 +16,8 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -28,35 +26,33 @@
         <link refid="own_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="11">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="16">
-        <label>nngxx/err.h</label>
+      <node id="14">
+        <label>err.h</label>
         <link refid="nngxx_2err_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -66,13 +62,13 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="20">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="16" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
@@ -84,13 +80,13 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -100,17 +96,19 @@
       <node id="13">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-      </node>
-      <node id="15">
-        <label>nngxx/opt_getter.h</label>
-        <link refid="opt__getter_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -118,46 +116,46 @@
       <node id="17">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="19">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="21">
         <label>nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>concepts</label>
       </node>
-      <node id="7">
+      <node id="5">
         <label>expected</label>
       </node>
-      <node id="5">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="8">
-        <label>functional</label>
-      </node>
-      <node id="6">
+      <node id="12">
         <label>nng/nng.h</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>system_error</label>
       </node>
       <node id="18">
         <label>type_traits</label>
@@ -267,13 +265,13 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -284,10 +282,10 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="36">
@@ -377,8 +375,6 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -451,9 +447,9 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -482,7 +478,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="47">
+      <node id="46">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -492,7 +488,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="47">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="30" relation="include">
@@ -508,16 +504,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="46">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="45" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -543,7 +533,7 @@
         <link refid="hash_8h"/>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -559,8 +549,8 @@
         </childnode>
       </node>
       <node id="41">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
@@ -674,7 +664,7 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2iface_2value_8h" kindref="compound">nngxx/iface/value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2pipe_8h" kindref="compound">nngxx/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pipe_8h" kindref="compound">nngxx/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
@@ -692,44 +682,43 @@
 <codeline lineno="48"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" kindref="member">value::value</ref>;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>nng_msg*<sp/>empty()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>nng_msg*<sp/>empty()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/>destroy(nng_msg**<sp/>v)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>destroy(nng_msg**<sp/>v)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_msg_free,<sp/>*v).and_then([&amp;]()<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_msg_free,<sp/>*v).and_then(<ref refid="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" kindref="member">invoke</ref>([&amp;]<sp/>{</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*v<sp/>=<sp/>empty();</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref>{};</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>copy(nng_msg**<sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_msg*<sp/>s)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_msg_dup,<sp/>d,<sp/>s);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_msg*&gt;</ref></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>alloc(std::size_t<sp/>sz)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">nngxx::make</ref>(nng_msg_alloc,<sp/>sz);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref><sp/>get_pipe()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nng_msg_get_pipe(v);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_pipe(<ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref>&amp;<sp/>p)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>nng_msg_set_pipe(v,<sp/>p);<sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1msg__body" kindref="compound">nngxx::msg_body</ref><sp/>body()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>inline<sp/>const<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_body<sp/>body()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>inline<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_header<sp/>header()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>inline<sp/>const<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_header<sp/>header()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>copy(nng_msg**<sp/>d,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_msg*<sp/>s)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_msg_dup,<sp/>d,<sp/>s);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;nng_msg*&gt;</ref><sp/>alloc(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>sz)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">nngxx::make</ref>(nng_msg_alloc,<sp/>sz);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ReSharper<sp/>disable<sp/>once<sp/>CppConstValueFunctionReturnType</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref><sp/>get_pipe()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nng_msg_get_pipe(v);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ReSharper<sp/>disable<sp/>once<sp/>CppMemberFunctionMayBeConst</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_pipe(<ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref>&amp;<sp/>p)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>nng_msg_set_pipe(v,<sp/>p);<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="structnngxx_1_1msg__body" kindref="compound">nngxx::msg_body</ref><sp/>body()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_body<sp/>body()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_header<sp/>header()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg_header<sp/>header()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/msg.h"/>
   </compounddef>

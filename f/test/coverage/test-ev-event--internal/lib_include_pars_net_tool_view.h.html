@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">4</td>
+                     <td class="headerValue" width="10%">5</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -71,7 +71,7 @@
              : #include &quot;nngxx/ctx.h&quot;
              : #include &quot;nngxx/socket.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
+             : #include &lt;format&gt;
              : 
              : #include &lt;typeinfo&gt;
              : #include &lt;variant&gt;
@@ -100,7 +100,8 @@
              :   /// Get the std::type_info of the underlying variant
              :   [[nodiscard]] const std::type_info&amp; type() const
              :   {
-<span class="lineNoCov">      0 / 3 </span> : <span class="lineNoCov">    return std::visit([](auto&amp; t) { return std::ref(typeid(t)); }, tool_m);</span>
+<span class="lineNoCov">      0 / 3 </span> : <span class="lineNoCov">    return std::visit([]&lt;typename T&gt;(T&amp;) { return std::ref(typeid(T)); },</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                      tool_m);</span>
              :   }
              : 
              :   /// Get a string that represents the type of the underlying variant
@@ -116,9 +117,9 @@
              :   }
              : 
              :   /// Formatter for debugging purpose
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{} #{}&quot;, who(), id());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;{} #{}&quot;, who(), id());</span>
              :   }
              : 
              : private:

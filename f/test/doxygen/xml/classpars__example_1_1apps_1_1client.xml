@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
-  <compounddef id="classpars__example_1_1apps_1_1client" kind="class" language="C++" prot="public">
+  <compounddef id="classpars__example_1_1apps_1_1client" kind="class" language="C++" prot="public" final="yes">
     <compoundname>pars_example::apps::client</compoundname>
     <basecompoundref refid="classpars_1_1app_1_1single" prot="public" virt="non-virtual">pars::app::single&lt; comp::client &gt;</basecompoundref>
     <sectiondef kind="user-defined">
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="44" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="44" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="43" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" prot="private" static="no">
         <type><ref refid="classpars__example_1_1apps_1_1client" kindref="compound">client</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="45" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="45" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="44" column="3" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="49" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="49" bodyend="49"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="48" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="48" bodyend="48"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a28488dbd99185cbeee1830ff0f90b242" prot="private" static="no" mutable="no">
         <type><ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="50" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="50" bodyend="50"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="49" column="9" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="49" bodyend="49"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="54" column="29" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="54" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="53" column="29" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" prot="private" static="no" mutable="no">
         <type>std::size_t</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="55" column="15" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="55" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="54" column="15" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="56" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="55" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a85cdc9bd734e4841d085ef604a4ab209" prot="private" static="no" mutable="no">
         <type>uint64_t</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="57" column="12" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="57" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="56" column="12" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -137,21 +137,22 @@
         <argsstring></argsstring>
         <name>state</name>
         <qualifiedname>pars_example::apps::client::state</qualifiedname>
-        <initializer>= {client_state::creating}</initializer>
+        <initializer>=
+    <ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine</ref>{client_state::creating}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="61" column="22" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="61" bodyend="61"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="60" column="22" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="60" bodyend="61"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
       <header>Initialization</header>
-      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a934b7e78084c00a74c9282b7dbdbf4ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1aa1766af3c67f554c0866e0fc8246fc9b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void pars_example::apps::client::usage</definition>
+        <definition>static void pars_example::apps::client::usage</definition>
         <argsstring>()</argsstring>
         <name>usage</name>
         <qualifiedname>pars_example::apps::client::usage</qualifiedname>
@@ -161,17 +162,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/client.cpp" line="69" column="8" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="69" bodyend="73"/>
+        <location file="/home/runner/work/pars/pars/example/client.cpp" line="69" column="15" bodyfile="/home/runner/work/pars/pars/example/client.cpp" bodystart="69" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a1df9f3f6bade13fca07a4010e8c6d530" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>void pars_example::apps::client::startup</definition>
-        <argsstring>(int argc, char **argv) override</argsstring>
+        <argsstring>(const int argc, char **argv) override</argsstring>
         <name>startup</name>
         <qualifiedname>pars_example::apps::client::startup</qualifiedname>
         <reimplements refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb">startup</reimplements>
         <param>
-          <type>int</type>
+          <type>const int</type>
           <declname>argc</declname>
         </param>
         <param>
@@ -333,7 +334,7 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Runs the client component as an single application (req) </para>
+<para>Runs the client component as a single application (req) </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -378,8 +379,8 @@
       <member refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>comp</name></member>
       <member refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>component_type</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1a48735cc5de36aed2d448d95efb4a9ca5" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>connect_p</name></member>
-      <member refid="structpars_1_1app_1_1with__default__setup_1a11ad0a06ff6c0e16378facb9b7d92f9c" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>enable_source_loc_logging</name></member>
-      <member refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>exec</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1a7c4868926e8c160d5f96a9bdc7fde104" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>enable_source_loc_logging</name></member>
+      <member refid="classpars_1_1app_1_1single_1a834e0daed9d8890685d41401423bb383" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>exec</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>fast_fib</name></member>
       <member refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>graceful_terminate</name></member>
       <member refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>hfs</name></member>
@@ -394,9 +395,9 @@
       <member refid="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>self</name></member>
       <member refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>self_type</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1a86c6c063bd87aeef6ddeb9ad1c48305b" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>send_work</name></member>
-      <member refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>setup</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1abc288c2ac02039425ce9ea919b8675c9" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>setup</name></member>
       <member refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>single</name></member>
-      <member refid="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" prot="private" virt="virtual"><scope>pars_example::apps::client</scope><name>startup</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1a1df9f3f6bade13fca07a4010e8c6d530" prot="private" virt="virtual"><scope>pars_example::apps::client</scope><name>startup</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1abd29b4d43a0e05778f43c3054e1a5e79" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>state</name></member>
       <member refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>stop_job_thread</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1a2338f51f150eec5897d13a5a2176704b" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
@@ -404,9 +405,10 @@
       <member refid="classpars__example_1_1apps_1_1client_1a2dea7fd29d4fab76a9f538a5048c2505" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1a19178b502c43909a38d406dcf2e09faa" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate</name></member>
       <member refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>terminate_now</name></member>
-      <member refid="classpars__example_1_1apps_1_1client_1a934b7e78084c00a74c9282b7dbdbf4ef" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>usage</name></member>
+      <member refid="classpars__example_1_1apps_1_1client_1aa1766af3c67f554c0866e0fc8246fc9b" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>usage</name></member>
       <member refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>with_default_setup</name></member>
       <member refid="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" prot="private" virt="non-virtual"><scope>pars_example::apps::client</scope><name>work_id</name></member>
+      <member refid="structpars_1_1app_1_1with__default__setup_1a0ffaaeab0f5c742cb8f66b00400eb74e" prot="public" virt="virtual"><scope>pars_example::apps::client</scope><name>~with_default_setup</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

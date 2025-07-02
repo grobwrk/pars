@@ -15,17 +15,24 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="namespacenngxx_1_1cpp_1a675fe8d0efb36801fc4a93482cdc9cb8a36c09abd7943c607e22274d623f1292b" prot="public">
+          <name>unknown_option</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="47" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="48" bodyend="50"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="46" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="47" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
-      <memberdef kind="function" id="namespacenngxx_1_1cpp_1a5a8d0f97d8c8bc1be092edbcd6334dfe" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespacenngxx_1_1cpp_1a5a8d0f97d8c8bc1be092edbcd6334dfe" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>const std::error_category &amp;</type>
         <definition>static const std::error_category &amp; nngxx::cpp::error_category</definition>
         <argsstring>() noexcept</argsstring>
@@ -37,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="52" column="42" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="52" bodyend="71"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="52" column="35" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="52" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1_1cpp_1afb1055c34770912880b69fd01eb28967" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::error_code</type>
@@ -55,13 +62,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="73" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="73" bodyend="76"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="75" column="25" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/err.h" bodystart="75" bodyend="78"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="42" column="1"/>
+    <location file="/home/runner/work/pars/pars/lib/include/nngxx/err.h" line="41" column="1"/>
   </compounddef>
 </doxygen>

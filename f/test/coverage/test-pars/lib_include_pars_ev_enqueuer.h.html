@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">14</td>
@@ -100,7 +100,7 @@
              :   }
              : 
              :   template&lt;network_event_c event_t, net::tool_c tool_t&gt;
-             :   void queue_fire(event_t ev, const int s_id, tool_t&amp; t, net::pipe p)
+             :   void queue_fire(event_t ev, const int s_id, tool_t&amp; t, net::pipe_view p)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if constexpr (std::is_same_v&lt;event_t, creating_pipe&gt; ||</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  std::is_same_v&lt;event_t, pipe_created&gt; ||</span>
@@ -126,13 +126,13 @@
              :   }
              : 
              :   template&lt;network_event_c event_t, net::tool_c tool_t&gt;
-             :   void queue_sent(event_t ev, int s_id, tool_t&amp; t, net::pipe p)
+             :   void queue_sent(event_t ev, int s_id, tool_t&amp; t, net::pipe_view p)
              :   {
              :     dispatcher_m.queue_back(sent{std::move(ev), {s_id, t, p}});
              :   }
              : 
              :   template&lt;net::tool_c tool_t&gt;
-             :   void queue_received(nngxx::msg m, int s_id, tool_t&amp; t, net::pipe p)
+             :   void queue_received(nngxx::msg m, int s_id, tool_t&amp; t, net::pipe_view p)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    dispatcher_m.queue_back(received{std::move(m), {s_id, t, p}});</span>
              :   }
@@ -143,6 +143,7 @@
              : };
              : 
              : } // namespace pars::ev
+             : \
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

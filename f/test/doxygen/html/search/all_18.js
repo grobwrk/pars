@@ -4,5 +4,6 @@ var searchData=
   ['_7eop_1',['~op',['../classpars_1_1net_1_1op.html#a5d31c5655ef3420fbcc9279203a0364d',1,'pars::net::op']]],
   ['_7eown_2',['~own',['../structclev_1_1own.html#adc1f2cfae32066365a0f3095aa9d22ff',1,'clev::own']]],
   ['_7esocket_3',['~socket',['../classpars_1_1net_1_1socket.html#a1e56fc1cbaf8dea2b2f08481a4b42438',1,'pars::net::socket']]],
-  ['_7estate_5ftx_4',['~state_tx',['../structpars_1_1app_1_1state__tx.html#a997e8e2b6c46219260dada045fa2a9b0',1,'pars::app::state_tx']]]
+  ['_7estate_5ftx_4',['~state_tx',['../structpars_1_1app_1_1state__tx.html#a997e8e2b6c46219260dada045fa2a9b0',1,'pars::app::state_tx']]],
+  ['_7ewith_5fdefault_5fsetup_5',['~with_default_setup',['../structpars_1_1app_1_1with__default__setup.html#a0ffaaeab0f5c742cb8f66b00400eb74e',1,'pars::app::with_default_setup']]]
 ];

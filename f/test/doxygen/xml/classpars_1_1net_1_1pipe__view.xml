@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classpars_1_1net_1_1pipe__view" kind="class" language="C++" prot="public">
+    <compoundname>pars::net::pipe_view</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">clev::iface&lt; nng_pipe &gt;</basecompoundref>
+    <includes refid="pipe__view_8h" local="no">pipe_view.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpars_1_1net_1_1pipe__view_1a5f6e6e289bac8960410450248367e021" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int pars::net::pipe_view::id_m</definition>
+        <argsstring></argsstring>
+        <name>id_m</name>
+        <qualifiedname>pars::net::pipe_view::id_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="73" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpars_1_1net_1_1pipe__view_1ae5b99fa4b974b024b77039d5df8a88e6" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int pars::net::pipe_view::socket_id_m</definition>
+        <argsstring></argsstring>
+        <name>socket_id_m</name>
+        <qualifiedname>pars::net::pipe_view::socket_id_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="75" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1a753121d253c9e5bc850db50920726327" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::pipe_view::pipe_view</definition>
+        <argsstring>()</argsstring>
+        <name>pipe_view</name>
+        <qualifiedname>pars::net::pipe_view::pipe_view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="45" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1acf333d5f2e2b4965b5b055c159f1064e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::pipe_view::pipe_view</definition>
+        <argsstring>(const nngxx::pipe_view &amp;pv) noexcept</argsstring>
+        <name>pipe_view</name>
+        <qualifiedname>pars::net::pipe_view::pipe_view</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" kindref="member">nngxx::pipe_view</ref> &amp;</type>
+          <declname>pv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="52" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1a725dbcdf354956c39845d321e40b64d7" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::net::pipe_view::id</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>id</name>
+        <qualifiedname>pars::net::pipe_view::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="60" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="60" bodyend="60"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a2e2b141a07f050c30fdbb3c219d3f6a4" compoundref="runner_8h" startline="151" endline="158">pars::ev::runner::add_pipe</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1ae9bb17285337b035b9bfc31ee2b8c316" compoundref="runner_8h" startline="161" endline="174">pars::ev::runner::remove_pipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1a05dc973e288b00750756a1d843c36b88" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int pars::net::pipe_view::socket_id</definition>
+        <argsstring>() const</argsstring>
+        <name>socket_id</name>
+        <qualifiedname>pars::net::pipe_view::socket_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="62" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1a8fdbebc6464eda19b2829d33b94f5ecf" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::net::pipe_view::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>pars::net::pipe_view::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="64" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classpars_1_1net_1_1pipe__view_1afe6f3b1771a147d22d9b1380b29a03e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars::net::pipe_view::format_to</definition>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars::net::pipe_view::format_to</qualifiedname>
+        <param>
+          <type>std::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="66" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="66" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>clev::value&lt; nng_t &gt;</label>
+        <link refid="structclev_1_1value"/>
+      </node>
+      <node id="2">
+        <label>nngxx::pipe_view</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nngxx::value&lt; nng_pipe &gt;</label>
+        <link refid="structnngxx_1_1value"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pars::net::pipe_view</label>
+        <link refid="classpars_1_1net_1_1pipe__view"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>clev::value&lt; nng_t &gt;</label>
+        <link refid="structclev_1_1value"/>
+      </node>
+      <node id="2">
+        <label>nngxx::pipe_view</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nngxx::value&lt; nng_pipe &gt;</label>
+        <link refid="structnngxx_1_1value"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pars::net::pipe_view</label>
+        <link refid="classpars_1_1net_1_1pipe__view"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h" bodystart="43" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1abd7999b366ce3e361af8c88adbed886f" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>close</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1adf8f9ef0a5f987f6f4cb6bee376aa8c5" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>destroy</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a565152864bfbbd8538648cd7ff6214d7" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>empty</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1afe6f3b1771a147d22d9b1380b29a03e8" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>format_to</name></member>
+      <member refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_recv_timeout</name></member>
+      <member refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_req_resend_tick</name></member>
+      <member refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_req_resend_time</name></member>
+      <member refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_send_timeout</name></member>
+      <member refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_sock_name</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a9ac2bf7dcc18c3321bbbd74ce3e053f1" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>get_socket</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1a725dbcdf354956c39845d321e40b64d7" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>id</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1a5f6e6e289bac8960410450248367e021" prot="private" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>id_m</name></member>
+      <member refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>is_valid</name></member>
+      <member refid="structnngxx_1_1value_1af477492cb4b4f94f0ca8cb843fd5dd4b" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>nng_type</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1a8fdbebc6464eda19b2829d33b94f5ecf" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>operator bool</name></member>
+      <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>operator const value_type</name></member>
+      <member refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>operator const value_type</name></member>
+      <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>operator value_type</name></member>
+      <member refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>operator value_type</name></member>
+      <member refid="structnngxx_1_1value_1a9e45aa75049d93cfbfbe9bcd82b75833" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>parent</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1a753121d253c9e5bc850db50920726327" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>pipe_view</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1acf333d5f2e2b4965b5b055c159f1064e" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>pipe_view</name></member>
+      <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>release</name></member>
+      <member refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>release</name></member>
+      <member refid="structnngxx_1_1value_1ad7f09a4112b51ab30dd877ed6ca58d9a" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>set_recv_timeout</name></member>
+      <member refid="structnngxx_1_1value_1afd6330174d343403d7270ab2361a57ee" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>set_req_resend_tick</name></member>
+      <member refid="structnngxx_1_1value_1a59b34e007bce25fcda41064c88f2c6cd" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>set_req_resend_time</name></member>
+      <member refid="structnngxx_1_1value_1a9dea41a7195ffa233953a029f0ad18f2" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>set_send_timeout</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1a05dc973e288b00750756a1d843c36b88" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>socket_id</name></member>
+      <member refid="classpars_1_1net_1_1pipe__view_1ae5b99fa4b974b024b77039d5df8a88e6" prot="private" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>socket_id_m</name></member>
+      <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>v</name></member>
+      <member refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" prot="protected" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>v</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1aa89d7fc39c0ee54cd3169b40c8ba72de" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>value</name></member>
+      <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1ab6f7f8f6624b75975fa76bfc61e51689" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>value</name></member>
+      <member refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" prot="public" virt="non-virtual"><scope>pars::net::pipe_view</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

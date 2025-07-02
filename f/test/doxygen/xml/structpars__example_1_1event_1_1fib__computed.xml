@@ -18,7 +18,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/example/event.h" line="58" column="15" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="58" bodyend="-1"/>
-        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" compoundref="example_2event_8h" startline="61" endline="64">format_to</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" compoundref="example_2event_8h" startline="61" endline="64">format_to</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -34,18 +34,18 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/example/event.h" line="59" column="12" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="59" bodyend="-1"/>
-        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" compoundref="example_2event_8h" startline="61" endline="64">format_to</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" compoundref="example_2event_8h" startline="61" endline="64">format_to</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
         <definition>decltype(ctx.out()) pars_example::event::fib_computed::format_to</definition>
-        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
         <name>format_to</name>
         <qualifiedname>pars_example::event::fib_computed::format_to</qualifiedname>
         <param>
-          <type>fmt::format_context &amp;</type>
+          <type>std::format_context &amp;</type>
           <declname>ctx</declname>
         </param>
         <briefdescription>
@@ -66,7 +66,7 @@
     <location file="/home/runner/work/pars/pars/example/event.h" line="56" column="1" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="57" bodyend="65"/>
     <listofallmembers>
       <member refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>fib_n</name></member>
-      <member refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>format_to</name></member>
+      <member refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>format_to</name></member>
       <member refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>work_id</name></member>
     </listofallmembers>
   </compounddef>

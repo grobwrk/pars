@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="60" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="60" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="61" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" prot="public" static="no">
         <templateparamlist>
@@ -207,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="110" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="110" bodyend="116"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="111" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="111" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1_1ev_1ac84637ef36e6c43e0f0fda9b9c55440e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="120" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="120" bodyend="126"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" line="121" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/job.h" bodystart="121" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1_1ev_1aa9008ca4ace86f33edb3a0eefd008e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -332,11 +332,11 @@
           </param>
           <param>
             <type>typename event_t</type>
-            <defval>hf_traits&lt;mem_fn_t&gt;::event_type</defval>
+            <defval>typename hf_traits&lt;mem_fn_t&gt;::event_type</defval>
           </param>
           <param>
             <type>typename class_t</type>
-            <defval>hf_traits&lt;mem_fn_t&gt;::class_type</defval>
+            <defval>typename hf_traits&lt;mem_fn_t&gt;::class_type</defval>
           </param>
         </templateparamlist>
         <type><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f</ref>&lt; kind_of, event_t &gt;</type>
@@ -359,12 +359,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" line="58" column="11" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" bodystart="58" bodyend="89"/>
-        <referencedby refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" compoundref="hf__registry_8h" startline="73" endline="76">pars::ev::hf_registry::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1pull_1a50522b569091475731c03c4bf0c7e09d" compoundref="pull_8h" startline="67" endline="70">pars::net::pull::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="66" endline="69">pars::net::push::on</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" line="58" column="11" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/make_hf.h" bodystart="58" bodyend="95"/>
+        <references refid="namespacepars_1afcdb266fe199935265e3d7a45b4edebfab748f56cf76526f8606d7463b9df9f2e" compoundref="pars_2err_8h" startline="43">pars::unreachable</references>
+        <referencedby refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" compoundref="hf__registry_8h" startline="74" endline="77">pars::ev::hf_registry::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1pull_1a50522b569091475731c03c4bf0c7e09d" compoundref="pull_8h" startline="68" endline="71">pars::net::pull::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1push_1a685d034edb4864b320ab2e22326eedd4" compoundref="push_8h" startline="67" endline="70">pars::net::push::on</referencedby>
         <referencedby refid="classpars_1_1net_1_1rep_1a377c054cdfc47674f4b67f752b1fd3af" compoundref="rep_8h" startline="77" endline="80">pars::net::rep::on</referencedby>
-        <referencedby refid="classpars_1_1net_1_1req_1a6a931f98c4697d7cdab14d5bf8afefd0" compoundref="req_8h" startline="77" endline="80">pars::net::req::on</referencedby>
+        <referencedby refid="classpars_1_1net_1_1req_1a6a931f98c4697d7cdab14d5bf8afefd0" compoundref="req_8h" startline="78" endline="81">pars::net::req::on</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

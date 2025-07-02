@@ -16,10 +16,8 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
-      <node id="7">
+      <node id="6">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -28,20 +26,17 @@
         <link refid="own_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="3">
         <label>expected</label>
       </node>
-      <node id="3">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="6">
-        <label>functional</label>
-      </node>
       <node id="4">
-        <label>nng/nng.h</label>
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>system_error</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -72,7 +67,7 @@
         <link refid="own_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="55" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -137,10 +132,12 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="54" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -162,7 +159,7 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -180,13 +177,13 @@
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -197,20 +194,20 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -233,12 +230,10 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="55">
+      <node id="54">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -314,8 +309,6 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -388,9 +381,9 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -419,7 +412,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -429,7 +422,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="30" relation="include">
@@ -445,16 +438,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -480,7 +467,7 @@
         <link refid="hash_8h"/>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -496,8 +483,8 @@
         </childnode>
       </node>
       <node id="41">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">

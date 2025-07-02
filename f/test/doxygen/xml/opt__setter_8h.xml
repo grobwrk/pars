@@ -12,8 +12,6 @@
         <link refid="clev_2err_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
@@ -32,16 +30,16 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="10">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -60,20 +58,20 @@
       <node id="4">
         <label>concepts</label>
       </node>
-      <node id="8">
-        <label>expected</label>
-      </node>
       <node id="7">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="9">
-        <label>functional</label>
+        <label>expected</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
       </node>
       <node id="11">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="8">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>system_error</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -161,10 +159,12 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="54" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -186,7 +186,7 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -204,13 +204,13 @@
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -221,10 +221,10 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -233,14 +233,14 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -336,8 +336,6 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -410,9 +408,9 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -441,7 +439,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -451,7 +449,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="30" relation="include">
@@ -467,16 +465,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -502,7 +494,7 @@
         <link refid="hash_8h"/>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -518,8 +510,8 @@
         </childnode>
       </node>
       <node id="41">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
@@ -649,8 +641,8 @@
 <codeline lineno="46" refid="structnngxx_1_1opt__setter_1a7a460bcdf2ebf73db792bec869e0c0a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__setter_1a7a460bcdf2ebf73db792bec869e0c0a6" kindref="member">overload</ref><sp/>=<sp/>opt_to_nng_overload&lt;opt_v&gt;();</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;nng_value_c<sp/>nng_value_t&gt;</highlight></codeline>
-<codeline lineno="49" refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/><ref refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" kindref="member">operator()</ref>(<ref refid="structnngxx_1_1opt__setter_1a3303b101a11cf2e8dd46a42175eeedb3" kindref="member">nng_type</ref><sp/>obj,</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nng_value_t<sp/>val)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/><ref refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" kindref="member">operator()</ref>(<ref refid="structnngxx_1_1opt__setter_1a3303b101a11cf2e8dd46a42175eeedb3" kindref="member">nng_type</ref><sp/>obj,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nng_value_t<sp/>val)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*set)(<ref refid="structnngxx_1_1opt__setter_1a3303b101a11cf2e8dd46a42175eeedb3" kindref="member">nng_type</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/>nng_value_t);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>

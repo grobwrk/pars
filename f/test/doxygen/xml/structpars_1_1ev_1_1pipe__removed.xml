@@ -3,15 +3,15 @@
   <compounddef id="structpars_1_1ev_1_1pipe__removed" kind="struct" language="C++" prot="public">
     <compoundname>pars::ev::pipe_removed</compoundname>
     <includes refid="lib_2include_2pars_2ev_2event_8h" local="no">event.h</includes>
-    <sectiondef kind="public-func">
-      <memberdef kind="function" id="structpars_1_1ev_1_1pipe__removed_1a08c2caa726d4de4ec91a2d1f129e4df9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1pipe__removed_1ade30ef4dbc0a5cd35153f286364e2b62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
-        <definition>decltype(ctx.out()) pars::ev::pipe_removed::format_to</definition>
-        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <definition>static decltype(ctx.out()) pars::ev::pipe_removed::format_to</definition>
+        <argsstring>(std::format_context &amp;ctx)</argsstring>
         <name>format_to</name>
         <qualifiedname>pars::ev::pipe_removed::format_to</qualifiedname>
         <param>
-          <type>fmt::format_context &amp;</type>
+          <type>std::format_context &amp;</type>
           <declname>ctx</declname>
         </param>
         <briefdescription>
@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="78" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="78" bodyend="81"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="78" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="78" bodyend="81"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -29,7 +29,7 @@
     </detaileddescription>
     <location file="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" line="76" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/event.h" bodystart="77" bodyend="82"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1pipe__removed_1a08c2caa726d4de4ec91a2d1f129e4df9" prot="public" virt="non-virtual"><scope>pars::ev::pipe_removed</scope><name>format_to</name></member>
+      <member refid="structpars_1_1ev_1_1pipe__removed_1ade30ef4dbc0a5cd35153f286364e2b62" prot="public" virt="non-virtual"><scope>pars::ev::pipe_removed</scope><name>format_to</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -73,12 +73,12 @@
              : 
              : struct msg_header
              : {
-             :   msg_header(nng_msg* m) noexcept
+             :   explicit msg_header(nng_msg* m) noexcept
           25</span> :     : m<span class="lineCov">{m}</span>
              :   {
              :   }
              : 
-             :   [[nodiscard]] inline std::size_t size() const noexcept
+             :   [[nodiscard]] std::size_t size() const noexcept
              :   {
           25</span> : <span class="lineCov">    return nng_msg_header_len(m);</span>
              :   }
@@ -89,12 +89,13 @@
              : 
              : } // namespace nngxx
              : 
-             : nngxx::msg_header nngxx::msg_view::header() noexcept
+             : inline nngxx::msg_header nngxx::msg_view::header() noexcept
              : {
            2</span> : <span class="lineCov">  return nngxx::msg_header{v};</span>
              : }
              : 
-             : const nngxx::msg_header nngxx::msg_view::header() const noexcept
+             : // ReSharper disable once CppConstValueFunctionReturnType
+             : inline const nngxx::msg_header nngxx::msg_view::header() const noexcept
              : {
           23</span> : <span class="lineCov">  return nngxx::msg_header{v};</span>
              : }

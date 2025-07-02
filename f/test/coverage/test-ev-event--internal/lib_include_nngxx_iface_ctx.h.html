@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">6</td>
@@ -77,27 +77,25 @@
              : {
              :   using value::value;
              : 
-             :   [[nodiscard]] inline static nng_ctx empty() noexcept
-             :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_CTX_INITIALIZER;</span>
-             :   };
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] static nng_ctx empty() noexcept <span class="lineNoCov">{ return NNG_CTX_INITIALIZER; }</span>;
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_ctx* v) noexcept
+             :   [[nodiscard]] static expected&lt;void&gt; destroy(const nng_ctx* v) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_ctx_close, *v);</span>
              :   }
              : 
-             :   [[nodiscard]] static inline clev::expected&lt;nng_ctx&gt;
-             :   open(nngxx::socket_view&amp; s) noexcept
+             :   [[nodiscard]] static expected&lt;nng_ctx&gt; open(nngxx::socket_view&amp; s) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::make(nng_ctx_open, static_cast&lt;nng_socket&gt;(s));</span>
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] inline int id() const noexcept <span class="lineNoCov">{ return nng_ctx_id(v); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] int id() const noexcept <span class="lineNoCov">{ return nng_ctx_id(v); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   inline void send(nngxx::aio_view&amp; a) noexcept <span class="lineNoCov">{ nng_ctx_send(v, a); }</span>
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+<span class="lineNoCov">      0 / 1 </span> :   void send(nngxx::aio_view&amp; a) noexcept <span class="lineNoCov">{ nng_ctx_send(v, a); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   inline void recv(nngxx::aio_view&amp; a) noexcept <span class="lineNoCov">{ nng_ctx_recv(v, a); }</span>
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+<span class="lineNoCov">      0 / 1 </span> :   void recv(nngxx::aio_view&amp; a) noexcept <span class="lineNoCov">{ nng_ctx_recv(v, a); }</span>
              : };
              : 
              : static_assert(nngxx_socket_is_really_needed_v);

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['can_5fexec_0',['can_exec',['../structpars_1_1ev_1_1runner.html#a48007dd1644ccce4952c31c0b5987a62',1,'pars::ev::runner']]],
+  ['can_5fexec_0',['can_exec',['../structpars_1_1ev_1_1runner.html#a1c5c59900d01b93142433d9928248199',1,'pars::ev::runner']]],
   ['cancel_1',['cancel',['../classpars_1_1net_1_1op.html#ab8f9068c426947274537212d8716a828',1,'pars::net::op']]],
   ['canceled_2',['canceled',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2ad5c39a1d9aced393f835f334a1fb9206',1,'nngxx::c']]],
   ['cast_5fpipe_5fev_3',['cast_pipe_ev',['../namespacenngxx.html#aedb473509a696bead2df6edbad24d96a',1,'nngxx::cast_pipe_ev(pipe_ev ev) noexcept'],['../namespacenngxx.html#a139f8ed3851ddee253cf8436255ffd49',1,'nngxx::cast_pipe_ev(nng_pipe_ev ev) noexcept']]],
-  ['cb_5ff_4',['cb_f',['../namespacepars_1_1net.html#ae5981715796cf677d35be33819d52267',1,'pars::net']]],
-  ['chop_5',['chop',['../structnngxx_1_1msg__body.html#ae98c4d9e3836ec3c4be9bf2ae2656dcd',1,'nngxx::msg_body::chop() noexcept'],['../structnngxx_1_1msg__body.html#a39703ccc9d20a4094925e1c82d3c031c',1,'nngxx::msg_body::chop(std::size_t sz) noexcept']]],
+  ['cb_5ff_4',['cb_f',['../namespacepars_1_1net.html#a8d4f829cc278540043474384a62cb800',1,'pars::net']]],
+  ['chop_5',['chop',['../structnngxx_1_1msg__body.html#ae98c4d9e3836ec3c4be9bf2ae2656dcd',1,'nngxx::msg_body::chop() noexcept'],['../structnngxx_1_1msg__body.html#a670482d141827469d92bc773bc5c3bcb',1,'nngxx::msg_body::chop(const std::size_t sz) noexcept']]],
   ['class_5ftype_6',['class_type',['../structpars_1_1ev_1_1uuid.html#ac5abc8e335137a2e116a028d7a52186e',1,'pars::ev::uuid::class_type'],['../structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4.html#a2b3814cef5fb52ffcd88b6f893fdf2af',1,'pars::ev::hf_traits&lt; return_t(class_t::*)(hf_arg&lt; kind_of, event_t &gt;)&gt;::class_type']]],
   ['clev_7',['clev',['../namespaceclev.html',1,'']]],
   ['clev_5fhas_5fexceptions_8',['CLEV_HAS_EXCEPTIONS',['../clev_2err_8h.html#a2e3af1de29e4213f21f020dd96886f5d',1,'err.h']]],
@@ -39,7 +39,7 @@ var searchData=
   ['count_5fthreads_36',['count_threads',['../structpars_1_1ev_1_1runner.html#aa0c18ceb9e196d984b868cacf5a08940',1,'pars::ev::runner']]],
   ['creating_37',['creating',['../namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09aaee20fd29e100990f661f3f1479c19647',1,'pars_example::resource::creating'],['../namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7baee20fd29e100990f661f3f1479c19647',1,'pars_example::resource::creating']]],
   ['creating_5fpipe_38',['creating_pipe',['../structpars_1_1ev_1_1creating__pipe.html',1,'pars::ev']]],
-  ['critical_39',['critical',['../namespacepars.html#adf272f9dfe4dd9a4c778ec1668b010a3',1,'pars::critical(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#a311e94fc62155675008a3095e58bc1d8',1,'pars::critical(pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#a5c96639854aeca4b1146d527a82600ad',1,'pars::critical(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#acc5b23fc8231ef128b3d5e964a1dfe0d',1,'pars::critical(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)']]],
+  ['critical_39',['critical',['../namespacepars.html#a173115a8cc5bfd3d7315a2bbeee92b72',1,'pars::critical(spdlog::source_loc loc, const lf flags, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#af061f0593ed5d948ab36e7efbc1e4407',1,'pars::critical(const lf flags, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#a5c96639854aeca4b1146d527a82600ad',1,'pars::critical(spdlog::source_loc loc, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)'],['../namespacepars.html#acc5b23fc8231ef128b3d5e964a1dfe0d',1,'pars::critical(spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)']]],
   ['crypto_40',['crypto',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a5ae9b7f211e23aac3df5f2b8f3b8eada',1,'nngxx::c']]],
   ['ctx_41',['ctx',['../namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8',1,'nngxx']]],
   ['ctx_2eh_42',['ctx.h',['../ctx_8h.html',1,'(Global Namespace)'],['../iface_2ctx_8h.html',1,'(Global Namespace)']]],

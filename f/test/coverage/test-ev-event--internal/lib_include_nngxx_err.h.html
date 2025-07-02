@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">34</td>
+                     <td class="headerValue" width="10%">36</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -68,7 +68,6 @@
              : 
              : #include &quot;clev/err.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
              : #include &lt;nng/nng.h&gt;
              : 
              : #include &lt;expected&gt;
@@ -83,16 +82,17 @@
              : 
              : enum class err
              : {
-             :   invalid_memory = 1
+             :   invalid_memory = 1,
+             :   unknown_option
              : };
              : 
-             : [[nodiscard]] inline static const std::error_category&amp; error_category() noexcept
+             : [[nodiscard]] static const std::error_category&amp; error_category() noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  static struct : std::error_category</span>
              :   {
-<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;nngxx&quot;; }</span>
+<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    [[nodiscard]] const char* name() const noexcept override { return &quot;nngxx&quot;; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    virtual std::string message(int e) const override</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    [[nodiscard]] std::string message(const int e) const override</span>
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      switch (static_cast&lt;err&gt;(e))</span>
              :       {
@@ -100,6 +100,8 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;invalid memory&quot;;</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        break;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      default:</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;unknown&quot;;</span>
              :       }
              :     }
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  } error_category;</span>
@@ -109,7 +111,7 @@
              : 
              : [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
              : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), error_category());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {static_cast&lt;int&gt;(e), error_category()};</span>
              : }
              : 
              : } // namespace cpp
@@ -119,13 +121,13 @@
              : 
              : enum class err : int;
              : 
-             : [[nodiscard]] inline static const std::error_category&amp; error_category() noexcept
+             : [[nodiscard]] static const std::error_category&amp; error_category() noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  static struct : std::error_category</span>
              :   {
-<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    virtual const char* name() const noexcept override { return &quot;nng&quot;; }</span>
+<span class="lineNoCov">      0 / 2 </span> : <span class="lineNoCov">    [[nodiscard]] const char* name() const noexcept override { return &quot;nng&quot;; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    virtual std::string message(int e) const override</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    [[nodiscard]] std::string message(const int e) const override</span>
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return nng_strerror(e);</span>
              :     }
@@ -136,7 +138,7 @@
              : 
              : [[nodiscard]] inline std::error_code make_error_code(err e) noexcept
              : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return std::error_code(static_cast&lt;int&gt;(e), error_category());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {static_cast&lt;int&gt;(e), error_category()};</span>
              : }
              : 
              : } // namespace c
@@ -201,12 +203,12 @@
              : }
              : 
              : template&lt;typename ret_t, typename arg_t, typename... args_t&gt;
-             : [[nodiscard]] inline clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;&gt;
+             : [[nodiscard]] clev::expected&lt;std::remove_pointer_t&lt;arg_t&gt;&gt;
              : make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using return_type = decltype(make(f, args...));</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using value_type = return_type::value_type;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using value_type = typename return_type::value_type;</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return return_type{}.and_then([&amp;](value_type v) -&gt; return_type {</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (auto e = f(&amp;v, args...); e)</span>
@@ -217,11 +219,11 @@
              : }
              : 
              : template&lt;typename return_t&gt;
-             : [[nodiscard]] inline auto read(auto f) noexcept -&gt; clev::expected&lt;return_t&gt;
+             : [[nodiscard]] auto read(auto f) noexcept -&gt; clev::expected&lt;return_t&gt;
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using return_type = clev::expected&lt;return_t&gt;;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using value_type = return_type::value_type;</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  using value_type = typename return_type::value_type;</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return return_type{}.and_then([=](value_type v) -&gt; return_type {</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (auto e = f(&amp;v); e)</span>
@@ -232,15 +234,15 @@
              : }
              : 
              : template&lt;typename ret_t, typename... args_t&gt;
-             : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
-             :                                                  args_t... args) noexcept
+             : [[nodiscard]] clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
+             :                                           args_t... args) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return clev::make_expected&lt;c::err&gt;(f(args...));</span>
              : }
              : 
              : template&lt;typename... args_t&gt;
-             : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(void (*f)(args_t...),
-             :                                                  args_t... args) noexcept
+             : [[nodiscard]] clev::expected&lt;void&gt; invoke(void (*f)(args_t...),
+             :                                           args_t... args) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  f(args...);</span>
              : 

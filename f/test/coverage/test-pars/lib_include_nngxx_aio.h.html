@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">6</td>
@@ -75,19 +75,19 @@
              : 
              : using aio = clev::own&lt;nng_aio*&gt;;
              : 
-             : inline static void sleep(nng_duration ms, aio_view&amp; aio) noexcept
+             : static void sleep(const nng_duration ms, aio_view&amp; aio) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  nng_sleep_aio(ms, aio);</span>
              : }
              : 
-             : [[nodiscard]] inline static clev::expected&lt;aio&gt; make_aio(void (*cb)(void*),
-             :                                                          void* arg) noexcept
+             : [[nodiscard]] static clev::expected&lt;aio&gt; make_aio(void (*cb)(void*),
+             :                                                   void* arg) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return aio::alloc(cb, arg);</span>
              : }
              : 
-             : [[nodiscard]] inline static clev::expected&lt;aio&gt;
-             : make_aio(void (*cb)(void*), void* arg, msg m) noexcept
+             : [[nodiscard]] static clev::expected&lt;aio&gt; make_aio(void (*cb)(void*), void* arg,
+             :                                                   msg m) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return make_aio(cb, arg).and_then([&amp;](aio op) -&gt; clev::expected&lt;aio&gt; {</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    op.set_msg(std::move(m));</span>

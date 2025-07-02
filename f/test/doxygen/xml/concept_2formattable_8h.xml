@@ -3,8 +3,8 @@
   <compounddef id="concept_2formattable_8h" kind="file" language="C++">
     <compoundname>formattable.h</compoundname>
     <includes refid="init_8h" local="yes">pars/init.h</includes>
-    <includes local="no">fmt/format.h</includes>
     <includes local="no">concepts</includes>
+    <includes local="no">format</includes>
     <includedby refid="fmt_2formattable_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/fmt/formattable.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
     <incdepgraph>
@@ -29,11 +29,11 @@
       <node id="4">
         <label>chrono</label>
       </node>
-      <node id="6">
+      <node id="5">
         <label>concepts</label>
       </node>
-      <node id="5">
-        <label>fmt/format.h</label>
+      <node id="6">
+        <label>format</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
@@ -295,14 +295,13 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
-<codeline lineno="39" refid="conceptformattable__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptformattable__c" kindref="compound">formattable_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>value_t&amp;<sp/>x,<sp/>fmt::format_context&amp;<sp/>ctx)<sp/>{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/>{<sp/>x.format_to(ctx)<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())&gt;;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
+<codeline lineno="38" refid="conceptformattable__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptformattable__c" kindref="compound">formattable_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>value_t&amp;<sp/>x,<sp/>std::format_context&amp;<sp/>ctx)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{<sp/>x.format_to(ctx)<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())&gt;;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/concept/formattable.h"/>
   </compounddef>

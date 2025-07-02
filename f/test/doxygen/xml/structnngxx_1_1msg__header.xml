@@ -20,7 +20,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structnngxx_1_1msg__header_1aac53caeeb370e479a0283d120df01588" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="structnngxx_1_1msg__header_1aac53caeeb370e479a0283d120df01588" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
         <type></type>
         <definition>nngxx::msg_header::msg_header</definition>
         <argsstring>(nng_msg *m) noexcept</argsstring>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="39" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="39" bodyend="42"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="39" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__header_1a5b119a683d9b771ff7f776ff16482af2" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="44" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="44" bodyend="47"/>
+        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="44" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="44" bodyend="47"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">60</td>
@@ -83,8 +83,8 @@
              :   static constexpr auto overload = opt_to_nng_overload&lt;opt_v&gt;();
              : 
              :   template&lt;nng_value_c nng_value_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; operator()(nng_type obj,
-             :                                                        nng_value_t val) noexcept
+             :   [[nodiscard]] clev::expected&lt;void&gt; operator()(nng_type obj,
+             :                                                 nng_value_t val) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    int (*set)(nng_type, const char*, nng_value_t);</span>
              : 

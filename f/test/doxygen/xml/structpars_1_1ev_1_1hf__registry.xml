@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="81" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="81" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="82" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1hf__registry_1a65d1029a85cb585d67ff554fec6b5fe2" prot="private" static="no" mutable="no">
         <type>std::mutex</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="130" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="130" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="133" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="133" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1hf__registry_1a4e15a0fb205948ff243b4bc820ec82a9" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; int, std::unordered_map&lt; std::size_t, <ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref> &gt; &gt;</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="132" column="5" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="132" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="135" column="5" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1hf__registry_1ab3c4aa502195c971b4f3bde2ddfbfabd" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::size_t, const std::type_info * &gt;</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="134" column="5" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="134" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="137" column="5" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1hf__registry_1a95e42b3a5122d85ba28862cb0bbad825" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1runner" kindref="compound">runner</ref> &amp;</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="136" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="136" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="139" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="139" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="65" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="65" bodyend="68"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="66" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="66" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -133,8 +133,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="73" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="73" bodyend="76"/>
-        <references refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" compoundref="make__hf_8h" startline="58" endline="89">pars::ev::make_hf</references>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="74" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="74" bodyend="77"/>
+        <references refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" compoundref="make__hf_8h" startline="58" endline="95">pars::ev::make_hf</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="85" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="85" bodyend="88"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="86" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="93" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h" bodystart="40" bodyend="75"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="94" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h" bodystart="40" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1ae322a41c65296eabf259043c68998000" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -217,20 +217,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="95" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="95" bodyend="95"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="96" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="96" bodyend="96"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1aeb7247422a982dfff59c9790497fad52" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1adc41bcde0775cd3261f2349f75349a1a" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool pars::ev::hf_registry::has_handler_for</definition>
-        <argsstring>(int s_id, std::size_t spec_hash)</argsstring>
+        <argsstring>(const int s_id, const std::size_t spec_hash) const</argsstring>
         <name>has_handler_for</name>
         <qualifiedname>pars::ev::hf_registry::has_handler_for</qualifiedname>
         <param>
-          <type>int</type>
+          <type>const int</type>
           <declname>s_id</declname>
         </param>
         <param>
-          <type>std::size_t</type>
+          <type>const std::size_t</type>
           <declname>spec_hash</declname>
         </param>
         <briefdescription>
@@ -239,16 +239,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="97" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="97" bodyend="100"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="98" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="98" bodyend="101"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1ae58ce5d65f318a09383e0ac2c5e790bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1a9c74c9dfb61213a12a8f563db6af012f" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::type_info *const</type>
         <definition>const std::type_info *const pars::ev::hf_registry::type_for</definition>
-        <argsstring>(std::size_t spec_hash)</argsstring>
+        <argsstring>(const std::size_t spec_hash) const</argsstring>
         <name>type_for</name>
         <qualifiedname>pars::ev::hf_registry::type_for</qualifiedname>
         <param>
-          <type>std::size_t</type>
+          <type>const std::size_t</type>
           <declname>spec_hash</declname>
         </param>
         <briefdescription>
@@ -257,20 +257,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="102" column="30" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="102" bodyend="105"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="104" column="30" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="104" bodyend="107"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1a10a1078f691f3475dae9932dba015b40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1afbe4eaa7608f4c9960fad5556ffc2316" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="namespacepars_1_1ev_1a00ecaf1d503708d125b0a5f259ceea13" kindref="member">job_handler_f</ref> &amp;</type>
         <definition>const job_handler_f &amp; pars::ev::hf_registry::handler_for</definition>
-        <argsstring>(int s_id, std::size_t spec_hash)</argsstring>
+        <argsstring>(const int s_id, const std::size_t spec_hash) const</argsstring>
         <name>handler_for</name>
         <qualifiedname>pars::ev::hf_registry::handler_for</qualifiedname>
         <param>
-          <type>int</type>
+          <type>const int</type>
           <declname>s_id</declname>
         </param>
         <param>
-          <type>std::size_t</type>
+          <type>const std::size_t</type>
           <declname>spec_hash</declname>
         </param>
         <briefdescription>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="107" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="107" bodyend="110"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="109" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="109" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1hf__registry_1a76d9cba74173bab2c73b09c679d09b82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -314,18 +314,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="114" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="114" bodyend="128"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="117" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="117" bodyend="131"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="62" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="63" bodyend="137"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" line="63" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h" bodystart="64" bodyend="140"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1hf__registry_1a10a1078f691f3475dae9932dba015b40" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>handler_for</name></member>
+      <member refid="structpars_1_1ev_1_1hf__registry_1afbe4eaa7608f4c9960fad5556ffc2316" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>handler_for</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1a4e15a0fb205948ff243b4bc820ec82a9" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>handlers_m</name></member>
-      <member refid="structpars_1_1ev_1_1hf__registry_1aeb7247422a982dfff59c9790497fad52" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>has_handler_for</name></member>
+      <member refid="structpars_1_1ev_1_1hf__registry_1adc41bcde0775cd3261f2349f75349a1a" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>has_handler_for</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" prot="public" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>hf_registry</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>insert</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>insert</name></member>
@@ -335,7 +335,7 @@
       <member refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" prot="public" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>on</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1af449b50921b27b730c3cfeda9a90350d" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>runner</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1a95e42b3a5122d85ba28862cb0bbad825" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>runner_m</name></member>
-      <member refid="structpars_1_1ev_1_1hf__registry_1ae58ce5d65f318a09383e0ac2c5e790bc" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>type_for</name></member>
+      <member refid="structpars_1_1ev_1_1hf__registry_1a9c74c9dfb61213a12a8f563db6af012f" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>type_for</name></member>
       <member refid="structpars_1_1ev_1_1hf__registry_1ab3c4aa502195c971b4f3bde2ddfbfabd" prot="private" virt="non-virtual"><scope>pars::ev::hf_registry</scope><name>types_m</name></member>
     </listofallmembers>
   </compounddef>

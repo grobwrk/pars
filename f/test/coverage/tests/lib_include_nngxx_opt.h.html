@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">84</td>
+                     <td class="headerValue" width="10%">88</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -65,6 +65,8 @@
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
              : #pragma once
+             : 
+             : #include &quot;err.h&quot;
              : 
              : #include &lt;nng/nng.h&gt;
              : #include &lt;nng/protocol/reqrep0/req.h&gt;
@@ -199,6 +201,10 @@
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return NNG_OPT_REQ_RESENDTICK;</span>
              :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  clev::abort_now(cpp::err::unknown_option, &quot;Unknown option&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
              : }
              : 
              : template&lt;opt o&gt;
@@ -288,13 +294,17 @@
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return opt_overload::duration;</span>
              :   }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  clev::abort_now(cpp::err::unknown_option, &quot;Unknown option&quot;);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
              : }
              : 
              : template&lt;opt o&gt;
              : struct opt_to_nng_type;
              : 
              : template&lt;opt o&gt;
-             : using opt_to_nng_type_t = opt_to_nng_type&lt;o&gt;::return_type;
+             : using opt_to_nng_type_t = typename opt_to_nng_type&lt;o&gt;::return_type;
              : 
              : template&lt;&gt;
              : struct opt_to_nng_type&lt;opt::sockname&gt;

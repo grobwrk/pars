@@ -17,8 +17,6 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
       </node>
       <node id="13">
         <label>clev/iface.h</label>
@@ -49,7 +47,7 @@
       <node id="16">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -65,11 +63,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -81,7 +77,7 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -93,7 +89,7 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -103,12 +99,12 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="25">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -126,8 +122,6 @@
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="11">
@@ -157,7 +151,9 @@
       <node id="17">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -184,16 +180,18 @@
       </node>
       <node id="24">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="27">
         <label>nngxx/socket.h</label>
         <link refid="nngxx_2socket_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
@@ -211,22 +209,16 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="15">
         <label>concepts</label>
       </node>
-      <node id="9">
+      <node id="7">
         <label>expected</label>
       </node>
-      <node id="7">
-        <label>fmt/format.h</label>
-      </node>
       <node id="10">
-        <label>functional</label>
-      </node>
-      <node id="8">
         <label>nng/nng.h</label>
       </node>
       <node id="29">
@@ -240,6 +232,12 @@
       </node>
       <node id="18">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="8">
+        <label>stdexcept</label>
+      </node>
+      <node id="9">
+        <label>system_error</label>
       </node>
       <node id="21">
         <label>type_traits</label>
@@ -575,17 +573,16 @@
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kindref="member">ctx</ref><sp/>=<sp/><ref refid="structclev_1_1own" kindref="compound">clev::own&lt;nng_ctx&gt;</ref>;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;ctx&gt;</ref></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">make_ctx(<ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">socket_view</ref>&amp;<sp/>s)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx::open(s);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;nngxx::ctx_view&gt;);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<ref refid="conceptnngxx_1_1movable__only__c" kindref="compound">nngxx::movable_only_c&lt;nngxx::ctx&gt;</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;ctx&gt;</ref><sp/>make_ctx(<ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">socket_view</ref>&amp;<sp/>s)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx::open(s);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;nngxx::ctx_view&gt;);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(<ref refid="conceptnngxx_1_1movable__only__c" kindref="compound">nngxx::movable_only_c&lt;nngxx::ctx&gt;</ref>);</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/nngxx/ctx.h"/>
   </compounddef>

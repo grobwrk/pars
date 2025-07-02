@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">76</td>
@@ -84,8 +84,7 @@
              : 
              :   using return_type = opt_to_nng_type_t&lt;opt_v&gt;;
              : 
-             :   [[nodiscard]] inline clev::expected&lt;return_type&gt;
-             :   operator()(nng_type obj) noexcept
+             :   [[nodiscard]] clev::expected&lt;return_type&gt; operator()(nng_type obj) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    int (*get)(nng_type, const char*, return_type*);</span>
              : 
@@ -172,7 +171,6 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      else if constexpr (overload == opt_overload::sockaddr)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        get = nng_pipe_get_addr;</span>
              :     }
-             : 
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::read&lt;return_type&gt;(</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::bind(get, obj, opt, std::placeholders::_1));</span>

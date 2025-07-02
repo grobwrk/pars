@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -75,25 +75,23 @@
              : {
              :   using value::value;
              : 
-             :   [[nodiscard]] inline static nng_type empty() noexcept
+             :   [[nodiscard]] static nng_type empty() noexcept
              :   {
           30</span> : <span class="lineCov">    return NNG_PIPE_INITIALIZER;</span>
              :   };
              : 
-             :   [[nodiscard]] inline static clev::expected&lt;void&gt; destroy(nng_pipe* v) noexcept
+             :   // ReSharper disable once CppParameterMayBeConstPtrOrRef
+             :   [[nodiscard]] static expected&lt;void&gt; destroy(nng_pipe* v) noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // TODO: because we can close(), should we check it's open before closing?</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_pipe_close, *v);</span>
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] inline int id() const noexcept <span class="lineNoCov">{ return nng_pipe_id(v); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] int id() const noexcept <span class="lineNoCov">{ return nng_pipe_id(v); }</span>
              : 
-             :   [[nodiscard]] inline nngxx::socket_view get_socket() const noexcept;
+             :   [[nodiscard]] nngxx::socket_view get_socket() const noexcept;
              : 
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; close() noexcept
-             :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return destroy(&amp;v);</span>
-             :   }
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] expected&lt;void&gt; close() noexcept <span class="lineNoCov">{ return destroy(&amp;v); }</span>
              : };
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

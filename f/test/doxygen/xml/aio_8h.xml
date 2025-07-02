@@ -18,8 +18,6 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
       <node id="11">
         <label>clev/iface.h</label>
@@ -50,7 +48,7 @@
       <node id="14">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -60,11 +58,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -76,7 +72,7 @@
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="21">
@@ -86,12 +82,12 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="23">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
@@ -126,7 +122,9 @@
       <node id="15">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
@@ -153,7 +151,7 @@
       </node>
       <node id="22">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
@@ -164,26 +162,26 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="13">
         <label>concepts</label>
       </node>
-      <node id="7">
+      <node id="5">
         <label>expected</label>
       </node>
-      <node id="5">
-        <label>fmt/format.h</label>
-      </node>
       <node id="8">
-        <label>functional</label>
-      </node>
-      <node id="6">
         <label>nng/nng.h</label>
       </node>
       <node id="16">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>system_error</label>
       </node>
       <node id="19">
         <label>type_traits</label>
@@ -471,8 +469,8 @@
         </childnode>
       </node>
       <node id="38">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
@@ -593,19 +591,19 @@
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref><sp/>=<sp/><ref refid="structclev_1_1own" kindref="compound">clev::own&lt;nng_aio*&gt;</ref>;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sleep(nng_duration<sp/>ms,<sp/><ref refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kindref="member">aio_view</ref>&amp;<sp/><ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sleep(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_duration<sp/>ms,<sp/><ref refid="namespacenngxx_1af14b9374b5e7ac4007d33f4012ac3026" kindref="member">aio_view</ref>&amp;<sp/><ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/>nng_sleep_aio(ms,<sp/><ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref>);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;aio&gt;</ref><sp/>make_aio(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*cb)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>arg)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;aio&gt;</ref><sp/>make_aio(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*cb)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>arg)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>aio::alloc(cb,<sp/>arg);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;aio&gt;</ref></highlight></codeline>
-<codeline lineno="53"><highlight class="normal">make_aio(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*cb)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>arg,<sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">msg</ref><sp/>m)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;aio&gt;</ref><sp/>make_aio(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*cb)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>arg,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">msg</ref><sp/>m)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>make_aio(cb,<sp/>arg).and_then([&amp;](<ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref><sp/>op)<sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;aio&gt;</ref><sp/>{</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>op.set_msg(std::move(m));</highlight></codeline>

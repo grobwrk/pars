@@ -14,7 +14,7 @@
     <includedby refid="iface_2dialer_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/dialer.h</includedby>
     <includedby refid="iface_2listener_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/listener.h</includedby>
     <includedby refid="iface_2msg_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/msg.h</includedby>
-    <includedby refid="nngxx_2iface_2pipe_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</includedby>
+    <includedby refid="iface_2pipe_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</includedby>
     <includedby refid="nngxx_2iface_2socket_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/iface/socket.h</includedby>
     <incdepgraph>
       <node id="3">
@@ -26,10 +26,8 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -38,35 +36,33 @@
         <link refid="own_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="15">
-        <label>nngxx/err.h</label>
+      <node id="13">
+        <label>err.h</label>
         <link refid="nngxx_2err_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -74,13 +70,13 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
@@ -90,17 +86,19 @@
       <node id="12">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-      </node>
-      <node id="14">
-        <label>nngxx/opt_getter.h</label>
-        <link refid="opt__getter_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -108,30 +106,30 @@
       <node id="16">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="9">
         <label>concepts</label>
       </node>
-      <node id="6">
+      <node id="4">
         <label>expected</label>
       </node>
-      <node id="4">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="7">
-        <label>functional</label>
-      </node>
-      <node id="5">
+      <node id="11">
         <label>nng/nng.h</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>system_error</label>
       </node>
       <node id="17">
         <label>type_traits</label>
@@ -222,10 +220,12 @@
         <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="53" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="34">
@@ -247,7 +247,7 @@
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
@@ -265,13 +265,13 @@
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
@@ -282,20 +282,20 @@
         <childnode refid="44" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="41" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
@@ -391,8 +391,6 @@
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
         <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
@@ -465,9 +463,9 @@
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -496,7 +494,7 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="47">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="27" relation="include">
@@ -506,7 +504,7 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="29" relation="include">
@@ -522,16 +520,10 @@
         <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="40" relation="include">
-        </childnode>
-      </node>
-      <node id="47">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="46" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -557,7 +549,7 @@
         <link refid="hash_8h"/>
         <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -573,8 +565,8 @@
         </childnode>
       </node>
       <node id="40">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
@@ -706,9 +698,9 @@
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">parent::parent;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" kindref="member">nng_type</ref><sp/>=<sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">parent::value_type</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structnngxx_1_1value_1af477492cb4b4f94f0ca8cb843fd5dd4b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1value_1af477492cb4b4f94f0ca8cb843fd5dd4b" kindref="member">nng_type</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">parent::value_type</ref>;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" kindref="member">is_valid</ref>(<ref refid="structnngxx_1_1value_1a71df3cb1aab02062f13578b9d9f985bc" kindref="member">nng_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1value_1ae4c82a4aaa4e69190a13cc499d5babcb" kindref="member">is_valid</ref>(<ref refid="structnngxx_1_1value_1af477492cb4b4f94f0ca8cb843fd5dd4b" kindref="member">nng_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_pointer_v&lt;nng_type&gt;)</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
@@ -717,80 +709,76 @@
 <codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="64" refid="structnngxx_1_1value_1af30971c7a83b97e329e43e710f32bb77" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1af30971c7a83b97e329e43e710f32bb77" kindref="member">set_recv_timeout</ref>(nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
+<codeline lineno="64" refid="structnngxx_1_1value_1ad7f09a4112b51ab30dd877ed6ca58d9a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1ad7f09a4112b51ab30dd877ed6ca58d9a" kindref="member">set_recv_timeout</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_option&lt;opt::recvtimeo&gt;(d);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="70" refid="structnngxx_1_1value_1a43a4c510082149064b9488904c42eadb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a43a4c510082149064b9488904c42eadb" kindref="member">set_send_timeout</ref>(nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
+<codeline lineno="70" refid="structnngxx_1_1value_1a9dea41a7195ffa233953a029f0ad18f2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a9dea41a7195ffa233953a029f0ad18f2" kindref="member">set_send_timeout</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_option&lt;opt::sendtimeo&gt;(d);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="76" refid="structnngxx_1_1value_1af2b321c4adb6db8168dea51e2bfec15a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1af2b321c4adb6db8168dea51e2bfec15a" kindref="member">set_req_resend_time</ref>(nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
+<codeline lineno="76" refid="structnngxx_1_1value_1a59b34e007bce25fcda41064c88f2c6cd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a59b34e007bce25fcda41064c88f2c6cd" kindref="member">set_req_resend_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_option&lt;opt::req_resend_time&gt;(d);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="82" refid="structnngxx_1_1value_1ae305c3da0cbd2f3179c857f83d3912fb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1ae305c3da0cbd2f3179c857f83d3912fb" kindref="member">set_req_resend_tick</ref>(nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
+<codeline lineno="82" refid="structnngxx_1_1value_1afd6330174d343403d7270ab2361a57ee" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1afd6330174d343403d7270ab2361a57ee" kindref="member">set_req_resend_tick</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_duration<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>set_option&lt;opt::req_resend_tick&gt;(d);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>use<sp/>me</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;const char*&gt;</ref></highlight></codeline>
-<codeline lineno="91" refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" kindref="member">get_sock_name</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::sockname&gt;();</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
-<codeline lineno="97" refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" kindref="member">get_recv_timeout</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::recvtimeo&gt;();</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
-<codeline lineno="103" refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" kindref="member">get_send_timeout</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::sendtimeo&gt;();</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
-<codeline lineno="109" refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" kindref="member">get_req_resend_time</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::req_resend_time&gt;();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
-<codeline lineno="115" refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" kindref="member">get_req_resend_tick</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::req_resend_tick&gt;();</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v,<sp/>nng_value_c<sp/>nng_value_t&gt;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/>set_option(nng_value_t<sp/>val)</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__setter" kindref="compound">opt_setter&lt;opt_v, nng_type&gt;</ref>{}(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">parent::v</ref>,<sp/>val);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v&gt;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;opt_to_nng_type_t&lt;opt_v&gt;</ref>&gt;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/>get_option()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="130"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt_getter&lt;opt_v,<sp/>nng_type&gt;{}(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">parent::v</ref>);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(clev_own_is_really_needed_v);</highlight></codeline>
+<codeline lineno="90" refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;const char*&gt;</ref><sp/><ref refid="structnngxx_1_1value_1a70a667b68e5ab53ebc39667f10bd227c" kindref="member">get_sock_name</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::sockname&gt;();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref><sp/><ref refid="structnngxx_1_1value_1a0e78fa18781786a2ccd47d519ff8c69f" kindref="member">get_recv_timeout</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::recvtimeo&gt;();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref><sp/><ref refid="structnngxx_1_1value_1ae6866d74bf9c9596766f1e6ceb45ea06" kindref="member">get_send_timeout</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::sendtimeo&gt;();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
+<codeline lineno="106" refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1ae8357d614e10350d8eea89457a2aca2c" kindref="member">get_req_resend_time</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::req_resend_time&gt;();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_duration&gt;</ref></highlight></codeline>
+<codeline lineno="112" refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1value_1a68452bb8d3d06492c4c2e38c67481713" kindref="member">get_req_resend_tick</ref>()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>get_option&lt;opt::req_resend_tick&gt;();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v,<sp/>nng_value_c<sp/>nng_value_t&gt;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/>set_option(nng_value_t<sp/>val)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__setter" kindref="compound">opt_setter&lt;opt_v, nng_type&gt;</ref>{}(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">parent::v</ref>,<sp/>val);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v&gt;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;opt_to_nng_type_t&lt;opt_v&gt;</ref>&gt;<sp/>get_option()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="126"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt_getter&lt;opt_v,<sp/>nng_type&gt;{}(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">parent::v</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(clev_own_is_really_needed_v);</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/nngxx/iface/value.h"/>
   </compounddef>

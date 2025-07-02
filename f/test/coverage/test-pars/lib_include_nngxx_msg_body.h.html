@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">8</td>
@@ -70,35 +70,34 @@
              : #include &quot;nngxx/err.h&quot;
              : #include &quot;nngxx/msg.h&quot;
              : 
+             : #include &lt;cstring&gt;
+             : 
              : namespace nngxx
              : {
              : 
              : struct msg_body
              : {
-             :   msg_body(nng_msg* m) noexcept
+             :   explicit msg_body(nng_msg* m) noexcept
              :     : m{m}
              :   {
              :   }
              : 
-             :   [[nodiscard]] inline std::size_t size() const noexcept
-             :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nng_msg_len(m);</span>
-             :   }
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] std::size_t size() const noexcept <span class="lineNoCov">{ return nng_msg_len(m); }</span>
              : 
              :   template&lt;typename char_t&gt;
-             :   [[nodiscard]] inline char_t* data() noexcept
+             :   [[nodiscard]] char_t* data() noexcept
              :   {
              :     return static_cast&lt;char_t*&gt;(nng_msg_body(m));
              :   }
              : 
              :   template&lt;typename char_t&gt;
-             :   [[nodiscard]] inline const char_t* data() const noexcept
+             :   [[nodiscard]] const char_t* data() const noexcept
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return static_cast&lt;const char_t*&gt;(nng_msg_body(m));</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; append(uint_t x) noexcept
+             :   [[nodiscard]] clev::expected&lt;void&gt; append(uint_t x) noexcept
              :   {
              :     int (*append)(nng_msg*, uint_t);
              : 
@@ -115,17 +114,18 @@
              :       append = nng_msg_append_u64;
              :     }
              : 
-             :     return nngxx::invoke(append, m, x);
+             :     return invoke(append, m, x);
              :   }
              : 
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; append(const void* val,
-             :                                                    std::size_t sz) noexcept
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+             :   [[nodiscard]] clev::expected&lt;void&gt; append(const void* val,
+             :                                             const std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_append, m, val, sz);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return invoke(nng_msg_append, m, val, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(uint_t x) noexcept
+             :   [[nodiscard]] clev::expected&lt;void&gt; insert(uint_t x) noexcept
              :   {
              :     int (*insert)(nng_msg*, uint_t);
              : 
@@ -142,17 +142,18 @@
              :       insert = nng_msg_insert_u64;
              :     }
              : 
-             :     return nngxx::invoke(insert, m, x);
+             :     return invoke(insert, m, x);
              :   }
              : 
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; insert(const void* val,
-             :                                                    std::size_t sz) noexcept
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+             :   [[nodiscard]] clev::expected&lt;void&gt; insert(const void* val,
+             :                                             const std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_insert, m, val, sz);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return invoke(nng_msg_insert, m, val, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; trim() noexcept
+             :   [[nodiscard]] clev::expected&lt;uint_t&gt; trim() noexcept
              :   {
              :     uint_t x;
              : 
@@ -171,16 +172,17 @@
              :       trim = nng_msg_trim_u64;
              :     }
              : 
-             :     return nngxx::invoke(trim, m, &amp;x).transform([&amp;]() { return x; });
+             :     return invoke(trim, m, &amp;x).transform([&amp;] { return x; });
              :   }
              : 
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; trim(std::size_t sz) noexcept
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+             :   [[nodiscard]] clev::expected&lt;void&gt; trim(const std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_trim, m, sz);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return invoke(nng_msg_trim, m, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt; chop() noexcept
+             :   [[nodiscard]] clev::expected&lt;uint_t&gt; chop() noexcept
              :   {
              :     uint_t x;
              : 
@@ -199,22 +201,23 @@
              :       chop = nng_msg_chop_u64;
              :     }
              : 
-             :     return nngxx::invoke(chop, m, &amp;x).transform([&amp;]() { return x; });
+             :     return invoke(chop, m, &amp;x).transform([&amp;] { return x; });
              :   }
              : 
-             :   [[nodiscard]] inline clev::expected&lt;void&gt; chop(std::size_t sz) noexcept
+             :   // ReSharper disable once CppMemberFunctionMayBeConst
+             :   [[nodiscard]] clev::expected&lt;void&gt; chop(const std::size_t sz) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return nngxx::invoke(nng_msg_chop, m, sz);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return invoke(nng_msg_chop, m, sz);</span>
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;uint_t&gt;
+             :   [[nodiscard]] clev::expected&lt;uint_t&gt;
              :   read(const std::size_t offset = 0) const noexcept
              :   {
              :     uint_t v;
              : 
              :     if (offset + sizeof(decltype(v)) &gt; size())
-             :       return clev::unexpected{nngxx::cpp::err::invalid_memory};
+             :       return clev::unexpected{cpp::err::invalid_memory};
              : 
              :     std::memcpy(&amp;v, data&lt;char&gt;() + offset, sizeof(decltype(v)));
              : 
@@ -222,11 +225,11 @@
              :   }
              : 
              :   template&lt;uint_c uint_t&gt;
-             :   [[nodiscard]] inline clev::expected&lt;void&gt;
+             :   [[nodiscard]] clev::expected&lt;void&gt;
              :   write(uint_t v, const std::size_t offset = 0) noexcept
              :   {
              :     if (offset + sizeof(decltype(v)) &gt; size())
-             :       return clev::unexpected{nngxx::cpp::err::invalid_memory};
+             :       return clev::unexpected{cpp::err::invalid_memory};
              : 
              :     std::memcpy(data&lt;char&gt;() + offset, static_cast&lt;void*&gt;(&amp;v),
              :                 sizeof(decltype(v)));
@@ -240,12 +243,13 @@
              : 
              : } // namespace nngxx
              : 
-             : nngxx::msg_body nngxx::msg_view::body() noexcept
+             : inline nngxx::msg_body nngxx::msg_view::body() noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return nngxx::msg_body{v};</span>
              : }
              : 
-             : const nngxx::msg_body nngxx::msg_view::body() const noexcept
+             : // ReSharper disable once CppConstValueFunctionReturnType
+             : inline const nngxx::msg_body nngxx::msg_view::body() const noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return nngxx::msg_body{v};</span>
              : }

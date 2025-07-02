@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">20</td>
@@ -74,6 +74,8 @@
              : #include &quot;pars/net/op.h&quot;
              : #include &quot;pars/net/socket.h&quot;
              : 
+             : #include &lt;format&gt;
+             : 
              : namespace pars::net
              : {
              : 
@@ -89,9 +91,13 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   ~context() <span class="lineNoCov">{ stop(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   operator tool_view() <span class="lineNoCov">{ return tool_view{ctx_m}; }</span>
+             :   // ReSharper disable once CppNonExplicitConversionOperator
+             :   operator tool_view() const // NOLINT(*-explicit-constructor)
+             :   {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return tool_view{ctx_m};</span>
+             :   }
              : 
-             :   void set_options(context_opt opts)
+             :   void set_options(const context_opt opts)
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (opts.recv_timeout)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_recv_timeout(*opts.recv_timeout).or_else(clev::abort_now());</span>
@@ -100,7 +106,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      ctx_m.set_send_timeout(*opts.send_timeout).or_else(clev::abort_now());</span>
              :   }
              : 
-             :   context_opt options() const
+             :   [[nodiscard]] context_opt options() const
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return {.recv_timeout = ctx_m.get_recv_timeout()</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                              .or_else(clev::abort_now&lt;nng_duration&gt;())</span>
@@ -116,7 +122,7 @@
 <span class="lineNoCov">      0 / 1 </span> :   void recv_aio(nngxx::aio_view&amp; a) <span class="lineNoCov">{ ctx_m.recv(a); }</span>
              : 
              :   template&lt;ev::event_c event_t&gt;
-             :   void send(event_t ev, pipe p)
+             :   void send(event_t ev, pipe_view p)
              :   {
              :     op_m.send(router_m, *this, p, ev);
              :   }
@@ -125,22 +131,22 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   void stop() <span class="lineNoCov">{ op_m.stop(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   int id() const <span class="lineNoCov">{ return ctx_m.id(); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] int id() const <span class="lineNoCov">{ return ctx_m.id(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return sock_m.id(); }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] int socket_id() const <span class="lineNoCov">{ return sock_m.id(); }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   const net::socket&amp; sock() const <span class="lineNoCov">{ return sock_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] const socket&amp; sock() const <span class="lineNoCov">{ return sock_m; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;context #{}&quot;, id());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;context #{}&quot;, id());</span>
              :   }
              : 
              : private:
              :   ev::enqueuer&amp; router_m;
              :   op op_m;
              :   nngxx::ctx ctx_m;
-             :   const net::socket&amp; sock_m;
+             :   const socket&amp; sock_m;
              : };
              : 
              : } // namespace pars::net

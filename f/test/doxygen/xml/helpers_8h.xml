@@ -3,16 +3,14 @@
   <compounddef id="helpers_8h" kind="file" language="C++">
     <compoundname>helpers.h</compoundname>
     <includes refid="net_8h" local="yes">pars/concept/net.h</includes>
-    <includes refid="pars_2net_2pipe_8h" local="yes">pars/net/pipe.h</includes>
-    <includes local="no">fmt/format.h</includes>
+    <includes refid="pipe__view_8h" local="yes">pars/net/pipe_view.h</includes>
+    <includes local="no">format</includes>
     <includedby refid="op_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/op.h</includedby>
     <incdepgraph>
       <node id="12">
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
         <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
@@ -64,11 +62,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="10">
@@ -107,7 +103,7 @@
       </node>
       <node id="30">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
@@ -125,8 +121,6 @@
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -153,7 +147,7 @@
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="45">
         <label>nngxx/msg_body.h</label>
         <link refid="msg__body_8h"/>
         <childnode refid="21" relation="include">
@@ -162,8 +156,10 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
       </node>
-      <node id="41">
+      <node id="42">
         <label>nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
         <childnode refid="27" relation="include">
@@ -172,6 +168,8 @@
       <node id="22">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
@@ -199,13 +197,15 @@
       </node>
       <node id="29">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="32">
         <label>nngxx/socket.h</label>
         <link refid="nngxx_2socket_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
         <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -239,14 +239,12 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="44">
         <label>pars/err.h</label>
         <link refid="pars_2err_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -254,23 +252,21 @@
         <link refid="helpers_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="41">
         <label>pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -281,28 +277,26 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="43">
         <label>pars/net/hash.h</label>
         <link refid="hash_8h"/>
-        <childnode refid="43" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="44" relation="include">
         </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
       </node>
-      <node id="39">
-        <label>pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+      <node id="40">
+        <label>pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -314,11 +308,11 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -327,17 +321,14 @@
       <node id="20">
         <label>concepts</label>
       </node>
-      <node id="44">
-        <label>cstddef</label>
-      </node>
-      <node id="14">
-        <label>expected</label>
+      <node id="46">
+        <label>cstring</label>
       </node>
       <node id="13">
-        <label>fmt/format.h</label>
+        <label>expected</label>
       </node>
-      <node id="15">
-        <label>functional</label>
+      <node id="37">
+        <label>format</label>
       </node>
       <node id="4">
         <label>nng/nng.h</label>
@@ -354,16 +345,19 @@
       <node id="23">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="46">
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="15">
         <label>system_error</label>
       </node>
       <node id="26">
         <label>type_traits</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>typeinfo</label>
       </node>
-      <node id="38">
+      <node id="39">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -531,9 +525,9 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="net_8h" kindref="compound">pars/concept/net.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pars_2net_2pipe_8h" kindref="compound">pars/net/pipe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pipe__view_8h" kindref="compound">pars/net/pipe_view.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="namespacepars_1_1f" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1f" kindref="compound">pars::f</ref></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">{</highlight></codeline>
@@ -542,12 +536,12 @@
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;net::tool_c<sp/>tool_t&gt;</highlight></codeline>
 <codeline lineno="42" refid="structpars_1_1f_1_1pntl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1f_1_1pntl" kindref="compound">pntl</ref></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44" refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref><sp/><ref refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" kindref="member">p</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref><sp/><ref refid="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" kindref="member">p</ref>;</highlight></codeline>
 <codeline lineno="45" refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" refkind="member"><highlight class="normal"><sp/><sp/>tool_t&amp;<sp/><ref refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" kindref="member">t</ref>;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="47" refid="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" kindref="member">format_to</ref>(std::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;Pipe<sp/>{}<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" kindref="member">p</ref>,<sp/><ref refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" kindref="member">t</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;Pipe<sp/>{}<sp/>{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" kindref="member">p</ref>,<sp/><ref refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" kindref="member">t</ref>);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">12</td>
@@ -74,6 +74,7 @@
              : #include &quot;pars/ev/spec.h&quot;
              : 
              : #include &lt;any&gt;
+             : #include &lt;format&gt;
              : #include &lt;type_traits&gt;
              : 
              : namespace pars::ev
@@ -82,7 +83,7 @@
              : class job
              : {
              : public:
-             :   job(std::size_t j_id, int s_id, std::size_t h, std::any ke)
+             :   job(const std::size_t j_id, const int s_id, const std::size_t h, std::any ke)
              :     : id_m{j_id}
              :     , socket_id_m{s_id}
              :     , spec_hash_m{h}
@@ -128,12 +129,12 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] std::size_t spec_hash() const <span class="lineNoCov">{ return spec_hash_m; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;spec:0x{:X}&quot;, spec_hash());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;spec:0x{:X}&quot;, spec_hash());</span>
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void set_id(std::size_t id) <span class="lineNoCov">{ id_m = id; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void set_id(const std::size_t id) <span class="lineNoCov">{ id_m = id; }</span>
              : 
              : private:
              :   std::size_t id_m;

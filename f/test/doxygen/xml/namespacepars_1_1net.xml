@@ -6,7 +6,7 @@
     <innerclass refid="structpars_1_1net_1_1context__opt" prot="public">pars::net::context_opt</innerclass>
     <innerclass refid="classpars_1_1net_1_1context__registry" prot="public">pars::net::context_registry</innerclass>
     <innerclass refid="classpars_1_1net_1_1op" prot="public">pars::net::op</innerclass>
-    <innerclass refid="classpars_1_1net_1_1pipe" prot="public">pars::net::pipe</innerclass>
+    <innerclass refid="classpars_1_1net_1_1pipe__view" prot="public">pars::net::pipe_view</innerclass>
     <innerclass refid="classpars_1_1net_1_1pull" prot="public">pars::net::pull</innerclass>
     <innerclass refid="classpars_1_1net_1_1push" prot="public">pars::net::push</innerclass>
     <innerclass refid="classpars_1_1net_1_1rep" prot="public">pars::net::rep</innerclass>
@@ -65,13 +65,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="48" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="49" bodyend="52"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="49" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="50" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="namespacepars_1_1net_1ae5981715796cf677d35be33819d52267" prot="public" static="no">
-        <type>std::function&lt; void(<ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt;, <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>)&gt;</type>
-        <definition>using pars::net::cb_f =  std::function&lt;void(clev::expected&lt;void&gt;, nngxx::msg)&gt;</definition>
+      <memberdef kind="typedef" id="namespacepars_1_1net_1a8d4f829cc278540043474384a62cb800" prot="public" static="no">
+        <type>std::function&lt; void(const <ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected</ref>&lt; void &gt; &amp;, <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>)&gt;</type>
+        <definition>using pars::net::cb_f =  std::function&lt;void(const clev::expected&lt;void&gt;&amp;, nngxx::msg)&gt;</definition>
         <argsstring></argsstring>
         <name>cb_f</name>
         <qualifiedname>pars::net::cb_f</qualifiedname>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="51" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="49" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="54" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="54" bodyend="64"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="55" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="55" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

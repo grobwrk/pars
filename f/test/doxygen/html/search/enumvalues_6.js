@@ -6,5 +6,6 @@ var searchData=
   ['internal_3',['internal',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2ad1efad72dc5b17dc66a46767c32fff40',1,'nngxx::c']]],
   ['intr_4',['intr',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a6eb25cafd325fc432de73fe0d2881a90',1,'nngxx::c']]],
   ['inval_5',['inval',['../namespacenngxx_1_1c.html#a146c7f28291fe71a40ba4f98bf7c30c2a15e757c159904fb372bd77be464a4586',1,'nngxx::c']]],
-  ['invalid_5fmemory_6',['invalid_memory',['../namespacenngxx_1_1cpp.html#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3',1,'nngxx::cpp']]]
+  ['invalid_5fmemory_6',['invalid_memory',['../namespacenngxx_1_1cpp.html#a675fe8d0efb36801fc4a93482cdc9cb8ab726e93ebd35dfdff37d368365d5dea3',1,'nngxx::cpp']]],
+  ['invalid_5fuuid_7',['invalid_uuid',['../namespacepars.html#afcdb266fe199935265e3d7a45b4edebfa8628bbec21aae425790e99664e431edc',1,'pars']]]
 ];

@@ -14,8 +14,6 @@
         <link refid="clev_2err_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -66,11 +64,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -109,7 +105,7 @@
       </node>
       <node id="29">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
@@ -127,8 +123,6 @@
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
         </childnode>
       </node>
       <node id="15">
@@ -158,6 +152,8 @@
       <node id="21">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
@@ -185,13 +181,15 @@
       </node>
       <node id="28">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="31">
         <label>nngxx/socket.h</label>
         <link refid="nngxx_2socket_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
         <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -242,11 +240,11 @@
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
         <childnode refid="36" relation="include">
         </childnode>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -255,14 +253,11 @@
       <node id="19">
         <label>concepts</label>
       </node>
-      <node id="13">
+      <node id="12">
         <label>expected</label>
       </node>
-      <node id="12">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="14">
-        <label>functional</label>
+      <node id="36">
+        <label>format</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
@@ -279,13 +274,19 @@
       <node id="22">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="14">
+        <label>system_error</label>
+      </node>
       <node id="25">
         <label>type_traits</label>
       </node>
-      <node id="36">
+      <node id="37">
         <label>typeinfo</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -507,9 +508,9 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
 <codeline lineno="45" refid="conceptpars_1_1net_1_1tool__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptpars_1_1net_1_1tool__c" kindref="compound">tool_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1socket" kindref="compound">net::socket</ref>&gt;<sp/>||</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1context" kindref="compound">net::context</ref>&gt;<sp/>||</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref>&gt;;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1socket" kindref="compound">socket</ref>&gt;<sp/>||</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1context" kindref="compound">context</ref>&gt;<sp/>||</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::same_as&lt;std::remove_const_t&lt;value_t&gt;,<sp/><ref refid="classpars_1_1net_1_1tool__view" kindref="compound">tool_view</ref>&gt;;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>

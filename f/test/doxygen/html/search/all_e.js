@@ -11,7 +11,7 @@ var searchData=
   ['next_5fjob_5fid_8',['next_job_id',['../structpars_1_1ev_1_1runner.html#a530562da38da9d1236803c670705959e',1,'pars::ev::runner']]],
   ['nng_2eh_9',['nng.h',['../nng_8h.html',1,'']]],
   ['nng_5fc_10',['nng_c',['../conceptnngxx_1_1nng__c.html',1,'nngxx']]],
-  ['nng_5ftype_11',['nng_type',['../structnngxx_1_1value.html#a71df3cb1aab02062f13578b9d9f985bc',1,'nngxx::value::nng_type'],['../structnngxx_1_1opt__getter.html#a4ea96e6634da74849c89fff7c9841ad3',1,'nngxx::opt_getter::nng_type'],['../structnngxx_1_1opt__setter.html#a3303b101a11cf2e8dd46a42175eeedb3',1,'nngxx::opt_setter::nng_type']]],
+  ['nng_5ftype_11',['nng_type',['../structnngxx_1_1value.html#af477492cb4b4f94f0ca8cb843fd5dd4b',1,'nngxx::value::nng_type'],['../structnngxx_1_1opt__getter.html#a4ea96e6634da74849c89fff7c9841ad3',1,'nngxx::opt_getter::nng_type'],['../structnngxx_1_1opt__setter.html#a3303b101a11cf2e8dd46a42175eeedb3',1,'nngxx::opt_setter::nng_type']]],
   ['nng_5fvalue_5fc_12',['nng_value_c',['../conceptnngxx_1_1nng__value__c.html',1,'nngxx']]],
   ['nng_5fwith_5fget_5fopt_5fc_13',['nng_with_get_opt_c',['../conceptnngxx_1_1nng__with__get__opt__c.html',1,'nngxx']]],
   ['nng_5fwith_5fset_5fopt_5fc_14',['nng_with_set_opt_c',['../conceptnngxx_1_1nng__with__set__opt__c.html',1,'nngxx']]],

@@ -88,7 +88,7 @@
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" line="58" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" bodystart="58" bodyend="58"/>
       </memberdef>
-      <memberdef kind="function" id="classpars_1_1net_1_1rep_1a31d1130d17dab32f9ca58c687fc3701a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classpars_1_1net_1_1rep_1a31d1130d17dab32f9ca58c687fc3701a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classpars_1_1net_1_1socket" kindref="compound">socket</ref> &amp;</type>
         <definition>const socket &amp; pars::net::rep::sock</definition>
         <argsstring>() const</argsstring>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" line="61" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" bodystart="61" bodyend="61"/>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" line="61" column="17" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1rep_1aaa581beb2d28bf34490490031e413e4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1net_1_1context__registry" kindref="compound">context_registry</ref> &amp;</type>
@@ -171,7 +171,7 @@
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" line="77" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/rep.h" bodystart="77" bodyend="80"/>
         <references refid="classpars_1_1net_1_1rep_1a99208b80c0caeaf6e3b2ea03c9935ca3" compoundref="rep_8h" startline="84" endline="87">insert</references>
-        <references refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" compoundref="make__hf_8h" startline="58" endline="89">pars::ev::make_hf</references>
+        <references refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" compoundref="make__hf_8h" startline="58" endline="95">pars::ev::make_hf</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1rep_1a99208b80c0caeaf6e3b2ea03c9935ca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>

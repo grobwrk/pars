@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">11</td>
@@ -68,9 +68,10 @@
              : 
              : #include &quot;pars/concept/event.h&quot;
              : #include &quot;pars/concept/kind.h&quot;
-             : #include &quot;pars/net/pipe.h&quot;
+             : #include &quot;pars/net/pipe_view.h&quot;
              : #include &quot;pars/net/tool_view.h&quot;
              : 
+             : #include &lt;format&gt;
              : #include &lt;stop_token&gt;
              : 
              : namespace pars::ev
@@ -85,9 +86,9 @@
              : 
              :   using event_type = event_t;
              : 
-             :   int job_id() const { return job_id_m; }
+             :   [[nodiscard]] int job_id() const { return job_id_m; }
              : 
-             :   void set_job_id(int j_id) { job_id_m = j_id; }
+             :   void set_job_id(const int j_id) { job_id_m = j_id; }
              : 
              : private:
              :   int job_id_m;
@@ -95,44 +96,45 @@
              : 
              : struct base_internal_metadata
              : {
-             :   base_internal_metadata() {}
+             :   base_internal_metadata() = default;
              : 
-<span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return 0; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   static int socket_id() <span class="lineNoCov">{ return 0; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   static auto format_to(std::format_context&amp; ctx) -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;&lt;internal-metadata&gt;&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;&lt;internal-metadata&gt;&quot;);</span>
              :   }
              : };
              : 
              : struct base_network_metadata
              : {
-             :   base_network_metadata(int s_id, net::tool_view t, net::pipe p)
+             :   base_network_metadata(const int s_id, const net::tool_view t,
+             :                         const net::pipe_view p)
              :     : id_m{s_id}
              :     , tool_m{t}
              :     , pipe_m{p}
              :   {
              :   }
              : 
-<span class="lineNoCov">      0 / 1 </span> :   const net::tool_view&amp; tool() const <span class="lineNoCov">{ return tool_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] const net::tool_view&amp; tool() const <span class="lineNoCov">{ return tool_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   net::pipe&amp; pipe() <span class="lineNoCov">{ return pipe_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] net::pipe_view&amp; pipe() <span class="lineNoCov">{ return pipe_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   const net::pipe&amp; pipe() const <span class="lineNoCov">{ return pipe_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] const net::pipe_view&amp; pipe() const <span class="lineNoCov">{ return pipe_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return id_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] int socket_id() const <span class="lineNoCov">{ return id_m; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // FIXME: duplicated</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;Pipe #{:X} {} {}&quot;, pipe().id(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;Pipe #{:X} {} {}&quot;, pipe().id(),</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          tool().who(), tool().id());</span>
              :   }
              : 
              : private:
              :   int id_m;
              :   net::tool_view tool_m;
-             :   net::pipe pipe_m;
+             :   net::pipe_view pipe_m;
              : };
              : 
              : struct base_sync_metadata
@@ -141,9 +143,9 @@
              : 
              : struct base_async_metadata
              : {
-<span class="lineNoCov">      0 / 1 </span> :   std::stop_token stop_token() const <span class="lineNoCov">{ return stop_token_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] std::stop_token stop_token() const <span class="lineNoCov">{ return stop_token_m; }</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> :   void set_stop_token(std::stop_token tk) <span class="lineNoCov">{ stop_token_m = tk; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   void set_stop_token(const std::stop_token&amp; tk) <span class="lineNoCov">{ stop_token_m = tk; }</span>
              : 
              : private:
              :   std::stop_token stop_token_m;

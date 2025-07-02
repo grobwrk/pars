@@ -9,13 +9,13 @@
       </param>
     </templateparamlist>
     <initializer>template&lt;typename value_t&gt;
-concept <ref refid="conceptformattable__c" kindref="compound">formattable_c</ref> =  requires(const value_t&amp; x, fmt::format_context&amp; ctx) {
+concept <ref refid="conceptformattable__c" kindref="compound">formattable_c</ref> =  requires(const value_t&amp; x, std::format_context&amp; ctx) {
   { x.format_to(ctx) } -&gt; std::same_as&lt;decltype(ctx.out())&gt;;
 }    </initializer>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/formattable.h" line="39" column="1"/>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/formattable.h" line="38" column="1"/>
   </compounddef>
 </doxygen>

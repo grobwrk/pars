@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="flags_8h" kind="file" language="C++">
     <compoundname>flags.h</compoundname>
-    <includes local="no">spdlog/spdlog.h</includes>
+    <includes local="no">format</includes>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -12,7 +12,7 @@
         </childnode>
       </node>
       <node id="2">
-        <label>spdlog/spdlog.h</label>
+        <label>format</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -54,8 +54,8 @@
       </node>
     </invincdepgraph>
     <innerclass refid="structpars_1_1f_1_1lf" prot="public">pars::f::lf</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4" prot="public">fmt::formatter&lt;::pars::lf &gt;</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4" prot="public">fmt::formatter&lt;::pars::f::lf &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4" prot="public">std::formatter&lt;::pars::lf &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4" prot="public">std::formatter&lt;::pars::f::lf &gt;</innerclass>
     <innernamespace refid="namespacepars">pars</innernamespace>
     <innernamespace refid="namespacepars_1_1f">pars::f</innernamespace>
     <briefdescription>
@@ -94,7 +94,7 @@
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars" kindref="compound">pars</ref></highlight></codeline>
 <codeline lineno="35"><highlight class="normal">{</highlight></codeline>
@@ -141,14 +141,14 @@
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1f" kindref="compound">f</ref></highlight></codeline>
 <codeline lineno="77"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="structpars_1_1f_1_1lf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1f_1_1lf_1a6a4d878ac1a52abd57c4fcdb0a020141" kindref="member">lf</ref></highlight></codeline>
+<codeline lineno="79" refid="structpars_1_1f_1_1lf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1f_1_1lf_1ac5289b10fb4d895cc4a5aede7aa78123" kindref="member">lf</ref></highlight></codeline>
 <codeline lineno="80"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="81" refid="structpars_1_1f_1_1lf_1a6a4d878ac1a52abd57c4fcdb0a020141" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1f_1_1lf_1a6a4d878ac1a52abd57c4fcdb0a020141" kindref="member">lf</ref>(<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">::pars::lf</ref><sp/>flags)</highlight></codeline>
+<codeline lineno="81" refid="structpars_1_1f_1_1lf_1ac5289b10fb4d895cc4a5aede7aa78123" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1f_1_1lf_1ac5289b10fb4d895cc4a5aede7aa78123" kindref="member">lf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref><sp/>flags)</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structpars_1_1f_1_1lf_1a3fec4a8870f3469699b72376f2b4ad05" kindref="member">val</ref>{static_cast&lt;int&gt;(flags)}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="structpars_1_1f_1_1lf_1a09f72ea56a5365328e263f20f7dbfc8c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1f_1_1lf_1a09f72ea56a5365328e263f20f7dbfc8c" kindref="member">lf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags)</highlight></codeline>
+<codeline lineno="86" refid="structpars_1_1f_1_1lf_1a453f10189e90ebdfa30c85cbb3e50905" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1f_1_1lf_1a453f10189e90ebdfa30c85cbb3e50905" kindref="member">lf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags)</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structpars_1_1f_1_1lf_1a3fec4a8870f3469699b72376f2b4ad05" kindref="member">val</ref>{flags}</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -161,33 +161,33 @@
 <codeline lineno="96"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="99" refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;::<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref>&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="99" refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::formatter&lt;::<ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">pars::lf</ref>&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="101" refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4_1acb3c92edda1791ba7da7ca6eda433c74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4_1acb3c92edda1791ba7da7ca6eda433c74" kindref="member">format</ref>(const<sp/>::pars::lf&amp;<sp/>flag,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4_1a46346defbaff2345f519220e0dc7775e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4_1a46346defbaff2345f519220e0dc7775e" kindref="member">format</ref>(const<sp/>::pars::lf&amp;<sp/>flag,<sp/>format_context&amp;<sp/>ctx)</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(flag)</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>case<sp/>::pars::lf::app:</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;app&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;app&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>case<sp/>::pars::lf::comp:</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;comp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;comp&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>case<sp/>::pars::lf::event:</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;event&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>case<sp/>::pars::lf::net:</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;net&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;net&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>case<sp/>::pars::lf::user:</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;user&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;user&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;lf-{}&gt;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(flag));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;&lt;lf-{}&gt;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(flag));</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="120"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="123" refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;::<ref refid="structpars_1_1f_1_1lf" kindref="compound">pars::f::lf</ref>&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="123" refid="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::formatter&lt;::<ref refid="structpars_1_1f_1_1lf" kindref="compound">pars::f::lf</ref>&gt;<sp/>:<sp/>formatter&lt;std::string&gt;</highlight></codeline>
 <codeline lineno="124"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="125" refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_1aa10c7d2b678f1df7f6cada61064ff13b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_1aa10c7d2b678f1df7f6cada61064ff13b" kindref="member">format</ref>(const<sp/>::pars::f::lf&amp;<sp/>flags,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_1a956222f7b192fed449e2de1f67f07bc2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_1a956222f7b192fed449e2de1f67f07bc2" kindref="member">format</ref>(const<sp/>::pars::f::lf&amp;<sp/>flags,<sp/>format_context&amp;<sp/>ctx)</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>ctx.out();</highlight></codeline>
@@ -198,7 +198,7 @@
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(flags.val<sp/>&amp;<sp/>f))</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>=<sp/>fmt::format_to(it,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>f);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>it<sp/>=<sp/>std::format_to(it,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>{}&quot;</highlight><highlight class="normal">,<sp/>f);</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it;</highlight></codeline>

@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">50</td>
+                     <td class="headerValue" width="10%">55</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -83,7 +83,7 @@
              : class dispatcher
              : {
              : public:
-             :   dispatcher(runner&amp; r)
+             :   explicit dispatcher(runner&amp; r)
              :     : runner_m{r}
              :   {
              :   }
@@ -96,14 +96,17 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue_back(fired{init{}, {}});</span>
              : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // ReSharper disable once CppDFAEndlessLoop</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    for (;;)</span>
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      auto lock = std::unique_lock{mtx_m};</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      cond_m.wait(lock, [&amp;]() { return !queue_m.empty() || !running_m; });</span>
              : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      // ReSharper disable once CppDFAConstantConditions</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (!running_m)</span>
              :       {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        // ReSharper disable once CppDFAUnreachableCode</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        cond_m.wait(lock, [&amp;]() { return terminate_m; });</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return;</span>
@@ -113,6 +116,8 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      runner_m.exec(next_job(lock));</span>
              :     }
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // ReSharper disable once CppDFAUnreachableCode</span>
              :   }
              : 
              :   void stop_running()
@@ -156,9 +161,10 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto guard = std::lock_guard{mtx_m};</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue(std::move(ke),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          std::bind(std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                      &amp;decltype(queue_m)::push_back),</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                    &amp;queue_m, std::placeholders::_1));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">          std::bind( // NOLINT(*-avoid-bind)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">            std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">              &amp;decltype(queue_m)::push_back),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">            &amp;queue_m, std::placeholders::_1));</span>
              :   }
              : 
              :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;
@@ -168,9 +174,10 @@
              :     auto guard = std::lock_guard{mtx_m};
              : 
              :     queue(std::move(ke),
-             :           std::bind(std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(
-             :                       &amp;decltype(queue_m)::push_front),
-             :                     &amp;queue_m, std::placeholders::_1));
+             :           std::bind( // NOLINT(*-avoid-bind)
+             :             std::mem_fn&lt;void(decltype(queue_m)::value_type&amp;&amp;)&gt;(
+             :               &amp;decltype(queue_m)::push_front),
+             :             &amp;queue_m, std::placeholders::_1));
              :   }
              : 
              : private:
@@ -188,7 +195,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    queue_m.pop_front();</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // we would like to use exec(next_job(std::move(lock)))</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // but it is implementation-defined wether the lock moved into next_job</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // but it is implementation-defined whether the lock moved into next_job</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // is destroyed before exec is executed or not</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // https://eel.is/c++draft/expr.call#6.sentence-10</span>
              : 
@@ -199,7 +206,7 @@
              :   }
              : 
              :   bool terminate_m{false}; ///&lt; terminate run and exit
-             :   bool running_m{false};   ///&lt; wether we're running jobs
+             :   bool running_m{false};   ///&lt; whether we're running jobs
              :   runner&amp; runner_m;
              : 
              :   /// @name Managing Queue
@@ -217,7 +224,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if constexpr (internal_event_c&lt;event_t&gt;)</span>
              :     {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::debug(SL, lf::event, &quot;Job #{} pushed [# jobs: {}]&quot;, j_id,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      debug(SL, lf::event, &quot;Job #{} pushed [# jobs: {}]&quot;, j_id,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  queue_m.size());</span>
              :     }
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else if constexpr (network_event_c&lt;event_t&gt;)</span>
@@ -226,7 +233,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      runner_m.associate_job_to_pipe(j_id, p_id);</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      pars::debug(SL, lf::event,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      debug(SL, lf::event,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  &quot;Job #{} pushed and associated with Pipe {:X} [# jobs: {}]&quot;,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                  j_id, p_id, queue_m.size());</span>
              :     }

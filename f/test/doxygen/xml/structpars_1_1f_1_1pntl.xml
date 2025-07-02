@@ -11,9 +11,9 @@
       </param>
     </templateparamlist>
     <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" prot="public" static="no" mutable="no">
-        <type><ref refid="classpars_1_1net_1_1pipe" kindref="compound">net::pipe</ref></type>
-        <definition>net::pipe pars::f::pntl&lt; tool_t &gt;::p</definition>
+      <memberdef kind="variable" id="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" prot="public" static="no" mutable="no">
+        <type><ref refid="classpars_1_1net_1_1pipe__view" kindref="compound">net::pipe_view</ref></type>
+        <definition>net::pipe_view pars::f::pntl&lt; tool_t &gt;::p</definition>
         <argsstring></argsstring>
         <name>p</name>
         <qualifiedname>pars::f::pntl::p</qualifiedname>
@@ -23,8 +23,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" line="44" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" bodystart="44" bodyend="-1"/>
-        <referencedby refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" compoundref="helpers_8h" startline="47" endline="50">pars::f::pntl&lt; tool_t &gt;::format_to</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" line="44" column="18" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" compoundref="helpers_8h" startline="47" endline="50">pars::f::pntl&lt; tool_t &gt;::format_to</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" prot="public" static="no" mutable="no">
         <type>tool_t &amp;</type>
@@ -39,18 +39,18 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" line="45" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" bodystart="45" bodyend="-1"/>
-        <referencedby refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" compoundref="helpers_8h" startline="47" endline="50">pars::f::pntl&lt; tool_t &gt;::format_to</referencedby>
+        <referencedby refid="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" compoundref="helpers_8h" startline="47" endline="50">pars::f::pntl&lt; tool_t &gt;::format_to</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
         <definition>decltype(ctx.out()) pars::f::pntl&lt; tool_t &gt;::format_to</definition>
-        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
         <name>format_to</name>
         <qualifiedname>pars::f::pntl::format_to</qualifiedname>
         <param>
-          <type>fmt::format_context &amp;</type>
+          <type>std::format_context &amp;</type>
           <declname>ctx</declname>
         </param>
         <briefdescription>
@@ -60,7 +60,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" line="47" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" bodystart="47" bodyend="50"/>
-        <references refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" compoundref="helpers_8h" startline="44">pars::f::pntl&lt; tool_t &gt;::p</references>
+        <references refid="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" compoundref="helpers_8h" startline="44">pars::f::pntl&lt; tool_t &gt;::p</references>
         <references refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" compoundref="helpers_8h" startline="45">pars::f::pntl&lt; tool_t &gt;::t</references>
       </memberdef>
     </sectiondef>
@@ -95,8 +95,8 @@
         </childnode>
       </node>
       <node id="2">
-        <label>pars::net::pipe</label>
-        <link refid="classpars_1_1net_1_1pipe"/>
+        <label>pars::net::pipe_view</label>
+        <link refid="classpars_1_1net_1_1pipe__view"/>
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
@@ -106,8 +106,8 @@
     </collaborationgraph>
     <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" line="42" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/fmt/helpers.h" bodystart="43" bodyend="51"/>
     <listofallmembers>
-      <member refid="structpars_1_1f_1_1pntl_1a866fd54cdcc04f03364daa75adfaef3d" prot="public" virt="non-virtual"><scope>pars::f::pntl</scope><name>format_to</name></member>
-      <member refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" prot="public" virt="non-virtual"><scope>pars::f::pntl</scope><name>p</name></member>
+      <member refid="structpars_1_1f_1_1pntl_1a6f1ded5693d9bec7ff44ca2791154058" prot="public" virt="non-virtual"><scope>pars::f::pntl</scope><name>format_to</name></member>
+      <member refid="structpars_1_1f_1_1pntl_1a7a9fa0371a665ece0097d8943b48cc3e" prot="public" virt="non-virtual"><scope>pars::f::pntl</scope><name>p</name></member>
       <member refid="structpars_1_1f_1_1pntl_1a1c50b6a8da50bb9c5425258f7c66b7d8" prot="public" virt="non-virtual"><scope>pars::f::pntl</scope><name>t</name></member>
     </listofallmembers>
   </compounddef>

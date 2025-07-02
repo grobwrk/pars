@@ -2,10 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="clev_2err_8h" kind="file" language="C++">
     <compoundname>err.h</compoundname>
-    <includes local="no">fmt/format.h</includes>
-    <includes local="no">nng/nng.h</includes>
     <includes local="no">expected</includes>
-    <includes local="no">functional</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">system_error</includes>
     <includedby refid="own_8h" local="yes">/home/runner/work/pars/pars/lib/include/clev/own.h</includedby>
     <includedby refid="nngxx_2err_8h" local="yes">/home/runner/work/pars/pars/lib/include/nngxx/err.h</includedby>
     <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
@@ -19,20 +18,15 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>expected</label>
       </node>
       <node id="2">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="5">
-        <label>functional</label>
+        <label>expected</label>
       </node>
       <node id="3">
-        <label>nng/nng.h</label>
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>system_error</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -63,7 +57,7 @@
         <link refid="clev_2err_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="57" relation="include">
+        <childnode refid="56" relation="include">
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
@@ -73,7 +67,7 @@
         <link refid="own_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="56" relation="include">
+        <childnode refid="55" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -108,7 +102,7 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="57">
+      <node id="56">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
         <childnode refid="4" relation="include">
@@ -117,11 +111,13 @@
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
         <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
         </childnode>
         <childnode refid="58" relation="include">
         </childnode>
@@ -160,10 +156,12 @@
         <childnode refid="44" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="55" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="36">
@@ -185,7 +183,7 @@
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
@@ -203,13 +201,13 @@
         </childnode>
         <childnode refid="45" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
@@ -220,10 +218,20 @@
         <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>/home/runner/work/pars/pars/lib/include/nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
         </childnode>
       </node>
       <node id="58">
@@ -238,14 +246,14 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="55">
+      <node id="54">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
@@ -268,12 +276,10 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="56">
+      <node id="55">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
       </node>
       <node id="25">
@@ -349,8 +355,6 @@
         </childnode>
         <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
-        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -423,9 +427,9 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -454,7 +458,7 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="29" relation="include">
@@ -464,7 +468,7 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="31" relation="include">
@@ -480,16 +484,10 @@
         <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="49">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -515,7 +513,7 @@
         <link refid="hash_8h"/>
         <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -531,8 +529,8 @@
         </childnode>
       </node>
       <node id="42">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
@@ -619,7 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="50" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="48" column="9" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="48" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -658,88 +656,97 @@
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;expected&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="namespaceclev" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceclev" kindref="compound">clev</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="structclev_1_1exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" kindref="member">exception</ref><sp/>:<sp/>std::runtime_error</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43" refid="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1exception_1a1af7c042e11a6f3c77071ee5988b8b91" kindref="member">exception</ref>(std::error_code<sp/>code)<sp/>noexcept</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>std::runtime_error(code.message())</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__cpp_exceptions<sp/>&lt;<sp/>199711</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="clev_2err_8h_1a2e3af1de29e4213f21f020dd96886f5d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEV_HAS_EXCEPTIONS<sp/>false</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEV_HAS_EXCEPTIONS<sp/>true</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;expected&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;system_error&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespaceclev" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceclev" kindref="compound">clev</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structclev_1_1exception" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1exception_1a8a1dce0c5d28a8441f808e126ae0b18a" kindref="member">exception</ref><sp/>final<sp/>:<sp/>std::runtime_error</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="structclev_1_1exception_1a8a1dce0c5d28a8441f808e126ae0b18a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1exception_1a8a1dce0c5d28a8441f808e126ae0b18a" kindref="member">exception</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>code)<sp/>noexcept</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>std::runtime_error(code.message())</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__cpp_exceptions<sp/>&lt;<sp/>199711</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="clev_2err_8h_1a2e3af1de29e4213f21f020dd96886f5d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEV_HAS_EXCEPTIONS<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEV_HAS_EXCEPTIONS<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clev_exception_disabled_v<sp/>=<sp/>!(<ref refid="clev_2err_8h_1a2e3af1de29e4213f21f020dd96886f5d" kindref="member">CLEV_HAS_EXCEPTIONS</ref>);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clev_exception_disabled_v<sp/>=<sp/>!(<ref refid="clev_2err_8h_1a2e3af1de29e4213f21f020dd96886f5d" kindref="member">CLEV_HAS_EXCEPTIONS</ref>);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">abort_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err,</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string_view<sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(clev_exception_disabled_v)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::quick_exit(err.value());</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>exception{err};</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exit_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::quick_exit(<ref refid="namespacenngxx_1_1cpp_1a675fe8d0efb36801fc4a93482cdc9cb8" kindref="member">err</ref>.value());</highlight></codeline>
-<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">abort_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string_view<sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(clev_exception_disabled_v)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::quick_exit(err.value());</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>exception{err};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>exit_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>std::quick_exit(<ref refid="namespacenngxx_1_1cpp_1a675fe8d0efb36801fc4a93482cdc9cb8" kindref="member">err</ref>.value());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref><sp/>=<sp/>std::unexpected&lt;std::error_code&gt;;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref><sp/>=<sp/>std::unexpected&lt;std::error_code&gt;;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
-<codeline lineno="75" refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected</ref><sp/>=<sp/>std::expected&lt;value_t,<sp/>std::error_code&gt;;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal">abort_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string_view<sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[=](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;value_t&gt;</ref><sp/>{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>abort_now(err,<sp/>msg);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref>{err};</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>exit_now()<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;value_t&gt;</ref><sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>exit_now(err);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref>{err};</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
+<codeline lineno="73" refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected</ref><sp/>=<sp/>std::expected&lt;value_t,<sp/>std::error_code&gt;;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">abort_now(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string_view<sp/>msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[=](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;value_t&gt;</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>abort_now(err,<sp/>msg);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref>{err};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t<sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>exit_now()<sp/>noexcept(clev_exception_disabled_v)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>err)<sp/>-&gt;<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;value_t&gt;</ref><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>exit_now(err);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref>{err};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>done<sp/>=<sp/>{};</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>enum_t&gt;</highlight></codeline>
-<codeline lineno="99" refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">clev::unexpected</ref><sp/><ref refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" kindref="member">make_unexpected</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">clev::unexpected</ref>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">enum_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(err)};</highlight></codeline>
-<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>enum_t&gt;</highlight></codeline>
-<codeline lineno="105" refid="namespaceclev_1a15c55fa3a6d6170235687de697524350" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/><ref refid="namespaceclev_1a15c55fa3a6d6170235687de697524350" kindref="member">make_expected</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a803de362491e89460bcb066fdd2eebd9" kindref="member">make_unexpected&lt;enum_t&gt;</ref>(err);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="98" refid="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" kindref="member">invoke</ref>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[f]&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;(args_t&amp;&amp;...<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>f(std::forward&lt;args_t&gt;(v)...);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>done;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>enum_t&gt;</highlight></codeline>
+<codeline lineno="108" refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" refkind="member"><highlight class="normal"><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref><sp/><ref refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" kindref="member">make_unexpected</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">enum_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(err)};</highlight></codeline>
 <codeline lineno="111"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>enum_t&gt;</highlight></codeline>
+<codeline lineno="114" refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" refkind="member"><highlight class="normal"><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/><ref refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" kindref="member">make_expected</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" kindref="member">make_unexpected&lt;enum_t&gt;</ref>(err);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/clev/err.h"/>
   </compounddef>

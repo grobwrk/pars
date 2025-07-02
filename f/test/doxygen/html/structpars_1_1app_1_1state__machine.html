@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename state_t&gt;<br />
 struct pars::app::state_machine&lt; state_t &gt;</div>
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00083">83</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00082">82</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a0b1e006841a30fe2080f1a482ae5ace9" name="a0b1e006841a30fe2080f1a482ae5ace9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b1e006841a30fe2080f1a482ae5ace9">&#9670;&#160;</a></span>state_type</h2>
@@ -147,7 +147,7 @@ template&lt;typename state_t&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00085">85</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00084">84</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
 
 </div>
 </div>
@@ -172,16 +172,16 @@ template&lt;typename state_t&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00087">87</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>    : state_m{<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>}</div>
-<div class="line"><span class="lineno">   89</span>  {</div>
-<div class="line"><span class="lineno">   90</span>  }</div>
-<div class="ttc" id="astructpars_1_1app_1_1state__machine_html"><div class="ttname"><a href="structpars_1_1app_1_1state__machine.html">pars::app::state_machine</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00083">state_machine.h:84</a></div></div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00086">86</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    : state_m{<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>}</div>
+<div class="line"><span class="lineno">   88</span>  {</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
+<div class="ttc" id="astructpars_1_1app_1_1state__machine_html"><div class="ttname"><a href="structpars_1_1app_1_1state__machine.html">pars::app::state_machine</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00082">state_machine.h:83</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -211,30 +211,30 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00140">140</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>  {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span> (!next_m)</div>
-<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Commit while no transition!&quot;</span>);</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, <span class="stringliteral">&quot;Commit transition from \&quot;{}\&quot; to \&quot;{}\&quot;&quot;</span>, state_m,</div>
-<div class="line"><span class="lineno">  146</span>                *next_m);</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>    state_m = *next_m;</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>    next_m.reset();</div>
-<div class="line"><span class="lineno">  151</span>  }</div>
-<div class="ttc" id="anamespacepars_html_acf366c3b2c7f2027ca1f4694e783ecb1"><div class="ttname"><a href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a></div><div class="ttdeci">void debug(spdlog::source_loc loc, pars::lf lf, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00132">log.h:132</a></div></div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00138">138</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>  {</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!next_m)</div>
+<div class="line"><span class="lineno">  141</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Commit while no transition!&quot;</span>);</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, R<span class="stringliteral">&quot;(Commit transition from &quot;{}&quot; to &quot;{}&quot;)&quot;, state_m,</span></div>
+<div class="line"><span class="lineno">  144</span><span class="stringliteral">          *next_m);</span></div>
+<div class="line"><span class="lineno">  145</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  146</span><span class="stringliteral">    state_m = *next_m;</span></div>
+<div class="line"><span class="lineno">  147</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  148</span><span class="stringliteral">    next_m.reset();</span></div>
+<div class="line"><span class="lineno">  149</span><span class="stringliteral">  }</span></div>
+<div class="ttc" id="anamespacepars_html_a1eb41d705e7d6a7cb4b577cb9928a82a"><div class="ttname"><a href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">pars::debug</a></div><div class="ttdeci">void debug(spdlog::source_loc loc, const lf flags, spdlog::format_string_t&lt; args_t... &gt; fmt, args_t &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00127">log.h:127</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
+<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00127">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00057">SL</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1app_1_1state__machine_a749117203fe58365232e11ef90ec277a_cgraph.png" border="0" usemap="#astructpars_1_1app_1_1state__machine_a749117203fe58365232e11ef90ec277a_cgraph" alt=""/></div>
 <map name="astructpars_1_1app_1_1state__machine_a749117203fe58365232e11ef90ec277a_cgraph" id="astructpars_1_1app_1_1state__machine_a749117203fe58365232e11ef90ec277a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,191,50"/>
-<area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="239,14,336,42"/>
+<area shape="rect" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a" title=" " alt="" coords="239,14,336,42"/>
 <area shape="poly" title=" " alt="" coords="191,25,223,25,223,30,191,30"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="384,14,461,42"/>
+<area shape="rect" href="namespacepars.html#a92c5eca8401d4b8495021803a02f7c58" title=" " alt="" coords="384,14,461,42"/>
 <area shape="poly" title=" " alt="" coords="337,25,369,25,369,30,337,30"/>
 </map>
 </div>
@@ -266,8 +266,8 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00173">173</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>{ <span class="keywordflow">return</span> state_m; }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00171">171</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>{ <span class="keywordflow">return</span> state_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -296,12 +296,12 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00111">111</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  112</span>  {</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (state_m != <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>)</div>
-<div class="line"><span class="lineno">  114</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(</div>
-<div class="line"><span class="lineno">  115</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">fmt::format</a>(<span class="stringliteral">&quot;Wrong State \&quot;{}\&quot; [must be \&quot;{}\&quot;]&quot;</span>, state_m, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>));</div>
-<div class="line"><span class="lineno">  116</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00110">110</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>  {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (state_m != <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>)</div>
+<div class="line"><span class="lineno">  113</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::format</a>(R<span class="stringliteral">&quot;(Wrong State &quot;{}&quot; [must be &quot;{}&quot;])&quot;, state_m, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>));</span></div>
+<div class="line"><span class="lineno">  115</span><span class="stringliteral">  }</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -330,26 +330,26 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00092">92</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   93</span>  {</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> : <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>)</div>
-<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">if</span> (<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> == state_m)</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::string</a> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>;</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> : <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>)</div>
-<div class="line"><span class="lineno">  101</span>      <span class="keywordflow">if</span> (<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> != *<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>.end())</div>
-<div class="line"><span class="lineno">  102</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a> += <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">fmt::format</a>(<span class="stringliteral">&quot;{},&quot;</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a>);</div>
-<div class="line"><span class="lineno">  103</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  104</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a> += <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">fmt::format</a>(<span class="stringliteral">&quot;{}&quot;</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a>);</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(</div>
-<div class="line"><span class="lineno">  107</span>      <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">fmt::format</a>(<span class="stringliteral">&quot;Wrong State {} [must be in \&quot;{}\&quot;]&quot;</span>, state_m,</div>
-<div class="line"><span class="lineno">  108</span>                  <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::string_view</a>{<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>.begin(), <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>.end() - 1}));</div>
-<div class="line"><span class="lineno">  109</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00091">91</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>  {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> : <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>)</div>
+<div class="line"><span class="lineno">   94</span>      <span class="keywordflow">if</span> (<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> == state_m)</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::string</a> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> : <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>)</div>
+<div class="line"><span class="lineno">  100</span>      <span class="keywordflow">if</span> (<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a> != *<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">expected</a>.end())</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a> += <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::format</a>(<span class="stringliteral">&quot;{},&quot;</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a>);</div>
+<div class="line"><span class="lineno">  102</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a> += <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::format</a>(<span class="stringliteral">&quot;{}&quot;</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">e</a>);</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(</div>
+<div class="line"><span class="lineno">  106</span>      <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::format</a>(<span class="stringliteral">&quot;Wrong State {} [must be in \&quot;{}\&quot;]&quot;</span>, state_m,</div>
+<div class="line"><span class="lineno">  107</span>                  <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::string_view</a>{<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>.begin(), <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">states_str</a>.end() - 1}));</div>
+<div class="line"><span class="lineno">  108</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="state__machine_8h_source.html#l00158">tx()</a>, and <a class="el" href="state__machine_8h_source.html#l00165">tx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="state__machine_8h_source.html#l00156">tx()</a>, and <a class="el" href="state__machine_8h_source.html#l00163">tx()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -390,29 +390,28 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00118">118</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>  {</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">if</span> (next_m)</div>
-<div class="line"><span class="lineno">  121</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Another transition in progress!&quot;</span>);</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, <span class="stringliteral">&quot;Start transition from \&quot;{}\&quot; to \&quot;{}\&quot;&quot;</span>, state_m,</div>
-<div class="line"><span class="lineno">  124</span>                <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>);</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    next_m = <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>;</div>
-<div class="line"><span class="lineno">  127</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00117">117</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>  {</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span> (next_m)</div>
+<div class="line"><span class="lineno">  120</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Another transition in progress!&quot;</span>);</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, R<span class="stringliteral">&quot;(Start transition from &quot;{}&quot; to &quot;{}&quot;)&quot;, state_m, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>);</span></div>
+<div class="line"><span class="lineno">  123</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  124</span><span class="stringliteral">    next_m = <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">s</a>;</span></div>
+<div class="line"><span class="lineno">  125</span><span class="stringliteral">  }</span></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
+<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00127">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00057">SL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="state__machine_8h_source.html#l00050">pars::app::state_tx&lt; state_t &gt;::state_tx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="state__machine_8h_source.html#l00049">pars::app::state_tx&lt; state_t &gt;::state_tx()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1app_1_1state__machine_a2977d152868fc8a4649c20650bbd18f2_cgraph.png" border="0" usemap="#astructpars_1_1app_1_1state__machine_a2977d152868fc8a4649c20650bbd18f2_cgraph" alt=""/></div>
 <map name="astructpars_1_1app_1_1state__machine_a2977d152868fc8a4649c20650bbd18f2_cgraph" id="astructpars_1_1app_1_1state__machine_a2977d152868fc8a4649c20650bbd18f2_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,191,50"/>
-<area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="239,14,336,42"/>
+<area shape="rect" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a" title=" " alt="" coords="239,14,336,42"/>
 <area shape="poly" title=" " alt="" coords="191,25,223,25,223,30,191,30"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="384,14,461,42"/>
+<area shape="rect" href="namespacepars.html#a92c5eca8401d4b8495021803a02f7c58" title=" " alt="" coords="384,14,461,42"/>
 <area shape="poly" title=" " alt="" coords="337,25,369,25,369,30,337,30"/>
 </map>
 </div>
@@ -454,24 +453,24 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00175">175</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>  {</div>
-<div class="line"><span class="lineno">  177</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, <span class="stringliteral">&quot;Reset State to \&quot;{}\&quot; [was \&quot;{}\&quot;]&quot;</span>,</div>
-<div class="line"><span class="lineno">  178</span>                <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_type::INITIALIZING</a>, state_m);</div>
-<div class="line"><span class="lineno">  179</span> </div>
-<div class="line"><span class="lineno">  180</span>    state_m = <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_type::INITIALIZING</a>;</div>
-<div class="line"><span class="lineno">  181</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00173">173</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>  {</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, R<span class="stringliteral">&quot;(Reset State to &quot;{}&quot; [was &quot;{}&quot;])&quot;,</span></div>
+<div class="line"><span class="lineno">  176</span><span class="stringliteral">          <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_type::INITIALIZING</a>, state_m);</span></div>
+<div class="line"><span class="lineno">  177</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  178</span><span class="stringliteral">    state_m = <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_type::INITIALIZING</a>;</span></div>
+<div class="line"><span class="lineno">  179</span><span class="stringliteral">  }</span></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
+<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00127">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00057">SL</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1app_1_1state__machine_a9969c8c053eb38464655f6ad9c1bbc74_cgraph.png" border="0" usemap="#astructpars_1_1app_1_1state__machine_a9969c8c053eb38464655f6ad9c1bbc74_cgraph" alt=""/></div>
 <map name="astructpars_1_1app_1_1state__machine_a9969c8c053eb38464655f6ad9c1bbc74_cgraph" id="astructpars_1_1app_1_1state__machine_a9969c8c053eb38464655f6ad9c1bbc74_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,191,50"/>
-<area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="239,14,336,42"/>
+<area shape="rect" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a" title=" " alt="" coords="239,14,336,42"/>
 <area shape="poly" title=" " alt="" coords="191,25,223,25,223,30,191,30"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="384,14,461,42"/>
+<area shape="rect" href="namespacepars.html#a92c5eca8401d4b8495021803a02f7c58" title=" " alt="" coords="384,14,461,42"/>
 <area shape="poly" title=" " alt="" coords="337,25,369,25,369,30,337,30"/>
 </map>
 </div>
@@ -503,27 +502,27 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00129">129</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>  {</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (!next_m)</div>
-<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Rollback while no transition!&quot;</span>);</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1">pars::debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, <span class="stringliteral">&quot;Rollback transition from \&quot;{}\&quot; to \&quot;{}\&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">  135</span>                state_m, *next_m);</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>    next_m.reset();</div>
-<div class="line"><span class="lineno">  138</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00127">127</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>  {</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span> (!next_m)</div>
+<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">throw</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">std::runtime_error</a>(<span class="stringliteral">&quot;Rollback while no transition!&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_function" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a">debug</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">SL</a>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">lf::app</a>, R<span class="stringliteral">&quot;(Rollback transition from &quot;{}&quot; to &quot;{}&quot;)&quot;, state_m,</span></div>
+<div class="line"><span class="lineno">  133</span><span class="stringliteral">          *next_m);</span></div>
+<div class="line"><span class="lineno">  134</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  135</span><span class="stringliteral">    next_m.reset();</span></div>
+<div class="line"><span class="lineno">  136</span><span class="stringliteral">  }</span></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00132">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00061">SL</a>.</p>
+<p class="reference">References <a class="el" href="flags_8h_source.html#l00039">pars::app</a>, <a class="el" href="log_8h_source.html#l00127">pars::debug()</a>, and <a class="el" href="log_8h_source.html#l00057">SL</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structpars_1_1app_1_1state__machine_a04e0cca90b0ee1488f491a5e13faf5e1_cgraph.png" border="0" usemap="#astructpars_1_1app_1_1state__machine_a04e0cca90b0ee1488f491a5e13faf5e1_cgraph" alt=""/></div>
 <map name="astructpars_1_1app_1_1state__machine_a04e0cca90b0ee1488f491a5e13faf5e1_cgraph" id="astructpars_1_1app_1_1state__machine_a04e0cca90b0ee1488f491a5e13faf5e1_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,191,50"/>
-<area shape="rect" href="namespacepars.html#acf366c3b2c7f2027ca1f4694e783ecb1" title=" " alt="" coords="239,14,336,42"/>
+<area shape="rect" href="namespacepars.html#a1eb41d705e7d6a7cb4b577cb9928a82a" title=" " alt="" coords="239,14,336,42"/>
 <area shape="poly" title=" " alt="" coords="191,25,223,25,223,30,191,30"/>
-<area shape="rect" href="namespacepars.html#a31517dba4d6847862ee6be3eeb802a03" title=" " alt="" coords="384,14,461,42"/>
+<area shape="rect" href="namespacepars.html#a92c5eca8401d4b8495021803a02f7c58" title=" " alt="" coords="384,14,461,42"/>
 <area shape="poly" title=" " alt="" coords="337,25,369,25,369,30,337,30"/>
 </map>
 </div>
@@ -559,15 +558,15 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00158">158</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>  {</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_function" href="#a100b2815eaedafc19467577333e7f470">ensure</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">from_state</a>);</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
-<div class="line"><span class="lineno">  163</span>  }</div>
-<div class="ttc" id="astructpars_1_1app_1_1state__machine_html_a100b2815eaedafc19467577333e7f470"><div class="ttname"><a href="#a100b2815eaedafc19467577333e7f470">pars::app::state_machine::ensure</a></div><div class="ttdeci">void ensure(std::initializer_list&lt; state_type &gt; expected)</div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00092">state_machine.h:92</a></div></div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00156">156</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>  {</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_function" href="#a100b2815eaedafc19467577333e7f470">ensure</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">from_state</a>);</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
+<div class="line"><span class="lineno">  161</span>  }</div>
+<div class="ttc" id="astructpars_1_1app_1_1state__machine_html_a100b2815eaedafc19467577333e7f470"><div class="ttname"><a href="#a100b2815eaedafc19467577333e7f470">pars::app::state_machine::ensure</a></div><div class="ttdeci">void ensure(std::initializer_list&lt; state_type &gt; expected)</div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00091">state_machine.h:91</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00092">ensure()</a>.</p>
+<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00091">ensure()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -606,10 +605,10 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00153">153</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>  {</div>
-<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
-<div class="line"><span class="lineno">  156</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00151">151</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>  {</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
+<div class="line"><span class="lineno">  154</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -642,14 +641,14 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00165">165</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>  {</div>
-<div class="line"><span class="lineno">  168</span>    <a class="code hl_function" href="#a100b2815eaedafc19467577333e7f470">ensure</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">from_states</a>);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
-<div class="line"><span class="lineno">  171</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00163">163</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  165</span>  {</div>
+<div class="line"><span class="lineno">  166</span>    <a class="code hl_function" href="#a100b2815eaedafc19467577333e7f470">ensure</a>(<a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">from_states</a>);</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">state_tx</a>(*<span class="keyword">this</span>, <a class="code hl_struct" href="structpars_1_1app_1_1state__machine.html">to_state</a>);</div>
+<div class="line"><span class="lineno">  169</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00092">ensure()</a>.</p>
+<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00091">ensure()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -3,7 +3,7 @@
   <compounddef id="fmt_2formattable_8h" kind="file" language="C++">
     <compoundname>formattable.h</compoundname>
     <includes refid="concept_2formattable_8h" local="yes">pars/concept/formattable.h</includes>
-    <includes local="no">fmt/format.h</includes>
+    <includes local="no">format</includes>
     <includedby refid="hf__registry_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</includedby>
     <incdepgraph>
       <node id="2">
@@ -21,7 +21,7 @@
         <link refid="fmt_2formattable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -35,11 +35,11 @@
       <node id="5">
         <label>chrono</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>concepts</label>
       </node>
-      <node id="6">
-        <label>fmt/format.h</label>
+      <node id="7">
+        <label>format</label>
       </node>
       <node id="4">
         <label>nng/nng.h</label>
@@ -255,7 +255,7 @@
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="structfmt_1_1formatter_3_01foarmattable__t_01_4" prot="public">fmt::formatter&lt; foarmattable_t &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01formattable__t_01_4" prot="public">std::formatter&lt; formattable_t &gt;</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -294,17 +294,18 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2formattable_8h" kindref="compound">pars/concept/formattable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;formattable_c<sp/>foarmattable_t&gt;</highlight></codeline>
-<codeline lineno="37" refid="structfmt_1_1formatter_3_01foarmattable__t_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;foarmattable_t&gt;<sp/>:<sp/>fmt::formatter&lt;std::string&gt;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39" refid="structfmt_1_1formatter_3_01foarmattable__t_01_4_1a957faa1033d59cc1f6cbaa6de3e50afc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structfmt_1_1formatter_3_01foarmattable__t_01_4_1a957faa1033d59cc1f6cbaa6de3e50afc" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>foarmattable_t&amp;<sp/>x,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.format_to(ctx);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;formattable_c<sp/>formattable_t&gt;</highlight></codeline>
+<codeline lineno="37" refid="structstd_1_1formatter_3_01formattable__t_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::formatter&lt;formattable_t&gt;<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-dcl58-cpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>:<sp/>std::formatter&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="structstd_1_1formatter_3_01formattable__t_01_4_1a5e44ad717202c34ecab9687ecb31f3cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1formatter_3_01formattable__t_01_4_1a5e44ad717202c34ecab9687ecb31f3cb" kindref="member">format</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>formattable_t&amp;<sp/>x,<sp/>format_context&amp;<sp/>ctx)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.format_to(ctx);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/fmt/formattable.h"/>
   </compounddef>

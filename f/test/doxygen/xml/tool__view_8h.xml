@@ -5,7 +5,7 @@
     <includes refid="init_8h" local="yes">pars/init.h</includes>
     <includes refid="ctx_8h" local="yes">nngxx/ctx.h</includes>
     <includes refid="nngxx_2socket_8h" local="yes">nngxx/socket.h</includes>
-    <includes local="no">fmt/format.h</includes>
+    <includes local="no">format</includes>
     <includes local="no">typeinfo</includes>
     <includes local="no">variant</includes>
     <includedby refid="net_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/concept/net.h</includedby>
@@ -17,8 +17,6 @@
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
         <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -70,11 +68,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -113,7 +109,7 @@
       </node>
       <node id="28">
         <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -131,8 +127,6 @@
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="14">
@@ -162,6 +156,8 @@
       <node id="20">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
@@ -189,13 +185,15 @@
       </node>
       <node id="27">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="30">
         <label>nngxx/socket.h</label>
         <link refid="nngxx_2socket_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
         <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -236,11 +234,11 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
         <childnode refid="35" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -249,14 +247,11 @@
       <node id="18">
         <label>concepts</label>
       </node>
-      <node id="12">
+      <node id="11">
         <label>expected</label>
       </node>
-      <node id="11">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="13">
-        <label>functional</label>
+      <node id="35">
+        <label>format</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
@@ -273,13 +268,19 @@
       <node id="21">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
+      <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="13">
+        <label>system_error</label>
+      </node>
       <node id="24">
         <label>type_traits</label>
       </node>
-      <node id="35">
+      <node id="36">
         <label>typeinfo</label>
       </node>
-      <node id="36">
+      <node id="37">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -599,7 +600,7 @@
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ctx_8h" kindref="compound">nngxx/ctx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2socket_8h" kindref="compound">nngxx/socket.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fmt/format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -622,29 +623,30 @@
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64" refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info&amp;<sp/><ref refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" kindref="member">type</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="65"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::ref(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(t));<sp/>},<sp/>tool_m);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="71"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tool_m.index()<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Context&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Socket&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="77"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t.id();<sp/>},<sp/>tool_m);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a13f8ea68648bf7d870e3df616fe3546a" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}<sp/>#{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>(),<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">());</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::variant&lt;nngxx::ctx_view,<sp/>nngxx::socket_view&gt;<sp/>tool_m;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([]&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;(T&amp;)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::ref(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(T));<sp/>},</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool_m);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="72"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tool_m.index()<sp/>==<sp/>0<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Context&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Socket&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" kindref="member">id</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="78"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit([](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t.id();<sp/>},<sp/>tool_m);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" kindref="member">format_to</ref>(std::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;{}<sp/>#{}&quot;</highlight><highlight class="normal">,<sp/><ref refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" kindref="member">who</ref>(),<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::variant&lt;nngxx::ctx_view,<sp/>nngxx::socket_view&gt;<sp/>tool_m;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/pars/net/tool_view.h"/>
   </compounddef>

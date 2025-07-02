@@ -10,9 +10,9 @@
     </templateparamlist>
     <initializer>template&lt;typename value_t&gt;
 concept <ref refid="conceptpars_1_1net_1_1tool__c" kindref="compound">pars::net::tool_c</ref> =  requires {
-  requires std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::socket&gt; ||
-             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::context&gt; ||
-             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, net::tool_view&gt;;
+  requires std::same_as&lt;std::remove_const_t&lt;value_t&gt;, socket&gt; ||
+             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, context&gt; ||
+             std::same_as&lt;std::remove_const_t&lt;value_t&gt;, tool_view&gt;;
 }    </initializer>
     <briefdescription>
     </briefdescription>

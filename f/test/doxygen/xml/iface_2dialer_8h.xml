@@ -17,8 +17,6 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
       </node>
       <node id="10">
         <label>clev/iface.h</label>
@@ -40,16 +38,16 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="23">
         <label>nngxx/aio.h</label>
         <link refid="aio_8h"/>
-        <childnode refid="22" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="13">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -59,23 +57,21 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
-      <node id="22">
+      <node id="24">
         <label>nngxx/iface/aio.h</label>
         <link refid="iface_2aio_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -87,39 +83,37 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="24">
+      <node id="26">
         <label>nngxx/iface/msg.h</label>
         <link refid="iface_2msg_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="26">
-        <label>nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
         <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="20">
-        <label>nngxx/iface/socket.h</label>
-        <link refid="nngxx_2iface_2socket_8h"/>
-        <childnode refid="21" relation="include">
-        </childnode>
+        <label>nngxx/iface/pipe.h</label>
+        <link refid="iface_2pipe_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>nngxx/iface/socket.h</label>
+        <link refid="nngxx_2iface_2socket_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
@@ -142,16 +136,18 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="25">
         <label>nngxx/msg.h</label>
         <link refid="msg_8h"/>
-        <childnode refid="24" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="14">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -176,10 +172,10 @@
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="25">
+      <node id="27">
         <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
-        <childnode refid="26" relation="include">
+        <link refid="pipe_8h"/>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -187,7 +183,9 @@
         <link refid="nngxx_2socket_8h"/>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -198,29 +196,23 @@
         <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="21">
         <label>nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="12">
         <label>concepts</label>
       </node>
-      <node id="6">
+      <node id="4">
         <label>expected</label>
       </node>
-      <node id="4">
-        <label>fmt/format.h</label>
-      </node>
       <node id="7">
-        <label>functional</label>
-      </node>
-      <node id="5">
         <label>nng/nng.h</label>
       </node>
       <node id="28">
@@ -234,6 +226,12 @@
       </node>
       <node id="15">
         <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>system_error</label>
       </node>
       <node id="18">
         <label>type_traits</label>
@@ -407,24 +405,24 @@
 <codeline lineno="40"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" kindref="member">value::value</ref>;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>nng_dialer<sp/>empty()<sp/>noexcept</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>nng_dialer<sp/>empty()<sp/>noexcept</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NNG_DIALER_INITIALIZER;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>destroy(nng_dialer*<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_dialer_close,<sp/>*d);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;nng_dialer&gt;</ref></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>create(<ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">nngxx::socket_view</ref>&amp;<sp/>s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>addr)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">nngxx::make</ref>(nng_dialer_create,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">nng_socket</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(s),<sp/>addr);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">clev::expected&lt;void&gt;</ref><sp/>start(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0)<sp/>noexcept</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>destroy(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nng_dialer*<sp/>d)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_dialer_close,<sp/>*d);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;nng_dialer&gt;</ref><sp/>create(<ref refid="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" kindref="member">nngxx::socket_view</ref>&amp;<sp/>s,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>addr)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" kindref="member">nngxx::make</ref>(nng_dialer_create,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">nng_socket</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(s),<sp/>addr);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ReSharper<sp/>disable<sp/>once<sp/>CppMemberFunctionMayBeConst</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>start(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0)<sp/>noexcept</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a8a6b6659b84f0d49b6edf6571a929204" kindref="member">nngxx::invoke</ref>(nng_dialer_start,<sp/>v,<sp/>flags);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>

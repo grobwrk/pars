@@ -126,7 +126,7 @@ requires ev::kind_c&lt;kind_of&gt;</td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an nng_pull protocol. </p>
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00043">43</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00044">44</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a502a3385908f4b1490091dcef6f5409c" name="a502a3385908f4b1490091dcef6f5409c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a502a3385908f4b1490091dcef6f5409c">&#9670;&#160;</a></span>pull()</h2>
@@ -157,17 +157,17 @@ requires ev::kind_c&lt;kind_of&gt;</td></tr>
 
 <p>Construct a pull. </p>
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00047">47</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>    : sock_m{r, nngxx::pull::v0::make_socket()</div>
-<div class="line"><span class="lineno">   49</span>                  .or_else(clev::abort_now&lt;nngxx::socket&gt;())</div>
-<div class="line"><span class="lineno">   50</span>                  .value()}</div>
-<div class="line"><span class="lineno">   51</span>    , hf_registry_m{h}</div>
-<div class="line"><span class="lineno">   52</span>  {</div>
-<div class="line"><span class="lineno">   53</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00048">48</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>    : sock_m{r, nngxx::pull::v0::make_socket()</div>
+<div class="line"><span class="lineno">   50</span>                  .or_else(clev::abort_now&lt;nngxx::socket&gt;())</div>
+<div class="line"><span class="lineno">   51</span>                  .value()}</div>
+<div class="line"><span class="lineno">   52</span>    , hf_registry_m{h}</div>
+<div class="line"><span class="lineno">   53</span>  {</div>
+<div class="line"><span class="lineno">   54</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="pull_8h_source.html#l00047">pull()</a>.</p>
+<p class="reference">References <a class="el" href="pull_8h_source.html#l00048">pull()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pull_8h_source.html#l00047">pull()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pull_8h_source.html#l00048">pull()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -216,12 +216,12 @@ requires ev::kind_c&lt;kind_of&gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00074">74</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>  {</div>
-<div class="line"><span class="lineno">   76</span>    hf_registry_m.insert(sock_m.id(), std::move(hf));</div>
-<div class="line"><span class="lineno">   77</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00075">75</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>  {</div>
+<div class="line"><span class="lineno">   77</span>    hf_registry_m.insert(sock_m.id(), std::move(hf));</div>
+<div class="line"><span class="lineno">   78</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="pull_8h_source.html#l00067">on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pull_8h_source.html#l00068">on()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -265,14 +265,14 @@ requires ev::kind_c&lt;kind_of&gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00067">67</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>  {</div>
-<div class="line"><span class="lineno">   69</span>    <a class="code hl_function" href="#a868d2745f1580dda9dc21b7b6d900b0e">insert&lt;kind_of, event_t&gt;</a>(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">ev::make_hf</a>(hf, self));</div>
-<div class="line"><span class="lineno">   70</span>  }</div>
-<div class="ttc" id="aclasspars_1_1net_1_1pull_html_a868d2745f1580dda9dc21b7b6d900b0e"><div class="ttname"><a href="#a868d2745f1580dda9dc21b7b6d900b0e">pars::net::pull::insert</a></div><div class="ttdeci">void insert(ev::handler_f&lt; kind_of, event_t &gt; hf)</div><div class="ttdef"><b>Definition</b> <a href="pull_8h_source.html#l00074">pull.h:74</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00068">68</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>  {</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_function" href="#a868d2745f1580dda9dc21b7b6d900b0e">insert&lt;kind_of, event_t&gt;</a>(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">ev::make_hf</a>(hf, self));</div>
+<div class="line"><span class="lineno">   71</span>  }</div>
+<div class="ttc" id="aclasspars_1_1net_1_1pull_html_a868d2745f1580dda9dc21b7b6d900b0e"><div class="ttname"><a href="#a868d2745f1580dda9dc21b7b6d900b0e">pars::net::pull::insert</a></div><div class="ttdeci">void insert(ev::handler_f&lt; kind_of, event_t &gt; hf)</div><div class="ttdef"><b>Definition</b> <a href="pull_8h_source.html#l00075">pull.h:75</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a5ae21c09902e125632b0c4f37e20a07a"><div class="ttname"><a href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">pars::ev::make_hf</a></div><div class="ttdeci">handler_f&lt; kind_of, event_t &gt; make_hf(mem_fn_t &amp;mem_fn, class_t *self)</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00058">make_hf.h:58</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="pull_8h_source.html#l00074">insert()</a>, and <a class="el" href="make__hf_8h_source.html#l00058">pars::ev::make_hf()</a>.</p>
+<p class="reference">References <a class="el" href="pull_8h_source.html#l00075">insert()</a>, and <a class="el" href="make__hf_8h_source.html#l00058">pars::ev::make_hf()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -313,8 +313,8 @@ Here is the call graph for this function:</div>
 
 <p>Get the socket. </p>
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00056">56</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keywordflow">return</span> sock_m; }</div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00057">57</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{ <span class="keywordflow">return</span> sock_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,15 +336,15 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Get the socket. </p>
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00059">59</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{ <span class="keywordflow">return</span> sock_m; }</div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00060">60</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{ <span class="keywordflow">return</span> sock_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -373,8 +373,8 @@ Here is the call graph for this function:</div>
 
 <p>Stop socket. </p>
 
-<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00062">62</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>{ sock_m.stop(); }</div>
+<p class="definition">Definition at line <a class="el" href="pull_8h_source.html#l00063">63</a> of file <a class="el" href="pull_8h_source.html">pull.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{ sock_m.stop(); }</div>
 </div><!-- fragment -->
 </div>
 </div>

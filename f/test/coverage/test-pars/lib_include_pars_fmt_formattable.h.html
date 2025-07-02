@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -68,12 +68,13 @@
              : 
              : #include &quot;pars/concept/formattable.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
+             : #include &lt;format&gt;
              : 
-             : template&lt;formattable_c foarmattable_t&gt;
-             : struct fmt::formatter&lt;foarmattable_t&gt; : fmt::formatter&lt;std::string&gt;
+             : template&lt;formattable_c formattable_t&gt;
+             : struct std::formatter&lt;formattable_t&gt; // NOLINT(*-dcl58-cpp)
+             :   : std::formatter&lt;std::string&gt;
              : {
-             :   auto format(const foarmattable_t&amp; x, format_context&amp; ctx) const
+             :   static auto format(const formattable_t&amp; x, format_context&amp; ctx)
              :     -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return x.format_to(ctx);</span>

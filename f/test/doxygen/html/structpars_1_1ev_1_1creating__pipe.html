@@ -89,7 +89,7 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="structpars_1_1ev_1_1creating__pipe-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">pars::ev::creating_pipe Struct Reference</div></div>
 </div><!--header-->
@@ -97,17 +97,17 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a7ed699b532e60e04fdab78196638316d" id="r_a7ed699b532e60e04fdab78196638316d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ed699b532e60e04fdab78196638316d">format_to</a> (fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
-<tr class="separator:a7ed699b532e60e04fdab78196638316d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a171d2c22da4634df48c58ac6736022de" id="r_a171d2c22da4634df48c58ac6736022de"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a171d2c22da4634df48c58ac6736022de">format_to</a> (std::format_context &amp;ctx) -&gt; decltype(ctx.out())</td></tr>
+<tr class="separator:a171d2c22da4634df48c58ac6736022de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00046">46</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7ed699b532e60e04fdab78196638316d" name="a7ed699b532e60e04fdab78196638316d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ed699b532e60e04fdab78196638316d">&#9670;&#160;</a></span>format_to()</h2>
+<a id="a171d2c22da4634df48c58ac6736022de" name="a171d2c22da4634df48c58ac6736022de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171d2c22da4634df48c58ac6736022de">&#9670;&#160;</a></span>format_to()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,23 +116,23 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto pars::ev::creating_pipe::format_to </td>
+          <td class="memname">static auto pars::ev::creating_pipe::format_to </td>
           <td>(</td>
-          <td class="paramtype">fmt::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
-          <td> const -&gt; decltype(ctx.out())
+          <td class="paramtype">std::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td> -&gt; decltype(ctx.out())
   </td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00048">48</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   49</span>  {</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> fmt::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;creating_pipe()&quot;</span>);</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;creating_pipe()&quot;</span>);</div>
 <div class="line"><span class="lineno">   51</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
 </div><!-- fragment -->

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structstd_1_1formatter_3_1_1pars_1_1lf_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::formatter&lt;::pars::lf &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::formatter&lt; std::string &gt;</basecompoundref>
+    <includes refid="flags_8h" local="no">flags.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structstd_1_1formatter_3_1_1pars_1_1lf_01_4_1a46346defbaff2345f519220e0dc7775e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>static decltype(ctx.out()) std::formatter&lt;::pars::lf &gt;::format</definition>
+        <argsstring>(const ::pars::lf &amp;flag, format_context &amp;ctx)</argsstring>
+        <name>format</name>
+        <qualifiedname>std::formatter&lt;::pars::lf &gt;::format</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535" kindref="member">::pars::lf</ref> &amp;</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="101" column="15" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="101" bodyend="119"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>std::formatter&lt; std::string &gt;</label>
+      </node>
+      <node id="1">
+        <label>std::formatter&lt;::pars::lf &gt;</label>
+        <link refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>std::formatter&lt; std::string &gt;</label>
+      </node>
+      <node id="1">
+        <label>std::formatter&lt;::pars::lf &gt;</label>
+        <link refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" line="99" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/log/flags.h" bodystart="100" bodyend="120"/>
+    <listofallmembers>
+      <member refid="structstd_1_1formatter_3_1_1pars_1_1lf_01_4_1a46346defbaff2345f519220e0dc7775e" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars::lf &gt;</scope><name>format</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -157,7 +157,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// an internal event event_t does not requires network</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// an internal event event_t does not require network</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> event_t&gt;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="conceptpars_1_1ev_1_1internal__event__c.html">   64</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptpars_1_1ev_1_1internal__event__c.html">internal_event_c</a> =</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_concept" href="conceptpars_1_1ev_1_1event__c.html">event_c&lt;event_t&gt;</a> &amp;&amp; !<a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">klass&lt;event_t&gt;::requires_network</a>;</div>
@@ -177,7 +177,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="conceptpars_1_1ev_1_1sync__internal__event__c.html">   79</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptpars_1_1ev_1_1sync__internal__event__c.html">sync_internal_event_c</a> =</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_concept" href="conceptpars_1_1ev_1_1internal__event__c.html">internal_event_c&lt;event_t&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptpars_1_1ev_1_1sync__event__c.html">sync_event_c&lt;event_t, kind_of&gt;</a>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// an synchronous network event event_t</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">// a synchronous network event event_t</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> event_t, <span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> kind_of&gt;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="conceptpars_1_1ev_1_1sync__network__event__c.html">   84</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptpars_1_1ev_1_1sync__network__event__c.html">sync_network_event_c</a> =</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_concept" href="conceptpars_1_1ev_1_1network__event__c.html">network_event_c&lt;event_t&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptpars_1_1ev_1_1sync__event__c.html">sync_event_c&lt;event_t, kind_of&gt;</a>;</div>

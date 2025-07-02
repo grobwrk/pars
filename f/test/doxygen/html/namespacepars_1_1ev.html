@@ -254,7 +254,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a97196dda48d93a21b7696d6e73e9266d" id="r_a97196dda48d93a21b7696d6e73e9266d"><td class="memTemplParams" colspan="2">template&lt;typename event_t&gt; </td></tr>
 <tr class="memitem:a97196dda48d93a21b7696d6e73e9266d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a97196dda48d93a21b7696d6e73e9266d">fired</a> (event_t, <a class="el" href="structpars_1_1ev_1_1metadata.html">metadata</a>&lt; fired, event_t &gt;) -&gt; fired&lt; event_t &gt;</td></tr>
 <tr class="separator:a97196dda48d93a21b7696d6e73e9266d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ae21c09902e125632b0c4f37e20a07a" id="r_a5ae21c09902e125632b0c4f37e20a07a"><td class="memTemplParams" colspan="2">template&lt;typename mem_fn_t, template&lt; typename &gt; typename kind_of = hf_traits&lt;mem_fn_t&gt;::template kind_type, typename event_t = hf_traits&lt;mem_fn_t&gt;::event_type, typename class_t = hf_traits&lt;mem_fn_t&gt;::class_type&gt; <br />
+<tr class="memitem:a5ae21c09902e125632b0c4f37e20a07a" id="r_a5ae21c09902e125632b0c4f37e20a07a"><td class="memTemplParams" colspan="2">template&lt;typename mem_fn_t, template&lt; typename &gt; typename kind_of = hf_traits&lt;mem_fn_t&gt;::template kind_type, typename event_t = typename hf_traits&lt;mem_fn_t&gt;::event_type, typename class_t = typename hf_traits&lt;mem_fn_t&gt;::class_type&gt; <br />
 requires kind_c&lt;kind_of&gt; &amp;&amp; event_c&lt;event_t&gt;</td></tr>
 <tr class="memitem:a5ae21c09902e125632b0c4f37e20a07a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#a775df579549c610e3e2c8dae429f129c">handler_f</a>&lt; kind_of, event_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5ae21c09902e125632b0c4f37e20a07a">make_hf</a> (mem_fn_t &amp;mem_fn, class_t *self)</td></tr>
 <tr class="separator:a5ae21c09902e125632b0c4f37e20a07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,7 +314,7 @@ template&lt;template&lt; typename &gt; typename kind_of, event_c event_t&gt; </d
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00060">60</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00061">61</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
 
 </div>
 </div>
@@ -383,7 +383,7 @@ template&lt;typename event_t&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename mem_fn_t, template&lt; typename &gt; typename kind_of = hf_traits&lt;mem_fn_t&gt;::template kind_type, typename event_t = hf_traits&lt;mem_fn_t&gt;::event_type, typename class_t = hf_traits&lt;mem_fn_t&gt;::class_type&gt; <br />
+template&lt;typename mem_fn_t, template&lt; typename &gt; typename kind_of = hf_traits&lt;mem_fn_t&gt;::template kind_type, typename event_t = typename hf_traits&lt;mem_fn_t&gt;::event_type, typename class_t = typename hf_traits&lt;mem_fn_t&gt;::class_type&gt; <br />
 requires kind_c&lt;kind_of&gt; &amp;&amp; event_c&lt;event_t&gt;</div>
       <table class="memname">
         <tr>
@@ -427,14 +427,23 @@ requires kind_c&lt;kind_of&gt; &amp;&amp; event_c&lt;event_t&gt;</div>
 <div class="line"><span class="lineno">   83</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="#a775df579549c610e3e2c8dae429f129c">handler_f&lt;kind_of, event_t&gt;</a>(</div>
 <div class="line"><span class="lineno">   84</span>      std::bind(mem_fn, <span class="keyword">static_cast&lt;</span>class_t*<span class="keyword">&gt;</span>(self), _1, _2));</div>
 <div class="line"><span class="lineno">   85</span>  }</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>  <span class="keyword">static_assert</span>(std::ratio_less_equal_v&lt;std::ratio&lt;arity&gt;, std::ratio&lt;2&gt;&gt;,</div>
-<div class="line"><span class="lineno">   88</span>                <span class="stringliteral">&quot;Only fn with arity &lt;= 2 are supported&quot;</span>);</div>
-<div class="line"><span class="lineno">   89</span>}</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   87</span>  {</div>
+<div class="line"><span class="lineno">   88</span>    clev::abort_now(<a class="code hl_enumvalue" href="namespacepars.html#afcdb266fe199935265e3d7a45b4edebfab748f56cf76526f8606d7463b9df9f2e">error::unreachable</a>, <span class="stringliteral">&quot;Unreachable Reached&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>  <span class="keyword">static_assert</span>(std::ratio_less_equal_v&lt;std::ratio&lt;arity&gt;, std::ratio&lt;2&gt;&gt;,</div>
+<div class="line"><span class="lineno">   94</span>                <span class="stringliteral">&quot;Only fn with arity &lt;= 2 are supported&quot;</span>);</div>
+<div class="line"><span class="lineno">   95</span>}</div>
 <div class="ttc" id="anamespacepars_1_1ev_html_a775df579549c610e3e2c8dae429f129c"><div class="ttname"><a href="#a775df579549c610e3e2c8dae429f129c">pars::ev::handler_f</a></div><div class="ttdeci">std::move_only_function&lt; void(hf_arg&lt; kind_of, event_t &gt;)&gt; handler_f</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00050">make_hf.h:50</a></div></div>
+<div class="ttc" id="anamespacepars_html_afcdb266fe199935265e3d7a45b4edebfab748f56cf76526f8606d7463b9df9f2e"><div class="ttname"><a href="namespacepars.html#afcdb266fe199935265e3d7a45b4edebfab748f56cf76526f8606d7463b9df9f2e">pars::error::unreachable</a></div><div class="ttdeci">@ unreachable</div><div class="ttdef"><b>Definition</b> <a href="pars_2err_8h_source.html#l00043">err.h:43</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1hf__traits_html"><div class="ttname"><a href="structpars_1_1ev_1_1hf__traits.html">pars::ev::hf_traits</a></div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00042">make_hf.h:42</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="hf__registry_8h_source.html#l00073">pars::ev::hf_registry::on()</a>, <a class="el" href="pull_8h_source.html#l00067">pars::net::pull::on()</a>, <a class="el" href="push_8h_source.html#l00066">pars::net::push::on()</a>, <a class="el" href="rep_8h_source.html#l00077">pars::net::rep::on()</a>, and <a class="el" href="req_8h_source.html#l00077">pars::net::req::on()</a>.</p>
+<p class="reference">References <a class="el" href="pars_2err_8h_source.html#l00043">pars::unreachable</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="hf__registry_8h_source.html#l00074">pars::ev::hf_registry::on()</a>, <a class="el" href="pull_8h_source.html#l00068">pars::net::pull::on()</a>, <a class="el" href="push_8h_source.html#l00067">pars::net::push::on()</a>, <a class="el" href="rep_8h_source.html#l00077">pars::net::rep::on()</a>, and <a class="el" href="req_8h_source.html#l00078">pars::net::req::on()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

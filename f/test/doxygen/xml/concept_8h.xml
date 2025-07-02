@@ -68,9 +68,9 @@
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="55" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
-        <childnode refid="56" relation="include">
+        <childnode refid="55" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -121,10 +121,12 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/iface/pipe.h</label>
-        <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="54" relation="include">
+        <link refid="iface_2pipe_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -146,7 +148,7 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -164,13 +166,13 @@
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -181,32 +183,32 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
       </node>
-      <node id="55">
+      <node id="54">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/opt_getter.h</label>
         <link refid="opt__getter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="56">
+      <node id="55">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars/pars/lib/include/nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
+        <link refid="pipe_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -302,8 +304,6 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -376,9 +376,9 @@
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
-        <childnode refid="50" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -407,7 +407,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -417,7 +417,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="30" relation="include">
@@ -433,16 +433,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars/pars/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -468,7 +462,7 @@
         <link refid="hash_8h"/>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -484,8 +478,8 @@
         </childnode>
       </node>
       <node id="41">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
+        <label>/home/runner/work/pars/pars/lib/include/pars/net/pipe_view.h</label>
+        <link refid="pipe__view_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="26" relation="include">
@@ -637,7 +631,8 @@
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
 <codeline lineno="71" refid="conceptnngxx_1_1movable__only__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="conceptnngxx_1_1movable__only__c" kindref="compound">movable_only_c</ref><sp/>=<sp/>std::movable&lt;value_t&gt;<sp/>&amp;&amp;<sp/>!std::copyable&lt;value_t&gt;;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars/pars/lib/include/nngxx/concept.h"/>
   </compounddef>

@@ -107,8 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d299ee8680f9f78d7d9a0beceef5a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb67afe058583427c71128533cd5cb42" id="r_abb67afe058583427c71128533cd5cb42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpars_1_1net_1_1context.html">context</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb67afe058583427c71128533cd5cb42">of</a> (const <a class="el" href="classpars_1_1net_1_1tool__view.html">net::tool_view</a> &amp;t)</td></tr>
 <tr class="separator:abb67afe058583427c71128533cd5cb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15cd11ff729311912777eded34907288" id="r_a15cd11ff729311912777eded34907288"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15cd11ff729311912777eded34907288">start_recv</a> (int num_ctxs)</td></tr>
-<tr class="separator:a15cd11ff729311912777eded34907288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c19a07f16c0d91ea4c1dd24bcfb357" id="r_a26c19a07f16c0d91ea4c1dd24bcfb357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26c19a07f16c0d91ea4c1dd24bcfb357">start_recv</a> (const int num_ctxs)</td></tr>
+<tr class="separator:a26c19a07f16c0d91ea4c1dd24bcfb357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -177,25 +177,26 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   60</span>  {</div>
 <div class="line"><span class="lineno">   61</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a> = sock_m.make_ctx();</div>
 <div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>    <span class="keyword">auto</span> <span class="keywordtype">id</span> = <a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.id();</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keyword">const</span> <span class="keyword">auto</span> <span class="keywordtype">id</span> = <a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.id();</div>
 <div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>    <span class="keyword">auto</span> res = ctx_map_m.try_emplace(<span class="keywordtype">id</span>, router_m, std::move(ctx), sock_m);</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">if</span> (!res.second)</div>
-<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unable to emplace a context&quot;</span>);</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> res.first-&gt;second;</div>
-<div class="line"><span class="lineno">   71</span>  }</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keyword">auto</span> [fst, snd] =</div>
+<div class="line"><span class="lineno">   66</span>      ctx_map_m.try_emplace(<span class="keywordtype">id</span>, router_m, std::move(ctx), sock_m);</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">if</span> (!snd)</div>
+<div class="line"><span class="lineno">   69</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unable to emplace a context&quot;</span>);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> fst-&gt;second;</div>
+<div class="line"><span class="lineno">   72</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="context__registry_8h_source.html#l00084">start_recv()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="context__registry_8h_source.html#l00085">start_recv()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpars_1_1net_1_1context__registry_a9d299ee8680f9f78d7d9a0beceef5a3a_icgraph.png" border="0" usemap="#aclasspars_1_1net_1_1context__registry_a9d299ee8680f9f78d7d9a0beceef5a3a_icgraph" alt=""/></div>
 <map name="aclasspars_1_1net_1_1context__registry_a9d299ee8680f9f78d7d9a0beceef5a3a_icgraph" id="aclasspars_1_1net_1_1context__registry_a9d299ee8680f9f78d7d9a0beceef5a3a_icgraph">
 <area shape="rect" title=" " alt="" coords="204,5,345,50"/>
-<area shape="rect" href="classpars_1_1net_1_1context__registry.html#a15cd11ff729311912777eded34907288" title=" " alt="" coords="5,5,156,50"/>
+<area shape="rect" href="classpars_1_1net_1_1context__registry.html#a26c19a07f16c0d91ea4c1dd24bcfb357" title=" " alt="" coords="5,5,156,50"/>
 <area shape="poly" title=" " alt="" coords="188,30,156,30,156,25,188,25"/>
 </map>
 </div>
@@ -225,19 +226,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="context__registry_8h_source.html#l00073">73</a> of file <a class="el" href="context__registry_8h_source.html">context_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>  {</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (t.type() != <span class="keyword">typeid</span>(<a class="code hl_typedef" href="namespacenngxx.html#ab5475443c737a2ce5ca5023d845ba66f">nngxx::ctx_view</a>))</div>
-<div class="line"><span class="lineno">   76</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;We need a context here&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (ctx_map_m.find(t.id()) == ctx_map_m.end())</div>
-<div class="line"><span class="lineno">   79</span>      <span class="keywordflow">throw</span> std::runtime_error(fmt::format(<span class="stringliteral">&quot;Unknown context {}&quot;</span>, t.id()));</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> ctx_map_m.at(t.id());</div>
-<div class="line"><span class="lineno">   82</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="context__registry_8h_source.html#l00074">74</a> of file <a class="el" href="context__registry_8h_source.html">context_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>  {</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span> (t.type() != <span class="keyword">typeid</span>(<a class="code hl_typedef" href="namespacenngxx.html#ab5475443c737a2ce5ca5023d845ba66f">nngxx::ctx_view</a>))</div>
+<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;We need a context here&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (!ctx_map_m.contains(t.id()))</div>
+<div class="line"><span class="lineno">   80</span>      <span class="keywordflow">throw</span> std::runtime_error(std::format(<span class="stringliteral">&quot;Unknown context {}&quot;</span>, t.id()));</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> ctx_map_m.at(t.id());</div>
+<div class="line"><span class="lineno">   83</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_ab5475443c737a2ce5ca5023d845ba66f"><div class="ttname"><a href="namespacenngxx.html#ab5475443c737a2ce5ca5023d845ba66f">nngxx::ctx_view</a></div><div class="ttdeci">clev::iface&lt; nng_ctx &gt; ctx_view</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00037">ctx.h:37</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="tool__view_8h_source.html#l00076">pars::net::tool_view::id()</a>, and <a class="el" href="tool__view_8h_source.html#l00064">pars::net::tool_view::type()</a>.</p>
+<p class="reference">References <a class="el" href="tool__view_8h_source.html#l00077">pars::net::tool_view::id()</a>, and <a class="el" href="tool__view_8h_source.html#l00064">pars::net::tool_view::type()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -253,8 +254,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a15cd11ff729311912777eded34907288" name="a15cd11ff729311912777eded34907288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15cd11ff729311912777eded34907288">&#9670;&#160;</a></span>start_recv()</h2>
+<a id="a26c19a07f16c0d91ea4c1dd24bcfb357" name="a26c19a07f16c0d91ea4c1dd24bcfb357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c19a07f16c0d91ea4c1dd24bcfb357">&#9670;&#160;</a></span>start_recv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +266,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void pars::net::context_registry::start_recv </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_ctxs</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>num_ctxs</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -276,20 +277,20 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="context__registry_8h_source.html#l00084">84</a> of file <a class="el" href="context__registry_8h_source.html">context_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>  {</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_ctxs; ++i)</div>
-<div class="line"><span class="lineno">   87</span>      <a class="code hl_function" href="#a9d299ee8680f9f78d7d9a0beceef5a3a">emplace</a>().<a class="code hl_function" href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">recv</a>();</div>
-<div class="line"><span class="lineno">   88</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="context__registry_8h_source.html#l00085">85</a> of file <a class="el" href="context__registry_8h_source.html">context_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>  {</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_ctxs; ++i)</div>
+<div class="line"><span class="lineno">   88</span>      <a class="code hl_function" href="#a9d299ee8680f9f78d7d9a0beceef5a3a">emplace</a>().<a class="code hl_function" href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">recv</a>();</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
 <div class="ttc" id="aclasspars_1_1net_1_1context__registry_html_a9d299ee8680f9f78d7d9a0beceef5a3a"><div class="ttname"><a href="#a9d299ee8680f9f78d7d9a0beceef5a3a">pars::net::context_registry::emplace</a></div><div class="ttdeci">context &amp; emplace()</div><div class="ttdef"><b>Definition</b> <a href="context__registry_8h_source.html#l00059">context_registry.h:59</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1context_html_a50de22a87a21f5c8070be3276bb8ff51"><div class="ttname"><a href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">pars::net::context::recv</a></div><div class="ttdeci">void recv()</div><div class="ttdef"><b>Definition</b> <a href="context_8h_source.html#l00087">context.h:87</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1context_html_a50de22a87a21f5c8070be3276bb8ff51"><div class="ttname"><a href="classpars_1_1net_1_1context.html#a50de22a87a21f5c8070be3276bb8ff51">pars::net::context::recv</a></div><div class="ttdeci">void recv()</div><div class="ttdef"><b>Definition</b> <a href="context_8h_source.html#l00093">context.h:93</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="context__registry_8h_source.html#l00059">emplace()</a>, and <a class="el" href="context_8h_source.html#l00087">pars::net::context::recv()</a>.</p>
+<p class="reference">References <a class="el" href="context__registry_8h_source.html#l00059">emplace()</a>, and <a class="el" href="context_8h_source.html#l00093">pars::net::context::recv()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpars_1_1net_1_1context__registry_a15cd11ff729311912777eded34907288_cgraph.png" border="0" usemap="#aclasspars_1_1net_1_1context__registry_a15cd11ff729311912777eded34907288_cgraph" alt=""/></div>
-<map name="aclasspars_1_1net_1_1context__registry_a15cd11ff729311912777eded34907288_cgraph" id="aclasspars_1_1net_1_1context__registry_a15cd11ff729311912777eded34907288_cgraph">
+<div class="center"><img src="classpars_1_1net_1_1context__registry_a26c19a07f16c0d91ea4c1dd24bcfb357_cgraph.png" border="0" usemap="#aclasspars_1_1net_1_1context__registry_a26c19a07f16c0d91ea4c1dd24bcfb357_cgraph" alt=""/></div>
+<map name="aclasspars_1_1net_1_1context__registry_a26c19a07f16c0d91ea4c1dd24bcfb357_cgraph" id="aclasspars_1_1net_1_1context__registry_a26c19a07f16c0d91ea4c1dd24bcfb357_cgraph">
 <area shape="rect" title=" " alt="" coords="5,40,156,85"/>
 <area shape="rect" href="classpars_1_1net_1_1context__registry.html#a9d299ee8680f9f78d7d9a0beceef5a3a" title=" " alt="" coords="204,5,345,50"/>
 <area shape="poly" title=" " alt="" coords="156,46,188,40,189,46,157,51"/>
@@ -325,8 +326,8 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="context__registry_8h_source.html#l00053">53</a> of file <a class="el" href="context__registry_8h_source.html">context_registry.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>  {</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; c : ctx_map_m)</div>
-<div class="line"><span class="lineno">   56</span>      c.second.stop();</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; val : ctx_map_m | std::views::values)</div>
+<div class="line"><span class="lineno">   56</span>      val.stop();</div>
 <div class="line"><span class="lineno">   57</span>  }</div>
 </div><!-- fragment -->
 </div>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -75,7 +75,7 @@
              : 
              : using listener = clev::own&lt;nng_listener&gt;;
              : 
-             : [[nodiscard]] inline static clev::expected&lt;listener&gt;
+             : [[nodiscard]] static clev::expected&lt;listener&gt;
              : make_listener(socket_view&amp; s, const char* addr) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return listener::create(s, addr);</span>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -95,7 +95,7 @@
 <span class="lineNoCov">      0 / 1 </span> :   socket&amp; sock() <span class="lineNoCov">{ return sock_m; }</span>
              : 
              :   /// Get the socket
-<span class="lineNoCov">      0 / 1 </span> :   const socket&amp; sock() const <span class="lineNoCov">{ return sock_m; }</span>
+<span class="lineNoCov">      0 / 1 </span> :   [[nodiscard]] const socket&amp; sock() const <span class="lineNoCov">{ return sock_m; }</span>
              : 
              :   /// Get the context_registry
 <span class="lineNoCov">      0 / 1 </span> :   context_registry&amp; ctxs() <span class="lineNoCov">{ return ctx_registry_m; }</span>

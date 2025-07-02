@@ -122,7 +122,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;spdlog/spdlog.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars.html">pars</a></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
@@ -172,17 +172,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="foldopen" id="foldopen00079" data-start="{" data-end="};">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html">   79</a></span><span class="keyword">struct </span><a class="code hl_function" href="structpars_1_1f_1_1lf.html#a6a4d878ac1a52abd57c4fcdb0a020141">lf</a></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html">   79</a></span><span class="keyword">struct </span><a class="code hl_function" href="structpars_1_1f_1_1lf.html#ac5289b10fb4d895cc4a5aede7aa78123">lf</a></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html#a6a4d878ac1a52abd57c4fcdb0a020141">   81</a></span>  <a class="code hl_function" href="structpars_1_1f_1_1lf.html#a6a4d878ac1a52abd57c4fcdb0a020141">lf</a>(<a class="code hl_enumeration" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">::pars::lf</a> flags)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html#ac5289b10fb4d895cc4a5aede7aa78123">   81</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="structpars_1_1f_1_1lf.html#ac5289b10fb4d895cc4a5aede7aa78123">lf</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">pars::lf</a> flags)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    : <a class="code hl_variable" href="structpars_1_1f_1_1lf.html#a3fec4a8870f3469699b72376f2b4ad05">val</a>{static_cast&lt;int&gt;(flags)}</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
 </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html#a09f72ea56a5365328e263f20f7dbfc8c">   86</a></span>  <a class="code hl_function" href="structpars_1_1f_1_1lf.html#a09f72ea56a5365328e263f20f7dbfc8c">lf</a>(<span class="keywordtype">int</span> flags)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1lf.html#a453f10189e90ebdfa30c85cbb3e50905">   86</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="structpars_1_1f_1_1lf.html#a453f10189e90ebdfa30c85cbb3e50905">lf</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> flags)</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    : <a class="code hl_variable" href="structpars_1_1f_1_1lf.html#a3fec4a8870f3469699b72376f2b4ad05">val</a>{flags}</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
@@ -198,26 +198,26 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="foldopen" id="foldopen00099" data-start="{" data-end="};">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4.html">   99</a></span><span class="keyword">struct </span>fmt::formatter&lt;::<a class="code hl_enumeration" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">pars::lf</a>&gt; : formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars_1_1lf_01_4.html">   99</a></span><span class="keyword">struct </span>std::formatter&lt;::<a class="code hl_enumeration" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">pars::lf</a>&gt; : formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
 <div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4.html#acb3c92edda1791ba7da7ca6eda433c74">  101</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4.html#acb3c92edda1791ba7da7ca6eda433c74">format</a>(const ::pars::lf&amp; flag, format_context&amp; ctx) <span class="keyword">const</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars_1_1lf_01_4.html#a46346defbaff2345f519220e0dc7775e">  101</a></span>  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars_1_1lf_01_4.html#a46346defbaff2345f519220e0dc7775e">format</a>(const ::pars::lf&amp; flag, format_context&amp; ctx)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">switch</span> (flag)</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    case ::pars::lf::app:</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;app&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;app&quot;</span>);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    case ::pars::lf::comp:</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;comp&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;comp&quot;</span>);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    case ::pars::lf::event:</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;event&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;event&quot;</span>);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    case ::pars::lf::net:</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;net&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;net&quot;</span>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    case ::pars::lf::user:</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;user&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;user&quot;</span>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;lf-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(flag));</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;lf-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(flag));</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
 </div>
@@ -226,10 +226,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">template</span>&lt;&gt;</div>
 <div class="foldopen" id="foldopen00123" data-start="{" data-end="};">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html">  123</a></span><span class="keyword">struct </span>fmt::formatter&lt;::<a class="code hl_struct" href="structpars_1_1f_1_1lf.html">pars::f::lf</a>&gt; : formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html">  123</a></span><span class="keyword">struct </span>std::formatter&lt;::<a class="code hl_struct" href="structpars_1_1f_1_1lf.html">pars::f::lf</a>&gt; : formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
 <div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#aa10c7d2b678f1df7f6cada61064ff13b">  125</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#aa10c7d2b678f1df7f6cada61064ff13b">format</a>(const ::pars::f::lf&amp; flags, format_context&amp; ctx) <span class="keyword">const</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#a956222f7b192fed449e2de1f67f07bc2">  125</a></span>  <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#a956222f7b192fed449e2de1f67f07bc2">format</a>(const ::pars::f::lf&amp; flags, format_context&amp; ctx)</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">auto</span> it = ctx.out();</div>
@@ -240,7 +240,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <span class="keywordflow">if</span> (!(flags.val &amp; f))</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      it = fmt::format_to(it, <span class="stringliteral">&quot; {}&quot;</span>, f);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      it = std::format_to(it, <span class="stringliteral">&quot; {}&quot;</span>, f);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> it;</div>
@@ -248,23 +248,23 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>};</div>
 </div>
-<div class="ttc" id="anamespacepars_1_1app_html"><div class="ttname"><a href="namespacepars_1_1app.html">pars::app</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
-<div class="ttc" id="anamespacepars_1_1comp_html"><div class="ttname"><a href="namespacepars_1_1comp.html">pars::comp</a></div><div class="ttdef"><b>Definition</b> <a href="backend_8h_source.html#l00036">backend.h:37</a></div></div>
+<div class="ttc" id="anamespacepars_1_1app_html"><div class="ttname"><a href="namespacepars_1_1app.html">pars::app</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00039">resources.h:40</a></div></div>
+<div class="ttc" id="anamespacepars_1_1comp_html"><div class="ttname"><a href="namespacepars_1_1comp.html">pars::comp</a></div><div class="ttdef"><b>Definition</b> <a href="backend_8h_source.html#l00038">backend.h:39</a></div></div>
 <div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00037">helpers.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
-<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
+<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00039">resources.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">pars::lf</a></div><div class="ttdeci">lf</div><div class="ttdef"><b>Definition</b> <a href="#l00037">flags.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d">pars::lf::comp</a></div><div class="ttdeci">@ comp</div><div class="ttdef"><b>Definition</b> <a href="#l00040">flags.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">pars::lf::net</a></div><div class="ttdeci">@ net</div><div class="ttdef"><b>Definition</b> <a href="#l00042">flags.h:42</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">pars::lf::event</a></div><div class="ttdeci">@ event</div><div class="ttdef"><b>Definition</b> <a href="#l00041">flags.h:41</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7">pars::lf::app</a></div><div class="ttdeci">@ app</div><div class="ttdef"><b>Definition</b> <a href="#l00039">flags.h:39</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535aee11cbb19052e40b07aac0ca060c23ee">pars::lf::user</a></div><div class="ttdeci">@ user</div><div class="ttdef"><b>Definition</b> <a href="#l00043">flags.h:43</a></div></div>
-<div class="ttc" id="astructfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_html_aa10c7d2b678f1df7f6cada61064ff13b"><div class="ttname"><a href="structfmt_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#aa10c7d2b678f1df7f6cada61064ff13b">fmt::formatter&lt;::pars::f::lf &gt;::format</a></div><div class="ttdeci">auto format(const ::pars::f::lf &amp;flags, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00125">flags.h:125</a></div></div>
-<div class="ttc" id="astructfmt_1_1formatter_3_1_1pars_1_1lf_01_4_html_acb3c92edda1791ba7da7ca6eda433c74"><div class="ttname"><a href="structfmt_1_1formatter_3_1_1pars_1_1lf_01_4.html#acb3c92edda1791ba7da7ca6eda433c74">fmt::formatter&lt;::pars::lf &gt;::format</a></div><div class="ttdeci">auto format(const ::pars::lf &amp;flag, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00101">flags.h:101</a></div></div>
 <div class="ttc" id="astructpars_1_1f_1_1lf_html"><div class="ttname"><a href="structpars_1_1f_1_1lf.html">pars::f::lf</a></div><div class="ttdef"><b>Definition</b> <a href="#l00079">flags.h:80</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1lf_html_a09f72ea56a5365328e263f20f7dbfc8c"><div class="ttname"><a href="structpars_1_1f_1_1lf.html#a09f72ea56a5365328e263f20f7dbfc8c">pars::f::lf::lf</a></div><div class="ttdeci">lf(int flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00086">flags.h:86</a></div></div>
 <div class="ttc" id="astructpars_1_1f_1_1lf_html_a3fec4a8870f3469699b72376f2b4ad05"><div class="ttname"><a href="structpars_1_1f_1_1lf.html#a3fec4a8870f3469699b72376f2b4ad05">pars::f::lf::val</a></div><div class="ttdeci">int val</div><div class="ttdef"><b>Definition</b> <a href="#l00091">flags.h:91</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1lf_html_a6a4d878ac1a52abd57c4fcdb0a020141"><div class="ttname"><a href="structpars_1_1f_1_1lf.html#a6a4d878ac1a52abd57c4fcdb0a020141">pars::f::lf::lf</a></div><div class="ttdeci">lf(::pars::lf flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">flags.h:81</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1lf_html_a453f10189e90ebdfa30c85cbb3e50905"><div class="ttname"><a href="structpars_1_1f_1_1lf.html#a453f10189e90ebdfa30c85cbb3e50905">pars::f::lf::lf</a></div><div class="ttdeci">lf(const int flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00086">flags.h:86</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1lf_html_ac5289b10fb4d895cc4a5aede7aa78123"><div class="ttname"><a href="structpars_1_1f_1_1lf.html#ac5289b10fb4d895cc4a5aede7aa78123">pars::f::lf::lf</a></div><div class="ttdeci">lf(const pars::lf flags)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">flags.h:81</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4_html_a956222f7b192fed449e2de1f67f07bc2"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars_1_1f_1_1lf_01_4.html#a956222f7b192fed449e2de1f67f07bc2">std::formatter&lt;::pars::f::lf &gt;::format</a></div><div class="ttdeci">static auto format(const ::pars::f::lf &amp;flags, format_context &amp;ctx) -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00125">flags.h:125</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_1_1pars_1_1lf_01_4_html_a46346defbaff2345f519220e0dc7775e"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars_1_1lf_01_4.html#a46346defbaff2345f519220e0dc7775e">std::formatter&lt;::pars::lf &gt;::format</a></div><div class="ttdeci">static auto format(const ::pars::lf &amp;flag, format_context &amp;ctx) -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00101">flags.h:101</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

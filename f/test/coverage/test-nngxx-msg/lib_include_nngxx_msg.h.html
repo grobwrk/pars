@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Mon Jun  9 15:20:03 2025 </td>
+                     <td class="headerValue" width="15%">Wed Jul  2 16:14:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -75,8 +75,7 @@
              : 
              : using msg = clev::own&lt;nng_msg*&gt;;
              : 
-             : [[nodiscard]] inline static clev::expected&lt;msg&gt;
-             : make_msg(std::size_t sz) noexcept
+             : [[nodiscard]] static clev::expected&lt;msg&gt; make_msg(const std::size_t sz) noexcept
              : {
           29</span> : <span class="lineCov">  return msg::alloc(sz);</span>
              : }
