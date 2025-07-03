@@ -52,7 +52,7 @@ struct clev::iface<nng_msg*> : nngxx::value<nng_msg*>
 
   [[nodiscard]] static expected<void> destroy(nng_msg** v) noexcept
   {
-    return nngxx::invoke(nng_msg_free, *v).and_then(invoke([&] {
+    return nngxx::invoke(nng_msg_free, *v).and_then(invoke_void([&] {
       *v = empty();
     }));
   }

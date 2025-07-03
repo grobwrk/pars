@@ -5,6 +5,7 @@ include(GoogleTest)
 
 set(
   PARS_TESTS
+  "clev-invoke.cpp"
   "ev-event--internal.cpp"
   "ev-event--network.cpp"
   "nngxx-msg.cpp"

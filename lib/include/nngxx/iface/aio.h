@@ -44,7 +44,7 @@ struct clev::iface<nng_aio*> : nngxx::value<nng_aio*>
 
   [[nodiscard]] static expected<void> destroy(nng_aio** v) noexcept
   {
-    return nngxx::invoke(nng_aio_free, *v).and_then(invoke([&] {
+    return nngxx::invoke(nng_aio_free, *v).and_then(invoke_void([&] {
       *v = empty();
     }));
   }

@@ -93,21 +93,22 @@ static auto exit_now() noexcept(clev_exception_disabled_v)
   };
 }
 
-static constexpr expected<void> done = {};
-
-auto invoke(auto f)
-{
-  return [f]<typename... args_t>(args_t&&... v) {
-    f(std::forward<args_t>(v)...);
-
-    return done;
-  };
-}
-
 template<typename enum_t>
 unexpected make_unexpected(const int err) noexcept
 {
   return unexpected{static_cast<enum_t>(err)};
+}
+
+template<typename enum_t>
+unexpected make_unexpected(const enum_t err) noexcept
+{
+  return unexpected{err};
+}
+
+template<typename enum_t>
+unexpected make_unexpected(const std::error_code err) noexcept
+{
+  return unexpected{err};
 }
 
 template<typename enum_t>
@@ -117,6 +118,80 @@ expected<void> make_expected(const int err) noexcept
     return make_unexpected<enum_t>(err);
 
   return {};
+}
+
+static constexpr expected<void> done = {};
+
+auto invoke_void(auto f)
+{
+  return [f = std::move(f)]<typename... args_t>(args_t&&... v) {
+    f(std::forward<args_t>(v)...);
+
+    return done;
+  };
+}
+
+template<typename value_t>
+constexpr auto invoke(auto&& f)
+{
+  using value_type = value_t;
+  using error_type = typename expected<value_type>::error_type;
+
+  return [&]<typename expected_content_t>(
+           expected_content_t&& x) -> clev::expected<value_type> {
+    using function_type = decltype(f);
+    using argument_type = expected_content_t&&;
+    using return_type = std::invoke_result_t<function_type, argument_type>;
+
+    constexpr bool arg_is_value =
+      std::is_same_v<expected_content_t, value_type>;
+    constexpr bool arg_is_error =
+      std::is_same_v<expected_content_t, error_type>;
+
+    constexpr bool ret_is_value = std::is_same_v<return_type, value_type>;
+    constexpr bool ret_is_error = std::is_same_v<return_type, error_type>;
+    constexpr bool ret_is_void = std::is_same_v<return_type, void>;
+
+    static_assert((arg_is_value || arg_is_error) &&
+                  (ret_is_value || ret_is_error || ret_is_void));
+
+    if constexpr (ret_is_value)
+    {
+      const auto result = std::invoke(std::forward<function_type>(f),
+                                      std::forward<argument_type>(x));
+
+      return std::move(result);
+    }
+    else if constexpr (ret_is_error)
+    {
+      const auto result = std::invoke(std::forward<function_type>(f),
+                                      std::forward<argument_type>(x));
+
+      return std::unexpected{std::move(result)};
+    }
+    else if constexpr (ret_is_void)
+    {
+      expected_content_t x_copy = x;
+
+      if constexpr (arg_is_value)
+      {
+        std::invoke(std::forward<function_type>(f),
+                    std::forward<argument_type>(x));
+
+        return x_copy;
+      }
+
+      if constexpr (arg_is_error)
+      {
+        std::invoke(std::forward<function_type>(f),
+                    std::forward<argument_type>(x));
+
+        return std::unexpected{x_copy};
+      }
+    }
+
+    return {};
+  };
 }
 
 } // namespace clev
