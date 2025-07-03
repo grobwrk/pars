@@ -6,7 +6,7 @@ var searchData=
   ['make_5ferror_5fcode_3',['make_error_code',['../namespacenngxx_1_1cpp.html#afb1055c34770912880b69fd01eb28967',1,'nngxx::cpp::make_error_code()'],['../namespacenngxx_1_1c.html#ab5efdf930e7f62bb30e557a40afc40e1',1,'nngxx::c::make_error_code()'],['../namespacepars.html#a08aa7e4538fcd59f3788c1444d813486',1,'pars::make_error_code()']]],
   ['make_5fexpected_4',['make_expected',['../namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8',1,'clev']]],
   ['make_5fhf_5',['make_hf',['../namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a',1,'pars::ev']]],
-  ['make_5funexpected_6',['make_unexpected',['../namespaceclev.html#a691dd421eafb765857d7b2847051bc8e',1,'clev']]],
+  ['make_5funexpected_6',['make_unexpected',['../namespaceclev.html#a691dd421eafb765857d7b2847051bc8e',1,'clev::make_unexpected(const int err) noexcept'],['../namespaceclev.html#a0e623323799aac83ebd8de5088b29a25',1,'clev::make_unexpected(const enum_t err) noexcept'],['../namespaceclev.html#ae83c129eaa2b17122d75f3bb061c53ab',1,'clev::make_unexpected(const std::error_code err) noexcept']]],
   ['md_7',['md',['../structpars_1_1ev_1_1common__kind.html#ad0408450d9324705258338928f37e85f',1,'pars::ev::common_kind']]],
   ['msg_5fbody_8',['msg_body',['../structnngxx_1_1msg__body.html#a77f09ae0f945a2b10295930698e06e23',1,'nngxx::msg_body']]],
   ['msg_5fhash_9',['msg_hash',['../structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html#ae590b5039fab845ae5c712c397f5e390',1,'pars::ev::received&lt; nngxx::msg &gt;']]],

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Jul  2 16:16:14 2025 </td>
+                     <td class="headerValue" width="15%">Thu Jul  3 16:41:29 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">20</td>
@@ -130,21 +130,22 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  };</span>
              : }
              : 
-             : static constexpr expected&lt;void&gt; done = {};
-             : 
-             : auto invoke(auto f)
-             : {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return [f]&lt;typename... args_t&gt;(args_t&amp;&amp;... v) </span>{
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    f(std::forward&lt;args_t&gt;(v)...);</span>
-             : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return done;</span>
-             :   };
-             : }
-             : 
              : template&lt;typename enum_t&gt;
              : unexpected make_unexpected(const int err) noexcept
              : {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return unexpected{static_cast&lt;enum_t&gt;(err)};</span>
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : unexpected make_unexpected(const enum_t err) noexcept
+             : {
+             :   return unexpected{err};
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : unexpected make_unexpected(const std::error_code err) noexcept
+             : {
+             :   return unexpected{err};
              : }
              : 
              : template&lt;typename enum_t&gt;
@@ -154,6 +155,80 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return make_unexpected&lt;enum_t&gt;(err);</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return {};</span>
+             : }
+             : 
+             : static constexpr expected&lt;void&gt; done = {};
+             : 
+             : auto invoke_void(auto f)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return [f = std::move(f)]&lt;typename... args_t&gt;(args_t&amp;&amp;... v) </span>{
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    f(std::forward&lt;args_t&gt;(v)...);</span>
+             : 
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return done;</span>
+             :   };
+             : }
+             : 
+             : template&lt;typename value_t&gt;
+             : constexpr auto invoke(auto&amp;&amp; f)
+             : {
+             :   using value_type = value_t;
+             :   using error_type = typename expected&lt;value_type&gt;::error_type;
+             : 
+             :   return [&amp;]&lt;typename expected_content_t&gt;(
+             :            expected_content_t&amp;&amp; x) -&gt; clev::expected&lt;value_type&gt; {
+             :     using function_type = decltype(f);
+             :     using argument_type = expected_content_t&amp;&amp;;
+             :     using return_type = std::invoke_result_t&lt;function_type, argument_type&gt;;
+             : 
+             :     constexpr bool arg_is_value =
+             :       std::is_same_v&lt;expected_content_t, value_type&gt;;
+             :     constexpr bool arg_is_error =
+             :       std::is_same_v&lt;expected_content_t, error_type&gt;;
+             : 
+             :     constexpr bool ret_is_value = std::is_same_v&lt;return_type, value_type&gt;;
+             :     constexpr bool ret_is_error = std::is_same_v&lt;return_type, error_type&gt;;
+             :     constexpr bool ret_is_void = std::is_same_v&lt;return_type, void&gt;;
+             : 
+             :     static_assert((arg_is_value || arg_is_error) &amp;&amp;
+             :                   (ret_is_value || ret_is_error || ret_is_void));
+             : 
+             :     if constexpr (ret_is_value)
+             :     {
+             :       const auto result = std::invoke(std::forward&lt;function_type&gt;(f),
+             :                                       std::forward&lt;argument_type&gt;(x));
+             : 
+             :       return std::move(result);
+             :     }
+             :     else if constexpr (ret_is_error)
+             :     {
+             :       const auto result = std::invoke(std::forward&lt;function_type&gt;(f),
+             :                                       std::forward&lt;argument_type&gt;(x));
+             : 
+             :       return std::unexpected{std::move(result)};
+             :     }
+             :     else if constexpr (ret_is_void)
+             :     {
+             :       expected_content_t x_copy = x;
+             : 
+             :       if constexpr (arg_is_value)
+             :       {
+             :         std::invoke(std::forward&lt;function_type&gt;(f),
+             :                     std::forward&lt;argument_type&gt;(x));
+             : 
+             :         return x_copy;
+             :       }
+             : 
+             :       if constexpr (arg_is_error)
+             :       {
+             :         std::invoke(std::forward&lt;function_type&gt;(f),
+             :                     std::forward&lt;argument_type&gt;(x));
+             : 
+             :         return std::unexpected{x_copy};
+             :       }
+             :     }
+             : 
+             :     return {};
+             :   };
              : }
              : 
              : } // namespace clev

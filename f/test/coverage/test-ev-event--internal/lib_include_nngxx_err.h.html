@@ -17,10 +17,10 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Wed Jul  2 16:16:14 2025 </td>
+                     <td class="headerValue" width="15%">Thu Jul  3 16:41:29 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">36</td>
+                     <td class="headerValue" width="10%">35</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
@@ -99,7 +99,6 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      case err::invalid_memory:</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;invalid memory&quot;;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        break;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      default:</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return &quot;unknown&quot;;</span>
              :       }
@@ -255,6 +254,10 @@
              : static_assert(std::convertible_to&lt;nngxx::c::err, std::error_code&gt;);
              : 
              : static_assert(std::constructible_from&lt;std::error_code, nngxx::c::err&gt;);
+             : 
+             : static_assert(std::convertible_to&lt;nngxx::cpp::err, std::error_code&gt;);
+             : 
+             : static_assert(std::constructible_from&lt;std::error_code, nngxx::cpp::err&gt;);
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

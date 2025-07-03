@@ -686,7 +686,7 @@
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespaceclev_1a1b8e73a508830ad95f581539abd9f8fa" kindref="member">expected&lt;void&gt;</ref><sp/>destroy(nng_msg**<sp/>v)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" kindref="member">nngxx::invoke</ref>(nng_msg_free,<sp/>*v).and_then(<ref refid="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" kindref="member">invoke</ref>([&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" kindref="member">nngxx::invoke</ref>(nng_msg_free,<sp/>*v).and_then(<ref refid="namespaceclev_1ac853a7d5e34a8011f8adca1b20c68e78" kindref="member">invoke_void</ref>([&amp;]<sp/>{</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*v<sp/>=<sp/>empty();</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}));</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>

@@ -207,7 +207,7 @@ The nng_aio_result() returns the result of the operation associated with the han
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="187" column="20" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="187" bodyend="190"/>
-        <references refid="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="129">nngxx::c::success</references>
+        <references refid="namespacenngxx_1_1c_1a146c7f28291fe71a40ba4f98bf7c30c2a260ca9dd8a4577fc00b7bd5810298076" compoundref="nngxx_2err_8h" startline="128">nngxx::c::success</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1op_1a0eafd5fd94ae7d6714bcc66f3c5c3392" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

@@ -127,14 +127,23 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab4b069772a2454357f6a59a47cfaddf6" id="r_ab4b069772a2454357f6a59a47cfaddf6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4b069772a2454357f6a59a47cfaddf6">invoke</a> (auto f)</td></tr>
-<tr class="separator:ab4b069772a2454357f6a59a47cfaddf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a691dd421eafb765857d7b2847051bc8e" id="r_a691dd421eafb765857d7b2847051bc8e"><td class="memTemplParams" colspan="2">template&lt;typename enum_t&gt; </td></tr>
 <tr class="memitem:a691dd421eafb765857d7b2847051bc8e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a691dd421eafb765857d7b2847051bc8e">make_unexpected</a> (const int err) noexcept</td></tr>
 <tr class="separator:a691dd421eafb765857d7b2847051bc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e623323799aac83ebd8de5088b29a25" id="r_a0e623323799aac83ebd8de5088b29a25"><td class="memTemplParams" colspan="2">template&lt;typename enum_t&gt; </td></tr>
+<tr class="memitem:a0e623323799aac83ebd8de5088b29a25"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0e623323799aac83ebd8de5088b29a25">make_unexpected</a> (const enum_t err) noexcept</td></tr>
+<tr class="separator:a0e623323799aac83ebd8de5088b29a25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83c129eaa2b17122d75f3bb061c53ab" id="r_ae83c129eaa2b17122d75f3bb061c53ab"><td class="memTemplParams" colspan="2">template&lt;typename enum_t&gt; </td></tr>
+<tr class="memitem:ae83c129eaa2b17122d75f3bb061c53ab"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae83c129eaa2b17122d75f3bb061c53ab">make_unexpected</a> (const std::error_code err) noexcept</td></tr>
+<tr class="separator:ae83c129eaa2b17122d75f3bb061c53ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57e4a0abdf2a70b5fe491cdd59c30c8" id="r_aa57e4a0abdf2a70b5fe491cdd59c30c8"><td class="memTemplParams" colspan="2">template&lt;typename enum_t&gt; </td></tr>
 <tr class="memitem:aa57e4a0abdf2a70b5fe491cdd59c30c8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#a1b8e73a508830ad95f581539abd9f8fa">expected</a>&lt; void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa57e4a0abdf2a70b5fe491cdd59c30c8">make_expected</a> (const int err) noexcept</td></tr>
 <tr class="separator:aa57e4a0abdf2a70b5fe491cdd59c30c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac853a7d5e34a8011f8adca1b20c68e78" id="r_ac853a7d5e34a8011f8adca1b20c68e78"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac853a7d5e34a8011f8adca1b20c68e78">invoke_void</a> (auto f)</td></tr>
+<tr class="separator:ac853a7d5e34a8011f8adca1b20c68e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13edd594ef3c65523fac0517032a1ec2" id="r_a13edd594ef3c65523fac0517032a1ec2"><td class="memTemplParams" colspan="2">template&lt;typename value_t&gt; </td></tr>
+<tr class="memitem:a13edd594ef3c65523fac0517032a1ec2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a13edd594ef3c65523fac0517032a1ec2">invoke</a> (auto &amp;&amp;f)</td></tr>
+<tr class="separator:a13edd594ef3c65523fac0517032a1ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a1b8e73a508830ad95f581539abd9f8fa" name="a1b8e73a508830ad95f581539abd9f8fa"></a>
@@ -172,14 +181,104 @@ template&lt;typename value_t&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab4b069772a2454357f6a59a47cfaddf6" name="ab4b069772a2454357f6a59a47cfaddf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4b069772a2454357f6a59a47cfaddf6">&#9670;&#160;</a></span>invoke()</h2>
+<a id="a13edd594ef3c65523fac0517032a1ec2" name="a13edd594ef3c65523fac0517032a1ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13edd594ef3c65523fac0517032a1ec2">&#9670;&#160;</a></span>invoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename value_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto clev::invoke </td>
+          <td>(</td>
+          <td class="paramtype">auto &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00135">135</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keyword">using </span>value_type = value_t;</div>
+<div class="line"><span class="lineno">  138</span>  <span class="keyword">using </span>error_type = <span class="keyword">typename</span> <a class="code hl_typedef" href="#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;value_type&gt;::error_type</a>;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">return</span> [&amp;]&lt;<span class="keyword">typename</span> expected_content_t&gt;(</div>
+<div class="line"><span class="lineno">  141</span>           expected_content_t&amp;&amp; x) -&gt; <a class="code hl_typedef" href="#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;value_type&gt;</a> {</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keyword">using </span>function_type = <span class="keyword">decltype</span>(f);</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keyword">using </span>argument_type = expected_content_t&amp;&amp;;</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keyword">using </span>return_type = std::invoke_result_t&lt;function_type, argument_type&gt;;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> arg_is_value =</div>
+<div class="line"><span class="lineno">  147</span>      std::is_same_v&lt;expected_content_t, value_type&gt;;</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> arg_is_error =</div>
+<div class="line"><span class="lineno">  149</span>      std::is_same_v&lt;expected_content_t, error_type&gt;;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_value = std::is_same_v&lt;return_type, value_type&gt;;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_error = std::is_same_v&lt;return_type, error_type&gt;;</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_void = std::is_same_v&lt;return_type, void&gt;;</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    <span class="keyword">static_assert</span>((arg_is_value || arg_is_error) &amp;&amp;</div>
+<div class="line"><span class="lineno">  156</span>                  (ret_is_value || ret_is_error || ret_is_void));</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_value)</div>
+<div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>      <span class="keyword">const</span> <span class="keyword">auto</span> result = std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><span class="lineno">  161</span>                                      std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>      <span class="keywordflow">return</span> std::move(result);</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_error)</div>
+<div class="line"><span class="lineno">  166</span>    {</div>
+<div class="line"><span class="lineno">  167</span>      <span class="keyword">const</span> <span class="keyword">auto</span> result = std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><span class="lineno">  168</span>                                      std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>      <span class="keywordflow">return</span> std::unexpected{std::move(result)};</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_void)</div>
+<div class="line"><span class="lineno">  173</span>    {</div>
+<div class="line"><span class="lineno">  174</span>      expected_content_t x_copy = x;</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (arg_is_value)</div>
+<div class="line"><span class="lineno">  177</span>      {</div>
+<div class="line"><span class="lineno">  178</span>        std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><span class="lineno">  179</span>                    std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">return</span> x_copy;</div>
+<div class="line"><span class="lineno">  182</span>      }</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (arg_is_error)</div>
+<div class="line"><span class="lineno">  185</span>      {</div>
+<div class="line"><span class="lineno">  186</span>        std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><span class="lineno">  187</span>                    std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">return</span> std::unexpected{x_copy};</div>
+<div class="line"><span class="lineno">  190</span>      }</div>
+<div class="line"><span class="lineno">  191</span>    }</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  194</span>  };</div>
+<div class="line"><span class="lineno">  195</span>}</div>
+<div class="ttc" id="anamespaceclev_html_a1b8e73a508830ad95f581539abd9f8fa"><div class="ttname"><a href="#a1b8e73a508830ad95f581539abd9f8fa">clev::expected</a></div><div class="ttdeci">std::expected&lt; value_t, std::error_code &gt; expected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00073">err.h:73</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac853a7d5e34a8011f8adca1b20c68e78" name="ac853a7d5e34a8011f8adca1b20c68e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac853a7d5e34a8011f8adca1b20c68e78">&#9670;&#160;</a></span>invoke_void()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">auto clev::invoke </td>
+          <td class="memname">auto clev::invoke_void </td>
           <td>(</td>
           <td class="paramtype">auto</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
           <td></td>
@@ -187,14 +286,14 @@ template&lt;typename value_t&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00098">98</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
-<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">return</span> [f]&lt;<span class="keyword">typename</span>... args_t&gt;(args_t&amp;&amp;... v) {</div>
-<div class="line"><span class="lineno">  101</span>    f(std::forward&lt;args_t&gt;(v)...);</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> done;</div>
-<div class="line"><span class="lineno">  104</span>  };</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00125">125</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">return</span> [f = std::move(f)]&lt;<span class="keyword">typename</span>... args_t&gt;(args_t&amp;&amp;... v) {</div>
+<div class="line"><span class="lineno">  128</span>    f(std::forward&lt;args_t&gt;(v)...);</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> done;</div>
+<div class="line"><span class="lineno">  131</span>  };</div>
+<div class="line"><span class="lineno">  132</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -223,18 +322,18 @@ template&lt;typename enum_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00114">114</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
-<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">if</span> (err != 0)</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a691dd421eafb765857d7b2847051bc8e">make_unexpected&lt;enum_t&gt;</a>(err);</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">return</span> {};</div>
-<div class="line"><span class="lineno">  120</span>}</div>
-<div class="ttc" id="anamespaceclev_html_a691dd421eafb765857d7b2847051bc8e"><div class="ttname"><a href="#a691dd421eafb765857d7b2847051bc8e">clev::make_unexpected</a></div><div class="ttdeci">unexpected make_unexpected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00108">err.h:108</a></div></div>
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00115">115</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">if</span> (err != 0)</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="#a691dd421eafb765857d7b2847051bc8e">make_unexpected&lt;enum_t&gt;</a>(err);</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="anamespaceclev_html_a691dd421eafb765857d7b2847051bc8e"><div class="ttname"><a href="#a691dd421eafb765857d7b2847051bc8e">clev::make_unexpected</a></div><div class="ttdeci">unexpected make_unexpected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00097">err.h:97</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="clev_2err_8h_source.html#l00108">make_unexpected()</a>.</p>
+<p class="reference">References <a class="el" href="clev_2err_8h_source.html#l00097">make_unexpected()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="nngxx_2err_8h_source.html#l00201">nngxx::invoke()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="nngxx_2err_8h_source.html#l00200">nngxx::invoke()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -280,8 +379,41 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a0e623323799aac83ebd8de5088b29a25" name="a0e623323799aac83ebd8de5088b29a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e623323799aac83ebd8de5088b29a25">&#9670;&#160;</a></span>make_unexpected() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename enum_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a> clev::make_unexpected </td>
+          <td>(</td>
+          <td class="paramtype">const enum_t</td>          <td class="paramname"><span class="paramname"><em>err</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00103">103</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{err};</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+<div class="ttc" id="anamespaceclev_html_ab12206d746df7dd27529c73dbce7383f"><div class="ttname"><a href="#ab12206d746df7dd27529c73dbce7383f">clev::unexpected</a></div><div class="ttdeci">std::unexpected&lt; std::error_code &gt; unexpected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00070">err.h:70</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a691dd421eafb765857d7b2847051bc8e" name="a691dd421eafb765857d7b2847051bc8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a691dd421eafb765857d7b2847051bc8e">&#9670;&#160;</a></span>make_unexpected()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a691dd421eafb765857d7b2847051bc8e">&#9670;&#160;</a></span>make_unexpected() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,13 +437,12 @@ template&lt;typename enum_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00108">108</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>{</div>
-<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{<span class="keyword">static_cast&lt;</span>enum_t<span class="keyword">&gt;</span>(err)};</div>
-<div class="line"><span class="lineno">  111</span>}</div>
-<div class="ttc" id="anamespaceclev_html_ab12206d746df7dd27529c73dbce7383f"><div class="ttname"><a href="#ab12206d746df7dd27529c73dbce7383f">clev::unexpected</a></div><div class="ttdeci">std::unexpected&lt; std::error_code &gt; unexpected</div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00070">err.h:70</a></div></div>
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00097">97</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>{</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{<span class="keyword">static_cast&lt;</span>enum_t<span class="keyword">&gt;</span>(err)};</div>
+<div class="line"><span class="lineno">  100</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="nngxx_2err_8h_source.html#l00170">nngxx::make()</a>, <a class="el" href="clev_2err_8h_source.html#l00114">make_expected()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00185">nngxx::read()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="nngxx_2err_8h_source.html#l00169">nngxx::make()</a>, <a class="el" href="clev_2err_8h_source.html#l00115">make_expected()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00184">nngxx::read()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -354,6 +485,38 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="ae83c129eaa2b17122d75f3bb061c53ab" name="ae83c129eaa2b17122d75f3bb061c53ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83c129eaa2b17122d75f3bb061c53ab">&#9670;&#160;</a></span>make_unexpected() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename enum_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a> clev::make_unexpected </td>
+          <td>(</td>
+          <td class="paramtype">const std::error_code</td>          <td class="paramname"><span class="paramname"><em>err</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="clev_2err_8h_source.html#l00109">109</a> of file <a class="el" href="clev_2err_8h_source.html">err.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>{</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{err};</div>
+<div class="line"><span class="lineno">  112</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

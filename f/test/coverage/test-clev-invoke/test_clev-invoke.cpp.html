@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-clev-invoke - [...]/test/clev-invoke.cpp</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-clev-invoke</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Thu Jul  3 16:41:29 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">52</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">100.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">52</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : 
+             : #include &quot;clev-invoke.h&quot;
+             : 
+             : using clev_invoke = clev_invoke_f&lt;std::string, std::error_code&gt;;
+             : 
+             : /// prerequisites
+             : TEST_F(clev_invoke, prerequisites)
+             : {
+             :   {
+           1</span> :     <span class="lineCov">EXPECT_TRUE(with_value(some_value).has_value());</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(with_value(some_value).value(), some_value);</span>
+             :   }
+             : 
+             :   {
+           1</span> :     <span class="lineCov">EXPECT_FALSE(with_error(some_error).has_value());</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(with_error(some_error).error(), some_error);</span>
+             :   }
+             : 
+             :   {
+           1</span> :     <span class="lineCov">EXPECT_EQ(val_to_val(other_value)(some_value), other_value);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(val_to_err(other_error)(some_value), other_error);</span>
+           1</span> :     <span class="lineCov">val_to_void()(some_value);</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_EQ(err_to_err(other_error)(some_error), other_error);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(err_to_val(other_value)(some_error), other_value);</span>
+           1</span> :     <span class="lineCov">err_to_void()(some_error);</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_EQ(void_to_val(other_value)(), other_value);</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(void_to_err(other_error)(), other_error);</span>
+             :   }
+             : }
+             : 
+             : /// value -&gt; value
+             : TEST_F(clev_invoke, value_to_value)
+             : {
+             :   {
+           1</span> : <span class="lineCov">    const auto with_value_and_then_value_static = //</span>
+           1</span> : <span class="lineCov">      with_value(some_value)                      //</span>
+           1</span> : <span class="lineCov">        .and_then(clev::invoke&lt;value_type&gt;(val_to_val_static_fn));</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(with_value_and_then_value_static.has_value());</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(with_value_and_then_value_static.value(), other_value);</span>
+             :   }
+             : 
+             :   {
+           1</span> : <span class="lineCov">    const auto with_value_and_then_value_mem_fn = //</span>
+           1</span> : <span class="lineCov">      with_value(some_value)                      //</span>
+           1</span> : <span class="lineCov">        .and_then(clev::invoke&lt;value_type&gt;(std::bind(</span>
+           1</span> : <span class="lineCov">          &amp;clev_invoke::val_to_val_mem_fn, this, std::placeholders::_1)));</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(with_value_and_then_value_mem_fn.has_value());</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(with_value_and_then_value_mem_fn.value(), other_value);</span>
+             :   }
+             : 
+             :   {
+           1</span> : <span class="lineCov">    const auto with_value_and_then_value = //</span>
+           1</span> : <span class="lineCov">      with_value(some_value)               //</span>
+           1</span> : <span class="lineCov">        .and_then(clev::invoke&lt;value_type&gt;(val_to_val(other_value)));</span>
+             : 
+           1</span> :     <span class="lineCov">EXPECT_TRUE(with_value_and_then_value.has_value());</span>
+           1</span> :     <span class="lineCov">EXPECT_EQ(with_value_and_then_value.value(), other_value);</span>
+             :   }
+             : }
+             : 
+             : /// value -&gt; void
+             : TEST_F(clev_invoke, value_to_void)
+             : {
+           1</span> : <span class="lineCov">  const auto with_value_and_then_void = //</span>
+           1</span> : <span class="lineCov">    with_value(some_value)              //</span>
+           1</span> : <span class="lineCov">      .and_then(clev::invoke&lt;value_type&gt;(val_to_void()));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(with_value_and_then_void.has_value());</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(with_value_and_then_void.value(), some_value);</span>
+             : }
+             : 
+             : /// value -&gt; error
+             : TEST_F(clev_invoke, value_to_error)
+             : {
+           1</span> : <span class="lineCov">  const auto with_value_and_then_error = //</span>
+           1</span> : <span class="lineCov">    with_value(some_value)               //</span>
+           1</span> : <span class="lineCov">      .and_then(clev::invoke&lt;value_type&gt;(val_to_err(some_error)));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(with_value_and_then_error.has_value());</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(with_value_and_then_error.error(), some_error);</span>
+             : }
+             : 
+             : /// error -&gt; error
+             : TEST_F(clev_invoke, error_to_error)
+             : {
+           1</span> : <span class="lineCov">  const auto with_error_or_else_error = //</span>
+           1</span> : <span class="lineCov">    with_error(some_error)</span>
+           1</span> : <span class="lineCov">      .or_else(clev::invoke&lt;value_type&gt;(err_to_err(other_error)));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(with_error_or_else_error.has_value());</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(with_error_or_else_error.error(), other_error);</span>
+             : }
+             : 
+             : /// error -&gt; void
+             : TEST_F(clev_invoke, error_to_void)
+             : {
+           1</span> : <span class="lineCov">  const auto with_error_or_else_void = //</span>
+           1</span> : <span class="lineCov">    with_error(some_error).or_else(clev::invoke&lt;value_type&gt;(err_to_void()));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_FALSE(with_error_or_else_void.has_value());</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(with_error_or_else_void.error(), some_error);</span>
+             : }
+             : 
+             : /// error -&gt; value
+             : TEST_F(clev_invoke, error_to_value)
+             : {
+           1</span> : <span class="lineCov">  const auto with_error_or_else_value = //</span>
+           1</span> : <span class="lineCov">    with_error(some_error)</span>
+           1</span> : <span class="lineCov">      .or_else(clev::invoke&lt;value_type&gt;(err_to_val(some_value)));</span>
+             : 
+           1</span> :   <span class="lineCov">EXPECT_TRUE(with_error_or_else_value.has_value());</span>
+           1</span> :   <span class="lineCov">EXPECT_EQ(with_error_or_else_value.value(), some_value);</span>
+             : }
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-clev-invoke - [...]/test/clev-invoke.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-clev-invoke</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Thu Jul  3 16:41:29 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">18</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">100.0 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">18</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;gtest/gtest.h&gt;
+             : 
+             : #include &quot;clev/err.h&quot;
+             : 
+             : template&lt;typename value_t, typename error_t&gt;
+             : struct clev_invoke_f : ::testing::Test
+             : {
+             :   using value_type = value_t;
+             :   using error_type = error_t;
+             :   using expected_type = std::expected&lt;value_type, error_type&gt;;
+             : 
+             :   value_type some_value{&quot;some-value&quot;};
+             :   value_type other_value{val_to_val_static_fn(some_value)};
+             :   error_type some_error{42, std::generic_category()};
+             :   error_type other_error{99, std::generic_category()};
+             : 
+             :   static constexpr auto with_value(value_type value)
+             :   {
+           7</span> : <span class="lineCov">    return expected_type{std::move(value)};</span>
+             :   }
+             : 
+             :   static constexpr auto with_error(error_type error)
+             :   {
+           5</span> : <span class="lineCov">    return expected_type{std::unexpected{std::move(error)}};</span>
+             :   }
+             : 
+           8</span> :   static value_type val_to_val_static_fn(value_type) <span class="lineCov">{ return &quot;other-value&quot;; }</span>
+             : 
+           1</span> :   value_type val_to_val_mem_fn(value_type) <span class="lineCov">{ return other_value; }</span>
+             : 
+             :   static constexpr auto val_to_val(value_type value)
+             :   {
+           2</span> : <span class="lineCov">    return [value = std::move(value)](value_type) { //</span>
+           2</span> : <span class="lineCov">      return std::move(value);</span>
+             :     };
+             :   }
+             : 
+             :   static constexpr auto val_to_err(error_type error)
+             :   {
+           2</span> : <span class="lineCov">    return [error = std::move(error)](value_type) { //</span>
+           2</span> : <span class="lineCov">      return std::move(error);</span>
+             :     };
+             :   }
+             : 
+             :   static constexpr auto val_to_void()
+             :   {
+           2</span> : <span class="lineCov">    return [](value_type) { return; }</span>;
+             :   }
+             : 
+             :   static constexpr auto err_to_err(error_type error)
+             :   {
+           2</span> : <span class="lineCov">    return [error = std::move(error)](error_type) { //</span>
+           2</span> : <span class="lineCov">      return std::move(error);</span>
+             :     };
+             :   }
+             : 
+             :   static constexpr auto err_to_val(value_type value)
+             :   {
+           2</span> : <span class="lineCov">    return [value = std::move(value)](error_type) { //</span>
+           2</span> : <span class="lineCov">      return std::move(value);</span>
+             :     };
+             :   }
+             : 
+             :   static constexpr auto err_to_void()
+             :   {
+           2</span> : <span class="lineCov">    return [](error_type) { return; }</span>;
+             :   }
+             : 
+             :   static constexpr auto void_to_val(value_type value)
+             :   {
+           1</span> : <span class="lineCov">    return [value = std::move(value)] { //</span>
+           1</span> : <span class="lineCov">      return std::move(value);</span>
+             :     };
+             :   }
+             : 
+             :   static constexpr auto void_to_err(error_type error)
+             :   {
+           1</span> : <span class="lineCov">    return [error = std::move(error)] { //</span>
+           1</span> : <span class="lineCov">      return std::move(error);</span>
+             :     };
+             :   }
+             : };
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

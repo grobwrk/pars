@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN>
+             <html>
+             <head>
+                <title>Coverage - out/build/linux-debug-llvm/test/test-clev-invoke - [...]/lib/include/clev/err.h</title>
+                <link rel="stylesheet" type="text/css" href="llvmcov2html.css"/>
+             </head>
+             <body>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="title">Coverage Report</td></tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr>
+             <td width="100%">
+                <table cellpadding="1" border="0" width="100%">
+                   <tr>
+                      <td class="headerItem" width="20%">Command:</td>
+                      <td class="headerValue" width="80%" colspan=6>out/build/linux-debug-llvm/test/test-clev-invoke</td>
+        </tr>
+                     <tr>
+                     <td class="headerItem" width="20%">Date:</td>
+                     <td class="headerValue" width="15%">Thu Jul  3 16:41:29 2025 </td>
+                     <td width="5%"></td>
+                     <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">36</td>
+                   </tr>
+                   <tr>
+                   <td class="headerItem" width="20%">Code&nbsp;covered:
+                   <td class="headerValue" width="15%">86.1 %</td>
+                   <td width="5%"></td>
+                     <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
+                     <td class="headerValue" width="10%">31</td>
+                   </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+           </table>
+<pre class="source">
+             : /*
+             : Copyright (c) 2025 Giuseppe Roberti.
+             : All rights reserved.
+             : 
+             : Redistribution and use in source and binary forms, with or without modification,
+             : are permitted provided that the following conditions are met:
+             : 
+             : 1. Redistributions of source code must retain the above copyright notice, this
+             : list of conditions and the following disclaimer.
+             : 
+             : 2. Redistributions in binary form must reproduce the above copyright notice,
+             : this list of conditions and the following disclaimer in the documentation and/or
+             : other materials provided with the distribution.
+             : 
+             : 3. Neither the name of the copyright holder nor the names of its contributors
+             : may be used to endorse or promote products derived from this software without
+             : specific prior written permission.
+             : 
+             : THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+             : ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+             : WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+             : DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+             : ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+             : (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+             : LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+             : ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+             : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+             : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+             : */
+             : #pragma once
+             : 
+             : #include &lt;expected&gt;
+             : #include &lt;stdexcept&gt;
+             : #include &lt;system_error&gt;
+             : 
+             : namespace clev
+             : {
+             : 
+             : struct exception final : std::runtime_error
+             : {
+             :   explicit exception(const std::error_code code) noexcept
+             :     : std::runtime_error(code.message())
+             :   {
+             :   }
+             : };
+             : 
+             : #if __cpp_exceptions &lt; 199711
+             : #define CLEV_HAS_EXCEPTIONS false
+             : #else
+             : #define CLEV_HAS_EXCEPTIONS true
+             : #endif
+             : 
+             : constexpr static bool clev_exception_disabled_v = !(CLEV_HAS_EXCEPTIONS);
+             : 
+             : static void
+             : abort_now(const std::error_code err,
+             :           const std::string_view msg = &quot;&quot;) noexcept(clev_exception_disabled_v)
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if constexpr (clev_exception_disabled_v)</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    std::quick_exit(err.value());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    throw exception{err};</span>
+             : }
+             : 
+             : static void exit_now(const std::error_code err) noexcept
+             : {
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::quick_exit(err.value());</span>
+             : }
+             : 
+             : using unexpected = std::unexpected&lt;std::error_code&gt;;
+             : 
+             : template&lt;typename value_t&gt;
+             : using expected = std::expected&lt;value_t, std::error_code&gt;;
+             : 
+             : template&lt;typename value_t = void&gt;
+             : static auto
+             : abort_now(const std::string_view msg = &quot;&quot;) noexcept(clev_exception_disabled_v)
+             : {
+             :   return [=](const std::error_code err) -&gt; expected&lt;value_t&gt; {
+             :     abort_now(err, msg);
+             : 
+             :     return unexpected{err};
+             :   };
+             : }
+             : 
+             : template&lt;typename value_t = void&gt;
+             : static auto exit_now() noexcept(clev_exception_disabled_v)
+             : {
+             :   return [](const std::error_code err) -&gt; expected&lt;value_t&gt; {
+             :     exit_now(err);
+             : 
+             :     return unexpected{err};
+             :   };
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : unexpected make_unexpected(const int err) noexcept
+             : {
+             :   return unexpected{static_cast&lt;enum_t&gt;(err)};
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : unexpected make_unexpected(const enum_t err) noexcept
+             : {
+             :   return unexpected{err};
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : unexpected make_unexpected(const std::error_code err) noexcept
+             : {
+             :   return unexpected{err};
+             : }
+             : 
+             : template&lt;typename enum_t&gt;
+             : expected&lt;void&gt; make_expected(const int err) noexcept
+             : {
+             :   if (err != 0)
+             :     return make_unexpected&lt;enum_t&gt;(err);
+             : 
+             :   return {};
+             : }
+             : 
+             : static constexpr expected&lt;void&gt; done = {};
+             : 
+             : auto invoke_void(auto f)
+             : {
+             :   return [f = std::move(f)]&lt;typename... args_t&gt;(args_t&amp;&amp;... v) {
+             :     f(std::forward&lt;args_t&gt;(v)...);
+             : 
+             :     return done;
+             :   };
+             : }
+             : 
+             : template&lt;typename value_t&gt;
+             : constexpr auto invoke(auto&amp;&amp; f)
+             : {
+           8</span> : <span class="lineCov">  using value_type = value_t;</span>
+           8</span> : <span class="lineCov">  using error_type = typename expected&lt;value_type&gt;::error_type;</span>
+             : 
+           8</span> : <span class="lineCov">  return [&amp;]&lt;typename expected_content_t&gt;(</span>
+           8</span> : <span class="lineCov">           expected_content_t&amp;&amp; x) -&gt; clev::expected&lt;value_type&gt; </span>{
+           8</span> : <span class="lineCov">    using function_type = decltype(f);</span>
+           8</span> : <span class="lineCov">    using argument_type = expected_content_t&amp;&amp;;</span>
+           8</span> : <span class="lineCov">    using return_type = std::invoke_result_t&lt;function_type, argument_type&gt;;</span>
+             : 
+           8</span> : <span class="lineCov">    constexpr bool arg_is_value =</span>
+           8</span> : <span class="lineCov">      std::is_same_v&lt;expected_content_t, value_type&gt;;</span>
+           8</span> : <span class="lineCov">    constexpr bool arg_is_error =</span>
+           8</span> : <span class="lineCov">      std::is_same_v&lt;expected_content_t, error_type&gt;;</span>
+             : 
+           8</span> : <span class="lineCov">    constexpr bool ret_is_value = std::is_same_v&lt;return_type, value_type&gt;;</span>
+           8</span> : <span class="lineCov">    constexpr bool ret_is_error = std::is_same_v&lt;return_type, error_type&gt;;</span>
+           8</span> : <span class="lineCov">    constexpr bool ret_is_void = std::is_same_v&lt;return_type, void&gt;;</span>
+             : 
+           8</span> : <span class="lineCov">    static_assert((arg_is_value || arg_is_error) &amp;&amp;</span>
+           8</span> : <span class="lineCov">                  (ret_is_value || ret_is_error || ret_is_void));</span>
+             : 
+             :     if constexpr (ret_is_value)
+             :     {
+           4</span> : <span class="lineCov">      const auto result = std::invoke(std::forward&lt;function_type&gt;(f),</span>
+           4</span> : <span class="lineCov">                                      std::forward&lt;argument_type&gt;(x));</span>
+             : 
+           4</span> : <span class="lineCov">      return std::move(result);</span>
+             :     }
+             :     else if constexpr (ret_is_error)
+             :     {
+           2</span> : <span class="lineCov">      const auto result = std::invoke(std::forward&lt;function_type&gt;(f),</span>
+           2</span> : <span class="lineCov">                                      std::forward&lt;argument_type&gt;(x));</span>
+             : 
+           2</span> : <span class="lineCov">      return std::unexpected{std::move(result)};</span>
+             :     }
+             :     else if constexpr (ret_is_void)
+             :     {
+           2</span> : <span class="lineCov">      expected_content_t x_copy = x;</span>
+             : 
+             :       if constexpr (arg_is_value)
+             :       {
+           1</span> : <span class="lineCov">        std::invoke(std::forward&lt;function_type&gt;(f),</span>
+           1</span> : <span class="lineCov">                    std::forward&lt;argument_type&gt;(x));</span>
+             : 
+           1</span> : <span class="lineCov">        return x_copy;</span>
+             :       }
+             : 
+             :       if constexpr (arg_is_error)
+             :       {
+           1</span> : <span class="lineCov">        std::invoke(std::forward&lt;function_type&gt;(f),</span>
+           1</span> : <span class="lineCov">                    std::forward&lt;argument_type&gt;(x));</span>
+             : 
+           1</span> : <span class="lineCov">        return std::unexpected{x_copy};</span>
+             :       }
+             :     }
+             : 
+           8</span> :     <span class="lineCov">return {};</span>
+           8</span> : <span class="lineCov">  };</span>
+             : }
+             : 
+             : } // namespace clev
+</pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>
+             <tr><td class="versionInfo">Generated by: llvmcov2html</td></tr>
+           </table>
+           <br/>
+           </body>
+           </html>

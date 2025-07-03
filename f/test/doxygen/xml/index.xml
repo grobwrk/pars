@@ -825,9 +825,12 @@
     <member refid="namespaceclev_1a4e7c968daf8f7fab7c1a1e491de4fa12" kind="function"><name>exit_now</name></member>
     <member refid="namespaceclev_1ade5250094fcbd2e2f25e8968d6fcd08f" kind="function"><name>abort_now</name></member>
     <member refid="namespaceclev_1ab6bee7921e6872a5538b015c7a09cdbf" kind="function"><name>exit_now</name></member>
-    <member refid="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" kind="function"><name>invoke</name></member>
     <member refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" kind="function"><name>make_unexpected</name></member>
+    <member refid="namespaceclev_1a0e623323799aac83ebd8de5088b29a25" kind="function"><name>make_unexpected</name></member>
+    <member refid="namespaceclev_1ae83c129eaa2b17122d75f3bb061c53ab" kind="function"><name>make_unexpected</name></member>
     <member refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" kind="function"><name>make_expected</name></member>
+    <member refid="namespaceclev_1ac853a7d5e34a8011f8adca1b20c68e78" kind="function"><name>invoke_void</name></member>
+    <member refid="namespaceclev_1a13edd594ef3c65523fac0517032a1ec2" kind="function"><name>invoke</name></member>
   </compound>
   <compound refid="namespacenngxx" kind="namespace"><name>nngxx</name>
     <member refid="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" kind="enum"><name>opt</name></member>

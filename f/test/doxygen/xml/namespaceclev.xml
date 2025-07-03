@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="96" column="27" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="96" bodyend="96"/>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="123" column="27" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="123" bodyend="123"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -167,24 +167,6 @@
         </inbodydescription>
         <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="87" column="13" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="87" bodyend="94"/>
       </memberdef>
-      <memberdef kind="function" id="namespaceclev_1ab4b069772a2454357f6a59a47cfaddf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>auto</type>
-        <definition>auto clev::invoke</definition>
-        <argsstring>(auto f)</argsstring>
-        <name>invoke</name>
-        <qualifiedname>clev::invoke</qualifiedname>
-        <param>
-          <type>auto</type>
-          <declname>f</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="98" column="6" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="98" bodyend="105"/>
-      </memberdef>
       <memberdef kind="function" id="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
@@ -206,10 +188,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="108" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="108" bodyend="111"/>
-        <referencedby refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" compoundref="nngxx_2err_8h" startline="170" endline="182">nngxx::make</referencedby>
-        <referencedby refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" compoundref="clev_2err_8h" startline="114" endline="120">make_expected</referencedby>
-        <referencedby refid="namespacenngxx_1a0416b7440ce59d889ef96e1106bbdb8d" compoundref="nngxx_2err_8h" startline="185" endline="197">nngxx::read</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="97" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="97" bodyend="100"/>
+        <referencedby refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" compoundref="nngxx_2err_8h" startline="169" endline="181">nngxx::make</referencedby>
+        <referencedby refid="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" compoundref="clev_2err_8h" startline="115" endline="121">make_expected</referencedby>
+        <referencedby refid="namespacenngxx_1a0416b7440ce59d889ef96e1106bbdb8d" compoundref="nngxx_2err_8h" startline="184" endline="196">nngxx::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1a0e623323799aac83ebd8de5088b29a25" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename enum_t</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref></type>
+        <definition>unexpected clev::make_unexpected</definition>
+        <argsstring>(const enum_t err) noexcept</argsstring>
+        <name>make_unexpected</name>
+        <qualifiedname>clev::make_unexpected</qualifiedname>
+        <param>
+          <type>const enum_t</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="103" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1ae83c129eaa2b17122d75f3bb061c53ab" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename enum_t</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceclev_1ab12206d746df7dd27529c73dbce7383f" kindref="member">unexpected</ref></type>
+        <definition>unexpected clev::make_unexpected</definition>
+        <argsstring>(const std::error_code err) noexcept</argsstring>
+        <name>make_unexpected</name>
+        <qualifiedname>clev::make_unexpected</qualifiedname>
+        <param>
+          <type>const std::error_code</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="109" column="12" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="109" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="namespaceclev_1aa57e4a0abdf2a70b5fe491cdd59c30c8" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -232,9 +260,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="114" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="114" bodyend="120"/>
-        <references refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" compoundref="clev_2err_8h" startline="108" endline="111">make_unexpected</references>
-        <referencedby refid="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" compoundref="nngxx_2err_8h" startline="201" endline="205">nngxx::invoke</referencedby>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="115" column="10" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="115" bodyend="121"/>
+        <references refid="namespaceclev_1a691dd421eafb765857d7b2847051bc8e" compoundref="clev_2err_8h" startline="97" endline="100">make_unexpected</references>
+        <referencedby refid="namespacenngxx_1a9bc3de731878413a108495d43a72ce9a" compoundref="nngxx_2err_8h" startline="200" endline="204">nngxx::invoke</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1ac853a7d5e34a8011f8adca1b20c68e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto clev::invoke_void</definition>
+        <argsstring>(auto f)</argsstring>
+        <name>invoke_void</name>
+        <qualifiedname>clev::invoke_void</qualifiedname>
+        <param>
+          <type>auto</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="125" column="6" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceclev_1a13edd594ef3c65523fac0517032a1ec2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename value_t</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto clev::invoke</definition>
+        <argsstring>(auto &amp;&amp;f)</argsstring>
+        <name>invoke</name>
+        <qualifiedname>clev::invoke</qualifiedname>
+        <param>
+          <type>auto &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars/pars/lib/include/clev/err.h" line="135" column="16" bodyfile="/home/runner/work/pars/pars/lib/include/clev/err.h" bodystart="135" bodyend="195"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

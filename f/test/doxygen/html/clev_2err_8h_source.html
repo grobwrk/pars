@@ -191,47 +191,129 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  };</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;void&gt;</a> done = {};</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespaceclev.html#ab4b069772a2454357f6a59a47cfaddf6">   98</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceclev.html#ab4b069772a2454357f6a59a47cfaddf6">invoke</a>(<span class="keyword">auto</span> f)</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">return</span> [f]&lt;<span class="keyword">typename</span>... args_t&gt;(args_t&amp;&amp;... v) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    f(std::forward&lt;args_t&gt;(v)...);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> done;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  };</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">   97</a></span><a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> err) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{<span class="keyword">static_cast&lt;</span>enum_t<span class="keyword">&gt;</span>(err)};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">  108</a></span><a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> err) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{<span class="keyword">static_cast&lt;</span>enum_t<span class="keyword">&gt;</span>(err)};</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="namespaceclev.html#a0e623323799aac83ebd8de5088b29a25">  103</a></span><a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected</a>(<span class="keyword">const</span> enum_t err) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{err};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
-<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">  114</a></span><a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;void&gt;</a> <a class="code hl_function" href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">make_expected</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> err) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordflow">if</span> (err != 0)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected&lt;enum_t&gt;</a>(err);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="namespaceclev.html#ae83c129eaa2b17122d75f3bb061c53ab">  109</a></span><a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected</a>(<span class="keyword">const</span> std::error_code err) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">unexpected</a>{err};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>} <span class="comment">// namespace clev</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> enum_t&gt;</div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">  115</a></span><a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;void&gt;</a> <a class="code hl_function" href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">make_expected</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> err) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordflow">if</span> (err != 0)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">make_unexpected&lt;enum_t&gt;</a>(err);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;void&gt;</a> done = {};</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="namespaceclev.html#ac853a7d5e34a8011f8adca1b20c68e78">  125</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespaceclev.html#ac853a7d5e34a8011f8adca1b20c68e78">invoke_void</a>(<span class="keyword">auto</span> f)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">return</span> [f = std::move(f)]&lt;<span class="keyword">typename</span>... args_t&gt;(args_t&amp;&amp;... v) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    f(std::forward&lt;args_t&gt;(v)...);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> done;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  };</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="namespaceclev.html#a13edd594ef3c65523fac0517032a1ec2">  135</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="namespaceclev.html#a13edd594ef3c65523fac0517032a1ec2">invoke</a>(<span class="keyword">auto</span>&amp;&amp; f)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>{</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keyword">using </span>value_type = value_t;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keyword">using </span>error_type = <span class="keyword">typename</span> <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">expected&lt;value_type&gt;::error_type</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">return</span> [&amp;]&lt;<span class="keyword">typename</span> expected_content_t&gt;(</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>           expected_content_t&amp;&amp; x) -&gt; <a class="code hl_typedef" href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected&lt;value_type&gt;</a> {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keyword">using </span>function_type = <span class="keyword">decltype</span>(f);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">using </span>argument_type = expected_content_t&amp;&amp;;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">using </span>return_type = std::invoke_result_t&lt;function_type, argument_type&gt;;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> arg_is_value =</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      std::is_same_v&lt;expected_content_t, value_type&gt;;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> arg_is_error =</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      std::is_same_v&lt;expected_content_t, error_type&gt;;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_value = std::is_same_v&lt;return_type, value_type&gt;;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_error = std::is_same_v&lt;return_type, error_type&gt;;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> ret_is_void = std::is_same_v&lt;return_type, void&gt;;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">static_assert</span>((arg_is_value || arg_is_error) &amp;&amp;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                  (ret_is_value || ret_is_error || ret_is_void));</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_value)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <span class="keyword">const</span> <span class="keyword">auto</span> result = std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                      std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordflow">return</span> std::move(result);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_error)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keyword">const</span> <span class="keyword">auto</span> result = std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                      std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <span class="keywordflow">return</span> std::unexpected{std::move(result)};</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ret_is_void)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      expected_content_t x_copy = x;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (arg_is_value)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                    std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">return</span> x_copy;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (arg_is_error)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        std::invoke(std::forward&lt;function_type&gt;(f),</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                    std::forward&lt;argument_type&gt;(x));</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">return</span> std::unexpected{x_copy};</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  };</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>} <span class="comment">// namespace clev</span></div>
 </div>
 <div class="ttc" id="aclev_2err_8h_html_a2e3af1de29e4213f21f020dd96886f5d"><div class="ttname"><a href="clev_2err_8h.html#a2e3af1de29e4213f21f020dd96886f5d">CLEV_HAS_EXCEPTIONS</a></div><div class="ttdeci">#define CLEV_HAS_EXCEPTIONS</div><div class="ttdef"><b>Definition</b> <a href="#l00048">err.h:48</a></div></div>
 <div class="ttc" id="anamespaceclev_html"><div class="ttname"><a href="namespaceclev.html">clev</a></div><div class="ttdef"><b>Definition</b> <a href="#l00036">err.h:37</a></div></div>
+<div class="ttc" id="anamespaceclev_html_a13edd594ef3c65523fac0517032a1ec2"><div class="ttname"><a href="namespaceclev.html#a13edd594ef3c65523fac0517032a1ec2">clev::invoke</a></div><div class="ttdeci">constexpr auto invoke(auto &amp;&amp;f)</div><div class="ttdef"><b>Definition</b> <a href="#l00135">err.h:135</a></div></div>
 <div class="ttc" id="anamespaceclev_html_a1b8e73a508830ad95f581539abd9f8fa"><div class="ttname"><a href="namespaceclev.html#a1b8e73a508830ad95f581539abd9f8fa">clev::expected</a></div><div class="ttdeci">std::expected&lt; value_t, std::error_code &gt; expected</div><div class="ttdef"><b>Definition</b> <a href="#l00073">err.h:73</a></div></div>
-<div class="ttc" id="anamespaceclev_html_a691dd421eafb765857d7b2847051bc8e"><div class="ttname"><a href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">clev::make_unexpected</a></div><div class="ttdeci">unexpected make_unexpected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00108">err.h:108</a></div></div>
-<div class="ttc" id="anamespaceclev_html_aa57e4a0abdf2a70b5fe491cdd59c30c8"><div class="ttname"><a href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">clev::make_expected</a></div><div class="ttdeci">expected&lt; void &gt; make_expected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00114">err.h:114</a></div></div>
+<div class="ttc" id="anamespaceclev_html_a691dd421eafb765857d7b2847051bc8e"><div class="ttname"><a href="namespaceclev.html#a691dd421eafb765857d7b2847051bc8e">clev::make_unexpected</a></div><div class="ttdeci">unexpected make_unexpected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00097">err.h:97</a></div></div>
+<div class="ttc" id="anamespaceclev_html_aa57e4a0abdf2a70b5fe491cdd59c30c8"><div class="ttname"><a href="namespaceclev.html#aa57e4a0abdf2a70b5fe491cdd59c30c8">clev::make_expected</a></div><div class="ttdeci">expected&lt; void &gt; make_expected(const int err) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00115">err.h:115</a></div></div>
 <div class="ttc" id="anamespaceclev_html_ab12206d746df7dd27529c73dbce7383f"><div class="ttname"><a href="namespaceclev.html#ab12206d746df7dd27529c73dbce7383f">clev::unexpected</a></div><div class="ttdeci">std::unexpected&lt; std::error_code &gt; unexpected</div><div class="ttdef"><b>Definition</b> <a href="#l00070">err.h:70</a></div></div>
-<div class="ttc" id="anamespaceclev_html_ab4b069772a2454357f6a59a47cfaddf6"><div class="ttname"><a href="namespaceclev.html#ab4b069772a2454357f6a59a47cfaddf6">clev::invoke</a></div><div class="ttdeci">auto invoke(auto f)</div><div class="ttdef"><b>Definition</b> <a href="#l00098">err.h:98</a></div></div>
+<div class="ttc" id="anamespaceclev_html_ac853a7d5e34a8011f8adca1b20c68e78"><div class="ttname"><a href="namespaceclev.html#ac853a7d5e34a8011f8adca1b20c68e78">clev::invoke_void</a></div><div class="ttdeci">auto invoke_void(auto f)</div><div class="ttdef"><b>Definition</b> <a href="#l00125">err.h:125</a></div></div>
 <div class="ttc" id="anamespacenngxx_1_1cpp_html_a675fe8d0efb36801fc4a93482cdc9cb8"><div class="ttname"><a href="namespacenngxx_1_1cpp.html#a675fe8d0efb36801fc4a93482cdc9cb8">nngxx::cpp::err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00046">err.h:47</a></div></div>
 <div class="ttc" id="astructclev_1_1exception_html_a8a1dce0c5d28a8441f808e126ae0b18a"><div class="ttname"><a href="structclev_1_1exception.html#a8a1dce0c5d28a8441f808e126ae0b18a">clev::exception::exception</a></div><div class="ttdeci">exception(const std::error_code code) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00041">err.h:41</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

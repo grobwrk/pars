@@ -2,6 +2,8 @@
 
 - [tests](tests/index.html)
 
+- [test-clev-invoke](test-clev-invoke/index.html)
+
 - [test-ev-event--internal](test-ev-event--internal/index.html)
 
 - [test-ev-event--network](test-ev-event--network/index.html)
