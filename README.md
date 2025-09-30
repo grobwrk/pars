@@ -1,3 +1,5 @@
+[![build](https://github.com/grobwrk/pars/actions/workflows/build.yml/badge.svg)](https://github.com/grobwrk/pars/actions/workflows/build.yml)
+
 The **pars** C++23 framework.
 
 You can start developing a new pars application using the [pars-app-template](https://github.com/grobwrk/pars-app-template).
