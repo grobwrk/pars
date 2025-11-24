@@ -31,8 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/log.h"
 
-#include <fmt/format.h>
-
+#include <format>
 #include <mutex>
 #include <stdexcept>
 #include <unordered_map>
@@ -119,7 +118,7 @@ public:
     auto mtx = mtxs_m.try_emplace(key);
 
     if (!mtx.second)
-      throw std::runtime_error(fmt::format(
+      throw std::runtime_error(std::format(
         "Unable to emplace a new Resource Mutex [key: 0x{:X}]", key));
 
     auto res = resources_m.try_emplace(key, std::forward<args_t>(args)...);
@@ -129,7 +128,7 @@ public:
       mtxs_m.erase(mtx.first);
 
       throw std::runtime_error(
-        fmt::format("Unable to emplace a new Resource [key: 0x{:X}]", key));
+        std::format("Unable to emplace a new Resource [key: 0x{:X}]", key));
     }
 
     pars::debug(SL, lf::app, "Emplaced Resource [key: 0x{:X}]", key);
@@ -165,7 +164,7 @@ private:
 
     if (!xs.contains(key))
       throw std::out_of_range(
-        fmt::format("Object not found for Key 0x{:X}", key));
+        std::format("Object not found for Key 0x{:X}", key));
 
     auto& x = xs.at(key);
 

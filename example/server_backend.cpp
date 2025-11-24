@@ -350,7 +350,7 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << fmt::format("Error: {}", e.what()) << "\n";
+    std::cout << std::format("Error: {}", e.what()) << "\n";
 
     return EXIT_FAILURE;
   }

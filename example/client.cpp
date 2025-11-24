@@ -200,7 +200,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << fmt::format("ERROR: {}", ev) << std::endl;
+    std::cout << std::format("ERROR: {}", ev) << std::endl;
   }
 
   void terminate(hf_arg<fired, network_error> fired)
@@ -216,7 +216,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << fmt::format("ERROR: {}", ev.error) << std::endl;
+    std::cout << std::format("ERROR: {}", ev.error) << std::endl;
   }
 
   void terminate(hf_arg<fired, pipe_removed> fired)
@@ -230,7 +230,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!",
                fired.event(), state.current());
 
-    std::cout << fmt::format("Client Disconnected!") << std::endl;
+    std::cout << std::format("Client Disconnected!") << std::endl;
   }
 };
 
@@ -246,7 +246,7 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << fmt::format("Error: {}", e.what()) << "\n";
+    std::cout << std::format("Error: {}", e.what()) << "\n";
 
     return EXIT_FAILURE;
   }

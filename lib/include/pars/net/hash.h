@@ -33,9 +33,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h"
 
-#include <fmt/format.h>
-
 #include <cstddef>
+#include <format>
 
 namespace pars
 {
@@ -52,7 +51,7 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   {
     if (uuid[i] != '-')
       throw std::runtime_error(
-        fmt::format("Invalid UUID [missing separator {}]", i));
+        std::format("Invalid UUID [missing separator {}]", i));
   }
 
   std::uint64_t result{0xcbf29ce484222325};

@@ -33,6 +33,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/rep.h"
 #include "pars/net/socket_opt.h"
 
+#include <format>
+
 namespace pars::comp
 {
 
@@ -72,9 +74,9 @@ public:
 
   void graceful_terminate() { rep_m.stop(); }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "[rep:{}]", rep_m.sock());
+    return std::format_to(ctx.out(), "[rep:{}]", rep_m.sock());
   }
 
 private:

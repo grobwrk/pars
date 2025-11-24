@@ -36,18 +36,18 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "clev/err.h"
 
 #include <cereal/types/vector.hpp>
-#include <fmt/base.h>
 
 #include <chrono>
+#include <format>
 
 namespace pars::ev
 {
 
 struct creating_pipe
 {
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "creating_pipe()");
+    return std::format_to(ctx.out(), "creating_pipe()");
   }
 };
 
@@ -60,9 +60,9 @@ struct klass<creating_pipe> : base_klass<creating_pipe>
 
 struct pipe_created
 {
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "pipe_created()");
+    return std::format_to(ctx.out(), "pipe_created()");
   }
 };
 
@@ -75,9 +75,9 @@ struct klass<pipe_created> : base_klass<pipe_created>
 
 struct pipe_removed
 {
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "pipe_removed()");
+    return std::format_to(ctx.out(), "pipe_removed()");
   }
 };
 
@@ -93,9 +93,9 @@ struct network_error
   std::error_code error;
   net::dir dir;
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "network_error({}, {})", error,
+    return std::format_to(ctx.out(), "network_error({}, {})", error,
                           (dir == net::dir::out ? "out" : "in"));
   }
 };
@@ -119,11 +119,11 @@ struct exception
     }
     catch (clev::exception& e)
     {
-      return fmt::format("{}", e.what());
+      return std::format("{}", e.what());
     }
     catch (std::exception& e)
     {
-      return fmt::format("{}", e.what());
+      return std::format("{}", e.what());
     }
     catch (...)
     {
@@ -132,9 +132,9 @@ struct exception
     return "<empty-exception>";
   }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "{}", str());
+    return std::format_to(ctx.out(), "{}", str());
   }
 };
 
@@ -149,9 +149,9 @@ struct klass<exception> : base_klass<exception>
 
 struct init
 {
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "init({})", creation_time);
+    return std::format_to(ctx.out(), "init({})", creation_time);
   }
 
 private:
@@ -170,9 +170,9 @@ struct klass<init> : base_klass<init>
 
 struct shutdown
 {
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "shutdown({})", creation_time);
+    return std::format_to(ctx.out(), "shutdown({})", creation_time);
   }
 
 private:

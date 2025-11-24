@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <pars/pars.h>
 
+#include <format>
 #include <string_view>
 
 namespace pars_example::event
@@ -45,9 +46,9 @@ struct fib_requested
   uint64_t n = 0;
   bool use_fast_fib = false;
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "fib_requested({},{},{})", work_id, n,
+    return std::format_to(ctx.out(), "fib_requested({},{},{})", work_id, n,
                           use_fast_fib ? "fast_fib" : "slow_fib");
   }
 };
@@ -58,9 +59,9 @@ struct fib_computed
   std::size_t work_id = 0;
   uint64_t fib_n = 0;
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "fib_computed({},{})", work_id, fib_n);
+    return std::format_to(ctx.out(), "fib_computed({},{})", work_id, fib_n);
   }
 };
 
@@ -68,9 +69,9 @@ struct stop_compute
 {
   int pipe_id = 0;
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "stop_compute({})", pipe_id);
+    return std::format_to(ctx.out(), "stop_compute({})", pipe_id);
   }
 };
 

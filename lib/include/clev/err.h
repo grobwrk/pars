@@ -29,7 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include <fmt/format.h>
 #include <nng/nng.h>
 
 #include <expected>
@@ -51,6 +50,7 @@ constexpr static bool clev_exception_disabled_v = true;
 #else
 constexpr static bool clev_exception_disabled_v = false;
 #endif
+
 inline static void
 abort_now(const std::error_code err) noexcept(clev_exception_disabled_v)
 {

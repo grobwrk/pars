@@ -33,47 +33,46 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/ev/event.h"
 
-#include <fmt/format.h>
-
 #include <chrono>
+#include <format>
 #include <iomanip>
 #include <sstream>
 
 template<>
-struct fmt::formatter<std::chrono::system_clock::time_point>
-  : fmt::formatter<std::string>
+struct std::formatter<std::chrono::system_clock::time_point>
+  : std::formatter<std::string>
 {
   auto format(const std::chrono::system_clock::time_point& t,
-              fmt::format_context& ctx) const -> decltype(ctx.out())
+              std::format_context& ctx) const -> decltype(ctx.out())
   {
     auto t2 = std::chrono::system_clock::to_time_t(t);
 
     std::ostringstream oss;
     oss << std::put_time(std::localtime(&t2), "%F %T");
 
-    return fmt::format_to(ctx.out(), "{}", oss.str());
+    return std::format_to(ctx.out(), "{}", oss.str());
   }
 };
 
 template<>
-struct fmt::formatter<std::error_code> : fmt::formatter<std::string>
+struct std::formatter<std::error_code> : std::formatter<std::string>
 {
-  auto format(const std::error_code& e, fmt::format_context& ctx) const
+  auto format(const std::error_code& e, std::format_context& ctx) const
     -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "{}", e.message());
+    return std::format_to(ctx.out(), "{}", e.message());
   }
 };
 
 template<pars::ev::event_c event_t>
-struct fmt::formatter<std::shared_ptr<event_t>> : fmt::formatter<std::string>
+struct std::formatter<std::shared_ptr<event_t>> : std::formatter<std::string>
 {
-  auto format(const std::shared_ptr<event_t>& x, fmt::format_context& ctx) const
+  auto format(const std::shared_ptr<event_t>& x, std::format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (x)
-      return fmt::format_to(ctx.out(), "{}", *x);
+      return std::format_to(ctx.out(), "{}", *x);
     else
-      return fmt::format_to(ctx.out(), "<empty-shared_ptr>");
+      return std::format_to(ctx.out(), "<empty-shared_ptr>");
   }
 };

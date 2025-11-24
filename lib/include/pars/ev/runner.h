@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/job.h"
 
+#include <format>
 #include <functional>
 #include <future>
 #include <thread>
@@ -174,7 +175,7 @@ public:
   void associate_job_to_pipe(const int j_id, const int p_id)
   {
     if (j_id <= 0)
-      throw std::runtime_error(fmt::format("Job #{}: invalid Job!", p_id));
+      throw std::runtime_error(std::format("Job #{}: invalid Job!", p_id));
 
     if (p_id <= 0)
       return;

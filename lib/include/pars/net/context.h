@@ -37,6 +37,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/op.h"
 #include "pars/net/socket.h"
 
+#include <format>
+
 namespace pars::net
 {
 
@@ -89,9 +91,9 @@ public:
 
   const net::socket& sock() const { return sock_m; }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "context #{}", id());
+    return std::format_to(ctx.out(), "context #{}", id());
   }
 
 private:

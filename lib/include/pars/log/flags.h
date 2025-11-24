@@ -31,6 +31,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <spdlog/spdlog.h>
 
+#include <format>
+
 namespace pars
 {
 
@@ -96,7 +98,7 @@ struct lf
 } // namespace pars
 
 template<>
-struct fmt::formatter<::pars::lf> : formatter<std::string>
+struct std::formatter<::pars::lf> : formatter<std::string>
 {
   auto format(const ::pars::lf& flag, format_context& ctx) const
     -> decltype(ctx.out())
@@ -104,23 +106,23 @@ struct fmt::formatter<::pars::lf> : formatter<std::string>
     switch (flag)
     {
     case ::pars::lf::app:
-      return fmt::format_to(ctx.out(), "app");
+      return std::format_to(ctx.out(), "app");
     case ::pars::lf::comp:
-      return fmt::format_to(ctx.out(), "comp");
+      return std::format_to(ctx.out(), "comp");
     case ::pars::lf::event:
-      return fmt::format_to(ctx.out(), "event");
+      return std::format_to(ctx.out(), "event");
     case ::pars::lf::net:
-      return fmt::format_to(ctx.out(), "net");
+      return std::format_to(ctx.out(), "net");
     case ::pars::lf::user:
-      return fmt::format_to(ctx.out(), "user");
+      return std::format_to(ctx.out(), "user");
     default:
-      return fmt::format_to(ctx.out(), "<lf-{}>", static_cast<int>(flag));
+      return std::format_to(ctx.out(), "<lf-{}>", static_cast<int>(flag));
     }
   }
 };
 
 template<>
-struct fmt::formatter<::pars::f::lf> : formatter<std::string>
+struct std::formatter<::pars::f::lf> : formatter<std::string>
 {
   auto format(const ::pars::f::lf& flags, format_context& ctx) const
     -> decltype(ctx.out())
@@ -133,7 +135,7 @@ struct fmt::formatter<::pars::f::lf> : formatter<std::string>
       if (!(flags.val & f))
         continue;
 
-      it = fmt::format_to(it, " {}", f);
+      it = std::format_to(it, " {}", f);
     }
 
     return it;

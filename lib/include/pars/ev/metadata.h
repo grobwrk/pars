@@ -34,6 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/pipe.h"
 #include "pars/net/tool_view.h"
 
+#include <format>
 #include <stop_token>
 
 namespace pars::ev
@@ -62,9 +63,9 @@ struct base_internal_metadata
 
   int socket_id() const { return 0; }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "<internal-metadata>");
+    return std::format_to(ctx.out(), "<internal-metadata>");
   }
 };
 
@@ -83,10 +84,10 @@ struct base_network_metadata
 
   int socket_id() const { return id_m; }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
     // FIXME: duplicated
-    return fmt::format_to(ctx.out(), "Pipe #{:X} {} {}", pipe().id(),
+    return std::format_to(ctx.out(), "Pipe #{:X} {} {}", pipe().id(),
                           tool().who(), tool().id());
   }
 

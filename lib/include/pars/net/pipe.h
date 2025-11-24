@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/fmt/nng.h"
 
-#include <fmt/format.h>
+#include <format>
 
 namespace pars::net
 {
@@ -61,9 +61,9 @@ public:
 
   operator bool() { return nngxx::pipe_view::operator bool(); }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "{}",
+    return std::format_to(ctx.out(), "{}",
                           static_cast<nngxx::pipe_view>(*this));
   }
 

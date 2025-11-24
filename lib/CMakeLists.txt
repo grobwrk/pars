@@ -1,6 +1,5 @@
 find_package (Threads REQUIRED)
 find_package (nng CONFIG REQUIRED)
-find_package (fmt CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 
 # sorted please
@@ -98,7 +97,6 @@ target_sources (
 target_link_libraries (
     pars
     INTERFACE
-    fmt::fmt
     nng::nng
     spdlog::spdlog
 )

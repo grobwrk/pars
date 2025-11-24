@@ -39,6 +39,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/op.h"
 #include "pars/net/socket_opt.h"
 
+#include <format>
 #include <string_view>
 #include <vector>
 
@@ -60,7 +61,7 @@ static cmode cmode_from_string(const char* str)
   else if (str_view.compare("listen") == 0)
     return cmode::listen;
 
-  throw std::runtime_error(fmt::format("Unable to parse {} to CMODE", str));
+  throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
 }
 
 /**
@@ -150,9 +151,9 @@ public:
     return socket_m.proto_name().value_or("<not-found>");
   }
 
-  auto format_to(fmt::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return fmt::format_to(ctx.out(), "Socket #{}-{}", id(), proto_name());
+    return std::format_to(ctx.out(), "Socket #{}-{}", id(), proto_name());
   }
 
 private:

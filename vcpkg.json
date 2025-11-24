@@ -2,7 +2,6 @@
   "dependencies": [
     "cereal",
     "flatbuffers",
-    "fmt",
     "gtest",
     "nng",
     "spdlog"
