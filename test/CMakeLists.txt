@@ -1,8 +1,3 @@
-enable_testing ()
-
-find_package (GTest CONFIG REQUIRED)
-include (GoogleTest)
-
 set (
   PARS_TESTS
   "events-internal"

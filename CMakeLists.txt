@@ -49,5 +49,8 @@ endif ()
 # Add tests
 if (${PARS_BUILD_TESTS})
   enable_testing ()
+  find_package (GTest CONFIG REQUIRED)
+  include (GoogleTest)
+  enable_testing ()
   add_subdirectory (test)
 endif ()
