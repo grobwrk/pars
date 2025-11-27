@@ -98,7 +98,7 @@ struct state_machine
 
     for (const auto& e : expected)
       if (e != *expected.end())
-        states_str += fmt::format("{},", e);
+        states_str += std::format("{},", e);
       else
         states_str += std::format("{}", e);
 

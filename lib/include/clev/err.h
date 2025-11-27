@@ -33,6 +33,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <expected>
 #include <functional>
+#include <stdexcept>
+#include <system_error>
 
 namespace clev
 {
@@ -128,6 +130,8 @@ struct expected : public std::expected<value_t, std::error_code>
 {
 private:
   using parent = std::expected<value_t, std::error_code>;
+
+  using value_type = parent::value_type;
 
   using error_type = parent::error_type;
 

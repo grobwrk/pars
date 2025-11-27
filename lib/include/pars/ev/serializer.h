@@ -37,6 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <cereal/archives/binary.hpp>
 
+#include <cstring>
 #include <istream>
 #include <ostream>
 #include <spanstream>
@@ -67,11 +68,11 @@ struct serialize
     auto b = m.body();
 
     // 4. append the event hash
-    memcpy(b.data<char>(), &event_hash, sizeof(event_hash));
+    std::memcpy(b.data<char>(), &event_hash, sizeof(event_hash));
 
     // 5. append the serialized event
-    memcpy(b.data<char>() + sizeof(event_hash), serialization.data(),
-           serialization.size());
+    std::memcpy(b.data<char>() + sizeof(event_hash), serialization.data(),
+                serialization.size());
 
     pars::debug(SL, lf::event, "Serialized Event [{}] to Message [{}]", ev, m);
 

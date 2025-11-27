@@ -34,6 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/init.h"
 
 #include <cstddef>
+#include <cstring>
 #include <format>
 
 namespace pars
@@ -78,7 +79,7 @@ static std::size_t hash_from_msg(const nngxx::msg& m)
   std::size_t h;
   if (m)
     if (m.body().size() >= sizeof(h))
-      memcpy(&h, m.body().data<char>(), sizeof(h));
+      std::memcpy(&h, m.body().data<char>(), sizeof(h));
     else
       h = 0xffffffffffffffff;
   else

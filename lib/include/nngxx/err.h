@@ -119,6 +119,7 @@ make(ret_t (*f)(arg_t, args_t...), args_t... args) noexcept
 }
 
 template<typename ret_t, typename... args_t>
+  requires(!std::is_void_v<ret_t>)
 [[nodiscard]] inline clev::expected<void> invoke(ret_t (*f)(args_t...),
                                                  args_t... args) noexcept
 {
