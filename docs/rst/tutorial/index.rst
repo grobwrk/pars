@@ -4,12 +4,12 @@ Tutorial
 Create an application from scratch
 ..................................
 
-If you want to create an application that uses pars, you can conveniently use the ``pars-app-template``:
+If you want to create an application that uses pars, you can conveniently use the ``pars-cxx-template``:
 
 Using GitHub web
 ,,,,,,,,,,,,,,,,
 
-1. open https://github.com/grobx/pars-app-template
+1. open https://github.com/grobx/pars-cxx-template
 2. click on ``Use this template``
 3. then ``Create a new repository``
 4. complete the procedure by naming your repository
@@ -19,7 +19,7 @@ Using git
 ,,,,,,,,,
 
 1. create the repository somewhere, say it's ``git@somewhere:somebody/my-pars-app.git``
-2. clone the template ``git clone https://github.com/grobx/pars-app-template my-pars-app``
+2. clone the template ``git clone https://github.com/grobx/pars-cxx-template my-pars-app``
 3. change directory to it ``cd my-pars-app``
 4. set origin url ``git remote set-url origin git@somewhere:somebody/my-pars-app.git``
 5. push set upstream ``git push -u origin``
@@ -46,7 +46,7 @@ Add pars overlay to your project
 At the moment of writing the pars project is not yet published on the vcpkg repository. Follow these steps to add it as an overlay to your vcpkg base project:
 
 1. create the folder ``ports/pars``
-2. copy there the files ``portfile.cmake`` and ``vcpkg.json`` from the repository https://github.com/grobx/pars-app-template
+2. copy there the files ``portfile.cmake`` and ``vcpkg.json`` from the repository https://github.com/grobx/pars-cxx-template
 3. enable the overlay by adding it in the ``overlay-ports`` of the ``vcpkg-configuration.json`` file:
 
 .. code-block:: JSON

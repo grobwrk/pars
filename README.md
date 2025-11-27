@@ -2,7 +2,7 @@
 
 The **pars** C++23 framework.
 
-You can start developing a new pars application using the [pars-app-template](https://github.com/grobx/pars-app-template).
+You can start developing a new pars application using the [pars-cxx-template](https://github.com/grobx/pars-cxx-template).
 
 Documentation:
 
