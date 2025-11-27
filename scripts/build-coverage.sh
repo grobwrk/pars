@@ -8,7 +8,7 @@ preset=$1
 
 if [ ! -f opt/llvmcov2html/bin/llvmcov2html ]; then
 	cd opt/llvmcov2html
-	git clone https://github.com/neumannt/llvmcov2html.git .
+	git clone https://github.com/neumannt/llvmcov2html .
 	make
 	cd ../..
 fi
