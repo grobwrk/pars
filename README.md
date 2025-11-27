@@ -7,4 +7,4 @@ You can start developing a new pars application using the [pars-cxx-template](ht
 Documentation:
 
 - latest: [sphinx](https://grobx.github.io/pars-cxx/dev/sphinx), [doxygen](https://grobx.github.io/pars-cxx/dev/doxygen/html), [coverage](https://grobx.github.io/pars-cxx/dev/coverage)
-- v0.2.0: [sphinx](https://grobx.github.io/pars-cxx/v0.2.0/sphinx), [doxygen](https://grobx.github.io/pars-cxx/v0.2.0/doxygen/html), [coverage](https://grobx.github.io/pars-cxx/v0.2.0/coverage)
+- v0.2.1: [sphinx](https://grobx.github.io/pars-cxx/v0.2.1/sphinx), [doxygen](https://grobx.github.io/pars-cxx/v0.2.1/doxygen/html), [coverage](https://grobx.github.io/pars-cxx/v0.2.1/coverage)

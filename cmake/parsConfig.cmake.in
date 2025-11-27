@@ -4,7 +4,6 @@ set (pars_config_targets_file @pars_config_targets_file@)
 
 # set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
-find_package (fmt CONFIG REQUIRED)
 find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 
