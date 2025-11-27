@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">2</td>
@@ -66,7 +66,7 @@
              : */
              : #pragma once
              : 
-             : #include &lt;fmt/format.h&gt;
+             : #include &lt;format&gt;
              : 
              : namespace pars::net
              : {
@@ -80,12 +80,12 @@
              : }
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;::pars::net::dir&gt; : fmt::formatter&lt;std::string&gt;
+             : struct std::formatter&lt;::pars::net::dir&gt; : std::formatter&lt;std::string&gt;
              : {
-             :   auto format(const ::pars::net::dir&amp; d, fmt::format_context&amp; ctx) const
+             :   auto format(const ::pars::net::dir&amp; d, std::format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{}&quot;,</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;{}&quot;,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          d == ::pars::net::dir::in ? &quot;receiving&quot; : &quot;sending&quot;);</span>
              :   }
              : };

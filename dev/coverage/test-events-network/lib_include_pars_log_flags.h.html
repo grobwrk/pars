@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">26</td>
@@ -67,6 +67,8 @@
              : #pragma once
              : 
              : #include &lt;spdlog/spdlog.h&gt;
+             : 
+             : #include &lt;format&gt;
              : 
              : namespace pars
              : {
@@ -133,7 +135,7 @@
              : } // namespace pars
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;::pars::lf&gt; : formatter&lt;std::string&gt;
+             : struct std::formatter&lt;::pars::lf&gt; : formatter&lt;std::string&gt;
              : {
              :   auto format(const ::pars::lf&amp; flag, format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
@@ -141,23 +143,23 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    switch (flag)</span>
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::app:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;app&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;app&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::comp:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;comp&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;comp&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::event:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;event&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;event&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::net:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;net&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;net&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    case ::pars::lf::user:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;user&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;user&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    default:</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;&lt;lf-{}&gt;&quot;, static_cast&lt;int&gt;(flag));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;&lt;lf-{}&gt;&quot;, static_cast&lt;int&gt;(flag));</span>
              :     }
              :   }
              : };
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;::pars::f::lf&gt; : formatter&lt;std::string&gt;
+             : struct std::formatter&lt;::pars::f::lf&gt; : formatter&lt;std::string&gt;
              : {
              :   auto format(const ::pars::f::lf&amp; flags, format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
@@ -170,7 +172,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (!(flags.val &amp; f))</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        continue;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      it = fmt::format_to(it, &quot; {}&quot;, f);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      it = std::format_to(it, &quot; {}&quot;, f);</span>
              :     }
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return it;</span>

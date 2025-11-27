@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" line="92" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" bodystart="92" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="92" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="92" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-attrib">
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" line="96" column="37" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="96" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="96" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -73,7 +73,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" line="90" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/kind.h" bodystart="91" bodyend="98"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="90" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="91" bodyend="98"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1a448090447eea5d1c905012e65eed5628" prot="public" virt="non-virtual"><scope>pars::ev::fired&lt; event_t &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1ace11a04bca0c29a955ead1497a7d1c5f" prot="public" virt="non-virtual"><scope>pars::ev::fired&lt; event_t &gt;</scope><name>uuid</name></member>

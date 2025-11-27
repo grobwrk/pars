@@ -16,8 +16,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="73" column="22" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="73" bodyend="-1"/>
-        <referencedby refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="75" endline="78">pipe_resource</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="74" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="76" endline="79">pipe_resource</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="89" column="17" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="89" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="90" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="90" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -53,8 +53,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="75" column="3" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="75" bodyend="78"/>
-        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a7b6c7b0c3fbe8e28855ba1af3679b217" compoundref="common_8h" startline="73">state</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="76" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="76" bodyend="79"/>
+        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a7b6c7b0c3fbe8e28855ba1af3679b217" compoundref="common_8h" startline="74">state</references>
         <referencedby refid="structpars__example_1_1resource_1_1pipe__resource_1a1c506cd95e11ea614c1b866cd508f353">pipe_resource</referencedby>
         <referencedby refid="structpars__example_1_1resource_1_1pipe__resource_1aa733ea2100d3c902c9b6342fd4301fd6">pipe_resource</referencedby>
       </memberdef>
@@ -73,8 +73,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="80" column="3"/>
-        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="75" endline="78">pipe_resource</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="81" column="3"/>
+        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="76" endline="79">pipe_resource</references>
       </memberdef>
       <memberdef kind="function" id="structpars__example_1_1resource_1_1pipe__resource_1aa733ea2100d3c902c9b6342fd4301fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -91,8 +91,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="82" column="3"/>
-        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="75" endline="78">pipe_resource</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="83" column="3"/>
+        <references refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" compoundref="common_8h" startline="76" endline="79">pipe_resource</references>
       </memberdef>
       <memberdef kind="function" id="structpars__example_1_1resource_1_1pipe__resource_1a4ea9dff649a7419b4c4c4af19a7f4767" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="84" column="8" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="84" bodyend="84"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="85" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="85" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="structpars__example_1_1resource_1_1pipe__resource_1acf5cf594b1ec3da92b861bf645887bbe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="classpars_1_1net_1_1tool__view" kindref="compound">net::tool_view</ref> &amp;</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/common.h" line="86" column="24" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="86" bodyend="86"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="87" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="87" bodyend="87"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -144,7 +144,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/example/common.h" line="71" column="1" bodyfile="/home/runner/work/pars/pars/example/common.h" bodystart="72" bodyend="90"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="72" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="73" bodyend="91"/>
     <listofallmembers>
       <member refid="structpars__example_1_1resource_1_1pipe__resource_1acf5cf594b1ec3da92b861bf645887bbe" prot="public" virt="non-virtual"><scope>pars_example::resource::pipe_resource</scope><name>load_tool</name></member>
       <member refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" prot="public" virt="non-virtual"><scope>pars_example::resource::pipe_resource</scope><name>pipe_resource</name></member>

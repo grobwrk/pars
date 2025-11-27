@@ -117,7 +117,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h" line="79" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/kind_base.h" bodystart="80" bodyend="82"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="79" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="80" bodyend="82"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1common__kind_1a23e499a282cc1c382b4e89091c13e1c0" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>as_tuple</name></member>
       <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>common_kind</name></member>

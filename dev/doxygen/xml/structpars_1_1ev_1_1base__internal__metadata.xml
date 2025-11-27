@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="61" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="61" bodyend="61"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" line="62" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" bodystart="62" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1base__internal__metadata_1af2252340bb476d355c220d75a4091072" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -32,16 +32,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="63" column="7" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="63" bodyend="63"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" line="64" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" bodystart="64" bodyend="64"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1base__internal__metadata_1a8c00558082735e50994677efc599bd6d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1base__internal__metadata_1a818502406ce5b9a481b6e39d5a899d88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
         <definition>decltype(ctx.out()) pars::ev::base_internal_metadata::format_to</definition>
-        <argsstring>(fmt::format_context &amp;ctx) const</argsstring>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
         <name>format_to</name>
         <qualifiedname>pars::ev::base_internal_metadata::format_to</qualifiedname>
         <param>
-          <type>fmt::format_context &amp;</type>
+          <type>std::format_context &amp;</type>
           <declname>ctx</declname>
         </param>
         <briefdescription>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="65" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="65" bodyend="68"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" line="66" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" bodystart="66" bodyend="69"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -71,10 +71,10 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" line="59" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/metadata.h" bodystart="60" bodyend="69"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" line="60" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h" bodystart="61" bodyend="70"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1base__internal__metadata_1acf22900ab6acdaf6b81bdbf338b5f60a" prot="public" virt="non-virtual"><scope>pars::ev::base_internal_metadata</scope><name>base_internal_metadata</name></member>
-      <member refid="structpars_1_1ev_1_1base__internal__metadata_1a8c00558082735e50994677efc599bd6d" prot="public" virt="non-virtual"><scope>pars::ev::base_internal_metadata</scope><name>format_to</name></member>
+      <member refid="structpars_1_1ev_1_1base__internal__metadata_1a818502406ce5b9a481b6e39d5a899d88" prot="public" virt="non-virtual"><scope>pars::ev::base_internal_metadata</scope><name>format_to</name></member>
       <member refid="structpars_1_1ev_1_1base__internal__metadata_1af2252340bb476d355c220d75a4091072" prot="public" virt="non-virtual"><scope>pars::ev::base_internal_metadata</scope><name>socket_id</name></member>
     </listofallmembers>
   </compounddef>

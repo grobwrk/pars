@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: /home/runner/work/pars/pars/lib/include/nngxx/iface/ctx.h Source File</title>
+<title>pars: /home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/iface/ctx.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -140,7 +140,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> clev::expected&lt;void&gt; destroy(nng_ctx v) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_ctx_close, v);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_ctx_close, v);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">int</span> id() const noexcept { <span class="keywordflow">return</span> nng_ctx_id(v); }</div>
@@ -151,15 +151,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  [[nodiscard]] <span class="keyword">inline</span> clev::expected&lt;void&gt; open(<a class="code hl_typedef" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a>&amp; s) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_ctx_open, &amp;v, <span class="keyword">static_cast&lt;</span>nng_socket<span class="keyword">&gt;</span>(s));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_ctx_open, &amp;v, <span class="keyword">static_cast&lt;</span>nng_socket<span class="keyword">&gt;</span>(s));</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">static_assert</span>(<a class="code hl_variable" href="nngxx_2socket_8h.html#ad5405cb6988304b4819775b78f6c4acc">nngxx_socket_is_really_needed_v</a>);</div>
 <div class="ttc" id="aaio_8h_html"><div class="ttname"><a href="aio_8h.html">aio.h</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a8a6b6659b84f0d49b6edf6571a929204"><div class="ttname"><a href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00123">err.h:123</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="socket__decl_8h_source.html#l00043">socket_decl.h:43</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_af14b9374b5e7ac4007d33f4012ac3026"><div class="ttname"><a href="namespacenngxx.html#af14b9374b5e7ac4007d33f4012ac3026">nngxx::aio_view</a></div><div class="ttdeci">clev::iface&lt; nng_aio * &gt; aio_view</div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00037">aio.h:37</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_af463ca8974bbbe1f8cfabfd2bbda605d"><div class="ttname"><a href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00123">err.h:123</a></div></div>
 <div class="ttc" id="anngxx_2iface_2value_8h_html"><div class="ttname"><a href="nngxx_2iface_2value_8h.html">value.h</a></div></div>
 <div class="ttc" id="anngxx_2socket_8h_html"><div class="ttname"><a href="nngxx_2socket_8h.html">socket.h</a></div></div>
 <div class="ttc" id="anngxx_2socket_8h_html_ad5405cb6988304b4819775b78f6c4acc"><div class="ttname"><a href="nngxx_2socket_8h.html#ad5405cb6988304b4819775b78f6c4acc">nngxx_socket_is_really_needed_v</a></div><div class="ttdeci">constexpr bool nngxx_socket_is_really_needed_v</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2socket_8h_source.html#l00090">socket.h:90</a></div></div>

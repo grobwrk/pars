@@ -7,10 +7,10 @@
     <includes local="no">optional</includes>
     <includes local="no">stdexcept</includes>
     <includes local="no">stop_token</includes>
-    <includedby refid="server__backend_8cpp" local="yes">/home/runner/work/pars/pars/example/server_backend.cpp</includedby>
+    <includedby refid="server__backend_8cpp" local="yes">/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/runner/work/pars/pars/example/fib.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/fib.h</label>
         <link refid="fib_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -74,13 +74,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1">
-        <label>/home/runner/work/pars/pars/example/fib.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/fib.h</label>
         <link refid="fib_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
     </invincdepgraph>
@@ -182,6 +182,6 @@
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars_example::compute</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/example/fib.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/fib.h"/>
   </compounddef>
 </doxygen>

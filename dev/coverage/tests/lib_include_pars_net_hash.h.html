@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">27</td>
@@ -70,9 +70,9 @@
              : 
              : #include &quot;pars/init.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
-             : 
              : #include &lt;cstddef&gt;
+             : #include &lt;cstring&gt;
+             : #include &lt;format&gt;
              : 
              : namespace pars
              : {
@@ -89,7 +89,7 @@
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (uuid[i] != '-')</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      throw std::runtime_error(</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        fmt::format(&quot;Invalid UUID [missing separator {}]&quot;, i));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        std::format(&quot;Invalid UUID [missing separator {}]&quot;, i));</span>
              :   }
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::uint64_t result{0xcbf29ce484222325};</span>
@@ -116,7 +116,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  std::size_t h;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  if (m)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (m.body().size() &gt;= sizeof(h))</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      memcpy(&amp;h, m.body().data&lt;char&gt;(), sizeof(h));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::memcpy(&amp;h, m.body().data&lt;char&gt;(), sizeof(h));</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      h = 0xffffffffffffffff;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else</span>

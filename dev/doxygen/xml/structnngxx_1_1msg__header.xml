@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="50" column="11" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" line="50" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="39" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="39" bodyend="42"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" line="39" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__header_1a5b119a683d9b771ff7f776ff16482af2" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -50,14 +50,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="44" column="23" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="44" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" line="44" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" bodystart="44" bodyend="47"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/nngxx/msg_header.h" bodystart="38" bodyend="51"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h" bodystart="38" bodyend="51"/>
     <listofallmembers>
       <member refid="structnngxx_1_1msg__header_1a195781d06ebae36420aa72c2c98f7224" prot="private" virt="non-virtual"><scope>nngxx::msg_header</scope><name>m</name></member>
       <member refid="structnngxx_1_1msg__header_1aac53caeeb370e479a0283d120df01588" prot="public" virt="non-virtual"><scope>nngxx::msg_header</scope><name>msg_header</name></member>

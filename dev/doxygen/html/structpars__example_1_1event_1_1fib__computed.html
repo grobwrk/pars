@@ -100,8 +100,8 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a67b830ff9d196f34a0604ea0c0860781" id="r_a67b830ff9d196f34a0604ea0c0860781"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67b830ff9d196f34a0604ea0c0860781">format_to</a> (fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
-<tr class="separator:a67b830ff9d196f34a0604ea0c0860781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71aa2b355c23990d939375a9c4598af" id="r_ad71aa2b355c23990d939375a9c4598af"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad71aa2b355c23990d939375a9c4598af">format_to</a> (std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
+<tr class="separator:ad71aa2b355c23990d939375a9c4598af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -112,10 +112,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00056">56</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00057">57</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a67b830ff9d196f34a0604ea0c0860781" name="a67b830ff9d196f34a0604ea0c0860781"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b830ff9d196f34a0604ea0c0860781">&#9670;&#160;</a></span>format_to()</h2>
+<a id="ad71aa2b355c23990d939375a9c4598af" name="ad71aa2b355c23990d939375a9c4598af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71aa2b355c23990d939375a9c4598af">&#9670;&#160;</a></span>format_to()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +126,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">auto pars_example::event::fib_computed::format_to </td>
           <td>(</td>
-          <td class="paramtype">fmt::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype">std::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td> const -&gt; decltype(ctx.out())
   </td>
         </tr>
@@ -138,15 +138,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00061">61</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>  {</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> fmt::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;fib_computed({},{})&quot;</span>, <a class="code hl_variable" href="#a71cc7067474b9f96bc401f177b1db751">work_id</a>, <a class="code hl_variable" href="#a692ef626880a828ff4e338951b508f3f">fib_n</a>);</div>
-<div class="line"><span class="lineno">   64</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00062">62</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>  {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;fib_computed({},{})&quot;</span>, <a class="code hl_variable" href="#a71cc7067474b9f96bc401f177b1db751">work_id</a>, <a class="code hl_variable" href="#a692ef626880a828ff4e338951b508f3f">fib_n</a>);</div>
+<div class="line"><span class="lineno">   65</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
-<div class="ttc" id="astructpars__example_1_1event_1_1fib__computed_html_a692ef626880a828ff4e338951b508f3f"><div class="ttname"><a href="#a692ef626880a828ff4e338951b508f3f">pars_example::event::fib_computed::fib_n</a></div><div class="ttdeci">uint64_t fib_n</div><div class="ttdef"><b>Definition</b> <a href="example_2event_8h_source.html#l00059">event.h:59</a></div></div>
-<div class="ttc" id="astructpars__example_1_1event_1_1fib__computed_html_a71cc7067474b9f96bc401f177b1db751"><div class="ttname"><a href="#a71cc7067474b9f96bc401f177b1db751">pars_example::event::fib_computed::work_id</a></div><div class="ttdeci">std::size_t work_id</div><div class="ttdef"><b>Definition</b> <a href="example_2event_8h_source.html#l00058">event.h:58</a></div></div>
+<div class="ttc" id="astructpars__example_1_1event_1_1fib__computed_html_a692ef626880a828ff4e338951b508f3f"><div class="ttname"><a href="#a692ef626880a828ff4e338951b508f3f">pars_example::event::fib_computed::fib_n</a></div><div class="ttdeci">uint64_t fib_n</div><div class="ttdef"><b>Definition</b> <a href="example_2event_8h_source.html#l00060">event.h:60</a></div></div>
+<div class="ttc" id="astructpars__example_1_1event_1_1fib__computed_html_a71cc7067474b9f96bc401f177b1db751"><div class="ttname"><a href="#a71cc7067474b9f96bc401f177b1db751">pars_example::event::fib_computed::work_id</a></div><div class="ttdeci">std::size_t work_id</div><div class="ttdef"><b>Definition</b> <a href="example_2event_8h_source.html#l00059">event.h:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="example_2event_8h_source.html#l00059">fib_n</a>, and <a class="el" href="example_2event_8h_source.html#l00058">work_id</a>.</p>
+<p class="reference">References <a class="el" href="example_2event_8h_source.html#l00060">fib_n</a>, and <a class="el" href="example_2event_8h_source.html#l00059">work_id</a>.</p>
 
 </div>
 </div>
@@ -163,9 +163,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00059">59</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00060">60</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="example_2event_8h_source.html#l00061">format_to()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="example_2event_8h_source.html#l00062">format_to()</a>.</p>
 
 </div>
 </div>
@@ -181,14 +181,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00058">58</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00059">59</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="example_2event_8h_source.html#l00061">format_to()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="example_2event_8h_source.html#l00062">format_to()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/pars/pars/example/<a class="el" href="example_2event_8h_source.html">event.h</a></li>
+<li>/home/runner/work/pars-cxx/pars-cxx/example/<a class="el" href="example_2event_8h_source.html">event.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

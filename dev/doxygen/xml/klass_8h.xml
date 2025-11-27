@@ -6,11 +6,11 @@
     <includes refid="concept_2kind_8h" local="yes">pars/concept/kind.h</includes>
     <includes refid="hash_8h" local="yes">pars/net/hash.h</includes>
     <includes local="no">string_view</includes>
-    <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/event.h</includedby>
-    <includedby refid="ev_2kind_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/kind.h</includedby>
-    <includedby refid="serializer_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</includedby>
-    <includedby refid="spec_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</includedby>
-    <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
+    <includedby refid="lib_2include_2pars_2ev_2event_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h</includedby>
+    <includedby refid="ev_2kind_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h</includedby>
+    <includedby refid="serializer_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h</includedby>
+    <includedby refid="spec_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/spec.h</includedby>
+    <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="6">
         <label>clev/err.h</label>
@@ -23,8 +23,10 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -33,26 +35,26 @@
         <link refid="own_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
         <childnode refid="6" relation="include">
@@ -61,27 +63,25 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
       </node>
       <node id="3">
         <label>nngxx/iface/msg.h</label>
         <link refid="iface_2msg_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -89,17 +89,17 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -108,160 +108,171 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="32">
         <label>nngxx/msg_body.h</label>
         <link refid="msg__body_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>nngxx/opt_getter.h</label>
-        <link refid="opt__getter_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
+      <node id="20">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>nngxx/pipe.h</label>
         <link refid="nngxx_2pipe_8h"/>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>nngxx/socket_decl.h</label>
-        <link refid="socket__decl_8h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="25">
-        <label>pars/concept/event.h</label>
-        <link refid="lib_2include_2pars_2concept_2event_8h"/>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="24">
-        <label>pars/concept/kind.h</label>
-        <link refid="concept_2kind_8h"/>
-        <childnode refid="25" relation="include">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="26">
-        <label>pars/ev/kind_decl.h</label>
-        <link refid="kind__decl_8h"/>
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
       </node>
+      <node id="27">
+        <label>pars/ev/kind_decl.h</label>
+        <link refid="kind__decl_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/klass.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h</label>
         <link refid="klass_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pars/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="27">
-        <label>pars/init.h</label>
-        <link refid="init_8h"/>
-        <childnode refid="8" relation="include">
+      <node id="31">
+        <label>pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-      </node>
-      <node id="30">
-        <label>pars/net/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="31" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
-        </childnode>
-      </node>
-      <node id="28">
-        <label>chrono</label>
-      </node>
-      <node id="13">
-        <label>concepts</label>
-      </node>
-      <node id="32">
-        <label>cstddef</label>
-      </node>
-      <node id="9">
-        <label>expected</label>
-      </node>
-      <node id="7">
-        <label>fmt/format.h</label>
-      </node>
-      <node id="10">
-        <label>functional</label>
-      </node>
-      <node id="8">
-        <label>nng/nng.h</label>
-      </node>
-      <node id="16">
-        <label>nng/protocol/reqrep0/req.h</label>
       </node>
       <node id="29">
+        <label>chrono</label>
+      </node>
+      <node id="14">
+        <label>concepts</label>
+      </node>
+      <node id="33">
+        <label>cstddef</label>
+      </node>
+      <node id="34">
+        <label>cstring</label>
+      </node>
+      <node id="8">
+        <label>expected</label>
+      </node>
+      <node id="35">
+        <label>format</label>
+      </node>
+      <node id="9">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="17">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="10">
+        <label>stdexcept</label>
+      </node>
+      <node id="30">
         <label>string_view</label>
       </node>
-      <node id="20">
+      <node id="11">
+        <label>system_error</label>
+      </node>
+      <node id="21">
         <label>type_traits</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="8">
-        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="6">
-        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/common.h</label>
         <link refid="common_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="7">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
@@ -269,29 +280,29 @@
         </childnode>
       </node>
       <node id="9">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/runner/work/pars/pars/lib/include/pars/app/single.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h</label>
         <link refid="single_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="11">
-        <label>/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</label>
         <link refid="backend_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="12">
-        <label>/home/runner/work/pars/pars/lib/include/pars/comp/client.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h</label>
         <link refid="client_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/dispatcher.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/dispatcher.h</label>
         <link refid="dispatcher_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -301,7 +312,7 @@
         </childnode>
       </node>
       <node id="10">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/enqueuer.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/enqueuer.h</label>
         <link refid="enqueuer_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -327,7 +338,7 @@
         </childnode>
       </node>
       <node id="2">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h</label>
         <link refid="lib_2include_2pars_2ev_2event_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -343,7 +354,7 @@
         </childnode>
       </node>
       <node id="26">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/hf_registry.h</label>
         <link refid="hf__registry_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -359,7 +370,7 @@
         </childnode>
       </node>
       <node id="22">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/hf_registry__insert.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/hf_registry__insert.h</label>
         <link refid="hf__registry____insert_8h"/>
         <childnode refid="19" relation="include">
         </childnode>
@@ -373,7 +384,7 @@
         </childnode>
       </node>
       <node id="25">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/job.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h</label>
         <link refid="job_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -385,7 +396,7 @@
         </childnode>
       </node>
       <node id="24">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/kind.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h</label>
         <link refid="ev_2kind_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -395,7 +406,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/klass.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h</label>
         <link refid="klass_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -409,7 +420,7 @@
         </childnode>
       </node>
       <node id="21">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/runner.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h</label>
         <link refid="runner_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -423,7 +434,7 @@
         </childnode>
       </node>
       <node id="27">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/serializer.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
@@ -433,7 +444,7 @@
         </childnode>
       </node>
       <node id="28">
-        <label>/home/runner/work/pars/pars/lib/include/pars/ev/spec.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
         <childnode refid="26" relation="include">
         </childnode>
@@ -443,13 +454,13 @@
         </childnode>
       </node>
       <node id="23">
-        <label>/home/runner/work/pars/pars/lib/include/pars/fmt/stl.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h</label>
         <link refid="stl_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="13">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/context.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context.h</label>
         <link refid="context_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
@@ -457,7 +468,7 @@
         </childnode>
       </node>
       <node id="14">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h</label>
         <link refid="context__registry_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
@@ -467,7 +478,7 @@
         </childnode>
       </node>
       <node id="17">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/op.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h</label>
         <link refid="op_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
@@ -477,19 +488,19 @@
         </childnode>
       </node>
       <node id="19">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pull.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pull.h</label>
         <link refid="pull_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="20">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/push.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/push.h</label>
         <link refid="push_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="15">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/rep.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</label>
         <link refid="rep_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
@@ -497,7 +508,7 @@
         </childnode>
       </node>
       <node id="16">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/req.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</label>
         <link refid="req_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
@@ -505,7 +516,7 @@
         </childnode>
       </node>
       <node id="18">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
@@ -523,7 +534,7 @@
         </childnode>
       </node>
       <node id="5">
-        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</label>
         <link refid="pars_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -649,6 +660,6 @@
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h"/>
   </compounddef>
 </doxygen>

@@ -5,10 +5,10 @@
     <includes refid="init_8h" local="yes">pars/init.h</includes>
     <includes local="no">concepts</includes>
     <includes local="no">functional</includes>
-    <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
+    <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/concept/hashable.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h</label>
         <link refid="hashable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -40,17 +40,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="5">
-        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="3">
-        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/common.h</label>
         <link refid="common_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -58,17 +58,17 @@
         </childnode>
       </node>
       <node id="6">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/concept/hashable.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h</label>
         <link refid="hashable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</label>
         <link refid="pars_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -131,6 +131,6 @@
 <codeline lineno="47" refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kindref="member">value_type</ref>&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.hash();<sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/hashable.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h"/>
   </compounddef>
 </doxygen>

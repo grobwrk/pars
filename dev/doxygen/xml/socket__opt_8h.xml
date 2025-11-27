@@ -5,10 +5,10 @@
     <includes refid="init_8h" local="yes">pars/init.h</includes>
     <includes local="no">nng/nng.h</includes>
     <includes local="no">optional</includes>
-    <includedby refid="backend_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</includedby>
-    <includedby refid="client_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/comp/client.h</includedby>
-    <includedby refid="pars_2net_2socket_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/net/socket.h</includedby>
-    <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
+    <includedby refid="backend_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</includedby>
+    <includedby refid="client_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h</includedby>
+    <includedby refid="pars_2net_2socket_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</includedby>
+    <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="2">
         <label>pars/init.h</label>
@@ -19,7 +19,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h</label>
         <link refid="socket__opt_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -40,17 +40,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="6">
-        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/common.h</label>
         <link refid="common_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -58,23 +58,23 @@
         </childnode>
       </node>
       <node id="7">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
       <node id="2">
-        <label>/home/runner/work/pars/pars/lib/include/pars/comp/backend.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</label>
         <link refid="backend_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>/home/runner/work/pars/pars/lib/include/pars/comp/client.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h</label>
         <link refid="client_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="10">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/context.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context.h</label>
         <link refid="context_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
@@ -82,7 +82,7 @@
         </childnode>
       </node>
       <node id="11">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/context_registry.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h</label>
         <link refid="context__registry_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
@@ -92,19 +92,19 @@
         </childnode>
       </node>
       <node id="14">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/pull.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pull.h</label>
         <link refid="pull_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="15">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/push.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/push.h</label>
         <link refid="push_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="12">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/rep.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</label>
         <link refid="rep_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -112,7 +112,7 @@
         </childnode>
       </node>
       <node id="13">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/req.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</label>
         <link refid="req_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
@@ -120,7 +120,7 @@
         </childnode>
       </node>
       <node id="9">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
@@ -138,7 +138,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h</label>
         <link refid="socket__opt_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -150,7 +150,7 @@
         </childnode>
       </node>
       <node id="3">
-        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</label>
         <link refid="pars_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -219,6 +219,6 @@
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket_opt.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h"/>
   </compounddef>
 </doxygen>

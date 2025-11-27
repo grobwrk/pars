@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">12</td>
@@ -74,6 +74,7 @@
              : #include &quot;pars/ev/spec.h&quot;
              : 
              : #include &lt;any&gt;
+             : #include &lt;format&gt;
              : #include &lt;type_traits&gt;
              : 
              : namespace pars::ev
@@ -128,9 +129,9 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   std::size_t spec_hash() const <span class="lineNoCov">{ return spec_hash_m; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;spec:0x{:X}&quot;, spec_hash());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;spec:0x{:X}&quot;, spec_hash());</span>
              :   }
              : 
 <span class="lineNoCov">      0 / 1 </span> :   void set_id(std::size_t id) <span class="lineNoCov">{ id_m = id; }</span>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: /home/runner/work/pars/pars/lib/include/pars/net/pipe.h Source File</title>
+<title>pars: /home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -127,7 +127,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="nng_8h.html">pars/fmt/nng.h</a>&quot;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
@@ -160,9 +160,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1pipe.html#afb345e75cb7c7604d433373f45fbe6ee">   62</a></span>  <span class="keyword">operator</span> bool() { <span class="keywordflow">return</span> nngxx::pipe_view::operator bool(); }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1pipe.html#a808dda688a244d875dfbbd19e05a74ba">   64</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classpars_1_1net_1_1pipe.html#a808dda688a244d875dfbbd19e05a74ba">format_to</a>(fmt::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1pipe.html#a8eaace5aedaac3e6c62c0a9a9c25065e">   64</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classpars_1_1net_1_1pipe.html#a8eaace5aedaac3e6c62c0a9a9c25065e">format_to</a>(std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a><span class="keyword">&gt;</span>(*<span class="keyword">this</span>));</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
 </div>
@@ -176,8 +176,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace pars::net</span></div>
 <div class="ttc" id="aclasspars_1_1net_1_1pipe_html_a1e8d61f123efea7d9656bd7bcefbbc65"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#a1e8d61f123efea7d9656bd7bcefbbc65">pars::net::pipe::id</a></div><div class="ttdeci">int id() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00058">pipe.h:58</a></div></div>
-<div class="ttc" id="aclasspars_1_1net_1_1pipe_html_a808dda688a244d875dfbbd19e05a74ba"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#a808dda688a244d875dfbbd19e05a74ba">pars::net::pipe::format_to</a></div><div class="ttdeci">auto format_to(fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00064">pipe.h:64</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1pipe_html_a8a0d6c9a0c02551f4d4498659984c4d3"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#a8a0d6c9a0c02551f4d4498659984c4d3">pars::net::pipe::pipe</a></div><div class="ttdeci">pipe(nngxx::pipe_view &amp;pv) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00051">pipe.h:51</a></div></div>
+<div class="ttc" id="aclasspars_1_1net_1_1pipe_html_a8eaace5aedaac3e6c62c0a9a9c25065e"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#a8eaace5aedaac3e6c62c0a9a9c25065e">pars::net::pipe::format_to</a></div><div class="ttdeci">auto format_to(std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00064">pipe.h:64</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1pipe_html_ab1ca71a4da0bf477ca46e1b68c35db54"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#ab1ca71a4da0bf477ca46e1b68c35db54">pars::net::pipe::socket_id</a></div><div class="ttdeci">int socket_id() const</div><div class="ttdef"><b>Definition</b> <a href="#l00060">pipe.h:60</a></div></div>
 <div class="ttc" id="aclasspars_1_1net_1_1pipe_html_ab231de0a3773ad95409c1b9626acdc06"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html#ab231de0a3773ad95409c1b9626acdc06">pars::net::pipe::pipe</a></div><div class="ttdeci">pipe()</div><div class="ttdef"><b>Definition</b> <a href="#l00045">pipe.h:45</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_aafdaa64936251b53768712113f7c3e18"><div class="ttname"><a href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a></div><div class="ttdeci">clev::iface&lt; nng_pipe &gt; pipe_view</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2pipe_8h_source.html#l00037">pipe.h:37</a></div></div>

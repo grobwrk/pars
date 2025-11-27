@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: /home/runner/work/pars/pars/lib/include/nngxx/iface/aio.h Source File</title>
+<title>pars: /home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/iface/aio.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -137,7 +137,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_struct" href="structclev_1_1expected.html">clev::expected&lt;void&gt;</a> destroy(nng_aio* v) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_aio_free, v);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_aio_free, v);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_struct" href="structclev_1_1expected.html">clev::expected&lt;nng_aio*&gt;</a> alloc(<span class="keywordtype">void</span> (*cb)(<span class="keywordtype">void</span>*),</div>
@@ -168,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  [[nodiscard]] <span class="keyword">inline</span> <a class="code hl_struct" href="structclev_1_1expected.html">clev::expected&lt;void&gt;</a> result() const noexcept</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a>(nng_aio_result, v);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_aio_result, v);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> set_msg(<a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a> m) <span class="keyword">noexcept</span></div>
@@ -178,12 +178,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
 <div class="ttc" id="amsg_8h_html"><div class="ttname"><a href="msg_8h.html">msg.h</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_a4357aed4c68a9f7703914455abf07879"><div class="ttname"><a href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a></div><div class="ttdeci">clev::own&lt; nng_msg * &gt; msg</div><div class="ttdef"><b>Definition</b> <a href="msg_8h_source.html#l00039">msg.h:39</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a6dcda4e7167a6344f7a17aff3428a0f7"><div class="ttname"><a href="namespacenngxx.html#a6dcda4e7167a6344f7a17aff3428a0f7">nngxx::make</a></div><div class="ttdeci">clev::expected&lt; std::remove_pointer_t&lt; arg_t &gt; &gt; make(ret_t(*f)(arg_t, args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00115">err.h:115</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a8a6b6659b84f0d49b6edf6571a929204"><div class="ttname"><a href="namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00123">err.h:123</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_aa5f67031328417cc6203a01a3d688108"><div class="ttname"><a href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108">nngxx::err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00074">err.h:75</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a6dcda4e7167a6344f7a17aff3428a0f7"><div class="ttname"><a href="namespacenngxx.html#a6dcda4e7167a6344f7a17aff3428a0f7">nngxx::make</a></div><div class="ttdeci">clev::expected&lt; std::remove_pointer_t&lt; arg_t &gt; &gt; make(ret_t(*f)(arg_t, args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00114">err.h:114</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_aa5f67031328417cc6203a01a3d688108"><div class="ttname"><a href="namespacenngxx.html#aa5f67031328417cc6203a01a3d688108">nngxx::err</a></div><div class="ttdeci">err</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00073">err.h:74</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_af463ca8974bbbe1f8cfabfd2bbda605d"><div class="ttname"><a href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00123">err.h:123</a></div></div>
 <div class="ttc" id="anngxx_2err_8h_html"><div class="ttname"><a href="nngxx_2err_8h.html">err.h</a></div></div>
 <div class="ttc" id="anngxx_2iface_2value_8h_html"><div class="ttname"><a href="nngxx_2iface_2value_8h.html">value.h</a></div></div>
-<div class="ttc" id="astructclev_1_1expected_html"><div class="ttname"><a href="structclev_1_1expected.html">clev::expected</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00127">err.h:128</a></div></div>
+<div class="ttc" id="astructclev_1_1expected_html"><div class="ttname"><a href="structclev_1_1expected.html">clev::expected</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00129">err.h:130</a></div></div>
 <div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00036">iface.h:36</a></div></div>
 <div class="ttc" id="astructclev_1_1value_html_ab6f7f8f6624b75975fa76bfc61e51689"><div class="ttname"><a href="structclev_1_1value.html#ab6f7f8f6624b75975fa76bfc61e51689">clev::value::value</a></div><div class="ttdeci">value() noexcept</div><div class="ttdef"><b>Definition</b> <a href="clev_2value_8h_source.html#l00047">value.h:47</a></div></div>
 <div class="ttc" id="astructnngxx_1_1value_html"><div class="ttname"><a href="structnngxx_1_1value.html">nngxx::value</a></div><div class="ttdef"><b>Definition</b> <a href="nngxx_2iface_2value_8h_source.html#l00045">value.h:46</a></div></div>

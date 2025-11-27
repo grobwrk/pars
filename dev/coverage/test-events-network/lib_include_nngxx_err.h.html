@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">12</td>
@@ -68,7 +68,6 @@
              : 
              : #include &quot;clev/err.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
              : #include &lt;nng/nng.h&gt;
              : 
              : #include &lt;expected&gt;
@@ -157,6 +156,7 @@
              : }
              : 
              : template&lt;typename ret_t, typename... args_t&gt;
+             :   requires(!std::is_void_v&lt;ret_t&gt;)
              : [[nodiscard]] inline clev::expected&lt;void&gt; invoke(ret_t (*f)(args_t...),
              :                                                  args_t... args) noexcept
              : {

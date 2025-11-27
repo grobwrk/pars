@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="40" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" bodystart="40" bodyend="43"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="40" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" bodystart="40" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1with__default__setup_1a4763ca936de88cf86d069121db19453a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="45" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" bodystart="45" bodyend="48"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="45" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" bodystart="45" bodyend="48"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="51" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" bodystart="51" bodyend="54"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="51" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -66,8 +66,8 @@
 <para>sinks</para>
 <para>register pars logger and set as default</para>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="56" column="8" bodyfile="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" bodystart="56" bodyend="113"/>
-        <references refid="log_8h_1ae4fda6f71f35120e2ff48157fca961b5" compoundref="log_8h" startline="44">SPDLOG_ACTIVE_LEVEL</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="56" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" bodystart="56" bodyend="113"/>
+        <references refid="log_8h_1ae4fda6f71f35120e2ff48157fca961b5" compoundref="log_8h" startline="41">SPDLOG_ACTIVE_LEVEL</references>
         <referencedby refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" compoundref="single_8h" startline="58" endline="67">pars::app::single&lt; component_type &gt;::exec</referencedby>
       </memberdef>
     </sectiondef>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="116" column="3"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="116" column="3"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -133,7 +133,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/app/setup.h" bodystart="38" bodyend="117"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h" bodystart="38" bodyend="117"/>
     <listofallmembers>
       <member refid="structpars_1_1app_1_1with__default__setup_1a0f06a6ccfac9e8af5b58263fb99b290b" prot="private" virt="non-virtual"><scope>pars::app::with_default_setup</scope><name>default_pattern</name></member>
       <member refid="structpars_1_1app_1_1with__default__setup_1a4763ca936de88cf86d069121db19453a" prot="private" virt="non-virtual"><scope>pars::app::with_default_setup</scope><name>default_pattern_with_source_loc</name></member>

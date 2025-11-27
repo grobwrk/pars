@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: /home/runner/work/pars/pars/lib/include/pars/net/hash.h Source File</title>
+<title>pars: /home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -126,9 +126,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars.html">pars</a></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
@@ -145,7 +145,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> (uuid[i] != <span class="charliteral">&#39;-&#39;</span>)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordflow">throw</span> std::runtime_error(</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        fmt::format(<span class="stringliteral">&quot;Invalid UUID [missing separator {}]&quot;</span>, i));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::format(<span class="stringliteral">&quot;Invalid UUID [missing separator {}]&quot;</span>, i));</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  std::uint64_t result{0xcbf29ce484222325};</div>
@@ -172,7 +172,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  std::size_t h;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">if</span> (m)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (m.body().size() &gt;= <span class="keyword">sizeof</span>(h))</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      memcpy(&amp;h, m.body().data&lt;<span class="keywordtype">char</span>&gt;(), <span class="keyword">sizeof</span>(h));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      std::memcpy(&amp;h, m.body().data&lt;<span class="keywordtype">char</span>&gt;(), <span class="keyword">sizeof</span>(h));</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      h = 0xffffffffffffffff;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">else</span></div>
@@ -184,7 +184,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
 <div class="ttc" id="amsg__body_8h_html"><div class="ttname"><a href="msg__body_8h.html">msg_body.h</a></div></div>
 <div class="ttc" id="anamespacenngxx_html_a4357aed4c68a9f7703914455abf07879"><div class="ttname"><a href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a></div><div class="ttdeci">clev::own&lt; nng_msg * &gt; msg</div><div class="ttdef"><b>Definition</b> <a href="msg_8h_source.html#l00039">msg.h:39</a></div></div>
-<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
+<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00039">resources.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

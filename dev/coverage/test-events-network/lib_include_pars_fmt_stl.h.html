@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -70,48 +70,47 @@
              : 
              : #include &quot;pars/ev/event.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
-             : 
              : #include &lt;chrono&gt;
+             : #include &lt;format&gt;
              : #include &lt;iomanip&gt;
              : #include &lt;sstream&gt;
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;std::chrono::system_clock::time_point&gt;
-             :   : fmt::formatter&lt;std::string&gt;
+             : struct std::formatter&lt;std::chrono::system_clock::time_point&gt;
+             :   : std::formatter&lt;std::string&gt;
              : {
              :   auto format(const std::chrono::system_clock::time_point&amp; t,
-             :               fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :               std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto t2 = std::chrono::system_clock::to_time_t(t);</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    std::ostringstream oss;</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    oss &lt;&lt; std::put_time(std::localtime(&amp;t2), &quot;%F %T&quot;);</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{}&quot;, oss.str());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;{}&quot;, oss.str());</span>
              :   }
              : };
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;std::error_code&gt; : fmt::formatter&lt;std::string&gt;
+             : struct std::formatter&lt;std::error_code&gt; : std::formatter&lt;std::string&gt;
              : {
-             :   auto format(const std::error_code&amp; e, fmt::format_context&amp; ctx) const
+             :   auto format(const std::error_code&amp; e, std::format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;{}&quot;, e.message());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;{}&quot;, e.message());</span>
              :   }
              : };
              : 
              : template&lt;pars::ev::event_c event_t&gt;
-             : struct fmt::formatter&lt;std::shared_ptr&lt;event_t&gt;&gt; : fmt::formatter&lt;std::string&gt;
+             : struct std::formatter&lt;std::shared_ptr&lt;event_t&gt;&gt; : std::formatter&lt;std::string&gt;
              : {
-             :   auto format(const std::shared_ptr&lt;event_t&gt;&amp; x, fmt::format_context&amp; ctx) const
+             :   auto format(const std::shared_ptr&lt;event_t&gt;&amp; x, std::format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
              :   {
              :     if (x)
-             :       return fmt::format_to(ctx.out(), &quot;{}&quot;, *x);
+             :       return std::format_to(ctx.out(), &quot;{}&quot;, *x);
              :     else
-             :       return fmt::format_to(ctx.out(), &quot;&lt;empty-shared_ptr&gt;&quot;);
+             :       return std::format_to(ctx.out(), &quot;&lt;empty-shared_ptr&gt;&quot;);
              :   }
              : };
 </pre>

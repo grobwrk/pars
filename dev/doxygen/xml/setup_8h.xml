@@ -3,11 +3,11 @@
   <compounddef id="setup_8h" kind="file" language="C++">
     <compoundname>setup.h</compoundname>
     <includes refid="log_8h" local="yes">pars/log.h</includes>
-    <includedby refid="single_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/app/single.h</includedby>
-    <includedby refid="pars_8h" local="yes">/home/runner/work/pars/pars/lib/include/pars/pars.h</includedby>
+    <includedby refid="single_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h</includedby>
+    <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/app/setup.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h</label>
         <link refid="setup_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -39,53 +39,48 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
       <node id="5">
         <label>chrono</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>config.h</label>
-      </node>
-      <node id="6">
-        <label>fmt/format.h</label>
       </node>
       <node id="4">
         <label>nng/nng.h</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>spdlog/common.h</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>spdlog/sinks/basic_file_sink.h</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>spdlog/sinks/null_sink.h</label>
       </node>
-      <node id="12">
+      <node id="11">
         <label>spdlog/sinks/stdout_color_sinks.h</label>
       </node>
-      <node id="13">
+      <node id="12">
         <label>spdlog/sinks/syslog_sink.h</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>spdlog/spdlog.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="6">
-        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/runner/work/pars/pars/example/common.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/common.h</label>
         <link refid="common_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="5">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -93,11 +88,11 @@
         </childnode>
       </node>
       <node id="7">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/lib/include/pars/app/setup.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h</label>
         <link refid="setup_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -105,13 +100,13 @@
         </childnode>
       </node>
       <node id="2">
-        <label>/home/runner/work/pars/pars/lib/include/pars/app/single.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h</label>
         <link refid="single_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/runner/work/pars/pars/lib/include/pars/pars.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</label>
         <link refid="pars_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -245,6 +240,6 @@
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::app</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/app/setup.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/setup.h"/>
   </compounddef>
 </doxygen>

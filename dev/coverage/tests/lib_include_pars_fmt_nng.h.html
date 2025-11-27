@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">18</td>
@@ -73,17 +73,17 @@
              : 
              : #include &quot;pars/err.h&quot;
              : 
-             : #include &lt;fmt/format.h&gt;
+             : #include &lt;format&gt;
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;nngxx::msg&gt; : formatter&lt;std::string&gt;
+             : struct std::formatter&lt;nngxx::msg&gt; : formatter&lt;std::string&gt;
              : {
              :   auto format(const nngxx::msg&amp; m, format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (m.body().size() &lt; sizeof(std::size_t))</span>
              :     {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        ctx.out(), &quot;size:{}={}+{}, hash:&lt;error&gt;, pipe:0x{:X}&quot;,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        m.get_pipe().id());</span>
@@ -92,7 +92,7 @@
              :     {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      std::size_t h = pars::hash_from_msg(m);</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        ctx.out(), &quot;size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}&quot;,</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        h, m.get_pipe().id());</span>
@@ -101,18 +101,18 @@
              : };
              : 
              : template&lt;&gt;
-             : struct fmt::formatter&lt;nngxx::pipe_view&gt; : formatter&lt;std::string&gt;
+             : struct std::formatter&lt;nngxx::pipe_view&gt; : formatter&lt;std::string&gt;
              : {
-             :   auto format(const nngxx::pipe_view&amp; p, fmt::format_context&amp; ctx) const
+             :   auto format(const nngxx::pipe_view&amp; p, std::format_context&amp; ctx) const
              :     -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (p)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (p.id() == -1)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return fmt::format_to(ctx.out(), &quot;&lt;ERROR&gt;&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return std::format_to(ctx.out(), &quot;&lt;ERROR&gt;&quot;);</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      else</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return fmt::format_to(ctx.out(), &quot;0x{:08X}&quot;, p.id());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        return std::format_to(ctx.out(), &quot;0x{:08X}&quot;, p.id());</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    else</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return fmt::format_to(ctx.out(), &quot;&lt;empty-pipe&gt;&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      return std::format_to(ctx.out(), &quot;&lt;empty-pipe&gt;&quot;);</span>
              :   }
              : };
 </pre>

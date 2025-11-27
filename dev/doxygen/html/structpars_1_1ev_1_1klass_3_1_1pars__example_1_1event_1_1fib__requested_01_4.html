@@ -152,7 +152,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00080">80</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00081">81</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a859e5b0486cfbae39af3549e7f2b629d" name="a859e5b0486cfbae39af3549e7f2b629d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a859e5b0486cfbae39af3549e7f2b629d">&#9670;&#160;</a></span>event_type</h2>
@@ -197,13 +197,13 @@ requires kind_c&lt;kind_of&gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00094">94</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>  {</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">enable_compute_fib_async</a> &amp;&amp; <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">is_same_kind_v&lt;kind_of, fired&gt;</a>)</div>
-<div class="line"><span class="lineno">   97</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">executes::async</a>;</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   99</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1base__klass.html#a2339f110ec62e89466b158133b8ec288">base_klass::exec_policy&lt;kind_of&gt;</a>();</div>
-<div class="line"><span class="lineno">  100</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00095">95</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>  {</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">enable_compute_fib_async</a> &amp;&amp; <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">is_same_kind_v&lt;kind_of, fired&gt;</a>)</div>
+<div class="line"><span class="lineno">   98</span>      <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">executes::async</a>;</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  100</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1base__klass.html#a2339f110ec62e89466b158133b8ec288">base_klass::exec_policy&lt;kind_of&gt;</a>();</div>
+<div class="line"><span class="lineno">  101</span>  }</div>
 <div class="ttc" id="astructpars_1_1ev_1_1base__klass_html_a2339f110ec62e89466b158133b8ec288"><div class="ttname"><a href="structpars_1_1ev_1_1base__klass.html#a2339f110ec62e89466b158133b8ec288">pars::ev::base_klass::exec_policy</a></div><div class="ttdeci">static constexpr executes exec_policy()</div><div class="ttdoc">an event_t executes synchronously in every possibile kind_of&lt;event_t&gt;</div><div class="ttdef"><b>Definition</b> <a href="klass_8h_source.html#l00061">klass.h:61</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1klass_html"><div class="ttname"><a href="structpars_1_1ev_1_1klass.html">pars::ev::klass</a></div><div class="ttdef"><b>Definition</b> <a href="klass_8h_source.html#l00068">klass.h:69</a></div></div>
 </div><!-- fragment -->
@@ -250,10 +250,10 @@ template&lt;typename Archive&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00087">87</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>  {</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ar</a>(<a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.work_id, <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.n, <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.use_fast_fib);</div>
-<div class="line"><span class="lineno">   90</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00088">88</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>  {</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ar</a>(<a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.work_id, <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.n, <a class="code hl_struct" href="structpars_1_1ev_1_1klass.html">ev</a>.use_fast_fib);</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,12 +280,12 @@ template&lt;typename Archive&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    <span class="stringliteral">&quot;9e85e1e6-28b1-4e52-85d6-12ca0110049f&quot;</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00083">83</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00084">84</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/pars/pars/example/<a class="el" href="example_2event_8h_source.html">event.h</a></li>
+<li>/home/runner/work/pars-cxx/pars-cxx/example/<a class="el" href="example_2event_8h_source.html">event.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

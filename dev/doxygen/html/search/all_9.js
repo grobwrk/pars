@@ -16,7 +16,7 @@ var searchData=
   ['internal_5fevent_5fc_13',['internal_event_c',['../conceptpars_1_1ev_1_1internal__event__c.html',1,'pars::ev']]],
   ['intr_14',['intr',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a6eb25cafd325fc432de73fe0d2881a90',1,'nngxx']]],
   ['inval_15',['inval',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a15e757c159904fb372bd77be464a4586',1,'nngxx']]],
-  ['invoke_16',['invoke',['../namespacenngxx.html#a8a6b6659b84f0d49b6edf6571a929204',1,'nngxx::invoke(ret_t(*f)(args_t...), args_t... args) noexcept'],['../namespacenngxx.html#a0c256ba910e505bd0bef5e615b5c8023',1,'nngxx::invoke(void(*f)(args_t...), args_t... args) noexcept']]],
+  ['invoke_16',['invoke',['../namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d',1,'nngxx::invoke(ret_t(*f)(args_t...), args_t... args) noexcept'],['../namespacenngxx.html#a0c256ba910e505bd0bef5e615b5c8023',1,'nngxx::invoke(void(*f)(args_t...), args_t... args) noexcept']]],
   ['is_5ferror_5fcode_5fenum_3c_20nngxx_3a_3aerr_20_3e_17',['is_error_code_enum&lt; nngxx::err &gt;',['../structstd_1_1is__error__code__enum_3_01nngxx_1_1err_01_4.html',1,'std']]],
   ['is_5ferror_5fcode_5fenum_3c_20pars_3a_3aerror_20_3e_18',['is_error_code_enum&lt; pars::error &gt;',['../structstd_1_1is__error__code__enum_3_01pars_1_1error_01_4.html',1,'std']]],
   ['is_5fexpected_5fspecialization_19',['is_expected_specialization',['../structclev_1_1is__expected__specialization.html',1,'clev']]],

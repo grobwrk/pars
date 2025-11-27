@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">10</td>
@@ -71,6 +71,7 @@
              : #include &quot;pars/net/pipe.h&quot;
              : #include &quot;pars/net/tool_view.h&quot;
              : 
+             : #include &lt;format&gt;
              : #include &lt;stop_token&gt;
              : 
              : namespace pars::ev
@@ -99,9 +100,9 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return 0; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;&lt;internal-metadata&gt;&quot;);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;&lt;internal-metadata&gt;&quot;);</span>
              :   }
              : };
              : 
@@ -120,10 +121,10 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   int socket_id() const <span class="lineNoCov">{ return id_m; }</span>
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    // FIXME: duplicated</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;Pipe #{:X} {} {}&quot;, pipe().id(),</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;Pipe #{:X} {} {}&quot;, pipe().id(),</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          tool().who(), tool().id());</span>
              :   }
              : 

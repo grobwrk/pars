@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/dir.h" line="37" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/dir.h" bodystart="38" bodyend="41"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/dir.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/dir.h" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="enum" id="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" prot="public" static="no" strong="yes">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="48" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="49" bodyend="52"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="49" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="50" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/op.h" line="51" column="1" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/op.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h" line="51" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -101,13 +101,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" line="54" column="14" bodyfile="/home/runner/work/pars/pars/lib/include/pars/net/socket.h" bodystart="54" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="55" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="55" bodyend="65"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars/pars/lib/include/pars/concept/net.h" line="37" column="1"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/net.h" line="37" column="1"/>
   </compounddef>
 </doxygen>

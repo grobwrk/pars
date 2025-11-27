@@ -118,8 +118,8 @@ Collaboration diagram for pars::f::pntl&lt; tool_t &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a866fd54cdcc04f03364daa75adfaef3d" id="r_a866fd54cdcc04f03364daa75adfaef3d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a866fd54cdcc04f03364daa75adfaef3d">format_to</a> (fmt::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
-<tr class="separator:a866fd54cdcc04f03364daa75adfaef3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1ded5693d9bec7ff44ca2791154058" id="r_a6f1ded5693d9bec7ff44ca2791154058"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f1ded5693d9bec7ff44ca2791154058">format_to</a> (std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
+<tr class="separator:a6f1ded5693d9bec7ff44ca2791154058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -133,8 +133,8 @@ Public Attributes</h2></td></tr>
 struct pars::f::pntl&lt; tool_t &gt;</div>
 <p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00042">42</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a866fd54cdcc04f03364daa75adfaef3d" name="a866fd54cdcc04f03364daa75adfaef3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a866fd54cdcc04f03364daa75adfaef3d">&#9670;&#160;</a></span>format_to()</h2>
+<a id="a6f1ded5693d9bec7ff44ca2791154058" name="a6f1ded5693d9bec7ff44ca2791154058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1ded5693d9bec7ff44ca2791154058">&#9670;&#160;</a></span>format_to()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +147,7 @@ template&lt;net::tool_c tool_t&gt; </div>
         <tr>
           <td class="memname">auto <a class="el" href="structpars_1_1f_1_1pntl.html">pars::f::pntl</a>&lt; tool_t &gt;::format_to </td>
           <td>(</td>
-          <td class="paramtype">fmt::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype">std::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td> const -&gt; decltype(ctx.out())
   </td>
         </tr>
@@ -161,7 +161,7 @@ template&lt;net::tool_c tool_t&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="helpers_8h_source.html#l00047">47</a> of file <a class="el" href="helpers_8h_source.html">helpers.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   48</span>  {</div>
-<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">fmt::format_to</a>(<a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">ctx</a>.out(), <span class="stringliteral">&quot;Pipe {} {}&quot;</span>, <a class="code hl_variable" href="#acd88559bb712346eafe1ab095ecada1e">p</a>, <a class="code hl_variable" href="#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>);</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">std::format_to</a>(<a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">ctx</a>.out(), <span class="stringliteral">&quot;Pipe {} {}&quot;</span>, <a class="code hl_variable" href="#acd88559bb712346eafe1ab095ecada1e">p</a>, <a class="code hl_variable" href="#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>);</div>
 <div class="line"><span class="lineno">   50</span>  }</div>
 <div class="ttc" id="astructpars_1_1f_1_1pntl_html"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html">pars::f::pntl</a></div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00042">helpers.h:43</a></div></div>
 <div class="ttc" id="astructpars_1_1f_1_1pntl_html_a1c50b6a8da50bb9c5425258f7c66b7d8"><div class="ttname"><a href="#a1c50b6a8da50bb9c5425258f7c66b7d8">pars::f::pntl::t</a></div><div class="ttdeci">tool_t &amp; t</div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00045">helpers.h:45</a></div></div>
@@ -213,7 +213,7 @@ template&lt;net::tool_c tool_t&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/runner/work/pars/pars/lib/include/pars/fmt/<a class="el" href="helpers_8h_source.html">helpers.h</a></li>
+<li>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/<a class="el" href="helpers_8h_source.html">helpers.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

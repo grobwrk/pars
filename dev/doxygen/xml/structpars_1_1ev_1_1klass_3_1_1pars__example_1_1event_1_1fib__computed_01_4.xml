@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/event.h" line="107" column="37" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="107" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="108" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="108" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/example/event.h" line="111" column="15" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="111" bodyend="114"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="112" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="112" bodyend="115"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars/pars/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -97,7 +97,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars/pars/example/event.h" line="104" column="1" bodyfile="/home/runner/work/pars/pars/example/event.h" bodystart="106" bodyend="115"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="105" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="107" bodyend="116"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</scope><name>exec_policy</name></member>

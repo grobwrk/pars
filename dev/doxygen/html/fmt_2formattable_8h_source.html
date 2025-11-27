@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: /home/runner/work/pars/pars/lib/include/pars/fmt/formattable.h Source File</title>
+<title>pars: /home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/formattable.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -124,14 +124,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="concept_2formattable_8h.html">pars/concept/formattable.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;fmt/format.h&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span>&lt;formattable_c foarmattable_t&gt;</div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01foarmattable__t_01_4.html">   37</a></span><span class="keyword">struct </span>fmt::formatter&lt;foarmattable_t&gt; : fmt::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01foarmattable__t_01_4.html">   37</a></span><span class="keyword">struct </span>std::formatter&lt;foarmattable_t&gt; : std::formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01foarmattable__t_01_4.html#a957faa1033d59cc1f6cbaa6de3e50afc">   39</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structfmt_1_1formatter_3_01foarmattable__t_01_4.html#a957faa1033d59cc1f6cbaa6de3e50afc">format</a>(<span class="keyword">const</span> foarmattable_t&amp; x, format_context&amp; ctx) <span class="keyword">const</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01foarmattable__t_01_4.html#af3b5642c0d1955ca3991ac677df64988">   39</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01foarmattable__t_01_4.html#af3b5642c0d1955ca3991ac677df64988">format</a>(<span class="keyword">const</span> foarmattable_t&amp; x, format_context&amp; ctx) <span class="keyword">const</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> x.format_to(ctx);</div>
@@ -140,7 +140,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 </div>
 <div class="ttc" id="aconcept_2formattable_8h_html"><div class="ttname"><a href="concept_2formattable_8h.html">formattable.h</a></div></div>
-<div class="ttc" id="astructfmt_1_1formatter_3_01foarmattable__t_01_4_html_a957faa1033d59cc1f6cbaa6de3e50afc"><div class="ttname"><a href="structfmt_1_1formatter_3_01foarmattable__t_01_4.html#a957faa1033d59cc1f6cbaa6de3e50afc">fmt::formatter&lt; foarmattable_t &gt;::format</a></div><div class="ttdeci">auto format(const foarmattable_t &amp;x, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00039">formattable.h:39</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_01foarmattable__t_01_4_html_af3b5642c0d1955ca3991ac677df64988"><div class="ttname"><a href="structstd_1_1formatter_3_01foarmattable__t_01_4.html#af3b5642c0d1955ca3991ac677df64988">std::formatter&lt; foarmattable_t &gt;::format</a></div><div class="ttdeci">auto format(const foarmattable_t &amp;x, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00039">formattable.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

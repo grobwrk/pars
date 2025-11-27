@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue May 27 10:12:57 2025 </td>
+                     <td class="headerValue" width="15%">Thu Nov 27 18:32:53 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">71</td>
@@ -76,6 +76,7 @@
              : #include &quot;pars/net/op.h&quot;
              : #include &quot;pars/net/socket_opt.h&quot;
              : 
+             : #include &lt;format&gt;
              : #include &lt;string_view&gt;
              : #include &lt;vector&gt;
              : 
@@ -97,7 +98,7 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  else if (str_view.compare(&quot;listen&quot;) == 0)</span>
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return cmode::listen;</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  throw std::runtime_error(fmt::format(&quot;Unable to parse {} to CMODE&quot;, str));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  throw std::runtime_error(std::format(&quot;Unable to parse {} to CMODE&quot;, str));</span>
              : }
              : 
              : /**
@@ -187,9 +188,9 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return socket_m.proto_name().value_or(&quot;&lt;not-found&gt;&quot;);</span>
              :   }
              : 
-             :   auto format_to(fmt::format_context&amp; ctx) const -&gt; decltype(ctx.out())
+             :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return fmt::format_to(ctx.out(), &quot;Socket #{}-{}&quot;, id(), proto_name());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;Socket #{}-{}&quot;, id(), proto_name());</span>
              :   }
              : 
              : private:

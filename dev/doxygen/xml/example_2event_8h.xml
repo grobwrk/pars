@@ -4,41 +4,48 @@
     <compoundname>event.h</compoundname>
     <includes refid="common_8h" local="yes">common.h</includes>
     <includes refid="pars_8h" local="no">pars/pars.h</includes>
+    <includes local="no">format</includes>
     <includes local="no">string_view</includes>
-    <includedby refid="client_8cpp" local="yes">/home/runner/work/pars/pars/example/client.cpp</includedby>
-    <includedby refid="server__backend_8cpp" local="yes">/home/runner/work/pars/pars/example/server_backend.cpp</includedby>
+    <includedby refid="client_8cpp" local="yes">/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</includedby>
+    <includedby refid="server__backend_8cpp" local="yes">/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</includedby>
     <incdepgraph>
       <node id="2">
         <label>common.h</label>
         <link refid="common_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="89" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
       <node id="29">
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
       </node>
-      <node id="32">
+      <node id="33">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -47,29 +54,29 @@
         <link refid="own_8h"/>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="32" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="66">
+      <node id="67">
         <label>nngxx/aio.h</label>
         <link refid="aio_8h"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="68" relation="include">
         </childnode>
       </node>
-      <node id="35">
+      <node id="36">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="76">
@@ -84,22 +91,20 @@
         <childnode refid="117" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="40">
         <label>nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
         <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="67">
+      <node id="68">
         <label>nngxx/iface/aio.h</label>
         <link refid="iface_2aio_8h"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
@@ -111,11 +116,11 @@
       <node id="77">
         <label>nngxx/iface/ctx.h</label>
         <link refid="iface_2ctx_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -123,11 +128,11 @@
       <node id="117">
         <label>nngxx/iface/dialer.h</label>
         <link refid="iface_2dialer_8h"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -135,11 +140,11 @@
       <node id="119">
         <label>nngxx/iface/listener.h</label>
         <link refid="iface_2listener_8h"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -149,33 +154,33 @@
         <link refid="iface_2msg_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="44">
         <label>nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="65">
+      <node id="66">
         <label>nngxx/iface/socket.h</label>
         <link refid="nngxx_2iface_2socket_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
       <node id="27">
@@ -183,17 +188,17 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
+        <childnode refid="39" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
       <node id="118">
@@ -208,76 +213,76 @@
         <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="51">
         <label>nngxx/msg_body.h</label>
         <link refid="msg__body_8h"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="72">
+      <node id="73">
         <label>nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
         <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="38">
-        <label>nngxx/opt_getter.h</label>
-        <link refid="opt__getter_8h"/>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-      </node>
-      <node id="40">
+      <node id="41">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="35" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
         <childnode refid="36" relation="include">
         </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
       </node>
-      <node id="42">
+      <node id="43">
         <label>nngxx/pipe.h</label>
         <link refid="nngxx_2pipe_8h"/>
-        <childnode refid="43" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
       </node>
-      <node id="64">
+      <node id="65">
         <label>nngxx/socket.h</label>
         <link refid="nngxx_2socket_8h"/>
-        <childnode refid="65" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
         </childnode>
         <childnode refid="69" relation="include">
         </childnode>
         <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="44">
+      <node id="45">
         <label>nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="32" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -289,7 +294,7 @@
         <link refid="resources_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -313,7 +318,7 @@
         </childnode>
         <childnode refid="103" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
@@ -325,7 +330,7 @@
         <link refid="state__machine_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="106" relation="include">
         </childnode>
@@ -341,6 +346,8 @@
         </childnode>
         <childnode refid="120" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
       <node id="123">
         <label>pars/comp/client.h</label>
@@ -352,14 +359,14 @@
         <childnode refid="120" relation="include">
         </childnode>
       </node>
-      <node id="46">
+      <node id="47">
         <label>pars/concept/event.h</label>
         <link refid="lib_2include_2pars_2concept_2event_8h"/>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
-        </childnode>
         <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
       <node id="97">
@@ -367,9 +374,9 @@
         <link refid="concept_2formattable_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="125">
@@ -377,17 +384,17 @@
         <link refid="hashable_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="45">
+      <node id="46">
         <label>pars/concept/kind.h</label>
         <link refid="concept_2kind_8h"/>
-        <childnode refid="46" relation="include">
-        </childnode>
         <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="104">
@@ -397,17 +404,17 @@
         </childnode>
         <childnode refid="75" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
-      <node id="73">
+      <node id="74">
         <label>pars/err.h</label>
         <link refid="pars_2err_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
       <node id="22">
@@ -415,11 +422,11 @@
         <link refid="dispatcher_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
-        </childnode>
         <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
@@ -435,7 +442,7 @@
       <node id="103">
         <label>pars/ev/enqueuer.h</label>
         <link refid="enqueuer_8h"/>
-        <childnode refid="46" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="104" relation="include">
         </childnode>
@@ -443,7 +450,7 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
@@ -453,25 +460,25 @@
         <link refid="lib_2include_2pars_2ev_2event_8h"/>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="55" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
+        <childnode refid="54" relation="include">
         </childnode>
         <childnode refid="57" relation="include">
         </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
       </node>
-      <node id="58">
+      <node id="59">
         <label>pars/ev/hf_registry.h</label>
         <link refid="hf__registry_8h"/>
-        <childnode refid="45" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="59" relation="include">
+        <childnode refid="60" relation="include">
         </childnode>
         <childnode refid="94" relation="include">
         </childnode>
@@ -481,6 +488,8 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
@@ -489,19 +498,19 @@
       <node id="109">
         <label>pars/ev/hf_registry__insert.h</label>
         <link refid="hf__registry____insert_8h"/>
-        <childnode refid="58" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
       </node>
-      <node id="59">
+      <node id="60">
         <label>pars/ev/job.h</label>
         <link refid="job_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="60" relation="include">
+        <childnode refid="61" relation="include">
         </childnode>
-        <childnode refid="62" relation="include">
+        <childnode refid="63" relation="include">
         </childnode>
         <childnode refid="81" relation="include">
         </childnode>
@@ -509,32 +518,34 @@
         </childnode>
         <childnode refid="93" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-      </node>
-      <node id="60">
-        <label>pars/ev/kind.h</label>
-        <link refid="ev_2kind_8h"/>
-        <childnode refid="61" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
       <node id="61">
-        <label>pars/ev/kind_base.h</label>
-        <link refid="kind__base_8h"/>
-        <childnode refid="46" relation="include">
-        </childnode>
-        <childnode refid="45" relation="include">
-        </childnode>
+        <label>pars/ev/kind.h</label>
+        <link refid="ev_2kind_8h"/>
         <childnode refid="62" relation="include">
         </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
       </node>
-      <node id="47">
+      <node id="62">
+        <label>pars/ev/kind_base.h</label>
+        <link refid="kind__base_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
         <label>pars/ev/kind_decl.h</label>
         <link refid="kind__decl_8h"/>
         <childnode refid="6" relation="include">
@@ -545,35 +556,37 @@
         <link refid="klass_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="49" relation="include">
-        </childnode>
-        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="94">
         <label>pars/ev/make_hf.h</label>
         <link refid="make__hf_8h"/>
-        <childnode refid="46" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="95" relation="include">
         </childnode>
       </node>
-      <node id="62">
+      <node id="63">
         <label>pars/ev/metadata.h</label>
         <link refid="metadata_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
-        </childnode>
-        <childnode refid="63" relation="include">
+        <childnode refid="64" relation="include">
         </childnode>
         <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="80" relation="include">
         </childnode>
@@ -583,9 +596,11 @@
         <link refid="runner_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
-        </childnode>
         <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
@@ -601,7 +616,7 @@
         <link refid="serializer_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
@@ -609,15 +624,17 @@
         </childnode>
         <childnode refid="82" relation="include">
         </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
         <childnode refid="83" relation="include">
         </childnode>
         <childnode refid="84" relation="include">
         </childnode>
         <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="56" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
       <node id="86">
@@ -629,7 +646,7 @@
         </childnode>
         <childnode refid="92" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="96">
@@ -637,7 +654,7 @@
         <link refid="fmt_2formattable_8h"/>
         <childnode refid="97" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="114">
@@ -645,39 +662,39 @@
         <link refid="helpers_8h"/>
         <childnode refid="104" relation="include">
         </childnode>
-        <childnode refid="63" relation="include">
+        <childnode refid="64" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="71">
+      <node id="72">
         <label>pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
-        <childnode refid="72" relation="include">
-        </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
-        <childnode refid="49" relation="include">
-        </childnode>
         <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="54">
         <label>pars/fmt/stl.h</label>
         <link refid="stl_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="54" relation="include">
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -707,8 +724,6 @@
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
       </node>
       <node id="88">
         <label>pars/log/demangle.h</label>
@@ -725,7 +740,9 @@
       <node id="126">
         <label>pars/log/flags.h</label>
         <link refid="flags_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="87">
@@ -739,7 +756,7 @@
       <node id="111">
         <label>pars/net/context.h</label>
         <link refid="context_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="76" relation="include">
         </childnode>
@@ -750,6 +767,8 @@
         <childnode refid="113" relation="include">
         </childnode>
         <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="112">
@@ -773,39 +792,43 @@
         </childnode>
         <childnode refid="75" relation="include">
         </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="122" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="55">
+      <node id="57">
         <label>pars/net/dir.h</label>
         <link refid="dir_8h"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="50">
         <label>pars/net/hash.h</label>
         <link refid="hash_8h"/>
-        <childnode refid="50" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="113">
         <label>pars/net/op.h</label>
         <link refid="op_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="103" relation="include">
         </childnode>
@@ -815,25 +838,25 @@
         </childnode>
         <childnode refid="114" relation="include">
         </childnode>
-        <childnode refid="55" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="63">
+      <node id="64">
         <label>pars/net/pipe.h</label>
         <link refid="pars_2net_2pipe_8h"/>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
-        <childnode refid="71" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="127">
@@ -889,7 +912,7 @@
       <node id="115">
         <label>pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="76" relation="include">
         </childnode>
@@ -897,7 +920,7 @@
         </childnode>
         <childnode refid="118" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="103" relation="include">
         </childnode>
@@ -905,7 +928,9 @@
         </childnode>
         <childnode refid="120" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="121" relation="include">
         </childnode>
@@ -927,9 +952,9 @@
         </childnode>
         <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="78" relation="include">
         </childnode>
@@ -951,13 +976,13 @@
         </childnode>
         <childnode refid="123" relation="include">
         </childnode>
-        <childnode refid="46" relation="include">
+        <childnode refid="47" relation="include">
         </childnode>
         <childnode refid="97" relation="include">
         </childnode>
         <childnode refid="125" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
         <childnode refid="104" relation="include">
         </childnode>
@@ -967,23 +992,23 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="109" relation="include">
-        </childnode>
-        <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="60" relation="include">
         </childnode>
         <childnode refid="61" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="94" relation="include">
         </childnode>
-        <childnode refid="62" relation="include">
+        <childnode refid="63" relation="include">
         </childnode>
         <childnode refid="98" relation="include">
         </childnode>
@@ -1003,13 +1028,13 @@
         </childnode>
         <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="55" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="113" relation="include">
         </childnode>
-        <childnode refid="63" relation="include">
+        <childnode refid="64" relation="include">
         </childnode>
         <childnode refid="127" relation="include">
         </childnode>
@@ -1035,23 +1060,26 @@
       <node id="92">
         <label>cereal/cereal.hpp</label>
       </node>
-      <node id="56">
+      <node id="58">
         <label>cereal/types/vector.hpp</label>
       </node>
       <node id="8">
         <label>chrono</label>
       </node>
-      <node id="34">
+      <node id="35">
         <label>concepts</label>
       </node>
       <node id="101">
         <label>condition_variable</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>config.h</label>
       </node>
-      <node id="51">
+      <node id="52">
         <label>cstddef</label>
+      </node>
+      <node id="53">
+        <label>cstring</label>
       </node>
       <node id="90">
         <label>cxxabi.h</label>
@@ -1062,11 +1090,8 @@
       <node id="30">
         <label>expected</label>
       </node>
-      <node id="57">
-        <label>fmt/base.h</label>
-      </node>
-      <node id="9">
-        <label>fmt/format.h</label>
+      <node id="16">
+        <label>format</label>
       </node>
       <node id="31">
         <label>functional</label>
@@ -1074,7 +1099,7 @@
       <node id="99">
         <label>future</label>
       </node>
-      <node id="53">
+      <node id="55">
         <label>iomanip</label>
       </node>
       <node id="83">
@@ -1089,16 +1114,16 @@
       <node id="7">
         <label>nng/nng.h</label>
       </node>
-      <node id="68">
+      <node id="69">
         <label>nng/protocol/pipeline0/pull.h</label>
       </node>
-      <node id="69">
+      <node id="70">
         <label>nng/protocol/pipeline0/push.h</label>
       </node>
-      <node id="70">
+      <node id="71">
         <label>nng/protocol/reqrep0/rep.h</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
       <node id="106">
@@ -1113,25 +1138,25 @@
       <node id="85">
         <label>spanstream</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>spdlog/common.h</label>
       </node>
-      <node id="13">
+      <node id="12">
         <label>spdlog/sinks/basic_file_sink.h</label>
       </node>
-      <node id="14">
+      <node id="13">
         <label>spdlog/sinks/null_sink.h</label>
       </node>
-      <node id="15">
+      <node id="14">
         <label>spdlog/sinks/stdout_color_sinks.h</label>
       </node>
-      <node id="16">
+      <node id="15">
         <label>spdlog/sinks/syslog_sink.h</label>
       </node>
-      <node id="12">
+      <node id="11">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="54">
+      <node id="56">
         <label>sstream</label>
       </node>
       <node id="18">
@@ -1143,10 +1168,10 @@
       <node id="89">
         <label>string</label>
       </node>
-      <node id="48">
+      <node id="49">
         <label>string_view</label>
       </node>
-      <node id="74">
+      <node id="32">
         <label>system_error</label>
       </node>
       <node id="100">
@@ -1155,7 +1180,7 @@
       <node id="122">
         <label>tuple</label>
       </node>
-      <node id="41">
+      <node id="42">
         <label>type_traits</label>
       </node>
       <node id="78">
@@ -1173,11 +1198,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/runner/work/pars/pars/example/client.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/runner/work/pars/pars/example/event.h</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
         <link refid="example_2event_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -1185,7 +1210,7 @@
         </childnode>
       </node>
       <node id="3">
-        <label>/home/runner/work/pars/pars/example/server_backend.cpp</label>
+        <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
     </invincdepgraph>
@@ -1237,101 +1262,102 @@
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="pars_8h" kindref="compound">pars/pars.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="namespacepars__example_1_1event" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars__example_1_1event" kindref="compound">pars_example::event</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>client<sp/>send<sp/>this<sp/>to<sp/>request<sp/>a<sp/>fib_n<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="structpars__example_1_1event_1_1fib__requested" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">fib_requested</ref></highlight></codeline>
-<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="44" refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kindref="member">work_id</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="45" refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kindref="member">n</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="46" refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kindref="member">use_fast_fib</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="structpars__example_1_1event_1_1fib__requested_1a7ea1b55cbd2c00292d7123e98a400fbf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a7ea1b55cbd2c00292d7123e98a400fbf" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;fib_requested({},{},{})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kindref="member">work_id</ref>,<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kindref="member">n</ref>,</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kindref="member">use_fast_fib</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;fast_fib&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;slow_fib&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>server<sp/>backend<sp/>send<sp/>this<sp/>in<sp/>response<sp/>for<sp/>a<sp/>fib_n<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="structpars__example_1_1event_1_1fib__computed" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">fib_computed</ref></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="58" refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kindref="member">work_id</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="59" refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kindref="member">fib_n</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a67b830ff9d196f34a0604ea0c0860781" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;fib_computed({},{})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kindref="member">work_id</ref>,<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kindref="member">fib_n</ref>);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="structpars__example_1_1event_1_1stop__compute" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1stop__compute" kindref="compound">stop_compute</ref></highlight></codeline>
-<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="69" refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kindref="member">pipe_id</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71" refid="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a7d19bb5cb52d1a8e126ded332381fe5d" kindref="member">format_to</ref>(fmt::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fmt::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;stop_compute({})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kindref="member">pipe_id</ref>);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars_example::event</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="80" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">pars_example::event::fib_requested</ref>&gt;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::fib_requested&gt;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="83" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" kindref="member">uuid</ref><sp/>=</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;9e85e1e6-28b1-4e52-85d6-12ca0110049f&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
-<codeline lineno="87" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.work_id,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.n,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.use_fast_fib);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="94" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kindref="member">executes</ref><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" kindref="member">exec_policy</ref>()</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="common_8h_1a0309fff2c27bd9c255d5255478ae34a5" kindref="member">enable_compute_fib_async</ref><sp/>&amp;&amp;<sp/><ref refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" kindref="member">is_same_kind_v&lt;kind_of, fired&gt;</ref>)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">executes::async</ref>;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" kindref="member">base_klass::exec_policy&lt;kind_of&gt;</ref>();</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="104" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">pars_example::event::fib_computed</ref>&gt;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::fib_computed&gt;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="107" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" kindref="member">uuid</ref><sp/>=</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;3dc87ab0-bfe0-4eea-8f71-76a16bda62ff&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
-<codeline lineno="111" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.work_id,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.fib_n);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
-<codeline lineno="118" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1stop__compute" kindref="compound">pars_example::event::stop_compute</ref>&gt;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::stop_compute&gt;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="121" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" kindref="member">uuid</ref><sp/>=</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;8194470a-3ad8-4f37-a544-d44ff4e5bd29&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
-<codeline lineno="125" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.pipe_id);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="namespacepars__example_1_1event" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars__example_1_1event" kindref="compound">pars_example::event</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>client<sp/>send<sp/>this<sp/>to<sp/>request<sp/>a<sp/>fib_n<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structpars__example_1_1event_1_1fib__requested" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">fib_requested</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kindref="member">work_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46" refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kindref="member">n</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47" refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kindref="member">use_fast_fib</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structpars__example_1_1event_1_1fib__requested_1a299a8a47fbd180555fb0c91aef6ff452" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a299a8a47fbd180555fb0c91aef6ff452" kindref="member">format_to</ref>(std::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;fib_requested({},{},{})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kindref="member">work_id</ref>,<sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kindref="member">n</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kindref="member">use_fast_fib</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;fast_fib&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;slow_fib&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>server<sp/>backend<sp/>send<sp/>this<sp/>in<sp/>response<sp/>for<sp/>a<sp/>fib_n<sp/>computation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structpars__example_1_1event_1_1fib__computed" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">fib_computed</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59" refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kindref="member">work_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60" refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kindref="member">fib_n</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" kindref="member">format_to</ref>(std::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;fib_computed({},{})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kindref="member">work_id</ref>,<sp/><ref refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kindref="member">fib_n</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structpars__example_1_1event_1_1stop__compute" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars__example_1_1event_1_1stop__compute" kindref="compound">stop_compute</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70" refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kindref="member">pipe_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structpars__example_1_1event_1_1stop__compute_1a3b4d58eca313f7855785ae53a5211e5c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a3b4d58eca313f7855785ae53a5211e5c" kindref="member">format_to</ref>(std::format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(ctx.out())</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::format_to(ctx.out(),<sp/></highlight><highlight class="stringliteral">&quot;stop_compute({})&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kindref="member">pipe_id</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars_example::event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="81" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">pars_example::event::fib_requested</ref>&gt;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::fib_requested&gt;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" kindref="member">uuid</ref><sp/>=</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;9e85e1e6-28b1-4e52-85d6-12ca0110049f&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
+<codeline lineno="88" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.work_id,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.n,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.use_fast_fib);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of&gt;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
+<codeline lineno="95" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8" kindref="member">executes</ref><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" kindref="member">exec_policy</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="common_8h_1a0309fff2c27bd9c255d5255478ae34a5" kindref="member">enable_compute_fib_async</ref><sp/>&amp;&amp;<sp/><ref refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" kindref="member">is_same_kind_v&lt;kind_of, fired&gt;</ref>)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" kindref="member">executes::async</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" kindref="member">base_klass::exec_policy&lt;kind_of&gt;</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="105" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1fib__computed" kindref="compound">pars_example::event::fib_computed</ref>&gt;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::fib_computed&gt;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" kindref="member">uuid</ref><sp/>=</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;3dc87ab0-bfe0-4eea-8f71-76a16bda62ff&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
+<codeline lineno="112" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.work_id,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.fib_n);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="119" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">pars::ev::klass</ref>&lt;::<ref refid="structpars__example_1_1event_1_1stop__compute" kindref="compound">pars_example::event::stop_compute</ref>&gt;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;::pars_example::event::stop_compute&gt;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::string_view<sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" kindref="member">uuid</ref><sp/>=</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;8194470a-3ad8-4f37-a544-d44ff4e5bd29&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Archive&gt;</highlight></codeline>
+<codeline lineno="126" refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" kindref="member">serialize</ref>(<ref refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kindref="member">event_type</ref>&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>Archive&amp;<sp/>ar)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>ar(<ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.pipe_id);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="/home/runner/work/pars/pars/example/event.h"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h"/>
   </compounddef>
 </doxygen>
