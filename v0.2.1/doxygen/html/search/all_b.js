@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['key_0',['key',['../structpars_1_1app_1_1locked.html#ae567b61bdb1515e2240afacdd2305511',1,'pars::app::locked']]],
+  ['key_5ftype_1',['key_type',['../structpars_1_1app_1_1locked.html#aa6252d8af3fb66a2cd64d827b80ae233',1,'pars::app::locked::key_type'],['../classpars_1_1app_1_1resources.html#ab848c73436876e6aab03435bd1c927e3',1,'pars::app::resources::key_type']]],
+  ['kind_2eh_2',['kind.h',['../concept_2kind_8h.html',1,'(Global Namespace)'],['../ev_2kind_8h.html',1,'(Global Namespace)']]],
+  ['kind_5fbase_2eh_3',['kind_base.h',['../kind__base_8h.html',1,'']]],
+  ['kind_5fc_4',['kind_c',['../conceptpars_1_1ev_1_1kind__c.html',1,'pars::ev']]],
+  ['kind_5fdecl_2eh_5',['kind_decl.h',['../kind__decl_8h.html',1,'']]],
+  ['kind_5fof_5fevent_5ftype_6',['kind_of_event_type',['../classpars_1_1ev_1_1spec.html#a34b174db9977dd376976477a8cbbc7cc',1,'pars::ev::spec']]],
+  ['kind_5ftype_7',['kind_type',['../structpars_1_1ev_1_1common__kind.html#a927893fac05943e48256935aecc33979',1,'pars::ev::common_kind::kind_type'],['../structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4.html#aac7a88c0da7d47b021ca83a340fe99d5',1,'pars::ev::hf_traits&lt; return_t(class_t::*)(hf_arg&lt; kind_of, event_t &gt;)&gt;::kind_type'],['../structpars_1_1ev_1_1common__metadata.html#a3d2e91e6ca8aa87b179333523c01a4b5',1,'pars::ev::common_metadata::kind_type'],['../classpars_1_1ev_1_1spec.html#aa4f550ff2ce20954caca9f34325d2938',1,'pars::ev::spec::kind_type']]],
+  ['klass_8',['klass',['../structpars_1_1ev_1_1klass.html',1,'pars::ev']]],
+  ['klass_2eh_9',['klass.h',['../klass_8h.html',1,'']]],
+  ['klass_3c_20creating_5fpipe_20_3e_10',['klass&lt; creating_pipe &gt;',['../structpars_1_1ev_1_1klass_3_01creating__pipe_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20exception_20_3e_11',['klass&lt; exception &gt;',['../structpars_1_1ev_1_1klass_3_01exception_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20init_20_3e_12',['klass&lt; init &gt;',['../structpars_1_1ev_1_1klass_3_01init_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20network_5ferror_20_3e_13',['klass&lt; network_error &gt;',['../structpars_1_1ev_1_1klass_3_01network__error_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20nngxx_3a_3amsg_20_3e_14',['klass&lt; nngxx::msg &gt;',['../structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20pipe_5fcreated_20_3e_15',['klass&lt; pipe_created &gt;',['../structpars_1_1ev_1_1klass_3_01pipe__created_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20pipe_5fremoved_20_3e_16',['klass&lt; pipe_removed &gt;',['../structpars_1_1ev_1_1klass_3_01pipe__removed_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20shutdown_20_3e_17',['klass&lt; shutdown &gt;',['../structpars_1_1ev_1_1klass_3_01shutdown_01_4.html',1,'pars::ev']]],
+  ['klass_3c_20std_3a_3ashared_5fptr_3c_20event_5ft_20_3e_20_3e_18',['klass&lt; std::shared_ptr&lt; event_t &gt; &gt;',['../structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html',1,'pars::ev']]],
+  ['klass_3c_3a_3apars_5fexample_3a_3aevent_3a_3afib_5fcomputed_20_3e_19',['klass&lt;::pars_example::event::fib_computed &gt;',['../structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4.html',1,'pars::ev']]],
+  ['klass_3c_3a_3apars_5fexample_3a_3aevent_3a_3afib_5frequested_20_3e_20',['klass&lt;::pars_example::event::fib_requested &gt;',['../structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4.html',1,'pars::ev']]],
+  ['klass_3c_3a_3apars_5fexample_3a_3aevent_3a_3astop_5fcompute_20_3e_21',['klass&lt;::pars_example::event::stop_compute &gt;',['../structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4.html',1,'pars::ev']]]
+];
