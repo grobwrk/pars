@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tutorial &#8212; pars 0.2.0.99 documentation</title>
+    <title>Tutorial &#8212; pars 0.2.1.99 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=279e0f84" />
-    <script src="../_static/documentation_options.js?v=7c2c1fca"></script>
+    <script src="../_static/documentation_options.js?v=6eea23d0"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -39,7 +39,7 @@ margin: 2px 0px 0px 2px;
         <li class="right" >
           <a href="../index.html" title="Index"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.0.99 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.1.99 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
     </div>  
@@ -53,11 +53,11 @@ margin: 2px 0px 0px 2px;
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Link to this heading">¶</a></h1>
 <section id="create-an-application-from-scratch">
 <h2>Create an application from scratch<a class="headerlink" href="#create-an-application-from-scratch" title="Link to this heading">¶</a></h2>
-<p>If you want to create an application that uses pars, you can conveniently use the <code class="docutils literal notranslate"><span class="pre">pars-app-template</span></code>:</p>
+<p>If you want to create an application that uses pars, you can conveniently use the <code class="docutils literal notranslate"><span class="pre">pars-cxx-template</span></code>:</p>
 <section id="using-github-web">
 <h3>Using GitHub web<a class="headerlink" href="#using-github-web" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
-<li><p>open <a class="reference external" href="https://github.com/grobx/pars-app-template">https://github.com/grobx/pars-app-template</a></p></li>
+<li><p>open <a class="reference external" href="https://github.com/grobx/pars-cxx-template">https://github.com/grobx/pars-cxx-template</a></p></li>
 <li><p>click on <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">this</span> <span class="pre">template</span></code></p></li>
 <li><p>then <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">repository</span></code></p></li>
 <li><p>complete the procedure by naming your repository</p></li>
@@ -68,7 +68,7 @@ margin: 2px 0px 0px 2px;
 <h3>Using git<a class="headerlink" href="#using-git" title="Link to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>create the repository somewhere, say it’s <code class="docutils literal notranslate"><span class="pre">git&#64;somewhere:somebody/my-pars-app.git</span></code></p></li>
-<li><p>clone the template <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/grobx/pars-app-template</span> <span class="pre">my-pars-app</span></code></p></li>
+<li><p>clone the template <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/grobx/pars-cxx-template</span> <span class="pre">my-pars-app</span></code></p></li>
 <li><p>change directory to it <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">my-pars-app</span></code></p></li>
 <li><p>set origin url <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">set-url</span> <span class="pre">origin</span> <span class="pre">git&#64;somewhere:somebody/my-pars-app.git</span></code></p></li>
 <li><p>push set upstream <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span></code></p></li>
@@ -96,7 +96,7 @@ margin: 2px 0px 0px 2px;
 <p>At the moment of writing the pars project is not yet published on the vcpkg repository. Follow these steps to add it as an overlay to your vcpkg base project:</p>
 <ol class="arabic simple">
 <li><p>create the folder <code class="docutils literal notranslate"><span class="pre">ports/pars</span></code></p></li>
-<li><p>copy there the files <code class="docutils literal notranslate"><span class="pre">portfile.cmake</span></code> and <code class="docutils literal notranslate"><span class="pre">vcpkg.json</span></code> from the repository <a class="reference external" href="https://github.com/grobx/pars-app-template">https://github.com/grobx/pars-app-template</a></p></li>
+<li><p>copy there the files <code class="docutils literal notranslate"><span class="pre">portfile.cmake</span></code> and <code class="docutils literal notranslate"><span class="pre">vcpkg.json</span></code> from the repository <a class="reference external" href="https://github.com/grobx/pars-cxx-template">https://github.com/grobx/pars-cxx-template</a></p></li>
 <li><p>enable the overlay by adding it in the <code class="docutils literal notranslate"><span class="pre">overlay-ports</span></code> of the <code class="docutils literal notranslate"><span class="pre">vcpkg-configuration.json</span></code> file:</p></li>
 </ol>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;overlay-ports&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -230,7 +230,7 @@ margin: 2px 0px 0px 2px;
         <li class="right" >
           <a href="../index.html" title="Index"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.0.99 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pars 0.2.1.99 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Tutorial</a></li> 
       </ul>
     </div>
