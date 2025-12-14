@@ -31,8 +31,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h"
 
-#include <expected>
+#include <concepts>
+#include <string>
 #include <system_error>
+#include <type_traits>
 
 namespace pars
 {

@@ -38,6 +38,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <future>
 #include <thread>
 #include <unordered_map>
+#include <unordered_set>
 
 namespace pars::ev
 {

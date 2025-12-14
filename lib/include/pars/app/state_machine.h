@@ -30,10 +30,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #pragma once
 
 #include "pars/log.h"
+#include "pars/log/flags.h"
 
 #include <format>
+#include <initializer_list>
 #include <optional>
 #include <stdexcept>
+#include <string>
+#include <string_view>
 
 namespace pars::app
 {
@@ -88,16 +92,16 @@ struct state_machine
   {
   }
 
-  void ensure(std::initializer_list<state_type> expected)
+  void ensure(std::initializer_list<state_type> states)
   {
-    for (const auto& e : expected)
+    for (const auto& e : states)
       if (e == state_m)
         return;
 
     std::string states_str;
 
-    for (const auto& e : expected)
-      if (e != *expected.end())
+    for (const auto& e : states)
+      if (e != *states.end())
         states_str += std::format("{},", e);
       else
         states_str += std::format("{}", e);

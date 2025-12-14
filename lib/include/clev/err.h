@@ -29,8 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #pragma once
 
-#include <nng/nng.h>
-
 #include <expected>
 #include <functional>
 #include <stdexcept>
@@ -140,6 +138,7 @@ public:
 
   [[nodiscard]] expected::value_type&
   value_or_abort() & noexcept(clev_exception_disabled_v)
+    requires(!std::is_void_v<value_t>)
   {
     if (!*this)
       abort_now(expected::error());

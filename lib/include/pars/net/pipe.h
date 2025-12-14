@@ -64,7 +64,7 @@ public:
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "{}",
-                          static_cast<nngxx::pipe_view>(*this));
+                          static_cast<const nngxx::pipe_view&>(*this));
   }
 
 private:
