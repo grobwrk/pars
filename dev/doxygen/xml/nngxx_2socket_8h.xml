@@ -25,8 +25,6 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
       </node>
       <node id="14">
         <label>clev/iface.h</label>
@@ -57,7 +55,7 @@
       <node id="17">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
@@ -67,9 +65,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -81,7 +79,7 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -91,7 +89,7 @@
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="26">
@@ -145,7 +143,7 @@
       <node id="18">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -181,7 +179,7 @@
         <link refid="nngxx_2socket_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -199,19 +197,19 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="16">
         <label>concepts</label>
       </node>
-      <node id="8">
+      <node id="7">
         <label>expected</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>functional</label>
       </node>
-      <node id="7">
+      <node id="11">
         <label>nng/nng.h</label>
       </node>
       <node id="28">
@@ -226,10 +224,10 @@
       <node id="19">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>stdexcept</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>system_error</label>
       </node>
       <node id="22">

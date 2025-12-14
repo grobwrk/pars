@@ -20,10 +20,8 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
       </node>
-      <node id="13">
+      <node id="12">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -32,23 +30,23 @@
         <link refid="own_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="13">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="15">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="20">
@@ -56,9 +54,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -68,7 +66,7 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -86,9 +84,9 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -108,7 +106,7 @@
       <node id="27">
         <label>nngxx/msg_body.h</label>
         <link refid="msg__body_8h"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
@@ -124,7 +122,7 @@
       <node id="17">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -132,7 +130,7 @@
       <node id="19">
         <label>nngxx/opt_getter.h</label>
         <link refid="opt__getter_8h"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
@@ -142,7 +140,7 @@
       <node id="21">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
@@ -158,11 +156,11 @@
       <node id="25">
         <label>nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="33">
@@ -170,9 +168,13 @@
         <link refid="pars_2err_8h"/>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -192,7 +194,7 @@
       <node id="28">
         <label>pars/init.h</label>
         <link refid="init_8h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
@@ -214,7 +216,7 @@
       <node id="29">
         <label>chrono</label>
       </node>
-      <node id="15">
+      <node id="14">
         <label>concepts</label>
       </node>
       <node id="30">
@@ -223,25 +225,28 @@
       <node id="31">
         <label>cstring</label>
       </node>
-      <node id="9">
+      <node id="8">
         <label>expected</label>
       </node>
       <node id="32">
         <label>format</label>
       </node>
-      <node id="10">
+      <node id="9">
         <label>functional</label>
       </node>
-      <node id="8">
+      <node id="16">
         <label>nng/nng.h</label>
       </node>
       <node id="18">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="11">
+      <node id="10">
         <label>stdexcept</label>
       </node>
-      <node id="12">
+      <node id="34">
+        <label>string</label>
+      </node>
+      <node id="11">
         <label>system_error</label>
       </node>
       <node id="22">

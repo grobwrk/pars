@@ -117,9 +117,9 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="79" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="80" bodyend="82"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="76" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="77" bodyend="79"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1common__kind_1a23e499a282cc1c382b4e89091c13e1c0" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>as_tuple</name></member>
+      <member refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>as_tuple</name></member>
       <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>common_kind</name></member>
       <member refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event</name></member>
       <member refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" prot="public" virt="non-virtual"><scope>pars::ev::base_kind&lt; kind_of, event_t &gt;</scope><name>event</name></member>

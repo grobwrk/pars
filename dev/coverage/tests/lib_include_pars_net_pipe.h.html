@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">7</td>
@@ -101,7 +101,7 @@
              :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;{}&quot;,</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          static_cast&lt;nngxx::pipe_view&gt;(*this));</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">                          static_cast&lt;const nngxx::pipe_view&amp;&gt;(*this));</span>
              :   }
              : 
              : private:

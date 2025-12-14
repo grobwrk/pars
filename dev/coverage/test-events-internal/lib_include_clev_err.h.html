@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">33</td>
@@ -65,8 +65,6 @@
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
              : #pragma once
-             : 
-             : #include &lt;nng/nng.h&gt;
              : 
              : #include &lt;expected&gt;
              : #include &lt;functional&gt;
@@ -177,6 +175,7 @@
              : 
              :   [[nodiscard]] expected::value_type&amp;
              :   value_or_abort() &amp; noexcept(clev_exception_disabled_v)
+             :     requires(!std::is_void_v&lt;value_t&gt;)
              :   {
              :     if (!*this)
              :       abort_now(expected::error());

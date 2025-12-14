@@ -80,8 +80,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="58" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="58" bodyend="58"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" compoundref="runner_8h" startline="150" endline="157">pars::ev::runner::add_pipe</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" compoundref="runner_8h" startline="160" endline="173">pars::ev::runner::remove_pipe</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" compoundref="runner_8h" startline="151" endline="158">pars::ev::runner::add_pipe</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" compoundref="runner_8h" startline="161" endline="174">pars::ev::runner::remove_pipe</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1ab1ca71a4da0bf477ca46e1b68c35db54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>

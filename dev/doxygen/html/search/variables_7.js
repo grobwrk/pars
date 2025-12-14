@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['n_0',['n',['../structpars__example_1_1event_1_1fib__requested.html#aec7a9ab57ae10b959ae97b885b775ca9',1,'pars_example::event::fib_requested']]],
-  ['nngxx_5fsocket_5fis_5freally_5fneeded_5fv_1',['nngxx_socket_is_really_needed_v',['../nngxx_2socket_8h.html#ad5405cb6988304b4819775b78f6c4acc',1,'socket.h']]],
-  ['num_5fctxs_2',['num_ctxs',['../structpars_1_1comp_1_1backend_1_1init__p.html#a5a09b6183d2661c9b22008faedaf11e8',1,'pars::comp::backend::init_p']]]
+  ['opt_0',['opt',['../structnngxx_1_1opt__getter.html#a5a7f61ae362734f78c2f6ed882e15ddf',1,'nngxx::opt_getter::opt'],['../structnngxx_1_1opt__setter.html#ab03b5262fffaf48994787de1b815d3d7',1,'nngxx::opt_setter::opt']]],
+  ['overload_1',['overload',['../structnngxx_1_1opt__getter.html#a2e09364097ea33bc46e62cd9cd6b6eda',1,'nngxx::opt_getter::overload'],['../structnngxx_1_1opt__setter.html#a7a460bcdf2ebf73db792bec869e0c0a6',1,'nngxx::opt_setter::overload']]]
 ];

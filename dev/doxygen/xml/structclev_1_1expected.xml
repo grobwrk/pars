@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="132" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="132" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="130" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="130" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structclev_1_1expected_1a247759d3c4bc2a0a1a67b5ec325298c0" prot="private" static="no">
         <type>parent::value_type</type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="134" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="134" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="132" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="132" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structclev_1_1expected_1a3b0a99885068f426052c249d05850093" prot="private" static="no">
         <type>parent::error_type</type>
@@ -50,23 +50,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="136" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="136" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="134" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="134" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
+      <memberdef kind="function" id="structclev_1_1expected_1af4b1d85513b3114e9d401ec47d3572ff" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
         <type>expected::value_type &amp;</type>
         <definition>expected::value_type &amp; clev::expected&lt; value_t &gt;::value_or_abort</definition>
         <argsstring>() &amp;</argsstring>
         <name>value_or_abort</name>
         <qualifiedname>clev::expected::value_or_abort</qualifiedname>
+    <requiresclause>(!std::is_void_v&lt;value_t&gt;)    </requiresclause>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="142" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="142" bodyend="148"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="140" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="140" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
         <type>expected::value_type &amp;&amp;</type>
@@ -80,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="151" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="151" bodyend="157"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="150" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="150" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" prot="public" static="no" nodiscard="yes" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="lvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
         <type>const expected::value_type &amp;</type>
@@ -94,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="160" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="160" bodyend="166"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="159" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="159" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" prot="public" static="no" nodiscard="yes" constexpr="yes" const="yes" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" noexceptexpression="clev_exception_disabled_v" virt="non-virtual">
         <type>const expected::value_type &amp;&amp;</type>
@@ -108,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="169" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="169" bodyend="175"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="168" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="168" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a85bb320ee64f4e18d04aaa7a5c186746" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">expected</ref>&lt; std::reference_wrapper&lt; value_t &gt; &gt;</type>
@@ -126,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="178" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="178" bodyend="188"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="177" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="177" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -150,8 +151,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="192" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="192" bodyend="207"/>
-        <references refid="namespaceclev_1ac6cbc44586b9a0071f0db70322d6018d" compoundref="clev_2err_8h" startline="94">clev::is_expected_specialization_v</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="191" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="191" bodyend="206"/>
+        <references refid="namespaceclev_1ac6cbc44586b9a0071f0db70322d6018d" compoundref="clev_2err_8h" startline="92">clev::is_expected_specialization_v</references>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -170,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="210" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="210" bodyend="216"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="209" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="209" bodyend="215"/>
         <references refid="namespaceclev_1a4a8c676aa6064bd705f1b146c66b0167">clev::expected</references>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
@@ -194,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="219" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="219" bodyend="225"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="218" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="218" bodyend="224"/>
         <references refid="namespaceclev_1a4a8c676aa6064bd705f1b146c66b0167">clev::expected</references>
       </memberdef>
       <memberdef kind="function" id="structclev_1_1expected_1afc903d688dd32154b8bec104f9e6b5be" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" noexcept="yes" virt="non-virtual">
@@ -209,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="227" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="227" bodyend="233"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="226" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="226" bodyend="232"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -238,7 +239,7 @@
         <label>std::expected&lt; value_t, std::error_code &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="129" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="130" bodyend="234"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="127" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="128" bodyend="233"/>
     <listofallmembers>
       <member refid="structclev_1_1expected_1a85bb320ee64f4e18d04aaa7a5c186746" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>and_assign_to</name></member>
       <member refid="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>and_then</name></member>
@@ -247,7 +248,7 @@
       <member refid="structclev_1_1expected_1a8d1074bc5505a4ac8466e27b80cf4f64" prot="private" virt="non-virtual"><scope>clev::expected</scope><name>parent</name></member>
       <member refid="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>transform_to</name></member>
       <member refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>transform_to</name></member>
-      <member refid="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>value_or_abort</name></member>
+      <member refid="structclev_1_1expected_1af4b1d85513b3114e9d401ec47d3572ff" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>value_or_abort</name></member>
       <member refid="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>value_or_abort</name></member>
       <member refid="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>value_or_abort</name></member>
       <member refid="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" prot="public" virt="non-virtual"><scope>clev::expected</scope><name>value_or_abort</name></member>

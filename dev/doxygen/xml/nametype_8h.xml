@@ -306,8 +306,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log/nametype.h" line="37" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log/nametype.h" bodystart="37" bodyend="40"/>
-        <referencedby refid="classpars_1_1ev_1_1spec_1a6ab2473031f5c1300f65f1f4580e0a70" compoundref="spec_8h" startline="56" endline="63">pars::ev::spec&lt; kind_of_event_t &gt;::format_to</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+        <referencedby refid="classpars_1_1ev_1_1spec_1a6ab2473031f5c1300f65f1f4580e0a70" compoundref="spec_8h" startline="54" endline="61">pars::ev::spec&lt; kind_of_event_t &gt;::format_to</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="105">pars::net::op::send</referencedby>
       </memberdef>
       <memberdef kind="function" id="nametype_8h_1a44cf2292d98aa52f62494578e2c8cf80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>

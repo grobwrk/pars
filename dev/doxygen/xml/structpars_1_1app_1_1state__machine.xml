@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="84" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="84" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="88" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="88" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="183" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="183" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="187" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="187" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1app_1_1state__machine_1ad7301b3ac55ac50bbb59a186e90c51df" prot="private" static="no" mutable="no">
         <type>std::optional&lt; <ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref> &gt;</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="184" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="184" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="188" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="188" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -71,17 +71,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="86" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="86" bodyend="89"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="90" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="90" bodyend="93"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void pars::app::state_machine&lt; state_t &gt;::ensure</definition>
-        <argsstring>(std::initializer_list&lt; state_type &gt; expected)</argsstring>
+        <argsstring>(std::initializer_list&lt; state_type &gt; states)</argsstring>
         <name>ensure</name>
         <qualifiedname>pars::app::state_machine::ensure</qualifiedname>
         <param>
           <type>std::initializer_list&lt; <ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref> &gt;</type>
-          <declname>expected</declname>
+          <declname>states</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -89,9 +89,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="91" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="91" bodyend="108"/>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" compoundref="state__machine_8h" startline="157" endline="162">pars::app::state_machine&lt; state_t &gt;::tx</referencedby>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" compoundref="state__machine_8h" startline="164" endline="170">pars::app::state_machine&lt; state_t &gt;::tx</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="95" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="95" bodyend="112"/>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" compoundref="state__machine_8h" startline="161" endline="166">pars::app::state_machine&lt; state_t &gt;::tx</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" compoundref="state__machine_8h" startline="168" endline="174">pars::app::state_machine&lt; state_t &gt;::tx</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="110" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="110" bodyend="115"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="114" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="114" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -127,11 +127,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="117" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="117" bodyend="126"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="121" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="121" bodyend="130"/>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" compoundref="flags_8h" startline="41">pars::app</references>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
-        <referencedby refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" compoundref="state__machine_8h" startline="49" endline="54">pars::app::state_tx&lt; state_t &gt;::state_tx</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" compoundref="state__machine_8h" startline="53" endline="58">pars::app::state_tx&lt; state_t &gt;::state_tx</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="128" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="128" bodyend="137"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="132" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="132" bodyend="141"/>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" compoundref="flags_8h" startline="41">pars::app</references>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="139" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="139" bodyend="150"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="143" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="143" bodyend="154"/>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" compoundref="flags_8h" startline="41">pars::app</references>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="152" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="152" bodyend="155"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="156" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="156" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>&lt; <ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref> &gt;</type>
@@ -205,8 +205,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="157" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="157" bodyend="162"/>
-        <references refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" compoundref="state__machine_8h" startline="91" endline="108">pars::app::state_machine&lt; state_t &gt;::ensure</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="161" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="161" bodyend="166"/>
+        <references refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" compoundref="state__machine_8h" startline="95" endline="112">pars::app::state_machine&lt; state_t &gt;::ensure</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>&lt; <ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref> &gt;</type>
@@ -228,8 +228,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="164" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="164" bodyend="170"/>
-        <references refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" compoundref="state__machine_8h" startline="91" endline="108">pars::app::state_machine&lt; state_t &gt;::ensure</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="168" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="168" bodyend="174"/>
+        <references refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" compoundref="state__machine_8h" startline="95" endline="112">pars::app::state_machine&lt; state_t &gt;::ensure</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref></type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="172" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="172" bodyend="172"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="176" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="176" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="174" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="174" bodyend="180"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="178" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="178" bodyend="184"/>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" compoundref="flags_8h" startline="41">pars::app</references>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
@@ -267,11 +267,11 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="82" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="83" bodyend="185"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" line="86" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h" bodystart="87" bodyend="189"/>
     <listofallmembers>
       <member refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>commit</name></member>
       <member refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>current</name></member>
-      <member refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>ensure</name></member>
+      <member refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>ensure</name></member>
       <member refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>ensure</name></member>
       <member refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" prot="public" virt="non-virtual"><scope>pars::app::state_machine</scope><name>next</name></member>
       <member refid="structpars_1_1app_1_1state__machine_1ad7301b3ac55ac50bbb59a186e90c51df" prot="private" virt="non-virtual"><scope>pars::app::state_machine</scope><name>next_m</name></member>

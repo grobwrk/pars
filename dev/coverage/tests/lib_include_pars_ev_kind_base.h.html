@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -90,10 +90,7 @@
              : 
 <span class="lineNoCov">      0 / 1 </span> :   metadata_type&amp; md() <span class="lineNoCov">{ return metadata_m; }</span>
              : 
-             :   std::tuple&lt;const event_type&amp;, metadata_type&amp;&gt; as_tuple()
-             :   {
-             :     return std::forward_as_tuple(event_m, metadata_m);
-             :   }
+             :   auto as_tuple() { return std::forward_as_tuple(event_m, metadata_m); }
              : 
              :   common_kind(event_type e, metadata_type md)
           34</span> :     : <span class="lineCov">event_m{std::move(e)}</span>

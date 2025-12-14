@@ -236,7 +236,7 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="pars_2net_2pipe_8h_source.html#l00064">64</a> of file <a class="el" href="pars_2net_2pipe_8h_source.html">pipe.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   65</span>  {</div>
 <div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;{}&quot;</span>,</div>
-<div class="line"><span class="lineno">   67</span>                          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a><span class="keyword">&gt;</span>(*<span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   67</span>                          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a>&amp;<span class="keyword">&gt;</span>(*<span class="keyword">this</span>));</div>
 <div class="line"><span class="lineno">   68</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
 </div><!-- fragment -->
@@ -268,7 +268,7 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="pars_2net_2pipe_8h_source.html#l00058">58</a> of file <a class="el" href="pars_2net_2pipe_8h_source.html">pipe.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keywordflow">return</span> id_m; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="runner_8h_source.html#l00150">pars::ev::runner::add_pipe()</a>, and <a class="el" href="runner_8h_source.html#l00160">pars::ev::runner::remove_pipe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="runner_8h_source.html#l00151">pars::ev::runner::add_pipe()</a>, and <a class="el" href="runner_8h_source.html#l00161">pars::ev::runner::remove_pipe()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

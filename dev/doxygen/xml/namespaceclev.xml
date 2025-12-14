@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="51" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="49" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceclev_1ac6cbc44586b9a0071f0db70322d6018d" prot="public" static="no" constexpr="yes" mutable="no">
         <templateparamlist>
@@ -53,8 +53,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="94" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="94" bodyend="-1"/>
-        <referencedby refid="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" compoundref="clev_2err_8h" startline="192" endline="207">clev::expected&lt; value_t &gt;::and_then</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="92" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="structclev_1_1expected_1a51ee237ba882c8cf1659333bf0c7c9c3" compoundref="clev_2err_8h" startline="191" endline="206">clev::expected&lt; value_t &gt;::and_then</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="57" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="57" bodyend="63"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="55" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="55" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="namespaceclev_1a4e7c968daf8f7fab7c1a1e491de4fa12" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="65" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="65" bodyend="68"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="63" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="63" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="namespaceclev_1a4a8c676aa6064bd705f1b146c66b0167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -114,10 +114,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="237" column="1" declfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" declline="237" declcolumn="1"/>
-        <referencedby refid="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" compoundref="clev_2err_8h" startline="210" endline="216">clev::expected&lt; value_t &gt;::transform_to</referencedby>
-        <referencedby refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" compoundref="clev_2err_8h" startline="219" endline="225">clev::expected&lt; value_t &gt;::transform_to</referencedby>
-        <referencedby refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="119" endline="125">clev::expected&lt; void &gt;::transform_to</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="236" column="1" declfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" declline="236" declcolumn="1"/>
+        <referencedby refid="structclev_1_1expected_1a37a983f4846350fa09db409c736926f0" compoundref="clev_2err_8h" startline="209" endline="215">clev::expected&lt; value_t &gt;::transform_to</referencedby>
+        <referencedby refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" compoundref="clev_2err_8h" startline="218" endline="224">clev::expected&lt; value_t &gt;::transform_to</referencedby>
+        <referencedby refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="117" endline="123">clev::expected&lt; void &gt;::transform_to</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="240" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="240" bodyend="246"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="239" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" bodystart="239" bodyend="245"/>
         <referencedby refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</referencedby>
         <referencedby refid="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" compoundref="nngxx_2err_8h" startline="114" endline="119">nngxx::make</referencedby>
       </memberdef>
@@ -149,6 +149,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="39" column="1"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/err.h" line="37" column="1"/>
   </compounddef>
 </doxygen>

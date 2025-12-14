@@ -225,7 +225,7 @@
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" line="76" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" bodystart="76" bodyend="87"/>
         <references refid="classpars_1_1ev_1_1job_1ad7c83976aae98c66fe618f4f00a98582" compoundref="job_8h" startline="68" endline="71">event</references>
-        <references refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="83" endline="107">pars::ev::serialize::to_event</references>
+        <references refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="198" endline="215">pars::ev::serialize::to_event</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -240,9 +240,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" line="89" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" bodystart="89" bodyend="89"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">pars::ev::runner::exec</referencedby>
         <referencedby refid="classpars_1_1ev_1_1job_1ae742efe1daa7a551317a916871ecaf7e" compoundref="job_8h" startline="100" endline="100">set_id</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="55" endline="70">pars::ev::runner::start_thread</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="56" endline="71">pars::ev::runner::start_thread</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -257,8 +257,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" line="91" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" bodystart="91" bodyend="91"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">pars::ev::runner::exec</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="55" endline="70">pars::ev::runner::start_thread</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" compoundref="runner_8h" startline="56" endline="71">pars::ev::runner::start_thread</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -273,7 +273,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" line="93" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h" bodystart="93" bodyend="93"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">pars::ev::runner::exec</referencedby>
         <referencedby refid="classpars_1_1ev_1_1job_1a8956387d27f2cc1787c636339e67f39f" compoundref="job_8h" startline="95" endline="98">format_to</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1ev_1_1job_1a8956387d27f2cc1787c636339e67f39f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">

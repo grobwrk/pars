@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">14</td>
@@ -96,7 +96,7 @@
              :     requires kind_c&lt;kind_of&gt;
              :   void queue_fire(event_t ev, ev::metadata&lt;kind_of, event2_t&gt; md)
              :   {
-             :     queue_fire(ev, md.pipe().socket_id(), md.tool(), md.pipe());
+             :     queue_fire(std::move(ev), md.pipe().socket_id(), md.tool(), md.pipe());
              :   }
              : 
              :   template&lt;network_event_c event_t, net::tool_c tool_t&gt;

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">63</td>
@@ -109,7 +109,8 @@
              :     pars::debug(SL, lf::net, &quot;{}: Send Message [{}]!&quot;, f::pntl{p, t}, m);
              : 
              :     // replace the callback with the new one
-             :     cb_m = [&amp;, p](clev::expected&lt;void&gt; res, nngxx::msg m) mutable {
+             :     cb_m = [&amp;, ev = std::move(ev), p](clev::expected&lt;void&gt; res,
+             :                                       nngxx::msg m) mutable {
              :       if (res)
              :       {
              :         // NOTE: m is empty on success

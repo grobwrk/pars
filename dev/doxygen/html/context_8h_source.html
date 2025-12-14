@@ -142,7 +142,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context.html#a3da40ee1b53ebad0eabc4f609db4ac9f">   48</a></span>  <a class="code hl_function" href="classpars_1_1net_1_1context.html#a3da40ee1b53ebad0eabc4f609db4ac9f">context</a>(<a class="code hl_class" href="classpars_1_1ev_1_1enqueuer.html">ev::enqueuer</a>&amp; r, <a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a>&amp;&amp; c, <span class="keyword">const</span> <a class="code hl_class" href="classpars_1_1net_1_1socket.html">net::socket</a>&amp; s)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    : router_m{r}</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    , ctx_m{std::move(c)}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    , ctx_m{<a class="code hl_namespace" href="namespacestd.html">std</a>::move(c)}</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    , sock_m{s}</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
@@ -179,7 +179,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1context.html#ab93a9163b25d90e2f7c9111af489bab4">   79</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpars_1_1net_1_1context.html#ab93a9163b25d90e2f7c9111af489bab4">send</a>(event_t <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>, <a class="code hl_class" href="classpars_1_1net_1_1pipe.html">pipe</a> p)</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    op_m.send(router_m, *<span class="keyword">this</span>, p, <a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    op_m.send(router_m, *<span class="keyword">this</span>, p, std::move(<a class="code hl_namespace" href="namespacepars_1_1ev.html">ev</a>));</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
 </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
@@ -235,6 +235,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacenngxx_html_af14b9374b5e7ac4007d33f4012ac3026"><div class="ttname"><a href="namespacenngxx.html#af14b9374b5e7ac4007d33f4012ac3026">nngxx::aio_view</a></div><div class="ttdeci">clev::iface&lt; nng_aio * &gt; aio_view</div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00037">aio.h:37</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00037">event.h:38</a></div></div>
 <div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00095">common.h:96</a></div></div>
 <div class="ttc" id="aop_8h_html"><div class="ttname"><a href="op_8h.html">op.h</a></div></div>
 <div class="ttc" id="apars_2net_2socket_8h_html"><div class="ttname"><a href="pars_2net_2socket_8h.html">socket.h</a></div></div>
 <div class="ttc" id="astructpars_1_1net_1_1context__opt_html"><div class="ttname"><a href="structpars_1_1net_1_1context__opt.html">pars::net::context_opt</a></div><div class="ttdef"><b>Definition</b> <a href="context__opt_8h_source.html#l00041">context_opt.h:42</a></div></div>

@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="40" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="41" bodyend="43"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="43" bodyend="45"/>
       </memberdef>
       <memberdef kind="enum" id="namespacepars_1a12232d6f4a47a54243d1c224c421b535" prot="public" static="no" strong="yes">
         <type></type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="45" column="41" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="45" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="47" column="41" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="47" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1a9890a23006e95b65b26c3eea237461b8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::error_code</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="66" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="66" bodyend="69"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" line="68" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/err.h" bodystart="68" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -481,17 +481,17 @@
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log.h" line="129" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log.h" bodystart="129" bodyend="134"/>
         <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="64" endline="73">log</references>
-        <referencedby refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" compoundref="runner_8h" startline="175" endline="195">pars::ev::runner::associate_job_to_pipe</referencedby>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" compoundref="state__machine_8h" startline="139" endline="150">pars::app::state_machine&lt; state_t &gt;::commit</referencedby>
-        <referencedby refid="classpars_1_1app_1_1resources_1a5c8091ebeeaad5483cdc9a56cd85420d" compoundref="resources_8h" startline="114" endline="137">pars::app::resources&lt; key_t, resource_t, mutex_t &gt;::emplace</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">pars::ev::runner::exec</referencedby>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" compoundref="state__machine_8h" startline="117" endline="126">pars::app::state_machine&lt; state_t &gt;::next</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" compoundref="state__machine_8h" startline="174" endline="180">pars::app::state_machine&lt; state_t &gt;::reset</referencedby>
-        <referencedby refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" compoundref="state__machine_8h" startline="128" endline="137">pars::app::state_machine&lt; state_t &gt;::rollback</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="83" endline="107">pars::ev::serialize::to_event</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" compoundref="serializer_8h" startline="53" endline="80">pars::ev::serialize::to_network</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" compoundref="runner_8h" startline="176" endline="196">pars::ev::runner::associate_job_to_pipe</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" compoundref="state__machine_8h" startline="143" endline="154">pars::app::state_machine&lt; state_t &gt;::commit</referencedby>
+        <referencedby refid="classpars_1_1app_1_1resources_1a5c8091ebeeaad5483cdc9a56cd85420d" compoundref="resources_8h" startline="115" endline="138">pars::app::resources&lt; key_t, resource_t, mutex_t &gt;::emplace</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">pars::ev::runner::exec</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" compoundref="state__machine_8h" startline="121" endline="130">pars::app::state_machine&lt; state_t &gt;::next</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="108" endline="144">pars::net::op::recv</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" compoundref="state__machine_8h" startline="178" endline="184">pars::app::state_machine&lt; state_t &gt;::reset</referencedby>
+        <referencedby refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" compoundref="state__machine_8h" startline="132" endline="141">pars::app::state_machine&lt; state_t &gt;::rollback</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="105">pars::net::op::send</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="198" endline="215">pars::ev::serialize::to_event</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" compoundref="serializer_8h" startline="174" endline="195">pars::ev::serialize::to_network</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1a4de5bf8cc82c033ff51ef3355789d725" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -900,11 +900,11 @@
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log.h" line="211" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log.h" bodystart="211" bodyend="215"/>
         <references refid="namespacepars_1a31517dba4d6847862ee6be3eeb802a03" compoundref="log_8h" startline="64" endline="73">log</references>
-        <referencedby refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" compoundref="op_8h" startline="194" endline="194">pars::net::op::abort</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">pars::ev::runner::exec</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="107" endline="143">pars::net::op::recv</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1ab05b5e3333dae1a6c9a0117c12bcad2b" compoundref="op_8h" startline="195" endline="195">pars::net::op::abort</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">pars::ev::runner::exec</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a0ddb15b0640c63b94650cf12cd609a42" compoundref="op_8h" startline="108" endline="144">pars::net::op::recv</referencedby>
         <referencedby refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" compoundref="single_8h" startline="91" endline="106">pars::app::single&lt; component_type &gt;::run</referencedby>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="105">pars::net::op::send</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacepars_1a314ece1bcf5312db56fc8eece18023cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1313,6 +1313,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="39" column="1"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="40" column="1"/>
   </compounddef>
 </doxygen>

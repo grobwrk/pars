@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Nov 28 19:49:25 2025 </td>
+                     <td class="headerValue" width="15%">Sun Dec 14 20:27:36 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">71</td>
@@ -172,7 +172,7 @@
              :   template&lt;ev::event_c event_t&gt;
              :   void send(event_t ev, pipe p = {})
              :   {
-             :     op_m.send(router_m, *this, p, ev);
+             :     op_m.send(router_m, *this, p, std::move(ev));
              :   }
              : 
 <span class="lineNoCov">      0 / 1 </span> :   void recv() <span class="lineNoCov">{ op_m.recv(router_m, *this); }</span>

@@ -163,7 +163,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classpars_1_1net_1_1pipe.html#a8eaace5aedaac3e6c62c0a9a9c25065e">   64</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classpars_1_1net_1_1pipe.html#a8eaace5aedaac3e6c62c0a9a9c25065e">format_to</a>(std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>,</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                          <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a><span class="keyword">&gt;</span>(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                          <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="namespacenngxx.html#aafdaa64936251b53768712113f7c3e18">nngxx::pipe_view</a>&amp;<span class="keyword">&gt;</span>(*<span class="keyword">this</span>));</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
 </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>

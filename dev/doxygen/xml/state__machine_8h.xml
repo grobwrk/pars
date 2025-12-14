@@ -3,9 +3,13 @@
   <compounddef id="state__machine_8h" kind="file" language="C++">
     <compoundname>state_machine.h</compoundname>
     <includes refid="log_8h" local="yes">pars/log.h</includes>
+    <includes refid="flags_8h" local="yes">pars/log/flags.h</includes>
     <includes local="no">format</includes>
+    <includes local="no">initializer_list</includes>
     <includes local="no">optional</includes>
     <includes local="no">stdexcept</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string_view</includes>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="1">
@@ -18,6 +22,14 @@
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -48,19 +60,30 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
+      <node id="13">
+        <label>pars/log/flags.h</label>
+        <link refid="flags_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>chrono</label>
       </node>
       <node id="7">
         <label>config.h</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>format</label>
+      </node>
+      <node id="15">
+        <label>initializer_list</label>
       </node>
       <node id="4">
         <label>nng/nng.h</label>
       </node>
-      <node id="14">
+      <node id="16">
         <label>optional</label>
       </node>
       <node id="6">
@@ -81,8 +104,14 @@
       <node id="8">
         <label>spdlog/spdlog.h</label>
       </node>
-      <node id="15">
+      <node id="17">
         <label>stdexcept</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>string_view</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -164,161 +193,165 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">pars/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1app" kindref="compound">pars::app</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>state_t&gt;</highlight></codeline>
-<codeline lineno="45" refid="structpars_1_1app_1_1state__tx" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" kindref="member">state_tx</ref></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="47" refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" kindref="member">state_type</ref><sp/>=<sp/>state_t;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" kindref="member">state_tx</ref>(<ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine&lt;state_type&gt;</ref>&amp;<sp/>sm,<sp/><ref refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>sm_m{sm}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>done_m{false}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>sm.<ref refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kindref="member">next</ref>(to_state);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="structpars_1_1app_1_1state__tx_1a997e8e2b6c46219260dada045fa2a9b0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx_1a997e8e2b6c46219260dada045fa2a9b0" kindref="member">~state_tx</ref>()</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!done_m)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sm_m.rollback();</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62" refid="structpars_1_1app_1_1state__tx_1a23acdc35c47ae1d1ee933add8c11a050" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx_1a23acdc35c47ae1d1ee933add8c11a050" kindref="member">commit</ref>()</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>sm_m.commit();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flags_8h" kindref="compound">pars/log/flags.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;format&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;initializer_list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1app" kindref="compound">pars::app</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>state_t&gt;</highlight></codeline>
+<codeline lineno="49" refid="structpars_1_1app_1_1state__tx" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" kindref="member">state_tx</ref></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51" refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" kindref="member">state_type</ref><sp/>=<sp/>state_t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx_1a20477c6601a24e64a8d328c1ada424f9" kindref="member">state_tx</ref>(<ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine&lt;state_type&gt;</ref>&amp;<sp/>sm,<sp/><ref refid="structpars_1_1app_1_1state__tx_1ac34ef990d67f0cd15a99d56d28a36ce0" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>sm_m{sm}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>done_m{false}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>sm.<ref refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kindref="member">next</ref>(to_state);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structpars_1_1app_1_1state__tx_1a997e8e2b6c46219260dada045fa2a9b0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx_1a997e8e2b6c46219260dada045fa2a9b0" kindref="member">~state_tx</ref>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!done_m)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sm_m.rollback();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>done_m<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" kindref="member">rollback</ref>()</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>sm_m.rollback();</highlight></codeline>
+<codeline lineno="66" refid="structpars_1_1app_1_1state__tx_1a23acdc35c47ae1d1ee933add8c11a050" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx_1a23acdc35c47ae1d1ee933add8c11a050" kindref="member">commit</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>sm_m.commit();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>done_m<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>done_m<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine&lt;state_type&gt;</ref>&amp;<sp/>sm_m;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>done_m;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>state_t&gt;</highlight></codeline>
-<codeline lineno="82" refid="structpars_1_1app_1_1state__machine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kindref="member">state_machine</ref></highlight></codeline>
-<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84" refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>=<sp/>state_t;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kindref="member">state_machine</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>state_m{s}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" kindref="member">ensure</ref>(std::initializer_list&lt;state_type&gt;<sp/>expected)</highlight></codeline>
+<codeline lineno="73" refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" kindref="member">rollback</ref>()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>sm_m.rollback();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>done_m<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">state_machine&lt;state_type&gt;</ref>&amp;<sp/>sm_m;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>done_m;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>state_t&gt;</highlight></codeline>
+<codeline lineno="86" refid="structpars_1_1app_1_1state__machine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kindref="member">state_machine</ref></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88" refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>=<sp/>state_t;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kindref="member">state_machine</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>state_m{s}</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>e<sp/>:<sp/>expected)</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e<sp/>==<sp/>state_m)</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>states_str;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>e<sp/>:<sp/>expected)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e<sp/>!=<sp/>*expected.end())</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states_str<sp/>+=<sp/>std::format(</highlight><highlight class="stringliteral">&quot;{},&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states_str<sp/>+=<sp/>std::format(</highlight><highlight class="stringliteral">&quot;{}&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::format(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>State<sp/>{}<sp/>[must<sp/>be<sp/>in<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string_view{states_str.begin(),<sp/>states_str.end()<sp/>-<sp/>1}));</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110" refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" kindref="member">ensure</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state_m<sp/>!=<sp/>s)</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::format(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>State<sp/>\&quot;{}\&quot;<sp/>[must<sp/>be<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,<sp/>state_m,<sp/>s));</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117" refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kindref="member">next</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_m)</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Another<sp/>transition<sp/>in<sp/>progress!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Start<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m<sp/>=<sp/>s;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128" refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" kindref="member">rollback</ref>()</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!next_m)</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Rollback<sp/>while<sp/>no<sp/>transition!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Rollback<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_m,<sp/>*next_m);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m.reset();</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139" refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" kindref="member">commit</ref>()</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!next_m)</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Commit<sp/>while<sp/>no<sp/>transition!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Commit<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*next_m);</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>state_m<sp/>=<sp/>*next_m;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m.reset();</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152" refid="structpars_1_1app_1_1state__machine_1afdc3ee0c8292b9c19b39e0d98db81c23" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1afdc3ee0c8292b9c19b39e0d98db81c23" kindref="member">tx</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157" refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" kindref="member">tx</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>from_state,<sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" kindref="member">ensure</ref>(from_state);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" kindref="member">ensure</ref>(std::initializer_list&lt;state_type&gt;<sp/>states)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>e<sp/>:<sp/>states)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e<sp/>==<sp/>state_m)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>states_str;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>e<sp/>:<sp/>states)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e<sp/>!=<sp/>*states.end())</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states_str<sp/>+=<sp/>std::format(</highlight><highlight class="stringliteral">&quot;{},&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>states_str<sp/>+=<sp/>std::format(</highlight><highlight class="stringliteral">&quot;{}&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::format(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>State<sp/>{}<sp/>[must<sp/>be<sp/>in<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string_view{states_str.begin(),<sp/>states_str.end()<sp/>-<sp/>1}));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" kindref="member">ensure</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state_m<sp/>!=<sp/>s)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::format(</highlight><highlight class="stringliteral">&quot;Wrong<sp/>State<sp/>\&quot;{}\&quot;<sp/>[must<sp/>be<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,<sp/>state_m,<sp/>s));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kindref="member">next</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>s)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(next_m)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Another<sp/>transition<sp/>in<sp/>progress!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Start<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m<sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" kindref="member">rollback</ref>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!next_m)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Rollback<sp/>while<sp/>no<sp/>transition!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Rollback<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_m,<sp/>*next_m);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m.reset();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a749117203fe58365232e11ef90ec277a" kindref="member">commit</ref>()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!next_m)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Commit<sp/>while<sp/>no<sp/>transition!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Commit<sp/>transition<sp/>from<sp/>\&quot;{}\&quot;<sp/>to<sp/>\&quot;{}\&quot;&quot;</highlight><highlight class="normal">,<sp/>state_m,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*next_m);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>state_m<sp/>=<sp/>*next_m;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>next_m.reset();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="structpars_1_1app_1_1state__machine_1afdc3ee0c8292b9c19b39e0d98db81c23" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1afdc3ee0c8292b9c19b39e0d98db81c23" kindref="member">tx</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight></codeline>
-<codeline lineno="164" refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" kindref="member">tx</ref>(std::initializer_list&lt;state_type&gt;<sp/>from_states,</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" kindref="member">ensure</ref>(from_states);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172" refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" kindref="member">current</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state_m;<sp/>}</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174" refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" kindref="member">reset</ref>()</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Reset<sp/>State<sp/>to<sp/>\&quot;{}\&quot;<sp/>[was<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_type::INITIALIZING,<sp/>state_m);</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>state_m<sp/>=<sp/>state_type::INITIALIZING;</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>state_m;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/>std::optional&lt;state_type&gt;<sp/>next_m;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::app</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1a9c322827d5b2b19d2ea39c180ec18b07" kindref="member">tx</ref>(<ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>from_state,<sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" kindref="member">ensure</ref>(from_state);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx&lt;state_type&gt;</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1aae8d0320fccfbdf50d9048378ec46231" kindref="member">tx</ref>(std::initializer_list&lt;state_type&gt;<sp/>from_states,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>to_state)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" kindref="member">ensure</ref>(from_states);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__tx" kindref="compound">state_tx</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>to_state);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/><ref refid="structpars_1_1app_1_1state__machine_1a3e3fc55537d2336f41c19753d10511c9" kindref="member">current</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state_m;<sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1state__machine_1a9969c8c053eb38464655f6ad9c1bbc74" kindref="member">reset</ref>()</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Reset<sp/>State<sp/>to<sp/>\&quot;{}\&quot;<sp/>[was<sp/>\&quot;{}\&quot;]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_type::INITIALIZING,<sp/>state_m);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>state_m<sp/>=<sp/>state_type::INITIALIZING;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine_1a0b1e006841a30fe2080f1a482ae5ace9" kindref="member">state_type</ref><sp/>state_m;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>std::optional&lt;state_type&gt;<sp/>next_m;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::app</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/state_machine.h"/>
   </compounddef>
