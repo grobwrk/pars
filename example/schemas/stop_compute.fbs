@@ -1,0 +1,7 @@
+namespace pars.ev;
+
+table StopCompute {
+  pipe_id: int;
+}
+
+root_type StopCompute;

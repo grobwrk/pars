@@ -29,6 +29,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #include "event.h"
 
+#include <iostream>
+
 namespace pars_example::apps
 {
 
@@ -147,14 +149,14 @@ private:
 
     auto [ev, md] = fired.as_tuple();
 
-    auto out_ev = fib_requested{work_id, n, fast_fib};
-
-    // use the default context on the sock to send the event
-    comp().req().sock().send(out_ev, md.pipe());
-
-    ts.commit();
+    auto out_ev = fib_requested::make(work_id, n, fast_fib);
 
     pars::info(SL, "Fired {}, Sent {}!", ev, out_ev);
+
+    // use the default context on the sock to send the event
+    comp().req().sock().send(std::move(out_ev), md.pipe());
+
+    ts.commit();
   }
 
   void recv_answer(hf_arg<sent, fib_requested> sent)
@@ -183,8 +185,8 @@ private:
 
     pars::info(SL, "Received {}, Application Terminated!", ev);
 
-    std::cout << "WORK(" << ev.work_id << ") FIB(" << n << ") = " << ev.fib_n
-              << "\n";
+    std::cout << "WORK(" << ev.table()->work_id() << ") FIB(" << n
+              << ") = " << ev.table()->fib_n() << "\n";
   }
 
   void terminate(hf_arg<fired, exception> fired)

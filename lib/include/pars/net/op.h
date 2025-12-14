@@ -72,7 +72,8 @@ public:
     pars::debug(SL, lf::net, "{}: Send Message [{}]!", f::pntl{p, t}, m);
 
     // replace the callback with the new one
-    cb_m = [&, p](clev::expected<void> res, nngxx::msg m) mutable {
+    cb_m = [&, ev = std::move(ev), p](clev::expected<void> res,
+                                      nngxx::msg m) mutable {
       if (res)
       {
         // NOTE: m is empty on success

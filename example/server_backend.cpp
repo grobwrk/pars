@@ -30,6 +30,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "event.h"
 #include "fib.h"
 
+#include <iostream>
+
 namespace pars_example::apps
 {
 
@@ -194,7 +196,7 @@ private:
   {
     state.ensure(server_state::running);
 
-    auto [ev, md] = recv.as_tuple();
+    auto [ev, md] = std::move(recv).as_tuple();
 
     auto locked = resources.locked_resource(md.pipe().id());
 
@@ -213,11 +215,11 @@ private:
 
     pipe_resource.save_tool(md.tool());
 
-    router().queue_fire(ev, md);
+    pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
+
+    router().queue_fire(std::move(ev), md);
 
     ts.commit();
-
-    pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
   }
 
   /// compute fib_b then answer
@@ -241,7 +243,7 @@ private:
 
     try
     {
-      fib_n = compute::fib(ev.n, ev.use_fast_fib, md);
+      fib_n = compute::fib(ev.table()->n(), ev.table()->use_fast_fib(), md);
     }
     catch (const compute::stop_requested&)
     {
@@ -259,15 +261,15 @@ private:
 
     /// send the outcome event using the ctx where we received from
 
-    auto out_ev = fib_computed{ev.work_id, fib_n};
+    auto out_ev = fib_computed::make(ev.table()->work_id(), fib_n);
 
     auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
 
-    ctx.send(out_ev, p);
+    pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
+
+    ctx.send(std::move(out_ev), p);
 
     ts.commit();
-
-    pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
   }
 
   /// start a recv operation

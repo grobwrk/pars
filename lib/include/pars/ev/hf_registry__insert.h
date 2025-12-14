@@ -69,7 +69,7 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
 
       ke.md().set_job_id(j.id());
 
-      (*hf_ptr)(ke);
+      (*hf_ptr)(std::move(ke));
     });
   }
 }

@@ -53,10 +53,7 @@ struct common_kind
 
   metadata_type& md() { return metadata_m; }
 
-  std::tuple<const event_type&, metadata_type&> as_tuple()
-  {
-    return std::forward_as_tuple(event_m, metadata_m);
-  }
+  auto as_tuple() { return std::forward_as_tuple(event_m, metadata_m); }
 
   common_kind(event_type e, metadata_type md)
     : event_m{std::move(e)}

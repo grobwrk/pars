@@ -32,8 +32,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/klass.h"
 #include "pars/log/nametype.h"
 
-#include <cereal/cereal.hpp>
-
 #include <format>
 
 namespace pars::ev

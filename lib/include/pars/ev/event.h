@@ -35,8 +35,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "clev/err.h"
 
-#include <cereal/types/vector.hpp>
-
 #include <chrono>
 #include <format>
 

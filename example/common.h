@@ -92,15 +92,17 @@ private:
 
 } // namespace pars_example::resource
 
-template<>
-struct std::formatter<::pars_example::resource::client_state>
-  : std::formatter<std::string>
+namespace std
 {
-  auto format(const ::pars_example::resource::client_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using client_state = pars_example::resource::client_state;
 
+template<>
+struct formatter<::pars_example::resource::client_state> : formatter<string>
+{
+  using client_state = ::pars_example::resource::client_state;
+
+  auto format(const client_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case client_state::creating:
@@ -139,14 +141,13 @@ struct std::formatter<::pars_example::resource::client_state>
 };
 
 template<>
-struct std::formatter<::pars_example::resource::server_state>
-  : std::formatter<std::string>
+struct formatter<::pars_example::resource::server_state> : formatter<string>
 {
-  auto format(const ::pars_example::resource::server_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using server_state = pars_example::resource::server_state;
+  using server_state = ::pars_example::resource::server_state;
 
+  auto format(const server_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case server_state::creating:
@@ -173,14 +174,13 @@ struct std::formatter<::pars_example::resource::server_state>
 };
 
 template<>
-struct std::formatter<::pars_example::resource::pipe_state>
-  : std::formatter<std::string>
+struct formatter<::pars_example::resource::pipe_state> : formatter<string>
 {
-  auto format(const ::pars_example::resource::pipe_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using pipe_state = pars_example::resource::pipe_state;
+  using pipe_state = ::pars_example::resource::pipe_state;
 
+  auto format(const pipe_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case pipe_state::waiting_work:
@@ -205,3 +205,5 @@ struct std::formatter<::pars_example::resource::pipe_state>
     }
   }
 };
+
+} // namespace std

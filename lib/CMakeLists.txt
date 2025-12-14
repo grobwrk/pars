@@ -1,6 +1,7 @@
 find_package (Threads REQUIRED)
 find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
+find_package (flatbuffers CONFIG REQUIRED)
 
 # sorted please
 set (PARS_HEADERS
@@ -99,6 +100,7 @@ target_link_libraries (
     INTERFACE
     nng::nng
     spdlog::spdlog
+    flatbuffers::flatbuffers
 )
 
 target_include_directories (

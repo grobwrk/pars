@@ -135,7 +135,7 @@ public:
   template<ev::event_c event_t>
   void send(event_t ev, pipe p = {})
   {
-    op_m.send(router_m, *this, p, ev);
+    op_m.send(router_m, *this, p, std::move(ev));
   }
 
   void recv() { op_m.recv(router_m, *this); }

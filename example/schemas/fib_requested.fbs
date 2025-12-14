@@ -1,0 +1,9 @@
+namespace pars.ev;
+
+table FibRequested {
+  work_id: ulong;
+  n: ulong;
+  use_fast_fib: bool;
+}
+
+root_type FibRequested;

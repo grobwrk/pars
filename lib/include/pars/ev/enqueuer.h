@@ -59,7 +59,7 @@ public:
     requires kind_c<kind_of>
   void queue_fire(event_t ev, ev::metadata<kind_of, event2_t> md)
   {
-    queue_fire(ev, md.pipe().socket_id(), md.tool(), md.pipe());
+    queue_fire(std::move(ev), md.pipe().socket_id(), md.tool(), md.pipe());
   }
 
   template<network_event_c event_t, net::tool_c tool_t>
