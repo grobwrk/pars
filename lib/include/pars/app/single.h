@@ -50,8 +50,8 @@ public:
     : runner_m{hf_registry_m}
     , hf_registry_m{runner_m}
     , dispatcher_m{runner_m}
-    , router_m{dispatcher_m, runner_m}
-    , component_m{hf_registry_m, router_m}
+    , enqueuer_m{dispatcher_m, runner_m}
+    , component_m{hf_registry_m, enqueuer_m}
   {
   }
 
@@ -69,7 +69,7 @@ public:
 protected:
   component_type& comp() { return component_m; }
 
-  ev::enqueuer& router() { return router_m; }
+  ev::enqueuer& enqueuer() { return enqueuer_m; }
 
   ev::hf_registry& hfs() { return hf_registry_m; }
 
@@ -109,7 +109,7 @@ private:
   ev::runner runner_m;
   ev::hf_registry hf_registry_m;
   ev::dispatcher dispatcher_m;
-  ev::enqueuer router_m;
+  ev::enqueuer enqueuer_m;
   component_type component_m;
 };
 

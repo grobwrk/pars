@@ -49,7 +49,7 @@ public:
   }
 
   template<internal_event_c event_t>
-  void queue_fire(event_t ev)
+  void fire(event_t ev)
   {
     dispatcher_m.queue_back(fired{std::move(ev), {}});
   }
@@ -57,13 +57,13 @@ public:
   template<template<typename> typename kind_of, network_event_c event_t,
            network_event_c event2_t>
     requires kind_c<kind_of>
-  void queue_fire(event_t ev, ev::metadata<kind_of, event2_t> md)
+  void fire(event_t ev, ev::metadata<kind_of, event2_t> md)
   {
-    queue_fire(std::move(ev), md.pipe().socket_id(), md.tool(), md.pipe());
+    fire(std::move(ev), md.pipe().socket_id(), md.tool(), md.pipe());
   }
 
   template<network_event_c event_t, net::tool_c tool_t>
-  void queue_fire(event_t ev, const int s_id, tool_t& t, const net::pipe& p)
+  void fire(event_t ev, const int s_id, tool_t& t, const net::pipe& p)
   {
     if constexpr (std::is_same_v<event_t, creating_pipe> ||
                   std::is_same_v<event_t, pipe_created> ||

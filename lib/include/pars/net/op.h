@@ -91,7 +91,7 @@ public:
         pars::err(SL, lf::net, "{}: Error Sending {}! [msg:{},err:{}]",
                   f::pntl{pv, t}, nametype(ev), m, res.error());
 
-        r.queue_fire(ev::network_error{res.error(), dir::out}, t.socket_id(), t,
+        r.fire(ev::network_error{res.error(), dir::out}, t.socket_id(), t,
                      pv);
       }
     };
@@ -131,7 +131,7 @@ public:
         pars::err(SL, lf::net, "{}: Error Receiving! [{}]", f::pntl{pv, t},
                   res.error());
 
-        r.queue_fire(ev::network_error{res.error(), dir::in}, t.socket_id(), t,
+        r.fire(ev::network_error{res.error(), dir::in}, t.socket_id(), t,
                      pv);
       }
     };

@@ -191,7 +191,7 @@ private:
     pars::info(SL, "{}: Fired {} [# resources: {}]", md, ev, resources.count());
   }
 
-  /// queue_fire the computation
+  /// fire the computation
   void fire_compute(hf_arg<received, fib_requested> recv)
   {
     state.ensure(server_state::running);
@@ -217,7 +217,7 @@ private:
 
     pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
 
-    router().queue_fire(std::move(ev), md);
+    enqueuer().fire(std::move(ev), md);
 
     ts.commit();
   }
@@ -287,7 +287,7 @@ private:
     {
       auto shutdown_ev = shutdown{};
 
-      router().queue_fire(shutdown_ev);
+      enqueuer().fire(shutdown_ev);
 
       pars::info(SL, "{}: Sent {}, Fire {}! [{} succesfully served]", md, ev,
                  shutdown_ev, max_served);

@@ -71,8 +71,8 @@ class socket
 {
 public:
   /// Construct a socket
-  socket(ev::enqueuer& r, nngxx::socket&& s)
-    : router_m{r}
+  socket(ev::enqueuer& e, nngxx::socket&& s)
+    : enqueuer_m{e}
     , socket_m{std::move(s)}
   {
     register_pipe_notify();
@@ -135,10 +135,10 @@ public:
   template<ev::event_c event_t>
   void send(event_t ev, pipe p = {})
   {
-    op_m.send(router_m, *this, p, std::move(ev));
+    op_m.send(enqueuer_m, *this, p, std::move(ev));
   }
 
-  void recv() { op_m.recv(router_m, *this); }
+  void recv() { op_m.recv(enqueuer_m, *this); }
 
   void stop() { op_m.stop(); }
 
@@ -166,21 +166,21 @@ private:
     case NNG_PIPE_EV_ADD_PRE: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} creating! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::creating_pipe{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::creating_pipe{}, id(), *this, net::pipe{pv});
     }
     break;
 
     case NNG_PIPE_EV_ADD_POST: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} created! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_created{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::pipe_created{}, id(), *this, net::pipe{pv});
     }
     break;
 
     case NNG_PIPE_EV_REM_POST: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} removed! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_removed{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::pipe_removed{}, id(), *this, net::pipe{pv});
     }
     break;
 
@@ -219,7 +219,7 @@ private:
     return dialers_m.back();
   }
 
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   op op_m;
   nngxx::socket socket_m;
   std::vector<nngxx::dialer> dialers_m;

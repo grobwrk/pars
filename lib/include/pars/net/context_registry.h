@@ -45,8 +45,8 @@ namespace pars::net
 class context_registry
 {
 public:
-  context_registry(ev::enqueuer& r, net::socket& s)
-    : router_m{r}
+  context_registry(ev::enqueuer& e, net::socket& s)
+    : enqueuer_m{e}
     , sock_m{s}
   {
   }
@@ -63,7 +63,7 @@ public:
 
     auto id = ctx.id();
 
-    auto res = ctx_map_m.try_emplace(id, router_m, std::move(ctx), sock_m);
+    auto res = ctx_map_m.try_emplace(id, enqueuer_m, std::move(ctx), sock_m);
 
     if (!res.second)
       throw std::runtime_error("Unable to emplace a context");
@@ -89,7 +89,7 @@ public:
   }
 
 private:
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   socket& sock_m;
   std::unordered_map<int, context> ctx_map_m;
 };

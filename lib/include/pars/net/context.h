@@ -45,8 +45,8 @@ namespace pars::net
 class context
 {
 public:
-  context(ev::enqueuer& r, nngxx::ctx&& c, const net::socket& s)
-    : router_m{r}
+  context(ev::enqueuer& e, nngxx::ctx&& c, const net::socket& s)
+    : enqueuer_m{e}
     , ctx_m{std::move(c)}
     , sock_m{s}
   {
@@ -78,10 +78,10 @@ public:
   template<ev::event_c event_t>
   void send(event_t ev, pipe p)
   {
-    op_m.send(router_m, *this, p, std::move(ev));
+    op_m.send(enqueuer_m, *this, p, std::move(ev));
   }
 
-  void recv() { op_m.recv(router_m, *this); }
+  void recv() { op_m.recv(enqueuer_m, *this); }
 
   void stop() { op_m.stop(); }
 
@@ -97,7 +97,7 @@ public:
   }
 
 private:
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   op op_m;
   nngxx::ctx ctx_m;
   const net::socket& sock_m;
