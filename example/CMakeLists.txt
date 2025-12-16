@@ -13,7 +13,7 @@ add_executable (client
     "event.h"
     ${FLATBUFFERS_GENERATED_HEADERS}
 )
-add_dependencies (client generate_flatbuffers)
+add_dependencies (client events)
 target_link_libraries (client PUBLIC pars)
 target_include_directories (
     client
@@ -30,7 +30,7 @@ add_executable (server_backend
     "fib.h"
     ${FLATBUFFERS_GENERATED_HEADERS}
 )
-add_dependencies (server_backend generate_flatbuffers)
+add_dependencies (server_backend events)
 target_link_libraries (server_backend PUBLIC pars)
 target_include_directories (
     server_backend

@@ -27,8 +27,9 @@ foreach(SCHEMA_FILE ${SCHEMA_FILES})
 endforeach()
 
 # Create a custom target that depends on all generated headers
-add_custom_target(generate_flatbuffers ALL
+add_custom_target(events ALL
     DEPENDS ${GENERATED_HEADERS}
+    SOURCES ${SCHEMA_FILES}
     COMMENT "Generating all FlatBuffers headers"
 )
 
