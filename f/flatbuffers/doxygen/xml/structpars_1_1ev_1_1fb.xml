@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1fb" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::fb</compoundname>
+    <includes refid="serializer_8h" local="no">serializer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename builder_t</type>
+      </param>
+      <param>
+        <type>typename event_t</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" prot="public" static="no">
+        <type>event_t</type>
+        <definition>using pars::ev::fb&lt; builder_t, event_t &gt;::event_type =  event_t</definition>
+        <argsstring></argsstring>
+        <name>event_type</name>
+        <qualifiedname>pars::ev::fb::event_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="125" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" prot="public" static="no">
+        <type>builder_t</type>
+        <definition>using pars::ev::fb&lt; builder_t, event_t &gt;::builder =  builder_t</definition>
+        <argsstring></argsstring>
+        <name>builder</name>
+        <qualifiedname>pars::ev::fb::builder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="127" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" prot="public" static="no">
+        <type>builder::Table</type>
+        <definition>using pars::ev::fb&lt; builder_t, event_t &gt;::table_type =  builder::Table</definition>
+        <argsstring></argsstring>
+        <name>table_type</name>
+        <qualifiedname>pars::ev::fb::table_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="129" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" prot="public" static="no">
+        <type>flatbuffers::Offset&lt; <ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref> &gt;</type>
+        <definition>using pars::ev::fb&lt; builder_t, event_t &gt;::offset_type =  flatbuffers::Offset&lt;table_type&gt;</definition>
+        <argsstring></argsstring>
+        <name>offset_type</name>
+        <qualifiedname>pars::ev::fb::offset_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="131" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1fb_1ad480a5e374de68f762f32c3522f86d14" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend pars::ev::fb&lt; builder_t, event_t &gt;::obb&lt; event_t &gt;</definition>
+        <argsstring></argsstring>
+        <name>obb&lt; event_t &gt;</name>
+        <qualifiedname>pars::ev::fb::obb&lt; event_t &gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="134" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1ev_1_1fb_1aadb275d38f94412cd0889297f5ac97f4" prot="private" static="no" mutable="no">
+        <type>std::variant&lt; std::shared_ptr&lt; <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref> &gt;, std::shared_ptr&lt; flatbuffers::DetachedBuffer &gt; &gt;</type>
+        <definition>std::variant&lt;std::shared_ptr&lt;nngxx::msg&gt;, std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt; &gt; pars::ev::fb&lt; builder_t, event_t &gt;::buf_m</definition>
+        <argsstring></argsstring>
+        <name>buf_m</name>
+        <qualifiedname>pars::ev::fb::buf_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="184" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1fb_1aea17132994ed53d9a8aa6058a7867ed0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::fb&lt; builder_t, event_t &gt;::fb</definition>
+        <argsstring>(flatbuffers::DetachedBuffer b)</argsstring>
+        <name>fb</name>
+        <qualifiedname>pars::ev::fb::fb</qualifiedname>
+        <param>
+          <type>flatbuffers::DetachedBuffer</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="136" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1fb_1a276c17920526880a6aeb5bdfedbbbb95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::fb&lt; builder_t, event_t &gt;::fb</definition>
+        <argsstring>(nngxx::msg m)</argsstring>
+        <name>fb</name>
+        <qualifiedname>pars::ev::fb::fb</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="141" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="141" bodyend="144"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::span&lt; uint8_t &gt;</type>
+        <definition>std::span&lt; uint8_t &gt; pars::ev::fb&lt; builder_t, event_t &gt;::span</definition>
+        <argsstring>() const</argsstring>
+        <name>span</name>
+        <qualifiedname>pars::ev::fb::span</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="147" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="147" bodyend="174"/>
+        <referencedby refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" compoundref="serializer_8h" startline="176" endline="179">pars::ev::fb&lt; builder_t, event_t &gt;::table</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref> *</type>
+        <definition>const table_type * pars::ev::fb&lt; builder_t, event_t &gt;::table</definition>
+        <argsstring>() const</argsstring>
+        <name>table</name>
+        <qualifiedname>pars::ev::fb::table</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="176" column="27" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="176" bodyend="179"/>
+        <references refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" compoundref="serializer_8h" startline="147" endline="174">pars::ev::fb&lt; builder_t, event_t &gt;::span</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="122" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="123" bodyend="185"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1fb_1aadb275d38f94412cd0889297f5ac97f4" prot="private" virt="non-virtual"><scope>pars::ev::fb</scope><name>buf_m</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>builder</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>event_type</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1aea17132994ed53d9a8aa6058a7867ed0" prot="private" virt="non-virtual"><scope>pars::ev::fb</scope><name>fb</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a276c17920526880a6aeb5bdfedbbbb95" prot="private" virt="non-virtual"><scope>pars::ev::fb</scope><name>fb</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1ad480a5e374de68f762f32c3522f86d14" prot="private" virt="non-virtual"><scope>pars::ev::fb</scope><name>obb&lt; event_t &gt;</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>offset_type</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>span</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>table</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" prot="public" virt="non-virtual"><scope>pars::ev::fb</scope><name>table_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

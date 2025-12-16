@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1ev_1_1obb" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::obb</compoundname>
+    <includes refid="serializer_8h" local="no">serializer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename ev_t</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" prot="public" static="no">
+        <type>ev_t</type>
+        <definition>using pars::ev::obb&lt; ev_t &gt;::event_type =  ev_t</definition>
+        <argsstring></argsstring>
+        <name>event_type</name>
+        <qualifiedname>pars::ev::obb::event_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="50" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" prot="public" static="no">
+        <type>event_type::builder</type>
+        <definition>using pars::ev::obb&lt; ev_t &gt;::builder_type =  event_type::builder</definition>
+        <argsstring></argsstring>
+        <name>builder_type</name>
+        <qualifiedname>pars::ev::obb::builder_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="52" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" prot="public" static="no">
+        <type>event_type::table_type</type>
+        <definition>using pars::ev::obb&lt; ev_t &gt;::table_type =  event_type::table_type</definition>
+        <argsstring></argsstring>
+        <name>table_type</name>
+        <qualifiedname>pars::ev::obb::table_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="54" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" prot="public" static="no">
+        <type>event_type::offset_type</type>
+        <definition>using pars::ev::obb&lt; ev_t &gt;::offset_type =  event_type::offset_type</definition>
+        <argsstring></argsstring>
+        <name>offset_type</name>
+        <qualifiedname>pars::ev::obb::offset_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="56" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1obb_1a29f6d3447126de89658faae7e5c18647" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; flatbuffers::FlatBufferBuilder &gt;</type>
+        <definition>std::optional&lt;flatbuffers::FlatBufferBuilder&gt; pars::ev::obb&lt; ev_t &gt;::fbb_obj_m</definition>
+        <argsstring></argsstring>
+        <name>fbb_obj_m</name>
+        <qualifiedname>pars::ev::obb::fbb_obj_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="79" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1ev_1_1obb_1a26b96ef41ebde9d42c75435a34d6ba26" prot="private" static="no" mutable="no">
+        <type>flatbuffers::FlatBufferBuilder &amp;</type>
+        <definition>flatbuffers::FlatBufferBuilder&amp; pars::ev::obb&lt; ev_t &gt;::fbb_m</definition>
+        <argsstring></argsstring>
+        <name>fbb_m</name>
+        <qualifiedname>pars::ev::obb::fbb_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="81" column="34" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpars_1_1ev_1_1obb_1a2928ec3b5ea46c0d86a54ef49568e645" prot="private" static="no" mutable="no">
+        <type><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref></type>
+        <definition>builder_type pars::ev::obb&lt; ev_t &gt;::obb_m</definition>
+        <argsstring></argsstring>
+        <name>obb_m</name>
+        <qualifiedname>pars::ev::obb::obb_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="83" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a057ad43ec37691b691dbba5affd9d156" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::obb&lt; ev_t &gt;::obb</definition>
+        <argsstring>()</argsstring>
+        <name>obb</name>
+        <qualifiedname>pars::ev::obb::obb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="59" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a48c4efb84930d93b6c5226662703c9c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::obb&lt; ev_t &gt;::obb</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>obb</name>
+        <qualifiedname>pars::ev::obb::obb</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="66" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a4f1a10902d1ddbbe4a237757f9f9cc51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pars::ev::obb&lt; ev_t &gt;::obb</definition>
+        <argsstring>(flatbuffers::FlatBufferBuilder &amp;fbb)</argsstring>
+        <name>obb</name>
+        <qualifiedname>pars::ev::obb::obb</qualifiedname>
+        <param>
+          <type>flatbuffers::FlatBufferBuilder &amp;</type>
+          <declname>fbb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="73" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="73" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref></type>
+        <definition>static obb pars::ev::obb&lt; ev_t &gt;::within</definition>
+        <argsstring>(flatbuffers::FlatBufferBuilder &amp;fbb)</argsstring>
+        <name>within</name>
+        <qualifiedname>pars::ev::obb::within</qualifiedname>
+        <param>
+          <type>flatbuffers::FlatBufferBuilder &amp;</type>
+          <declname>fbb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="86" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref></type>
+        <definition>static obb pars::ev::obb&lt; ev_t &gt;::default_size</definition>
+        <argsstring>()</argsstring>
+        <name>default_size</name>
+        <qualifiedname>pars::ev::obb::default_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="88" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref></type>
+        <definition>static obb pars::ev::obb&lt; ev_t &gt;::using_size</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>using_size</name>
+        <qualifiedname>pars::ev::obb::using_size</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="90" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="90" bodyend="90"/>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref></type>
+        <definition>static event_type pars::ev::obb&lt; ev_t &gt;::from</definition>
+        <argsstring>(nngxx::msg m)</argsstring>
+        <name>from</name>
+        <qualifiedname>pars::ev::obb::from</qualifiedname>
+        <param>
+          <type><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="92" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="92" bodyend="92"/>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="214" endline="231">pars::ev::serialize::to_event</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename fn_t</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>args_t</declname>
+            <defname>args_t</defname>
+          </param>
+        </templateparamlist>
+        <type>decltype(self)</type>
+        <definition>decltype(self) pars::ev::obb&lt; ev_t &gt;::and_then</definition>
+        <argsstring>(this auto &amp;&amp;self, fn_t &amp;&amp;mem_f, args_t &amp;&amp;... args)</argsstring>
+        <name>and_then</name>
+        <qualifiedname>pars::ev::obb::and_then</qualifiedname>
+        <param>
+          <type>this auto &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>fn_t &amp;&amp;</type>
+          <declname>mem_f</declname>
+        </param>
+        <param>
+          <type>args_t &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="95" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="95" bodyend="104"/>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref> *</type>
+        <definition>const table_type * pars::ev::obb&lt; ev_t &gt;::table</definition>
+        <argsstring>(this auto &amp;&amp;self)</argsstring>
+        <name>table</name>
+        <qualifiedname>pars::ev::obb::table</qualifiedname>
+        <param>
+          <type>this auto &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="106" column="27" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref></type>
+        <definition>offset_type pars::ev::obb&lt; ev_t &gt;::finish</definition>
+        <argsstring>(this auto &amp;&amp;self)</argsstring>
+        <name>finish</name>
+        <qualifiedname>pars::ev::obb::finish</qualifiedname>
+        <param>
+          <type>this auto &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="111" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref></type>
+        <definition>event_type pars::ev::obb&lt; ev_t &gt;::build</definition>
+        <argsstring>(this auto &amp;&amp;self)</argsstring>
+        <name>build</name>
+        <qualifiedname>pars::ev::obb::build</qualifiedname>
+        <param>
+          <type>this auto &amp;&amp;</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="113" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="113" bodyend="118"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="47" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="48" bodyend="119"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>and_then</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>build</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>builder_type</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>default_size</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>event_type</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a26b96ef41ebde9d42c75435a34d6ba26" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>fbb_m</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a29f6d3447126de89658faae7e5c18647" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>fbb_obj_m</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>finish</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>from</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a057ad43ec37691b691dbba5affd9d156" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a48c4efb84930d93b6c5226662703c9c2" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a4f1a10902d1ddbbe4a237757f9f9cc51" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a2928ec3b5ea46c0d86a54ef49568e645" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb_m</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>offset_type</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>table</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>table_type</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>using_size</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>within</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

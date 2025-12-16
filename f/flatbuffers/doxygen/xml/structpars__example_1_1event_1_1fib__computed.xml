@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars__example_1_1event_1_1fib__computed" kind="struct" language="C++" prot="public">
+    <compoundname>pars_example::event::fib_computed</compoundname>
+    <basecompoundref refid="structpars_1_1ev_1_1fb" prot="public" virt="non-virtual">pars::ev::fb&lt; FibComputedBuilder, fib_computed &gt;</basecompoundref>
+    <includes refid="example_2event_8h" local="no">event.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto pars_example::event::fib_computed::make</definition>
+        <argsstring>(std::size_t work_id, uint64_t fib_n)</argsstring>
+        <name>make</name>
+        <qualifiedname>pars_example::event::fib_computed::make</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>work_id</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>fib_n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="70" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="70" bodyend="76"/>
+        <references refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" compoundref="serializer_8h" startline="95" endline="104">pars::ev::obb&lt; ev_t &gt;::and_then</references>
+        <references refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" compoundref="serializer_8h" startline="90" endline="90">pars::ev::obb&lt; ev_t &gt;::using_size</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>decltype(ctx.out())</type>
+        <definition>decltype(ctx.out()) pars_example::event::fib_computed::format_to</definition>
+        <argsstring>(std::format_context &amp;ctx) const</argsstring>
+        <name>format_to</name>
+        <qualifiedname>pars_example::event::fib_computed::format_to</qualifiedname>
+        <param>
+          <type>std::format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="78" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="78" bodyend="84"/>
+        <references refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" compoundref="serializer_8h" startline="176" endline="179">pars::ev::fb&lt; FibComputedBuilder, fib_computed &gt;::table</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pars::ev::fb&lt; FibComputedBuilder, fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1fb"/>
+      </node>
+      <node id="1">
+        <label>pars_example::event::fib_computed</label>
+        <link refid="structpars__example_1_1event_1_1fib__computed"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>pars::ev::fb&lt; FibComputedBuilder, fib_computed &gt;</label>
+        <link refid="structpars_1_1ev_1_1fb"/>
+      </node>
+      <node id="1">
+        <label>pars_example::event::fib_computed</label>
+        <link refid="structpars__example_1_1event_1_1fib__computed"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="68" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="69" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>builder</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>event_type</name></member>
+      <member refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>format_to</name></member>
+      <member refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>make</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>offset_type</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>span</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>table</name></member>
+      <member refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" prot="public" virt="non-virtual"><scope>pars_example::event::fib_computed</scope><name>table_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
