@@ -1,7 +1,7 @@
 {
   "default-registry": {
     "kind": "git",
-    "baseline": "5422eb983d4ca8bc4851ac9771d6e74554efc5c8",
+    "baseline": "544a4c5c297e60e4ac4a5a1810df66748d908869",
     "repository": "https://github.com/microsoft/vcpkg"
   },
   "registries": [
@@ -12,7 +12,6 @@
     }
   ],
   "overlay-ports": [
-    "./ports/nng",
-    "./ports/spdlog"
+    "./ports/nng"
   ]
 }

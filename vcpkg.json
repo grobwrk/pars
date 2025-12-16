@@ -3,6 +3,9 @@
     "flatbuffers",
     "gtest",
     "nng",
-    "spdlog"
+    {
+      "name": "spdlog",
+      "default-features": false
+    }
   ]
 }
