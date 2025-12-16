@@ -48,10 +48,10 @@ struct fib_requested : fb<FibRequestedBuilder, fib_requested>
 {
   static auto make(std::size_t work_id, uint64_t n, bool use_fast_fib)
   {
-    return builder()
-      .and_then(&builder_type::add_work_id, work_id)
-      .and_then(&builder_type::add_n, n)
-      .and_then(&builder_type::add_use_fast_fib, use_fast_fib)
+    return obb<fib_requested>::using_size(64)
+      .and_then(&fib_requested::builder::add_work_id, work_id)
+      .and_then(&fib_requested::builder::add_n, n)
+      .and_then(&fib_requested::builder::add_use_fast_fib, use_fast_fib)
       .build();
   }
 
@@ -69,9 +69,9 @@ struct fib_computed : fb<FibComputedBuilder, fib_computed>
 {
   static auto make(std::size_t work_id, uint64_t fib_n)
   {
-    return builder()
-      .and_then(&builder_type::add_work_id, work_id)
-      .and_then(&builder_type::add_fib_n, fib_n)
+    return obb<fib_computed>::using_size(64)
+      .and_then(&fib_computed::builder::add_work_id, work_id)
+      .and_then(&fib_computed::builder::add_fib_n, fib_n)
       .build();
   }
 
@@ -88,7 +88,9 @@ struct stop_compute : fb<StopComputeBuilder, stop_compute>
 {
   static auto make(int pipe_id)
   {
-    return builder().and_then(&builder_type::add_pipe_id, pipe_id).build();
+    return obb<stop_compute>::using_size(64)
+      .and_then(&stop_compute::builder::add_pipe_id, pipe_id)
+      .build();
   }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())

@@ -44,35 +44,50 @@ namespace pars::ev
 {
 
 template<typename ev_t>
-struct builder_for
+struct obb
 {
-private:
+public:
   using event_type = ev_t;
 
-  using builder_type = event_type::builder_type;
+  using builder_type = event_type::builder;
 
   using table_type = event_type::table_type;
 
-  builder_for()
-    : fbb_m{}
+  using offset_type = event_type::offset_type;
+
+private:
+  obb()
+    : fbb_obj_m{}
+    , fbb_m{*fbb_obj_m}
     , obb_m{fbb_m}
   {
   }
 
-  builder_for(size_t size)
-    : fbb_m{size}
+  obb(size_t size)
+    : fbb_obj_m{size}
+    , fbb_m{*fbb_obj_m}
     , obb_m{fbb_m}
   {
   }
 
-  flatbuffers::FlatBufferBuilder fbb_m;
+  obb(flatbuffers::FlatBufferBuilder& fbb)
+    : fbb_m{fbb}
+    , obb_m{fbb_m}
+  {
+  }
+
+  std::optional<flatbuffers::FlatBufferBuilder> fbb_obj_m;
+
+  flatbuffers::FlatBufferBuilder& fbb_m;
 
   builder_type obb_m;
 
 public:
-  static builder_for default_size() { return builder_for{}; }
+  static obb within(flatbuffers::FlatBufferBuilder& fbb) { return obb{fbb}; }
 
-  static builder_for using_size(size_t size) { return builder_for{size}; }
+  static obb default_size() { return obb{}; }
+
+  static obb using_size(size_t size) { return obb{size}; }
 
   static event_type from(nngxx::msg m) { return event_type{std::move(m)}; }
 
@@ -88,9 +103,16 @@ public:
     return self;
   }
 
-  event_type build(this auto&& self)
+  inline const table_type* table(this auto&& self)
   {
-    self.fbb_m.Finish(self.obb_m.Finish());
+    return flatbuffers::GetRoot<table_type>(self.fbb_m.GetBufferPointer());
+  }
+
+  inline offset_type finish(this auto&& self) { return self.obb_m.Finish(); }
+
+  inline event_type build(this auto&& self)
+  {
+    self.fbb_m.Finish(self.finish());
 
     return event_type{self.fbb_m.Release()};
   }
@@ -99,8 +121,17 @@ public:
 template<typename builder_t, typename event_t>
 struct fb
 {
+public:
+  using event_type = event_t;
+
+  using builder = builder_t;
+
+  using table_type = builder::Table;
+
+  using offset_type = flatbuffers::Offset<table_type>;
+
 private:
-  friend builder_for<event_t>;
+  friend obb<event_t>;
 
   fb(flatbuffers::DetachedBuffer b)
     : buf_m{std::make_shared<flatbuffers::DetachedBuffer>(std::move(b))}
@@ -113,14 +144,6 @@ private:
   }
 
 public:
-  using event_type = event_t;
-
-  using builder_type = builder_t;
-
-  using table_type = builder_type::Table;
-
-  using offset_type = flatbuffers::Offset<table_type>;
-
   std::span<uint8_t> span() const
   {
     return std::visit(
@@ -150,16 +173,9 @@ public:
       buf_m);
   }
 
-  table_type const* table() const
+  inline const table_type* table() const
   {
-    auto table = flatbuffers::GetRoot<table_type>(span().data());
-
-    return table;
-  }
-
-  static builder_for<event_type> builder(std::size_t size = 1024)
-  {
-    return builder_for<event_type>::using_size(size);
+    return flatbuffers::GetRoot<table_type>(span().data());
   }
 
 private:
@@ -206,7 +222,7 @@ struct serialize
       throw std::runtime_error("Requested event mismatch!");
 
     // 3. deserialize event
-    auto ev = builder_for<event_t>::from(std::move(m));
+    auto ev = obb<event_t>::from(std::move(m));
 
     pars::debug(SL, lf::event, "Deserialized Message [{}] to Event [{}]", m,
                 ev);
