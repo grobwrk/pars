@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['metadata_5fm_0',['metadata_m',['../structpars_1_1ev_1_1common__kind.html#a23d1675eec2583a366813be0496d6fed',1,'pars::ev::common_kind']]],
-  ['mutex_1',['mutex',['../structpars_1_1app_1_1lockable.html#a5a2adeeabcf05de480ceb6abf4254c29',1,'pars::app::lockable']]]
+  ['is_5fexpected_5fspecialization_5fv_0',['is_expected_specialization_v',['../namespaceclev.html#ac6cbc44586b9a0071f0db70322d6018d',1,'clev']]],
+  ['is_5fsame_5fkind_5fv_1',['is_same_kind_v',['../namespacepars_1_1ev.html#a58e440168c167811c469e731225cf6b7',1,'pars::ev']]]
 ];

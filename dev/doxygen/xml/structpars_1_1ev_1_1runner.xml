@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="328" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="328" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="327" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="327" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="326" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="326" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="325" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="325" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1runner_1af4c6e2bc357b089ca75f12bf407113fe" prot="private" static="no" mutable="no">
         <type>std::vector&lt; futures_value_type &gt;</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="332" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="332" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="331" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="331" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1runner_1ac33db9e975f302f06ffa9fa371c10dff" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::size_t, std::jthread &gt;</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="336" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="336" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="335" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="335" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1runner_1ab1a5e6e09ba073aeaf658ae1caeaf8c5" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">hf_registry</ref> &amp;</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="338" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="338" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="337" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="337" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1runner_1a0c688b1809b0b39fd053a1270ed91e34" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; int, std::vector&lt; std::size_t &gt; &gt;</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="341" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="341" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="340" column="5" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="340" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1runner_1aa4f3b178807eb2d0dd53d16be889ba6d" prot="private" static="no" mutable="no">
         <type>std::atomic&lt; std::size_t &gt;</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="343" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="343" bodyend="343"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="342" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="342" bodyend="342"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="49" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="49" bodyend="52"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="48" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a530562da38da9d1236803c670705959e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -142,8 +142,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="54" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="54" bodyend="54"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" compoundref="runner_8h" startline="146" endline="149">exec</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="53" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="53" bodyend="53"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" compoundref="runner_8h" startline="145" endline="148">exec</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1abcf0dc254df4dc39ccd71d1f995f5d27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="56" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="56" bodyend="71"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="55" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="55" bodyend="70"/>
         <references refid="classpars_1_1ev_1_1job_1a41155821180189773234cab1826b8ab3" compoundref="job_8h" startline="89" endline="89">pars::ev::job::id</references>
         <references refid="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" compoundref="job_8h" startline="91" endline="91">pars::ev::job::socket_id</references>
       </memberdef>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="73" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="73" bodyend="78"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="72" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="72" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a1335c45a40aca1a69e435fa8f269fdcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="80" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="80" bodyend="94"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="79" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="79" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a48007dd1644ccce4952c31c0b5987a62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="96" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="96" bodyend="101"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="95" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="95" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="103" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="103" bodyend="142"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="102" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="102" bodyend="141"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" compoundref="log_8h" startline="211" endline="215">pars::err</references>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="43">pars::event</references>
@@ -247,7 +247,7 @@
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
         <references refid="classpars_1_1ev_1_1job_1aae533d6b0f37befa2eaca26c4b5e161c" compoundref="job_8h" startline="91" endline="91">pars::ev::job::socket_id</references>
         <references refid="classpars_1_1ev_1_1job_1aff37b681c04723903c874d551940e676" compoundref="job_8h" startline="93" endline="93">pars::ev::job::spec_hash</references>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" compoundref="runner_8h" startline="146" endline="149">exec</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" compoundref="runner_8h" startline="145" endline="148">exec</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a68cb34be52ee194f0c43cfd0e21de906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -278,9 +278,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="146" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="146" bodyend="149"/>
-        <references refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="103" endline="142">exec</references>
-        <references refid="structpars_1_1ev_1_1runner_1a530562da38da9d1236803c670705959e" compoundref="runner_8h" startline="54" endline="54">next_job_id</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="145" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="145" bodyend="148"/>
+        <references refid="structpars_1_1ev_1_1runner_1a95f7f53cfd50512ecc8412b59ed133e0" compoundref="runner_8h" startline="102" endline="141">exec</references>
+        <references refid="structpars_1_1ev_1_1runner_1a530562da38da9d1236803c670705959e" compoundref="runner_8h" startline="53" endline="53">next_job_id</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="151" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="151" bodyend="158"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="150" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="150" bodyend="157"/>
         <references refid="classpars_1_1net_1_1pipe_1a1e8d61f123efea7d9656bd7bcefbbc65" compoundref="pars_2net_2pipe_8h" startline="58" endline="58">pars::net::pipe::id</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="161" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="161" bodyend="174"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="160" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="160" bodyend="173"/>
         <references refid="classpars_1_1net_1_1pipe_1a1e8d61f123efea7d9656bd7bcefbbc65" compoundref="pars_2net_2pipe_8h" startline="58" endline="58">pars::net::pipe::id</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="176" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="176" bodyend="196"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="175" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="175" bodyend="195"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="43">pars::event</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="198" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="198" bodyend="204"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="197" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="197" bodyend="203"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="207" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="207" bodyend="226"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="206" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="206" bodyend="225"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1aea3e1cbc7c90537c98bd501d4a398b77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="228" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="228" bodyend="262"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="227" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="227" bodyend="261"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a72f555920399c74fb832d95e82074703" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -418,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="264" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="264" bodyend="309"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="263" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="263" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a869abc3c2aa23288cce10bbf8f1179d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="311" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="311" bodyend="314"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="310" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="310" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a46bdf5b71968ea88d87c9cfc242d072c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -454,7 +454,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="316" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="316" bodyend="319"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="315" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="315" bodyend="318"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1runner_1a86323743d9192a264008da8a43e6fd15" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -472,14 +472,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="321" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="321" bodyend="324"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="320" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="320" bodyend="323"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="46" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="47" bodyend="344"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" line="45" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h" bodystart="46" bodyend="343"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" prot="public" virt="non-virtual"><scope>pars::ev::runner</scope><name>add_pipe</name></member>
       <member refid="structpars_1_1ev_1_1runner_1ab891cb3dfcd6fc058d9ffda7c74a6331" prot="public" virt="non-virtual"><scope>pars::ev::runner</scope><name>associate_job_to_pipe</name></member>

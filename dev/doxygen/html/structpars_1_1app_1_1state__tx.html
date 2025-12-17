@@ -117,7 +117,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename state_t&gt;<br />
 struct pars::app::state_tx&lt; state_t &gt;</div>
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00049">49</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00045">45</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ac34ef990d67f0cd15a99d56d28a36ce0" name="ac34ef990d67f0cd15a99d56d28a36ce0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac34ef990d67f0cd15a99d56d28a36ce0">&#9670;&#160;</a></span>state_type</h2>
@@ -133,7 +133,7 @@ template&lt;typename state_t&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00051">51</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00047">47</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
 
 </div>
 </div>
@@ -167,15 +167,15 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00053">53</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>    : sm_m{<a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">sm</a>}</div>
-<div class="line"><span class="lineno">   55</span>    , done_m{<span class="keyword">false</span>}</div>
-<div class="line"><span class="lineno">   56</span>  {</div>
-<div class="line"><span class="lineno">   57</span>    <a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">sm</a>.next(<a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">to_state</a>);</div>
-<div class="line"><span class="lineno">   58</span>  }</div>
-<div class="ttc" id="astructpars_1_1app_1_1state__tx_html"><div class="ttname"><a href="structpars_1_1app_1_1state__tx.html">pars::app::state_tx</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00049">state_machine.h:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00049">49</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    : sm_m{<a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">sm</a>}</div>
+<div class="line"><span class="lineno">   51</span>    , done_m{<span class="keyword">false</span>}</div>
+<div class="line"><span class="lineno">   52</span>  {</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">sm</a>.next(<a class="code hl_struct" href="structpars_1_1app_1_1state__tx.html">to_state</a>);</div>
+<div class="line"><span class="lineno">   54</span>  }</div>
+<div class="ttc" id="astructpars_1_1app_1_1state__tx_html"><div class="ttname"><a href="structpars_1_1app_1_1state__tx.html">pars::app::state_tx</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00045">state_machine.h:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00121">pars::app::state_machine&lt; state_t &gt;::next()</a>.</p>
+<p class="reference">References <a class="el" href="state__machine_8h_source.html#l00117">pars::app::state_machine&lt; state_t &gt;::next()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -218,11 +218,11 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00060">60</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>  {</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (!done_m)</div>
-<div class="line"><span class="lineno">   63</span>      sm_m.rollback();</div>
-<div class="line"><span class="lineno">   64</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00056">56</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>  {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (!done_m)</div>
+<div class="line"><span class="lineno">   59</span>      sm_m.rollback();</div>
+<div class="line"><span class="lineno">   60</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -252,12 +252,12 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00066">66</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>  {</div>
-<div class="line"><span class="lineno">   68</span>    sm_m.commit();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    done_m = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   71</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00062">62</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>  {</div>
+<div class="line"><span class="lineno">   64</span>    sm_m.commit();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    done_m = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -286,12 +286,12 @@ template&lt;typename state_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00073">73</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>  {</div>
-<div class="line"><span class="lineno">   75</span>    sm_m.rollback();</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    done_m = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   78</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="state__machine_8h_source.html#l00069">69</a> of file <a class="el" href="state__machine_8h_source.html">state_machine.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>  {</div>
+<div class="line"><span class="lineno">   71</span>    sm_m.rollback();</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    done_m = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   74</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

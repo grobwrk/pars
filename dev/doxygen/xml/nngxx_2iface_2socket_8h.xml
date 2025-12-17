@@ -20,6 +20,8 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="13">
         <label>clev/iface.h</label>
@@ -50,7 +52,7 @@
       <node id="16">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -60,9 +62,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -74,7 +76,7 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -84,7 +86,7 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="25">
@@ -138,7 +140,7 @@
       <node id="17">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -176,28 +178,28 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="15">
         <label>concepts</label>
       </node>
-      <node id="6">
+      <node id="7">
         <label>expected</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>functional</label>
       </node>
-      <node id="10">
+      <node id="6">
         <label>nng/nng.h</label>
       </node>
       <node id="18">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>stdexcept</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>system_error</label>
       </node>
       <node id="21">

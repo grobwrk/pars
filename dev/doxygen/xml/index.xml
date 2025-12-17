@@ -40,20 +40,6 @@
   </compound>
   <compound refid="structpars_1_1ev_1_1base__sync__metadata" kind="struct"><name>pars::ev::base_sync_metadata</name>
   </compound>
-  <compound refid="structpars_1_1ev_1_1builder__for" kind="struct"><name>pars::ev::builder_for</name>
-    <member refid="structpars_1_1ev_1_1builder__for_1a8ceef4d7229c8d5c3d995b43a7d1583b" kind="typedef"><name>event_type</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a086eb5115c94427be2299e00f137774d" kind="typedef"><name>builder_type</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a7e6ddd373d6b73860fe60090d057f76d" kind="typedef"><name>table_type</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1aba8159b9c216ef97c48aa3b462821d7b" kind="variable"><name>fbb_m</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1aa535f02cbf8be7eee65f6b51d7ef0b0e" kind="variable"><name>obb_m</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1ad7c355a5ac1c3a1a4bc4de929aba0050" kind="function"><name>builder_for</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1aac37e175629058f73783c5de4329fe79" kind="function"><name>builder_for</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a903a17567a9882179fcc2053ef1f6c3d" kind="function"><name>default_size</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a63dabe8c0481c8d4b255c971102eaff4" kind="function"><name>using_size</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a6fa5b832d3acf493da548e48f9cd4ff7" kind="function"><name>from</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1a0cb60374fe1e7a49c95b74f645c67d18" kind="function"><name>and_then</name></member>
-    <member refid="structpars_1_1ev_1_1builder__for_1afdd0ebe6da1804778276a0378227290b" kind="function"><name>build</name></member>
-  </compound>
   <compound refid="classpars_1_1comp_1_1client" kind="class"><name>pars::comp::client</name>
     <member refid="classpars_1_1comp_1_1client_1aa8f6647a69206ea300ded5102c550459" kind="variable"><name>req_m</name></member>
     <member refid="classpars_1_1comp_1_1client_1a8dc663bfdb9b7339f49791175d16c551" kind="function"><name>client</name></member>
@@ -91,7 +77,7 @@
     <member refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" kind="function"><name>event</name></member>
     <member refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" kind="function"><name>event</name></member>
     <member refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" kind="function"><name>md</name></member>
-    <member refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" kind="function"><name>as_tuple</name></member>
+    <member refid="structpars_1_1ev_1_1common__kind_1a23e499a282cc1c382b4e89091c13e1c0" kind="function"><name>as_tuple</name></member>
     <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" kind="function"><name>common_kind</name></member>
   </compound>
   <compound refid="structpars_1_1ev_1_1common__metadata" kind="struct"><name>pars::ev::common_metadata</name>
@@ -185,7 +171,7 @@
     <member refid="structclev_1_1expected_1a8d1074bc5505a4ac8466e27b80cf4f64" kind="typedef"><name>parent</name></member>
     <member refid="structclev_1_1expected_1a247759d3c4bc2a0a1a67b5ec325298c0" kind="typedef"><name>value_type</name></member>
     <member refid="structclev_1_1expected_1a3b0a99885068f426052c249d05850093" kind="typedef"><name>error_type</name></member>
-    <member refid="structclev_1_1expected_1af4b1d85513b3114e9d401ec47d3572ff" kind="function"><name>value_or_abort</name></member>
+    <member refid="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" kind="function"><name>value_or_abort</name></member>
@@ -203,7 +189,7 @@
     <member refid="structclev_1_1expected_3_01void_01_4_1aca118ea682f6fd7f20aba2a23d5ca29c" kind="function"><name>or_abort</name></member>
     <member refid="structclev_1_1expected_3_01void_01_4_1a25663cb98061bb27746e02a7bfd0250a" kind="function"><name>or_exit</name></member>
     <member refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" kind="function"><name>transform_to</name></member>
-    <member refid="structclev_1_1expected_1af4b1d85513b3114e9d401ec47d3572ff" kind="function"><name>value_or_abort</name></member>
+    <member refid="structclev_1_1expected_1aafa7a6c9b2cff363c01f432692e8068f" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a0fb200b194e9f6d45bf4fe7eaebff471" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a57f446157703fed7a488086e35bf574b" kind="function"><name>value_or_abort</name></member>
     <member refid="structclev_1_1expected_1a51f15a594d2d1e23d8fdafd02314676d" kind="function"><name>value_or_abort</name></member>
@@ -213,25 +199,15 @@
     <member refid="structclev_1_1expected_1ab27fde633b8851415459b789542362b6" kind="function"><name>transform_to</name></member>
     <member refid="structclev_1_1expected_1afc903d688dd32154b8bec104f9e6b5be" kind="function"><name>discard_value</name></member>
   </compound>
-  <compound refid="structpars_1_1ev_1_1fb" kind="struct"><name>pars::ev::fb</name>
-    <member refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" kind="typedef"><name>event_type</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a482e3e4266050418e225aafd2c4feac1" kind="typedef"><name>builder_type</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a452eb644eec6f58bb93373eeaf821578" kind="typedef"><name>table_type</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" kind="typedef"><name>offset_type</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a460d33f824109470b708da97da46f87f" kind="variable"><name>builder_for&lt; event_t &gt;</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1aadb275d38f94412cd0889297f5ac97f4" kind="variable"><name>buf_m</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1aea17132994ed53d9a8aa6058a7867ed0" kind="function"><name>fb</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a276c17920526880a6aeb5bdfedbbbb95" kind="function"><name>fb</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" kind="function"><name>span</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1acc1073e55bbb9a990c2d49853a33020c" kind="function"><name>table</name></member>
-    <member refid="structpars_1_1ev_1_1fb_1a8f89a5ac60ad08290a8982042f941412" kind="function"><name>builder</name></member>
-  </compound>
   <compound refid="structpars__example_1_1event_1_1fib__computed" kind="struct"><name>pars_example::event::fib_computed</name>
-    <member refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" kind="function"><name>make</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__computed_1a71cc7067474b9f96bc401f177b1db751" kind="variable"><name>work_id</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__computed_1a692ef626880a828ff4e338951b508f3f" kind="variable"><name>fib_n</name></member>
     <member refid="structpars__example_1_1event_1_1fib__computed_1ad71aa2b355c23990d939375a9c4598af" kind="function"><name>format_to</name></member>
   </compound>
   <compound refid="structpars__example_1_1event_1_1fib__requested" kind="struct"><name>pars_example::event::fib_requested</name>
-    <member refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" kind="function"><name>make</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1a81c89f1cce3f1fad3eac4db790e149c6" kind="variable"><name>work_id</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1aec7a9ab57ae10b959ae97b885b775ca9" kind="variable"><name>n</name></member>
+    <member refid="structpars__example_1_1event_1_1fib__requested_1a0bffdbbf28d06c8c1b5f89fbf5fe525c" kind="variable"><name>use_fast_fib</name></member>
     <member refid="structpars__example_1_1event_1_1fib__requested_1a299a8a47fbd180555fb0c91aef6ff452" kind="function"><name>format_to</name></member>
   </compound>
   <compound refid="structpars_1_1ev_1_1fired" kind="struct"><name>pars::ev::fired</name>
@@ -268,16 +244,13 @@
     <member refid="structstd_1_1formatter_3_1_1pars_1_1net_1_1dir_01_4_1a5114d4f7ebf267c376c48f3aa5106a79" kind="function"><name>format</name></member>
   </compound>
   <compound refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4" kind="struct"><name>std::formatter&lt;::pars_example::resource::client_state &gt;</name>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1a9df74c1993d3466d64d0829b82bd9341" kind="typedef"><name>client_state</name></member>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1ad5c1340e8fbca6adc4e24078e1a776bc" kind="function"><name>format</name></member>
+    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1ad1a4c0a69d2349cf6f66a9d1f842e674" kind="function"><name>format</name></member>
   </compound>
   <compound refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4" kind="struct"><name>std::formatter&lt;::pars_example::resource::pipe_state &gt;</name>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1ab8984d862ecd47e510c6b5a3a45c5b0c" kind="typedef"><name>pipe_state</name></member>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1a4266663f54603d304ec4064da209af32" kind="function"><name>format</name></member>
+    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1aa87486cb34e1d610f8c90024a015f344" kind="function"><name>format</name></member>
   </compound>
   <compound refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4" kind="struct"><name>std::formatter&lt;::pars_example::resource::server_state &gt;</name>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a56c4f2f3e8d47e8faeb371a267d02981" kind="typedef"><name>server_state</name></member>
-    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a67a30d2048c828149eaae9a7533e7403" kind="function"><name>format</name></member>
+    <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a825e6fa4fea645bf66c8c0f1c53b406a" kind="function"><name>format</name></member>
   </compound>
   <compound refid="structstd_1_1hash_3_01value__t_01_4" kind="struct"><name>std::hash&lt; value_t &gt;</name>
     <member refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kind="typedef"><name>value_type</name></member>
@@ -373,19 +346,6 @@
     <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
     <member refid="structpars_1_1ev_1_1klass_3_01nngxx_1_1msg_01_4_1aa5cde3c25a9dc67a466d2237abbb6727" kind="variable"><name>uuid</name></member>
   </compound>
-  <compound refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__computed_01_4" kind="struct"><name>pars::ev::klass&lt; pars_example::event::fib_computed &gt;</name>
-    <member refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__computed_01_4_1ad66a087bbb4546e714d9030de64c769c" kind="variable"><name>uuid</name></member>
-    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
-  </compound>
-  <compound refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__requested_01_4" kind="struct"><name>pars::ev::klass&lt; pars_example::event::fib_requested &gt;</name>
-    <member refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__requested_01_4_1a3caee86a2f45f9002f184d73ce5500ac" kind="variable"><name>uuid</name></member>
-    <member refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__requested_01_4_1a217c9499e69cba05b92bb9bb48c7142f" kind="function"><name>exec_policy</name></member>
-    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
-  </compound>
-  <compound refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1stop__compute_01_4" kind="struct"><name>pars::ev::klass&lt; pars_example::event::stop_compute &gt;</name>
-    <member refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1stop__compute_01_4_1a16a8a1de3925a0f5a876ed8e9ef40fce" kind="variable"><name>uuid</name></member>
-    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
-  </compound>
   <compound refid="structpars_1_1ev_1_1klass_3_01pipe__created_01_4" kind="struct"><name>pars::ev::klass&lt; pipe_created &gt;</name>
     <member refid="structpars_1_1ev_1_1klass_3_01pipe__created_01_4_1a888bd03ba83c9513e1e6a2d440d59a20" kind="variable"><name>uuid</name></member>
     <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
@@ -406,6 +366,22 @@
     <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a5ab32f8d625cca4b251b856051bce3bf" kind="variable"><name>uuid</name></member>
     <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" kind="function"><name>exec_policy</name></member>
     <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a74ccbc18385835089ead7f256f85c66b" kind="function"><name>serialize</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::fib_computed &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1ae24d25fe443de3f54311b2809778558c" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__computed_01_4_1a17b55c5ee92a77763830dfe598f65fcc" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::fib_requested &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1a9b4ee1c300a27ccf33efe310155a6a08" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1aecfb1dbc3ba9e0af8d4abb48f0be3985" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1fib__requested_01_4_1af6e81558d2cc6bb5a6c79f2c6e200e1a" kind="function"><name>exec_policy</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4" kind="struct"><name>pars::ev::klass&lt;::pars_example::event::stop_compute &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1a44bece01a1e6cc9b61247b11ea00444b" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_1_1pars__example_1_1event_1_1stop__compute_01_4_1aacac59ee81a433ad711addb4f9112a66" kind="function"><name>serialize</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
   </compound>
   <compound refid="structpars_1_1f_1_1lf" kind="struct"><name>pars::f::lf</name>
     <member refid="structpars_1_1f_1_1lf_1a3fec4a8870f3469699b72376f2b4ad05" kind="variable"><name>val</name></member>
@@ -748,7 +724,7 @@
     <member refid="structpars_1_1app_1_1state__machine_1a9550997e2a74b43620881d96f453ba19" kind="variable"><name>state_m</name></member>
     <member refid="structpars_1_1app_1_1state__machine_1ad7301b3ac55ac50bbb59a186e90c51df" kind="variable"><name>next_m</name></member>
     <member refid="structpars_1_1app_1_1state__machine_1aff763284da63f5b8dc792dacf8e3f7e1" kind="function"><name>state_machine</name></member>
-    <member refid="structpars_1_1app_1_1state__machine_1ac2a2ee77d8b0e34c993d51ca08f82794" kind="function"><name>ensure</name></member>
+    <member refid="structpars_1_1app_1_1state__machine_1a100b2815eaedafc19467577333e7f470" kind="function"><name>ensure</name></member>
     <member refid="structpars_1_1app_1_1state__machine_1af7e8bc4c802585f4a1ccdbea1bfa7901" kind="function"><name>ensure</name></member>
     <member refid="structpars_1_1app_1_1state__machine_1a2977d152868fc8a4649c20650bbd18f2" kind="function"><name>next</name></member>
     <member refid="structpars_1_1app_1_1state__machine_1a04e0cca90b0ee1488f491a5e13faf5e1" kind="function"><name>rollback</name></member>
@@ -769,7 +745,7 @@
     <member refid="structpars_1_1app_1_1state__tx_1aaf33a7696dd60d42c4f6d0bea0321710" kind="function"><name>rollback</name></member>
   </compound>
   <compound refid="structpars__example_1_1event_1_1stop__compute" kind="struct"><name>pars_example::event::stop_compute</name>
-    <member refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" kind="function"><name>make</name></member>
+    <member refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" kind="variable"><name>pipe_id</name></member>
     <member refid="structpars__example_1_1event_1_1stop__compute_1a3b4d58eca313f7855785ae53a5211e5c" kind="function"><name>format_to</name></member>
   </compound>
   <compound refid="structpars__example_1_1compute_1_1stop__requested" kind="struct"><name>pars_example::compute::stop_requested</name>

@@ -23,8 +23,10 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="12">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
@@ -33,23 +35,23 @@
         <link refid="own_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="19">
@@ -57,9 +59,9 @@
         <link refid="nngxx_2err_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -69,7 +71,7 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -87,9 +89,9 @@
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
@@ -109,7 +111,7 @@
       <node id="32">
         <label>nngxx/msg_body.h</label>
         <link refid="msg__body_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -119,7 +121,7 @@
       <node id="16">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -127,7 +129,7 @@
       <node id="18">
         <label>nngxx/opt_getter.h</label>
         <link refid="opt__getter_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -137,7 +139,7 @@
       <node id="20">
         <label>nngxx/opt_setter.h</label>
         <link refid="opt__setter_8h"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -153,11 +155,11 @@
       <node id="24">
         <label>nngxx/socket_decl.h</label>
         <link refid="socket__decl_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="26">
@@ -165,7 +167,7 @@
         <link refid="lib_2include_2pars_2concept_2event_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
@@ -199,7 +201,7 @@
       <node id="28">
         <label>pars/init.h</label>
         <link refid="init_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
@@ -221,7 +223,7 @@
       <node id="29">
         <label>chrono</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>concepts</label>
       </node>
       <node id="33">
@@ -230,28 +232,28 @@
       <node id="34">
         <label>cstring</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>expected</label>
       </node>
       <node id="35">
         <label>format</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>functional</label>
       </node>
-      <node id="15">
+      <node id="7">
         <label>nng/nng.h</label>
       </node>
       <node id="17">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>stdexcept</label>
       </node>
       <node id="30">
         <label>string_view</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>system_error</label>
       </node>
       <node id="21">
@@ -632,7 +634,7 @@
 <codeline lineno="80"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="83" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;<ref refid="namespacestd" kindref="compound">std</ref>::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;event_t&gt;</highlight></codeline>
+<codeline lineno="83" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass" kindref="compound">klass</ref>&lt;std::shared_ptr&lt;event_t&gt;&gt;<sp/>:<sp/><ref refid="structpars_1_1ev_1_1base__klass" kindref="compound">base_klass</ref>&lt;event_t&gt;</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="85" refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" kindref="member">event_type</ref><sp/>=<sp/>std::shared_ptr&lt;event_t&gt;;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>

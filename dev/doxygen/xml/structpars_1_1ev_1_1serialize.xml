@@ -27,11 +27,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="174" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="174" bodyend="195"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="53" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="53" bodyend="80"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="43">pars::event</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
-        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="105">pars::net::op::send</referencedby>
+        <referencedby refid="classpars_1_1net_1_1op_1a059616e41c3a51c66b18b051fcf52c4a" compoundref="op_8h" startline="65" endline="104">pars::net::op::send</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -56,10 +56,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="198" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="198" bodyend="215"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="83" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="83" bodyend="107"/>
         <references refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" compoundref="log_8h" startline="129" endline="134">pars::debug</references>
         <references refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" compoundref="flags_8h" startline="43">pars::event</references>
-        <references refid="structpars_1_1ev_1_1builder__for_1a6fa5b832d3acf493da548e48f9cd4ff7" compoundref="serializer_8h" startline="77" endline="77">pars::ev::builder_for&lt; ev_t &gt;::from</references>
         <references refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" compoundref="log_8h" startline="58">SL</references>
         <referencedby refid="classpars_1_1ev_1_1job_1a0122d84e10b147ac9d282e1ba87ff6f4" compoundref="job_8h" startline="76" endline="87">pars::ev::job::event</referencedby>
       </memberdef>
@@ -68,7 +67,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="171" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="172" bodyend="216"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="51" bodyend="108"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" prot="public" virt="non-virtual"><scope>pars::ev::serialize</scope><name>to_event</name></member>
       <member refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" prot="public" virt="non-virtual"><scope>pars::ev::serialize</scope><name>to_network</name></member>

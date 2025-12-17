@@ -11,7 +11,7 @@ var searchData=
   ['client_8',['client',['../classpars_1_1comp_1_1client.html',1,'pars::comp::client'],['../classpars__example_1_1apps_1_1client.html',1,'pars_example::apps::client'],['../classpars_1_1comp_1_1client.html#a8dc663bfdb9b7339f49791175d16c551',1,'pars::comp::client::client()']]],
   ['client_2ecpp_9',['client.cpp',['../client_8cpp.html',1,'']]],
   ['client_2eh_10',['client.h',['../client_8h.html',1,'']]],
-  ['client_5fstate_11',['client_state',['../structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#a9df74c1993d3466d64d0829b82bd9341',1,'std::formatter&lt;::pars_example::resource::client_state &gt;::client_state'],['../namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a',1,'pars_example::resource::client_state']]],
+  ['client_5fstate_11',['client_state',['../namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a',1,'pars_example::resource']]],
   ['closed_12',['closed',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a349e686330723975502e9ef4f939a5ac',1,'nngxx']]],
   ['cmode_13',['cmode',['../namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0b',1,'pars::net']]],
   ['commit_14',['commit',['../structpars_1_1app_1_1state__tx.html#a23acdc35c47ae1d1ee933add8c11a050',1,'pars::app::state_tx::commit()'],['../structpars_1_1app_1_1state__machine.html#a749117203fe58365232e11ef90ec277a',1,'pars::app::state_machine::commit()']]],

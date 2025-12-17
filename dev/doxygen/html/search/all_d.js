@@ -1,7 +1,7 @@
 var searchData=
 [
   ['main_0',['main',['../client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;client.cpp'],['../server__backend_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;server_backend.cpp']]],
-  ['make_1',['make',['../structpars__example_1_1event_1_1fib__requested.html#a62afddcc0fa4d0167c452a0a99b3844b',1,'pars_example::event::fib_requested::make()'],['../structpars__example_1_1event_1_1fib__computed.html#af4d209cf10da70c175e148071276729e',1,'pars_example::event::fib_computed::make()'],['../structpars__example_1_1event_1_1stop__compute.html#af510835adcd01f1a09e83e93697ead1a',1,'pars_example::event::stop_compute::make()'],['../namespacenngxx.html#a6dcda4e7167a6344f7a17aff3428a0f7',1,'nngxx::make()']]],
+  ['make_1',['make',['../namespacenngxx.html#a6dcda4e7167a6344f7a17aff3428a0f7',1,'nngxx']]],
   ['make_5fctx_2',['make_ctx',['../classpars_1_1net_1_1socket.html#afbb51e4e4c45a6b0845e6d166c289c34',1,'pars::net::socket']]],
   ['make_5ferror_5fcode_3',['make_error_code',['../namespacenngxx.html#a45d6dbea9ed7507e7aef5ac8f827f2c3',1,'nngxx::make_error_code()'],['../namespacepars.html#a9890a23006e95b65b26c3eea237461b8',1,'pars::make_error_code()']]],
   ['make_5fexpected_4',['make_expected',['../namespaceclev.html#a14c9cc7c4e2eca319598be60a47f4186',1,'clev']]],

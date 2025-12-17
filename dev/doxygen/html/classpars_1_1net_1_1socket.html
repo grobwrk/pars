@@ -636,7 +636,7 @@ template&lt;ev::event_c event_t&gt; </div>
 <p class="definition">Definition at line <a class="el" href="pars_2net_2socket_8h_source.html#l00136">136</a> of file <a class="el" href="pars_2net_2socket_8h_source.html">socket.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  136</span>                                 {})</div>
 <div class="line"><span class="lineno">  137</span>  {</div>
-<div class="line"><span class="lineno">  138</span>    op_m.send(router_m, *<span class="keyword">this</span>, p, std::move(ev));</div>
+<div class="line"><span class="lineno">  138</span>    op_m.send(router_m, *<span class="keyword">this</span>, p, ev);</div>
 <div class="line"><span class="lineno">  139</span>  }</div>
 </div><!-- fragment -->
 </div>

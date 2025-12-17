@@ -197,106 +197,105 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace pars_example::resource</span></div>
 </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="namespacestd.html">   95</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestd.html">std</a></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="};">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html">   99</a></span><span class="keyword">struct </span>formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a">pars_example::resource::client_state</a>&gt; : formatter&lt;string&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#a9df74c1993d3466d64d0829b82bd9341">  101</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#a9df74c1993d3466d64d0829b82bd9341">client_state</a> = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a">::pars_example::resource::client_state</a>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad5c1340e8fbca6adc4e24078e1a776bc">  103</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad5c1340e8fbca6adc4e24078e1a776bc">format</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#a9df74c1993d3466d64d0829b82bd9341">client_state</a>&amp; s, format_context&amp; ctx) <span class="keyword">const</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">switch</span> (s)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">case</span> client_state::creating:</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">case</span> client_state::initializing:</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">case</span> client_state::started:</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;started&quot;</span>);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">case</span> client_state::sending_work:</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;sending work&quot;</span>);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">case</span> client_state::waiting_work_done:</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;waiting work done&quot;</span>);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">case</span> client_state::terminating:</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">case</span> client_state::terminated:</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminated&quot;</span>);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;client_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html">   96</a></span><span class="keyword">struct </span>std::formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a">pars_example::resource::client_state</a>&gt;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  : std::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad1a4c0a69d2349cf6f66a9d1f842e674">   99</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad1a4c0a69d2349cf6f66a9d1f842e674">format</a>(const ::pars_example::resource::client_state&amp; s,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>              format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">using </span>client_state = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09a">pars_example::resource::client_state</a>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">switch</span> (s)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">case</span> client_state::creating:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">case</span> client_state::initializing:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">case</span> client_state::started:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;started&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">case</span> client_state::sending_work:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;sending work&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">case</span> client_state::waiting_work_done:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;waiting work done&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">case</span> client_state::terminating:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">case</span> client_state::terminated:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminated&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;client_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  }</div>
 </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>};</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
 </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00144" data-start="{" data-end="};">
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html">  144</a></span><span class="keyword">struct </span>formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7b">pars_example::resource::server_state</a>&gt; : formatter&lt;string&gt;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>{</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a56c4f2f3e8d47e8faeb371a267d02981">  146</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a56c4f2f3e8d47e8faeb371a267d02981">server_state</a> = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7b">::pars_example::resource::server_state</a>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a67a30d2048c828149eaae9a7533e7403">  148</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a67a30d2048c828149eaae9a7533e7403">format</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a56c4f2f3e8d47e8faeb371a267d02981">server_state</a>&amp; s, format_context&amp; ctx) <span class="keyword">const</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">switch</span> (s)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">case</span> server_state::creating:</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">case</span> server_state::initializing:</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">case</span> server_state::running:</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;running&quot;</span>);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">case</span> server_state::terminating:</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;server_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="};">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html">  142</a></span><span class="keyword">struct </span>std::formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7b">pars_example::resource::server_state</a>&gt;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  : std::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a825e6fa4fea645bf66c8c0f1c53b406a">  145</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a825e6fa4fea645bf66c8c0f1c53b406a">format</a>(const ::pars_example::resource::server_state&amp; s,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>              format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">using </span>server_state = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7b">pars_example::resource::server_state</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">switch</span> (s)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">case</span> server_state::creating:</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordflow">case</span> server_state::initializing:</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">case</span> server_state::running:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;running&quot;</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">case</span> server_state::terminating:</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;server_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  }</div>
 </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>};</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
 </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00177" data-start="{" data-end="};">
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html">  177</a></span><span class="keyword">struct </span>formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931">pars_example::resource::pipe_state</a>&gt; : formatter&lt;string&gt;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="};">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html">  176</a></span><span class="keyword">struct </span>std::formatter&lt;::<a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931">pars_example::resource::pipe_state</a>&gt;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  : std::formatter&lt;std::string&gt;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#ab8984d862ecd47e510c6b5a3a45c5b0c">  179</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#ab8984d862ecd47e510c6b5a3a45c5b0c">pipe_state</a> = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931">::pars_example::resource::pipe_state</a>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#a4266663f54603d304ec4064da209af32">  181</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#a4266663f54603d304ec4064da209af32">format</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#ab8984d862ecd47e510c6b5a3a45c5b0c">pipe_state</a>&amp; s, format_context&amp; ctx) <span class="keyword">const</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  {</div>
+<div class="foldopen" id="foldopen00179" data-start="{" data-end="}">
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#aa87486cb34e1d610f8c90024a015f344">  179</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#aa87486cb34e1d610f8c90024a015f344">format</a>(const ::pars_example::resource::pipe_state&amp; s,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>              format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">using </span>pipe_state = <a class="code hl_enumeration" href="namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931">pars_example::resource::pipe_state</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">switch</span> (s)</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    {</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">case</span> pipe_state::waiting_work:</div>
@@ -323,9 +322,6 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
 </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>} <span class="comment">// namespace std</span></div>
-</div>
 <div class="ttc" id="aclasspars_1_1net_1_1tool__view_html"><div class="ttname"><a href="classpars_1_1net_1_1tool__view.html">pars::net::tool_view</a></div><div class="ttdoc">Represents an nng_socket or nng_ctx view.</div><div class="ttdef"><b>Definition</b> <a href="tool__view_8h_source.html#l00047">tool_view.h:48</a></div></div>
 <div class="ttc" id="acommon_8h_html_a0309fff2c27bd9c255d5255478ae34a5"><div class="ttname"><a href="common_8h.html#a0309fff2c27bd9c255d5255478ae34a5">enable_compute_fib_async</a></div><div class="ttdeci">constexpr auto enable_compute_fib_async</div><div class="ttdef"><b>Definition</b> <a href="#l00032">common.h:32</a></div></div>
 <div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00037">event.h:38</a></div></div>
@@ -345,22 +341,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacepars__example_1_1resource_html_abe56db55737be85fa7985a1213ead931aee54ea693106cb380b38298ef54b6412"><div class="ttname"><a href="namespacepars__example_1_1resource.html#abe56db55737be85fa7985a1213ead931aee54ea693106cb380b38298ef54b6412">pars_example::resource::pipe_state::waiting_work</a></div><div class="ttdeci">@ waiting_work</div><div class="ttdef"><b>Definition</b> <a href="#l00066">common.h:66</a></div></div>
 <div class="ttc" id="anamespacepars__example_1_1resource_html_af67f09960f255f2e76daa4d5afdfcd7b"><div class="ttname"><a href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7b">pars_example::resource::server_state</a></div><div class="ttdeci">server_state</div><div class="ttdef"><b>Definition</b> <a href="#l00056">common.h:57</a></div></div>
 <div class="ttc" id="anamespacepars__example_1_1resource_html_af67f09960f255f2e76daa4d5afdfcd7ba75101dcdfc88455bcafc9e53e0b06689"><div class="ttname"><a href="namespacepars__example_1_1resource.html#af67f09960f255f2e76daa4d5afdfcd7ba75101dcdfc88455bcafc9e53e0b06689">pars_example::resource::server_state::running</a></div><div class="ttdeci">@ running</div><div class="ttdef"><b>Definition</b> <a href="#l00060">common.h:60</a></div></div>
-<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="#l00095">common.h:96</a></div></div>
+<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00039">resources.h:40</a></div></div>
 <div class="ttc" id="apars_8h_html"><div class="ttname"><a href="pars_8h.html">pars.h</a></div></div>
-<div class="ttc" id="astructpars_1_1app_1_1state__machine_html"><div class="ttname"><a href="structpars_1_1app_1_1state__machine.html">pars::app::state_machine</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00086">state_machine.h:87</a></div></div>
+<div class="ttc" id="astructpars_1_1app_1_1state__machine_html"><div class="ttname"><a href="structpars_1_1app_1_1state__machine.html">pars::app::state_machine</a></div><div class="ttdef"><b>Definition</b> <a href="state__machine_8h_source.html#l00082">state_machine.h:83</a></div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_a15f22bca69d020ea03711a294e8897d1"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#a15f22bca69d020ea03711a294e8897d1">pars_example::resource::pipe_resource::pipe_resource</a></div><div class="ttdeci">pipe_resource(pipe_state s)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">common.h:76</a></div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_a1c506cd95e11ea614c1b866cd508f353"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#a1c506cd95e11ea614c1b866cd508f353">pars_example::resource::pipe_resource::pipe_resource</a></div><div class="ttdeci">pipe_resource(const pipe_resource &amp;)=delete</div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_a4ea9dff649a7419b4c4c4af19a7f4767"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#a4ea9dff649a7419b4c4c4af19a7f4767">pars_example::resource::pipe_resource::save_tool</a></div><div class="ttdeci">void save_tool(net::tool_view t)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">common.h:85</a></div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_a7b6c7b0c3fbe8e28855ba1af3679b217"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#a7b6c7b0c3fbe8e28855ba1af3679b217">pars_example::resource::pipe_resource::state</a></div><div class="ttdeci">app::state_machine&lt; pipe_state &gt; state</div><div class="ttdef"><b>Definition</b> <a href="#l00074">common.h:74</a></div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_aa733ea2100d3c902c9b6342fd4301fd6"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#aa733ea2100d3c902c9b6342fd4301fd6">pars_example::resource::pipe_resource::pipe_resource</a></div><div class="ttdeci">pipe_resource(pipe_resource &amp;&amp;)=delete</div></div>
 <div class="ttc" id="astructpars__example_1_1resource_1_1pipe__resource_html_acf5cf594b1ec3da92b861bf645887bbe"><div class="ttname"><a href="structpars__example_1_1resource_1_1pipe__resource.html#acf5cf594b1ec3da92b861bf645887bbe">pars_example::resource::pipe_resource::load_tool</a></div><div class="ttdeci">const net::tool_view &amp; load_tool() const</div><div class="ttdef"><b>Definition</b> <a href="#l00087">common.h:87</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_html_a9df74c1993d3466d64d0829b82bd9341"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#a9df74c1993d3466d64d0829b82bd9341">std::formatter&lt;::pars_example::resource::client_state &gt;::client_state</a></div><div class="ttdeci">::pars_example::resource::client_state client_state</div><div class="ttdef"><b>Definition</b> <a href="#l00101">common.h:101</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_html_ad5c1340e8fbca6adc4e24078e1a776bc"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad5c1340e8fbca6adc4e24078e1a776bc">std::formatter&lt;::pars_example::resource::client_state &gt;::format</a></div><div class="ttdeci">auto format(const client_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00103">common.h:103</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_html_a4266663f54603d304ec4064da209af32"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#a4266663f54603d304ec4064da209af32">std::formatter&lt;::pars_example::resource::pipe_state &gt;::format</a></div><div class="ttdeci">auto format(const pipe_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00181">common.h:181</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_html_ab8984d862ecd47e510c6b5a3a45c5b0c"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#ab8984d862ecd47e510c6b5a3a45c5b0c">std::formatter&lt;::pars_example::resource::pipe_state &gt;::pipe_state</a></div><div class="ttdeci">::pars_example::resource::pipe_state pipe_state</div><div class="ttdef"><b>Definition</b> <a href="#l00179">common.h:179</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_html_a56c4f2f3e8d47e8faeb371a267d02981"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a56c4f2f3e8d47e8faeb371a267d02981">std::formatter&lt;::pars_example::resource::server_state &gt;::server_state</a></div><div class="ttdeci">::pars_example::resource::server_state server_state</div><div class="ttdef"><b>Definition</b> <a href="#l00146">common.h:146</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_html_a67a30d2048c828149eaae9a7533e7403"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a67a30d2048c828149eaae9a7533e7403">std::formatter&lt;::pars_example::resource::server_state &gt;::format</a></div><div class="ttdeci">auto format(const server_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00148">common.h:148</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_html_ad1a4c0a69d2349cf6f66a9d1f842e674"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4.html#ad1a4c0a69d2349cf6f66a9d1f842e674">std::formatter&lt;::pars_example::resource::client_state &gt;::format</a></div><div class="ttdeci">auto format(const ::pars_example::resource::client_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00099">common.h:99</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_html_aa87486cb34e1d610f8c90024a015f344"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4.html#aa87486cb34e1d610f8c90024a015f344">std::formatter&lt;::pars_example::resource::pipe_state &gt;::format</a></div><div class="ttdeci">auto format(const ::pars_example::resource::pipe_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00179">common.h:179</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_html_a825e6fa4fea645bf66c8c0f1c53b406a"><div class="ttname"><a href="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4.html#a825e6fa4fea645bf66c8c0f1c53b406a">std::formatter&lt;::pars_example::resource::server_state &gt;::format</a></div><div class="ttdeci">auto format(const ::pars_example::resource::server_state &amp;s, format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00145">common.h:145</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -15,13 +15,12 @@ var searchData=
   ['base_5fklass_3c_20init_20_3e_12',['base_klass&lt; init &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
   ['base_5fklass_3c_20network_5ferror_20_3e_13',['base_klass&lt; network_error &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
   ['base_5fklass_3c_20nngxx_3a_3amsg_20_3e_14',['base_klass&lt; nngxx::msg &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20pars_5fexample_3a_3aevent_3a_3afib_5fcomputed_20_3e_15',['base_klass&lt; pars_example::event::fib_computed &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20pars_5fexample_3a_3aevent_3a_3afib_5frequested_20_3e_16',['base_klass&lt; pars_example::event::fib_requested &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20pars_5fexample_3a_3aevent_3a_3astop_5fcompute_20_3e_17',['base_klass&lt; pars_example::event::stop_compute &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20pipe_5fcreated_20_3e_18',['base_klass&lt; pipe_created &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20pipe_5fremoved_20_3e_19',['base_klass&lt; pipe_removed &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
-  ['base_5fklass_3c_20shutdown_20_3e_20',['base_klass&lt; shutdown &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_20pipe_5fcreated_20_3e_15',['base_klass&lt; pipe_created &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_20pipe_5fremoved_20_3e_16',['base_klass&lt; pipe_removed &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_20shutdown_20_3e_17',['base_klass&lt; shutdown &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_3a_3apars_5fexample_3a_3aevent_3a_3afib_5fcomputed_20_3e_18',['base_klass&lt;::pars_example::event::fib_computed &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_3a_3apars_5fexample_3a_3aevent_3a_3afib_5frequested_20_3e_19',['base_klass&lt;::pars_example::event::fib_requested &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
+  ['base_5fklass_3c_3a_3apars_5fexample_3a_3aevent_3a_3astop_5fcompute_20_3e_20',['base_klass&lt;::pars_example::event::stop_compute &gt;',['../structpars_1_1ev_1_1base__klass.html',1,'pars::ev']]],
   ['base_5fnetwork_5fmetadata_21',['base_network_metadata',['../structpars_1_1ev_1_1base__network__metadata.html',1,'pars::ev']]],
-  ['base_5fsync_5fmetadata_22',['base_sync_metadata',['../structpars_1_1ev_1_1base__sync__metadata.html',1,'pars::ev']]],
-  ['builder_5ffor_23',['builder_for',['../structpars_1_1ev_1_1builder__for.html',1,'pars::ev']]]
+  ['base_5fsync_5fmetadata_22',['base_sync_metadata',['../structpars_1_1ev_1_1base__sync__metadata.html',1,'pars::ev']]]
 ];

@@ -2,27 +2,23 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="structpars__example_1_1event_1_1stop__compute" kind="struct" language="C++" prot="public">
     <compoundname>pars_example::event::stop_compute</compoundname>
-    <basecompoundref refid="structpars_1_1ev_1_1fb" prot="public" virt="non-virtual">pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;</basecompoundref>
     <includes refid="example_2event_8h" local="no">event.h</includes>
-    <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>auto</type>
-        <definition>static auto pars_example::event::stop_compute::make</definition>
-        <argsstring>(int pipe_id)</argsstring>
-        <name>make</name>
-        <qualifiedname>pars_example::event::stop_compute::make</qualifiedname>
-        <param>
-          <type>int</type>
-          <declname>pipe_id</declname>
-        </param>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pars_example::event::stop_compute::pipe_id</definition>
+        <argsstring></argsstring>
+        <name>pipe_id</name>
+        <qualifiedname>pars_example::event::stop_compute::pipe_id</qualifiedname>
+        <initializer>= 0</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="89" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="89" bodyend="92"/>
-        <references refid="structpars_1_1ev_1_1fb_1a8f89a5ac60ad08290a8982042f941412" compoundref="serializer_8h" startline="160" endline="163">pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;::builder</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="70" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1a3b4d58eca313f7855785ae53a5211e5c" compoundref="example_2event_8h" startline="72" endline="75">format_to</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -42,49 +38,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="94" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="94" bodyend="97"/>
-        <references refid="structpars_1_1ev_1_1fb_1acc1073e55bbb9a990c2d49853a33020c" compoundref="serializer_8h" startline="153" endline="158">pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;::table</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="72" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="72" bodyend="75"/>
+        <references refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" compoundref="example_2event_8h" startline="70">pipe_id</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;</label>
-        <link refid="structpars_1_1ev_1_1fb"/>
-      </node>
-      <node id="1">
-        <label>pars_example::event::stop_compute</label>
-        <link refid="structpars__example_1_1event_1_1stop__compute"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="2">
-        <label>pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;</label>
-        <link refid="structpars_1_1ev_1_1fb"/>
-      </node>
-      <node id="1">
-        <label>pars_example::event::stop_compute</label>
-        <link refid="structpars__example_1_1event_1_1stop__compute"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="87" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="88" bodyend="98"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="68" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="69" bodyend="76"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1fb_1a8f89a5ac60ad08290a8982042f941412" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>builder</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1a482e3e4266050418e225aafd2c4feac1" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>builder_type</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>event_type</name></member>
       <member refid="structpars__example_1_1event_1_1stop__compute_1a3b4d58eca313f7855785ae53a5211e5c" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>format_to</name></member>
-      <member refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>make</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>offset_type</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>span</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1acc1073e55bbb9a990c2d49853a33020c" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>table</name></member>
-      <member refid="structpars_1_1ev_1_1fb_1a452eb644eec6f58bb93373eeaf821578" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>table_type</name></member>
+      <member refid="structpars__example_1_1event_1_1stop__compute_1a7b37b6be6d38655b663c3864ce831d0d" prot="public" virt="non-virtual"><scope>pars_example::event::stop_compute</scope><name>pipe_id</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
