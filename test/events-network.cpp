@@ -27,11 +27,22 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#include <pars/pars.h>
+
+#include "pars/concept/event.h"
+#include "pars/ev/event.h"
+#include "pars/ev/kind.h" // IWYU pragma: keep
+#include "pars/ev/kind_decl.h"
+#include "pars/ev/klass.h"
+#include "pars/ev/metadata.h"
+#include "pars/net/pipe.h"
+#include "pars/net/tool_view.h"
+
+#include <nngxx/ctx.h>
+#include <nngxx/msg.h>
 
 #include <gtest/gtest.h>
 
-#include <type_traits>
+#include <concepts>
 
 namespace pars::tests
 {
