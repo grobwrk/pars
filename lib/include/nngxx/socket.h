@@ -27,15 +27,24 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_SOCKET_H
+#define NNGXX_SOCKET_H
 
-#include "nngxx/iface/socket.h"
+#include "nngxx/concept.h"
+#include "nngxx/err.h"
+#include "nngxx/iface/socket.h" // IWYU pragma: keep
+#include "nngxx/pipe.h"
+#include "nngxx/socket_decl.h"
+
+#include "clev/err.h"
 
 #include <nng/nng.h>
 #include <nng/protocol/pipeline0/pull.h>
 #include <nng/protocol/pipeline0/push.h>
 #include <nng/protocol/reqrep0/rep.h>
 #include <nng/protocol/reqrep0/req.h>
+
+#include <concepts>
 
 namespace nngxx
 {
@@ -87,8 +96,8 @@ nngxx::socket_view nngxx::pipe_view::get_socket() const noexcept
   return nng_pipe_socket(v);
 }
 
-constexpr bool nngxx_socket_is_really_needed_v = true;
-
 static_assert(std::copyable<nngxx::socket_view>);
 
 static_assert(nngxx::move_only_constructible_c<nngxx::socket>);
+
+#endif // NNGXX_SOCKET_H

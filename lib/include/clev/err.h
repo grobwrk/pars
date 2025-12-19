@@ -27,12 +27,16 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef CLEV_ERR_H
+#define CLEV_ERR_H
 
+#include <cstdlib>
 #include <expected>
 #include <functional>
 #include <stdexcept>
 #include <system_error>
+#include <type_traits>
+#include <utility>
 
 namespace clev
 {
@@ -245,3 +249,5 @@ inline clev::expected<void> make_expected(const int e) noexcept
 }
 
 } // namespace clev
+
+#endif // CLEV_ERR_H

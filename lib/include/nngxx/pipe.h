@@ -27,9 +27,14 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_PIPE_H
+#define NNGXX_PIPE_H
 
 #include "nngxx/iface/pipe.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
 
 namespace nngxx
 {
@@ -57,3 +62,5 @@ inline pipe_ev cast_pipe_ev(nng_pipe_ev ev) noexcept
 } // namespace nngxx
 
 static_assert(std::copyable<nngxx::pipe_view>);
+
+#endif // NNGXX_PIPE_H

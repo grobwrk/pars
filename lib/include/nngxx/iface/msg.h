@@ -27,12 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_IFACE_MSG_H
+#define NNGXX_IFACE_MSG_H
 
+#include "nngxx/err.h"
 #include "nngxx/iface/value.h"
 #include "nngxx/pipe.h"
 
+#include "clev/err.h"
+#include "clev/iface.h"
+
 #include <nng/nng.h>
+
+#include <cstddef>
 
 namespace nngxx
 {
@@ -81,3 +88,5 @@ struct clev::iface<nng_msg*> : nngxx::value<nng_msg*>
 
   [[nodiscard]] inline const nngxx::msg_header header() const noexcept;
 };
+
+#endif // NNGXX_IFACE_MSG_H

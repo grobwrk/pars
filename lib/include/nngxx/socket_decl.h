@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_SOCKETDECL_H
+#define NNGXX_SOCKETDECL_H
 
 #include "clev/iface.h"
 #include "clev/own.h"
@@ -45,3 +46,5 @@ using socket_view = clev::iface<nng_socket>;
 using socket = clev::own<nng_socket>;
 
 } // namespace nngxx
+
+#endif // NNGXX_SOCKETDECL_H

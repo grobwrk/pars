@@ -27,9 +27,15 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_MSGHEADER_H
+#define NNGXX_MSGHEADER_H
 
 #include "nngxx/msg.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
+#include <cstddef>
 
 namespace nngxx
 {
@@ -63,3 +69,5 @@ const nngxx::msg_header nngxx::msg_view::header() const noexcept
 }
 
 static_assert(std::copyable<nngxx::msg_header>);
+
+#endif // NNGXX_MSGHEADER_H

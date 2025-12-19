@@ -27,13 +27,21 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_IFACE_SOCKET_H
+#define NNGXX_IFACE_SOCKET_H
 
 #include "nngxx/aio.h"
 #include "nngxx/err.h"
 #include "nngxx/iface/value.h"
 #include "nngxx/pipe.h"
 #include "nngxx/socket_decl.h"
+
+#include "clev/err.h"
+#include "clev/iface.h"
+
+#include <nng/nng.h>
+
+#include <utility>
 
 template<>
 struct clev::iface<nng_socket> : nngxx::value<nng_socket>
@@ -71,3 +79,5 @@ struct clev::iface<nng_socket> : nngxx::value<nng_socket>
       .transform_to(std::move(proto_name));
   }
 };
+
+#endif // NNGXX_IFACE_SOCKET_H

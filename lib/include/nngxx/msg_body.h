@@ -27,11 +27,20 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_MSGBODY_H
+#define NNGXX_MSGBODY_H
 
 #include "nngxx/concept.h"
 #include "nngxx/err.h"
 #include "nngxx/msg.h"
+
+#include "clev/err.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
+#include <cstddef>
+#include <cstdint>
 
 namespace nngxx
 {
@@ -156,3 +165,5 @@ const nngxx::msg_body nngxx::msg_view::body() const noexcept
 }
 
 static_assert(std::copyable<nngxx::msg_body>);
+
+#endif // NNGXX_MSGBODY_H
