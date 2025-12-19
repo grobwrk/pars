@@ -122,7 +122,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00041">41</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00044">44</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab901b1c10e6add798b1163758751fa3c" name="ab901b1c10e6add798b1163758751fa3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab901b1c10e6add798b1163758751fa3c">&#9670;&#160;</a></span>backend()</h2>
@@ -151,10 +151,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00044">44</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>    : rep_m{h, r}</div>
-<div class="line"><span class="lineno">   46</span>  {</div>
-<div class="line"><span class="lineno">   47</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00047">47</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    : rep_m{h, r}</div>
+<div class="line"><span class="lineno">   49</span>  {</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,12 +182,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00068">68</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>  {</div>
-<div class="line"><span class="lineno">   70</span>    rep_m.sock().connect(params.service_addr, params.service_cmode);</div>
-<div class="line"><span class="lineno">   71</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00071">71</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>  {</div>
+<div class="line"><span class="lineno">   73</span>    rep_m.sock().connect(params.service_addr, params.service_cmode);</div>
+<div class="line"><span class="lineno">   74</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="backend_8h_source.html#l00065">pars::comp::backend::connect_p::service_addr</a>, and <a class="el" href="backend_8h_source.html#l00064">pars::comp::backend::connect_p::service_cmode</a>.</p>
+<p class="reference">References <a class="el" href="backend_8h_source.html#l00068">pars::comp::backend::connect_p::service_addr</a>, and <a class="el" href="backend_8h_source.html#l00067">pars::comp::backend::connect_p::service_cmode</a>.</p>
 
 </div>
 </div>
@@ -215,11 +215,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00077">77</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>  {</div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;[rep:{}]&quot;</span>, rep_m.sock());</div>
-<div class="line"><span class="lineno">   80</span>  }</div>
-<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00080">80</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>  {</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;[rep:{}]&quot;</span>, rep_m.sock());</div>
+<div class="line"><span class="lineno">   83</span>  }</div>
+<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00050">ctx.h:50</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,8 +246,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00075">75</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>{ rep_m.stop(); }</div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00078">78</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{ rep_m.stop(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -274,14 +274,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00055">55</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>  {</div>
-<div class="line"><span class="lineno">   57</span>    rep_m.sock().set_options(params.rep_opts);</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>    rep_m.ctxs().start_recv(params.num_ctxs);</div>
-<div class="line"><span class="lineno">   60</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00058">58</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>  {</div>
+<div class="line"><span class="lineno">   60</span>    rep_m.sock().set_options(params.rep_opts);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    rep_m.ctxs().start_recv(params.num_ctxs);</div>
+<div class="line"><span class="lineno">   63</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="backend_8h_source.html#l00051">pars::comp::backend::init_p::num_ctxs</a>, and <a class="el" href="backend_8h_source.html#l00052">pars::comp::backend::init_p::rep_opts</a>.</p>
+<p class="reference">References <a class="el" href="backend_8h_source.html#l00054">pars::comp::backend::init_p::num_ctxs</a>, and <a class="el" href="backend_8h_source.html#l00055">pars::comp::backend::init_p::rep_opts</a>.</p>
 
 </div>
 </div>
@@ -308,8 +308,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00073">73</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{ <span class="keywordflow">return</span> rep_m; }</div>
+<p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00076">76</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{ <span class="keywordflow">return</span> rep_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>

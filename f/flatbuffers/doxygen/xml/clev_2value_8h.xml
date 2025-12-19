@@ -113,10 +113,10 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="54" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -138,7 +138,7 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -152,17 +152,27 @@
       <node id="43">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h</label>
         <link refid="msg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -173,20 +183,22 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h</label>
         <link refid="nngxx_2pipe_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -206,7 +218,13 @@
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -234,6 +252,8 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
@@ -257,6 +277,8 @@
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -282,9 +304,9 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -294,6 +316,10 @@
         <link refid="hf__registry_8h"/>
         <childnode refid="24" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
@@ -301,6 +327,14 @@
         <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -326,25 +360,29 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="33">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h</label>
         <link refid="ev_2kind_8h"/>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h</label>
         <link refid="kind__base_8h"/>
-        <childnode refid="34" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -354,11 +392,11 @@
         <link refid="klass_8h"/>
         <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="49" relation="include">
-        </childnode>
-        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -366,9 +404,13 @@
       <node id="27">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h</label>
         <link refid="metadata_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -387,7 +429,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -397,12 +439,18 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="30" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -413,16 +461,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -446,9 +488,13 @@
       <node id="45">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h</label>
         <link refid="hash_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -466,9 +512,19 @@
       <node id="41">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h</label>
         <link refid="pars_2net_2pipe_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -504,6 +560,10 @@
       <node id="18">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -526,7 +586,11 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -576,57 +640,60 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="iface_8h" kindref="compound">clev/iface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceclev" kindref="compound">clev</ref></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
-<codeline lineno="38" refid="structclev_1_1value" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40" refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/>=<sp/>value_t;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref>(<ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>)<sp/>noexcept</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>{<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" kindref="member">value</ref>()<sp/>noexcept</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref>{<ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::empty</ref>()}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" kindref="member">release</ref>()<sp/>noexcept</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref><sp/>=<sp/><ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::empty</ref>();</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65" refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/>const<sp/>noexcept</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::is_valid</ref>(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="71" refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int&gt;&gt;);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int*&gt;&gt;);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CLEV_VALUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLEV_VALUE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="iface_8h" kindref="compound">clev/iface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceclev" kindref="compound">clev</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
+<codeline lineno="39" refid="structclev_1_1value" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/>=<sp/>value_t;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref>(<ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>)<sp/>noexcept</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>{<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1ab6f7f8f6624b75975fa76bfc61e51689" kindref="member">value</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="structclev_1_1value_1aa89d7fc39c0ee54cd3169b40c8ba72de" kindref="member">value</ref>{<ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::empty</ref>()}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structclev_1_1value_1a78f176f33cc80e4729c493f76d2c62d9" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref>()<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structclev_1_1value_1aeea1737c9f7da435979491299c0ee08f" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a10614b1f14053bd8357d60273cf1e839" kindref="member">release</ref>()<sp/>noexcept</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref><sp/>=<sp/><ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::empty</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structclev_1_1value_1aea666a0b675c4b508269a5b8f978dd42" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/>const<sp/>noexcept</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1iface" kindref="compound">iface&lt;value_type&gt;::is_valid</ref>(<ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72" refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structclev_1_1value_1a1f0b3c6d1d24f51a52edf522dbb0039b" kindref="member">value_type</ref><sp/><ref refid="structclev_1_1value_1a0567c1693d895ee5e33c10498308f00c" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>clev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int&gt;&gt;);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::copyable&lt;clev::value&lt;int*&gt;&gt;);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CLEV_VALUE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/clev/value.h"/>
   </compounddef>

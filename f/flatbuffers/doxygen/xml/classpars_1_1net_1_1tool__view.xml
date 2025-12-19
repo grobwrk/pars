@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="85" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="85" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="87" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="51" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="51" bodyend="54"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="53" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="53" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a91aa13692739869a9bfa5b39761c9119" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="57" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="57" bodyend="60"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="59" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="59" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::type_info &amp;</type>
@@ -72,8 +72,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="63" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="63" bodyend="66"/>
-        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="74" endline="83">pars::net::context_registry::of</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="65" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="65" bodyend="68"/>
+        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="77" endline="86">pars::net::context_registry::of</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -88,8 +88,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="69" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="69" bodyend="69"/>
-        <referencedby refid="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" compoundref="tool__view_8h" startline="78" endline="81">format_to</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="71" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="71" bodyend="71"/>
+        <referencedby refid="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" compoundref="tool__view_8h" startline="80" endline="83">format_to</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -104,8 +104,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="72" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="72" bodyend="75"/>
-        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="74" endline="83">pars::net::context_registry::of</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="74" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="74" bodyend="77"/>
+        <referencedby refid="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" compoundref="context__registry_8h" startline="77" endline="86">pars::net::context_registry::of</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
@@ -124,8 +124,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="78" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="78" bodyend="81"/>
-        <references refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" compoundref="tool__view_8h" startline="69" endline="69">who</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="80" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="80" bodyend="83"/>
+        <references refid="classpars_1_1net_1_1tool__view_1a5e7420843a3cce9c220c64a31b85a781" compoundref="tool__view_8h" startline="71" endline="71">who</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -133,7 +133,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="47" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="48" bodyend="86"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" line="49" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h" bodystart="50" bodyend="88"/>
     <listofallmembers>
       <member refid="classpars_1_1net_1_1tool__view_1a1ede059df373316defbb3c558a7517f9" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>format_to</name></member>
       <member refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" prot="public" virt="non-virtual"><scope>pars::net::tool_view</scope><name>id</name></member>

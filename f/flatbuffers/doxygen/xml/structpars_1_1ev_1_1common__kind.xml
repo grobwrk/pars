@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="44" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="45" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1common__kind_1ac648f20f1ebff638a4269ea514f0fbcd" prot="public" static="no">
         <type>event_t</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="46" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1common__kind_1aedd3fb812f5a8c9a2042cfb498feecb2" prot="public" static="no">
         <type><ref refid="structpars_1_1ev_1_1metadata" kindref="compound">metadata</ref>&lt; kind_of, event_t &gt;</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="48" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="49" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-attrib">
@@ -81,11 +81,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="65" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="65" bodyend="-1"/>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" compoundref="kind__base_8h" startline="56" endline="56">pars::ev::common_kind&lt; kind_of, event_t &gt;::as_tuple</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="58" endline="62">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" compoundref="kind__base_8h" startline="50" endline="50">pars::ev::common_kind&lt; kind_of, event_t &gt;::event</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" compoundref="kind__base_8h" startline="52" endline="52">pars::ev::common_kind&lt; kind_of, event_t &gt;::event</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="66" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" compoundref="kind__base_8h" startline="57" endline="57">pars::ev::common_kind&lt; kind_of, event_t &gt;::as_tuple</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="59" endline="63">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae439d00f3778920b22670f50812f7e3f" compoundref="kind__base_8h" startline="51" endline="51">pars::ev::common_kind&lt; kind_of, event_t &gt;::event</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" compoundref="kind__base_8h" startline="53" endline="53">pars::ev::common_kind&lt; kind_of, event_t &gt;::event</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" prot="protected" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1common__kind_1aedd3fb812f5a8c9a2042cfb498feecb2" kindref="member">metadata_type</ref></type>
@@ -99,10 +99,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="66" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="66" bodyend="-1"/>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" compoundref="kind__base_8h" startline="56" endline="56">pars::ev::common_kind&lt; kind_of, event_t &gt;::as_tuple</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="58" endline="62">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" compoundref="kind__base_8h" startline="54" endline="54">pars::ev::common_kind&lt; kind_of, event_t &gt;::md</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="67" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" compoundref="kind__base_8h" startline="57" endline="57">pars::ev::common_kind&lt; kind_of, event_t &gt;::as_tuple</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="59" endline="63">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" compoundref="kind__base_8h" startline="55" endline="55">pars::ev::common_kind&lt; kind_of, event_t &gt;::md</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -118,8 +118,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="50" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="50" bodyend="50"/>
-        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="65">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="51" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="51" bodyend="51"/>
+        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1common__kind_1add5aa00d0e905af6a5cdde67b3d604c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="structpars_1_1ev_1_1common__kind_1ac648f20f1ebff638a4269ea514f0fbcd" kindref="member">event_type</ref> &amp;</type>
@@ -133,8 +133,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="52" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="52" bodyend="52"/>
-        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="65">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="53" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="53" bodyend="53"/>
+        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1common__kind_1aedd3fb812f5a8c9a2042cfb498feecb2" kindref="member">metadata_type</ref> &amp;</type>
@@ -148,9 +148,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="54" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="54" bodyend="54"/>
-        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
-        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="58" endline="62">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="55" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="55" bodyend="55"/>
+        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="67">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
+        <referencedby refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" compoundref="kind__base_8h" startline="59" endline="63">pars::ev::common_kind&lt; kind_of, event_t &gt;::common_kind</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -164,9 +164,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="56" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="56" bodyend="56"/>
-        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="65">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
-        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="57" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="57" bodyend="57"/>
+        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
+        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="67">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -188,10 +188,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="58" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="58" bodyend="62"/>
-        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="65">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
-        <references refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" compoundref="kind__base_8h" startline="54" endline="54">pars::ev::common_kind&lt; kind_of, event_t &gt;::md</references>
-        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="59" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="59" bodyend="63"/>
+        <references refid="structpars_1_1ev_1_1common__kind_1a983b1216d76d4d50258316becbb0a1bc" compoundref="kind__base_8h" startline="66">pars::ev::common_kind&lt; kind_of, event_t &gt;::event_m</references>
+        <references refid="structpars_1_1ev_1_1common__kind_1ad0408450d9324705258338928f37e85f" compoundref="kind__base_8h" startline="55" endline="55">pars::ev::common_kind&lt; kind_of, event_t &gt;::md</references>
+        <references refid="structpars_1_1ev_1_1common__kind_1a23d1675eec2583a366813be0496d6fed" compoundref="kind__base_8h" startline="67">pars::ev::common_kind&lt; kind_of, event_t &gt;::metadata_m</references>
       </memberdef>
     </sectiondef>
     <requiresclause>kind_c&lt;kind_of&gt;    </requiresclause>
@@ -280,7 +280,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="41" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="42" bodyend="67"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h" bodystart="43" bodyend="68"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1common__kind_1ae65bb1d9e98696fdfeedeaf99fa6cf88" prot="public" virt="non-virtual"><scope>pars::ev::common_kind</scope><name>as_tuple</name></member>
       <member refid="structpars_1_1ev_1_1common__kind_1a7dab2655903b1a192ede56d045724164" prot="public" virt="non-virtual"><scope>pars::ev::common_kind</scope><name>common_kind</name></member>

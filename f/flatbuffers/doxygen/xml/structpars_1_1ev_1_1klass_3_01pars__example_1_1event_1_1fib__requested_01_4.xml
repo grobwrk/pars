@@ -46,10 +46,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="116" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="116" bodyend="122"/>
-        <references refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" compoundref="lib_2include_2pars_2concept_2event_8h" startline="43">pars::ev::async</references>
+        <references refid="namespacepars_1_1ev_1a5d83a3f8137beca4555739cbaae1d8a8a0df93e34273b367bb63bad28c94c78d5" compoundref="lib_2include_2pars_2concept_2event_8h" startline="44">pars::ev::async</references>
         <references refid="common_8h_1a0309fff2c27bd9c255d5255478ae34a5" compoundref="common_8h" startline="32">enable_compute_fib_async</references>
-        <references refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" compoundref="klass_8h" startline="61" endline="64">pars::ev::base_klass&lt; event_t &gt;::exec_policy</references>
-        <references refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" compoundref="concept_2kind_8h" startline="56">pars::ev::is_same_kind_v</references>
+        <references refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" compoundref="klass_8h" startline="65" endline="68">pars::ev::base_klass&lt; event_t &gt;::exec_policy</references>
+        <references refid="namespacepars_1_1ev_1a58e440168c167811c469e731225cf6b7" compoundref="concept_2kind_8h" startline="57">pars::ev::is_same_kind_v</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="74" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

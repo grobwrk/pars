@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="85" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="85" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="89" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a44ec1901e21e3cc13b9b535436adff3b" prot="public" static="no">
         <type>event_t</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="87" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="87" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="91" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" static="no">
         <type>event_t</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="74" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-attrib">
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="89" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="89" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="93" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="93" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -93,9 +93,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="93" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="93" bodyend="96"/>
-        <references refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" compoundref="klass_8h" startline="93" endline="96">exec_policy</references>
-        <referencedby refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" compoundref="klass_8h" startline="93" endline="96">exec_policy</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="97" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="97" bodyend="100"/>
+        <references refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" compoundref="klass_8h" startline="97" endline="100">exec_policy</references>
+        <referencedby refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1af17055876b2b30f7784bc7bf9a9c0e18" compoundref="klass_8h" startline="97" endline="100">exec_policy</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1a74ccbc18385835089ead7f256f85c66b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="99" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="99" bodyend="104"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="103" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="103" bodyend="108"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -153,7 +153,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="83" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="84" bodyend="105"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="87" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="88" bodyend="109"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1aad4b2c4cc647aa44528205a8e4501b0a" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; std::shared_ptr&lt; event_t &gt; &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; std::shared_ptr&lt; event_t &gt; &gt;</scope><name>event_type</name></member>

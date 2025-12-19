@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">71</td>
@@ -64,20 +64,31 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_NET_SOCKET_H
+             : #define PARS_NET_SOCKET_H
+             : 
+             : #include &quot;pars/concept/event.h&quot;
+             : #include &quot;pars/ev/enqueuer.h&quot;
+             : #include &quot;pars/ev/event.h&quot;
+             : #include &quot;pars/log.h&quot;
+             : #include &quot;pars/log/flags.h&quot;
+             : #include &quot;pars/net/op.h&quot;
+             : #include &quot;pars/net/pipe.h&quot;
+             : #include &quot;pars/net/socket_opt.h&quot;
+             : #include &quot;pars/net/tool_view.h&quot;
              : 
              : #include &quot;nngxx/aio.h&quot;
              : #include &quot;nngxx/ctx.h&quot;
              : #include &quot;nngxx/dialer.h&quot;
              : #include &quot;nngxx/listener.h&quot;
              : #include &quot;nngxx/pipe.h&quot;
-             : 
-             : #include &quot;pars/ev/enqueuer.h&quot;
-             : #include &quot;pars/net/op.h&quot;
-             : #include &quot;pars/net/socket_opt.h&quot;
+             : #include &quot;nngxx/socket_decl.h&quot;
              : 
              : #include &lt;format&gt;
+             : #include &lt;nng/nng.h&gt;
+             : #include &lt;stdexcept&gt;
              : #include &lt;string_view&gt;
+             : #include &lt;utility&gt;
              : #include &lt;vector&gt;
              : 
              : namespace pars::net
@@ -264,6 +275,8 @@
              : };
              : 
              : } // namespace pars::net
+             : 
+             : #endif // PARS_NET_SOCKET_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

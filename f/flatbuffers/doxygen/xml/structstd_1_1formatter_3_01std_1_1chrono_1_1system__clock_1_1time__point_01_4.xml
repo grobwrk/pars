@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="45" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="45" bodyend="54"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="48" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="48" bodyend="57"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -56,7 +56,7 @@
         <label>std::formatter&lt; std::string &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="44" bodyend="55"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="45" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="47" bodyend="58"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_1abc95168478c15e4ba3ee2c9ef95fcd2c" prot="public" virt="non-virtual"><scope>std::formatter&lt; std::chrono::system_clock::time_point &gt;</scope><name>format</name></member>
     </listofallmembers>

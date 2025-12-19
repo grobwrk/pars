@@ -120,44 +120,47 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="net_8h.html">pars/concept/net.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="pars_2net_2pipe_8h.html">pars/net/pipe.h</a>&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;format&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacepars_1_1f.html">   37</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1f.html">pars::f</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Format pipe and tool</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;net::tool_c tool_t&gt;</div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html">   42</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">pntl</a></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">   44</a></span>  <a class="code hl_class" href="classpars_1_1net_1_1pipe.html">net::pipe</a> <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">p</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">   45</a></span>  tool_t&amp; <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">   47</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">format_to</a>(std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;Pipe {} {}&quot;</span>, <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">p</a>, <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_FMT_HELPERS_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_FMT_HELPERS_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="net_8h.html">pars/concept/net.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="pars_2net_2pipe_8h.html">pars/net/pipe.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacepars_1_1f.html">   38</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1f.html">pars::f</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// Format pipe and tool</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;net::tool_c tool_t&gt;</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html">   43</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1f_1_1pntl.html">pntl</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">   45</a></span>  <a class="code hl_class" href="classpars_1_1net_1_1pipe.html">net::pipe</a> <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">p</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">   46</a></span>  tool_t&amp; <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">   48</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">format_to</a>(std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;Pipe {} {}&quot;</span>, <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">p</a>, <a class="code hl_variable" href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">t</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>} <span class="comment">// namespace pars::f</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace pars::f</span></div>
 </div>
-<div class="ttc" id="aclasspars_1_1net_1_1pipe_html"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html">pars::net::pipe</a></div><div class="ttdef"><b>Definition</b> <a href="pars_2net_2pipe_8h_source.html#l00042">pipe.h:43</a></div></div>
-<div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="#l00037">helpers.h:38</a></div></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">// PARS_FMT_HELPERS_H</span></div>
+<div class="ttc" id="aclasspars_1_1net_1_1pipe_html"><div class="ttname"><a href="classpars_1_1net_1_1pipe.html">pars::net::pipe</a></div><div class="ttdef"><b>Definition</b> <a href="pars_2net_2pipe_8h_source.html#l00043">pipe.h:44</a></div></div>
+<div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="#l00038">helpers.h:39</a></div></div>
 <div class="ttc" id="anet_8h_html"><div class="ttname"><a href="net_8h.html">net.h</a></div></div>
 <div class="ttc" id="apars_2net_2pipe_8h_html"><div class="ttname"><a href="pars_2net_2pipe_8h.html">pipe.h</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1pntl_html"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html">pars::f::pntl</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">helpers.h:43</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1pntl_html_a1c50b6a8da50bb9c5425258f7c66b7d8"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">pars::f::pntl::t</a></div><div class="ttdeci">tool_t &amp; t</div><div class="ttdef"><b>Definition</b> <a href="#l00045">helpers.h:45</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1pntl_html_a6f1ded5693d9bec7ff44ca2791154058"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">pars::f::pntl::format_to</a></div><div class="ttdeci">auto format_to(std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00047">helpers.h:47</a></div></div>
-<div class="ttc" id="astructpars_1_1f_1_1pntl_html_acd88559bb712346eafe1ab095ecada1e"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">pars::f::pntl::p</a></div><div class="ttdeci">net::pipe p</div><div class="ttdef"><b>Definition</b> <a href="#l00044">helpers.h:44</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1pntl_html"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html">pars::f::pntl</a></div><div class="ttdef"><b>Definition</b> <a href="#l00043">helpers.h:44</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1pntl_html_a1c50b6a8da50bb9c5425258f7c66b7d8"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#a1c50b6a8da50bb9c5425258f7c66b7d8">pars::f::pntl::t</a></div><div class="ttdeci">tool_t &amp; t</div><div class="ttdef"><b>Definition</b> <a href="#l00046">helpers.h:46</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1pntl_html_a6f1ded5693d9bec7ff44ca2791154058"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#a6f1ded5693d9bec7ff44ca2791154058">pars::f::pntl::format_to</a></div><div class="ttdeci">auto format_to(std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00048">helpers.h:48</a></div></div>
+<div class="ttc" id="astructpars_1_1f_1_1pntl_html_acd88559bb712346eafe1ab095ecada1e"><div class="ttname"><a href="structpars_1_1f_1_1pntl.html#acd88559bb712346eafe1ab095ecada1e">pars::f::pntl::p</a></div><div class="ttdeci">net::pipe p</div><div class="ttdef"><b>Definition</b> <a href="#l00045">helpers.h:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

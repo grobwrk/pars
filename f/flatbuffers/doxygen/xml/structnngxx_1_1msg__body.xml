@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="143" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="143" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="152" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="152" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="41" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="41" bodyend="44"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="50" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="50" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a7f8e7856e9c7eaeb28c13efc1f463bce" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="46" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="46" bodyend="49"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="55" column="23" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1aa65996beca5a71017f3f3e34e5ae8440" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="52" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="52" bodyend="55"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="61" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="61" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a6317e2c382142b260c7ad298ee8a3909" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="58" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="58" bodyend="61"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="67" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -109,10 +109,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="64" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="64" bodyend="84"/>
-        <references refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="64" endline="84">append</references>
-        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</references>
-        <referencedby refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="64" endline="84">append</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="73" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="73" bodyend="93"/>
+        <references refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="73" endline="93">append</references>
+        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="127" endline="131">nngxx::invoke</references>
+        <referencedby refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="73" endline="93">append</referencedby>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -133,10 +133,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="87" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="87" bodyend="107"/>
-        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</references>
-        <references refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="87" endline="107">trim</references>
-        <referencedby refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="87" endline="107">trim</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="96" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="96" bodyend="116"/>
+        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="127" endline="131">nngxx::invoke</references>
+        <references refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="96" endline="116">trim</references>
+        <referencedby refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="96" endline="116">trim</referencedby>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a37fc00c2c8ff16eb0e02f97eb0106a55" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;</type>
@@ -154,8 +154,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="109" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="109" bodyend="112"/>
-        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="118" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="118" bodyend="121"/>
+        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="127" endline="131">nngxx::invoke</references>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -176,10 +176,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="115" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="115" bodyend="135"/>
-        <references refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="115" endline="135">chop</references>
-        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</references>
-        <referencedby refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="115" endline="135">chop</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="124" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="124" bodyend="144"/>
+        <references refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="124" endline="144">chop</references>
+        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="127" endline="131">nngxx::invoke</references>
+        <referencedby refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="124" endline="144">chop</referencedby>
       </memberdef>
       <memberdef kind="function" id="structnngxx_1_1msg__body_1a39703ccc9d20a4094925e1c82d3c031c" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; void &gt;</type>
@@ -197,15 +197,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="137" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="137" bodyend="140"/>
-        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="123" endline="127">nngxx::invoke</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="146" column="26" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="146" bodyend="149"/>
+        <references refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" compoundref="nngxx_2err_8h" startline="127" endline="131">nngxx::invoke</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="40" bodyend="144"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" line="48" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_body.h" bodystart="49" bodyend="153"/>
     <listofallmembers>
       <member refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" prot="public" virt="non-virtual"><scope>nngxx::msg_body</scope><name>append</name></member>
       <member refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" prot="public" virt="non-virtual"><scope>nngxx::msg_body</scope><name>chop</name></member>

@@ -120,28 +120,32 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// avoid crt warnings</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="init_8h.html#af08ec37a8c99d747fb60fa15bc28678b">   33</a></span><span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// force C++23</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#if __cplusplus &lt; 202302L</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#error &quot;pars needs C++23!&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars.html">pars</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">   47</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">milli</a> = std::chrono::duration&lt;nng_duration, std::milli&gt;;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_INIT_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_INIT_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// avoid crt warnings</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="init_8h.html#af08ec37a8c99d747fb60fa15bc28678b">   34</a></span><span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// force C++23</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if __cplusplus &lt; 202302L</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#error &quot;pars needs C++23!&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;ratio&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars.html">pars</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace pars</span></div>
-<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
-<div class="ttc" id="anamespacepars_html_a17d3c52fa100a5b6caccfd12f1dbccf2"><div class="ttname"><a href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">pars::milli</a></div><div class="ttdeci">std::chrono::duration&lt; nng_duration, std::milli &gt; milli</div><div class="ttdef"><b>Definition</b> <a href="#l00047">init.h:47</a></div></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">   49</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">milli</a> = std::chrono::duration&lt;nng_duration, std::milli&gt;;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace pars</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// PARS_INIT_H</span></div>
+<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00042">resources.h:43</a></div></div>
+<div class="ttc" id="anamespacepars_html_a17d3c52fa100a5b6caccfd12f1dbccf2"><div class="ttname"><a href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">pars::milli</a></div><div class="ttdeci">std::chrono::duration&lt; nng_duration, std::milli &gt; milli</div><div class="ttdef"><b>Definition</b> <a href="#l00049">init.h:49</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

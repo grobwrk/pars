@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -64,11 +64,17 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef NNGXX_IFACE_PIPE_H
+             : #define NNGXX_IFACE_PIPE_H
              : 
              : #include &quot;nngxx/err.h&quot;
              : #include &quot;nngxx/iface/value.h&quot;
              : #include &quot;nngxx/socket_decl.h&quot;
+             : 
+             : #include &quot;clev/err.h&quot;
+             : #include &quot;clev/iface.h&quot;
+             : 
+             : #include &lt;nng/nng.h&gt;
              : 
              : template&lt;&gt;
              : struct clev::iface&lt;nng_pipe&gt; : nngxx::value&lt;nng_pipe&gt;
@@ -95,6 +101,8 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return destroy(v);</span>
              :   }
              : };
+             : 
+             : #endif // NNGXX_IFACE_PIPE_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

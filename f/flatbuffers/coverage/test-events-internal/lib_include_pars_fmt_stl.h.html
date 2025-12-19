@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -64,16 +64,19 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_FMT_STL_H
+             : #define PARS_FMT_STL_H
              : 
-             : #include &quot;pars/init.h&quot;
-             : 
-             : #include &quot;pars/ev/event.h&quot;
+             : #include &quot;pars/concept/event.h&quot;
              : 
              : #include &lt;chrono&gt;
+             : #include &lt;ctime&gt;
              : #include &lt;format&gt;
              : #include &lt;iomanip&gt;
+             : #include &lt;memory&gt;
              : #include &lt;sstream&gt;
+             : #include &lt;string&gt;
+             : #include &lt;system_error&gt;
              : 
              : template&lt;&gt;
              : struct std::formatter&lt;std::chrono::system_clock::time_point&gt;
@@ -113,6 +116,8 @@
              :       return std::format_to(ctx.out(), &quot;&lt;empty-shared_ptr&gt;&quot;);
              :   }
              : };
+             : 
+             : #endif // PARS_FMT_STL_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

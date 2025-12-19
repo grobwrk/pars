@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="70" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="73" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="73" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="42" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="42" bodyend="45"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="45" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="45" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1comp_1_1client_1a8deaba7552fb2b92df1b39734e44e171" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1net_1_1req" kindref="compound">net::req</ref> &amp;</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="47" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="47" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="50" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="50" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -74,8 +74,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="54" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="54" bodyend="54"/>
-        <references refid="structpars_1_1comp_1_1client_1_1init__p_1a25561076de1efda65570c043f7ca7dd2" compoundref="client_8h" startline="51">pars::comp::client::init_p::req_opts</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="57" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="57" bodyend="57"/>
+        <references refid="structpars_1_1comp_1_1client_1_1init__p_1a25561076de1efda65570c043f7ca7dd2" compoundref="client_8h" startline="54">pars::comp::client::init_p::req_opts</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -93,9 +93,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="62" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="62" bodyend="65"/>
-        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" compoundref="client_8h" startline="59">pars::comp::client::connect_p::service_addr</references>
-        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" compoundref="client_8h" startline="58">pars::comp::client::connect_p::service_cmode</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="65" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="65" bodyend="68"/>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" compoundref="client_8h" startline="62">pars::comp::client::connect_p::service_addr</references>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" compoundref="client_8h" startline="61">pars::comp::client::connect_p::service_cmode</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1comp_1_1client_1a2757a5dfbae6dbceaab73314c6b965ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -109,14 +109,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="67" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="67" bodyend="67"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="70" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="70" bodyend="70"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="40" bodyend="71"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="43" bodyend="74"/>
     <listofallmembers>
       <member refid="classpars_1_1comp_1_1client_1a8dc663bfdb9b7339f49791175d16c551" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>client</name></member>
       <member refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" prot="public" virt="non-virtual"><scope>pars::comp::client</scope><name>connect</name></member>

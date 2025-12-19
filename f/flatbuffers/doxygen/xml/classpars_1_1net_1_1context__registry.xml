@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="92" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="92" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="95" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1context__registry_1a67b297d31ce2c65f0f6d4123162fec62" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1net_1_1socket" kindref="compound">socket</ref> &amp;</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="93" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="93" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="96" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1context__registry_1a00c29e296063436e32723c57af9a899d" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; int, <ref refid="classpars_1_1net_1_1context" kindref="compound">context</ref> &gt;</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="94" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="94" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="97" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="97" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="48" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="48" bodyend="52"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="51" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="51" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1context__registry_1a33dc46a66145476a2efbdfbcc58a772b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="54" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="54" bodyend="58"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="57" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1context__registry_1a9d299ee8680f9f78d7d9a0beceef5a3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1net_1_1context" kindref="compound">context</ref> &amp;</type>
@@ -96,8 +96,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="60" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="60" bodyend="72"/>
-        <referencedby refid="classpars_1_1net_1_1context__registry_1a15cd11ff729311912777eded34907288" compoundref="context__registry_8h" startline="85" endline="89">start_recv</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="63" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="63" bodyend="75"/>
+        <referencedby refid="classpars_1_1net_1_1context__registry_1a15cd11ff729311912777eded34907288" compoundref="context__registry_8h" startline="88" endline="92">start_recv</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1context__registry_1abb67afe058583427c71128533cd5cb42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1net_1_1context" kindref="compound">context</ref> &amp;</type>
@@ -115,9 +115,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="74" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="74" bodyend="83"/>
-        <references refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" compoundref="tool__view_8h" startline="72" endline="75">pars::net::tool_view::id</references>
-        <references refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" compoundref="tool__view_8h" startline="63" endline="66">pars::net::tool_view::type</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="77" column="11" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="77" bodyend="86"/>
+        <references refid="classpars_1_1net_1_1tool__view_1a19c28d6711327852e90fd486d37efd7a" compoundref="tool__view_8h" startline="74" endline="77">pars::net::tool_view::id</references>
+        <references refid="classpars_1_1net_1_1tool__view_1a7b40907d5e853b77bcef640d7cde034b" compoundref="tool__view_8h" startline="65" endline="68">pars::net::tool_view::type</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1context__registry_1a15cd11ff729311912777eded34907288" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -135,16 +135,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="85" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="85" bodyend="89"/>
-        <references refid="classpars_1_1net_1_1context__registry_1a9d299ee8680f9f78d7d9a0beceef5a3a" compoundref="context__registry_8h" startline="60" endline="72">emplace</references>
-        <references refid="classpars_1_1net_1_1context_1a50de22a87a21f5c8070be3276bb8ff51" compoundref="context_8h" startline="84" endline="84">pars::net::context::recv</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="88" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="88" bodyend="92"/>
+        <references refid="classpars_1_1net_1_1context__registry_1a9d299ee8680f9f78d7d9a0beceef5a3a" compoundref="context__registry_8h" startline="63" endline="75">emplace</references>
+        <references refid="classpars_1_1net_1_1context_1a50de22a87a21f5c8070be3276bb8ff51" compoundref="context_8h" startline="89" endline="89">pars::net::context::recv</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="45" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="46" bodyend="95"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" line="48" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h" bodystart="49" bodyend="98"/>
     <listofallmembers>
       <member refid="classpars_1_1net_1_1context__registry_1ae0794aa22bf25fa0bf737666e4e25743" prot="public" virt="non-virtual"><scope>pars::net::context_registry</scope><name>context_registry</name></member>
       <member refid="classpars_1_1net_1_1context__registry_1a00c29e296063436e32723c57af9a899d" prot="private" virt="non-virtual"><scope>pars::net::context_registry</scope><name>ctx_map_m</name></member>

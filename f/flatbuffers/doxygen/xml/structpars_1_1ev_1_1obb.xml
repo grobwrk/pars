@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="50" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="66" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" prot="public" static="no">
         <type>event_type::builder</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="52" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="68" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" prot="public" static="no">
         <type>event_type::table_type</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="54" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="54" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" prot="public" static="no">
         <type>event_type::offset_type</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="56" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="72" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="72" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="79" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="79" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="95" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1obb_1a26b96ef41ebde9d42c75435a34d6ba26" prot="private" static="no" mutable="no">
         <type>flatbuffers::FlatBufferBuilder &amp;</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="81" column="34" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="81" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="97" column="34" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1ev_1_1obb_1a2928ec3b5ea46c0d86a54ef49568e645" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref></type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="83" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="83" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="99" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="99" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -123,16 +123,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="59" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="59" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="75" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="75" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a48c4efb84930d93b6c5226662703c9c2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a75b17587c0ec594c24c1aa168069b41a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>pars::ev::obb&lt; ev_t &gt;::obb</definition>
-        <argsstring>(size_t size)</argsstring>
+        <argsstring>(std::size_t size)</argsstring>
         <name>obb</name>
         <qualifiedname>pars::ev::obb::obb</qualifiedname>
         <param>
-          <type>size_t</type>
+          <type>std::size_t</type>
           <declname>size</declname>
         </param>
         <briefdescription>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="66" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="66" bodyend="71"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="82" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="82" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a4f1a10902d1ddbbe4a237757f9f9cc51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="73" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="73" bodyend="77"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="89" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="89" bodyend="93"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="86" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="86" bodyend="86"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="102" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="102" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref></type>
@@ -193,16 +193,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="88" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="88" bodyend="88"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="104" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="104" bodyend="104"/>
       </memberdef>
-      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref></type>
         <definition>static obb pars::ev::obb&lt; ev_t &gt;::using_size</definition>
-        <argsstring>(size_t size)</argsstring>
+        <argsstring>(std::size_t size)</argsstring>
         <name>using_size</name>
         <qualifiedname>pars::ev::obb::using_size</qualifiedname>
         <param>
-          <type>size_t</type>
+          <type>std::size_t</type>
           <declname>size</declname>
         </param>
         <briefdescription>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="90" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="90" bodyend="90"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="106" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="106" bodyend="106"/>
         <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
         <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
         <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
@@ -232,8 +232,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="92" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="92" bodyend="92"/>
-        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="214" endline="231">pars::ev::serialize::to_event</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="108" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="108" bodyend="108"/>
+        <referencedby refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" compoundref="serializer_8h" startline="230" endline="247">pars::ev::serialize::to_event</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="95" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="95" bodyend="104"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="111" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="111" bodyend="120"/>
         <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
         <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
         <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="106" column="27" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="106" bodyend="109"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="122" column="27" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="122" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref></type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="111" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="111" bodyend="111"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="127" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="127" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref></type>
@@ -328,14 +328,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="113" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="113" bodyend="118"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="129" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="129" bodyend="134"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="47" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="48" bodyend="119"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="63" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="64" bodyend="135"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>and_then</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>build</name></member>
@@ -347,13 +347,13 @@
       <member refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>finish</name></member>
       <member refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>from</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a057ad43ec37691b691dbba5affd9d156" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
-      <member refid="structpars_1_1ev_1_1obb_1a48c4efb84930d93b6c5226662703c9c2" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a75b17587c0ec594c24c1aa168069b41a" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a4f1a10902d1ddbbe4a237757f9f9cc51" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a2928ec3b5ea46c0d86a54ef49568e645" prot="private" virt="non-virtual"><scope>pars::ev::obb</scope><name>obb_m</name></member>
       <member refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>offset_type</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>table</name></member>
       <member refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>table_type</name></member>
-      <member refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>using_size</name></member>
+      <member refid="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>using_size</name></member>
       <member refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" prot="public" virt="non-virtual"><scope>pars::ev::obb</scope><name>within</name></member>
     </listofallmembers>
   </compounddef>

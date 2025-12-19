@@ -120,28 +120,31 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1ev.html">pars::ev</a></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1sent.html">   38</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1sent.html">sent</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1received.html">   41</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1received.html">received</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1fired.html">   44</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1fired.html">fired</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace pars::ev</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_EV_KINDDECL_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_EV_KINDDECL_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span> <span class="comment">// IWYU pragma: keep</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1ev.html">pars::ev</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1sent.html">   39</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1sent.html">sent</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1received.html">   42</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1received.html">received</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1fired.html">   45</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1ev_1_1fired.html">fired</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace pars::ev</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">// PARS_EV_KINDDECL_H</span></div>
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
-<div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00037">event.h:38</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1fired_html"><div class="ttname"><a href="structpars_1_1ev_1_1fired.html">pars::ev::fired</a></div><div class="ttdef"><b>Definition</b> <a href="#l00044">kind_decl.h:44</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1received_html"><div class="ttname"><a href="structpars_1_1ev_1_1received.html">pars::ev::received</a></div><div class="ttdef"><b>Definition</b> <a href="#l00041">kind_decl.h:41</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1sent_html"><div class="ttname"><a href="structpars_1_1ev_1_1sent.html">pars::ev::sent</a></div><div class="ttdef"><b>Definition</b> <a href="#l00038">kind_decl.h:38</a></div></div>
+<div class="ttc" id="anamespacepars_1_1ev_html"><div class="ttname"><a href="namespacepars_1_1ev.html">pars::ev</a></div><div class="ttdef"><b>Definition</b> <a href="lib_2include_2pars_2concept_2event_8h_source.html#l00038">event.h:39</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1fired_html"><div class="ttname"><a href="structpars_1_1ev_1_1fired.html">pars::ev::fired</a></div><div class="ttdef"><b>Definition</b> <a href="#l00045">kind_decl.h:45</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1received_html"><div class="ttname"><a href="structpars_1_1ev_1_1received.html">pars::ev::received</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">kind_decl.h:42</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1sent_html"><div class="ttname"><a href="structpars_1_1ev_1_1sent.html">pars::ev::sent</a></div><div class="ttdef"><b>Definition</b> <a href="#l00039">kind_decl.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

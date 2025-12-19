@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">3</td>
@@ -64,11 +64,18 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_NET_PUSH_H
+             : #define PARS_NET_PUSH_H
              : 
+             : #include &quot;pars/concept/event.h&quot;
+             : #include &quot;pars/concept/kind.h&quot;
              : #include &quot;pars/ev/enqueuer.h&quot;
+             : #include &quot;pars/ev/hf_registry.h&quot;
              : #include &quot;pars/ev/hf_registry__insert.h&quot;
+             : #include &quot;pars/ev/make_hf.h&quot;
              : #include &quot;pars/net/socket.h&quot;
+             : 
+             : #include &quot;nngxx/socket.h&quot;
              : 
              : namespace pars::net
              : {
@@ -116,6 +123,8 @@
              : };
              : 
              : } // namespace pars::net
+             : 
+             : #endif // PARS_NET_PUSH_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

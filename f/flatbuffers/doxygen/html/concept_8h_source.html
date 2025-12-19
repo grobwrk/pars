@@ -120,58 +120,62 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_value_t&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__value__c.html">   40</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__value__c.html">nng_value_c</a> = std::same_as&lt;nng_value_t, nng_duration&gt; ||</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                      std::same_as&lt;nng_value_t, nng_sockaddr&gt; ||</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                      std::same_as&lt;nng_value_t, const char*&gt;;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__with__set__opt__c.html">   45</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__with__set__opt__c.html">nng_with_set_opt_c</a> =</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  std::same_as&lt;nng_t, nng_socket&gt; || std::same_as&lt;nng_t, nng_ctx&gt; ||</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  std::same_as&lt;nng_t, nng_listener&gt; || std::same_as&lt;nng_t, nng_dialer&gt;;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__with__get__opt__c.html">   50</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__with__get__opt__c.html">nng_with_get_opt_c</a> =</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_concept" href="conceptnngxx_1_1nng__with__set__opt__c.html">nng_with_set_opt_c&lt;nng_t&gt;</a> || std::same_as&lt;nng_t, nng_pipe&gt;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__c.html">   54</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__c.html">nng_c</a> = <a class="code hl_concept" href="conceptnngxx_1_1nng__with__get__opt__c.html">nng_with_get_opt_c&lt;nng_t&gt;</a> || std::same_as&lt;nng_t, nng_msg*&gt; ||</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                std::same_as&lt;nng_t, nng_aio*&gt;;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> u<span class="keywordtype">int</span>_t&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1uint__c.html">   58</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1uint__c.html">uint_c</a> =</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  std::same_as&lt;uint_t, uint16_t&gt; || std::same_as&lt;uint_t, uint32_t&gt; ||</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  std::same_as&lt;uint_t, uint64_t&gt;;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1move__only__constructible__c.html">   63</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1move__only__constructible__c.html">move_only_constructible_c</a> =</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  std::move_constructible&lt;value_t&gt; &amp;&amp; !std::copy_constructible&lt;value_t&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1move__only__assignable__c.html">   67</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1move__only__assignable__c.html">move_only_assignable_c</a> =</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  std::is_move_assignable_v&lt;value_t&gt; &amp;&amp; !std::is_copy_assignable_v&lt;value_t&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1movable__only__c.html">   71</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1movable__only__c.html">movable_only_c</a> = std::movable&lt;value_t&gt; &amp;&amp; !std::copyable&lt;value_t&gt;;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace nngxx</span></div>
-<div class="ttc" id="aconceptnngxx_1_1movable__only__c_html"><div class="ttname"><a href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00071">concept.h:71</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1move__only__assignable__c_html"><div class="ttname"><a href="conceptnngxx_1_1move__only__assignable__c.html">nngxx::move_only_assignable_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00067">concept.h:67</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1move__only__constructible__c_html"><div class="ttname"><a href="conceptnngxx_1_1move__only__constructible__c.html">nngxx::move_only_constructible_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00063">concept.h:63</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1nng__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__c.html">nngxx::nng_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00054">concept.h:54</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1nng__value__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__value__c.html">nngxx::nng_value_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00040">concept.h:40</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1nng__with__get__opt__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__with__get__opt__c.html">nngxx::nng_with_get_opt_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00050">concept.h:50</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1nng__with__set__opt__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__with__set__opt__c.html">nngxx::nng_with_set_opt_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00045">concept.h:45</a></div></div>
-<div class="ttc" id="aconceptnngxx_1_1uint__c_html"><div class="ttname"><a href="conceptnngxx_1_1uint__c.html">nngxx::uint_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00058">concept.h:58</a></div></div>
-<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00034">aio.h:35</a></div></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef NNGXX_CONCEPT_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define NNGXX_CONCEPT_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_value_t&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__value__c.html">   42</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__value__c.html">nng_value_c</a> = std::same_as&lt;nng_value_t, nng_duration&gt; ||</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                      std::same_as&lt;nng_value_t, nng_sockaddr&gt; ||</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                      std::same_as&lt;nng_value_t, const char*&gt;;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__with__set__opt__c.html">   47</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__with__set__opt__c.html">nng_with_set_opt_c</a> =</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  std::same_as&lt;nng_t, nng_socket&gt; || std::same_as&lt;nng_t, nng_ctx&gt; ||</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  std::same_as&lt;nng_t, nng_listener&gt; || std::same_as&lt;nng_t, nng_dialer&gt;;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__with__get__opt__c.html">   52</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__with__get__opt__c.html">nng_with_get_opt_c</a> =</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_concept" href="conceptnngxx_1_1nng__with__set__opt__c.html">nng_with_set_opt_c&lt;nng_t&gt;</a> || std::same_as&lt;nng_t, nng_pipe&gt;;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> nng_t&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1nng__c.html">   56</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1nng__c.html">nng_c</a> = <a class="code hl_concept" href="conceptnngxx_1_1nng__with__get__opt__c.html">nng_with_get_opt_c&lt;nng_t&gt;</a> || std::same_as&lt;nng_t, nng_msg*&gt; ||</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                std::same_as&lt;nng_t, nng_aio*&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> u<span class="keywordtype">int</span>_t&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1uint__c.html">   60</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1uint__c.html">uint_c</a> =</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  std::same_as&lt;uint_t, uint16_t&gt; || std::same_as&lt;uint_t, uint32_t&gt; ||</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  std::same_as&lt;uint_t, uint64_t&gt;;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1move__only__constructible__c.html">   65</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1move__only__constructible__c.html">move_only_constructible_c</a> =</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  std::move_constructible&lt;value_t&gt; &amp;&amp; !std::copy_constructible&lt;value_t&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1move__only__assignable__c.html">   69</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1move__only__assignable__c.html">move_only_assignable_c</a> =</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  std::is_move_assignable_v&lt;value_t&gt; &amp;&amp; !std::is_copy_assignable_v&lt;value_t&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> value_t&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="conceptnngxx_1_1movable__only__c.html">   73</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptnngxx_1_1movable__only__c.html">movable_only_c</a> = std::movable&lt;value_t&gt; &amp;&amp; !std::copyable&lt;value_t&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace nngxx</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// NNGXX_CONCEPT_H</span></div>
+<div class="ttc" id="aconceptnngxx_1_1movable__only__c_html"><div class="ttname"><a href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00073">concept.h:73</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1move__only__assignable__c_html"><div class="ttname"><a href="conceptnngxx_1_1move__only__assignable__c.html">nngxx::move_only_assignable_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00069">concept.h:69</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1move__only__constructible__c_html"><div class="ttname"><a href="conceptnngxx_1_1move__only__constructible__c.html">nngxx::move_only_constructible_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00065">concept.h:65</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1nng__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__c.html">nngxx::nng_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00056">concept.h:56</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1nng__value__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__value__c.html">nngxx::nng_value_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00042">concept.h:42</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1nng__with__get__opt__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__with__get__opt__c.html">nngxx::nng_with_get_opt_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00052">concept.h:52</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1nng__with__set__opt__c_html"><div class="ttname"><a href="conceptnngxx_1_1nng__with__set__opt__c.html">nngxx::nng_with_set_opt_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00047">concept.h:47</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1uint__c_html"><div class="ttname"><a href="conceptnngxx_1_1uint__c.html">nngxx::uint_c</a></div><div class="ttdef"><b>Definition</b> <a href="#l00060">concept.h:60</a></div></div>
+<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00045">aio.h:46</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

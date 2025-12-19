@@ -123,7 +123,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00072">72</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00073">73</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af645a2d0b86932aed49dcdaf95d23ad7" name="af645a2d0b86932aed49dcdaf95d23ad7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af645a2d0b86932aed49dcdaf95d23ad7">&#9670;&#160;</a></span>base_network_metadata()</h2>
@@ -157,12 +157,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00074">74</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>    : id_m{s_id}</div>
-<div class="line"><span class="lineno">   76</span>    , tool_m{t}</div>
-<div class="line"><span class="lineno">   77</span>    , pipe_m{p}</div>
-<div class="line"><span class="lineno">   78</span>  {</div>
-<div class="line"><span class="lineno">   79</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00075">75</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>    : id_m{s_id}</div>
+<div class="line"><span class="lineno">   77</span>    , tool_m{t}</div>
+<div class="line"><span class="lineno">   78</span>    , pipe_m{p}</div>
+<div class="line"><span class="lineno">   79</span>  {</div>
+<div class="line"><span class="lineno">   80</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -191,17 +191,17 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00087">87</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>  {</div>
-<div class="line"><span class="lineno">   89</span>    <span class="comment">// FIXME: duplicated</span></div>
-<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;Pipe #{:X} {} {}&quot;</span>, <a class="code hl_function" href="#aec9b611f1aa51eccc4645424434f4dac">pipe</a>().<span class="keywordtype">id</span>(),</div>
-<div class="line"><span class="lineno">   91</span>                          <a class="code hl_function" href="#a9c203f5bea285a03610fbbbd0cb9d849">tool</a>().who(), <a class="code hl_function" href="#a9c203f5bea285a03610fbbbd0cb9d849">tool</a>().<span class="keywordtype">id</span>());</div>
-<div class="line"><span class="lineno">   92</span>  }</div>
-<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00039">ctx.h:39</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1base__network__metadata_html_a9c203f5bea285a03610fbbbd0cb9d849"><div class="ttname"><a href="#a9c203f5bea285a03610fbbbd0cb9d849">pars::ev::base_network_metadata::tool</a></div><div class="ttdeci">const net::tool_view &amp; tool() const</div><div class="ttdef"><b>Definition</b> <a href="metadata_8h_source.html#l00081">metadata.h:81</a></div></div>
-<div class="ttc" id="astructpars_1_1ev_1_1base__network__metadata_html_aec9b611f1aa51eccc4645424434f4dac"><div class="ttname"><a href="#aec9b611f1aa51eccc4645424434f4dac">pars::ev::base_network_metadata::pipe</a></div><div class="ttdeci">const net::pipe &amp; pipe() const</div><div class="ttdef"><b>Definition</b> <a href="metadata_8h_source.html#l00083">metadata.h:83</a></div></div>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00088">88</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>  {</div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment">// FIXME: duplicated</span></div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;Pipe #{:X} {} {}&quot;</span>, <a class="code hl_function" href="#aec9b611f1aa51eccc4645424434f4dac">pipe</a>().<span class="keywordtype">id</span>(),</div>
+<div class="line"><span class="lineno">   92</span>                          <a class="code hl_function" href="#a9c203f5bea285a03610fbbbd0cb9d849">tool</a>().who(), <a class="code hl_function" href="#a9c203f5bea285a03610fbbbd0cb9d849">tool</a>().<span class="keywordtype">id</span>());</div>
+<div class="line"><span class="lineno">   93</span>  }</div>
+<div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00050">ctx.h:50</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1base__network__metadata_html_a9c203f5bea285a03610fbbbd0cb9d849"><div class="ttname"><a href="#a9c203f5bea285a03610fbbbd0cb9d849">pars::ev::base_network_metadata::tool</a></div><div class="ttdeci">const net::tool_view &amp; tool() const</div><div class="ttdef"><b>Definition</b> <a href="metadata_8h_source.html#l00082">metadata.h:82</a></div></div>
+<div class="ttc" id="astructpars_1_1ev_1_1base__network__metadata_html_aec9b611f1aa51eccc4645424434f4dac"><div class="ttname"><a href="#aec9b611f1aa51eccc4645424434f4dac">pars::ev::base_network_metadata::pipe</a></div><div class="ttdeci">const net::pipe &amp; pipe() const</div><div class="ttdef"><b>Definition</b> <a href="metadata_8h_source.html#l00084">metadata.h:84</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="metadata_8h_source.html#l00083">pipe()</a>, and <a class="el" href="metadata_8h_source.html#l00081">tool()</a>.</p>
+<p class="reference">References <a class="el" href="metadata_8h_source.html#l00084">pipe()</a>, and <a class="el" href="metadata_8h_source.html#l00082">tool()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -240,10 +240,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00083">83</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>{ <span class="keywordflow">return</span> pipe_m; }</div>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00084">84</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>{ <span class="keywordflow">return</span> pipe_m; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="metadata_8h_source.html#l00087">format_to()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metadata_8h_source.html#l00088">format_to()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -280,8 +280,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00085">85</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>{ <span class="keywordflow">return</span> id_m; }</div>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00086">86</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{ <span class="keywordflow">return</span> id_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -308,10 +308,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00081">81</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>{ <span class="keywordflow">return</span> tool_m; }</div>
+<p class="definition">Definition at line <a class="el" href="metadata_8h_source.html#l00082">82</a> of file <a class="el" href="metadata_8h_source.html">metadata.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>{ <span class="keywordflow">return</span> tool_m; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="metadata_8h_source.html#l00087">format_to()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="metadata_8h_source.html#l00088">format_to()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

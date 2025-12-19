@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">5</td>
@@ -64,15 +64,24 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef NNGXX_SOCKET_H
+             : #define NNGXX_SOCKET_H
              : 
-             : #include &quot;nngxx/iface/socket.h&quot;
+             : #include &quot;nngxx/concept.h&quot;
+             : #include &quot;nngxx/err.h&quot;
+             : #include &quot;nngxx/iface/socket.h&quot; // IWYU pragma: keep
+             : #include &quot;nngxx/pipe.h&quot;
+             : #include &quot;nngxx/socket_decl.h&quot;
+             : 
+             : #include &quot;clev/err.h&quot;
              : 
              : #include &lt;nng/nng.h&gt;
              : #include &lt;nng/protocol/pipeline0/pull.h&gt;
              : #include &lt;nng/protocol/pipeline0/push.h&gt;
              : #include &lt;nng/protocol/reqrep0/rep.h&gt;
              : #include &lt;nng/protocol/reqrep0/req.h&gt;
+             : 
+             : #include &lt;concepts&gt;
              : 
              : namespace nngxx
              : {
@@ -124,11 +133,11 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">  return nng_pipe_socket(v);</span>
              : }
              : 
-             : constexpr bool nngxx_socket_is_really_needed_v = true;
-             : 
              : static_assert(std::copyable&lt;nngxx::socket_view&gt;);
              : 
              : static_assert(nngxx::move_only_constructible_c&lt;nngxx::socket&gt;);
+             : 
+             : #endif // NNGXX_SOCKET_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

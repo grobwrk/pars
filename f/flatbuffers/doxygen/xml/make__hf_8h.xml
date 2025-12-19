@@ -4,10 +4,12 @@
     <compoundname>make_hf.h</compoundname>
     <includes refid="lib_2include_2pars_2concept_2event_8h" local="yes">pars/concept/event.h</includes>
     <includes refid="concept_2kind_8h" local="yes">pars/concept/kind.h</includes>
+    <includes local="no">cstddef</includes>
     <includes local="no">functional</includes>
-    <includes local="no">ratio</includes>
     <includedby refid="hf__registry_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/hf_registry.h</includedby>
+    <includedby refid="hf__registry____insert_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/hf_registry__insert.h</includedby>
     <includedby refid="pull_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pull.h</includedby>
+    <includedby refid="push_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/push.h</includedby>
     <includedby refid="rep_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</includedby>
     <includedby refid="req_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
@@ -17,12 +19,12 @@
         <link refid="lib_2include_2pars_2concept_2event_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>pars/concept/kind.h</label>
         <link refid="concept_2kind_8h"/>
         <childnode refid="2" relation="include">
@@ -41,11 +43,11 @@
         <link refid="make__hf_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -55,23 +57,28 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>chrono</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>concepts</label>
       </node>
-      <node id="10">
+      <node id="11">
+        <label>cstddef</label>
+      </node>
+      <node id="12">
         <label>functional</label>
       </node>
       <node id="5">
         <label>nng/nng.h</label>
       </node>
-      <node id="11">
+      <node id="7">
         <label>ratio</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>string_view</label>
       </node>
     </incdepgraph>
@@ -104,38 +111,40 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="9">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</label>
         <link refid="backend_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="10">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h</label>
         <link refid="client_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="11">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/dispatcher.h</label>
         <link refid="dispatcher_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="12">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/enqueuer.h</label>
         <link refid="enqueuer_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -161,9 +170,21 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -187,7 +208,11 @@
         <link refid="make__hf_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
         <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -201,9 +226,9 @@
         <link refid="runner_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
@@ -253,7 +278,7 @@
       <node id="15">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</label>
         <link refid="rep_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -261,7 +286,7 @@
       <node id="16">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</label>
         <link refid="req_8h"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -269,6 +294,10 @@
       <node id="18">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -330,80 +359,83 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ratio&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>callable_t&gt;</highlight></codeline>
-<codeline lineno="42" refid="structpars_1_1ev_1_1hf__traits" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="46" refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref><sp/>=<sp/>kind_of&lt;event_t&gt;;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
-<codeline lineno="50" refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f</ref><sp/>=<sp/>std::move_only_function&lt;void(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;kind_of, event_t&gt;</ref>)&gt;;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>mem_fn_t,</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::template</ref><sp/>kind_type,</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::event_type</ref>,</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::class_type</ref>&gt;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref></highlight></codeline>
-<codeline lineno="58" refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" refkind="member"><highlight class="normal"><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/><ref refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kindref="member">make_hf</ref>(mem_fn_t&amp;<sp/>mem_fn,<sp/>class_t*<sp/>self)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/>arity<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::arity</ref>;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;class_t,<sp/>void&gt;)</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(std::bind(mem_fn,<sp/>_1));</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self)));</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>1)</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self),<sp/>_1));</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>2)</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self),<sp/>_1,<sp/>_2));</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(arity<sp/>&lt;=<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;Only<sp/>fn<sp/>with<sp/>arity<sp/>&lt;=<sp/>2<sp/>are<sp/>supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>return_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t,</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/>event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="89" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits</ref>&lt;return_t<sp/>(class_t::*)(hf_arg&lt;kind_of,<sp/>event_t&gt;)&gt;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="91" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ad91e57a05069ad1f34f3f43d38149977" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ad91e57a05069ad1f34f3f43d38149977" kindref="member">return_type</ref><sp/>=<sp/>return_t;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1a2b3814cef5fb52ffcd88b6f893fdf2af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1a2b3814cef5fb52ffcd88b6f893fdf2af" kindref="member">class_type</ref><sp/>=<sp/>class_t;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event2_t&gt;</highlight></codeline>
-<codeline lineno="96" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1aac7a88c0da7d47b021ca83a340fe99d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1aac7a88c0da7d47b021ca83a340fe99d5" kindref="member">kind_type</ref><sp/>=<sp/>kind_of&lt;event2_t&gt;;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab8d06b4c0be48dc0fae4c97c72a2d5a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab8d06b4c0be48dc0fae4c97c72a2d5a3" kindref="member">event_type</ref><sp/>=<sp/>event_t;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab603d8a33e64771045cd4087da50fbaf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab603d8a33e64771045cd4087da50fbaf" kindref="member">arity</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_EV_MAKEHF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_EV_MAKEHF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>callable_t&gt;</highlight></codeline>
+<codeline lineno="43" refid="structpars_1_1ev_1_1hf__traits" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
+<codeline lineno="47" refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref><sp/>=<sp/>kind_of&lt;event_t&gt;;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c</ref><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref></highlight></codeline>
+<codeline lineno="51" refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f</ref><sp/>=<sp/>std::move_only_function&lt;void(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;kind_of, event_t&gt;</ref>)&gt;;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>mem_fn_t,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::template</ref><sp/>kind_type,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::event_type</ref>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::class_type</ref>&gt;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/><ref refid="conceptpars_1_1ev_1_1kind__c" kindref="compound">kind_c&lt;kind_of&gt;</ref><sp/>&amp;&amp;<sp/><ref refid="conceptpars_1_1ev_1_1event__c" kindref="compound">event_c&lt;event_t&gt;</ref></highlight></codeline>
+<codeline lineno="59" refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" refkind="member"><highlight class="normal"><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref><sp/><ref refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kindref="member">make_hf</ref>(mem_fn_t&amp;<sp/>mem_fn,<sp/>class_t*<sp/>self)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/>arity<sp/>=<sp/><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits&lt;mem_fn_t&gt;::arity</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;class_t,<sp/>void&gt;)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(std::bind(mem_fn,<sp/>_1));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self)));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self),<sp/>_1));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(arity<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev_1a775df579549c610e3e2c8dae429f129c" kindref="member">handler_f&lt;kind_of, event_t&gt;</ref>(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(mem_fn,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">class_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(self),<sp/>_1,<sp/>_2));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(arity<sp/>&lt;=<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;Only<sp/>fn<sp/>with<sp/>arity<sp/>&lt;=<sp/>2<sp/>are<sp/>supported&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>return_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>class_t,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>kind_of,<sp/>event_c<sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="90" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits" kindref="compound">hf_traits</ref>&lt;return_t<sp/>(class_t::*)(hf_arg&lt;kind_of,<sp/>event_t&gt;)&gt;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ad91e57a05069ad1f34f3f43d38149977" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ad91e57a05069ad1f34f3f43d38149977" kindref="member">return_type</ref><sp/>=<sp/>return_t;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1a2b3814cef5fb52ffcd88b6f893fdf2af" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1a2b3814cef5fb52ffcd88b6f893fdf2af" kindref="member">class_type</ref><sp/>=<sp/>class_t;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event2_t&gt;</highlight></codeline>
+<codeline lineno="97" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1aac7a88c0da7d47b021ca83a340fe99d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1aac7a88c0da7d47b021ca83a340fe99d5" kindref="member">kind_type</ref><sp/>=<sp/>kind_of&lt;event2_t&gt;;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab8d06b4c0be48dc0fae4c97c72a2d5a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab8d06b4c0be48dc0fae4c97c72a2d5a3" kindref="member">event_type</ref><sp/>=<sp/>event_t;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab603d8a33e64771045cd4087da50fbaf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="structpars_1_1ev_1_1hf__traits_3_01return__t_07class__t_1_1_5_08_07hf__arg_3_01kind__of_00_01event__t_01_4_08_4_1ab603d8a33e64771045cd4087da50fbaf" kindref="member">arity</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_EV_MAKEHF_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/make_hf.h"/>
   </compounddef>

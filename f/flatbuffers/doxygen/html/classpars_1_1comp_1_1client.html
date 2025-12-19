@@ -120,7 +120,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00039">39</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00042">42</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8dc663bfdb9b7339f49791175d16c551" name="a8dc663bfdb9b7339f49791175d16c551"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8dc663bfdb9b7339f49791175d16c551">&#9670;&#160;</a></span>client()</h2>
@@ -149,10 +149,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00042">42</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>    : req_m{h, r}</div>
-<div class="line"><span class="lineno">   44</span>  {</div>
-<div class="line"><span class="lineno">   45</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00045">45</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>    : req_m{h, r}</div>
+<div class="line"><span class="lineno">   47</span>  {</div>
+<div class="line"><span class="lineno">   48</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -180,12 +180,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00062">62</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>  {</div>
-<div class="line"><span class="lineno">   64</span>    req_m.sock().connect(params.service_addr, params.service_cmode);</div>
-<div class="line"><span class="lineno">   65</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00065">65</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>  {</div>
+<div class="line"><span class="lineno">   67</span>    req_m.sock().connect(params.service_addr, params.service_cmode);</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_8h_source.html#l00059">pars::comp::client::connect_p::service_addr</a>, and <a class="el" href="client_8h_source.html#l00058">pars::comp::client::connect_p::service_cmode</a>.</p>
+<p class="reference">References <a class="el" href="client_8h_source.html#l00062">pars::comp::client::connect_p::service_addr</a>, and <a class="el" href="client_8h_source.html#l00061">pars::comp::client::connect_p::service_cmode</a>.</p>
 
 </div>
 </div>
@@ -212,8 +212,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00067">67</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>{ req_m.stop(); }</div>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00070">70</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>{ req_m.stop(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -240,10 +240,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00054">54</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{ req_m.sock().set_options(params.req_opts); }</div>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00057">57</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{ req_m.sock().set_options(params.req_opts); }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="client_8h_source.html#l00051">pars::comp::client::init_p::req_opts</a>.</p>
+<p class="reference">References <a class="el" href="client_8h_source.html#l00054">pars::comp::client::init_p::req_opts</a>.</p>
 
 </div>
 </div>
@@ -270,8 +270,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00047">47</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>{ <span class="keywordflow">return</span> req_m; }</div>
+<p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00050">50</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{ <span class="keywordflow">return</span> req_m; }</div>
 </div><!-- fragment -->
 </div>
 </div>

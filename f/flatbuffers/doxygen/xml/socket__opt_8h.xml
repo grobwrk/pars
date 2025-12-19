@@ -17,6 +17,8 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h</label>
@@ -25,7 +27,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -34,8 +36,11 @@
       <node id="3">
         <label>nng/nng.h</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>optional</label>
+      </node>
+      <node id="5">
+        <label>ratio</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -122,6 +127,10 @@
       <node id="9">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
@@ -195,29 +204,32 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="structpars_1_1net_1_1socket__opt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1net_1_1socket__opt" kindref="compound">socket_opt</ref></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" kindref="member">recv_timeout</ref>;<sp/></highlight></codeline>
-<codeline lineno="52" refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" kindref="member">send_timeout</ref>;<sp/></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" kindref="member">req_resend_time</ref>;<sp/></highlight></codeline>
-<codeline lineno="57" refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" kindref="member">req_resend_tick</ref>;<sp/></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_NET_SOCKETOPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_NET_SOCKETOPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structpars_1_1net_1_1socket__opt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1net_1_1socket__opt" kindref="compound">socket_opt</ref></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" kindref="member">recv_timeout</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1aebff9e4afe33cc88b5d29e9dbb29bc28" kindref="member">send_timeout</ref>;<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" kindref="member">req_resend_time</ref>;<sp/></highlight></codeline>
+<codeline lineno="58" refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" kindref="member">req_resend_tick</ref>;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_NET_SOCKETOPT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h"/>
   </compounddef>

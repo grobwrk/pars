@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -64,11 +64,13 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_FMT_FORMATTABLE_H
+             : #define PARS_FMT_FORMATTABLE_H
              : 
              : #include &quot;pars/concept/formattable.h&quot;
              : 
              : #include &lt;format&gt;
+             : #include &lt;string&gt;
              : 
              : template&lt;formattable_c foarmattable_t&gt;
              : struct std::formatter&lt;foarmattable_t&gt; : std::formatter&lt;std::string&gt;
@@ -79,6 +81,8 @@
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return x.format_to(ctx);</span>
              :   }
              : };
+             : 
+             : #endif // PARS_FMT_FORMATTABLE_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

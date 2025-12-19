@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">114</td>
@@ -64,18 +64,38 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PRAGMA_EV_RUNNER_H
+             : #define PRAGMA_EV_RUNNER_H
              : 
+             : #include &quot;pars/concept/event.h&quot;
+             : #include &quot;pars/concept/kind.h&quot;
              : #include &quot;pars/ev/event.h&quot;
              : #include &quot;pars/ev/hf_registry.h&quot;
              : #include &quot;pars/ev/job.h&quot;
+             : #include &quot;pars/ev/kind.h&quot;
+             : #include &quot;pars/ev/kind_decl.h&quot;
+             : #include &quot;pars/ev/spec.h&quot;
+             : #include &quot;pars/log.h&quot;
+             : #include &quot;pars/log/demangle.h&quot;
+             : #include &quot;pars/log/flags.h&quot;
+             : #include &quot;pars/net/pipe.h&quot;
              : 
+             : #include &lt;atomic&gt;
+             : #include &lt;chrono&gt;
+             : #include &lt;cstddef&gt;
+             : #include &lt;exception&gt;
              : #include &lt;format&gt;
              : #include &lt;functional&gt;
              : #include &lt;future&gt;
+             : #include &lt;mutex&gt;
+             : #include &lt;stdexcept&gt;
+             : #include &lt;stop_token&gt;
              : #include &lt;thread&gt;
+             : #include &lt;tuple&gt;
              : #include &lt;unordered_map&gt;
              : #include &lt;unordered_set&gt;
+             : #include &lt;utility&gt;
+             : #include &lt;vector&gt;
              : 
              : namespace pars::ev
              : {
@@ -381,6 +401,8 @@
              : };
              : 
              : } // namespace pars::ev
+             : 
+             : #endif // PRAGMA_EV_RUNNER_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

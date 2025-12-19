@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="70" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="70" bodyend="77"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="73" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="73" bodyend="80"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -61,7 +61,7 @@
         <label>std::formatter&lt; std::string &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="68" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="69" bodyend="78"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="71" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="72" bodyend="81"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_1ace0cb1d790feda996bcd4cfbe4d7fd44" prot="public" virt="non-virtual"><scope>std::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;</scope><name>format</name></member>
     </listofallmembers>

@@ -120,39 +120,56 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="iface_2dialer_8h.html">nngxx/iface/dialer.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef NNGXX_DIALER_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define NNGXX_DIALER_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="concept_8h.html">nngxx/concept.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="iface_2dialer_8h.html">nngxx/iface/dialer.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="socket__decl_8h.html">nngxx/socket_decl.h</a>&quot;</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">   37</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">dialer_view</a> = <a class="code hl_struct" href="structclev_1_1iface.html">clev::iface&lt;nng_dialer&gt;</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">   39</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">dialer</a> = <a class="code hl_struct" href="structclev_1_1own.html">clev::own&lt;nng_dialer&gt;</a>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_struct" href="structclev_1_1expected.html">clev::expected&lt;dialer&gt;</a></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>make_dialer(<a class="code hl_typedef" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">socket_view</a>&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span>* addr) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">auto</span> ret = <a class="code hl_typedef" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">dialer</a>{};</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordflow">return</span> ret.create(s, addr).transform_to(std::move(ret));</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace nngxx</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">static_assert</span>(std::copyable&lt;nngxx::dialer_view&gt;);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">static_assert</span>(<a class="code hl_concept" href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c&lt;nngxx::dialer&gt;</a>);</div>
-<div class="ttc" id="aconceptnngxx_1_1movable__only__c_html"><div class="ttname"><a href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c</a></div><div class="ttdef"><b>Definition</b> <a href="concept_8h_source.html#l00071">concept.h:71</a></div></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="clev_2err_8h.html">clev/err.h</a>&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="own_8h.html">clev/own.h</a>&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">   48</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">dialer_view</a> = <a class="code hl_struct" href="structclev_1_1iface.html">clev::iface&lt;nng_dialer&gt;</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">   50</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">dialer</a> = <a class="code hl_struct" href="structclev_1_1own.html">clev::own&lt;nng_dialer&gt;</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>[[nodiscard]] <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_struct" href="structclev_1_1expected.html">clev::expected&lt;dialer&gt;</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>make_dialer(<a class="code hl_typedef" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">socket_view</a>&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span>* addr) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">auto</span> ret = <a class="code hl_typedef" href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">dialer</a>{};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">return</span> ret.create(s, addr).transform_to(std::move(ret));</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace nngxx</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">static_assert</span>(std::copyable&lt;nngxx::dialer_view&gt;);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">static_assert</span>(<a class="code hl_concept" href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c&lt;nngxx::dialer&gt;</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// NNGXX_DIALER_H</span></div>
+<div class="ttc" id="aclev_2err_8h_html"><div class="ttname"><a href="clev_2err_8h.html">err.h</a></div></div>
+<div class="ttc" id="aconcept_8h_html"><div class="ttname"><a href="concept_8h.html">concept.h</a></div></div>
+<div class="ttc" id="aconceptnngxx_1_1movable__only__c_html"><div class="ttname"><a href="conceptnngxx_1_1movable__only__c.html">nngxx::movable_only_c</a></div><div class="ttdef"><b>Definition</b> <a href="concept_8h_source.html#l00073">concept.h:73</a></div></div>
 <div class="ttc" id="aiface_2dialer_8h_html"><div class="ttname"><a href="iface_2dialer_8h.html">dialer.h</a></div></div>
-<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00034">aio.h:35</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a8256ea641b01c93a4617051a9946801b"><div class="ttname"><a href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">nngxx::dialer_view</a></div><div class="ttdeci">clev::iface&lt; nng_dialer &gt; dialer_view</div><div class="ttdef"><b>Definition</b> <a href="#l00037">dialer.h:37</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a901c03de9d29c9bc559a66a7ea091042"><div class="ttname"><a href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">nngxx::dialer</a></div><div class="ttdeci">clev::own&lt; nng_dialer &gt; dialer</div><div class="ttdef"><b>Definition</b> <a href="#l00039">dialer.h:39</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="socket__decl_8h_source.html#l00043">socket_decl.h:43</a></div></div>
-<div class="ttc" id="astructclev_1_1expected_html"><div class="ttname"><a href="structclev_1_1expected.html">clev::expected</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00127">err.h:128</a></div></div>
-<div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00036">iface.h:36</a></div></div>
-<div class="ttc" id="astructclev_1_1own_html"><div class="ttname"><a href="structclev_1_1own.html">clev::own</a></div><div class="ttdef"><b>Definition</b> <a href="own_8h_source.html#l00039">own.h:40</a></div></div>
+<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00045">aio.h:46</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a8256ea641b01c93a4617051a9946801b"><div class="ttname"><a href="namespacenngxx.html#a8256ea641b01c93a4617051a9946801b">nngxx::dialer_view</a></div><div class="ttdeci">clev::iface&lt; nng_dialer &gt; dialer_view</div><div class="ttdef"><b>Definition</b> <a href="#l00048">dialer.h:48</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a901c03de9d29c9bc559a66a7ea091042"><div class="ttname"><a href="namespacenngxx.html#a901c03de9d29c9bc559a66a7ea091042">nngxx::dialer</a></div><div class="ttdeci">clev::own&lt; nng_dialer &gt; dialer</div><div class="ttdef"><b>Definition</b> <a href="#l00050">dialer.h:50</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="socket__decl_8h_source.html#l00044">socket_decl.h:44</a></div></div>
+<div class="ttc" id="aown_8h_html"><div class="ttname"><a href="own_8h.html">own.h</a></div></div>
+<div class="ttc" id="asocket__decl_8h_html"><div class="ttname"><a href="socket__decl_8h.html">socket_decl.h</a></div></div>
+<div class="ttc" id="astructclev_1_1expected_html"><div class="ttname"><a href="structclev_1_1expected.html">clev::expected</a></div><div class="ttdef"><b>Definition</b> <a href="clev_2err_8h_source.html#l00131">err.h:132</a></div></div>
+<div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00037">iface.h:37</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html"><div class="ttname"><a href="structclev_1_1own.html">clev::own</a></div><div class="ttdef"><b>Definition</b> <a href="own_8h_source.html#l00042">own.h:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

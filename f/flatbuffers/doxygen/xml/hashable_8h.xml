@@ -4,6 +4,7 @@
     <compoundname>hashable.h</compoundname>
     <includes refid="init_8h" local="yes">pars/init.h</includes>
     <includes local="no">concepts</includes>
+    <includes local="no">cstddef</includes>
     <includes local="no">functional</includes>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
@@ -12,9 +13,11 @@
         <link refid="hashable_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -24,18 +27,26 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>chrono</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>concepts</label>
       </node>
-      <node id="6">
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="8">
         <label>functional</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
+      </node>
+      <node id="5">
+        <label>ratio</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -111,25 +122,29 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
-<codeline lineno="38" refid="concepthashable__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="concepthashable__c" kindref="compound">hashable_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>value_t<sp/>x)<sp/>{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/>{<sp/>x.hash()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;std::size_t&gt;;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;hashable_c<sp/>value_t&gt;</highlight></codeline>
-<codeline lineno="43" refid="structstd_1_1hash_3_01value__t_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;value_t&gt;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="45" refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kindref="member">value_type</ref><sp/>=<sp/>value_t;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kindref="member">value_type</ref>&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.hash();<sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_CONCEPT_HASHABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_CONCEPT_HASHABLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;concepts&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>value_t&gt;</highlight></codeline>
+<codeline lineno="40" refid="concepthashable__c" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">concept<sp/></highlight><highlight class="normal"><ref refid="concepthashable__c" kindref="compound">hashable_c</ref><sp/>=<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>value_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{<sp/>x.hash()<sp/>}<sp/>-&gt;<sp/>std::same_as&lt;std::size_t&gt;;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;hashable_c<sp/>value_t&gt;</highlight></codeline>
+<codeline lineno="45" refid="structstd_1_1hash_3_01value__t_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;value_t&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kindref="member">value_type</ref><sp/>=<sp/>value_t;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" refkind="member"><highlight class="normal"><sp/><sp/>std::size_t<sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" kindref="member">value_type</ref>&amp;<sp/>x)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.hash();<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_CONCEPT_HASHABLE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h"/>
   </compounddef>

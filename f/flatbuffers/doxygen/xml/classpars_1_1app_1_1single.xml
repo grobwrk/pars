@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="46" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="53" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" prot="public" static="no">
         <type><ref refid="classpars_1_1app_1_1single" kindref="compound">single</ref>&lt; <ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref> &gt;</type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="54" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="109" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="109" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="116" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="116" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1app_1_1single_1ab45bc50530c61422f72ede69dc464d15" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="110" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="110" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="117" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1app_1_1single_1adc2b397366329a906ee6cd21d4a0717a" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1ev_1_1dispatcher" kindref="compound">ev::dispatcher</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="111" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="111" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="118" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1app_1_1single_1a37c561746c773f1377ba88f2dc45893b" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref></type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="112" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="112" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="119" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1app_1_1single_1ab03deb3c9caab841397e8ba15897bf97" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref></type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="113" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="113" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="120" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="120" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="49" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="49" bodyend="56"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="56" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="56" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="58" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="58" bodyend="67"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="65" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="65" bodyend="74"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="70" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="70" bodyend="70"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="77" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref> &amp;</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="72" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="72" bodyend="72"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="79" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="79" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref> &amp;</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="74" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="74" bodyend="74"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="81" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="81" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -214,8 +214,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="76" column="16"/>
-        <referencedby refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" compoundref="single_8h" startline="58" endline="67">pars::app::single&lt; component_type &gt;::exec</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="83" column="16"/>
+        <referencedby refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" compoundref="single_8h" startline="65" endline="74">pars::app::single&lt; component_type &gt;::exec</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="78" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="78" bodyend="85"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="85" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="85" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="87" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="87" bodyend="87"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="94" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="94" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="89" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="89" bodyend="89"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="96" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -275,8 +275,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="91" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="91" bodyend="106"/>
-        <referencedby refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" compoundref="single_8h" startline="58" endline="67">pars::app::single&lt; component_type &gt;::exec</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="98" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="98" bodyend="113"/>
+        <referencedby refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" compoundref="single_8h" startline="65" endline="74">pars::app::single&lt; component_type &gt;::exec</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -307,7 +307,7 @@
         <link refid="structpars_1_1app_1_1with__default__setup"/>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="43" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="44" bodyend="114"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h" bodystart="51" bodyend="121"/>
     <listofallmembers>
       <member refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" prot="protected" virt="non-virtual"><scope>pars::app::single</scope><name>comp</name></member>
       <member refid="classpars_1_1app_1_1single_1ab03deb3c9caab841397e8ba15897bf97" prot="private" virt="non-virtual"><scope>pars::app::single</scope><name>component_m</name></member>

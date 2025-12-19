@@ -124,7 +124,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00067">67</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00069">69</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae0745841de184e097b292fbe8a5ace23" name="ae0745841de184e097b292fbe8a5ace23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0745841de184e097b292fbe8a5ace23">&#9670;&#160;</a></span>format()</h2>
@@ -154,16 +154,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00069">69</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   71</span>  {</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">if</span> (p)</div>
-<div class="line"><span class="lineno">   73</span>      <span class="keywordflow">if</span> (p.id() == -1)</div>
-<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;ERROR&gt;&quot;</span>);</div>
-<div class="line"><span class="lineno">   75</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;0x{:08X}&quot;</span>, p.id());</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;empty-pipe&gt;&quot;</span>);</div>
-<div class="line"><span class="lineno">   79</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00071">71</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>  {</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span> (p)</div>
+<div class="line"><span class="lineno">   75</span>      <span class="keywordflow">if</span> (p.id() == -1)</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;ERROR&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;0x{:08X}&quot;</span>, p.id());</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   80</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;empty-pipe&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   81</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -15,6 +15,8 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_opt.h</label>
@@ -23,7 +25,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -32,8 +34,11 @@
       <node id="3">
         <label>nng/nng.h</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>optional</label>
+      </node>
+      <node id="5">
+        <label>ratio</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -159,24 +164,27 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
-<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="structpars_1_1net_1_1context__opt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1net_1_1context__opt" kindref="compound">context_opt</ref></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="43" refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" kindref="member">recv_timeout</ref>;</highlight></codeline>
-<codeline lineno="44" refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" kindref="member">send_timeout</ref>;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_NET_CONTEXTOPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_NET_CONTEXTOPT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="init_8h" kindref="compound">pars/init.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>IWYU<sp/>pragma:<sp/>keep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1net" kindref="compound">pars::net</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structpars_1_1net_1_1context__opt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1net_1_1context__opt" kindref="compound">context_opt</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1context__opt_1a864634b70f40329b1e581716ca188011" kindref="member">recv_timeout</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" refkind="member"><highlight class="normal"><sp/><sp/>std::optional&lt;nng_duration&gt;<sp/><ref refid="structpars_1_1net_1_1context__opt_1a814e9edceca15cf4da49ddfc82a7ba79" kindref="member">send_timeout</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::net</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_NET_CONTEXTOPT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_opt.h"/>
   </compounddef>

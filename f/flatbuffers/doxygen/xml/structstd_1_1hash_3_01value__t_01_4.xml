@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="45" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="47" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -43,14 +43,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="47" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="47" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="49" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="49" bodyend="49"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="43" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="44" bodyend="48"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" line="45" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/hashable.h" bodystart="46" bodyend="50"/>
     <listofallmembers>
       <member refid="structstd_1_1hash_3_01value__t_01_4_1a0f37f7fa19e6d60117895f0276338ad3" prot="public" virt="non-virtual"><scope>std::hash&lt; value_t &gt;</scope><name>operator()</name></member>
       <member refid="structstd_1_1hash_3_01value__t_01_4_1acf1d6ac49dc02f05e2652c5fcc64f214" prot="public" virt="non-virtual"><scope>std::hash&lt; value_t &gt;</scope><name>value_type</name></member>

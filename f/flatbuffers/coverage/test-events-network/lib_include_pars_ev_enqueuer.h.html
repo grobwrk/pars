@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">14</td>
@@ -64,14 +64,24 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_EV_ENQUEUER_H
+             : #define PARS_EV_ENQUEUER_H
              : 
              : #include &quot;pars/concept/event.h&quot;
+             : #include &quot;pars/concept/kind.h&quot;
              : #include &quot;pars/concept/net.h&quot;
              : #include &quot;pars/ev/dispatcher.h&quot;
              : #include &quot;pars/ev/event.h&quot;
              : #include &quot;pars/ev/hf_registry.h&quot;
+             : #include &quot;pars/ev/kind_decl.h&quot;
+             : #include &quot;pars/ev/metadata.h&quot;
              : #include &quot;pars/ev/runner.h&quot;
+             : #include &quot;pars/ev/spec.h&quot;
+             : #include &quot;pars/net/pipe.h&quot;
+             : 
+             : #include &quot;nngxx/msg.h&quot;
+             : 
+             : #include &lt;utility&gt;
              : 
              : namespace pars::ev
              : {
@@ -143,6 +153,8 @@
              : };
              : 
              : } // namespace pars::ev
+             : 
+             : #endif // PARS_EV_ENQUEUER_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

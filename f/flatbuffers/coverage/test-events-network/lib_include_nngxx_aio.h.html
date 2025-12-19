@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">6</td>
@@ -64,9 +64,20 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef NNGXX_AIO_H
+             : #define NNGXX_AIO_H
              : 
+             : #include &quot;nngxx/concept.h&quot;
              : #include &quot;nngxx/iface/aio.h&quot;
+             : #include &quot;nngxx/msg.h&quot;
+             : 
+             : #include &quot;clev/err.h&quot;
+             : #include &quot;clev/own.h&quot;
+             : 
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : #include &lt;concepts&gt;
+             : #include &lt;utility&gt;
              : 
              : namespace nngxx
              : {
@@ -101,6 +112,8 @@
              : static_assert(std::copyable&lt;nngxx::aio_view&gt;);
              : 
              : static_assert(nngxx::movable_only_c&lt;nngxx::aio&gt;);
+             : 
+             : #endif // NNGXX_AIO_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

@@ -8,546 +8,218 @@
     <includes refid="hf__registry_8h" local="yes">pars/ev/hf_registry.h</includes>
     <includes refid="runner_8h" local="yes">pars/ev/runner.h</includes>
     <includes refid="log_8h" local="yes">pars/log.h</includes>
+    <includes refid="flags_8h" local="yes">pars/log/flags.h</includes>
+    <includes local="no">nng/nng.h</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">exception</includes>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
-      <node id="21">
+      <node id="34">
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
-        <childnode refid="22" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>clev/iface.h</label>
+        <link refid="iface_8h"/>
+      </node>
+      <node id="54">
+        <label>clev/own.h</label>
+        <link refid="own_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="26">
-        <label>clev/iface.h</label>
-        <link refid="iface_8h"/>
-      </node>
-      <node id="20">
-        <label>clev/own.h</label>
-        <link refid="own_8h"/>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="27">
+      <node id="43">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="26" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="60">
+      <node id="74">
         <label>nngxx/aio.h</label>
         <link refid="aio_8h"/>
-        <childnode refid="61" relation="include">
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="45">
         <label>nngxx/concept.h</label>
         <link refid="concept_8h"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
-      <node id="70">
+      <node id="80">
         <label>nngxx/ctx.h</label>
         <link refid="ctx_8h"/>
-        <childnode refid="71" relation="include">
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
       <node id="33">
         <label>nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
       </node>
-      <node id="61">
+      <node id="75">
         <label>nngxx/iface/aio.h</label>
         <link refid="iface_2aio_8h"/>
         <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="71">
+      <node id="81">
         <label>nngxx/iface/ctx.h</label>
         <link refid="iface_2ctx_8h"/>
-        <childnode refid="60" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="32">
         <label>nngxx/iface/msg.h</label>
         <link refid="iface_2msg_8h"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="52">
         <label>nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
         <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-      </node>
-      <node id="59">
-        <label>nngxx/iface/socket.h</label>
-        <link refid="nngxx_2iface_2socket_8h"/>
-        <childnode refid="60" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>nngxx/iface/value.h</label>
-        <link refid="nngxx_2iface_2value_8h"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="17">
-        <label>nngxx/msg.h</label>
-        <link refid="msg_8h"/>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="44">
-        <label>nngxx/msg_body.h</label>
-        <link refid="msg__body_8h"/>
-        <childnode refid="29" relation="include">
+      <node id="73">
+        <label>nngxx/iface/socket.h</label>
+        <link refid="nngxx_2iface_2socket_8h"/>
+        <childnode refid="74" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="66">
-        <label>nngxx/msg_header.h</label>
-        <link refid="msg__header_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="30">
-        <label>nngxx/opt.h</label>
-        <link refid="opt_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>nngxx/opt_getter.h</label>
-        <link refid="opt__getter_8h"/>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-      </node>
-      <node id="34">
-        <label>nngxx/opt_setter.h</label>
-        <link refid="opt__setter_8h"/>
-        <childnode refid="29" relation="include">
-        </childnode>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="30" relation="include">
-        </childnode>
-      </node>
-      <node id="36">
-        <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
-        <childnode refid="37" relation="include">
-        </childnode>
-      </node>
-      <node id="58">
-        <label>nngxx/socket.h</label>
-        <link refid="nngxx_2socket_8h"/>
-        <childnode refid="59" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="62" relation="include">
-        </childnode>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="64" relation="include">
-        </childnode>
-        <childnode refid="31" relation="include">
-        </childnode>
-      </node>
-      <node id="38">
-        <label>nngxx/socket_decl.h</label>
-        <link refid="socket__decl_8h"/>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>pars/app/setup.h</label>
-        <link refid="setup_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h</label>
-        <link refid="single_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="96" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="40">
-        <label>pars/concept/event.h</label>
-        <link refid="lib_2include_2pars_2concept_2event_8h"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="87">
-        <label>pars/concept/formattable.h</label>
-        <link refid="concept_2formattable_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-      </node>
-      <node id="39">
-        <label>pars/concept/kind.h</label>
-        <link refid="concept_2kind_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="97">
-        <label>pars/concept/net.h</label>
-        <link refid="net_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-      </node>
-      <node id="67">
-        <label>pars/err.h</label>
-        <link refid="pars_2err_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>pars/ev/dispatcher.h</label>
-        <link refid="dispatcher_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-        <childnode refid="88" relation="include">
-        </childnode>
-      </node>
-      <node id="96">
-        <label>pars/ev/enqueuer.h</label>
-        <link refid="enqueuer_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="97" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>pars/ev/event.h</label>
-        <link refid="lib_2include_2pars_2ev_2event_8h"/>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-      </node>
-      <node id="52">
-        <label>pars/ev/hf_registry.h</label>
-        <link refid="hf__registry_8h"/>
-        <childnode refid="39" relation="include">
-        </childnode>
         <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="84" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="78" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="86" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="88" relation="include">
-        </childnode>
-        <childnode refid="89" relation="include">
-        </childnode>
-      </node>
-      <node id="53">
-        <label>pars/ev/job.h</label>
-        <link refid="job_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="54" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
-        </childnode>
-        <childnode refid="75" relation="include">
-        </childnode>
-        <childnode refid="78" relation="include">
-        </childnode>
-        <childnode refid="83" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="35" relation="include">
-        </childnode>
-      </node>
-      <node id="54">
-        <label>pars/ev/kind.h</label>
-        <link refid="ev_2kind_8h"/>
-        <childnode refid="55" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
       </node>
-      <node id="55">
-        <label>pars/ev/kind_base.h</label>
-        <link refid="kind__base_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="56" relation="include">
-        </childnode>
-      </node>
-      <node id="41">
-        <label>pars/ev/kind_decl.h</label>
-        <link refid="kind__decl_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>pars/ev/klass.h</label>
-        <link refid="klass_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+      <node id="42">
+        <label>nngxx/iface/value.h</label>
+        <link refid="nngxx_2iface_2value_8h"/>
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
-      </node>
-      <node id="84">
-        <label>pars/ev/make_hf.h</label>
-        <link refid="make__hf_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="85" relation="include">
-        </childnode>
-      </node>
-      <node id="56">
-        <label>pars/ev/metadata.h</label>
-        <link refid="metadata_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="57" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="74" relation="include">
-        </childnode>
-      </node>
-      <node id="90">
-        <label>pars/ev/runner.h</label>
-        <link refid="runner_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="53" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="91" relation="include">
-        </childnode>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="89" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
-      </node>
-      <node id="75">
-        <label>pars/ev/serializer.h</label>
-        <link refid="serializer_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="76" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-        <childnode refid="73" relation="include">
-        </childnode>
-      </node>
-      <node id="78">
-        <label>pars/ev/spec.h</label>
-        <link refid="spec_8h"/>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="79" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-      </node>
-      <node id="86">
-        <label>pars/fmt/formattable.h</label>
-        <link refid="fmt_2formattable_8h"/>
-        <childnode refid="87" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-      </node>
-      <node id="65">
-        <label>pars/fmt/nng.h</label>
-        <link refid="nng_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="43" relation="include">
-        </childnode>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
         <childnode refid="47" relation="include">
         </childnode>
@@ -555,19 +227,657 @@
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
       </node>
-      <node id="4">
-        <label>init.h</label>
-        <link refid="init_8h"/>
+      <node id="31">
+        <label>nngxx/msg.h</label>
+        <link refid="msg_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>nngxx/msg_header.h</label>
+        <link refid="msg__header_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>nngxx/opt.h</label>
+        <link refid="opt_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>nngxx/opt_getter.h</label>
+        <link refid="opt__getter_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>nngxx/socket.h</label>
+        <link refid="nngxx_2socket_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pars/app/setup.h</label>
+        <link refid="setup_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h</label>
+        <link refid="single_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>pars/concept/formattable.h</label>
+        <link refid="concept_2formattable_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>pars/concept/net.h</label>
+        <link refid="net_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>pars/ev/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>pars/ev/enqueuer.h</label>
+        <link refid="enqueuer_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pars/ev/event.h</label>
+        <link refid="lib_2include_2pars_2ev_2event_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>pars/ev/hf_registry.h</label>
+        <link refid="hf__registry_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>pars/ev/job.h</label>
+        <link refid="job_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>pars/ev/kind.h</label>
+        <link refid="ev_2kind_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>pars/ev/kind_base.h</label>
+        <link refid="kind__base_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pars/ev/kind_decl.h</label>
+        <link refid="kind__decl_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>pars/ev/klass.h</label>
+        <link refid="klass_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>pars/ev/make_hf.h</label>
+        <link refid="make__hf_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>pars/ev/metadata.h</label>
+        <link refid="metadata_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>pars/ev/runner.h</label>
+        <link refid="runner_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>pars/ev/serializer.h</label>
+        <link refid="serializer_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>pars/ev/spec.h</label>
+        <link refid="spec_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>pars/fmt/formattable.h</label>
+        <link refid="fmt_2formattable_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>pars/fmt/nng.h</label>
+        <link refid="nng_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>pars/fmt/stl.h</label>
+        <link refid="stl_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pars/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>pars/log.h</label>
         <link refid="log_8h"/>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -579,204 +889,270 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+      </node>
+      <node id="95">
+        <label>pars/log/demangle.h</label>
+        <link refid="demangle_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pars/log/flags.h</label>
+        <link refid="flags_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="80">
-        <label>pars/log/demangle.h</label>
-        <link refid="demangle_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-        <childnode refid="81" relation="include">
-        </childnode>
-        <childnode refid="82" relation="include">
-        </childnode>
-      </node>
-      <node id="79">
+      <node id="94">
         <label>pars/log/nametype.h</label>
         <link refid="nametype_8h"/>
-        <childnode refid="80" relation="include">
+        <childnode refid="95" relation="include">
         </childnode>
-        <childnode refid="72" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="62">
         <label>pars/net/dir.h</label>
         <link refid="dir_8h"/>
-        <childnode refid="47" relation="include">
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="30">
         <label>pars/net/hash.h</label>
         <link refid="hash_8h"/>
-        <childnode refid="44" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="45" relation="include">
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
-      </node>
-      <node id="57">
-        <label>pars/net/pipe.h</label>
-        <link refid="pars_2net_2pipe_8h"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="69">
-        <label>pars/net/tool_view.h</label>
-        <link refid="tool__view_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+        <label>pars/net/pipe.h</label>
+        <link refid="pars_2net_2pipe_8h"/>
         <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="58" relation="include">
-        </childnode>
-        <childnode refid="47" relation="include">
+        <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="83">
+      <node id="79">
+        <label>pars/net/tool_view.h</label>
+        <link refid="tool__view_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
         <label>any</label>
       </node>
-      <node id="6">
+      <node id="105">
+        <label>atomic</label>
+      </node>
+      <node id="23">
         <label>chrono</label>
       </node>
-      <node id="28">
+      <node id="25">
         <label>concepts</label>
       </node>
-      <node id="94">
+      <node id="110">
         <label>condition_variable</label>
       </node>
-      <node id="8">
+      <node id="10">
         <label>config.h</label>
       </node>
-      <node id="45">
+      <node id="55">
         <label>cstddef</label>
       </node>
       <node id="46">
-        <label>cstring</label>
-      </node>
-      <node id="81">
-        <label>cxxabi.h</label>
-      </node>
-      <node id="95">
-        <label>deque</label>
-      </node>
-      <node id="22">
-        <label>expected</label>
-      </node>
-      <node id="76">
-        <label>flatbuffers/flatbuffers.h</label>
-      </node>
-      <node id="47">
-        <label>format</label>
-      </node>
-      <node id="23">
-        <label>functional</label>
-      </node>
-      <node id="91">
-        <label>future</label>
-      </node>
-      <node id="49">
-        <label>iomanip</label>
-      </node>
-      <node id="82">
-        <label>limits</label>
-      </node>
-      <node id="88">
-        <label>mutex</label>
-      </node>
-      <node id="5">
-        <label>nng/nng.h</label>
-      </node>
-      <node id="62">
-        <label>nng/protocol/pipeline0/pull.h</label>
-      </node>
-      <node id="63">
-        <label>nng/protocol/pipeline0/push.h</label>
-      </node>
-      <node id="64">
-        <label>nng/protocol/reqrep0/rep.h</label>
-      </node>
-      <node id="31">
-        <label>nng/protocol/reqrep0/req.h</label>
-      </node>
-      <node id="85">
-        <label>ratio</label>
-      </node>
-      <node id="77">
-        <label>span</label>
-      </node>
-      <node id="7">
-        <label>spdlog/common.h</label>
-      </node>
-      <node id="10">
-        <label>spdlog/sinks/basic_file_sink.h</label>
-      </node>
-      <node id="11">
-        <label>spdlog/sinks/null_sink.h</label>
-      </node>
-      <node id="12">
-        <label>spdlog/sinks/stdout_color_sinks.h</label>
-      </node>
-      <node id="13">
-        <label>spdlog/sinks/syslog_sink.h</label>
-      </node>
-      <node id="9">
-        <label>spdlog/spdlog.h</label>
-      </node>
-      <node id="50">
-        <label>sstream</label>
-      </node>
-      <node id="24">
-        <label>stdexcept</label>
-      </node>
-      <node id="74">
-        <label>stop_token</label>
-      </node>
-      <node id="68">
-        <label>string</label>
-      </node>
-      <node id="42">
-        <label>string_view</label>
-      </node>
-      <node id="25">
-        <label>system_error</label>
-      </node>
-      <node id="92">
-        <label>thread</label>
+        <label>cstdint</label>
       </node>
       <node id="35">
-        <label>type_traits</label>
+        <label>cstdlib</label>
       </node>
-      <node id="72">
-        <label>typeinfo</label>
+      <node id="57">
+        <label>cstring</label>
+      </node>
+      <node id="59">
+        <label>ctime</label>
+      </node>
+      <node id="96">
+        <label>cxxabi.h</label>
+      </node>
+      <node id="111">
+        <label>deque</label>
+      </node>
+      <node id="63">
+        <label>exception</label>
+      </node>
+      <node id="36">
+        <label>expected</label>
+      </node>
+      <node id="86">
+        <label>flatbuffers/buffer.h</label>
+      </node>
+      <node id="87">
+        <label>flatbuffers/detached_buffer.h</label>
+      </node>
+      <node id="88">
+        <label>flatbuffers/flatbuffer_builder.h</label>
       </node>
       <node id="89">
+        <label>flatbuffers/flatbuffers.h</label>
+      </node>
+      <node id="12">
+        <label>format</label>
+      </node>
+      <node id="37">
+        <label>functional</label>
+      </node>
+      <node id="106">
+        <label>future</label>
+      </node>
+      <node id="60">
+        <label>iomanip</label>
+      </node>
+      <node id="90">
+        <label>iterator</label>
+      </node>
+      <node id="97">
+        <label>limits</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+      <node id="102">
+        <label>mutex</label>
+      </node>
+      <node id="22">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="76">
+        <label>nng/protocol/pipeline0/pull.h</label>
+      </node>
+      <node id="77">
+        <label>nng/protocol/pipeline0/push.h</label>
+      </node>
+      <node id="78">
+        <label>nng/protocol/reqrep0/rep.h</label>
+      </node>
+      <node id="48">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="91">
+        <label>optional</label>
+      </node>
+      <node id="24">
+        <label>ratio</label>
+      </node>
+      <node id="92">
+        <label>span</label>
+      </node>
+      <node id="4">
+        <label>spdlog/common.h</label>
+      </node>
+      <node id="14">
+        <label>spdlog/logger.h</label>
+      </node>
+      <node id="5">
+        <label>spdlog/sinks/basic_file_sink.h</label>
+      </node>
+      <node id="15">
+        <label>spdlog/sinks/msvc_sink.h</label>
+      </node>
+      <node id="6">
+        <label>spdlog/sinks/null_sink.h</label>
+      </node>
+      <node id="7">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="9">
+        <label>spdlog/sinks/syslog_sink.h</label>
+      </node>
+      <node id="8">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="61">
+        <label>sstream</label>
+      </node>
+      <node id="38">
+        <label>stdexcept</label>
+      </node>
+      <node id="84">
+        <label>stop_token</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="26">
+        <label>string_view</label>
+      </node>
+      <node id="39">
+        <label>system_error</label>
+      </node>
+      <node id="107">
+        <label>thread</label>
+      </node>
+      <node id="108">
+        <label>tuple</label>
+      </node>
+      <node id="40">
+        <label>type_traits</label>
+      </node>
+      <node id="82">
+        <label>typeinfo</label>
+      </node>
+      <node id="103">
         <label>unordered_map</label>
       </node>
-      <node id="93">
+      <node id="109">
         <label>unordered_set</label>
       </node>
-      <node id="73">
+      <node id="41">
+        <label>utility</label>
+      </node>
+      <node id="83">
         <label>variant</label>
+      </node>
+      <node id="17">
+        <label>vector</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -854,93 +1230,102 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="setup_8h" kindref="compound">pars/app/setup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dispatcher_8h" kindref="compound">pars/ev/dispatcher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="enqueuer_8h" kindref="compound">pars/ev/enqueuer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hf__registry_8h" kindref="compound">pars/ev/hf_registry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="runner_8h" kindref="compound">pars/ev/runner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">pars/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1app" kindref="compound">pars::app</ref></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>component_t&gt;</highlight></codeline>
-<codeline lineno="43" refid="classpars_1_1app_1_1single" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" kindref="member">with_default_setup</ref></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="46" refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref><sp/>=<sp/>component_t;</highlight></codeline>
-<codeline lineno="47" refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" kindref="member">self_type</ref><sp/>=<sp/><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single&lt;component_type&gt;</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_APP_SINGLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_APP_SINGLE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="setup_8h" kindref="compound">pars/app/setup.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dispatcher_8h" kindref="compound">pars/ev/dispatcher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="enqueuer_8h" kindref="compound">pars/ev/enqueuer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hf__registry_8h" kindref="compound">pars/ev/hf_registry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="runner_8h" kindref="compound">pars/ev/runner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">pars/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flags_8h" kindref="compound">pars/log/flags.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1app" kindref="compound">pars::app</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single</ref>()</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>runner_m{hf_registry_m}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>hf_registry_m{runner_m}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>dispatcher_m{runner_m}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>enqueuer_m{dispatcher_m,<sp/>runner_m}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>component_m{hf_registry_m,<sp/>enqueuer_m}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" kindref="member">exec</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>atexit(nng_fini);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" kindref="member">setup</ref>();</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" kindref="member">startup</ref>(argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" kindref="member">run</ref>();</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>component_t&gt;</highlight></codeline>
+<codeline lineno="50" refid="classpars_1_1app_1_1single" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" kindref="member">with_default_setup</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53" refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref><sp/>=<sp/>component_t;</highlight></codeline>
+<codeline lineno="54" refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classpars_1_1app_1_1single_1a16a90aa8cba44a9613d0d114b27413f1" kindref="member">self_type</ref><sp/>=<sp/><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single&lt;component_type&gt;</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6d09469c97cf8c34cc633ddd8ead2e48" kindref="member">single</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>runner_m{hf_registry_m}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>hf_registry_m{runner_m}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>dispatcher_m{runner_m}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>enqueuer_m{dispatcher_m,<sp/>runner_m}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>component_m{hf_registry_m,<sp/>enqueuer_m}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1ac2d8fbc9c1a13b748dcb8cf68ffd8a12" kindref="member">exec</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>atexit(nng_fini);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="70" refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" kindref="member">comp</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>component_m;<sp/>}</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72" refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" kindref="member">enqueuer</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>enqueuer_m;<sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kindref="member">hfs</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hf_registry_m;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpars_1_1app_1_1with__default__setup_1aa5e7958510b529c78aeb832822746b96" kindref="member">setup</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" kindref="member">startup</ref>(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76" refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" kindref="member">startup</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" kindref="member">graceful_terminate</ref>()</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>dispatcher_m.stop_running();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>component_m.graceful_terminate();</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>dispatcher_m.terminate_now();</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" kindref="member">terminate_now</ref>()<sp/>{<sp/>dispatcher_m.terminate_now();<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77" refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" kindref="member">comp</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>component_m;<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" kindref="member">enqueuer</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>enqueuer_m;<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref>&amp;<sp/><ref refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kindref="member">hfs</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hf_registry_m;<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a4726da2778bc7b1f9f4e5312d8b19fbb" kindref="member">startup</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1afc90fdc06e69f419da8cb6b5efccbe24" kindref="member">graceful_terminate</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>dispatcher_m.stop_running();</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" kindref="member">stop_job_thread</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j_id)<sp/>{<sp/>runner_m.stop_thread(j_id);<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>component_m.graceful_terminate();</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91" refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" kindref="member">run</ref>()</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dispatcher_m.run();</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>e)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">pars::err</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>while<sp/>running<sp/>single<sp/>application:<sp/>{}&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.what());</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>dispatcher_m.terminate_now();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" kindref="member">terminate_now</ref>()<sp/>{<sp/>dispatcher_m.terminate_now();<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" kindref="member">stop_job_thread</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j_id)<sp/>{<sp/>runner_m.stop_thread(j_id);<sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1app_1_1single_1a8a32425819146d8bbabdeed599a4fa8b" kindref="member">run</ref>()</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dispatcher_m.run();</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1runner" kindref="compound">ev::runner</ref><sp/>runner_m;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref><sp/>hf_registry_m;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1dispatcher" kindref="compound">ev::dispatcher</ref><sp/>dispatcher_m;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref><sp/>enqueuer_m;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref><sp/>component_m;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::app</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(std::exception&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepars_1a2f1cf1eb41879a6841dc516a92bcf35f" kindref="member">pars::err</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535ad2a57dc1d883fd21fb9951699df71cc7" kindref="member">lf::app</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>while<sp/>running<sp/>single<sp/>application:<sp/>{}&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.what());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1runner" kindref="compound">ev::runner</ref><sp/>runner_m;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1hf__registry" kindref="compound">ev::hf_registry</ref><sp/>hf_registry_m;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1dispatcher" kindref="compound">ev::dispatcher</ref><sp/>dispatcher_m;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1ev_1_1enqueuer" kindref="compound">ev::enqueuer</ref><sp/>enqueuer_m;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kindref="member">component_type</ref><sp/>component_m;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::app</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_APP_SINGLE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/single.h"/>
   </compounddef>

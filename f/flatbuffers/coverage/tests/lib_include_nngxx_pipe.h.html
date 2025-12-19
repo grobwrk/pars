@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">2</td>
@@ -64,9 +64,14 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef NNGXX_PIPE_H
+             : #define NNGXX_PIPE_H
              : 
              : #include &quot;nngxx/iface/pipe.h&quot;
+             : 
+             : #include &lt;nng/nng.h&gt;
+             : 
+             : #include &lt;concepts&gt;
              : 
              : namespace nngxx
              : {
@@ -94,6 +99,8 @@
              : } // namespace nngxx
              : 
              : static_assert(std::copyable&lt;nngxx::pipe_view&gt;);
+             : 
+             : #endif // NNGXX_PIPE_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

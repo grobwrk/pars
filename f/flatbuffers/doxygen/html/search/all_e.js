@@ -23,13 +23,12 @@ var searchData=
   ['nngxx_3a_3arep_3a_3av0_20',['v0',['../namespacenngxx_1_1rep_1_1v0.html',1,'nngxx::rep']]],
   ['nngxx_3a_3areq_21',['req',['../namespacenngxx_1_1req.html',1,'nngxx']]],
   ['nngxx_3a_3areq_3a_3av0_22',['v0',['../namespacenngxx_1_1req_1_1v0.html',1,'nngxx::req']]],
-  ['nngxx_5fsocket_5fis_5freally_5fneeded_5fv_23',['nngxx_socket_is_really_needed_v',['../nngxx_2socket_8h.html#ad5405cb6988304b4819775b78f6c4acc',1,'socket.h']]],
-  ['noarg_24',['noarg',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d',1,'nngxx']]],
-  ['noent_25',['noent',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569',1,'nngxx']]],
-  ['nofiles_26',['nofiles',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4',1,'nngxx']]],
-  ['nomem_27',['nomem',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c',1,'nngxx']]],
-  ['nospc_28',['nospc',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272',1,'nngxx']]],
-  ['notsup_29',['notsup',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024',1,'nngxx']]],
-  ['num_30',['num',['../namespacenngxx.html#a4d16a92a1ac732a7a8ac6e0f9597d802a0fc3cfbc27e91ea60a787de13dae3e3c',1,'nngxx']]],
-  ['num_5fctxs_31',['num_ctxs',['../structpars_1_1comp_1_1backend_1_1init__p.html#a5a09b6183d2661c9b22008faedaf11e8',1,'pars::comp::backend::init_p']]]
+  ['noarg_23',['noarg',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108ae32400cd073a316ce87cb14f72e9807d',1,'nngxx']]],
+  ['noent_24',['noent',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a29443764e911c3e9cebd000261680569',1,'nngxx']]],
+  ['nofiles_25',['nofiles',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108acdaa420d494bc174ff24a34929d43eb4',1,'nngxx']]],
+  ['nomem_26',['nomem',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a48462bf68223692233cb4c435857b51c',1,'nngxx']]],
+  ['nospc_27',['nospc',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a0ae2143b77b7b156ba54c8bb1a8a8272',1,'nngxx']]],
+  ['notsup_28',['notsup',['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a1278df30d3176909a05d7b21107f1024',1,'nngxx']]],
+  ['num_29',['num',['../namespacenngxx.html#a4d16a92a1ac732a7a8ac6e0f9597d802a0fc3cfbc27e91ea60a787de13dae3e3c',1,'nngxx']]],
+  ['num_5fctxs_30',['num_ctxs',['../structpars_1_1comp_1_1backend_1_1init__p.html#a5a09b6183d2661c9b22008faedaf11e8',1,'pars::comp::backend::init_p']]]
 ];

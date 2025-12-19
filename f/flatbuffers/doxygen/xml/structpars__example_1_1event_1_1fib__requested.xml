@@ -30,8 +30,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="49" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="49" bodyend="56"/>
-        <references refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" compoundref="serializer_8h" startline="95" endline="104">pars::ev::obb&lt; ev_t &gt;::and_then</references>
-        <references refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" compoundref="serializer_8h" startline="90" endline="90">pars::ev::obb&lt; ev_t &gt;::using_size</references>
+        <references refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" compoundref="serializer_8h" startline="111" endline="120">pars::ev::obb&lt; ev_t &gt;::and_then</references>
+        <references refid="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" compoundref="serializer_8h" startline="106" endline="106">pars::ev::obb&lt; ev_t &gt;::using_size</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -52,7 +52,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/example/event.h" line="58" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="58" bodyend="64"/>
-        <references refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" compoundref="serializer_8h" startline="176" endline="179">pars::ev::fb&lt; FibRequestedBuilder, fib_requested &gt;::table</references>
+        <references refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" compoundref="serializer_8h" startline="192" endline="195">pars::ev::fb&lt; FibRequestedBuilder, fib_requested &gt;::table</references>
       </memberdef>
     </sectiondef>
     <briefdescription>

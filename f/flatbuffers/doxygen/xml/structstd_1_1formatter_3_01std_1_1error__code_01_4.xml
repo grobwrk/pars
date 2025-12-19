@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="60" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="60" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="63" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="63" bodyend="67"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -56,7 +56,7 @@
         <label>std::formatter&lt; std::string &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="58" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="59" bodyend="65"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" line="61" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h" bodystart="62" bodyend="68"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_01std_1_1error__code_01_4_1ad75236b372a56441b539e860530c77c1" prot="public" virt="non-virtual"><scope>std::formatter&lt; std::error_code &gt;</scope><name>format</name></member>
     </listofallmembers>

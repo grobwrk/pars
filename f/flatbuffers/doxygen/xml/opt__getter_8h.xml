@@ -5,18 +5,26 @@
     <includes refid="concept_8h" local="yes">nngxx/concept.h</includes>
     <includes refid="nngxx_2err_8h" local="yes">nngxx/err.h</includes>
     <includes refid="opt_8h" local="yes">nngxx/opt.h</includes>
+    <includes refid="clev_2err_8h" local="yes">clev/err.h</includes>
+    <includes local="no">nng/nng.h</includes>
     <includedby refid="nngxx_2iface_2value_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/iface/value.h</includedby>
     <incdepgraph>
-      <node id="6">
+      <node id="7">
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -26,23 +34,31 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="16">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -50,31 +66,50 @@
         <link refid="opt__getter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>concepts</label>
       </node>
-      <node id="7">
-        <label>expected</label>
+      <node id="5">
+        <label>cstdint</label>
       </node>
       <node id="8">
+        <label>cstdlib</label>
+      </node>
+      <node id="9">
+        <label>expected</label>
+      </node>
+      <node id="10">
         <label>functional</label>
       </node>
       <node id="3">
         <label>nng/nng.h</label>
       </node>
-      <node id="12">
+      <node id="17">
         <label>nng/protocol/reqrep0/req.h</label>
       </node>
-      <node id="9">
+      <node id="11">
         <label>stdexcept</label>
       </node>
-      <node id="10">
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="12">
         <label>system_error</label>
+      </node>
+      <node id="13">
+        <label>type_traits</label>
+      </node>
+      <node id="14">
+        <label>utility</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -162,10 +197,10 @@
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="53">
+      <node id="52">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="54" relation="include">
+        <childnode refid="53" relation="include">
         </childnode>
       </node>
       <node id="35">
@@ -187,7 +222,7 @@
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+        <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
@@ -201,17 +236,27 @@
       <node id="43">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h</label>
         <link refid="msg_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="52" relation="include">
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -222,10 +267,10 @@
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="51">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg_header.h</label>
         <link refid="msg__header_8h"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="50" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -234,14 +279,16 @@
         <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="54">
+      <node id="53">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h</label>
         <link refid="nngxx_2pipe_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -261,7 +308,13 @@
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -289,6 +342,8 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
@@ -312,6 +367,8 @@
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
@@ -337,9 +394,9 @@
         </childnode>
         <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="48" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -349,6 +406,10 @@
         <link refid="hf__registry_8h"/>
         <childnode refid="24" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
@@ -356,6 +417,14 @@
         <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -381,25 +450,29 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="33">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h</label>
         <link refid="ev_2kind_8h"/>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind_base.h</label>
         <link refid="kind__base_8h"/>
-        <childnode refid="34" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -409,11 +482,11 @@
         <link refid="klass_8h"/>
         <childnode refid="47" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
         </childnode>
         <childnode refid="49" relation="include">
-        </childnode>
-        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -421,9 +494,13 @@
       <node id="27">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/metadata.h</label>
         <link refid="metadata_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -442,7 +519,7 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="49">
+      <node id="48">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h</label>
         <link refid="serializer_8h"/>
         <childnode refid="28" relation="include">
@@ -452,12 +529,18 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="49">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/spec.h</label>
         <link refid="spec_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="30" relation="include">
         </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -468,16 +551,10 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="51">
+      <node id="50">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/nng.h</label>
         <link refid="nng_8h"/>
         <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="48">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/stl.h</label>
-        <link refid="stl_8h"/>
-        <childnode refid="47" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -501,9 +578,13 @@
       <node id="45">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h</label>
         <link refid="hash_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="51" relation="include">
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -521,9 +602,19 @@
       <node id="41">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h</label>
         <link refid="pars_2net_2pipe_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
         <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -559,6 +650,10 @@
       <node id="18">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -581,7 +676,11 @@
         </childnode>
         <childnode refid="27" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -631,122 +730,129 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_8h" kindref="compound">nngxx/concept.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2err_8h" kindref="compound">nngxx/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="opt_8h" kindref="compound">nngxx/opt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx" kindref="compound">nngxx</ref></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NNGXX_OPTGETTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NNGXX_OPTGETTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_8h" kindref="compound">nngxx/concept.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nngxx_2err_8h" kindref="compound">nngxx/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="opt_8h" kindref="compound">nngxx/opt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="clev_2err_8h" kindref="compound">clev/err.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v,<sp/>nng_with_get_opt_c<sp/>nng_t&gt;</highlight></codeline>
-<codeline lineno="40" refid="structnngxx_1_1opt__getter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter" kindref="compound">opt_getter</ref></highlight></codeline>
-<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42" refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref><sp/>=<sp/>nng_t;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nng/nng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenngxx" kindref="compound">nngxx</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" kindref="member">opt</ref><sp/>=<sp/>opt_to_nng_value&lt;opt_v&gt;();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>=<sp/>opt_to_nng_overload&lt;opt_v&gt;();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref><sp/>=<sp/><ref refid="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" kindref="member">opt_to_nng_type_t&lt;opt_v&gt;</ref>;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1expected" kindref="compound">clev::expected&lt;return_type&gt;</ref></highlight></codeline>
-<codeline lineno="51" refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" kindref="member">operator()</ref>(<ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref><sp/>obj)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*get)(<ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref>*);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;opt<sp/>opt_v,<sp/>nng_with_get_opt_c<sp/>nng_t&gt;</highlight></codeline>
+<codeline lineno="45" refid="structnngxx_1_1opt__getter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter" kindref="compound">opt_getter</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref><sp/>=<sp/>nng_t;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" kindref="member">opt</ref><sp/>=<sp/>opt_to_nng_value&lt;opt_v&gt;();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>=<sp/>opt_to_nng_overload&lt;opt_v&gt;();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref><sp/>=<sp/><ref refid="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" kindref="member">opt_to_nng_type_t&lt;opt_v&gt;</ref>;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_socket&gt;)</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_bool;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_int;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_size;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_uint64;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_string;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_ms;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_addr;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_ctx&gt;)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_bool;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_int;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_size;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_uint64;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_string;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_ms;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_listener&gt;)</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_bool;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_int;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_size;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_uint64;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_string;</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_ms;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_addr;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_dialer&gt;)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_bool;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_int;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_size;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_uint64;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_string;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_ms;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_addr;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_pipe&gt;)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_bool;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_int;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_size;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_uint64;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_string;</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_ms;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_addr;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref><sp/>val;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" kindref="member">nngxx::invoke</ref>(get,<sp/>obj,<sp/><ref refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" kindref="member">opt</ref>,<sp/>&amp;val).<ref refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" kindref="member">transform_to</ref>(std::move(val));</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structclev_1_1expected" kindref="compound">clev::expected&lt;return_type&gt;</ref></highlight></codeline>
+<codeline lineno="56" refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" kindref="member">operator()</ref>(<ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref><sp/>obj)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*get)(<ref refid="structnngxx_1_1opt__getter_1a4ea96e6634da74849c89fff7c9841ad3" kindref="member">nng_type</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref>*);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_socket&gt;)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_bool;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_int;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_size;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_uint64;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_string;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_ms;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_socket_get_addr;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_ctx&gt;)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_bool;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_int;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_size;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_uint64;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_string;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_ctx_get_ms;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_listener&gt;)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_bool;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_int;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_size;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_uint64;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_string;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_ms;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_listener_get_addr;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_dialer&gt;)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_bool;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_int;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_size;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_uint64;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_string;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_ms;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_dialer_get_addr;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;nng_type,<sp/>nng_pipe&gt;)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa84e2c64f38f78ba3ea5c905ab5a2da27" kindref="member">opt_overload::boolean</ref>)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_bool;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa157db7df530023575515d366c9b672e8" kindref="member">opt_overload::integer</ref>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_int;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325faf7bd60b75b29d79b660a2859395c1a24" kindref="member">opt_overload::size</ref>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_size;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa2e8d31865e5d4b9d8611e1b991baed07" kindref="member">opt_overload::uint64</ref>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_uint64;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab45cffe084dd3d20d928bee85e7b0f21" kindref="member">opt_overload::string</ref>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_string;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fab85ec314bf443b797ef8a66b3b03f8a4" kindref="member">opt_overload::duration</ref>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_ms;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(<ref refid="structnngxx_1_1opt__getter_1a2e09364097ea33bc46e62cd9cd6b6eda" kindref="member">overload</ref><sp/>==<sp/><ref refid="namespacenngxx_1a006aeb45f262402ba1322f07dccd325fa48bf0900b6d58aadfcae19eef1faccf2" kindref="member">opt_overload::sockaddr</ref>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get<sp/>=<sp/>nng_pipe_get_addr;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnngxx_1_1opt__getter_1a52832468c41a7c2233e61d6781d204e6" kindref="member">return_type</ref><sp/>val;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" kindref="member">nngxx::invoke</ref>(get,<sp/>obj,<sp/><ref refid="structnngxx_1_1opt__getter_1a5a7f61ae362734f78c2f6ed882e15ddf" kindref="member">opt</ref>,<sp/>&amp;val).<ref refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" kindref="member">transform_to</ref>(std::move(val));</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nngxx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>NNGXX_OPTGETTER_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt_getter.h"/>
   </compounddef>

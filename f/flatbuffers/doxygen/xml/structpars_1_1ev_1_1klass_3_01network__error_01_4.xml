@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" line="104" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" bodystart="104" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" line="109" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" bodystart="109" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" line="74" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/klass.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -68,7 +68,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" line="102" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" bodystart="103" bodyend="106"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" line="107" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" bodystart="108" bodyend="111"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; network_error &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1base__klass_1a2339f110ec62e89466b158133b8ec288" prot="public" virt="non-virtual"><scope>pars::ev::klass&lt; network_error &gt;</scope><name>exec_policy</name></member>

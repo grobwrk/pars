@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="58" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="65" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="65" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-attrib">
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="62" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="69" column="37" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="69" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -73,7 +73,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="56" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="57" bodyend="64"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" line="63" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/kind.h" bodystart="64" bodyend="71"/>
     <listofallmembers>
       <member refid="structpars_1_1ev_1_1received_3_01event__t_01_4_1a4ca13a5ce29beeefb7f39e15a696c585" prot="public" virt="non-virtual"><scope>pars::ev::received&lt; event_t &gt;</scope><name>event_type</name></member>
       <member refid="structpars_1_1ev_1_1received_3_01event__t_01_4_1a8e2fe314913a3c5dc14e7c6f9f7a6f86" prot="public" virt="non-virtual"><scope>pars::ev::received&lt; event_t &gt;</scope><name>uuid</name></member>

@@ -120,31 +120,34 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="iface_8h.html">clev/iface.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="own_8h.html">clev/own.h</a>&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">struct </span><a class="code hl_struct" href="structclev_1_1iface.html">clev::iface</a>&lt;nng_socket&gt;;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">   43</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">socket_view</a> = <a class="code hl_struct" href="structclev_1_1iface.html">clev::iface&lt;nng_socket&gt;</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">   45</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">socket</a> = <a class="code hl_struct" href="structclev_1_1own.html">clev::own&lt;nng_socket&gt;</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace nngxx</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef NNGXX_SOCKETDECL_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define NNGXX_SOCKETDECL_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="iface_8h.html">clev/iface.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="own_8h.html">clev/own.h</a>&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">struct </span><a class="code hl_struct" href="structclev_1_1iface.html">clev::iface</a>&lt;nng_socket&gt;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenngxx.html">nngxx</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">   44</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">socket_view</a> = <a class="code hl_struct" href="structclev_1_1iface.html">clev::iface&lt;nng_socket&gt;</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">   46</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">socket</a> = <a class="code hl_struct" href="structclev_1_1own.html">clev::own&lt;nng_socket&gt;</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace nngxx</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// NNGXX_SOCKETDECL_H</span></div>
 <div class="ttc" id="aiface_8h_html"><div class="ttname"><a href="iface_8h.html">iface.h</a></div></div>
-<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00034">aio.h:35</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_a1cdea0f83fed0a7bb2951057157524ec"><div class="ttname"><a href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">nngxx::socket</a></div><div class="ttdeci">clev::own&lt; nng_socket &gt; socket</div><div class="ttdef"><b>Definition</b> <a href="#l00045">socket_decl.h:45</a></div></div>
-<div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="#l00043">socket_decl.h:43</a></div></div>
+<div class="ttc" id="anamespacenngxx_html"><div class="ttname"><a href="namespacenngxx.html">nngxx</a></div><div class="ttdef"><b>Definition</b> <a href="aio_8h_source.html#l00045">aio.h:46</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_a1cdea0f83fed0a7bb2951057157524ec"><div class="ttname"><a href="namespacenngxx.html#a1cdea0f83fed0a7bb2951057157524ec">nngxx::socket</a></div><div class="ttdeci">clev::own&lt; nng_socket &gt; socket</div><div class="ttdef"><b>Definition</b> <a href="#l00046">socket_decl.h:46</a></div></div>
+<div class="ttc" id="anamespacenngxx_html_abf8627902772454d69c7a8fe2d0a2717"><div class="ttname"><a href="namespacenngxx.html#abf8627902772454d69c7a8fe2d0a2717">nngxx::socket_view</a></div><div class="ttdeci">clev::iface&lt; nng_socket &gt; socket_view</div><div class="ttdef"><b>Definition</b> <a href="#l00044">socket_decl.h:44</a></div></div>
 <div class="ttc" id="aown_8h_html"><div class="ttname"><a href="own_8h.html">own.h</a></div></div>
-<div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00036">iface.h:36</a></div></div>
-<div class="ttc" id="astructclev_1_1own_html"><div class="ttname"><a href="structclev_1_1own.html">clev::own</a></div><div class="ttdef"><b>Definition</b> <a href="own_8h_source.html#l00039">own.h:40</a></div></div>
+<div class="ttc" id="astructclev_1_1iface_html"><div class="ttname"><a href="structclev_1_1iface.html">clev::iface</a></div><div class="ttdef"><b>Definition</b> <a href="iface_8h_source.html#l00037">iface.h:37</a></div></div>
+<div class="ttc" id="astructclev_1_1own_html"><div class="ttname"><a href="structclev_1_1own.html">clev::own</a></div><div class="ttdef"><b>Definition</b> <a href="own_8h_source.html#l00042">own.h:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

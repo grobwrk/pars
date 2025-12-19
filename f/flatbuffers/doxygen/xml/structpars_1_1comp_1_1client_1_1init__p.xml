@@ -16,8 +16,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="51" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="51" bodyend="-1"/>
-        <referencedby refid="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" compoundref="client_8h" startline="54" endline="54">pars::comp::client::init</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="54" column="21" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classpars_1_1comp_1_1client_1a140b32f4d2041fa2e4bb27555265284b" compoundref="client_8h" startline="57" endline="57">pars::comp::client::init</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -37,7 +37,7 @@
         <link refid="structpars_1_1net_1_1socket__opt"/>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="49" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="50" bodyend="52"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="52" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="53" bodyend="55"/>
     <listofallmembers>
       <member refid="structpars_1_1comp_1_1client_1_1init__p_1a25561076de1efda65570c043f7ca7dd2" prot="public" virt="non-virtual"><scope>pars::comp::client::init_p</scope><name>req_opts</name></member>
     </listofallmembers>

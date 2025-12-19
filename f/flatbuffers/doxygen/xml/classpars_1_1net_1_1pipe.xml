@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="71" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="71" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="72" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1pipe_1a20987788fedf5f659f6d1cf85ca5b651" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="73" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="73" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="74" column="13" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="45" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="45" bodyend="49"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="46" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="46" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1a8a0d6c9a0c02551f4d4498659984c4d3" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="51" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="51" bodyend="56"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="52" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="52" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1a1e8d61f123efea7d9656bd7bcefbbc65" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>int</type>
@@ -79,9 +79,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="58" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="58" bodyend="58"/>
-        <referencedby refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" compoundref="runner_8h" startline="151" endline="158">pars::ev::runner::add_pipe</referencedby>
-        <referencedby refid="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" compoundref="runner_8h" startline="161" endline="174">pars::ev::runner::remove_pipe</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="59" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="59" bodyend="59"/>
+        <referencedby refid="structpars_1_1ev_1_1runner_1a3565ef71b0258a5089ac789d96f916a2" compoundref="runner_8h" startline="171" endline="178">pars::ev::runner::add_pipe</referencedby>
+        <referencedby refid="structpars_1_1ev_1_1runner_1aa1649e683c45f6ca32dd2b8f9a1b3ca5" compoundref="runner_8h" startline="181" endline="194">pars::ev::runner::remove_pipe</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1ab1ca71a4da0bf477ca46e1b68c35db54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="60" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="60" bodyend="60"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="61" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1afb345e75cb7c7604d433373f45fbe6ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="62" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="62" bodyend="62"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="63" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="63" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1pipe_1a8eaace5aedaac3e6c62c0a9a9c25065e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="64" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="64" bodyend="68"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="65" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="65" bodyend="69"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -180,7 +180,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="43" bodyend="74"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" line="43" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pipe.h" bodystart="44" bodyend="75"/>
     <listofallmembers>
       <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a95e01cc7cb3da9bda4a66ddb1b8201e4" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>close</name></member>
       <member refid="structclev_1_1iface_3_01nng__pipe_01_4_1a043a39f8aacf53cd16ccc1c7a0228c7b" prot="public" virt="non-virtual"><scope>pars::net::pipe</scope><name>destroy</name></member>

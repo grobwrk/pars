@@ -124,7 +124,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00042">42</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00044">44</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a04b4dd9b7990877c8d0452a8b66bdab7" name="a04b4dd9b7990877c8d0452a8b66bdab7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04b4dd9b7990877c8d0452a8b66bdab7">&#9670;&#160;</a></span>format()</h2>
@@ -154,25 +154,25 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00044">44</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>  {</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (m.body().size() &lt; <span class="keyword">sizeof</span>(std::size_t))</div>
-<div class="line"><span class="lineno">   48</span>    {</div>
-<div class="line"><span class="lineno">   49</span>      <span class="keywordflow">return</span> std::format_to(</div>
-<div class="line"><span class="lineno">   50</span>        ctx.out(), <span class="stringliteral">&quot;size:{}={}+{}, hash:&lt;error&gt;, pipe:0x{:X}&quot;</span>,</div>
-<div class="line"><span class="lineno">   51</span>        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</div>
-<div class="line"><span class="lineno">   52</span>        m.get_pipe().id());</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   55</span>    {</div>
-<div class="line"><span class="lineno">   56</span>      std::size_t h = pars::hash_from_msg(m);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">return</span> std::format_to(</div>
-<div class="line"><span class="lineno">   59</span>        ctx.out(), <span class="stringliteral">&quot;size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}&quot;</span>,</div>
-<div class="line"><span class="lineno">   60</span>        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</div>
-<div class="line"><span class="lineno">   61</span>        h, m.get_pipe().id());</div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="nng_8h_source.html#l00046">46</a> of file <a class="el" href="nng_8h_source.html">nng.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>  {</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (m.body().size() &lt; <span class="keyword">sizeof</span>(std::size_t))</div>
+<div class="line"><span class="lineno">   50</span>    {</div>
+<div class="line"><span class="lineno">   51</span>      <span class="keywordflow">return</span> std::format_to(</div>
+<div class="line"><span class="lineno">   52</span>        ctx.out(), <span class="stringliteral">&quot;size:{}={}+{}, hash:&lt;error&gt;, pipe:0x{:X}&quot;</span>,</div>
+<div class="line"><span class="lineno">   53</span>        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</div>
+<div class="line"><span class="lineno">   54</span>        m.get_pipe().id());</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   57</span>    {</div>
+<div class="line"><span class="lineno">   58</span>      std::size_t h = pars::hash_from_msg(m);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">return</span> std::format_to(</div>
+<div class="line"><span class="lineno">   61</span>        ctx.out(), <span class="stringliteral">&quot;size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}&quot;</span>,</div>
+<div class="line"><span class="lineno">   62</span>        m.header().size() + m.body().size(), m.header().size(), m.body().size(),</div>
+<div class="line"><span class="lineno">   63</span>        h, m.get_pipe().id());</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

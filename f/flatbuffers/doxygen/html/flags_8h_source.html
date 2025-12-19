@@ -120,11 +120,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;spdlog/spdlog.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_LOG_FLAGS_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_LOG_FLAGS_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;format&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars.html">pars</a></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
@@ -250,11 +250,13 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>};</div>
 </div>
-<div class="ttc" id="anamespacepars_1_1app_html"><div class="ttname"><a href="namespacepars_1_1app.html">pars::app</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
-<div class="ttc" id="anamespacepars_1_1comp_html"><div class="ttname"><a href="namespacepars_1_1comp.html">pars::comp</a></div><div class="ttdef"><b>Definition</b> <a href="backend_8h_source.html#l00038">backend.h:39</a></div></div>
-<div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00037">helpers.h:38</a></div></div>
-<div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
-<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00040">resources.h:41</a></div></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif </span><span class="comment">// PARS_LOG_FLAGS_H</span></div>
+<div class="ttc" id="anamespacepars_1_1app_html"><div class="ttname"><a href="namespacepars_1_1app.html">pars::app</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00042">resources.h:43</a></div></div>
+<div class="ttc" id="anamespacepars_1_1comp_html"><div class="ttname"><a href="namespacepars_1_1comp.html">pars::comp</a></div><div class="ttdef"><b>Definition</b> <a href="backend_8h_source.html#l00041">backend.h:42</a></div></div>
+<div class="ttc" id="anamespacepars_1_1f_html"><div class="ttname"><a href="namespacepars_1_1f.html">pars::f</a></div><div class="ttdef"><b>Definition</b> <a href="helpers_8h_source.html#l00038">helpers.h:39</a></div></div>
+<div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00038">net.h:39</a></div></div>
+<div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00042">resources.h:43</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535">pars::lf</a></div><div class="ttdeci">lf</div><div class="ttdef"><b>Definition</b> <a href="#l00039">flags.h:40</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a005480c8a6a0357d17cff2e8eb7e060d">pars::lf::comp</a></div><div class="ttdeci">@ comp</div><div class="ttdef"><b>Definition</b> <a href="#l00042">flags.h:42</a></div></div>
 <div class="ttc" id="anamespacepars_html_a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4"><div class="ttname"><a href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a40fa73c9d0083043c6576dd2b40511e4">pars::lf::net</a></div><div class="ttdeci">@ net</div><div class="ttdef"><b>Definition</b> <a href="#l00044">flags.h:44</a></div></div>

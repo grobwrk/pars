@@ -101,14 +101,14 @@ $(function(){ initResizable(false); });
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a55c88e8f8b3dbefd1d6739d023632835" id="r_a55c88e8f8b3dbefd1d6739d023632835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c88e8f8b3dbefd1d6739d023632835">hf_registry</a> (<a class="el" href="structpars_1_1ev_1_1runner.html">runner</a> &amp;r)</td></tr>
 <tr class="separator:a55c88e8f8b3dbefd1d6739d023632835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8e4eac6e124f05d3bc86ba167bf1299" id="r_ad8e4eac6e124f05d3bc86ba167bf1299"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; typename kind_of, ev::event_c event_t, typename class_t&gt; <br />
-requires ev::kind_c&lt;kind_of&gt;</td></tr>
-<tr class="memitem:ad8e4eac6e124f05d3bc86ba167bf1299"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad8e4eac6e124f05d3bc86ba167bf1299">on</a> (void(class_t::*mem_fn)(<a class="el" href="namespacepars_1_1ev.html#ada8ba2faa8e8f8b6a385eb2156e52613">hf_arg</a>&lt; kind_of, event_t &gt;), class_t *self)</td></tr>
-<tr class="separator:ad8e4eac6e124f05d3bc86ba167bf1299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7698a3d0fa173ebd92faa300120211" id="r_a6e7698a3d0fa173ebd92faa300120211"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; typename kind_of, event_c event_t, typename class_t&gt; <br />
+requires kind_c&lt;kind_of&gt;</td></tr>
+<tr class="memitem:a6e7698a3d0fa173ebd92faa300120211"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6e7698a3d0fa173ebd92faa300120211">on</a> (void(class_t::*mem_fn)(<a class="el" href="namespacepars_1_1ev.html#ada8ba2faa8e8f8b6a385eb2156e52613">hf_arg</a>&lt; kind_of, event_t &gt;), class_t *self)</td></tr>
+<tr class="separator:a6e7698a3d0fa173ebd92faa300120211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00063">63</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00070">70</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a55c88e8f8b3dbefd1d6739d023632835" name="a55c88e8f8b3dbefd1d6739d023632835"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55c88e8f8b3dbefd1d6739d023632835">&#9670;&#160;</a></span>hf_registry()</h2>
@@ -133,22 +133,22 @@ requires ev::kind_c&lt;kind_of&gt;</td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00066">66</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   67</span>    : runner_m{r}</div>
-<div class="line"><span class="lineno">   68</span>  {</div>
-<div class="line"><span class="lineno">   69</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00073">73</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>    : runner_m{r}</div>
+<div class="line"><span class="lineno">   75</span>  {</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad8e4eac6e124f05d3bc86ba167bf1299" name="ad8e4eac6e124f05d3bc86ba167bf1299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8e4eac6e124f05d3bc86ba167bf1299">&#9670;&#160;</a></span>on()</h2>
+<a id="a6e7698a3d0fa173ebd92faa300120211" name="a6e7698a3d0fa173ebd92faa300120211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7698a3d0fa173ebd92faa300120211">&#9670;&#160;</a></span>on()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;template&lt; typename &gt; typename kind_of, ev::event_c event_t, typename class_t&gt; <br />
-requires ev::kind_c&lt;kind_of&gt;</div>
+template&lt;template&lt; typename &gt; typename kind_of, event_c event_t, typename class_t&gt; <br />
+requires kind_c&lt;kind_of&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -171,18 +171,18 @@ requires ev::kind_c&lt;kind_of&gt;</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00074">74</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>  {</div>
-<div class="line"><span class="lineno">   76</span>    insert&lt;kind_of, event_t&gt;(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">make_hf</a>(mem_fn, self));</div>
-<div class="line"><span class="lineno">   77</span>  }</div>
-<div class="ttc" id="anamespacepars_1_1ev_html_a5ae21c09902e125632b0c4f37e20a07a"><div class="ttname"><a href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">pars::ev::make_hf</a></div><div class="ttdeci">handler_f&lt; kind_of, event_t &gt; make_hf(mem_fn_t &amp;mem_fn, class_t *self)</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00058">make_hf.h:58</a></div></div>
+<p class="definition">Definition at line <a class="el" href="hf__registry_8h_source.html#l00081">81</a> of file <a class="el" href="hf__registry_8h_source.html">hf_registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>  {</div>
+<div class="line"><span class="lineno">   83</span>    insert&lt;kind_of, event_t&gt;(<a class="code hl_function" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">make_hf</a>(mem_fn, self));</div>
+<div class="line"><span class="lineno">   84</span>  }</div>
+<div class="ttc" id="anamespacepars_1_1ev_html_a5ae21c09902e125632b0c4f37e20a07a"><div class="ttname"><a href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a">pars::ev::make_hf</a></div><div class="ttdeci">handler_f&lt; kind_of, event_t &gt; make_hf(mem_fn_t &amp;mem_fn, class_t *self)</div><div class="ttdef"><b>Definition</b> <a href="make__hf_8h_source.html#l00059">make_hf.h:59</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="make__hf_8h_source.html#l00058">pars::ev::make_hf()</a>.</p>
+<p class="reference">References <a class="el" href="make__hf_8h_source.html#l00059">pars::ev::make_hf()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph" alt=""/></div>
-<map name="astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph" id="astructpars_1_1ev_1_1hf__registry_ad8e4eac6e124f05d3bc86ba167bf1299_cgraph">
+<div class="center"><img src="structpars_1_1ev_1_1hf__registry_a6e7698a3d0fa173ebd92faa300120211_cgraph.png" border="0" usemap="#astructpars_1_1ev_1_1hf__registry_a6e7698a3d0fa173ebd92faa300120211_cgraph" alt=""/></div>
+<map name="astructpars_1_1ev_1_1hf__registry_a6e7698a3d0fa173ebd92faa300120211_cgraph" id="astructpars_1_1ev_1_1hf__registry_a6e7698a3d0fa173ebd92faa300120211_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,179,33"/>
 <area shape="rect" href="namespacepars_1_1ev.html#a5ae21c09902e125632b0c4f37e20a07a" title=" " alt="" coords="227,5,363,33"/>
 <area shape="poly" title=" " alt="" coords="179,16,211,16,211,22,179,22"/>

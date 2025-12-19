@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="46" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="48" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="structpars_1_1app_1_1lockable_1a431dc4dbab379c2642cbd042236c9840" prot="public" static="no">
         <type>mtx_t</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="49" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="49" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="49" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="51" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1app_1_1lockable_1a5a2adeeabcf05de480ceb6abf4254c29" prot="public" static="no" mutable="no">
         <type><ref refid="structpars_1_1app_1_1lockable_1a431dc4dbab379c2642cbd042236c9840" kindref="member">mutex_type</ref> &amp;</type>
@@ -68,14 +68,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="50" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="52" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="52" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="44" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="45" bodyend="51"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" line="46" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app/resources.h" bodystart="47" bodyend="53"/>
     <listofallmembers>
       <member refid="structpars_1_1app_1_1lockable_1a5a2adeeabcf05de480ceb6abf4254c29" prot="public" virt="non-virtual"><scope>pars::app::lockable</scope><name>mutex</name></member>
       <member refid="structpars_1_1app_1_1lockable_1a431dc4dbab379c2642cbd042236c9840" prot="public" virt="non-virtual"><scope>pars::app::lockable</scope><name>mutex_type</name></member>

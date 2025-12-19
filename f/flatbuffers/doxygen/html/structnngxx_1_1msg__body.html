@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00039">39</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00048">48</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a77f09ae0f945a2b10295930698e06e23" name="a77f09ae0f945a2b10295930698e06e23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77f09ae0f945a2b10295930698e06e23">&#9670;&#160;</a></span>msg_body()</h2>
@@ -150,10 +150,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00041">41</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>    : m{m}</div>
-<div class="line"><span class="lineno">   43</span>  {</div>
-<div class="line"><span class="lineno">   44</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00050">50</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    : m{m}</div>
+<div class="line"><span class="lineno">   52</span>  {</div>
+<div class="line"><span class="lineno">   53</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -183,33 +183,33 @@ template&lt;uint_c uint_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00064">64</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>  {</div>
-<div class="line"><span class="lineno">   66</span>    uint_t x;</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>    int (*<a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a>)(nng_msg*, uint_t*);</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
-<div class="line"><span class="lineno">   71</span>    {</div>
-<div class="line"><span class="lineno">   72</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_append;</div>
-<div class="line"><span class="lineno">   73</span>    }</div>
-<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
-<div class="line"><span class="lineno">   75</span>    {</div>
-<div class="line"><span class="lineno">   76</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_trim_u32;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
-<div class="line"><span class="lineno">   79</span>    {</div>
-<div class="line"><span class="lineno">   80</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_trim_u64;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a>, m, &amp;x);</div>
-<div class="line"><span class="lineno">   84</span>  }</div>
-<div class="ttc" id="anamespacenngxx_html_af463ca8974bbbe1f8cfabfd2bbda605d"><div class="ttname"><a href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00123">err.h:123</a></div></div>
-<div class="ttc" id="astructnngxx_1_1msg__body_html_a24ceb466365995fd392cc3a428913616"><div class="ttname"><a href="#a24ceb466365995fd392cc3a428913616">nngxx::msg_body::append</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; append() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00064">msg_body.h:64</a></div></div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00073">73</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>  {</div>
+<div class="line"><span class="lineno">   75</span>    uint_t x;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    int (*<a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a>)(nng_msg*, uint_t*);</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
+<div class="line"><span class="lineno">   80</span>    {</div>
+<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_append;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
+<div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_trim_u32;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
+<div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>      <a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a> = nng_msg_trim_u64;</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#a24ceb466365995fd392cc3a428913616">append</a>, m, &amp;x);</div>
+<div class="line"><span class="lineno">   93</span>  }</div>
+<div class="ttc" id="anamespacenngxx_html_af463ca8974bbbe1f8cfabfd2bbda605d"><div class="ttname"><a href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a></div><div class="ttdeci">clev::expected&lt; void &gt; invoke(ret_t(*f)(args_t...), args_t... args) noexcept</div><div class="ttdef"><b>Definition</b> <a href="nngxx_2err_8h_source.html#l00127">err.h:127</a></div></div>
+<div class="ttc" id="astructnngxx_1_1msg__body_html_a24ceb466365995fd392cc3a428913616"><div class="ttname"><a href="#a24ceb466365995fd392cc3a428913616">nngxx::msg_body::append</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; append() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00073">msg_body.h:73</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="msg__body_8h_source.html#l00064">append()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00123">nngxx::invoke()</a>.</p>
+<p class="reference">References <a class="el" href="msg__body_8h_source.html#l00073">append()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::invoke()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00064">append()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00073">append()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -260,32 +260,32 @@ template&lt;uint_c uint_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00115">115</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>  {</div>
-<div class="line"><span class="lineno">  117</span>    uint_t x;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>    int (*<a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a>)(nng_msg*, uint_t*);</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
-<div class="line"><span class="lineno">  122</span>    {</div>
-<div class="line"><span class="lineno">  123</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
-<div class="line"><span class="lineno">  126</span>    {</div>
-<div class="line"><span class="lineno">  127</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop_u32;</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
-<div class="line"><span class="lineno">  130</span>    {</div>
-<div class="line"><span class="lineno">  131</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop_u64;</div>
-<div class="line"><span class="lineno">  132</span>    }</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a>, m, &amp;x);</div>
-<div class="line"><span class="lineno">  135</span>  }</div>
-<div class="ttc" id="astructnngxx_1_1msg__body_html_ae98c4d9e3836ec3c4be9bf2ae2656dcd"><div class="ttname"><a href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">nngxx::msg_body::chop</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; chop() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00115">msg_body.h:115</a></div></div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00124">124</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>  {</div>
+<div class="line"><span class="lineno">  126</span>    uint_t x;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    int (*<a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a>)(nng_msg*, uint_t*);</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
+<div class="line"><span class="lineno">  135</span>    {</div>
+<div class="line"><span class="lineno">  136</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop_u32;</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
+<div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>      <a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a> = nng_msg_chop_u64;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">chop</a>, m, &amp;x);</div>
+<div class="line"><span class="lineno">  144</span>  }</div>
+<div class="ttc" id="astructnngxx_1_1msg__body_html_ae98c4d9e3836ec3c4be9bf2ae2656dcd"><div class="ttname"><a href="#ae98c4d9e3836ec3c4be9bf2ae2656dcd">nngxx::msg_body::chop</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; chop() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00124">msg_body.h:124</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="msg__body_8h_source.html#l00115">chop()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00123">nngxx::invoke()</a>.</p>
+<p class="reference">References <a class="el" href="msg__body_8h_source.html#l00124">chop()</a>, and <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::invoke()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00115">chop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00124">chop()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -334,12 +334,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00137">137</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>  {</div>
-<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_msg_chop, m, sz);</div>
-<div class="line"><span class="lineno">  140</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00146">146</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>  {</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_msg_chop, m, sz);</div>
+<div class="line"><span class="lineno">  149</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00123">nngxx::invoke()</a>.</p>
+<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::invoke()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -380,10 +380,10 @@ template&lt;typename char_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00058">58</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>  {</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>char_t* const<span class="keyword">&gt;</span>(nng_msg_body(m));</div>
-<div class="line"><span class="lineno">   61</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00067">67</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>  {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>char_t* const<span class="keyword">&gt;</span>(nng_msg_body(m));</div>
+<div class="line"><span class="lineno">   70</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -412,10 +412,10 @@ template&lt;typename char_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00052">52</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>  {</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>char_t*<span class="keyword">&gt;</span>(nng_msg_body(m));</div>
-<div class="line"><span class="lineno">   55</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00061">61</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>  {</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>char_t*<span class="keyword">&gt;</span>(nng_msg_body(m));</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,10 +442,10 @@ template&lt;typename char_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00046">46</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>  {</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> nng_msg_len(m);</div>
-<div class="line"><span class="lineno">   49</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00055">55</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>  {</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> nng_msg_len(m);</div>
+<div class="line"><span class="lineno">   58</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -474,32 +474,32 @@ template&lt;uint_c uint_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00087">87</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>  {</div>
-<div class="line"><span class="lineno">   89</span>    uint_t x;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    int (*<a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a>)(nng_msg*, uint_t*);</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
-<div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u16;</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
-<div class="line"><span class="lineno">   98</span>    {</div>
-<div class="line"><span class="lineno">   99</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u32;</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
-<div class="line"><span class="lineno">  102</span>    {</div>
-<div class="line"><span class="lineno">  103</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u64;</div>
-<div class="line"><span class="lineno">  104</span>    }</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a>, m, &amp;x);</div>
-<div class="line"><span class="lineno">  107</span>  }</div>
-<div class="ttc" id="astructnngxx_1_1msg__body_html_a97d0f694acd747764d097fa8e625fd57"><div class="ttname"><a href="#a97d0f694acd747764d097fa8e625fd57">nngxx::msg_body::trim</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; trim() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00087">msg_body.h:87</a></div></div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00096">96</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>  {</div>
+<div class="line"><span class="lineno">   98</span>    uint_t x;</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    int (*<a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a>)(nng_msg*, uint_t*);</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint16_t&gt;)</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u16;</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint32_t&gt;)</div>
+<div class="line"><span class="lineno">  107</span>    {</div>
+<div class="line"><span class="lineno">  108</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u32;</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;uint_t, uint64_t&gt;)</div>
+<div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>      <a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a> = nng_msg_trim_u64;</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(<a class="code hl_function" href="#a97d0f694acd747764d097fa8e625fd57">trim</a>, m, &amp;x);</div>
+<div class="line"><span class="lineno">  116</span>  }</div>
+<div class="ttc" id="astructnngxx_1_1msg__body_html_a97d0f694acd747764d097fa8e625fd57"><div class="ttname"><a href="#a97d0f694acd747764d097fa8e625fd57">nngxx::msg_body::trim</a></div><div class="ttdeci">clev::expected&lt; uint_t &gt; trim() noexcept</div><div class="ttdef"><b>Definition</b> <a href="msg__body_8h_source.html#l00096">msg_body.h:96</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00123">nngxx::invoke()</a>, and <a class="el" href="msg__body_8h_source.html#l00087">trim()</a>.</p>
+<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::invoke()</a>, and <a class="el" href="msg__body_8h_source.html#l00096">trim()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00087">trim()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="msg__body_8h_source.html#l00096">trim()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -548,12 +548,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00109">109</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>  {</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_msg_trim, m, sz);</div>
-<div class="line"><span class="lineno">  112</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="msg__body_8h_source.html#l00118">118</a> of file <a class="el" href="msg__body_8h_source.html">msg_body.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>  {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenngxx.html#af463ca8974bbbe1f8cfabfd2bbda605d">nngxx::invoke</a>(nng_msg_trim, m, sz);</div>
+<div class="line"><span class="lineno">  121</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00123">nngxx::invoke()</a>.</p>
+<p class="reference">References <a class="el" href="nngxx_2err_8h_source.html#l00127">nngxx::invoke()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

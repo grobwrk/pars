@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="73" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="74" bodyend="110"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="77" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="78" bodyend="114"/>
       </memberdef>
       <memberdef kind="enum" id="namespacenngxx_1a44167f96e21edbf03593ad2f27c518eb" prot="public" static="no" strong="yes">
         <type></type>
@@ -467,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="38" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="39" bodyend="65"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="40" bodyend="66"/>
       </memberdef>
       <memberdef kind="enum" id="namespacenngxx_1a006aeb45f262402ba1322f07dccd325f" prot="public" static="no" strong="yes">
         <type></type>
@@ -528,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="67" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="68" bodyend="76"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="68" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="69" bodyend="77"/>
       </memberdef>
       <memberdef kind="enum" id="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" prot="public" static="no" strong="yes">
         <type></type>
@@ -572,7 +572,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="40" bodyend="45"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="44" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="45" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -588,7 +588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="48" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_aio * &gt;</type>
@@ -602,7 +602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1ab5475443c737a2ce5ca5023d845ba66f" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_ctx &gt;</type>
@@ -616,7 +616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="48" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_ctx &gt;</type>
@@ -630,7 +630,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a8256ea641b01c93a4617051a9946801b" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_dialer &gt;</type>
@@ -644,7 +644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="48" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_dialer &gt;</type>
@@ -658,7 +658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1ad5189003a3b178e4e02ac3ac40335212" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_listener &gt;</type>
@@ -672,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="47" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_listener &gt;</type>
@@ -686,7 +686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="49" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a8e6d1cfc74418ae3c9a465c340c1a8a8" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_msg * &gt;</type>
@@ -700,7 +700,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="47" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_msg * &gt;</type>
@@ -714,7 +714,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="39" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="49" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1adb22ed028b266555abf06a7a5e5e51ca" prot="public" static="no">
         <templateparamlist>
@@ -735,7 +735,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="260" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="260" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="261" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="261" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1aafdaa64936251b53768712113f7c3e18" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_pipe &gt;</type>
@@ -749,7 +749,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="37" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1abf8627902772454d69c7a8fe2d0a2717" prot="public" static="no">
         <type><ref refid="structclev_1_1iface" kindref="compound">clev::iface</ref>&lt; nng_socket &gt;</type>
@@ -763,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" line="43" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" line="44" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" prot="public" static="no">
         <type><ref refid="structclev_1_1own" kindref="compound">clev::own</ref>&lt; nng_socket &gt;</type>
@@ -777,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" line="45" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" line="46" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/socket_decl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -801,7 +801,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="41" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="41" bodyend="44"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="52" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="52" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1abf1e7df2fd9f119bc5805bead7180c3b" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref> &gt;</type>
@@ -823,7 +823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="46" column="31" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="46" bodyend="50"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="57" column="31" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a70f35bd836d0a359c41baea16cab054d" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1ab046ed26677d7cb8c2b76b1a4869eec2" kindref="member">aio</ref> &gt;</type>
@@ -849,7 +849,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="53" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="53" bodyend="60"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="64" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" bodystart="64" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a2bc0be4423cd53565345c15e68718993" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kindref="member">ctx</ref> &gt;</type>
@@ -867,7 +867,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="42" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" line="53" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/ctx.h" bodystart="53" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a5af84fe9ec9a75547077292cc3184ba3" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">dialer</ref> &gt;</type>
@@ -889,7 +889,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="42" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" line="53" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/dialer.h" bodystart="53" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1af7cc8648f9b781ceefa19bff3405c104" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>const std::error_category &amp;</type>
@@ -903,7 +903,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="43" column="42" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="43" bodyend="56"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="47" column="42" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="47" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a45d6dbea9ed7507e7aef5ac8f827f2c3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::error_code</type>
@@ -921,7 +921,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="58" column="25" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="58" bodyend="61"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="62" column="25" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="62" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a6dcda4e7167a6344f7a17aff3428a0f7" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -956,9 +956,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="114" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="114" bodyend="119"/>
-        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="239" endline="245">clev::make_expected</references>
-        <references refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="117" endline="123">clev::expected&lt; void &gt;::transform_to</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="118" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="118" bodyend="123"/>
+        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="243" endline="249">clev::make_expected</references>
+        <references refid="structclev_1_1expected_3_01void_01_4_1a0c2c44ba0c911d3155c5edb481f5f9d6" compoundref="clev_2err_8h" startline="121" endline="127">clev::expected&lt; void &gt;::transform_to</references>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1af463ca8974bbbe1f8cfabfd2bbda605d" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -991,15 +991,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="123" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="123" bodyend="127"/>
-        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="239" endline="245">clev::make_expected</references>
-        <referencedby refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="64" endline="84">nngxx::msg_body::append</referencedby>
-        <referencedby refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="115" endline="135">nngxx::msg_body::chop</referencedby>
-        <referencedby refid="structnngxx_1_1msg__body_1a39703ccc9d20a4094925e1c82d3c031c" compoundref="msg__body_8h" startline="137" endline="140">nngxx::msg_body::chop</referencedby>
-        <referencedby refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" compoundref="opt__getter_8h" startline="51" endline="142">nngxx::opt_getter&lt; opt_v, nng_t &gt;::operator()</referencedby>
-        <referencedby refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" compoundref="opt__setter_8h" startline="49" endline="122">nngxx::opt_setter&lt; opt_v, nng_t &gt;::operator()</referencedby>
-        <referencedby refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="87" endline="107">nngxx::msg_body::trim</referencedby>
-        <referencedby refid="structnngxx_1_1msg__body_1a37fc00c2c8ff16eb0e02f97eb0106a55" compoundref="msg__body_8h" startline="109" endline="112">nngxx::msg_body::trim</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="127" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="127" bodyend="131"/>
+        <references refid="namespaceclev_1a14c9cc7c4e2eca319598be60a47f4186" compoundref="clev_2err_8h" startline="243" endline="249">clev::make_expected</references>
+        <referencedby refid="structnngxx_1_1msg__body_1a24ceb466365995fd392cc3a428913616" compoundref="msg__body_8h" startline="73" endline="93">nngxx::msg_body::append</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1ae98c4d9e3836ec3c4be9bf2ae2656dcd" compoundref="msg__body_8h" startline="124" endline="144">nngxx::msg_body::chop</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a39703ccc9d20a4094925e1c82d3c031c" compoundref="msg__body_8h" startline="146" endline="149">nngxx::msg_body::chop</referencedby>
+        <referencedby refid="structnngxx_1_1opt__getter_1a7af6556575a8362d3cc1c6dc29dc8da2" compoundref="opt__getter_8h" startline="56" endline="147">nngxx::opt_getter&lt; opt_v, nng_t &gt;::operator()</referencedby>
+        <referencedby refid="structnngxx_1_1opt__setter_1ac597a3ab196a11197bc6c441d7e648fd" compoundref="opt__setter_8h" startline="54" endline="127">nngxx::opt_setter&lt; opt_v, nng_t &gt;::operator()</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a97d0f694acd747764d097fa8e625fd57" compoundref="msg__body_8h" startline="96" endline="116">nngxx::msg_body::trim</referencedby>
+        <referencedby refid="structnngxx_1_1msg__body_1a37fc00c2c8ff16eb0e02f97eb0106a55" compoundref="msg__body_8h" startline="118" endline="121">nngxx::msg_body::trim</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a0c256ba910e505bd0bef5e615b5c8023" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -1028,7 +1028,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="130" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="130" bodyend="136"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" line="134" column="24" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/err.h" bodystart="134" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a5fb155c4d0007959b70c15da8b977905" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">listener</ref> &gt;</type>
@@ -1050,7 +1050,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="42" bodyend="45"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" line="52" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/listener.h" bodystart="52" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a74aba1b204c6b21a428687aac0331e96" prot="public" static="yes" nodiscard="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="structclev_1_1expected" kindref="compound">clev::expected</ref>&lt; <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">msg</ref> &gt;</type>
@@ -1068,7 +1068,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="42" bodyend="47"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" line="52" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/msg.h" bodystart="52" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1ad51ba697120ad200420c7e4c0cc06c4c" prot="public" static="yes" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -1089,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="79" column="30" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="79" bodyend="165"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="80" column="30" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="80" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a0c6c2858e79550e28173c494cddc4f00" prot="public" static="yes" nodiscard="yes" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -1110,7 +1110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="168" column="32" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="168" bodyend="254"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" line="169" column="32" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/opt.h" bodystart="169" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1aedb473509a696bead2df6edbad24d96a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>nng_pipe_ev</type>
@@ -1128,7 +1128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="47" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="47" bodyend="50"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="52" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="52" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="namespacenngxx_1a139f8ed3851ddee253cf8436255ffd49" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="namespacenngxx_1a4d16a92a1ac732a7a8ac6e0f9597d802" kindref="member">pipe_ev</ref></type>
@@ -1146,13 +1146,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="52" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="52" bodyend="55"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" line="57" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/pipe.h" bodystart="57" bodyend="60"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="34" column="1"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx/aio.h" line="45" column="1"/>
   </compounddef>
 </doxygen>

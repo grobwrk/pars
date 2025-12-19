@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -64,18 +64,25 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_EV_HFREGISTRY_H
+             : #define PARS_EV_HFREGISTRY_H
              : 
+             : #include &quot;pars/concept/event.h&quot;
              : #include &quot;pars/concept/kind.h&quot;
              : #include &quot;pars/ev/job.h&quot;
              : #include &quot;pars/ev/make_hf.h&quot;
              : #include &quot;pars/ev/spec.h&quot;
-             : #include &quot;pars/fmt/formattable.h&quot;
              : #include &quot;pars/log.h&quot;
+             : #include &quot;pars/log/flags.h&quot;
              : 
+             : #include &lt;cstddef&gt;
              : #include &lt;format&gt;
+             : #include &lt;functional&gt;
              : #include &lt;mutex&gt;
+             : #include &lt;stdexcept&gt;
+             : #include &lt;typeinfo&gt;
              : #include &lt;unordered_map&gt;
+             : #include &lt;utility&gt;
              : 
              : namespace pars::ev
              : {
@@ -105,9 +112,9 @@
              :   {
              :   }
              : 
-             :   template&lt;template&lt;typename&gt; typename kind_of, ev::event_c event_t,
+             :   template&lt;template&lt;typename&gt; typename kind_of, event_c event_t,
              :            typename class_t&gt;
-             :     requires ev::kind_c&lt;kind_of&gt;
+             :     requires kind_c&lt;kind_of&gt;
              :   void on(void (class_t::*mem_fn)(hf_arg&lt;kind_of, event_t&gt;), class_t* self)
              :   {
              :     insert&lt;kind_of, event_t&gt;(make_hf(mem_fn, self));
@@ -175,6 +182,8 @@
              : };
              : 
              : } // namespace pars::ev
+             : 
+             : #endif // PARS_EV_HFREGISTRY_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

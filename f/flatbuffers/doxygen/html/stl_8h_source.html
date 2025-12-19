@@ -120,73 +120,77 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="lib_2include_2pars_2ev_2event_8h.html">pars/ev/event.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_FMT_STL_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_FMT_STL_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="lib_2include_2pars_2concept_2event_8h.html">pars/concept/event.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html">   42</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::chrono::system_clock::time_point&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  : std::formatter&lt;std::string&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">   45</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">format</a>(<span class="keyword">const</span> std::chrono::system_clock::time_point&amp; t,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>              std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">auto</span> t2 = std::chrono::system_clock::to_time_t(t);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::ostringstream oss;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    oss &lt;&lt; std::put_time(std::localtime(&amp;t2), <span class="stringliteral">&quot;%F %T&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;system_error&gt;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html">   45</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::chrono::system_clock::time_point&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  : std::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">   48</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">format</a>(<span class="keyword">const</span> std::chrono::system_clock::time_point&amp; t,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>              std::format_context&amp; ctx) <span class="keyword">const</span> -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">auto</span> t2 = std::chrono::system_clock::to_time_t(t);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, oss.str());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    oss &lt;&lt; std::put_time(std::localtime(&amp;t2), <span class="stringliteral">&quot;%F %T&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, oss.str());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html">   58</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::error_code&gt; : std::formatter&lt;std::string&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
-<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">   60</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">format</a>(<span class="keyword">const</span> std::error_code&amp; e, std::format_context&amp; ctx) <span class="keyword">const</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, e.message());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html">   61</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::error_code&gt; : std::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">   63</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">format</a>(<span class="keyword">const</span> std::error_code&amp; e, std::format_context&amp; ctx) <span class="keyword">const</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, e.message());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">template</span>&lt;pars::ev::event_c event_t&gt;</div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html">   68</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::shared_ptr&lt;event_t&gt;&gt; : std::formatter&lt;std::string&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">   70</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">format</a>(<span class="keyword">const</span> std::shared_ptr&lt;event_t&gt;&amp; x, std::format_context&amp; ctx) <span class="keyword">const</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">if</span> (x)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, *x);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;empty-shared_ptr&gt;&quot;</span>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span>&lt;pars::ev::event_c event_t&gt;</div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html">   71</a></span><span class="keyword">struct </span>std::formatter&lt;<a class="code hl_namespace" href="namespacestd.html">std</a>::shared_ptr&lt;event_t&gt;&gt; : std::formatter&lt;std::string&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">   73</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">format</a>(<span class="keyword">const</span> std::shared_ptr&lt;event_t&gt;&amp; x, std::format_context&amp; ctx) <span class="keyword">const</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    -&gt; <span class="keyword">decltype</span>(ctx.out())</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span> (x)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;{}&quot;</span>, *x);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">return</span> std::format_to(ctx.out(), <span class="stringliteral">&quot;&lt;empty-shared_ptr&gt;&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
 </div>
-<div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
-<div class="ttc" id="alib_2include_2pars_2ev_2event_8h_html"><div class="ttname"><a href="lib_2include_2pars_2ev_2event_8h.html">event.h</a></div></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// PARS_FMT_STL_H</span></div>
+<div class="ttc" id="alib_2include_2pars_2concept_2event_8h_html"><div class="ttname"><a href="lib_2include_2pars_2concept_2event_8h.html">event.h</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="common_8h_source.html#l00095">common.h:96</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_html_abc95168478c15e4ba3ee2c9ef95fcd2c"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">std::formatter&lt; std::chrono::system_clock::time_point &gt;::format</a></div><div class="ttdeci">auto format(const std::chrono::system_clock::time_point &amp;t, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00045">stl.h:45</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1error__code_01_4_html_ad75236b372a56441b539e860530c77c1"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">std::formatter&lt; std::error_code &gt;::format</a></div><div class="ttdeci">auto format(const std::error_code &amp;e, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00060">stl.h:60</a></div></div>
-<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_html_ace0cb1d790feda996bcd4cfbe4d7fd44"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">std::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;::format</a></div><div class="ttdeci">auto format(const std::shared_ptr&lt; event_t &gt; &amp;x, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00070">stl.h:70</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4_html_abc95168478c15e4ba3ee2c9ef95fcd2c"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1chrono_1_1system__clock_1_1time__point_01_4.html#abc95168478c15e4ba3ee2c9ef95fcd2c">std::formatter&lt; std::chrono::system_clock::time_point &gt;::format</a></div><div class="ttdeci">auto format(const std::chrono::system_clock::time_point &amp;t, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00048">stl.h:48</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1error__code_01_4_html_ad75236b372a56441b539e860530c77c1"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1error__code_01_4.html#ad75236b372a56441b539e860530c77c1">std::formatter&lt; std::error_code &gt;::format</a></div><div class="ttdeci">auto format(const std::error_code &amp;e, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00063">stl.h:63</a></div></div>
+<div class="ttc" id="astructstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4_html_ace0cb1d790feda996bcd4cfbe4d7fd44"><div class="ttname"><a href="structstd_1_1formatter_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4.html#ace0cb1d790feda996bcd4cfbe4d7fd44">std::formatter&lt; std::shared_ptr&lt; event_t &gt; &gt;::format</a></div><div class="ttdeci">auto format(const std::shared_ptr&lt; event_t &gt; &amp;x, std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</div><div class="ttdef"><b>Definition</b> <a href="#l00073">stl.h:73</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

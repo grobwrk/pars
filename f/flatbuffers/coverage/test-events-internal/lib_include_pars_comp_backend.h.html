@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Tue Dec 16 20:46:22 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">6</td>
@@ -64,10 +64,13 @@
              : (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
              : SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              : */
-             : #pragma once
+             : #ifndef PARS_COMP_BACKEND_H
+             : #define PARS_COMP_BACKEND_H
              : 
              : #include &quot;pars/ev/enqueuer.h&quot;
+             : #include &quot;pars/ev/hf_registry.h&quot;
              : #include &quot;pars/net/rep.h&quot;
+             : #include &quot;pars/net/socket.h&quot;
              : #include &quot;pars/net/socket_opt.h&quot;
              : 
              : #include &lt;format&gt;
@@ -121,6 +124,8 @@
              : };
              : 
              : } // namespace pars::comp
+             : 
+             : #endif // PARS_COMP_BACKEND_H
 </pre>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
              <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""/></td></tr>

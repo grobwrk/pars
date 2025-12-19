@@ -14,13 +14,13 @@
         <link refid="fib_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -28,9 +28,9 @@
         <link refid="lib_2include_2pars_2concept_2event_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -46,29 +46,34 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>chrono</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>concepts</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>cstdint</label>
       </node>
       <node id="5">
         <label>nng/nng.h</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>optional</label>
       </node>
-      <node id="11">
-        <label>stdexcept</label>
+      <node id="7">
+        <label>ratio</label>
       </node>
       <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="13">
         <label>stop_token</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>string_view</label>
       </node>
     </incdepgraph>

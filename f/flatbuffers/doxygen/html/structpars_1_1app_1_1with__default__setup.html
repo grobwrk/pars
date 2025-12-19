@@ -132,7 +132,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00037">37</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00048">48</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ed90269f5f66e4774fe1facdd9b8ae4" name="a8ed90269f5f66e4774fe1facdd9b8ae4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ed90269f5f66e4774fe1facdd9b8ae4">&#9670;&#160;</a></span>with_default_setup()</h2>
@@ -183,10 +183,10 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00051">51</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>  {</div>
-<div class="line"><span class="lineno">   53</span>    spdlog::set_pattern(default_pattern_with_source_loc());</div>
-<div class="line"><span class="lineno">   54</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00062">62</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>  {</div>
+<div class="line"><span class="lineno">   64</span>    spdlog::set_pattern(default_pattern_with_source_loc());</div>
+<div class="line"><span class="lineno">   65</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -215,67 +215,67 @@ Protected Member Functions</h2></td></tr>
 <p>sinks</p>
 <p>register pars logger and set as default</p>
 
-<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00056">56</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>  {</div>
-<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enabled)</div>
-<div class="line"><span class="lineno">   59</span>    {</div>
-<div class="line"><span class="lineno">   60</span>      <span class="keyword">using namespace </span>spdlog;</div>
-<div class="line"><span class="lineno">   61</span></div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>      std::vector&lt;sink_ptr&gt; sinks;</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>      <span class="keyword">auto</span> stderr_s = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enable_stderr)</div>
-<div class="line"><span class="lineno">   69</span>      {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keyword">auto</span> stderr_sink = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>        sinks.push_back(stderr_s);</div>
-<div class="line"><span class="lineno">   73</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="setup_8h_source.html#l00067">67</a> of file <a class="el" href="setup_8h_source.html">setup.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>  {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enabled)</div>
+<div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>      <span class="keyword">using namespace </span>spdlog;</div>
+<div class="line"><span class="lineno">   72</span></div>
 <div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enable_file)</div>
-<div class="line"><span class="lineno">   76</span>      {</div>
-<div class="line"><span class="lineno">   77</span>        <span class="keyword">auto</span> file_s = std::make_shared&lt;sinks::basic_file_sink_mt&gt;(<span class="stringliteral">&quot;pars.log&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>      std::vector&lt;sink_ptr&gt; sinks;</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>      <span class="keyword">auto</span> stderr_s = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</div>
 <div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>        sinks.push_back(file_s);</div>
-<div class="line"><span class="lineno">   80</span>      }</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span><span class="preprocessor">#if defined(PARS_LOG_ENABLE_MSVC)</span></div>
-<div class="line"><span class="lineno">   83</span>      <span class="keyword">auto</span> msvc_s = std::make_shared&lt;sinks::msvc_sink_mt&gt;();</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>      sinks.push_back(msvc_s);</div>
-<div class="line"><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span><span class="preprocessor">#if defined(PARS_LOG_ENABLE_SYSLOG)</span></div>
-<div class="line"><span class="lineno">   89</span>      <span class="keyword">auto</span> syslog_s = std::make_shared&lt;sinks::syslog_sink_mt&gt;(</div>
-<div class="line"><span class="lineno">   90</span>        <span class="stringliteral">&quot;pars&quot;</span>, LOG_CONS | LOG_NDELAY, LOG_LOCAL2, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>      sinks.push_back(syslog_s);</div>
-<div class="line"><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   94</span></div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>      {</div>
-<div class="line"><span class="lineno">   98</span>        <span class="keyword">auto</span> default_l = std::make_shared&lt;logger&gt;(<span class="stringliteral">&quot;pars&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>        <span class="comment">// default_l-&gt;set_pattern(default_pattern);</span></div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>        default_l-&gt;sinks() = sinks;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>        register_logger(default_l);</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        set_pattern(default_pattern());</div>
+<div class="line"><span class="lineno">   79</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enable_stderr)</div>
+<div class="line"><span class="lineno">   80</span>      {</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keyword">auto</span> stderr_sink = std::make_shared&lt;sinks::stderr_color_sink_mt&gt;();</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>        sinks.push_back(stderr_s);</div>
+<div class="line"><span class="lineno">   84</span>      }</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>      <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (pars_log_enable_file)</div>
+<div class="line"><span class="lineno">   87</span>      {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keyword">auto</span> file_s = std::make_shared&lt;sinks::basic_file_sink_mt&gt;(<span class="stringliteral">&quot;pars.log&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>        sinks.push_back(file_s);</div>
+<div class="line"><span class="lineno">   91</span>      }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span><span class="preprocessor">#if defined(PARS_LOG_ENABLE_MSVC)</span></div>
+<div class="line"><span class="lineno">   94</span>      <span class="keyword">auto</span> msvc_s = std::make_shared&lt;sinks::msvc_sink_mt&gt;();</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>      sinks.push_back(msvc_s);</div>
+<div class="line"><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span><span class="preprocessor">#if defined(PARS_LOG_ENABLE_SYSLOG)</span></div>
+<div class="line"><span class="lineno">  100</span>      <span class="keyword">auto</span> syslog_s = std::make_shared&lt;sinks::syslog_sink_mt&gt;(</div>
+<div class="line"><span class="lineno">  101</span>        <span class="stringliteral">&quot;pars&quot;</span>, LOG_CONS | LOG_NDELAY, LOG_LOCAL2, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>      sinks.push_back(syslog_s);</div>
+<div class="line"><span class="lineno">  104</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  105</span></div>
 <div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>        set_default_logger(default_l);</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>        set_level(<span class="keyword">static_cast&lt;</span>level::level_enum<span class="keyword">&gt;</span>(<a class="code hl_define" href="log_8h.html#ae4fda6f71f35120e2ff48157fca961b5">SPDLOG_ACTIVE_LEVEL</a>));</div>
-<div class="line"><span class="lineno">  111</span>      }</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="line"><span class="lineno">  113</span>  }</div>
-<div class="ttc" id="alog_8h_html_ae4fda6f71f35120e2ff48157fca961b5"><div class="ttname"><a href="log_8h.html#ae4fda6f71f35120e2ff48157fca961b5">SPDLOG_ACTIVE_LEVEL</a></div><div class="ttdeci">#define SPDLOG_ACTIVE_LEVEL</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00041">log.h:41</a></div></div>
+<div class="line"><span class="lineno">  108</span>      {</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keyword">auto</span> default_l = std::make_shared&lt;logger&gt;(<span class="stringliteral">&quot;pars&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>        <span class="comment">// default_l-&gt;set_pattern(default_pattern);</span></div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        default_l-&gt;sinks() = sinks;</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>        register_logger(default_l);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>        set_pattern(default_pattern());</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>        set_default_logger(default_l);</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        set_level(<span class="keyword">static_cast&lt;</span>level::level_enum<span class="keyword">&gt;</span>(<a class="code hl_define" href="log_8h.html#ae4fda6f71f35120e2ff48157fca961b5">SPDLOG_ACTIVE_LEVEL</a>));</div>
+<div class="line"><span class="lineno">  122</span>      }</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span>  }</div>
+<div class="ttc" id="alog_8h_html_ae4fda6f71f35120e2ff48157fca961b5"><div class="ttname"><a href="log_8h.html#ae4fda6f71f35120e2ff48157fca961b5">SPDLOG_ACTIVE_LEVEL</a></div><div class="ttdeci">#define SPDLOG_ACTIVE_LEVEL</div><div class="ttdef"><b>Definition</b> <a href="log_8h_source.html#l00035">log.h:35</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="log_8h_source.html#l00041">SPDLOG_ACTIVE_LEVEL</a>.</p>
+<p class="reference">References <a class="el" href="log_8h_source.html#l00035">SPDLOG_ACTIVE_LEVEL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="single_8h_source.html#l00058">pars::app::single&lt; component_type &gt;::exec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="single_8h_source.html#l00065">pars::app::single&lt; component_type &gt;::exec()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -120,38 +120,41 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html">   47</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1net_1_1socket__opt.html">socket_opt</a></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">   51</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">recv_timeout</a>; </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">   52</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">send_timeout</a>; </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">   56</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">req_resend_time</a>; </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">   57</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">req_resend_tick</a>; </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_NET_SOCKETOPT_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_NET_SOCKETOPT_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="init_8h.html">pars/init.h</a>&quot;</span> <span class="comment">// IWYU pragma: keep</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;nng/nng.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepars_1_1net.html">pars::net</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html">   48</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1net_1_1socket__opt.html">socket_opt</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">   52</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">recv_timeout</a>; </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">   53</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">send_timeout</a>; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">   57</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">req_resend_time</a>; </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">   58</a></span>  std::optional&lt;nng_duration&gt; <a class="code hl_variable" href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">req_resend_tick</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace pars::net</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace pars::net</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// PARS_NET_SOCKETOPT_H</span></div>
 <div class="ttc" id="ainit_8h_html"><div class="ttname"><a href="init_8h.html">init.h</a></div></div>
-<div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00037">net.h:38</a></div></div>
-<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html">pars::net::socket_opt</a></div><div class="ttdoc">Represents the options that can be configured for a given socket.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">socket_opt.h:48</a></div></div>
-<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a10032afa50eb38e8537d5526269c605c"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">pars::net::socket_opt::req_resend_time</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; req_resend_time</div><div class="ttdoc">NNG_OPT_REQ_RESENDTIME.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">socket_opt.h:56</a></div></div>
-<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a55e0c5f49e8609adc23d4b9d93778372"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">pars::net::socket_opt::recv_timeout</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; recv_timeout</div><div class="ttdoc">NNG_OPT_RECVTIMEO.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">socket_opt.h:51</a></div></div>
-<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a7c843be919425c7841f9b52a4c5e5d28"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">pars::net::socket_opt::req_resend_tick</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; req_resend_tick</div><div class="ttdoc">NNG_OPT_REQ_RESENDTICK.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">socket_opt.h:57</a></div></div>
-<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_aebff9e4afe33cc88b5d29e9dbb29bc28"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">pars::net::socket_opt::send_timeout</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; send_timeout</div><div class="ttdoc">NNG_OPT_SENDTIMEO.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">socket_opt.h:52</a></div></div>
+<div class="ttc" id="anamespacepars_1_1net_html"><div class="ttname"><a href="namespacepars_1_1net.html">pars::net</a></div><div class="ttdef"><b>Definition</b> <a href="net_8h_source.html#l00038">net.h:39</a></div></div>
+<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html">pars::net::socket_opt</a></div><div class="ttdoc">Represents the options that can be configured for a given socket.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">socket_opt.h:49</a></div></div>
+<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a10032afa50eb38e8537d5526269c605c"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a10032afa50eb38e8537d5526269c605c">pars::net::socket_opt::req_resend_time</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; req_resend_time</div><div class="ttdoc">NNG_OPT_REQ_RESENDTIME.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">socket_opt.h:57</a></div></div>
+<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a55e0c5f49e8609adc23d4b9d93778372"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a55e0c5f49e8609adc23d4b9d93778372">pars::net::socket_opt::recv_timeout</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; recv_timeout</div><div class="ttdoc">NNG_OPT_RECVTIMEO.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">socket_opt.h:52</a></div></div>
+<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_a7c843be919425c7841f9b52a4c5e5d28"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#a7c843be919425c7841f9b52a4c5e5d28">pars::net::socket_opt::req_resend_tick</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; req_resend_tick</div><div class="ttdoc">NNG_OPT_REQ_RESENDTICK.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">socket_opt.h:58</a></div></div>
+<div class="ttc" id="astructpars_1_1net_1_1socket__opt_html_aebff9e4afe33cc88b5d29e9dbb29bc28"><div class="ttname"><a href="structpars_1_1net_1_1socket__opt.html#aebff9e4afe33cc88b5d29e9dbb29bc28">pars::net::socket_opt::send_timeout</a></div><div class="ttdeci">std::optional&lt; nng_duration &gt; send_timeout</div><div class="ttdoc">NNG_OPT_SENDTIMEO.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">socket_opt.h:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

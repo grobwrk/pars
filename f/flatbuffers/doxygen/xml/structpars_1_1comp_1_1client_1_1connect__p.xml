@@ -18,8 +18,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="58" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="58" bodyend="-1"/>
-        <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="62" endline="65">pars::comp::client::connect</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="61" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="65" endline="68">pars::comp::client::connect</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" prot="public" static="no" mutable="no">
         <type>char *</type>
@@ -35,15 +35,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="59" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="59" bodyend="-1"/>
-        <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="62" endline="65">pars::comp::client::connect</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="62" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="65" endline="68">pars::comp::client::connect</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="56" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="57" bodyend="60"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="59" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="60" bodyend="63"/>
     <listofallmembers>
       <member refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" prot="public" virt="non-virtual"><scope>pars::comp::client::connect_p</scope><name>service_addr</name></member>
       <member refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" prot="public" virt="non-virtual"><scope>pars::comp::client::connect_p</scope><name>service_cmode</name></member>

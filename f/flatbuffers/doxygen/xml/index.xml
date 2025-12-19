@@ -275,7 +275,7 @@
     <member refid="structpars_1_1ev_1_1hf__registry_1ab3c4aa502195c971b4f3bde2ddfbfabd" kind="variable"><name>types_m</name></member>
     <member refid="structpars_1_1ev_1_1hf__registry_1a95e42b3a5122d85ba28862cb0bbad825" kind="variable"><name>runner_m</name></member>
     <member refid="structpars_1_1ev_1_1hf__registry_1a55c88e8f8b3dbefd1d6739d023632835" kind="function"><name>hf_registry</name></member>
-    <member refid="structpars_1_1ev_1_1hf__registry_1ad8e4eac6e124f05d3bc86ba167bf1299" kind="function"><name>on</name></member>
+    <member refid="structpars_1_1ev_1_1hf__registry_1a6e7698a3d0fa173ebd92faa300120211" kind="function"><name>on</name></member>
     <member refid="structpars_1_1ev_1_1hf__registry_1ade1f24a6befdc5df33d9b3bc7d6aaba0" kind="function"><name>insert</name></member>
     <member refid="structpars_1_1ev_1_1hf__registry_1aa49457624813a0936277091b08fb5215" kind="function"><name>insert</name></member>
     <member refid="structpars_1_1ev_1_1hf__registry_1ae322a41c65296eabf259043c68998000" kind="function"><name>lock</name></member>
@@ -453,11 +453,11 @@
     <member refid="structpars_1_1ev_1_1obb_1a26b96ef41ebde9d42c75435a34d6ba26" kind="variable"><name>fbb_m</name></member>
     <member refid="structpars_1_1ev_1_1obb_1a2928ec3b5ea46c0d86a54ef49568e645" kind="variable"><name>obb_m</name></member>
     <member refid="structpars_1_1ev_1_1obb_1a057ad43ec37691b691dbba5affd9d156" kind="function"><name>obb</name></member>
-    <member refid="structpars_1_1ev_1_1obb_1a48c4efb84930d93b6c5226662703c9c2" kind="function"><name>obb</name></member>
+    <member refid="structpars_1_1ev_1_1obb_1a75b17587c0ec594c24c1aa168069b41a" kind="function"><name>obb</name></member>
     <member refid="structpars_1_1ev_1_1obb_1a4f1a10902d1ddbbe4a237757f9f9cc51" kind="function"><name>obb</name></member>
     <member refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" kind="function"><name>within</name></member>
     <member refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" kind="function"><name>default_size</name></member>
-    <member refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" kind="function"><name>using_size</name></member>
+    <member refid="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" kind="function"><name>using_size</name></member>
     <member refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" kind="function"><name>from</name></member>
     <member refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" kind="function"><name>and_then</name></member>
     <member refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" kind="function"><name>table</name></member>
@@ -1139,7 +1139,6 @@
   <compound refid="iface_8h" kind="file"><name>iface.h</name>
   </compound>
   <compound refid="own_8h" kind="file"><name>own.h</name>
-    <member refid="own_8h_1aab6b74c3d0fb7f0e1822bdff39a8a6c5" kind="variable"><name>ownxx_own_is_really_needed_v</name></member>
   </compound>
   <compound refid="clev_2value_8h" kind="file"><name>value.h</name>
   </compound>
@@ -1288,7 +1287,6 @@
   <compound refid="nngxx_2iface_2socket_8h" kind="file"><name>socket.h</name>
   </compound>
   <compound refid="nngxx_2socket_8h" kind="file"><name>socket.h</name>
-    <member refid="nngxx_2socket_8h_1ad5405cb6988304b4819775b78f6c4acc" kind="variable"><name>nngxx_socket_is_really_needed_v</name></member>
   </compound>
   <compound refid="pars_2net_2socket_8h" kind="file"><name>socket.h</name>
   </compound>

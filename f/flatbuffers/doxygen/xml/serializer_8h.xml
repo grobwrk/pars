@@ -6,16 +6,33 @@
     <includes refid="lib_2include_2pars_2concept_2event_8h" local="yes">pars/concept/event.h</includes>
     <includes refid="klass_8h" local="yes">pars/ev/klass.h</includes>
     <includes refid="log_8h" local="yes">pars/log.h</includes>
+    <includes refid="flags_8h" local="yes">pars/log/flags.h</includes>
+    <includes refid="hash_8h" local="yes">pars/net/hash.h</includes>
+    <includes local="no">flatbuffers/buffer.h</includes>
+    <includes local="no">flatbuffers/detached_buffer.h</includes>
+    <includes local="no">flatbuffers/flatbuffer_builder.h</includes>
     <includes local="no">flatbuffers/flatbuffers.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">optional</includes>
     <includes local="no">span</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
     <includes local="no">variant</includes>
     <includedby refid="job_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/job.h</includedby>
     <includedby refid="op_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h</includedby>
     <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
-      <node id="6">
+      <node id="5">
         <label>clev/err.h</label>
         <link refid="clev_2err_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -24,43 +41,57 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="18">
         <label>clev/iface.h</label>
         <link refid="iface_8h"/>
       </node>
-      <node id="5">
+      <node id="28">
         <label>clev/own.h</label>
         <link refid="own_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="17">
         <label>clev/value.h</label>
         <link refid="clev_2value_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>nngxx/concept.h</label>
-        <link refid="concept_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="19">
+        <label>nngxx/concept.h</label>
+        <link refid="concept_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
         <label>nngxx/err.h</label>
         <link refid="nngxx_2err_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -68,37 +99,53 @@
         <link refid="iface_2msg_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="26">
         <label>nngxx/iface/pipe.h</label>
         <link refid="nngxx_2iface_2pipe_8h"/>
-        <childnode refid="19" relation="include">
-        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="16">
         <label>nngxx/iface/value.h</label>
         <link refid="nngxx_2iface_2value_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -106,95 +153,135 @@
         <link refid="msg_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="33">
-        <label>nngxx/msg_body.h</label>
-        <link refid="msg__body_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>nngxx/msg_body.h</label>
+        <link refid="msg__body_8h"/>
         <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
       </node>
-      <node id="16">
+      <node id="21">
         <label>nngxx/opt.h</label>
         <link refid="opt_8h"/>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="23">
         <label>nngxx/opt_getter.h</label>
         <link refid="opt__getter_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="20">
-        <label>nngxx/opt_setter.h</label>
-        <link refid="opt__setter_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="22">
-        <label>nngxx/pipe.h</label>
-        <link refid="nngxx_2pipe_8h"/>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="24">
-        <label>nngxx/socket_decl.h</label>
-        <link refid="socket__decl_8h"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>nngxx/opt_setter.h</label>
+        <link refid="opt__setter_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="25">
-        <label>pars/concept/event.h</label>
-        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <label>nngxx/pipe.h</label>
+        <link refid="nngxx_2pipe_8h"/>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="31">
-        <label>pars/concept/kind.h</label>
-        <link refid="concept_2kind_8h"/>
-        <childnode refid="25" relation="include">
+      <node id="27">
+        <label>nngxx/socket_decl.h</label>
+        <link refid="socket__decl_8h"/>
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
-      </node>
-      <node id="26">
-        <label>pars/ev/kind_decl.h</label>
-        <link refid="kind__decl_8h"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="30">
-        <label>pars/ev/klass.h</label>
-        <link refid="klass_8h"/>
-        <childnode refid="2" relation="include">
+        <label>pars/concept/event.h</label>
+        <link refid="lib_2include_2pars_2concept_2event_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>pars/concept/kind.h</label>
+        <link refid="concept_2kind_8h"/>
+        <childnode refid="30" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
+      </node>
+      <node id="31">
+        <label>pars/ev/kind_decl.h</label>
+        <link refid="kind__decl_8h"/>
         <childnode refid="32" relation="include">
         </childnode>
+      </node>
+      <node id="36">
+        <label>pars/ev/klass.h</label>
+        <link refid="klass_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -202,11 +289,63 @@
         <link refid="serializer_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>pars/init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>pars/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="44" relation="include">
         </childnode>
         <childnode refid="45" relation="include">
         </childnode>
@@ -214,116 +353,145 @@
         </childnode>
         <childnode refid="47" relation="include">
         </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
       </node>
-      <node id="27">
-        <label>pars/init.h</label>
-        <link refid="init_8h"/>
+      <node id="51">
+        <label>pars/log/flags.h</label>
+        <link refid="flags_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
-        </childnode>
       </node>
-      <node id="37">
-        <label>pars/log.h</label>
-        <link refid="log_8h"/>
-        <childnode refid="27" relation="include">
+      <node id="38">
+        <label>pars/net/hash.h</label>
+        <link refid="hash_8h"/>
+        <childnode refid="32" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
-        </childnode>
-        <childnode refid="43" relation="include">
-        </childnode>
-        <childnode refid="44" relation="include">
-        </childnode>
-      </node>
-      <node id="32">
-        <label>pars/net/hash.h</label>
-        <link refid="hash_8h"/>
-        <childnode refid="33" relation="include">
-        </childnode>
-        <childnode refid="27" relation="include">
-        </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
       </node>
-      <node id="28">
+      <node id="33">
         <label>chrono</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>concepts</label>
       </node>
-      <node id="39">
+      <node id="50">
         <label>config.h</label>
       </node>
-      <node id="34">
+      <node id="29">
         <label>cstddef</label>
       </node>
-      <node id="35">
+      <node id="20">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>cstdlib</label>
+      </node>
+      <node id="40">
         <label>cstring</label>
       </node>
       <node id="7">
         <label>expected</label>
       </node>
-      <node id="45">
+      <node id="52">
+        <label>flatbuffers/buffer.h</label>
+      </node>
+      <node id="53">
+        <label>flatbuffers/detached_buffer.h</label>
+      </node>
+      <node id="54">
+        <label>flatbuffers/flatbuffer_builder.h</label>
+      </node>
+      <node id="55">
         <label>flatbuffers/flatbuffers.h</label>
       </node>
-      <node id="36">
+      <node id="41">
         <label>format</label>
       </node>
       <node id="8">
         <label>functional</label>
       </node>
-      <node id="15">
-        <label>nng/nng.h</label>
-      </node>
-      <node id="17">
-        <label>nng/protocol/reqrep0/req.h</label>
-      </node>
-      <node id="46">
-        <label>span</label>
-      </node>
-      <node id="38">
-        <label>spdlog/common.h</label>
-      </node>
-      <node id="41">
-        <label>spdlog/sinks/basic_file_sink.h</label>
+      <node id="56">
+        <label>iterator</label>
       </node>
       <node id="42">
-        <label>spdlog/sinks/null_sink.h</label>
+        <label>memory</label>
       </node>
-      <node id="43">
-        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      <node id="13">
+        <label>nng/nng.h</label>
+      </node>
+      <node id="22">
+        <label>nng/protocol/reqrep0/req.h</label>
+      </node>
+      <node id="57">
+        <label>optional</label>
+      </node>
+      <node id="34">
+        <label>ratio</label>
+      </node>
+      <node id="58">
+        <label>span</label>
       </node>
       <node id="44">
+        <label>spdlog/common.h</label>
+      </node>
+      <node id="45">
+        <label>spdlog/sinks/basic_file_sink.h</label>
+      </node>
+      <node id="46">
+        <label>spdlog/sinks/null_sink.h</label>
+      </node>
+      <node id="47">
+        <label>spdlog/sinks/stdout_color_sinks.h</label>
+      </node>
+      <node id="49">
         <label>spdlog/sinks/syslog_sink.h</label>
       </node>
-      <node id="40">
+      <node id="48">
         <label>spdlog/spdlog.h</label>
       </node>
       <node id="9">
         <label>stdexcept</label>
       </node>
-      <node id="29">
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="35">
         <label>string_view</label>
       </node>
       <node id="10">
         <label>system_error</label>
       </node>
-      <node id="21">
+      <node id="11">
         <label>type_traits</label>
       </node>
-      <node id="47">
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="59">
         <label>variant</label>
       </node>
     </incdepgraph>
@@ -389,6 +557,8 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
@@ -409,6 +579,10 @@
         <link refid="hf__registry_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
@@ -416,6 +590,14 @@
         <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -440,6 +622,8 @@
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
@@ -529,6 +713,10 @@
       <node id="18">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
         <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
@@ -592,211 +780,229 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="msg_8h" kindref="compound">nngxx/msg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="klass_8h" kindref="compound">pars/ev/klass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">pars/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;flatbuffers/flatbuffers.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;span&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
-<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PRAGMA_EV_SERIALIZER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRAGMA_EV_SERIALIZER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="msg_8h" kindref="compound">nngxx/msg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="klass_8h" kindref="compound">pars/ev/klass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">pars/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="flags_8h" kindref="compound">pars/log/flags.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hash_8h" kindref="compound">pars/net/hash.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;flatbuffers/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;flatbuffers/detached_buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;flatbuffers/flatbuffer_builder.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;flatbuffers/flatbuffers.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ev_t&gt;</highlight></codeline>
-<codeline lineno="47" refid="structpars_1_1ev_1_1obb" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">obb</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="50" refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/>=<sp/>ev_t;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref><sp/>=<sp/>event_type::builder;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref><sp/>=<sp/>event_type::table_type;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref><sp/>=<sp/>event_type::offset_type;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/>obb()</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_obj_m{}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>fbb_m{*fbb_obj_m}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_obj_m{size}</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>fbb_m{*fbb_obj_m}</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>obb(flatbuffers::FlatBufferBuilder&amp;<sp/>fbb)</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_m{fbb}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>std::optional&lt;flatbuffers::FlatBufferBuilder&gt;<sp/>fbb_obj_m;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>flatbuffers::FlatBufferBuilder&amp;<sp/>fbb_m;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref><sp/>obb_m;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="86" refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" kindref="member">within</ref>(flatbuffers::FlatBufferBuilder&amp;<sp/>fbb)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{fbb};<sp/>}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" kindref="member">default_size</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{};<sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1a7825b07fedae14e1587ad73c94c9d2fb" kindref="member">using_size</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{size};<sp/>}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92" refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" kindref="member">from</ref>(<ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/>m)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref>{std::move(m)};<sp/>}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>fn_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
-<codeline lineno="95" refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" kindref="member">and_then</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self,<sp/>fn_t&amp;&amp;<sp/>mem_f,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(self)</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fn<sp/>=<sp/>std::bind(std::forward&lt;fn_t&gt;(mem_f),<sp/>std::placeholders::_1,</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;span&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;variant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1_1ev" kindref="compound">pars::ev</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ev_t&gt;</highlight></codeline>
+<codeline lineno="63" refid="structpars_1_1ev_1_1obb" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">obb</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66" refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/>=<sp/>ev_t;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref><sp/>=<sp/>event_type::builder;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref><sp/>=<sp/>event_type::table_type;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref><sp/>=<sp/>event_type::offset_type;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>obb()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_obj_m{}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>fbb_m{*fbb_obj_m}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb</ref>(std::size_t<sp/>size)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_obj_m{size}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>fbb_m{*fbb_obj_m}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>obb(flatbuffers::FlatBufferBuilder&amp;<sp/>fbb)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>fbb_m{fbb}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>obb_m{fbb_m}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>std::optional&lt;flatbuffers::FlatBufferBuilder&gt;<sp/>fbb_obj_m;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>flatbuffers::FlatBufferBuilder&amp;<sp/>fbb_m;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1obb_1a2118dc94904b6f18ab5987a0dd06e3c2" kindref="member">builder_type</ref><sp/>obb_m;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::invoke(fn,<sp/>self.obb_m);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102" refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1a1fc95325c0789b3bf552ebd8134d36b8" kindref="member">within</ref>(flatbuffers::FlatBufferBuilder&amp;<sp/>fbb)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{fbb};<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1af9dad4df9b089ce913b8b1d3460fb91b" kindref="member">default_size</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{};<sp/>}</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106" refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref>*<sp/><ref refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" kindref="member">table</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flatbuffers::GetRoot&lt;table_type&gt;(self.fbb_m.GetBufferPointer());</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111" refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" kindref="member">finish</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.obb_m.Finish();<sp/>}</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113" refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" kindref="member">build</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>self.fbb_m.Finish(self.finish());</highlight></codeline>
+<codeline lineno="106" refid="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>obb<sp/><ref refid="structpars_1_1ev_1_1obb_1a5b8367f01054f21f140bd2d8accad04c" kindref="member">using_size</ref>(std::size_t<sp/>size)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>obb{size};<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" kindref="member">from</ref>(<ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/>m)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref>{std::move(m)};<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>fn_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>args_t&gt;</highlight></codeline>
+<codeline lineno="111" refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1acd8ba6a71368cad9ba33795c5636046a" kindref="member">and_then</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self,<sp/>fn_t&amp;&amp;<sp/>mem_f,<sp/>args_t&amp;&amp;...<sp/>args)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(self)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>fn<sp/>=<sp/>std::bind(std::forward&lt;fn_t&gt;(mem_f),<sp/>std::placeholders::_1,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward&lt;args_t&gt;(args)...);</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref>{self.fbb_m.Release()};</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>builder_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="122" refid="structpars_1_1ev_1_1fb" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fb</highlight></codeline>
-<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="125" refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" kindref="member">event_type</ref><sp/>=<sp/>event_t;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>std::invoke(fn,<sp/>self.obb_m);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref>*<sp/><ref refid="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" kindref="member">table</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flatbuffers::GetRoot&lt;table_type&gt;(self.fbb_m.GetBufferPointer());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127" refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" kindref="member">builder</ref><sp/>=<sp/>builder_t;</highlight></codeline>
+<codeline lineno="127" refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aece9d2f64d0a996c6dc818b49f853490" kindref="member">offset_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1a6d269a9f01b6406c2656dfd3af6acc92" kindref="member">finish</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.obb_m.Finish();<sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129" refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref><sp/>=<sp/>builder::Table;</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131" refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" kindref="member">offset_type</ref><sp/>=<sp/>flatbuffers::Offset&lt;table_type&gt;;</highlight></codeline>
+<codeline lineno="129" refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref><sp/><ref refid="structpars_1_1ev_1_1obb_1a37f993fb4bbff6091b420389051de844" kindref="member">build</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>self)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>self.fbb_m.Finish(self.finish());</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb&lt;event_t&gt;</ref>;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/>fb(flatbuffers::DetachedBuffer<sp/>b)</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>buf_m{<ref refid="namespacestd" kindref="compound">std</ref>::make_shared&lt;flatbuffers::DetachedBuffer&gt;(<ref refid="namespacestd" kindref="compound">std</ref>::move(b))}</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1fb" kindref="compound">fb</ref>(<ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/>m)</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>buf_m{<ref refid="namespacestd" kindref="compound">std</ref>::make_shared&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg&gt;(<ref refid="namespacestd" kindref="compound">std</ref>::move(m))}</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="147" refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" refkind="member"><highlight class="normal"><sp/><sp/>std::span&lt;uint8_t&gt;<sp/><ref refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" kindref="member">span</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="148"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit(</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>b)<sp/>{</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">T<sp/>=<sp/>std::decay_t&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(b)&gt;;</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T,<sp/>std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;&gt;)</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>buf<sp/>=</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;b);</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::span&lt;uint8_t&gt;(buf-&gt;begin(),</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::distance(buf-&gt;begin(),<sp/>buf-&gt;end()));</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;T,<sp/>std::shared_ptr&lt;nngxx::msg&gt;&gt;)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::shared_ptr&lt;nngxx::msg&gt;*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;b);</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::span&lt;uint8_t&gt;(msg-&gt;body().data&lt;uint8_t&gt;()<sp/>+<sp/>8,</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg-&gt;body().size()<sp/>-<sp/>8);</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!std::is_same_v&lt;T,<sp/>T&gt;,<sp/></highlight><highlight class="stringliteral">&quot;non-exhaustive<sp/>visitor!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buf_m);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref>{self.fbb_m.Release()};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>builder_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="138" refid="structpars_1_1ev_1_1fb" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fb</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141" refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1a06bb11456a36c4bcc5cd4fd4501d8e1d" kindref="member">event_type</ref><sp/>=<sp/>event_t;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1ab7093851a0dca068aabebaaa400abf35" kindref="member">builder</ref><sp/>=<sp/>builder_t;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref><sp/>=<sp/>builder::Table;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1fb_1ac7c474e4b71142c8082c26b106083423" kindref="member">offset_type</ref><sp/>=<sp/>flatbuffers::Offset&lt;table_type&gt;;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1obb" kindref="compound">obb&lt;event_t&gt;</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>fb(flatbuffers::DetachedBuffer<sp/>b)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>buf_m{<ref refid="namespacestd" kindref="compound">std</ref>::make_shared&lt;flatbuffers::DetachedBuffer&gt;(<ref refid="namespacestd" kindref="compound">std</ref>::move(b))}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1ev_1_1fb" kindref="compound">fb</ref>(<ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/>m)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>buf_m{<ref refid="namespacestd" kindref="compound">std</ref>::make_shared&lt;<ref refid="namespacenngxx" kindref="compound">nngxx</ref>::msg&gt;(<ref refid="namespacestd" kindref="compound">std</ref>::move(m))}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="163" refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" refkind="member"><highlight class="normal"><sp/><sp/>std::span&lt;uint8_t&gt;<sp/><ref refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" kindref="member">span</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="164"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::visit(</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;&amp;<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">T<sp/>=<sp/>std::decay_t&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(b)&gt;;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T,<sp/>std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;&gt;)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>buf<sp/>=</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;b);</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176" refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref>*<sp/><ref refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" kindref="member">table</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="177"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flatbuffers::GetRoot&lt;table_type&gt;(<ref refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" kindref="member">span</ref>().data());</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/>std::variant&lt;std::shared_ptr&lt;nngxx::msg&gt;,</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;&gt;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_m;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187" refid="structpars_1_1ev_1_1serialize" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1serialize" kindref="compound">serialize</ref></highlight></codeline>
-<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="190" refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/><ref refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" kindref="member">to_network</ref>(event_t&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>)</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>get<sp/>the<sp/>serialized<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;uint8_t&gt;<sp/>span<sp/>=<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.span();</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>compute<sp/>the<sp/>event_hash</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>event_hash<sp/>=<sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;klass&lt;event_t&gt;</ref>&gt;::hash;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>create<sp/>the<sp/>nngxx::msg<sp/>to<sp/>hold<sp/>the<sp/>hash+event</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>nngxx::make_msg(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash)<sp/>+<sp/>span.size()).value_or_abort();</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>m.body();</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4.<sp/>append<sp/>the<sp/>event<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>std::memcpy(b.data&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&gt;(),<sp/>&amp;event_hash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash));</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5.<sp/>append<sp/>the<sp/>serialized<sp/>event</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(b.data&lt;uint8_t&gt;()<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash),<sp/>span.data(),<sp/>span.size());</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Serialized<sp/>Event<sp/>[{}]<sp/>to<sp/>Message<sp/>[{}]&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>m);</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"></highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
-<codeline lineno="214" refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>event_t<sp/><ref refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" kindref="member">to_event</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>&amp;<sp/>m)</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>compute<sp/>received<sp/>and<sp/>requested<sp/>event<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>recv_event_hash<sp/>=<sp/>hash_from_msg(m);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>req_event_hash<sp/>=<sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;klass&lt;event_t&gt;</ref>&gt;::hash;</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>check<sp/>they<sp/>correspond</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(recv_event_hash<sp/>-<sp/>req_event_hash<sp/>!=<sp/>0)</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Requested<sp/>event<sp/>mismatch!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::span&lt;uint8_t&gt;(buf-&gt;begin(),</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::distance(buf-&gt;begin(),<sp/>buf-&gt;end()));</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(std::is_same_v&lt;T,<sp/>std::shared_ptr&lt;nngxx::msg&gt;&gt;)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">std::shared_ptr&lt;nngxx::msg&gt;*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;b);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::span&lt;uint8_t&gt;(msg-&gt;body().data&lt;uint8_t&gt;()<sp/>+<sp/>8,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg-&gt;body().size()<sp/>-<sp/>8);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(!std::is_same_v&lt;T,<sp/>T&gt;,<sp/></highlight><highlight class="stringliteral">&quot;non-exhaustive<sp/>visitor!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buf_m);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1ev_1_1fb_1a7279e00399835a4912d2c6d4099ac9cb" kindref="member">table_type</ref>*<sp/><ref refid="structpars_1_1ev_1_1fb_1a66582cc38ab83e9e4b719c128019fcfd" kindref="member">table</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="193"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>flatbuffers::GetRoot&lt;table_type&gt;(<ref refid="structpars_1_1ev_1_1fb_1a7fc8ed8176f6935b86b28e802ab986df" kindref="member">span</ref>().data());</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>std::variant&lt;std::shared_ptr&lt;nngxx::msg&gt;,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;flatbuffers::DetachedBuffer&gt;&gt;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>buf_m;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="structpars_1_1ev_1_1serialize" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1ev_1_1serialize" kindref="compound">serialize</ref></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="206" refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref><sp/><ref refid="structpars_1_1ev_1_1serialize_1ad3e218ee1638d058d12c50b60c53c0c6" kindref="member">to_network</ref>(event_t&amp;<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>get<sp/>the<sp/>serialized<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>std::span&lt;uint8_t&gt;<sp/>span<sp/>=<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>.span();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>compute<sp/>the<sp/>event_hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>event_hash<sp/>=<sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;klass&lt;event_t&gt;</ref>&gt;::hash;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>create<sp/>the<sp/>nngxx::msg<sp/>to<sp/>hold<sp/>the<sp/>hash+event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>m<sp/>=<sp/>nngxx::make_msg(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash)<sp/>+<sp/>span.size()).value_or_abort();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>m.body();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>4.<sp/>append<sp/>the<sp/>event<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>std::memcpy(b.data&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&gt;(),<sp/>&amp;event_hash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash));</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>5.<sp/>append<sp/>the<sp/>serialized<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(b.data&lt;uint8_t&gt;()<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(event_hash),<sp/>span.data(),<sp/>span.size());</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>deserialize<sp/>event</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref><sp/>=<sp/><ref refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" kindref="member">obb&lt;event_t&gt;::from</ref>(std::move(m));</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Deserialized<sp/>Message<sp/>[{}]<sp/>to<sp/>Event<sp/>[{}]&quot;</highlight><highlight class="normal">,<sp/>m,</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>);</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>;</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="232"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Serialized<sp/>Event<sp/>[{}]<sp/>to<sp/>Message<sp/>[{}]&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>m);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;event_c<sp/>event_t&gt;</highlight></codeline>
+<codeline lineno="230" refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>event_t<sp/><ref refid="structpars_1_1ev_1_1serialize_1a839317ecb4e438b12e2f6012ed4d4532" kindref="member">to_event</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref>&amp;<sp/>m)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>compute<sp/>received<sp/>and<sp/>requested<sp/>event<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>recv_event_hash<sp/>=<sp/>hash_from_msg(m);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>req_event_hash<sp/>=<sp/><ref refid="structpars_1_1ev_1_1uuid" kindref="compound">uuid&lt;klass&lt;event_t&gt;</ref>&gt;::hash;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>check<sp/>they<sp/>correspond</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(recv_event_hash<sp/>-<sp/>req_event_hash<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Requested<sp/>event<sp/>mismatch!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>deserialize<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref><sp/>=<sp/><ref refid="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" kindref="member">obb&lt;event_t&gt;::from</ref>(std::move(m));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1acf366c3b2c7f2027ca1f4694e783ecb1" kindref="member">pars::debug</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/><ref refid="namespacepars_1a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d" kindref="member">lf::event</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Deserialized<sp/>Message<sp/>[{}]<sp/>to<sp/>Event<sp/>[{}]&quot;</highlight><highlight class="normal">,<sp/>m,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PRAGMA_EV_SERIALIZER_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h"/>
   </compounddef>
