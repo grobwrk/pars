@@ -88,4 +88,6 @@ private:
 
 } // namespace pars::comp
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PARS_COMP_BACKEND_H

@@ -134,4 +134,6 @@ static job make_job(std::size_t j_id, kind_of<event_t> ke)
 
 } // namespace pars::ev
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PARS_EV_JOB_H

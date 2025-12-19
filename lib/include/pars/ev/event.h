@@ -194,4 +194,6 @@ struct klass<shutdown> : base_klass<shutdown>
 
 } // namespace pars::ev
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PARS_EV_EVENT_H

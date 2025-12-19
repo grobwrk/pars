@@ -162,4 +162,6 @@ struct metadata<kind_of, event_t> : base_network_metadata,
              kind_of<event_t> ke) -> pars::ev::METADATA<kind_of, event_t> {    \
   }(ke))
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PRAGMA_EV_METADATA_H

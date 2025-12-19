@@ -89,4 +89,6 @@ private:
 
 } // namespace pars::net
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PARS_NET_TOOLVIEW_H

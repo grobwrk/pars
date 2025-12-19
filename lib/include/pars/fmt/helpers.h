@@ -53,4 +53,6 @@ struct pntl
 
 } // namespace pars::f
 
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
 #endif // PARS_FMT_HELPERS_H
