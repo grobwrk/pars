@@ -14,7 +14,7 @@ var searchData=
   ['metadata_3c_20kind_5fof_2c_20event_5ft_20_3e_11',['metadata&lt; kind_of, event_t &gt;',['../structpars_1_1ev_1_1metadata_3_01kind__of_00_01event__t_01_4.html',1,'pars::ev']]],
   ['metadata_5fm_12',['metadata_m',['../structpars_1_1ev_1_1common__kind.html#a23d1675eec2583a366813be0496d6fed',1,'pars::ev::common_kind']]],
   ['metadata_5ftype_13',['metadata_type',['../structpars_1_1ev_1_1common__kind.html#aedd3fb812f5a8c9a2042cfb498feecb2',1,'pars::ev::common_kind']]],
-  ['milli_14',['milli',['../namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2',1,'pars']]],
+  ['milli_14',['milli',['../namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2',1,'pars::milli'],['../namespacepars_1_1ev_1_1pars.html#aa6acdfc0a76215ae581f6d139cc59e67',1,'pars::ev::pars::milli']]],
   ['movable_5fonly_5fc_15',['movable_only_c',['../conceptnngxx_1_1movable__only__c.html',1,'nngxx']]],
   ['move_5fonly_5fassignable_5fc_16',['move_only_assignable_c',['../conceptnngxx_1_1move__only__assignable__c.html',1,'nngxx']]],
   ['move_5fonly_5fconstructible_5fc_17',['move_only_constructible_c',['../conceptnngxx_1_1move__only__constructible__c.html',1,'nngxx']]],

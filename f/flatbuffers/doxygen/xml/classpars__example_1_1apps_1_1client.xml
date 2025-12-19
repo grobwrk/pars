@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="46" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="69" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars__example_1_1apps_1_1client_1a2e2efae79f1be7f60efd1117cb6f8412" prot="private" static="no">
         <type><ref refid="classpars__example_1_1apps_1_1client" kindref="compound">client</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="70" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="51" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="51" bodyend="51"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="74" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a28488dbd99185cbeee1830ff0f90b242" prot="private" static="no" mutable="no">
         <type><ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="52" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="52" bodyend="52"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="75" column="9" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="75" bodyend="75"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="56" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="79" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ade32c94c7d9a466559a475e9101a35b6" prot="private" static="no" mutable="no">
         <type>std::size_t</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="57" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="57" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="80" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1ab3bb54d85a99175013dcaa418b96e16e" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="58" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="58" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="81" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1client_1a85cdc9bd734e4841d085ef604a4ab209" prot="private" static="no" mutable="no">
         <type>uint64_t</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="59" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="59" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="82" column="12" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="82" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="63" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="63" bodyend="63"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="86" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="86" bodyend="86"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="71" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="71" bodyend="75"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="94" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="94" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a09be8f60d43b4560a2b80e3eca655512" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -200,7 +200,7 @@
 </listitem></orderedlist>
 </para>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="77" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="77" bodyend="128"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="100" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="100" bodyend="151"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="132" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="132" bodyend="144"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="155" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="155" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a86c6c063bd87aeef6ddeb9ad1c48305b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="146" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="146" bodyend="160"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="169" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="169" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a34b6776d72c7ff29ce388d19b77b0f99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="162" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="162" bodyend="173"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="185" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="185" bodyend="196"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a2338f51f150eec5897d13a5a2176704b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="175" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="175" bodyend="190"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="198" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="198" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1ad655b8656dd6d5f9368318371c9782dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="192" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="192" bodyend="206"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="215" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="215" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a2dea7fd29d4fab76a9f538a5048c2505" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="208" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="208" bodyend="222"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="231" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="231" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1client_1a19178b502c43909a38d406dcf2e09faa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="224" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="224" bodyend="236"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="247" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="247" bodyend="259"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -373,7 +373,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="41" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="42" bodyend="237"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" line="64" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/client.cpp" bodystart="65" bodyend="260"/>
     <listofallmembers>
       <member refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" prot="protected" virt="non-virtual"><scope>pars_example::apps::client</scope><name>comp</name></member>
       <member refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" prot="public" virt="non-virtual"><scope>pars_example::apps::client</scope><name>component_type</name></member>

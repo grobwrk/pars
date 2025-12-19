@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="146" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="146" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="145" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="145" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="148" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="148" bodyend="173"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="147" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="147" bodyend="172"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -72,7 +72,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="144" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="145" bodyend="174"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="143" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="144" bodyend="173"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a67a30d2048c828149eaae9a7533e7403" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::server_state &gt;</scope><name>format</name></member>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1server__state_01_4_1a56c4f2f3e8d47e8faeb371a267d02981" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::server_state &gt;</scope><name>server_state</name></member>

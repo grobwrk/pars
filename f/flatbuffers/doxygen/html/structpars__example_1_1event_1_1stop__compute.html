@@ -147,7 +147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00087">87</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00093">93</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3b4d58eca313f7855785ae53a5211e5c" name="a3b4d58eca313f7855785ae53a5211e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b4d58eca313f7855785ae53a5211e5c">&#9670;&#160;</a></span>format_to()</h2>
@@ -173,10 +173,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00096">96</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>  {</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;stop_compute({})&quot;</span>, <a class="code hl_function" href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">table</a>()-&gt;pipe_id());</div>
-<div class="line"><span class="lineno">   99</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00102">102</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;stop_compute({})&quot;</span>, <a class="code hl_function" href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">table</a>()-&gt;pipe_id());</div>
+<div class="line"><span class="lineno">  105</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00050">ctx.h:50</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1fb_html_a66582cc38ab83e9e4b719c128019fcfd"><div class="ttname"><a href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">pars::ev::fb&lt; StopComputeBuilder, stop_compute &gt;::table</a></div><div class="ttdeci">const table_type * table() const</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00192">serializer.h:192</a></div></div>
 </div><!-- fragment -->
@@ -217,12 +217,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00089">89</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>  {</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">obb&lt;stop_compute&gt;::using_size</a>(64)</div>
-<div class="line"><span class="lineno">   92</span>      .<a class="code hl_function" href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">and_then</a>(&amp;stop_compute::builder::add_pipe_id, pipe_id)</div>
-<div class="line"><span class="lineno">   93</span>      .build();</div>
-<div class="line"><span class="lineno">   94</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00095">95</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>  {</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">pars::ev::obb&lt;stop_compute&gt;::using_size</a>(64)</div>
+<div class="line"><span class="lineno">   98</span>      .<a class="code hl_function" href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">and_then</a>(&amp;stop_compute::builder::add_pipe_id, pipe_id)</div>
+<div class="line"><span class="lineno">   99</span>      .build();</div>
+<div class="line"><span class="lineno">  100</span>  }</div>
 <div class="ttc" id="astructpars_1_1ev_1_1obb_html_a5b8367f01054f21f140bd2d8accad04c"><div class="ttname"><a href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">pars::ev::obb::using_size</a></div><div class="ttdeci">static obb using_size(std::size_t size)</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00106">serializer.h:106</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1obb_html_acd8ba6a71368cad9ba33795c5636046a"><div class="ttname"><a href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">pars::ev::obb::and_then</a></div><div class="ttdeci">auto and_then(this auto &amp;&amp;self, fn_t &amp;&amp;mem_f, args_t &amp;&amp;... args) -&gt; decltype(self)</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00111">serializer.h:111</a></div></div>
 </div><!-- fragment -->

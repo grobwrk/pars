@@ -147,7 +147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00047">47</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00053">53</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a299a8a47fbd180555fb0c91aef6ff452" name="a299a8a47fbd180555fb0c91aef6ff452"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a299a8a47fbd180555fb0c91aef6ff452">&#9670;&#160;</a></span>format_to()</h2>
@@ -173,13 +173,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00058">58</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>  {</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keyword">auto</span> t = <a class="code hl_function" href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">table</a>();</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;fib_requested({},{},{})&quot;</span>, t-&gt;work_id(),</div>
-<div class="line"><span class="lineno">   63</span>                          t-&gt;n(), t-&gt;use_fast_fib() ? <span class="stringliteral">&quot;fast_fib&quot;</span> : <span class="stringliteral">&quot;slow_fib&quot;</span>);</div>
-<div class="line"><span class="lineno">   64</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00064">64</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>  {</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">auto</span> t = <a class="code hl_function" href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">table</a>();</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;fib_requested({},{},{})&quot;</span>, t-&gt;work_id(),</div>
+<div class="line"><span class="lineno">   69</span>                          t-&gt;n(), t-&gt;use_fast_fib() ? <span class="stringliteral">&quot;fast_fib&quot;</span> : <span class="stringliteral">&quot;slow_fib&quot;</span>);</div>
+<div class="line"><span class="lineno">   70</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00050">ctx.h:50</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1fb_html_a66582cc38ab83e9e4b719c128019fcfd"><div class="ttname"><a href="structpars_1_1ev_1_1fb.html#a66582cc38ab83e9e4b719c128019fcfd">pars::ev::fb&lt; FibRequestedBuilder, fib_requested &gt;::table</a></div><div class="ttdeci">const table_type * table() const</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00192">serializer.h:192</a></div></div>
 </div><!-- fragment -->
@@ -229,14 +229,14 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00049">49</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>  {</div>
-<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">obb&lt;fib_requested&gt;::using_size</a>(64)</div>
-<div class="line"><span class="lineno">   52</span>      .<a class="code hl_function" href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">and_then</a>(&amp;fib_requested::builder::add_work_id, work_id)</div>
-<div class="line"><span class="lineno">   53</span>      .and_then(&amp;fib_requested::builder::add_n, n)</div>
-<div class="line"><span class="lineno">   54</span>      .and_then(&amp;fib_requested::builder::add_use_fast_fib, use_fast_fib)</div>
-<div class="line"><span class="lineno">   55</span>      .build();</div>
-<div class="line"><span class="lineno">   56</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="example_2event_8h_source.html#l00055">55</a> of file <a class="el" href="example_2event_8h_source.html">event.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>  {</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">pars::ev::obb&lt;fib_requested&gt;::using_size</a>(64)</div>
+<div class="line"><span class="lineno">   58</span>      .<a class="code hl_function" href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">and_then</a>(&amp;fib_requested::builder::add_work_id, work_id)</div>
+<div class="line"><span class="lineno">   59</span>      .and_then(&amp;fib_requested::builder::add_n, n)</div>
+<div class="line"><span class="lineno">   60</span>      .and_then(&amp;fib_requested::builder::add_use_fast_fib, use_fast_fib)</div>
+<div class="line"><span class="lineno">   61</span>      .build();</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
 <div class="ttc" id="astructpars_1_1ev_1_1obb_html_a5b8367f01054f21f140bd2d8accad04c"><div class="ttname"><a href="structpars_1_1ev_1_1obb.html#a5b8367f01054f21f140bd2d8accad04c">pars::ev::obb::using_size</a></div><div class="ttdeci">static obb using_size(std::size_t size)</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00106">serializer.h:106</a></div></div>
 <div class="ttc" id="astructpars_1_1ev_1_1obb_html_acd8ba6a71368cad9ba33795c5636046a"><div class="ttname"><a href="structpars_1_1ev_1_1obb.html#acd8ba6a71368cad9ba33795c5636046a">pars::ev::obb::and_then</a></div><div class="ttdeci">auto and_then(this auto &amp;&amp;self, fn_t &amp;&amp;mem_f, args_t &amp;&amp;... args) -&gt; decltype(self)</div><div class="ttdef"><b>Definition</b> <a href="serializer_8h_source.html#l00111">serializer.h:111</a></div></div>
 </div><!-- fragment -->

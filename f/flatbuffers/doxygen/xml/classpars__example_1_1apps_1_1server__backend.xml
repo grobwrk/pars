@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="47" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="47" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="72" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classpars__example_1_1apps_1_1server__backend_1a961e05515ccffe1c8c2f16d332753548" prot="private" static="no">
         <type><ref refid="classpars__example_1_1apps_1_1server__backend" kindref="compound">server_backend</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="48" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="48" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="73" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="73" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="52" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="52" bodyend="52"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="77" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1af72042ac311b5d54e8057b555aacdcfa" prot="private" static="no" mutable="no">
         <type>const <ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="53" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="53" bodyend="53"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="78" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1aa33c6f4468c80bb8d4335e6778869578" prot="private" static="no" mutable="no">
         <type>const <ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="54" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="54" bodyend="54"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="79" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="79" bodyend="79"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="58" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="58" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="83" column="29" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1a10cf008d1ca47c6e8d9942c0b96e51cc" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="59" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="59" bodyend="59"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="84" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="84" bodyend="84"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1a87b0b6aed8eebf41f7a1479e4df1f64a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="60" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="60" bodyend="60"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="85" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="85" bodyend="85"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="64" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="64" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="89" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1a59e3e4691ef250fee3e64a948c7e73ca" prot="private" static="no" mutable="no">
         <type><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine</ref>&lt; <ref refid="namespacepars__example_1_1resource_1af67f09960f255f2e76daa4d5afdfcd7b" kindref="member">server_state</ref> &gt;</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="65" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="65" bodyend="65"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="90" column="22" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="90" bodyend="90"/>
       </memberdef>
       <memberdef kind="variable" id="classpars__example_1_1apps_1_1server__backend_1ad49cc6821b9d22d4c9d469c5f098f202" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1app_1_1resources" kindref="compound">app::resources</ref>&lt; int, <ref refid="structpars__example_1_1resource_1_1pipe__resource" kindref="compound">pipe_resource</ref> &gt;</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="66" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="66" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="91" column="18" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="91" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -218,7 +218,7 @@
 </listitem></orderedlist>
 </para>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="74" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="74" bodyend="129"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="99" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="99" bodyend="154"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="user-defined">
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="134" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="134" bodyend="147"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="159" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="159" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1ad9f2faa15f0dd1ac6290c4b78ea50177" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="150" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="150" bodyend="172"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="175" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="175" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1af54ba0df2eec648d2d1682cac81ebda3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="175" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="175" bodyend="182"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="200" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="200" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a08300c9556fd4522279e54e504b6f7a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="185" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="185" bodyend="192"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="210" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="210" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a9889b3d74e55b28805f129601c0b8105" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -317,7 +317,7 @@
         <inbodydescription>
 <para>return if already working</para>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="195" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="195" bodyend="223"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="220" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="220" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a92fca6a00289a15b49fb81fc5e53640b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -338,7 +338,7 @@
 <para>compute fib_n</para>
 <para>send the outcome event using the ctx where we received from</para>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="226" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="226" bodyend="273"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="251" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="251" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a66f2a5ee0adbdd962315af16b5c84537" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -358,7 +358,7 @@
         <inbodydescription>
 <para>we&apos;re ready to receive the next work</para>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="276" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="276" bodyend="306"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="301" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="301" bodyend="331"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a82b4c706e47efc6e0700d22d5ca04020" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -377,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="309" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="309" bodyend="328"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="334" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="334" bodyend="353"/>
       </memberdef>
       <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a4cc47118b3aa055f7d15ce9a16646b55" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="331" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="331" bodyend="340"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="356" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="356" bodyend="365"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -440,7 +440,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="43" bodyend="341"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="67" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="68" bodyend="366"/>
     <listofallmembers>
       <member refid="classpars__example_1_1apps_1_1server__backend_1ad9f2faa15f0dd1ac6290c4b78ea50177" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>accept_pipe</name></member>
       <member refid="classpars__example_1_1apps_1_1server__backend_1a6c9dbea1608c09b5a804641d296a092f" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>cleanup_timeout</name></member>

@@ -212,9 +212,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="106" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="106" bodyend="106"/>
-        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
-        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
-        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="76" endline="82">pars_example::event::fib_computed::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="55" endline="62">pars_example::event::fib_requested::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="95" endline="100">pars_example::event::stop_compute::make</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1ae36e2062c8b53fe9aa81308df8794dd4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structpars_1_1ev_1_1obb_1aee7471beb6304ed1ad733b36ef5e2508" kindref="member">event_type</ref></type>
@@ -272,9 +272,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" line="111" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/serializer.h" bodystart="111" bodyend="120"/>
-        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="70" endline="76">pars_example::event::fib_computed::make</referencedby>
-        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="49" endline="56">pars_example::event::fib_requested::make</referencedby>
-        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="89" endline="94">pars_example::event::stop_compute::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__computed_1af4d209cf10da70c175e148071276729e" compoundref="example_2event_8h" startline="76" endline="82">pars_example::event::fib_computed::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1fib__requested_1a62afddcc0fa4d0167c452a0a99b3844b" compoundref="example_2event_8h" startline="55" endline="62">pars_example::event::fib_requested::make</referencedby>
+        <referencedby refid="structpars__example_1_1event_1_1stop__compute_1af510835adcd01f1a09e83e93697ead1a" compoundref="example_2event_8h" startline="95" endline="100">pars_example::event::stop_compute::make</referencedby>
       </memberdef>
       <memberdef kind="function" id="structpars_1_1ev_1_1obb_1a4e4cb5ce29e7f7ff1629a511c59cd916" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="structpars_1_1ev_1_1obb_1ad67b34fafd27d72aea01eb2b143d9105" kindref="member">table_type</ref> *</type>

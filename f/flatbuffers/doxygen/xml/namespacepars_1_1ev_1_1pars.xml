@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacepars_1_1ev_1_1pars" kind="namespace" language="C++">
+    <compoundname>pars::ev::pars</compoundname>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacepars_1_1ev_1_1pars_1aa6acdfc0a76215ae581f6d139cc59e67" prot="public" static="no">
+        <type>std::chrono::duration&lt; nng_duration, std::milli &gt;</type>
+        <definition>using pars::ev::pars::milli =  std::chrono::duration&lt;nng_duration, std::milli&gt;</definition>
+        <argsstring></argsstring>
+        <name>milli</name>
+        <qualifiedname>pars::ev::pars::milli</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h" line="50" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/event.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h" line="47" column="1"/>
+  </compounddef>
+</doxygen>

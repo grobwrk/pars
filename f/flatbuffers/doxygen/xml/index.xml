@@ -225,6 +225,9 @@
     <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1a448090447eea5d1c905012e65eed5628" kind="typedef"><name>event_type</name></member>
     <member refid="structpars_1_1ev_1_1fired_3_01event__t_01_4_1ace11a04bca0c29a955ead1497a7d1c5f" kind="variable"><name>uuid</name></member>
   </compound>
+  <compound refid="structpars_1_1ev_1_1std_1_1formatter_3_01foarmattable__t_01_4" kind="struct"><name>pars::ev::std::formatter&lt; foarmattable_t &gt;</name>
+    <member refid="structpars_1_1ev_1_1std_1_1formatter_3_01foarmattable__t_01_4_1ac1064a749b3472c3cfcc7fd2cbab3e14" kind="function"><name>format</name></member>
+  </compound>
   <compound refid="structstd_1_1formatter_3_01foarmattable__t_01_4" kind="struct"><name>std::formatter&lt; foarmattable_t &gt;</name>
     <member refid="structstd_1_1formatter_3_01foarmattable__t_01_4_1af3b5642c0d1955ca3991ac677df64988" kind="function"><name>format</name></member>
   </compound>
@@ -539,13 +542,13 @@
     <member refid="structpars_1_1ev_1_1pipe__removed_1ace7eed45dae602dfed974ee5fe2a7c3d" kind="function"><name>format_to</name></member>
   </compound>
   <compound refid="structpars__example_1_1resource_1_1pipe__resource" kind="struct"><name>pars_example::resource::pipe_resource</name>
-    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a7b6c7b0c3fbe8e28855ba1af3679b217" kind="variable"><name>state</name></member>
-    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a3d553a756b7de19b570e8217279dcebd" kind="variable"><name>tool_m</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1abadfbc8e3e0192875004034dc75a6b81" kind="variable"><name>state</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a2d0a1adb51e4f7cf0f6831fe131d46d3" kind="variable"><name>tool_m</name></member>
     <member refid="structpars__example_1_1resource_1_1pipe__resource_1a15f22bca69d020ea03711a294e8897d1" kind="function"><name>pipe_resource</name></member>
     <member refid="structpars__example_1_1resource_1_1pipe__resource_1a1c506cd95e11ea614c1b866cd508f353" kind="function"><name>pipe_resource</name></member>
     <member refid="structpars__example_1_1resource_1_1pipe__resource_1aa733ea2100d3c902c9b6342fd4301fd6" kind="function"><name>pipe_resource</name></member>
-    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a4ea9dff649a7419b4c4c4af19a7f4767" kind="function"><name>save_tool</name></member>
-    <member refid="structpars__example_1_1resource_1_1pipe__resource_1acf5cf594b1ec3da92b861bf645887bbe" kind="function"><name>load_tool</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1ad89c91ca3443d85869a94d08c8d8d637" kind="function"><name>save_tool</name></member>
+    <member refid="structpars__example_1_1resource_1_1pipe__resource_1a6cf12cd270a1757bea89e5be4fd36162" kind="function"><name>load_tool</name></member>
   </compound>
   <compound refid="structpars_1_1f_1_1pntl" kind="struct"><name>pars::f::pntl</name>
     <member refid="structpars_1_1f_1_1pntl_1acd88559bb712346eafe1ab095ecada1e" kind="variable"><name>p</name></member>
@@ -859,6 +862,8 @@
   </compound>
   <compound refid="conceptpars_1_1ev_1_1event__c" kind="concept"><name>pars::ev::event_c</name>
   </compound>
+  <compound refid="conceptpars_1_1ev_1_1formattable__c" kind="concept"><name>pars::ev::formattable_c</name>
+  </compound>
   <compound refid="conceptpars_1_1ev_1_1internal__event__c" kind="concept"><name>pars::ev::internal_event_c</name>
   </compound>
   <compound refid="conceptpars_1_1ev_1_1kind__c" kind="concept"><name>pars::ev::kind_c</name>
@@ -1074,6 +1079,11 @@
     <member refid="namespacepars_1_1ev_1a97196dda48d93a21b7696d6e73e9266d" kind="function"><name>fired</name></member>
     <member refid="namespacepars_1_1ev_1a5ae21c09902e125632b0c4f37e20a07a" kind="function"><name>make_hf</name></member>
   </compound>
+  <compound refid="namespacepars_1_1ev_1_1pars" kind="namespace"><name>pars::ev::pars</name>
+    <member refid="namespacepars_1_1ev_1_1pars_1aa6acdfc0a76215ae581f6d139cc59e67" kind="typedef"><name>milli</name></member>
+  </compound>
+  <compound refid="namespacepars_1_1ev_1_1std" kind="namespace"><name>pars::ev::std</name>
+  </compound>
   <compound refid="namespacepars_1_1f" kind="namespace"><name>pars::f</name>
   </compound>
   <compound refid="namespacepars_1_1net" kind="namespace"><name>pars::net</name>
@@ -1191,6 +1201,10 @@
   <compound refid="client_8h" kind="file"><name>client.h</name>
   </compound>
   <compound refid="example_2event_8h" kind="file"><name>event.h</name>
+    <member refid="example_2event_8h_1a9ae9d83477706c455969a86dc25abc62" kind="define"><name>PARS_FMT_FORMATTABLE_H</name></member>
+    <member refid="example_2event_8h_1afa40de317e3e0bc4e4172876939d7b63" kind="define"><name>PARS_CONCEPT_FORMATTABLE_H</name></member>
+    <member refid="example_2event_8h_1abd54fdaf51d916022e49425551293e74" kind="define"><name>PARS_INIT_H</name></member>
+    <member refid="example_2event_8h_1af08ec37a8c99d747fb60fa15bc28678b" kind="define"><name>_CRT_SECURE_NO_WARNINGS</name></member>
   </compound>
   <compound refid="lib_2include_2pars_2concept_2event_8h" kind="file"><name>event.h</name>
   </compound>
@@ -1293,8 +1307,6 @@
   <compound refid="socket__opt_8h" kind="file"><name>socket_opt.h</name>
   </compound>
   <compound refid="tool__view_8h" kind="file"><name>tool_view.h</name>
-  </compound>
-  <compound refid="pars_8h" kind="file"><name>pars.h</name>
   </compound>
   <compound refid="dir_d78138f64fa1281cc4d5674365f8996f" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app</name>
   </compound>

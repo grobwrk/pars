@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="101" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="101" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="100" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="100" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="103" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="103" bodyend="140"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="102" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="102" bodyend="139"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -72,7 +72,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="99" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="100" bodyend="141"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="98" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="99" bodyend="140"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1a9df74c1993d3466d64d0829b82bd9341" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::client_state &gt;</scope><name>client_state</name></member>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1client__state_01_4_1ad5c1340e8fbca6adc4e24078e1a776bc" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::client_state &gt;</scope><name>format</name></member>

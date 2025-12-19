@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00144">144</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00143">143</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a56c4f2f3e8d47e8faeb371a267d02981" name="a56c4f2f3e8d47e8faeb371a267d02981"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56c4f2f3e8d47e8faeb371a267d02981">&#9670;&#160;</a></span>server_state</h2>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00146">146</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00145">145</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
 
 </div>
 </div>
@@ -177,31 +177,31 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00148">148</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>  {</div>
-<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">switch</span> (s)</div>
-<div class="line"><span class="lineno">  152</span>    {</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">case</span> server_state::creating:</div>
-<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
-<div class="line"><span class="lineno">  155</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  156</span> </div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">case</span> server_state::initializing:</div>
-<div class="line"><span class="lineno">  158</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
-<div class="line"><span class="lineno">  159</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">case</span> server_state::running:</div>
-<div class="line"><span class="lineno">  162</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;running&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">case</span> server_state::terminating:</div>
-<div class="line"><span class="lineno">  166</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
-<div class="line"><span class="lineno">  167</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  170</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;server_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
-<div class="line"><span class="lineno">  171</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  172</span>    }</div>
-<div class="line"><span class="lineno">  173</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="common_8h_source.html#l00147">147</a> of file <a class="el" href="common_8h_source.html">common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>  {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">switch</span> (s)</div>
+<div class="line"><span class="lineno">  151</span>    {</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">case</span> server_state::creating:</div>
+<div class="line"><span class="lineno">  153</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;creating&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">case</span> server_state::initializing:</div>
+<div class="line"><span class="lineno">  157</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;initializing&quot;</span>);</div>
+<div class="line"><span class="lineno">  158</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">case</span> server_state::running:</div>
+<div class="line"><span class="lineno">  161</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;running&quot;</span>);</div>
+<div class="line"><span class="lineno">  162</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">case</span> server_state::terminating:</div>
+<div class="line"><span class="lineno">  165</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;terminating&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  169</span>      <span class="keywordflow">return</span> format_to(ctx.out(), <span class="stringliteral">&quot;&lt;server_state-{}&gt;&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(s));</div>
+<div class="line"><span class="lineno">  170</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  171</span>    }</div>
+<div class="line"><span class="lineno">  172</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

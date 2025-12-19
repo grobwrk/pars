@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="179" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="179" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="178" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="178" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="181" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="181" bodyend="206"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="180" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="180" bodyend="205"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -72,7 +72,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="177" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="178" bodyend="207"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/example/common.h" line="176" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/common.h" bodystart="177" bodyend="206"/>
     <listofallmembers>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1a4266663f54603d304ec4064da209af32" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::pipe_state &gt;</scope><name>format</name></member>
       <member refid="structstd_1_1formatter_3_1_1pars__example_1_1resource_1_1pipe__state_01_4_1ab8984d862ecd47e510c6b5a3a45c5b0c" prot="public" virt="non-virtual"><scope>std::formatter&lt;::pars_example::resource::pipe_state &gt;</scope><name>pipe_state</name></member>

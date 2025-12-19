@@ -8,7 +8,6 @@
     <includedby refid="enqueuer_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/enqueuer.h</includedby>
     <includedby refid="helpers_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/helpers.h</includedby>
     <includedby refid="op_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h</includedby>
-    <includedby refid="pars_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</includedby>
     <incdepgraph>
       <node id="15">
         <label>clev/err.h</label>
@@ -330,6 +329,16 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="47">
+        <label>pars/concept/formattable.h</label>
+        <link refid="concept_2formattable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/net.h</label>
         <link refid="net_8h"/>
@@ -338,6 +347,16 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>pars/fmt/formattable.h</label>
+        <link refid="fmt_2formattable_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -366,6 +385,8 @@
         <childnode refid="44" relation="include">
         </childnode>
         <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -433,25 +454,11 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="7">
+      <node id="4">
         <label>/home/runner/work/pars-cxx/pars-cxx/example/client.cpp</label>
         <link refid="client_8cpp"/>
       </node>
       <node id="5">
-        <label>/home/runner/work/pars-cxx/pars-cxx/example/common.h</label>
-        <link refid="common_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>/home/runner/work/pars-cxx/pars-cxx/example/event.h</label>
-        <link refid="example_2event_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
         <label>/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp</label>
         <link refid="server__backend_8cpp"/>
       </node>
@@ -460,14 +467,16 @@
         <link refid="single_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="9">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</label>
-        <link refid="backend_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="6">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/backend.h</label>
+        <link refid="backend_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h</label>
         <link refid="client_8h"/>
         <childnode refid="4" relation="include">
@@ -478,11 +487,9 @@
         <link refid="net_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -490,119 +497,97 @@
         <link refid="enqueuer_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/helpers.h</label>
-        <link refid="helpers_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context.h</label>
-        <link refid="context_8h"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h</label>
-        <link refid="context__registry_8h"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h</label>
-        <link refid="op_8h"/>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pull.h</label>
-        <link refid="pull_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="18">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/push.h</label>
-        <link refid="push_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</label>
-        <link refid="rep_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</label>
-        <link refid="req_8h"/>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="16">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
-        <link refid="pars_2net_2socket_8h"/>
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/fmt/helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context.h</label>
+        <link refid="context_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
+      </node>
+      <node id="9">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/context_registry.h</label>
+        <link refid="context__registry_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
+      </node>
+      <node id="12">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/op.h</label>
+        <link refid="op_8h"/>
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
+      </node>
+      <node id="14">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/pull.h</label>
+        <link refid="pull_8h"/>
+      </node>
+      <node id="15">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/push.h</label>
+        <link refid="push_8h"/>
+      </node>
+      <node id="10">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/rep.h</label>
+        <link refid="rep_8h"/>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/pars.h</label>
-        <link refid="pars_8h"/>
+      <node id="11">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/req.h</label>
+        <link refid="req_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h</label>
+        <link refid="pars_2net_2socket_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

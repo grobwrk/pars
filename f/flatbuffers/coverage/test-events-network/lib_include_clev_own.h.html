@@ -17,14 +17,14 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 13:58:18 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
-                     <td class="headerValue" width="10%">13</td>
+                     <td class="headerValue" width="10%">6</td>
                    </tr>
                    <tr>
                    <td class="headerItem" width="20%">Code&nbsp;covered:
-                   <td class="headerValue" width="15%">30.7 %</td>
+                   <td class="headerValue" width="15%">66.6 %</td>
                    <td width="5%"></td>
                      <td class="headerItem" width="20%">Executed&nbsp;lines:</td>
                      <td class="headerValue" width="10%">4</td>
@@ -130,17 +130,17 @@
              : 
              :   own&amp; operator=(own&amp;&amp; rhs) noexcept
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    if (this != &amp;rhs)</span>
+             :     if (this != &amp;rhs)
              :     {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      if (*this)</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">        own::destroy(own::v).or_exit();</span>
+             :       if (*this)
+             :         own::destroy(own::v).or_exit();
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      own::v = rhs.v;</span>
+             :       own::v = rhs.v;
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">      rhs.v = own::empty();</span>
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    };</span>
+             :       rhs.v = own::empty();
+             :     };
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return *this;</span>
+             :     return *this;
              :   }
              : 
              :   ~own()

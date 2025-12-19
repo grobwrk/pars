@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Dec 19 12:30:58 2025 </td>
+                     <td class="headerValue" width="15%">Fri Dec 19 13:58:18 2025 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">13</td>
@@ -198,6 +198,8 @@
              :   decltype([]&lt;template&lt;typename&gt; typename kind_of, event_c event_t&gt;(           \
              :              kind_of&lt;event_t&gt; ke) -&gt; pars::ev::METADATA&lt;kind_of, event_t&gt; {    \
              :   }(ke))
+             : 
+             : #include &quot;pars/fmt/formattable.h&quot; // IWYU pragma: export
              : 
              : #endif // PRAGMA_EV_METADATA_H
 </pre>

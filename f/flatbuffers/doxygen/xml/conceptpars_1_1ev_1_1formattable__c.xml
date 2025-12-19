@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="conceptpars_1_1ev_1_1formattable__c" kind="concept">
+    <compoundname>pars::ev::formattable_c</compoundname>
+    <includes refid="example_2event_8h" local="no">event.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename value_t</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename value_t&gt;
+concept <ref refid="conceptpars_1_1ev_1_1formattable__c" kindref="compound">pars::ev::formattable_c</ref> =  requires(const value_t&amp; x, std::format_context&amp; ctx) {
+  { x.format_to(ctx) } -&gt; std::same_as&lt;decltype(ctx.out())&gt;;
+}    </initializer>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/concept/formattable.h" line="39" column="1"/>
+  </compounddef>
+</doxygen>

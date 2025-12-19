@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['save_5ftool_0',['save_tool',['../structpars__example_1_1resource_1_1pipe__resource.html#a4ea9dff649a7419b4c4c4af19a7f4767',1,'pars_example::resource::pipe_resource']]],
+  ['save_5ftool_0',['save_tool',['../structpars__example_1_1resource_1_1pipe__resource.html#ad89c91ca3443d85869a94d08c8d8d637',1,'pars_example::resource::pipe_resource']]],
   ['self_5ftype_1',['self_type',['../classpars_1_1app_1_1single.html#a16a90aa8cba44a9613d0d114b27413f1',1,'pars::app::single']]],
   ['send_2',['send',['../classpars_1_1net_1_1context.html#ab93a9163b25d90e2f7c9111af489bab4',1,'pars::net::context::send()'],['../classpars_1_1net_1_1op.html#a059616e41c3a51c66b18b051fcf52c4a',1,'pars::net::op::send()'],['../classpars_1_1net_1_1socket.html#a5a7f31a949fcd8a99f829b0c5e491329',1,'pars::net::socket::send()']]],
   ['send_5faio_3',['send_aio',['../classpars_1_1net_1_1context.html#a3e52ff9f741089ebb88a2245a738eb27',1,'pars::net::context::send_aio()'],['../classpars_1_1net_1_1socket.html#a474843a8b434a93ba8a97dc8b819377e',1,'pars::net::socket::send_aio()']]],
@@ -56,7 +56,7 @@ var searchData=
   ['start_5fthread_53',['start_thread',['../structpars_1_1ev_1_1runner.html#abcf0dc254df4dc39ccd71d1f995f5d27',1,'pars::ev::runner']]],
   ['started_54',['started',['../namespacepars__example_1_1resource.html#a095a3419767bbbc2eb761adb7779d09aa3bebb2f89180b03fa5ae736665f648d9',1,'pars_example::resource']]],
   ['startup_55',['startup',['../classpars_1_1app_1_1single.html#a4726da2778bc7b1f9f4e5312d8b19fbb',1,'pars::app::single']]],
-  ['state_56',['state',['../structpars__example_1_1resource_1_1pipe__resource.html#a7b6c7b0c3fbe8e28855ba1af3679b217',1,'pars_example::resource::pipe_resource::state'],['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e',1,'nngxx::state']]],
+  ['state_56',['state',['../structpars__example_1_1resource_1_1pipe__resource.html#abadfbc8e3e0192875004034dc75a6b81',1,'pars_example::resource::pipe_resource::state'],['../namespacenngxx.html#aa5f67031328417cc6203a01a3d688108a9ed39e2ea931586b6a985a6942ef573e',1,'nngxx::state']]],
   ['state_5fmachine_57',['state_machine',['../structpars_1_1app_1_1state__machine.html',1,'pars::app::state_machine&lt; state_t &gt;'],['../structpars_1_1app_1_1state__machine.html#aff763284da63f5b8dc792dacf8e3f7e1',1,'pars::app::state_machine::state_machine()']]],
   ['state_5fmachine_2eh_58',['state_machine.h',['../state__machine_8h.html',1,'']]],
   ['state_5fmachine_3c_20client_5fstate_20_3e_59',['state_machine&lt; client_state &gt;',['../structpars_1_1app_1_1state__machine.html',1,'pars::app']]],
