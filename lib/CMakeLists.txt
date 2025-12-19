@@ -59,7 +59,6 @@ set (PARS_HEADERS
     "include/pars/err.h"
     "include/pars/init.h"
     "include/pars/log.h"
-    "include/pars/pars.h"
     "include/nngxx/iface/aio.h"
     "include/nngxx/iface/ctx.h"
     "include/nngxx/iface/dialer.h"

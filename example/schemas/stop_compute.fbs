@@ -1,4 +1,4 @@
-namespace pars.ev;
+namespace pars_example.event;
 
 table StopCompute {
   pipe_id: int;

@@ -27,16 +27,41 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
 #include "fib.h"
 
+#include <pars/app/resources.h>
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/backend.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/init.h>
+#include <pars/log.h>
+#include <pars/net/socket.h>
+
+#include <spdlog/spdlog.h>
+
+#include <atomic>
+#include <cstddef>
+#include <cstdlib>
+#include <exception>
+#include <format>
 #include <iostream>
+#include <stdexcept>
+#include <string>
+#include <utility>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the backend component as a single application (rep).
 class server_backend : public app::single<comp::backend>

@@ -27,15 +27,38 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
 
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/client.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/init.h>
+#include <pars/log.h>
+#include <pars/net/socket.h>
+
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <exception>
+#include <format>
 #include <iostream>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <utility>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the client component as an single application (req)
 class client : public app::single<comp::client>

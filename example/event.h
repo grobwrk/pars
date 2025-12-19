@@ -35,8 +35,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "fib_requested_generated.h"
 #include "stop_compute_generated.h"
 
-#include <pars/pars.h>
+#include <pars/concept/event.h>
+#include <pars/concept/kind.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/klass.h>
+#include <pars/ev/serializer.h>
 
+#include <cstddef>
+#include <cstdint>
 #include <format>
 #include <string_view>
 
@@ -44,11 +50,11 @@ namespace pars_example::event
 {
 
 // a client send this to request a fib_n computation
-struct fib_requested : fb<FibRequestedBuilder, fib_requested>
+struct fib_requested : pars::ev::fb<FibRequestedBuilder, fib_requested>
 {
   static auto make(std::size_t work_id, uint64_t n, bool use_fast_fib)
   {
-    return obb<fib_requested>::using_size(64)
+    return pars::ev::obb<fib_requested>::using_size(64)
       .and_then(&fib_requested::builder::add_work_id, work_id)
       .and_then(&fib_requested::builder::add_n, n)
       .and_then(&fib_requested::builder::add_use_fast_fib, use_fast_fib)
@@ -65,11 +71,11 @@ struct fib_requested : fb<FibRequestedBuilder, fib_requested>
 };
 
 // a server backend send this in response for a fib_n computation
-struct fib_computed : fb<FibComputedBuilder, fib_computed>
+struct fib_computed : pars::ev::fb<FibComputedBuilder, fib_computed>
 {
   static auto make(std::size_t work_id, uint64_t fib_n)
   {
-    return obb<fib_computed>::using_size(64)
+    return pars::ev::obb<fib_computed>::using_size(64)
       .and_then(&fib_computed::builder::add_work_id, work_id)
       .and_then(&fib_computed::builder::add_fib_n, fib_n)
       .build();
@@ -84,11 +90,11 @@ struct fib_computed : fb<FibComputedBuilder, fib_computed>
   }
 };
 
-struct stop_compute : fb<StopComputeBuilder, stop_compute>
+struct stop_compute : pars::ev::fb<StopComputeBuilder, stop_compute>
 {
   static auto make(int pipe_id)
   {
-    return obb<stop_compute>::using_size(64)
+    return pars::ev::obb<stop_compute>::using_size(64)
       .and_then(&stop_compute::builder::add_pipe_id, pipe_id)
       .build();
   }
@@ -137,5 +143,7 @@ struct klass<pars_example::event::stop_compute>
   static constexpr std::string_view uuid =
     "8194470a-3ad8-4f37-a544-d44ff4e5bd29";
 };
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
 
 } // namespace pars::ev

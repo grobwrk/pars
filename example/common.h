@@ -31,13 +31,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 constexpr auto enable_compute_fib_async = true;
 
-#include <pars/pars.h>
+#include <pars/app/state_machine.h>
+#include <pars/net/tool_view.h>
 
 #include <format>
+#include <optional>
 #include <string>
-
-using namespace pars;
-using namespace pars::ev;
 
 namespace pars_example::resource
 {
@@ -71,7 +70,7 @@ enum class pipe_state
 
 struct pipe_resource
 {
-  app::state_machine<pipe_state> state;
+  pars::app::state_machine<pipe_state> state;
 
   pipe_resource(pipe_state s)
     : state{s}
@@ -82,12 +81,12 @@ struct pipe_resource
 
   pipe_resource(pipe_resource&&) = delete;
 
-  void save_tool(net::tool_view t) { tool_m.emplace(t); }
+  void save_tool(pars::net::tool_view t) { tool_m.emplace(t); }
 
-  const net::tool_view& load_tool() const { return *tool_m; }
+  const pars::net::tool_view& load_tool() const { return *tool_m; }
 
 private:
-  std::optional<net::tool_view> tool_m;
+  std::optional<pars::net::tool_view> tool_m;
 };
 
 } // namespace pars_example::resource

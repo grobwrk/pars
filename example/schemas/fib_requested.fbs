@@ -1,4 +1,4 @@
-namespace pars.ev;
+namespace pars_example.event;
 
 table FibRequested {
   work_id: ulong;
