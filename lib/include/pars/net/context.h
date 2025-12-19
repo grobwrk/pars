@@ -27,17 +27,22 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_CONTEXT_H
+#define PARS_NET_CONTEXT_H
+
+#include "pars/concept/event.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/net/context_opt.h"
+#include "pars/net/op.h"
+#include "pars/net/pipe.h"
+#include "pars/net/socket.h"
+#include "pars/net/tool_view.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/ctx.h"
 
-#include "pars/ev/enqueuer.h"
-#include "pars/net/context_opt.h"
-#include "pars/net/op.h"
-#include "pars/net/socket.h"
-
 #include <format>
+#include <utility>
 
 namespace pars::net
 {
@@ -104,3 +109,5 @@ private:
 };
 
 } // namespace pars::net
+
+#endif // PARS_NET_CONTEXT_H

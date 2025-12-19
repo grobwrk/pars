@@ -27,23 +27,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_LOG_H
+#define PARS_LOG_H
 
-#include "init.h"
-
-#include <spdlog/common.h>
-
-// include generated config file
-#include "config.h"
-
-// include spdlog
+// define spdlog active level
 #undef SPDLOG_ACTIVE_LEVEL
 #define SPDLOG_ACTIVE_LEVEL pars_log_level
-#include <spdlog/spdlog.h>
 
+#include <spdlog/common.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/null_sink.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
+#include <spdlog/spdlog.h>
 
 #if defined(_WIN32)
 #define PARS_LOG_ENABLE_MSVC
@@ -53,8 +48,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <spdlog/sinks/syslog_sink.h>
 #endif
 
-// spdlog helper macro
+// include generated config file
+#include "config.h"
 
+#include "pars/log/flags.h"
+
+// spdlog helper macro
 #define SL (spdlog::source_loc{__FILE__, __LINE__, SPDLOG_FUNCTION})
 
 namespace pars
@@ -263,3 +262,5 @@ inline void critical(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 }
 
 } // namespace pars
+
+#endif // PARS_LOG_H

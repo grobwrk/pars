@@ -27,16 +27,21 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_EVENT_H
+#define PARS_EV_EVENT_H
 
 #include "pars/ev/klass.h"
-#include "pars/fmt/stl.h"
+#include "pars/fmt/stl.h" // IWYU pragma: keep
 #include "pars/net/dir.h"
 
 #include "clev/err.h"
 
 #include <chrono>
+#include <exception>
 #include <format>
+#include <string>
+#include <string_view>
+#include <system_error>
 
 namespace pars::ev
 {
@@ -188,3 +193,5 @@ struct klass<shutdown> : base_klass<shutdown>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_EVENT_H

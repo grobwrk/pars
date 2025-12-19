@@ -27,10 +27,21 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_HFREGISTRYINSERT_H
+#define PARS_EV_HFREGISTRYINSERT_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/hf_registry.h"
+#include "pars/ev/job.h"
+#include "pars/ev/make_hf.h"
 #include "pars/ev/runner.h"
+#include "pars/ev/spec.h"
+
+#include <future>
+#include <mutex>
+#include <stop_token>
+#include <utility>
 
 namespace pars::ev
 {
@@ -75,3 +86,5 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
 }
 
 } // namespace pars::ev
+
+#endif // PARS_EV_HFREGISTRYINSERT_H

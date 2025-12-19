@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_KINDBASE_H
+#define PARS_EV_KINDBASE_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
@@ -103,3 +104,5 @@ struct base_kind<kind_of, event_t> : common_kind<kind_of, event_t>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_KINDBASE_H

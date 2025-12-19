@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_SINGLE_H
+#define PARS_APP_SINGLE_H
 
 #include "pars/app/setup.h"
 #include "pars/ev/dispatcher.h"
@@ -35,6 +36,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/runner.h"
 #include "pars/log.h"
+#include "pars/log/flags.h"
+
+#include <nng/nng.h>
+
+#include <cstdlib>
+#include <exception>
 
 namespace pars::app
 {
@@ -114,3 +121,5 @@ private:
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_SINGLE_H

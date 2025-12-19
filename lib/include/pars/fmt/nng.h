@@ -27,16 +27,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
-
-#include "nngxx/msg_header.h"
-#include "nngxx/pipe.h"
+#ifndef PARS_FMT_NNG_H
+#define PARS_FMT_NNG_H
 
 #include "pars/net/hash.h"
 
-#include "pars/err.h"
+#include "nngxx/msg.h"
+#include "nngxx/msg_header.h"
+#include "nngxx/pipe.h"
 
+#include <cstddef>
 #include <format>
+#include <string>
 
 template<>
 struct std::formatter<nngxx::msg> : formatter<std::string>
@@ -78,3 +80,5 @@ struct std::formatter<nngxx::pipe_view> : formatter<std::string>
       return std::format_to(ctx.out(), "<empty-pipe>");
   }
 };
+
+#endif // PARS_FMT_NNG_H

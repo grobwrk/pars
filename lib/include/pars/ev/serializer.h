@@ -27,17 +27,33 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PRAGMA_EV_SERIALIZER_H
+#define PRAGMA_EV_SERIALIZER_H
 
 #include "nngxx/msg.h"
 
 #include "pars/concept/event.h"
 #include "pars/ev/klass.h"
 #include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/net/hash.h"
 
+#include <flatbuffers/buffer.h>
+#include <flatbuffers/detached_buffer.h>
+#include <flatbuffers/flatbuffer_builder.h>
 #include <flatbuffers/flatbuffers.h>
 
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <functional>
+#include <iterator>
+#include <memory>
+#include <optional>
 #include <span>
+#include <stdexcept>
+#include <type_traits>
+#include <utility>
 #include <variant>
 
 namespace pars::ev
@@ -63,7 +79,7 @@ private:
   {
   }
 
-  obb(size_t size)
+  obb(std::size_t size)
     : fbb_obj_m{size}
     , fbb_m{*fbb_obj_m}
     , obb_m{fbb_m}
@@ -87,7 +103,7 @@ public:
 
   static obb default_size() { return obb{}; }
 
-  static obb using_size(size_t size) { return obb{size}; }
+  static obb using_size(std::size_t size) { return obb{size}; }
 
   static event_type from(nngxx::msg m) { return event_type{std::move(m)}; }
 
@@ -232,3 +248,5 @@ struct serialize
 };
 
 } // namespace pars::ev
+
+#endif // PRAGMA_EV_SERIALIZER_H

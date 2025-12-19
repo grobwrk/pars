@@ -27,13 +27,14 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_MAKEHF_H
+#define PARS_EV_MAKEHF_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 
+#include <cstddef>
 #include <functional>
-#include <ratio>
 
 namespace pars::ev
 {
@@ -101,3 +102,5 @@ struct hf_traits<return_t (class_t::*)(hf_arg<kind_of, event_t>)>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_MAKEHF_H

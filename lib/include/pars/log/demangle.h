@@ -27,9 +27,10 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_LOG_DEMANGLE_H
+#define PARS_LOG_DEMANGLE_H
 
-#include "pars/init.h"
+#include "pars/init.h" // IWYU pragma: keep
 
 #include <string>
 
@@ -49,3 +50,5 @@ static const std::string demangle(const char* name)
   return name;
 }
 #endif
+
+#endif // PARS_LOG_DEMANGLE_H

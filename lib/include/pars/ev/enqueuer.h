@@ -27,14 +27,24 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_ENQUEUER_H
+#define PARS_EV_ENQUEUER_H
 
 #include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/concept/net.h"
 #include "pars/ev/dispatcher.h"
 #include "pars/ev/event.h"
 #include "pars/ev/hf_registry.h"
+#include "pars/ev/kind_decl.h"
+#include "pars/ev/metadata.h"
 #include "pars/ev/runner.h"
+#include "pars/ev/spec.h"
+#include "pars/net/pipe.h"
+
+#include "nngxx/msg.h"
+
+#include <utility>
 
 namespace pars::ev
 {
@@ -106,3 +116,5 @@ private:
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_ENQUEUER_H

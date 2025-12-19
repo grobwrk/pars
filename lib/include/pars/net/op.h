@@ -27,23 +27,33 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_OP_H
+#define PARS_NET_OP_H
+
+#include "pars/concept/event.h"
+#include "pars/concept/net.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/event.h"
+#include "pars/ev/serializer.h"
+#include "pars/fmt/helpers.h"
+#include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/net/dir.h"
+#include "pars/net/pipe.h"
+
+#include "clev/err.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/err.h"
 #include "nngxx/msg.h"
 #include "nngxx/pipe.h"
 
-#include "pars/ev/enqueuer.h"
-#include "pars/ev/event.h"
-#include "pars/ev/serializer.h"
-#include "pars/fmt/helpers.h"
-#include "pars/net/dir.h"
-
+#include <nng/nng.h>
 #include <spdlog/spdlog.h>
 
-#include <expected>
 #include <functional>
+#include <system_error>
+#include <utility>
 
 namespace pars::net
 {
@@ -288,3 +298,5 @@ private:
 };
 
 } // namespace pars::net
+
+#endif // PARS_NET_OP_H

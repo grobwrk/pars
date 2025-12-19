@@ -27,16 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_FMT_STL_H
+#define PARS_FMT_STL_H
 
-#include "pars/init.h"
-
-#include "pars/ev/event.h"
+#include "pars/concept/event.h"
 
 #include <chrono>
+#include <ctime>
 #include <format>
 #include <iomanip>
+#include <memory>
 #include <sstream>
+#include <string>
+#include <system_error>
 
 template<>
 struct std::formatter<std::chrono::system_clock::time_point>
@@ -76,3 +79,5 @@ struct std::formatter<std::shared_ptr<event_t>> : std::formatter<std::string>
       return std::format_to(ctx.out(), "<empty-shared_ptr>");
   }
 };
+
+#endif // PARS_FMT_STL_H
