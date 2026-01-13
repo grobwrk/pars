@@ -77,13 +77,13 @@ private:
   /// @name Input Parameters
 
   component_type::connect_p connect_p;
-  std::size_t work_id = 0;
-  bool fast_fib = false;
-  uint64_t n = 0;
+  std::size_t work_id{0};
+  bool fast_fib{false};
+  uint64_t n{0};
 
   /// @name App State
 
-  app::state_machine<client_state> state = {client_state::creating};
+  app::state_machine<client_state> state{client_state::creating};
 
   /// @name Constructors
 

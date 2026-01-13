@@ -58,8 +58,8 @@ public:
 
   struct connect_p
   {
-    net::cmode service_cmode = net::cmode::dial; ///< connect mode for req
-    char* service_addr = nullptr;                ///< connect addr for req
+    net::cmode service_cmode{net::cmode::dial}; ///< connect mode for req
+    char* service_addr{nullptr};                ///< connect addr for req
   };
 
   void connect(const connect_p& params)

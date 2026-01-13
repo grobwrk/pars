@@ -87,7 +87,7 @@ private:
   /// @name App State
 
   std::atomic<int> tot_served{0}; ///< total client served
-  app::state_machine<server_state> state = {server_state::creating};
+  app::state_machine<server_state> state{server_state::creating};
   app::resources<int, pipe_resource> resources;
 
   /// @name Constructors
