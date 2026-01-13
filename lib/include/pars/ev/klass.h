@@ -48,7 +48,7 @@ struct uuid
 {
   using class_type = class_t;
 
-  static constexpr std::size_t hash = hash_from_uuid(class_type::uuid);
+  static constexpr std::size_t hash = net::hash_from_uuid(class_type::uuid);
 };
 
 template<typename event_t>

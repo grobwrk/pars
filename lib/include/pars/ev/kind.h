@@ -85,9 +85,9 @@ struct received<nngxx::msg> : base_kind<received, nngxx::msg>
 
   std::size_t msg_hash() const
   {
-    auto h1 = hash_from_uuid(uuid);
+    auto h1 = net::hash_from_uuid(uuid);
 
-    auto h2 = hash_from_msg(event());
+    auto h2 = net::hash_from_msg(event());
 
     return h1 ^ (h2 << 1);
   }

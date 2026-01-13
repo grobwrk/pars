@@ -230,7 +230,7 @@ struct serialize
   static event_t to_event(const nngxx::msg& m)
   {
     // 1. compute received and requested event hash
-    auto recv_event_hash = hash_from_msg(m);
+    auto recv_event_hash = net::hash_from_msg(m);
     auto req_event_hash = uuid<klass<event_t>>::hash;
 
     // 2. check they correspond

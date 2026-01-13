@@ -42,7 +42,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdexcept>
 #include <string_view>
 
-namespace pars
+namespace pars::net
 {
 
 static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)

@@ -55,7 +55,7 @@ struct std::formatter<nngxx::msg> : formatter<std::string>
     }
     else
     {
-      std::size_t h = pars::hash_from_msg(m);
+      std::size_t h = pars::net::hash_from_msg(m);
 
       return std::format_to(
         ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
