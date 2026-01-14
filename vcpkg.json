@@ -6,6 +6,7 @@
     {
       "name": "spdlog",
       "default-features": false
-    }
+    },
+    "asio"
   ]
 }
