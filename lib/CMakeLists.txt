@@ -56,6 +56,7 @@ set (PARS_HEADERS
     "include/pars/net/socket.h"
     "include/pars/net/socket_opt.h"
     "include/pars/net/tool_view.h"
+    "include/pars/net2/connect_mode.h"
     "include/pars/err.h"
     "include/pars/init.h"
     "include/pars/log.h"

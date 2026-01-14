@@ -39,6 +39,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/pipe.h"
 #include "pars/net/socket_opt.h"
 #include "pars/net/tool_view.h"
+#include "pars/net2/connect_mode.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/ctx.h"
@@ -49,31 +50,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <format>
 #include <nng/nng.h>
-#include <stdexcept>
-#include <string_view>
 #include <utility>
 #include <vector>
 
 namespace pars::net
 {
-
-enum class cmode
-{
-  dial,
-  listen
-};
-
-static cmode cmode_from_string(const char* str)
-{
-  auto str_view = std::string_view(str);
-
-  if (str_view.compare("dial") == 0)
-    return cmode::dial;
-  else if (str_view.compare("listen") == 0)
-    return cmode::listen;
-
-  throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
-}
 
 /**
  * @brief Represents an nng_socket
