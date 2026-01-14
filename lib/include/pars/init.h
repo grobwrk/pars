@@ -48,6 +48,12 @@ namespace pars
 
 using milli = std::chrono::duration<nng_duration, std::milli>;
 
+template<class... Ts>
+struct overloaded : Ts...
+{
+  using Ts::operator()...;
+};
+
 } // namespace pars
 
 #endif // PARS_INIT_H
