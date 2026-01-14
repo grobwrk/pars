@@ -131,7 +131,7 @@ private:
     /// 3. insert handler functions
     hfs().on<fired, init>(&self::initialize, this);
 
-    hfs().on<fired, shutdown>(&self::terminate, this);
+    hfs().on<fired, deinit>(&self::terminate, this);
 
     comp().rep().on<received, fib_requested>(&self::fire_compute, this);
 
@@ -310,12 +310,12 @@ private:
 
     if (++tot_served == max_served)
     {
-      auto shutdown_ev = shutdown{};
+      auto deinit_ev = deinit{};
 
-      enqueuer().fire(shutdown_ev);
+      enqueuer().fire(deinit_ev);
 
       pars::info(SL, "{}: Sent {}, Fire {}! [{} succesfully served]", md, ev,
-                 shutdown_ev, max_served);
+                 deinit_ev, max_served);
 
       return;
     }
@@ -353,7 +353,7 @@ private:
   }
 
   /// graceful terminate
-  void terminate(hf_arg<fired, shutdown> fired)
+  void terminate(hf_arg<fired, deinit> fired)
   {
     state.ensure(server_state::running);
 

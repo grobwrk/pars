@@ -171,11 +171,11 @@ struct klass<init> : base_klass<init>
   static constexpr bool requires_network = false;
 };
 
-struct shutdown
+struct deinit
 {
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "shutdown({})", creation_time);
+    return std::format_to(ctx.out(), "deinit({})", creation_time);
   }
 
 private:
@@ -184,7 +184,7 @@ private:
 };
 
 template<>
-struct klass<shutdown> : base_klass<shutdown>
+struct klass<deinit> : base_klass<deinit>
 {
   static constexpr std::string_view uuid =
     "47c543bb-ba37-4442-a5bd-4b2dcfbf1e02";
