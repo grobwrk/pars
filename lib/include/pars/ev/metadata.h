@@ -33,7 +33,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/net/pipe.h"
-#include "pars/net/tool_view.h"
 
 #include <format>
 #include <stop_token>

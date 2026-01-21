@@ -21,3 +21,7 @@ constexpr auto pars_log_enable_file = false;
 constexpr auto pars_log_flags = ::pars::lf::app | ::pars::lf::comp |
                                 ::pars::lf::event | ::pars::lf::net |
                                 ::pars::lf::user;
+
+#define ASIO_HAS_STD_STRING_VIEW
+#define ASIO_NO_DEPRECATED
+#define ASIO_NO_IOSTREAM

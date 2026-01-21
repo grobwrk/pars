@@ -27,36 +27,56 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_CONNECTMODE_H
-#define PARS_NET_CONNECTMODE_H
+#ifndef PARS_NET_RESOLVER_H
+#define PARS_NET_RESOLVER_H
 
-#include "pars/init.h" // IWYU pragma: keep
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/event.h"
+#include "pars/net/asio.h"
+#include "pars/net/connect_mode.h"
+#include "pars/net/io.h"
 
-#include <format>
-#include <stdexcept>
 #include <string_view>
+#include <system_error>
 
 namespace pars::net
 {
 
-enum class cmode
+struct resolver
 {
-  dial,
-  listen
+public:
+  resolver(io& io, ev::enqueuer& r)
+    : io_m{io.lower_context()}
+    , enqueuer_m{r}
+    , resolver_m{io_m}
+  {
+  }
+
+  struct params
+  {
+    net::cmode connect_mode;
+    std::string_view host;
+    std::string_view service;
+  };
+
+  void resolve(const params& params)
+  {
+    resolver_m.async_resolve(
+      params.host, params.service,
+      [this, connect_mode = params.connect_mode](
+        const std::error_code& ec, ip::tcp::resolver::results_type results) {
+        enqueuer_m.fire(ev::resolved_results<ip::tcp>{results});
+      });
+  }
+
+private:
+  ip::io_context& io_m;
+
+  ev::enqueuer& enqueuer_m;
+
+  ip::tcp::resolver resolver_m;
 };
-
-static cmode cmode_from_string(const char* str)
-{
-  auto str_view = std::string_view(str);
-
-  if (str_view.compare("dial") == 0)
-    return cmode::dial;
-  else if (str_view.compare("listen") == 0)
-    return cmode::listen;
-
-  throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
-}
 
 } // namespace pars::net
 
-#endif // PARS_NET_CONNECTMODE_H
+#endif // PARS_NET_RESOLVER_H

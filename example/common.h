@@ -32,10 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 constexpr auto enable_compute_fib_async = true;
 
 #include <pars/app/state_machine.h>
-#include <pars/net/tool_view.h>
 
 #include <format>
-#include <optional>
 #include <string>
 
 namespace pars_example::resource
@@ -45,7 +43,8 @@ enum class client_state
 {
   creating,
   initializing,
-  started,
+  resolving,
+  connecting,
   sending_work,
   waiting_work_done,
   terminating,
@@ -112,8 +111,12 @@ struct formatter<::pars_example::resource::client_state> : formatter<string>
       return format_to(ctx.out(), "initializing");
       break;
 
-    case client_state::started:
-      return format_to(ctx.out(), "started");
+    case client_state::connecting:
+      return format_to(ctx.out(), "connecting");
+      break;
+
+    case client_state::resolving:
+      return format_to(ctx.out(), "resolving");
       break;
 
     case client_state::sending_work:

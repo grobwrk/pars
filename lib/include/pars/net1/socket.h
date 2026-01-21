@@ -39,7 +39,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net1/pipe.h"
 #include "pars/net1/socket_opt.h"
 #include "pars/net1/tool_view.h"
-#include "pars/net2/connect_mode.h"
+#include "pars/net/connect_mode.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/ctx.h"

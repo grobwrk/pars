@@ -32,7 +32,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
-#include "pars/concept/net.h"
 #include "pars/ev/dispatcher.h"
 #include "pars/ev/event.h"
 #include "pars/ev/hf_registry.h"

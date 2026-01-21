@@ -1,4 +1,5 @@
 find_package (Threads REQUIRED)
+find_package (asio CONFIG REQUIRED)
 find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 find_package (flatbuffers CONFIG REQUIRED)
@@ -13,13 +14,11 @@ set (PARS_HEADERS
     "include/pars/app/setup.h"
     "include/pars/app/single.h"
     "include/pars/app/state_machine.h"
-    "include/pars/comp/backend.h"
     "include/pars/comp/client.h"
     "include/pars/concept/event.h"
     "include/pars/concept/formattable.h"
     "include/pars/concept/hashable.h"
     "include/pars/concept/kind.h"
-    "include/pars/concept/net.h"
     "include/pars/ev/dispatcher.h"
     "include/pars/ev/enqueuer.h"
     "include/pars/ev/event.h"
@@ -36,27 +35,20 @@ set (PARS_HEADERS
     "include/pars/ev/serializer.h"
     "include/pars/ev/spec.h"
     "include/pars/fmt/formattable.h"
-    "include/pars/fmt/helpers.h"
-    "include/pars/fmt/nng.h"
     "include/pars/fmt/stl.h"
     "include/pars/log/demangle.h"
     "include/pars/log/flags.h"
     "include/pars/log/nametype.h"
-    "include/pars/net/context.h"
-    "include/pars/net/context_opt.h"
-    "include/pars/net/context_registry.h"
+    "include/pars/net/asio.h"
+    "include/pars/net/connect_mode.h"
+    "include/pars/net/dialer.h"
     "include/pars/net/dir.h"
     "include/pars/net/hash.h"
-    "include/pars/net/op.h"
+    "include/pars/net/io.h"
+    "include/pars/net/listener.h"
     "include/pars/net/pipe.h"
-    "include/pars/net/pull.h"
-    "include/pars/net/push.h"
-    "include/pars/net/rep.h"
-    "include/pars/net/req.h"
-    "include/pars/net/socket.h"
-    "include/pars/net/socket_opt.h"
-    "include/pars/net/tool_view.h"
-    "include/pars/net2/connect_mode.h"
+    "include/pars/net/point.h"
+    "include/pars/net/resolver.h"
     "include/pars/err.h"
     "include/pars/init.h"
     "include/pars/log.h"
@@ -98,6 +90,7 @@ target_sources (
 target_link_libraries (
     pars
     INTERFACE
+    asio::asio
     nng::nng
     spdlog::spdlog
     flatbuffers::flatbuffers
