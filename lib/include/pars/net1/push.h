@@ -27,58 +27,64 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_FMT_NNG_H
-#define PARS_FMT_NNG_H
+#ifndef PARS_NET_PUSH_H
+#define PARS_NET_PUSH_H
 
-#include "pars/net/hash.h"
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/hf_registry.h"
+#include "pars/ev/hf_registry__insert.h"
+#include "pars/ev/make_hf.h"
+#include "pars/net1/socket.h"
 
-#include "nngxx/msg.h"
-#include "nngxx/msg_header.h"
-#include "nngxx/pipe.h"
+#include "nngxx/socket.h"
 
-#include <cstddef>
-#include <format>
-#include <string>
-
-template<>
-struct std::formatter<nngxx::msg> : formatter<std::string>
+namespace pars::net
 {
-  auto format(const nngxx::msg& m, format_context& ctx) const
-    -> decltype(ctx.out())
-  {
-    if (m.body().size() < sizeof(std::size_t))
-    {
-      return std::format_to(
-        ctx.out(), "size:{}={}+{}, hash:<error>, pipe:0x{:X}",
-        m.header().size() + m.body().size(), m.header().size(), m.body().size(),
-        m.get_pipe().id());
-    }
-    else
-    {
-      std::size_t h = pars::net::hash_from_msg(m);
 
-      return std::format_to(
-        ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
-        m.header().size() + m.body().size(), m.header().size(), m.body().size(),
-        h, m.get_pipe().id());
-    }
+/**
+ * @brief Represents an nng_push protocol
+ */
+class push
+{
+public:
+  /// Construct a push
+  push(ev::hf_registry& h, ev::enqueuer& r)
+    : sock_m{r, nngxx::push::v0::make_socket().value_or_abort()}
+    , hf_registry_m{h}
+  {
   }
+
+  /// Get the socket
+  socket& sock() { return sock_m; }
+
+  /// Get the socket
+  const socket& sock() const { return sock_m; }
+
+  /// Stop socket
+  void stop() { sock_m.stop(); }
+
+  template<template<typename> typename kind_of, ev::event_c event_t,
+           typename class_t>
+    requires ev::kind_c<kind_of>
+  void on(void (class_t::*hf)(ev::hf_arg<kind_of, event_t>), class_t* self)
+  {
+    insert<kind_of, event_t>(ev::make_hf(hf, self));
+  }
+
+  template<template<typename> typename kind_of, ev::event_c event_t>
+    requires ev::kind_c<kind_of>
+  void insert(ev::handler_f<kind_of, event_t> hf)
+  {
+    hf_registry_m.insert(sock_m.id(), std::move(hf));
+  }
+
+private:
+  socket sock_m;
+  ev::hf_registry& hf_registry_m;
 };
 
-template<>
-struct std::formatter<nngxx::pipe_view> : formatter<std::string>
-{
-  auto format(const nngxx::pipe_view& p, std::format_context& ctx) const
-    -> decltype(ctx.out())
-  {
-    if (p)
-      if (p.id() == -1)
-        return std::format_to(ctx.out(), "<ERROR>");
-      else
-        return std::format_to(ctx.out(), "0x{:08X}", p.id());
-    else
-      return std::format_to(ctx.out(), "<empty-pipe>");
-  }
-};
+} // namespace pars::net
 
-#endif // PARS_FMT_NNG_H
+#endif // PARS_NET_PUSH_H

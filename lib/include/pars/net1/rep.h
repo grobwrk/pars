@@ -27,8 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_PULL_H
-#define PARS_NET_PULL_H
+#ifndef PARS_NET_REP_H
+#define PARS_NET_REP_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
@@ -36,7 +36,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/hf_registry__insert.h"
 #include "pars/ev/make_hf.h"
-#include "pars/net/socket.h"
+#include "pars/net1/context_registry.h"
+#include "pars/net1/socket.h"
 
 #include "nngxx/socket.h"
 
@@ -44,14 +45,15 @@ namespace pars::net
 {
 
 /**
- * @brief Represents an nng_pull protocol
+ * @brief Represents an nng_rep protocol
  */
-class pull
+class rep
 {
 public:
-  /// Construct a pull
-  pull(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::pull::v0::make_socket().value_or_abort()}
+  /// Construct a rep
+  rep(ev::hf_registry& h, ev::enqueuer& r)
+    : sock_m{r, nngxx::rep::v0::make_socket().value_or_abort()}
+    , ctx_registry_m{r, sock_m}
     , hf_registry_m{h}
   {
   }
@@ -62,8 +64,16 @@ public:
   /// Get the socket
   const socket& sock() const { return sock_m; }
 
-  /// Stop socket
-  void stop() { sock_m.stop(); }
+  /// Get the context_registry
+  context_registry& ctxs() { return ctx_registry_m; }
+
+  /// Stop socket and all contexts
+  void stop()
+  {
+    sock_m.stop();
+
+    ctx_registry_m.stop_all();
+  }
 
   template<template<typename> typename kind_of, ev::event_c event_t,
            typename class_t>
@@ -82,9 +92,10 @@ public:
 
 private:
   socket sock_m;
+  context_registry ctx_registry_m;
   ev::hf_registry& hf_registry_m;
 };
 
 } // namespace pars::net
 
-#endif // PARS_NET_PULL_H
+#endif // PARS_NET_REP_H

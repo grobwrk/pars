@@ -27,75 +27,67 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_REP_H
-#define PARS_NET_REP_H
+#ifndef PARS_COMP_BACKEND_H
+#define PARS_COMP_BACKEND_H
 
-#include "pars/concept/event.h"
-#include "pars/concept/kind.h"
 #include "pars/ev/enqueuer.h"
 #include "pars/ev/hf_registry.h"
-#include "pars/ev/hf_registry__insert.h"
-#include "pars/ev/make_hf.h"
-#include "pars/net/context_registry.h"
-#include "pars/net/socket.h"
+#include "pars/net1/rep.h"
+#include "pars/net1/socket.h"
+#include "pars/net1/socket_opt.h"
 
-#include "nngxx/socket.h"
+#include <format>
 
-namespace pars::net
+namespace pars::comp
 {
 
-/**
- * @brief Represents an nng_rep protocol
- */
-class rep
+class backend
 {
 public:
-  /// Construct a rep
-  rep(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::rep::v0::make_socket().value_or_abort()}
-    , ctx_registry_m{r, sock_m}
-    , hf_registry_m{h}
+  backend(ev::hf_registry& h, ev::enqueuer& r)
+    : rep_m{h, r}
   {
   }
 
-  /// Get the socket
-  socket& sock() { return sock_m; }
-
-  /// Get the socket
-  const socket& sock() const { return sock_m; }
-
-  /// Get the context_registry
-  context_registry& ctxs() { return ctx_registry_m; }
-
-  /// Stop socket and all contexts
-  void stop()
+  struct init_p
   {
-    sock_m.stop();
+    int num_ctxs = 1;
+    net::socket_opt rep_opts;
+  };
 
-    ctx_registry_m.stop_all();
+  void init(const init_p& params)
+  {
+    rep_m.sock().set_options(params.rep_opts);
+
+    rep_m.ctxs().start_recv(params.num_ctxs);
   }
 
-  template<template<typename> typename kind_of, ev::event_c event_t,
-           typename class_t>
-    requires ev::kind_c<kind_of>
-  void on(void (class_t::*hf)(ev::hf_arg<kind_of, event_t>), class_t* self)
+  struct connect_p
   {
-    insert<kind_of, event_t>(ev::make_hf(hf, self));
+    net::cmode service_cmode = net::cmode::listen; ///< connect mode for rep
+    char* service_addr = nullptr;                  ///< connect addr for rep
+  };
+
+  void connect(const connect_p& params)
+  {
+    rep_m.sock().connect(params.service_addr, params.service_cmode);
   }
 
-  template<template<typename> typename kind_of, ev::event_c event_t>
-    requires ev::kind_c<kind_of>
-  void insert(ev::handler_f<kind_of, event_t> hf)
+  net::rep& rep() { return rep_m; }
+
+  void graceful_terminate() { rep_m.stop(); }
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    hf_registry_m.insert(sock_m.id(), std::move(hf));
+    return std::format_to(ctx.out(), "[rep:{}]", rep_m.sock());
   }
 
 private:
-  socket sock_m;
-  context_registry ctx_registry_m;
-  ev::hf_registry& hf_registry_m;
+  net::rep rep_m;
 };
 
-} // namespace pars::net
+} // namespace pars::comp
 
-#endif // PARS_NET_REP_H
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_COMP_BACKEND_H

@@ -27,32 +27,58 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_FMT_HELPERS_H
-#define PARS_FMT_HELPERS_H
+#ifndef PARS_FMT_NNG_H
+#define PARS_FMT_NNG_H
 
-#include "pars/concept/net.h"
-#include "pars/net/pipe.h"
+#include "pars/net1/hash.h"
 
+#include "nngxx/msg.h"
+#include "nngxx/msg_header.h"
+#include "nngxx/pipe.h"
+
+#include <cstddef>
 #include <format>
+#include <string>
 
-namespace pars::f
+template<>
+struct std::formatter<nngxx::msg> : formatter<std::string>
 {
-
-// Format pipe and tool
-template<net::tool_c tool_t>
-struct pntl
-{
-  net::pipe p;
-  tool_t& t;
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format(const nngxx::msg& m, format_context& ctx) const
+    -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "Pipe {} {}", p, t);
+    if (m.body().size() < sizeof(std::size_t))
+    {
+      return std::format_to(
+        ctx.out(), "size:{}={}+{}, hash:<error>, pipe:0x{:X}",
+        m.header().size() + m.body().size(), m.header().size(), m.body().size(),
+        m.get_pipe().id());
+    }
+    else
+    {
+      std::size_t h = pars::net::hash_from_msg(m);
+
+      return std::format_to(
+        ctx.out(), "size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}",
+        m.header().size() + m.body().size(), m.header().size(), m.body().size(),
+        h, m.get_pipe().id());
+    }
   }
 };
 
-} // namespace pars::f
+template<>
+struct std::formatter<nngxx::pipe_view> : formatter<std::string>
+{
+  auto format(const nngxx::pipe_view& p, std::format_context& ctx) const
+    -> decltype(ctx.out())
+  {
+    if (p)
+      if (p.id() == -1)
+        return std::format_to(ctx.out(), "<ERROR>");
+      else
+        return std::format_to(ctx.out(), "0x{:08X}", p.id());
+    else
+      return std::format_to(ctx.out(), "<empty-pipe>");
+  }
+};
 
-#include "pars/fmt/formattable.h" // IWYU pragma: export
-
-#endif // PARS_FMT_HELPERS_H
+#endif // PARS_FMT_NNG_H

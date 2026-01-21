@@ -36,7 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/klass.h"
 #include "pars/log.h"
 #include "pars/log/flags.h"
-#include "pars/net/hash.h"
+#include "pars/net2/hash.h"
 
 #include <flatbuffers/buffer.h>
 #include <flatbuffers/detached_buffer.h>

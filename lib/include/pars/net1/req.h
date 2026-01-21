@@ -27,28 +27,75 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_CONCEPT_NET_H
-#define PARS_CONCEPT_NET_H
+#ifndef PARS_NET_REQ_H
+#define PARS_NET_REQ_H
 
-#include "pars/net/tool_view.h"
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/hf_registry.h"
+#include "pars/ev/hf_registry__insert.h"
+#include "pars/ev/make_hf.h"
+#include "pars/net1/context_registry.h"
+#include "pars/net1/socket.h"
 
-#include <concepts>
-#include <type_traits>
+#include "nngxx/socket.h"
 
 namespace pars::net
 {
 
-class socket;
+/**
+ * @brief Represents an nng_req protocol
+ */
+class req
+{
+public:
+  /// Construct a req
+  req(ev::hf_registry& h, ev::enqueuer& r)
+    : sock_m{r, nngxx::req::v0::make_socket().value_or_abort()}
+    , ctx_registry_m{r, sock_m}
+    , hf_registry_m{h}
+  {
+  }
 
-class context;
+  /// Get the socket
+  socket& sock() { return sock_m; }
 
-template<typename value_t>
-concept tool_c = requires {
-  requires std::same_as<std::remove_const_t<value_t>, net::socket> ||
-             std::same_as<std::remove_const_t<value_t>, net::context> ||
-             std::same_as<std::remove_const_t<value_t>, net::tool_view>;
+  /// Get the socket
+  const socket& sock() const { return sock_m; }
+
+  /// Get the context_registry
+  context_registry& ctxs() { return ctx_registry_m; }
+
+  /// Stop socket and all contexts
+  void stop()
+  {
+    sock_m.stop();
+
+    ctx_registry_m.stop_all();
+  }
+
+  template<template<typename> typename kind_of, ev::event_c event_t,
+           typename class_t>
+    requires ev::kind_c<kind_of>
+  void on(void (class_t::*hf)(ev::hf_arg<kind_of, event_t>), class_t* self)
+  {
+    insert<kind_of, event_t>(ev::make_hf(hf, self));
+  }
+
+  template<template<typename> typename kind_of, ev::event_c event_t>
+    requires ev::kind_c<kind_of>
+  void insert(ev::handler_f<kind_of, event_t> hf)
+  {
+    hf_registry_m.insert(sock_m.id(), std::move(hf));
+  }
+
+private:
+  socket sock_m;
+  context_registry ctx_registry_m;
+  ev::hf_registry& hf_registry_m;
 };
 
 } // namespace pars::net
 
-#endif // PARS_CONCEPT_NET_H
+#endif // PARS_NET_REQ_H

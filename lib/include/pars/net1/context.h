@@ -27,75 +27,89 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_REQ_H
-#define PARS_NET_REQ_H
+#ifndef PARS_NET_CONTEXT_H
+#define PARS_NET_CONTEXT_H
 
 #include "pars/concept/event.h"
-#include "pars/concept/kind.h"
 #include "pars/ev/enqueuer.h"
-#include "pars/ev/hf_registry.h"
-#include "pars/ev/hf_registry__insert.h"
-#include "pars/ev/make_hf.h"
-#include "pars/net/context_registry.h"
-#include "pars/net/socket.h"
+#include "pars/net1/context_opt.h"
+#include "pars/net1/op.h"
+#include "pars/net1/pipe.h"
+#include "pars/net1/socket.h"
+#include "pars/net1/tool_view.h"
 
-#include "nngxx/socket.h"
+#include "nngxx/aio.h"
+#include "nngxx/ctx.h"
+
+#include <format>
+#include <utility>
 
 namespace pars::net
 {
 
-/**
- * @brief Represents an nng_req protocol
- */
-class req
+class context
 {
 public:
-  /// Construct a req
-  req(ev::hf_registry& h, ev::enqueuer& r)
-    : sock_m{r, nngxx::req::v0::make_socket().value_or_abort()}
-    , ctx_registry_m{r, sock_m}
-    , hf_registry_m{h}
+  context(ev::enqueuer& e, nngxx::ctx&& c, const net::socket& s)
+    : enqueuer_m{e}
+    , ctx_m{std::move(c)}
+    , sock_m{s}
   {
   }
 
-  /// Get the socket
-  socket& sock() { return sock_m; }
+  ~context() { stop(); }
 
-  /// Get the socket
-  const socket& sock() const { return sock_m; }
+  operator tool_view() { return tool_view{ctx_m}; }
 
-  /// Get the context_registry
-  context_registry& ctxs() { return ctx_registry_m; }
-
-  /// Stop socket and all contexts
-  void stop()
+  void set_options(context_opt opts)
   {
-    sock_m.stop();
+    if (opts.recv_timeout)
+      ctx_m.set_recv_timeout(*opts.recv_timeout).or_abort();
 
-    ctx_registry_m.stop_all();
+    if (opts.send_timeout)
+      ctx_m.set_send_timeout(*opts.send_timeout).or_abort();
   }
 
-  template<template<typename> typename kind_of, ev::event_c event_t,
-           typename class_t>
-    requires ev::kind_c<kind_of>
-  void on(void (class_t::*hf)(ev::hf_arg<kind_of, event_t>), class_t* self)
+  context_opt options() const
   {
-    insert<kind_of, event_t>(ev::make_hf(hf, self));
+    return {.recv_timeout = ctx_m.get_recv_timeout().value_or_abort(),
+            .send_timeout = ctx_m.get_send_timeout().value_or_abort()};
   }
 
-  template<template<typename> typename kind_of, ev::event_c event_t>
-    requires ev::kind_c<kind_of>
-  void insert(ev::handler_f<kind_of, event_t> hf)
+  void send_aio(nngxx::aio_view& a) { ctx_m.send(a); }
+
+  void recv_aio(nngxx::aio_view& a) { ctx_m.recv(a); }
+
+  template<ev::event_c event_t>
+  void send(event_t ev, pipe p)
   {
-    hf_registry_m.insert(sock_m.id(), std::move(hf));
+    op_m.send(enqueuer_m, *this, p, std::move(ev));
+  }
+
+  void recv() { op_m.recv(enqueuer_m, *this); }
+
+  void stop() { op_m.stop(); }
+
+  int id() const { return ctx_m.id(); }
+
+  int socket_id() const { return sock_m.id(); }
+
+  const net::socket& sock() const { return sock_m; }
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return std::format_to(ctx.out(), "context #{}", id());
   }
 
 private:
-  socket sock_m;
-  context_registry ctx_registry_m;
-  ev::hf_registry& hf_registry_m;
+  ev::enqueuer& enqueuer_m;
+  op op_m;
+  nngxx::ctx ctx_m;
+  const net::socket& sock_m;
 };
 
 } // namespace pars::net
 
-#endif // PARS_NET_REQ_H
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_NET_CONTEXT_H

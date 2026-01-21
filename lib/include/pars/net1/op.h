@@ -38,8 +38,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/helpers.h"
 #include "pars/log.h"
 #include "pars/log/flags.h"
-#include "pars/net/dir.h"
-#include "pars/net/pipe.h"
+#include "pars/net1/dir.h"
+#include "pars/net1/pipe.h"
 
 #include "clev/err.h"
 

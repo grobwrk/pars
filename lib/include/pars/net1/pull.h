@@ -27,52 +27,64 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_COMP_CLIENT_H
-#define PARS_COMP_CLIENT_H
+#ifndef PARS_NET_PULL_H
+#define PARS_NET_PULL_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/enqueuer.h"
 #include "pars/ev/hf_registry.h"
-#include "pars/net/req.h"
-#include "pars/net/socket.h"
-#include "pars/net/socket_opt.h"
+#include "pars/ev/hf_registry__insert.h"
+#include "pars/ev/make_hf.h"
+#include "pars/net1/socket.h"
 
-namespace pars::comp
+#include "nngxx/socket.h"
+
+namespace pars::net
 {
 
-class client
+/**
+ * @brief Represents an nng_pull protocol
+ */
+class pull
 {
 public:
-  client(ev::hf_registry& h, ev::enqueuer& r)
-    : req_m{h, r}
+  /// Construct a pull
+  pull(ev::hf_registry& h, ev::enqueuer& r)
+    : sock_m{r, nngxx::pull::v0::make_socket().value_or_abort()}
+    , hf_registry_m{h}
   {
   }
 
-  net::req& req() { return req_m; }
+  /// Get the socket
+  socket& sock() { return sock_m; }
 
-  struct init_p
+  /// Get the socket
+  const socket& sock() const { return sock_m; }
+
+  /// Stop socket
+  void stop() { sock_m.stop(); }
+
+  template<template<typename> typename kind_of, ev::event_c event_t,
+           typename class_t>
+    requires ev::kind_c<kind_of>
+  void on(void (class_t::*hf)(ev::hf_arg<kind_of, event_t>), class_t* self)
   {
-    net::socket_opt req_opts;
-  };
-
-  void init(const init_p& params) { req_m.sock().set_options(params.req_opts); }
-
-  struct connect_p
-  {
-    net::cmode service_cmode{net::cmode::dial}; ///< connect mode for req
-    char* service_addr{nullptr};                ///< connect addr for req
-  };
-
-  void connect(const connect_p& params)
-  {
-    req_m.sock().connect(params.service_addr, params.service_cmode);
+    insert<kind_of, event_t>(ev::make_hf(hf, self));
   }
 
-  void graceful_terminate() { req_m.stop(); }
+  template<template<typename> typename kind_of, ev::event_c event_t>
+    requires ev::kind_c<kind_of>
+  void insert(ev::handler_f<kind_of, event_t> hf)
+  {
+    hf_registry_m.insert(sock_m.id(), std::move(hf));
+  }
 
 private:
-  net::req req_m;
+  socket sock_m;
+  ev::hf_registry& hf_registry_m;
 };
 
-} // namespace pars::comp
+} // namespace pars::net
 
-#endif // PARS_COMP_CLIENT_H
+#endif // PARS_NET_PULL_H

@@ -27,76 +27,28 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_CONTEXTREGISTRY_H
-#define PARS_NET_CONTEXTREGISTRY_H
+#ifndef PARS_CONCEPT_NET_H
+#define PARS_CONCEPT_NET_H
 
-#include "pars/ev/enqueuer.h"
-#include "pars/net/context.h"
-#include "pars/net/socket.h"
-#include "pars/net/tool_view.h"
+#include "pars/net1/tool_view.h"
 
-#include "nngxx/ctx.h"
-
-#include <format>
-#include <stdexcept>
-#include <unordered_map>
-#include <utility>
+#include <concepts>
+#include <type_traits>
 
 namespace pars::net
 {
 
-class context_registry
-{
-public:
-  context_registry(ev::enqueuer& e, net::socket& s)
-    : enqueuer_m{e}
-    , sock_m{s}
-  {
-  }
+class socket;
 
-  void stop_all()
-  {
-    for (auto& c : ctx_map_m)
-      c.second.stop();
-  }
+class context;
 
-  context& emplace()
-  {
-    auto ctx = sock_m.make_ctx();
-
-    auto id = ctx.id();
-
-    auto res = ctx_map_m.try_emplace(id, enqueuer_m, std::move(ctx), sock_m);
-
-    if (!res.second)
-      throw std::runtime_error("Unable to emplace a context");
-
-    return res.first->second;
-  }
-
-  context& of(const net::tool_view& t)
-  {
-    if (t.type() != typeid(nngxx::ctx_view))
-      throw std::runtime_error("We need a context here");
-
-    if (ctx_map_m.find(t.id()) == ctx_map_m.end())
-      throw std::runtime_error(std::format("Unknown context {}", t.id()));
-
-    return ctx_map_m.at(t.id());
-  }
-
-  void start_recv(int num_ctxs)
-  {
-    for (int i = 0; i < num_ctxs; ++i)
-      emplace().recv();
-  }
-
-private:
-  ev::enqueuer& enqueuer_m;
-  socket& sock_m;
-  std::unordered_map<int, context> ctx_map_m;
+template<typename value_t>
+concept tool_c = requires {
+  requires std::same_as<std::remove_const_t<value_t>, net::socket> ||
+             std::same_as<std::remove_const_t<value_t>, net::context> ||
+             std::same_as<std::remove_const_t<value_t>, net::tool_view>;
 };
 
 } // namespace pars::net
 
-#endif // PARS_NET_CONTEXTREGISTRY_H
+#endif // PARS_CONCEPT_NET_H
