@@ -49,13 +49,13 @@ namespace pars::app
 {
 
 template<typename component_t>
-class single2 : public with_default_setup
+class single : public with_default_setup
 {
 public:
   using component_type = component_t;
-  using self_type = single2<component_type>;
+  using self_type = single<component_type>;
 
-  single2()
+  single()
     : runner_m{hf_registry_m}
     , hf_registry_m{runner_m}
     , dispatcher_m{runner_m}

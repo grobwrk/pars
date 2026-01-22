@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/concept/formattable.h"
 
 #include <format>
+#include <memory>
 #include <string>
 
 template<formattable_c foarmattable_t>
@@ -42,6 +43,28 @@ struct std::formatter<foarmattable_t> : std::formatter<std::string>
     -> decltype(ctx.out())
   {
     return x.format_to(ctx);
+  }
+};
+
+template<formattable_c foarmattable_t>
+struct std::formatter<std::unique_ptr<foarmattable_t>>
+  : std::formatter<std::string>
+{
+  auto format(const std::unique_ptr<foarmattable_t>& x,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    return x->format_to(ctx);
+  }
+};
+
+template<formattable_c foarmattable_t>
+struct std::formatter<std::shared_ptr<foarmattable_t>>
+  : std::formatter<std::string>
+{
+  auto format(const std::shared_ptr<foarmattable_t>& x,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    return x->format_to(ctx);
   }
 };
 

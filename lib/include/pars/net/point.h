@@ -40,6 +40,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/asio.h"
 #include "pars/net/connect_mode.h"
 #include "pars/net/dialer.h"
+#include "pars/net/direction.h"
 #include "pars/net/io.h"
 #include "pars/net/listener.h"
 #include "pars/net/pipe.h"
@@ -103,22 +104,15 @@ class point
 {
 public:
   point(ev::hf_registry& h, ev::enqueuer& e, net::io& io)
-    : hf_registry_m{h}
+    : io_m{io}
+    , id_m{io.next_point_id()}
+    , hf_registry_m{h}
     , enqueuer_m{e}
-    , io_m{io}
   {
   }
 
-  // // connect to the first endpoint from these results
-  // // on error try the second
-  // void connect(const net::cmode cmode, const net::ip::resolver_results
-  // results)
-  // {
-  //   connect(cmode, results);
-  // }
-
   // connect to a given endpoint (connect mode + endpoint address)
-  void connect(const net::cmode cmode, const net::ip::tcp::endpoint endpoint)
+  void connect(const net::cmode cmode, const net::asio::tcp::endpoint endpoint)
   {
     if (cmode == cmode::dial)
       dial(endpoint);
@@ -126,76 +120,48 @@ public:
       listen(endpoint);
   }
 
-  void dial(const net::ip::tcp::endpoint& endpoint)
+  void dial(const auto& to)
   {
-    auto dialer = net::dialer::make(io_m);
+    auto dialer = net::dialer::make(io_m, id_m);
 
-    dialer->dial(endpoint, [&, _ = std::move(dialer)](net::pipe2::pointer pipe,
-                                                      std::error_code err) {
+    dialer->dial(to, [&, _ = std::move(dialer)](net::pipe::pointer pipe,
+                                                std::error_code err) {
+      pipe->id(io_m.next_pipe_id());
+
       pipes_m.push_back(std::move(pipe));
 
       if (!err)
         enqueuer_m.fire(ev::pipe_created{}, pipes_m.back());
       else
-        enqueuer_m.fire(ev::network_error{}, pipes_m.back());
+        enqueuer_m.fire(ev::network_error{err, net::direction::out},
+                        pipes_m.back());
     });
-
-    // auto& d = dialers_m.emplace_back(io_m);
-
-    // d.dial(endpoint, [&](net::pipe2::pointer& pipe, std::error_code err) {
-    //   if (!err)
-    //   {
-    //     pipes_m.push_back(pipe);
-
-    //     // enqueuer_m.fire(pipe_created{});
-    //   }
-    //   else
-    //   {
-    //     // enqueuer_m.fire(network_error{});
-    //   }
-    // });
   }
 
-  void listen(const net::ip::tcp::endpoint& endpoint)
+  void listen(const auto& on)
   {
-    auto listener = net::listener::make(io_m, endpoint);
+    auto listener = net::listener::make(io_m, on, id_m);
 
-    listener->listen([&, _l = std::move(listener)](net::pipe2::pointer pipe,
-                                                   std::error_code err) {
+    listener->listen([&, _ = std::move(listener)](net::pipe::pointer pipe,
+                                                  std::error_code err) {
+      pipe->id(io_m.next_pipe_id());
+
       pipes_m.push_back(std::move(pipe));
 
       if (!err)
       {
-        enqueuer_m.fire(ev::pipe_created{}, {pipes_m.back()});
+        enqueuer_m.fire(ev::pipe_created{}, pipes_m.back());
 
         return true; // keep accepting
       }
       else
       {
-        enqueuer_m.fire(ev::network_error{}, {pipes_m.back()});
+        enqueuer_m.fire(ev::network_error{err, net::direction::in},
+                        pipes_m.back());
 
         return false; // don't keep accepting
       }
     });
-
-    // auto& l = listeners_m.emplace_back(io_m, endpoint);
-
-    // l.listen([&](net::pipe2::pointer pipe, std::error_code err) {
-    //   if (!err)
-    //   {
-    //     pipes_m.push_back(pipe);
-
-    //     // enqueuer_m.fire(pipe_created{});
-
-    //     return true; // keep accepting
-    //   }
-    //   else
-    //   {
-    //     // enqueuer_m.fire(network_error{});
-
-    //     return false; // don't keep accepting
-    //   }
-    // });
   }
 
   template<template<typename> typename kind_of, ev::event_c event_t,
@@ -210,16 +176,15 @@ public:
     requires ev::kind_c<kind_of>
   void insert(ev::handler_f<kind_of, event_t> hf)
   {
-    hf_registry_m.insert(-1, std::move(hf));
+    hf_registry_m.insert(id_m, std::move(hf));
   }
 
 private:
   net::io& io_m;
+  int id_m = -1;
   ev::enqueuer& enqueuer_m;
   ev::hf_registry& hf_registry_m;
-  std::list<dialer> dialers_m;
-  std::list<listener> listeners_m;
-  std::list<std::unique_ptr<pipe2>> pipes_m;
+  std::list<pipe::pointer> pipes_m;
 };
 
 } // namespace pars::net

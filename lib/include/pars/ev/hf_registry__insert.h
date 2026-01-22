@@ -48,7 +48,7 @@ namespace pars::ev
 
 template<template<typename> typename kind_of, event_c event_t>
   requires kind_c<kind_of>
-void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
+void hf_registry::insert(int p_id, handler_f<kind_of, event_t> hf)
 {
   auto hf_ptr = std::make_shared<handler_f<kind_of, event_t>>(std::move(hf));
 
@@ -56,7 +56,7 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
 
   if constexpr (async_kind_c<kind_of<event_t>>)
   {
-    return insert_jhf<kind_of, event_t>(s_id, [&, hf_ptr](job j) {
+    return insert_jhf<kind_of, event_t>(p_id, [&, hf_ptr](job j) {
       auto task = std::packaged_task([hf_ptr](std::stop_token tk, job j) {
         auto ke = j.event<kind_of, event_t>();
 
@@ -75,7 +75,7 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
   }
   else
   {
-    return insert_jhf<kind_of, event_t>(s_id, [hf_ptr](job j) {
+    return insert_jhf<kind_of, event_t>(p_id, [hf_ptr](job j) {
       auto ke = j.event<kind_of, event_t>();
 
       ke.md().set_job_id(j.id());

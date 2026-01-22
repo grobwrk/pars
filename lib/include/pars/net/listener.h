@@ -44,23 +44,26 @@ namespace pars::net
 class listener
 {
 private:
-  listener(net::io& io, const ip::tcp::endpoint& endpoint)
+  listener(net::io& io, const asio::tcp::endpoint& endpoint,
+           int point_id) noexcept
     : io_m{io.lower_context()}
     , acceptor_m{io_m, endpoint.protocol()}
+    , point_id_m{point_id}
   {
   }
 
 public:
   using pointer = std::unique_ptr<listener>;
 
-  static pointer make(net::io& io, const ip::tcp::endpoint& endpoint)
+  static pointer make(net::io& io, const asio::tcp::endpoint& endpoint,
+                      int point_id)
   {
-    return pointer{new listener(io, endpoint)};
+    return pointer{new listener(io, endpoint, point_id)};
   }
 
-  void listen(net::pipe_function pf)
+  void listen(net::pipe::function<bool> pf)
   {
-    auto pipe = net::pipe2::make(io_m);
+    auto pipe = net::pipe::make(io_m, point_id_m);
 
     acceptor_m.async_accept(
       pipe->socket(), [&, pipe = std::move(pipe),
@@ -71,8 +74,9 @@ public:
   }
 
 private:
-  ip::io_context& io_m;
-  ip::tcp::acceptor acceptor_m;
+  asio::io_context& io_m;
+  asio::tcp::acceptor acceptor_m;
+  int point_id_m;
 };
 
 } // namespace pars::net

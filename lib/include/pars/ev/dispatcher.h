@@ -193,13 +193,13 @@ private:
     }
     else if constexpr (network_event_c<event_t>)
     {
-      auto p_id = ke.md().pipe().id();
+      auto& p = ke.md().pipe();
 
-      runner_m.associate_job_to_pipe(j_id, p_id);
+      runner_m.associate_job_to_pipe(j_id, p->id());
 
       pars::debug(SL, lf::event,
-                  "Job #{} pushed and associated with Pipe {:X} [# jobs: {}]",
-                  j_id, p_id, queue_m.size());
+                  "Job #{} pushed and associated with {} [# jobs: {}]", j_id, p,
+                  queue_m.size());
     }
 
     cond_m.notify_one();

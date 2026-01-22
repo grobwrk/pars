@@ -39,9 +39,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/metadata.h"
 #include "pars/ev/runner.h"
 #include "pars/ev/spec.h"
+#include "pars/net/msg.h"
 #include "pars/net/pipe.h"
-
-#include "nngxx/msg.h"
 
 #include <utility>
 
@@ -68,19 +67,21 @@ public:
     requires kind_c<kind_of>
   void fire(event_t ev, ev::metadata<kind_of, event2_t> md)
   {
-    fire(std::move(ev), md.pipe().socket_id(), md.tool(), md.pipe());
+    fire(std::move(ev), md.pipe());
   }
 
-  template<network_event_c event_t, net::tool_c tool_t>
-  void fire(event_t ev, const int s_id, tool_t& t, const net::pipe& p)
+  template<network_event_c event_t>
+  void fire(event_t ev, const net::pipe::pointer& p)
   {
     if constexpr (std::is_same_v<event_t, creating_pipe> ||
                   std::is_same_v<event_t, pipe_created> ||
                   std::is_same_v<event_t, pipe_removed>)
     {
+      auto p_id = p->point_id();
+
       if (dispatcher_m.terminating())
       {
-        p.close().or_abort();
+        p->socket().close();
 
         return;
       }
@@ -90,23 +91,22 @@ public:
       else if constexpr (std::is_same_v<event_t, pipe_removed>)
         runner_m.remove_pipe(p);
 
-      if (!runner_m.can_exec(s_id, spec<fired<event_t>>::hash))
+      if (!runner_m.can_exec(p_id, spec<fired<event_t>>::hash))
         return;
     }
 
-    dispatcher_m.queue_back(fired{std::move(ev), {s_id, t, p}});
+    dispatcher_m.queue_back(fired{std::move(ev), {p}});
   }
 
-  template<network_event_c event_t, net::tool_c tool_t>
-  void queue_sent(event_t ev, int s_id, tool_t& t, net::pipe p)
+  template<network_event_c event_t>
+  void queue_sent(event_t ev, const net::pipe::pointer& p)
   {
-    dispatcher_m.queue_back(sent{std::move(ev), {s_id, t, p}});
+    dispatcher_m.queue_back(sent{std::move(ev), {p}});
   }
 
-  template<net::tool_c tool_t>
-  void queue_received(nngxx::msg m, int s_id, tool_t& t, net::pipe p)
+  void queue_received(net::msg m, const net::pipe::pointer& p)
   {
-    dispatcher_m.queue_back(received{std::move(m), {s_id, t, p}});
+    dispatcher_m.queue_back(received{std::move(m), {p}});
   }
 
 private:

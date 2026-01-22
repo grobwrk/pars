@@ -59,6 +59,7 @@ namespace pars::net
 
 class rep;
 class req;
+class point;
 
 } // namespace pars::net
 
@@ -86,6 +87,7 @@ public:
 private:
   friend net::rep;
   friend net::req;
+  friend net::point;
   friend runner;
 
   template<template<typename> typename kind_of, event_c event_t>
@@ -95,16 +97,16 @@ private:
     insert(0, std::move(hf));
   }
 
-  /// Insert an handler_f for a kind_of<event_t> on a socket s_id
+  /// Insert an handler_f for a kind_of<event_t> on a point p_id
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
-  void insert(int s_id, handler_f<kind_of, event_t> hf);
+  void insert(int p_id, handler_f<kind_of, event_t> hf);
 
   auto lock() { return std::unique_lock{mtx_m}; }
 
-  bool has_handler_for(int s_id, std::size_t spec_hash)
+  bool has_handler_for(int p_id, std::size_t spec_hash)
   {
-    return handlers_m[s_id].contains(spec_hash);
+    return handlers_m[p_id].contains(spec_hash);
   }
 
   const std::type_info* const type_for(std::size_t spec_hash)
@@ -112,26 +114,26 @@ private:
     return types_m[spec_hash];
   }
 
-  const job_handler_f& handler_for(int s_id, std::size_t spec_hash)
+  const job_handler_f& handler_for(int p_id, std::size_t spec_hash)
   {
-    return handlers_m[s_id][spec_hash];
+    return handlers_m[p_id][spec_hash];
   }
 
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
-  auto insert_jhf(int s_id, job_handler_f hf)
+  auto insert_jhf(int p_id, job_handler_f hf)
   {
     auto spec_hash = spec<kind_of<event_t>>::hash;
 
-    if (!handlers_m[s_id].try_emplace(spec_hash, std::move(hf)).second)
+    if (!handlers_m[p_id].try_emplace(spec_hash, std::move(hf)).second)
       throw std::runtime_error(std::format(
-        "Unable to emplace the handler_f for Socket #{} and Spec {:X}", s_id,
+        "Unable to emplace the handler_f for Point #{} and Spec {:X}", p_id,
         spec_hash));
 
     // register the type for logging purpose
     types_m[spec_hash] = &typeid(kind_of<event_t>);
 
-    pars::debug(SL, lf::event, "Socket {}: Registered {}!", s_id,
+    pars::debug(SL, lf::event, "Point {}: Registered {}!", p_id,
                 spec<kind_of<event_t>>{});
   }
 

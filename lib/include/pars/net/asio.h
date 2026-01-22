@@ -32,6 +32,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/init.h" // IWYU pragma: keep
 
+#include <asio/buffer.hpp>
 #include <asio/detail/socket_types.hpp>
 #include <asio/executor_work_guard.hpp>
 #include <asio/io_context.hpp>
@@ -40,52 +41,42 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <asio/ip/tcp.hpp>
 #include <asio/ip/udp.hpp>
 
-namespace pars::net::ip
+namespace pars::net::asio
 {
 
 /// ASIO ALIASES
 
-using io_context = ::asio::io_context;
+using ::asio::io_context;
 
-// template<typename ip_t>
-// using basic_endpoint = ::asio::ip::basic_endpoint<ip_t>;
+using ::asio::const_buffer;
 
-// template<typename ip_t>
-// using basic_resolver = ::asio::ip::basic_resolver<ip_t>;
-
-template<typename ip_t>
-using basic_resolver_results = ::asio::ip::basic_resolver_results<ip_t>;
-
-// template<typename ip_t>
-// using basic_stream_socket = ::asio::basic_stream_socket<ip_t>;
-
-// template<typename ip_t>
-// using basic_datagram_socket = ::asio::basic_datagram_socket<ip_t>;
-
-template<typename executor_t>
-using executor_work_guard = ::asio::executor_work_guard<executor_t>;
+using ::asio::executor_work_guard;
 
 using ::asio::make_work_guard;
 
-using address = ::asio::ip::address;
+/// ASIO IP ALIASES
 
-using tcp = ::asio::ip::tcp;
+using ::asio::ip::address;
 
-using udp = ::asio::ip::udp;
+using ::asio::ip::tcp;
 
-using socket_type = ::asio::detail::socket_type;
+using ::asio::ip::udp;
 
-} // namespace pars::net::ip
+using ::asio::ip::basic_resolver_results;
+
+using ::asio::detail::socket_type;
+
+} // namespace pars::net::asio
 
 #include <format>
 #include <string>
 
 template<>
-struct std::formatter<pars::net::ip::tcp::endpoint>
+struct std::formatter<pars::net::asio::tcp::endpoint>
   : std::formatter<std::string>
 {
-  auto format(const pars::net::ip::tcp::endpoint& x, format_context& ctx) const
-    -> decltype(ctx.out())
+  auto format(const pars::net::asio::tcp::endpoint& x,
+              format_context& ctx) const -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "tcp::endpoint");
   }

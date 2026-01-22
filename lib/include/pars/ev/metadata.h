@@ -34,6 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/concept/kind.h"
 #include "pars/net/pipe.h"
 
+#include <cstdint>
 #include <format>
 #include <stop_token>
 
@@ -61,7 +62,7 @@ struct base_internal_metadata
 {
   base_internal_metadata() {}
 
-  int socket_id() const { return 0; }
+  auto point_id() const { return 0; }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
@@ -71,30 +72,23 @@ struct base_internal_metadata
 
 struct base_network_metadata
 {
-  base_network_metadata(int s_id, net::tool_view t, net::pipe p)
-    : id_m{s_id}
-    , tool_m{t}
-    , pipe_m{p}
+  base_network_metadata(const net::pipe::pointer& p)
+    : pipe_m{p}
   {
   }
 
-  const net::tool_view& tool() const { return tool_m; }
+  const net::pipe::pointer& pipe() const { return pipe_m; }
 
-  const net::pipe& pipe() const { return pipe_m; }
-
-  int socket_id() const { return id_m; }
+  auto point_id() const { return pipe_m->point_id(); }
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
     // FIXME: duplicated
-    return std::format_to(ctx.out(), "Pipe #{:X} {} {}", pipe().id(),
-                          tool().who(), tool().id());
+    return std::format_to(ctx.out(), "Pipe #{:X}", point_id());
   }
 
 private:
-  int id_m;
-  net::tool_view tool_m;
-  net::pipe pipe_m;
+  const net::pipe::pointer& pipe_m;
 };
 
 struct base_sync_metadata

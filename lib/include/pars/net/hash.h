@@ -30,10 +30,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef PARS_NET_HASH_H
 #define PARS_NET_HASH_H
 
-#include "pars/net1/msg.h"
+#include "pars/net/msg.h"
 
 #include <cstddef>
 #include <cstdint>
+#include <cstring>
 #include <format>
 #include <stdexcept>
 #include <string_view>
@@ -78,13 +79,12 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
 static std::size_t hash_from_msg(const msg& m)
 {
   std::size_t h;
-  if (m)
-    if (m.body().size() >= sizeof(h))
-      std::memcpy(&h, m.body().data<char>(), sizeof(h));
-    else
-      h = 0xffffffffffffffff;
+
+  if (m.size() >= sizeof(h))
+    std::memcpy(&h, m.data(), sizeof(h));
   else
-    h = 0x0000000000000000;
+    h = 0xffffffffffffffff;
+
   return h;
 }
 

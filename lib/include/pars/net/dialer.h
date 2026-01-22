@@ -45,30 +45,23 @@ namespace pars::net
 class dialer
 {
 private:
-  dialer(io& io)
+  dialer(io& io, int point_id)
     : io_m{io.lower_context()}
+    , point_id_m{point_id}
   {
   }
 
 public:
   using pointer = std::unique_ptr<dialer>;
 
-  static pointer make(io& io) { return pointer{new dialer{io}}; }
-
-  // void dial(ip::tcp::resolver::results_type rs, ip::pipe_function2 pf)
-  // {
-  //   // the errf will be called positively as soon as one result entry
-  //   // is successfully connected (ie: with the result of the first
-  //   // async_connect that succeeded)
-  //   // otherwise will be called negatively with the error code of the
-  //   // error of the last entry we tryed (ie: with the result of the last
-  //   // async_connect that failed)
-  //   dial(rs.begin(), rs.end(), pf);
-  // }
-
-  void dial(const ip::tcp::endpoint& e, pipe_function2 pf)
+  static pointer make(io& io, int point_id)
   {
-    auto pipe = pipe2::make(io_m);
+    return pointer{new dialer{io, point_id}};
+  }
+
+  void dial(const asio::tcp::endpoint& e, net::pipe::function<void> pf)
+  {
+    auto pipe = pipe::make(io_m, point_id_m);
 
     pipe->socket().async_connect(
       e, [pipe = std::move(pipe), pf = std::move(pf)](
@@ -76,28 +69,8 @@ public:
   }
 
 private:
-  // void dial(ip::tcp::resolver::results_type::iterator it,
-  //           ip::tcp::resolver::results_type::iterator end,
-  //           ip::pipe_function2 pf)
-  // {
-  //   if (it != end)
-  //     dial(it->endpoint(), [&](net::pipe2::pointer pipe, std::error_code err)
-  //     {
-  //       if (err)
-  //         dial(++it, end, pf);
-  //       else
-  //         pf(pipe, err);
-  //     });
-  //   else
-  //     pf(pipe, err);
-  //   // dial(it.dereference().endpoint(),
-  //   //      [&](ip::error_code ec) { dial(it + 1, end); })
-  //   ;
-  //   // else
-  //   //   signal_error(std::make_error_code(unable_to_connect));
-  // }
-
-  net::ip::io_context& io_m;
+  net::asio::io_context& io_m;
+  int point_id_m;
 };
 
 } // namespace pars::net

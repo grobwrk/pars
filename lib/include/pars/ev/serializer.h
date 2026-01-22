@@ -30,13 +30,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef PARS_EV_SERIALIZER_H
 #define PARS_EV_SERIALIZER_H
 
-#include "nngxx/msg.h"
-
 #include "pars/concept/event.h"
 #include "pars/ev/klass.h"
 #include "pars/log.h"
 #include "pars/log/flags.h"
 #include "pars/net/hash.h"
+#include "pars/net/msg.h"
 
 #include <flatbuffers/buffer.h>
 #include <flatbuffers/detached_buffer.h>
@@ -105,7 +104,7 @@ public:
 
   static obb using_size(std::size_t size) { return obb{size}; }
 
-  static event_type from(nngxx::msg m) { return event_type{std::move(m)}; }
+  static event_type from(net::msg m) { return event_type{std::move(m)}; }
 
   template<typename fn_t, typename... args_t>
   auto and_then(this auto&& self, fn_t&& mem_f, args_t&&... args)
@@ -154,13 +153,13 @@ private:
   {
   }
 
-  fb(nngxx::msg m)
-    : buf_m{std::make_shared<nngxx::msg>(std::move(m))}
+  fb(net::msg m)
+    : buf_m{std::make_shared<net::msg>(std::move(m))}
   {
   }
 
 public:
-  std::span<uint8_t> span() const
+  std::span<const uint8_t> span() const
   {
     return std::visit(
       [](auto&& b) {
@@ -173,15 +172,15 @@ public:
             *static_cast<const std::shared_ptr<flatbuffers::DetachedBuffer>*>(
               &b);
 
-          return std::span<uint8_t>(buf->begin(),
-                                    std::distance(buf->begin(), buf->end()));
+          return std::span<const uint8_t>(
+            buf->begin(), std::distance(buf->begin(), buf->end()));
         }
-        else if constexpr (std::is_same_v<T, std::shared_ptr<nngxx::msg>>)
+        else if constexpr (std::is_same_v<T, std::shared_ptr<net::msg>>)
         {
-          auto msg = *static_cast<const std::shared_ptr<nngxx::msg>*>(&b);
+          auto msg = *static_cast<const std::shared_ptr<net::msg>*>(&b);
 
-          return std::span<uint8_t>(msg->body().data<uint8_t>() + 8,
-                                    msg->body().size() - 8);
+          return std::span<const uint8_t>(msg->data<uint8_t>() + 8,
+                                          msg->size() - 8);
         }
         else
           static_assert(!std::is_same_v<T, T>, "non-exhaustive visitor!");
@@ -195,7 +194,7 @@ public:
   }
 
 private:
-  std::variant<std::shared_ptr<nngxx::msg>,
+  std::variant<std::shared_ptr<net::msg>,
                std::shared_ptr<flatbuffers::DetachedBuffer>>
     buf_m;
 };
@@ -203,7 +202,7 @@ private:
 struct serialize
 {
   template<event_c event_t>
-  static nngxx::msg to_network(event_t& ev)
+  static net::msg to_network(event_t& ev)
   {
     // 1. get the serialized data
     std::span<uint8_t> span = ev.span();
@@ -211,15 +210,12 @@ struct serialize
     // 2. compute the event_hash
     auto event_hash = uuid<klass<event_t>>::hash;
 
-    // 3. create the nngxx::msg to hold the hash+event
-    auto m = nngxx::make_msg(sizeof(event_hash) + span.size()).value_or_abort();
-    auto b = m.body();
+    // 3. create the net::msg to hold the hash+event
+    auto m = net::msg{};
 
     // 4. append the event hash
-    std::memcpy(b.data<char>(), &event_hash, sizeof(event_hash));
 
     // 5. append the serialized event
-    memcpy(b.data<uint8_t>() + sizeof(event_hash), span.data(), span.size());
 
     pars::debug(SL, lf::event, "Serialized Event [{}] to Message [{}]", ev, m);
 
@@ -227,7 +223,7 @@ struct serialize
   }
 
   template<event_c event_t>
-  static event_t to_event(const nngxx::msg& m)
+  static event_t to_event(const net::msg& m)
   {
     // 1. compute received and requested event hash
     auto recv_event_hash = net::hash_from_msg(m);

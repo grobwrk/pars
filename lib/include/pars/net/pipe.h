@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/asio.h"
 
 #include <cstdint>
+#include <format>
 #include <functional>
 #include <memory>
 #include <system_error>
@@ -44,153 +45,48 @@ struct pipe
 {
   using pointer = std::unique_ptr<pipe>;
 
-  static pointer make(ip::io_context& io);
+  template<typename ret_t>
+  using function =
+    std::move_only_function<ret_t(pars::net::pipe::pointer, std::error_code)>;
 
-  ip::tcp::socket& socket() const;
-
-  uint64_t socket_id() const
+  static pointer make(asio::io_context& io, int point_id)
   {
-    return asio::detail::socket_type{socket().native_handle()};
+    return pointer{new pipe{io, point_id}};
   }
+
+  asio::tcp::socket& socket() { return socket_m; }
+
+  int id() const { return id_m; }
+
+  void id(int id) { id_m = id; }
+
+  auto point_id() const { return point_id_m; }
+
+  auto socket_id() const
+  {
+    return static_cast<uint64_t>(asio::socket_type{
+      const_cast<asio::tcp::socket&>(socket_m).native_handle()});
+  }
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return std::format_to(ctx.out(), "Pipe #{}-{:X}", id(), socket_id());
+  }
+
+private:
+  pipe(asio::io_context& io, int point_id)
+    : socket_m{io}
+    , point_id_m{point_id}
+  {
+  }
+
+  int id_m = -1;
+  int point_id_m = -1;
+  asio::tcp::socket socket_m;
 };
-
-using pipe_function =
-  std::move_only_function<bool(pars::net::pipe::pointer, std::error_code)>;
-
-using pipe_function2 =
-  std::move_only_function<void(pars::net::pipe::pointer, std::error_code)>;
 
 } // namespace pars::net
 
 #include "pars/fmt/formattable.h" // IWYU pragma: keep
 
 #endif // PARS_NET_PIPE_H
-
-/// PROTO SHIT
-
-// class proto
-// {
-// public:
-//   enum name
-//   {
-//     tcp4,
-//     udp4,
-//     tcp6,
-//     udp6
-//   };
-
-//   proto(const ip::tcp& p)
-//     : proto_m{p}
-//   {
-//   }
-
-//   proto(const ip::udp& p)
-//     : proto_m{p}
-//   {
-//   }
-
-//   proto(const name n)
-//     : proto_m{init_proto(n)}
-//   {
-//   }
-
-//   auto name() const
-//   {
-//     return std::visit(
-//       overloaded{[](const ip::tcp& x) {
-//                    return x.family() == ASIO_OS_DEF_AF_INET ? tcp4 : tcp6;
-//                  },
-//                  [](const ip::udp& x) {
-//                    return x.family() == ASIO_OS_DEF_AF_INET ? udp4 : udp6;
-//                  }},
-//       proto_m);
-//   }
-
-//   auto is_tcp() const { return name() == tcp4 || name() == tcp6; }
-
-//   auto is_udp() const { return name() == udp4 || name() == udp6; }
-
-//   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
-//   {
-//     switch (name())
-//     {
-//     case tcp4:
-//       return std::format_to(ctx.out(), "tcp4");
-
-//     case tcp6:
-//       return std::format_to(ctx.out(), "tcp6");
-
-//     case udp4:
-//       return std::format_to(ctx.out(), "udp4");
-
-//     case udp6:
-//       return std::format_to(ctx.out(), "udp6");
-//     }
-//   }
-
-// private:
-//   static ip::protocol init_proto(const enum name n)
-//   {
-//     switch (n)
-//     {
-//     case tcp4:
-//       return ip::tcp::v4();
-
-//     case tcp6:
-//       return ip::tcp::v6();
-
-//     case udp4:
-//       return ip::udp::v4();
-
-//     case udp6:
-//       return ip::udp::v6();
-//     }
-//   }
-
-//   ip::protocol proto_m;
-// };
-
-/// BASIC SOCKET
-
-// template<typename ip_t>
-// struct basic_socket;
-
-// template<>
-// struct basic_socket<ip::tcp> : ::asio::ip::tcp::socket
-// {
-//   using endpoint = basic_endpoint<ip::tcp>;
-// };
-
-// template<>
-// struct basic_socket<ip::udp> : ::asio::ip::udp::socket
-// {
-//   using endpoint = basic_endpoint<ip::udp>;
-// };
-
-/// INTERNET PROTOCOL
-
-// template<>
-// struct std::formatter<::pars::net::ip::internet_protocol>
-//   : std::formatter<std::string>
-// {
-//   auto format(const ::pars::net::ip::internet_protocol& x,
-//               format_context& ctx) const -> decltype(ctx.out())
-//   {
-//     switch (x.family() + x.protocol())
-//     {
-//     case ASIO_OS_DEF_AF_INET + ASIO_OS_DEF_IPPROTO_TCP:
-//       return std::format_to(ctx.out(), "tcp4");
-
-//     case ASIO_OS_DEF_AF_INET + ASIO_OS_DEF_IPPROTO_UDP:
-//       return std::format_to(ctx.out(), "udp4");
-
-//     case ASIO_OS_DEF_AF_INET6 + ASIO_OS_DEF_IPPROTO_TCP:
-//       return std::format_to(ctx.out(), "tcp6");
-
-//     case ASIO_OS_DEF_AF_INET6 + ASIO_OS_DEF_IPPROTO_UDP:
-//       return std::format_to(ctx.out(), "udp6");
-//     }
-
-//     return std::format_to(ctx.out(), "unknown");
-//   }
-// };

@@ -36,8 +36,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/klass.h" // IWYU pragma: keep
 #include "pars/ev/metadata.h"
 #include "pars/net/hash.h"
-
-#include "nngxx/msg.h"
+#include "pars/net/msg.h"
 
 #include <cstddef>
 #include <string_view>
@@ -74,9 +73,9 @@ template<typename event_t>
 received(event_t, metadata<received, event_t>) -> received<event_t>;
 
 template<>
-struct received<nngxx::msg> : base_kind<received, nngxx::msg>
+struct received<net::msg> : base_kind<received, net::msg>
 {
-  using event_type = nngxx::msg;
+  using event_type = net::msg;
 
   using base_kind<received, event_type>::base_kind;
 

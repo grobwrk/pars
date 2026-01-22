@@ -43,16 +43,20 @@ namespace pars::net
 struct io
 {
 private:
-  using context_t = ip::io_context;
+  using context_t = asio::io_context;
 
   using executor_work_guard_t =
-    ip::executor_work_guard<context_t::executor_type>;
+    asio::executor_work_guard<context_t::executor_type>;
 
   context_t io_context_m;
 
   executor_work_guard_t work_m;
 
   std::thread thread_m;
+
+  int next_point_id_m = 1;
+
+  int next_pipe_id_m = 1;
 
   void run()
   {
@@ -65,7 +69,7 @@ private:
 
 public:
   io()
-    : work_m{ip::make_work_guard(io_context_m)}
+    : work_m{asio::make_work_guard(io_context_m)}
   {
   }
 
@@ -83,7 +87,11 @@ public:
 
   void stop() { work_m.reset(); }
 
-  ip::io_context& lower_context() { return io_context_m; }
+  asio::io_context& lower_context() { return io_context_m; }
+
+  auto next_point_id() { return next_point_id_m++; }
+
+  auto next_pipe_id() { return next_pipe_id_m++; }
 };
 
 } // namespace pars::net

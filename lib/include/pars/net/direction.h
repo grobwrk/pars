@@ -27,56 +27,34 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_RESOLVER_H
-#define PARS_NET_RESOLVER_H
+#ifndef PARS_NET_DIR_H
+#define PARS_NET_DIR_H
 
-#include "pars/ev/enqueuer.h"
-#include "pars/ev/event.h"
-#include "pars/net/asio.h"
-#include "pars/net/connect_mode.h"
-#include "pars/net/io.h"
+#include "pars/init.h" // IWYU pragma: keep
 
-#include <string_view>
-#include <system_error>
+#include <format>
+#include <string>
 
 namespace pars::net
 {
 
-struct resolver
+enum class direction
 {
-public:
-  resolver(io& io, ev::enqueuer& r)
-    : io_m{io.lower_context()}
-    , enqueuer_m{r}
-    , resolver_m{io_m}
+  out,
+  in
+};
+}
+
+template<>
+struct std::formatter<::pars::net::direction> : std::formatter<std::string>
+{
+  auto format(const ::pars::net::direction& d, std::format_context& ctx) const
+    -> decltype(ctx.out())
   {
+    return std::format_to(
+      ctx.out(), "{}",
+      d == ::pars::net::direction::in ? "receiving" : "sending");
   }
-
-  struct params
-  {
-    net::cmode connect_mode;
-    std::string_view host;
-    std::string_view service;
-  };
-
-  void resolve(const params& params)
-  {
-    resolver_m.async_resolve(
-      params.host, params.service,
-      [&](const std::error_code& ec,
-          asio::tcp::resolver::results_type results) {
-        enqueuer_m.fire(ev::resolved<asio::tcp>{results});
-      });
-  }
-
-private:
-  asio::io_context& io_m;
-
-  ev::enqueuer& enqueuer_m;
-
-  asio::tcp::resolver resolver_m;
 };
 
-} // namespace pars::net
-
-#endif // PARS_NET_RESOLVER_H
+#endif // PARS_NET_DIR_H

@@ -33,15 +33,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <pars/app/single.h>
 #include <pars/app/state_machine.h>
-#include <pars/comp/client2.h>
+#include <pars/comp/client.h>
 #include <pars/ev/event.h>
 #include <pars/ev/kind_decl.h>
 #include <pars/ev/make_hf.h>
 #include <pars/init.h>
 #include <pars/log.h>
-#include <pars/net2/asio.h>
-#include <pars/net2/connect_mode.h>
-#include <pars/net2/resolver.h>
+#include <pars/net/asio.h>
+#include <pars/net/connect_mode.h>
+#include <pars/net/resolver.h>
 
 #include <cstddef>
 #include <cstdint>
@@ -63,13 +63,13 @@ using namespace pars;
 using namespace pars::ev;
 
 /// Runs the client component as an single application (req)
-class client2 : public app::single2<comp::client2>
+class client : public app::single<comp::client>
 {
 private:
   /// @name Types
 
   using parent_type = self_type;
-  using self = client2;
+  using self = client;
 
   /// @name Network Parameters
 
@@ -95,9 +95,7 @@ private:
 
   void usage()
   {
-    // TODO: introduce location to get in one string
-    // {connect_mode}+{protocol}://{host}:{service}
-    throw std::invalid_argument("Usage: ./client2 connect_mode protocol host "
+    throw std::invalid_argument("Usage: ./client connect_mode protocol host "
                                 "service work_id fast_or_slow N");
   }
 
@@ -143,7 +141,7 @@ private:
 
     hfs().on<fired, exception>(&self::terminate, this);
 
-    hfs().on<fired, resolved_results<net::ip::tcp>>(&self::connect, this);
+    hfs().on<fired, resolved<net::asio::tcp>>(&self::connect, this);
 
     comp().req().on<fired, pipe_created>(&self::send_work, this);
 
@@ -177,7 +175,7 @@ private:
     pars::info(SL, "Fired {}, Application Initialized!", fired.event());
   }
 
-  void connect(hf_arg<fired, resolved_results<net::ip::tcp>> fired)
+  void connect(hf_arg<fired, resolved<net::asio::tcp>> fired)
   {
     auto ts = state.tx(client_state::resolving, client_state::connecting);
 
@@ -286,7 +284,7 @@ private:
 
 int main(int argc, char** argv)
 {
-  auto app = ::pars_example::apps::client2{};
+  auto app = ::pars_example::apps::client{};
 
   try
   {

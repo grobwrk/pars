@@ -27,34 +27,36 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_NET_DIR_H
-#define PARS_NET_DIR_H
+#ifndef PARS_NET_MSG_H
+#define PARS_NET_MSG_H
 
-#include "pars/init.h" // IWYU pragma: keep
-
+#include "pars/net/asio.h"
 #include <format>
-#include <string>
 
 namespace pars::net
 {
 
-enum class dir
+struct msg
 {
-  out,
-  in
-};
-
-}
-
-template<>
-struct std::formatter<::pars::net::dir> : std::formatter<std::string>
-{
-  auto format(const ::pars::net::dir& d, std::format_context& ctx) const
-    -> decltype(ctx.out())
+  template<typename char_t = char>
+  auto data() const
   {
-    return std::format_to(ctx.out(), "{}",
-                          d == ::pars::net::dir::in ? "receiving" : "sending");
+    return static_cast<const char_t*>(buf_m.data());
   }
+
+  auto size() const { return buf_m.size(); }
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return std::format_to(ctx.out(), "net::msg");
+  }
+
+private:
+  asio::const_buffer buf_m;
 };
 
-#endif // PARS_NET_DIR_H
+} // namespace pars::net
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_NET_MSG_H

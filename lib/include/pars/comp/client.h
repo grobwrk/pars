@@ -38,17 +38,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 namespace pars::comp
 {
 
-class client2
+class client
 {
 public:
-  client2(ev::hf_registry& h, ev::enqueuer& r, net::io& io)
+  client(ev::hf_registry& h, ev::enqueuer& r, net::io& io)
     : req_m{h, r, io}
   {
   }
 
   struct init_p
   {
-    net::socket_opt req_opts;
   };
 
   void init(const init_p& params) {}

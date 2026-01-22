@@ -79,13 +79,6 @@ struct pipe_resource
   pipe_resource(const pipe_resource&) = delete;
 
   pipe_resource(pipe_resource&&) = delete;
-
-  void save_tool(pars::net::tool_view t) { tool_m.emplace(t); }
-
-  const pars::net::tool_view& load_tool() const { return *tool_m; }
-
-private:
-  std::optional<pars::net::tool_view> tool_m;
 };
 
 } // namespace pars_example::resource

@@ -32,9 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/ev/klass.h"
 #include "pars/fmt/stl.h" // IWYU pragma: keep
-#include "pars/net/dir.h"
-
-#include "clev/err.h"
+#include "pars/net/asio.h"
+#include "pars/net/direction.h"
 
 #include <chrono>
 #include <exception>
@@ -94,12 +93,12 @@ struct klass<pipe_removed> : base_klass<pipe_removed>
 struct network_error
 {
   std::error_code error;
-  net::dir dir;
+  net::direction dir;
 
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "network_error({}, {})", error,
-                          (dir == net::dir::out ? "out" : "in"));
+                          (dir == net::direction::out ? "out" : "in"));
   }
 };
 
@@ -119,10 +118,6 @@ struct exception
     try
     {
       std::rethrow_exception(eptr);
-    }
-    catch (clev::exception& e)
-    {
-      return std::format("{}", e.what());
     }
     catch (std::exception& e)
     {
@@ -192,6 +187,25 @@ struct klass<deinit> : base_klass<deinit>
   static constexpr bool requires_network = false;
 };
 
+template<typename ip_t>
+struct resolved
+{
+  net::asio::basic_resolver_results<ip_t> results;
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return std::format_to(ctx.out(), "resolved(...)");
+  }
+};
+
+template<>
+struct klass<resolved<net::asio::tcp>> : base_klass<resolved<net::asio::tcp>>
+{
+  static constexpr std::string_view uuid =
+    "d7db42c4-0313-4ef4-8265-35fa6870834d";
+
+  static constexpr bool requires_network = false;
+};
 } // namespace pars::ev
 
 #include "pars/fmt/formattable.h" // IWYU pragma: export

@@ -33,8 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/net/hash.h"
-
-#include "nngxx/msg.h"
+#include "pars/net/msg.h"
 
 #include <cstddef>
 #include <memory>
@@ -75,9 +74,9 @@ struct klass
 };
 
 template<>
-struct klass<nngxx::msg> : base_klass<nngxx::msg>
+struct klass<net::msg> : base_klass<net::msg>
 {
-  using event_type = nngxx::msg;
+  using event_type = net::msg;
 
   static constexpr std::string_view uuid =
     "a7c09171-c503-4cb2-97e4-de8d3fe621b3";
