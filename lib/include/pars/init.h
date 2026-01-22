@@ -38,15 +38,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #error "pars needs C++23!"
 #endif
 
-#include <nng/nng.h>
-
 #include <chrono>
 #include <ratio>
 
 namespace pars
 {
-
-using milli = std::chrono::duration<nng_duration, std::milli>;
 
 template<class... Ts>
 struct overloaded : Ts...

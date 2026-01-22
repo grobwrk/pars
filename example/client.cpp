@@ -73,8 +73,8 @@ private:
 
   /// @name Network Parameters
 
-  milli req_recv_timeout{-1};
-  milli req_send_timeout{1000};
+  int32_t req_recv_timeout{-1};
+  int32_t req_send_timeout{1000};
 
   /// @name Input Parameters
 

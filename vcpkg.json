@@ -2,7 +2,6 @@
   "dependencies": [
     "flatbuffers",
     "gtest",
-    "nng",
     {
       "name": "spdlog",
       "default-features": false

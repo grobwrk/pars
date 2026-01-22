@@ -1,6 +1,5 @@
 find_package (Threads REQUIRED)
 find_package (asio CONFIG REQUIRED)
-find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
 find_package (flatbuffers CONFIG REQUIRED)
 
@@ -53,29 +52,6 @@ set (PARS_HEADERS
     "include/pars/err.h"
     "include/pars/init.h"
     "include/pars/log.h"
-    "include/nngxx/iface/aio.h"
-    "include/nngxx/iface/ctx.h"
-    "include/nngxx/iface/dialer.h"
-    "include/nngxx/iface/listener.h"
-    "include/nngxx/iface/msg.h"
-    "include/nngxx/iface/pipe.h"
-    "include/nngxx/iface/socket.h"
-    "include/nngxx/iface/value.h"
-    "include/nngxx/aio.h"
-    "include/nngxx/concept.h"
-    "include/nngxx/ctx.h"
-    "include/nngxx/dialer.h"
-    "include/nngxx/err.h"
-    "include/nngxx/listener.h"
-    "include/nngxx/msg.h"
-    "include/nngxx/msg_body.h"
-    "include/nngxx/msg_header.h"
-    "include/nngxx/opt.h"
-    "include/nngxx/opt_getter.h"
-    "include/nngxx/opt_setter.h"
-    "include/nngxx/pipe.h"
-    "include/nngxx/socket.h"
-    "include/nngxx/socket_decl.h"
 )
 
 add_library (pars INTERFACE ${PARS_HEADERS})
@@ -92,7 +68,6 @@ target_link_libraries (
     pars
     INTERFACE
     asio::asio
-    nng::nng
     spdlog::spdlog
     flatbuffers::flatbuffers
 )

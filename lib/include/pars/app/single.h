@@ -40,8 +40,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/net/io.h"
 #include "pars/net/resolver.h"
 
-#include <nng/nng.h>
-
 #include <cstdlib>
 #include <exception>
 
@@ -67,8 +65,6 @@ public:
 
   int exec(int argc, char** argv)
   {
-    atexit(nng_fini);
-
     setup();
 
     startup(argc, argv);
