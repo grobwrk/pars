@@ -24,3 +24,20 @@ target_include_directories (
 )
 # enable_sanitizer (client address)
 # enable_sanitizer (client thread)
+
+add_executable (server_backend
+    "server_backend.cpp"
+    "common.h"
+    "event.h"
+    "fib.h"
+    ${FLATBUFFERS_GENERATED_HEADERS}
+)
+add_dependencies (server_backend events)
+target_link_libraries (server_backend PUBLIC pars)
+target_include_directories (
+    server_backend
+    PUBLIC pars
+    PRIVATE ${FLATBUFFERS_GENERATED_DIR}
+)
+# enable_sanitizer (server_backend address)
+# enable_sanitizer (server_backend thread)

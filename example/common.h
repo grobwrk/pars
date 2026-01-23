@@ -55,6 +55,7 @@ enum class server_state
 {
   creating,
   initializing,
+  resolving,
   running,
   terminating
 };
@@ -151,6 +152,10 @@ struct formatter<::pars_example::resource::server_state> : formatter<string>
 
     case server_state::initializing:
       return format_to(ctx.out(), "initializing");
+      break;
+
+    case server_state::resolving:
+      return format_to(ctx.out(), "resolving");
       break;
 
     case server_state::running:

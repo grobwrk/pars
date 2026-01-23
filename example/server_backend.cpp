@@ -41,12 +41,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <pars/ev/make_hf.h>
 #include <pars/init.h>
 #include <pars/log.h>
-#include <pars/net/socket.h>
+#include <pars/net/connect_mode.h>
+#include <pars/net/resolver.h>
 
 #include <spdlog/spdlog.h>
 
 #include <atomic>
 #include <cstddef>
+#include <cstdint>
 #include <cstdlib>
 #include <exception>
 #include <format>
@@ -74,13 +76,13 @@ private:
 
   /// @name Network Parameters
 
-  const milli cleanup_timeout{1000};
-  const milli rep_recv_timeout{-1};
-  const milli rep_send_timeout{1000};
+  const int32_t cleanup_timeout{1000};
+  const int32_t rep_recv_timeout{-1};
+  const int32_t rep_send_timeout{1000};
 
   /// @name Input Parameters
 
-  component_type::connect_p connect_p;
+  net::resolver::params resolve_p;
   int max_allowed{128}; ///< concurrent contextes
   int max_served{0};    ///< shutdown when reached (0 = inf)
 
@@ -106,26 +108,28 @@ private:
     /// 2. grab the input
     switch (argc)
     {
-    case 5:
-      max_allowed = std::stoi(argv[4]);
+    case 6:
+      max_allowed = std::stoi(argv[5]);
 
       [[fallthrough]];
 
-    case 4:
-      max_served = std::stoi(argv[3]);
+    case 5:
+      max_served = std::stoi(argv[4]);
 
       [[fallthrough]];
 
     case 3:
-      connect_p.service_cmode = net::cmode_from_string(argv[1]);
+      resolve_p.connect_mode = net::cmode_from_string(argv[1]);
 
-      connect_p.service_addr = argv[2];
+      resolve_p.host = argv[2];
+
+      resolve_p.service = argv[3];
 
       break;
 
     default:
-      throw std::invalid_argument("Usage: ./server_backend service_cmode "
-                                  "service_addr [max_served [max_allowed]]");
+      throw std::invalid_argument("Usage: ./server_backend connect_mode "
+                                  "host service [max_served [max_allowed]]");
     }
 
     /// 3. insert handler functions
@@ -158,13 +162,24 @@ private:
   /// spawn all contexts and start a recv operation on each of them
   void initialize(hf_arg<fired, init> fired)
   {
-    auto ts = state.tx(server_state::initializing, server_state::running);
+    auto ts = state.tx(server_state::initializing, server_state::resolving);
 
-    comp().init({.num_ctxs = max_allowed,
-                 .rep_opts = {.recv_timeout = rep_recv_timeout.count(),
-                              .send_timeout = rep_send_timeout.count()}});
+    comp().init({});
 
-    comp().connect(connect_p);
+    resolver().resolve(resolve_p);
+
+    ts.commit();
+
+    pars::info(SL, "Fired {}, Application Initialized!", fired.event());
+  }
+
+  void resolve(hf_arg<fired, init> fired)
+  {
+    auto ts = state.tx(server_state::resolving, server_state::running);
+
+    comp().init({});
+
+    // comp().rep().connect();
 
     ts.commit();
 
@@ -182,14 +197,14 @@ private:
 
     if (resources_count < max_allowed)
     {
-      resources.emplace(md.pipe().id(), pipe_state::waiting_work);
+      resources.emplace(md.pipe()->id(), pipe_state::waiting_work);
 
       pars::info(SL, "{}: Fired {}, Pipe Accepted! [# resources: {} < {}]", md,
                  ev, resources_count, max_allowed);
     }
     else
     {
-      md.pipe().close().or_abort();
+      md.pipe()->socket().close();
 
       pars::info(SL, "{}: Fired {}, Pipe Rejected! [# resources: {} >= {}]", md,
                  ev, resources_count, max_allowed);
@@ -223,7 +238,7 @@ private:
 
     auto [ev, md] = std::move(recv).as_tuple();
 
-    auto locked = resources.locked_resource(md.pipe().id());
+    auto locked = resources.locked_resource(md.pipe()->id());
 
     auto& pipe_resource = locked.resource();
 
@@ -238,7 +253,7 @@ private:
     auto ts =
       pipe_resource.state.tx(pipe_state::waiting_work, pipe_state::working);
 
-    pipe_resource.save_tool(md.tool());
+    // pipe_resource.save_tool(md.tool());
 
     pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
 
@@ -254,9 +269,9 @@ private:
 
     auto [ev, md] = fired.as_tuple();
 
-    auto p = md.pipe();
+    auto& p = md.pipe();
 
-    auto locked = resources.locked_resource(p.id());
+    auto locked = resources.locked_resource(p->id());
 
     auto& pipe_resource = locked.resource();
 
@@ -276,7 +291,7 @@ private:
 
       ts.rollback();
 
-      resources.delete_resource(p.id());
+      resources.delete_resource(p->id());
 
       pars::info(SL, "{}: Fired {}, Stop Requested! [# resources: {}]", md, ev,
                  resources.count());
@@ -288,11 +303,11 @@ private:
 
     auto out_ev = fib_computed::make(ev.table()->work_id(), fib_n);
 
-    auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
+    // auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
 
     pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
 
-    ctx.send(std::move(out_ev), p);
+    // ctx.send(std::move(out_ev), p);
 
     ts.commit();
   }
@@ -306,7 +321,7 @@ private:
 
     auto& p = md.pipe();
 
-    resources.delete_resource(p.id());
+    resources.delete_resource(p->id());
 
     if (++tot_served == max_served)
     {
@@ -322,9 +337,9 @@ private:
 
     /// we're ready to receive the next work
 
-    auto& ctx = comp().rep().ctxs().of(md.tool());
+    // auto& ctx = comp().rep().ctxs().of(md.tool());
 
-    ctx.recv();
+    // ctx.recv();
 
     pars::info(SL, "{}: Sent {}, Receiving! [# served: {}]", md, ev,
                tot_served.load());
@@ -339,13 +354,13 @@ private:
 
     auto& p = md.pipe();
 
-    resources.delete_resource(p.id());
+    resources.delete_resource(p->id());
 
-    p.close().or_abort();
+    p->socket().close();
 
-    auto& ctx = comp().rep().ctxs().of(md.tool());
+    // auto& ctx = comp().rep().ctxs().of(md.tool());
 
-    ctx.recv();
+    // ctx.recv();
 
     auto& [e, dir] = ev;
 

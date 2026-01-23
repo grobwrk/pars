@@ -27,52 +27,48 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef PARS_COMP_CLIENT_H
-#define PARS_COMP_CLIENT_H
+#ifndef PARS_COMP_BACKEND_H
+#define PARS_COMP_BACKEND_H
 
 #include "pars/ev/enqueuer.h"
 #include "pars/ev/hf_registry.h"
-#include "pars/net1/req.h"
-#include "pars/net1/socket.h"
-#include "pars/net1/socket_opt.h"
+#include "pars/net/io.h"
+#include "pars/net/point.h"
+
+#include <format>
 
 namespace pars::comp
 {
 
-class client
+class backend
 {
 public:
-  client(ev::hf_registry& h, ev::enqueuer& r)
-    : req_m{h, r}
+  backend(ev::hf_registry& h, ev::enqueuer& r, net::io& io)
+    : rep_m{h, r, io}
   {
   }
-
-  net::req& req() { return req_m; }
 
   struct init_p
   {
-    net::socket_opt req_opts;
   };
 
-  void init(const init_p& params) { req_m.sock().set_options(params.req_opts); }
+  void init(const init_p& params) {}
 
-  struct connect_p
-  {
-    net::cmode service_cmode{net::cmode::dial}; ///< connect mode for req
-    char* service_addr{nullptr};                ///< connect addr for req
-  };
+  void graceful_terminate() {}
 
-  void connect(const connect_p& params)
+  net::point& rep() { return rep_m; }
+
+  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    req_m.sock().connect(params.service_addr, params.service_cmode);
+    return std::format_to(ctx.out(), "comp::backend");
   }
 
-  void graceful_terminate() { req_m.stop(); }
-
 private:
-  net::req req_m;
+  net::point rep_m;
 };
 
 } // namespace pars::comp
 
-#endif // PARS_COMP_CLIENT_H
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_COMP_BACKEND_H
