@@ -1,7 +1,11 @@
 find_package (Threads REQUIRED)
 find_package (asio CONFIG REQUIRED)
-find_package (spdlog CONFIG REQUIRED)
 find_package (flatbuffers CONFIG REQUIRED)
+    if (PARS_ENABLE_LOGGING)
+        find_package (spdlog CONFIG REQUIRED)
+    else ()
+        find_package (fmt CONFIG REQUIRED)
+    endif ()
 
 # sorted please
 set (PARS_HEADERS
@@ -69,9 +73,19 @@ target_link_libraries (
     pars
     INTERFACE
     asio::asio
-    spdlog::spdlog
     flatbuffers::flatbuffers
 )
+
+if (PARS_ENABLE_LOGGING)
+    target_compile_definitions (pars INTERFACE PARS_LOGGING_ENABLED)
+    target_link_libraries (
+        pars
+        INTERFACE
+        spdlog::spdlog
+    )
+else ()
+     target_link_libraries (pars INTERFACE fmt::fmt-header-only)
+endif ()
 
 target_include_directories (
     pars

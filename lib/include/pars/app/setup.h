@@ -32,6 +32,29 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/log.h"
 
+#ifndef PARS_LOGGING_ENABLED
+
+namespace pars::app
+{
+
+struct with_default_setup
+{
+public:
+  void enable_source_loc_logging()
+  {
+  }
+
+  void setup()
+  {
+  }
+
+protected:
+  with_default_setup() = default;
+};
+
+} // namespace pars::app
+#else
+
 #include <spdlog/common.h>
 #include <spdlog/logger.h>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -128,5 +151,7 @@ protected:
 };
 
 } // namespace pars::app
+
+#endif
 
 #endif // PARS_APP_SETUP_H

@@ -1,11 +1,12 @@
 {
   "dependencies": [
+    "asio",
     "flatbuffers",
+    "fmt",
     "gtest",
     {
       "name": "spdlog",
       "default-features": false
-    },
-    "asio"
+    }
   ]
 }

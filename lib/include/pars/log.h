@@ -30,6 +30,41 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef PARS_LOG_H
 #define PARS_LOG_H
 
+#ifndef PARS_LOGGING_ENABLED
+#define SL ("")
+namespace pars
+{
+template<typename... args_t>
+inline void log(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void trace(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void debug(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void info(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void warn(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void err(args_t&&...) noexcept
+{
+}
+template<typename... args_t>
+inline void critical(args_t&&...) noexcept
+{
+}
+} // namespace pars
+#else
+
 // define spdlog active level
 #undef SPDLOG_ACTIVE_LEVEL
 #define SPDLOG_ACTIVE_LEVEL pars_log_level
@@ -262,5 +297,7 @@ inline void critical(spdlog::format_string_t<args_t...> fmt, args_t&&... args)
 }
 
 } // namespace pars
+
+#endif
 
 #endif // PARS_LOG_H
