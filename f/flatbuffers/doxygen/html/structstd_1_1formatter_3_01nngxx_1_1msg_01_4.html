@@ -165,7 +165,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>    }</div>
 <div class="line"><span class="lineno">   56</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">   57</span>    {</div>
-<div class="line"><span class="lineno">   58</span>      std::size_t h = pars::hash_from_msg(m);</div>
+<div class="line"><span class="lineno">   58</span>      std::size_t h = pars::net::hash_from_msg(m);</div>
 <div class="line"><span class="lineno">   59</span> </div>
 <div class="line"><span class="lineno">   60</span>      <span class="keywordflow">return</span> std::format_to(</div>
 <div class="line"><span class="lineno">   61</span>        ctx.out(), <span class="stringliteral">&quot;size:{}={}+{}, hash:0x{:X}, pipe:0x{:X}&quot;</span>,</div>

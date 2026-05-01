@@ -184,9 +184,9 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html#ae590b5039fab845ae5c712c397f5e390">   86</a></span>  std::size_t <a class="code hl_function" href="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html#ae590b5039fab845ae5c712c397f5e390">msg_hash</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">auto</span> h1 = hash_from_uuid(<a class="code hl_variable" href="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html#aa7d5dcf79a10270af1dddd632c6f9481">uuid</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">auto</span> h1 = net::hash_from_uuid(<a class="code hl_variable" href="structpars_1_1ev_1_1received_3_01nngxx_1_1msg_01_4.html#aa7d5dcf79a10270af1dddd632c6f9481">uuid</a>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">auto</span> h2 = hash_from_msg(<a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">event</a>());</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">auto</span> h2 = net::hash_from_msg(<a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">event</a>());</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> h1 ^ (h2 &lt;&lt; 1);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>

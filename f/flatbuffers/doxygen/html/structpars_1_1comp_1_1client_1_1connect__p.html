@@ -99,10 +99,10 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a22f581d25551fc471f2a29a00d81c821" id="r_a22f581d25551fc471f2a29a00d81c821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0b">net::cmode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f581d25551fc471f2a29a00d81c821">service_cmode</a> = <a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">net::cmode::dial</a></td></tr>
+<tr class="memitem:a22f581d25551fc471f2a29a00d81c821" id="r_a22f581d25551fc471f2a29a00d81c821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0b">net::cmode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f581d25551fc471f2a29a00d81c821">service_cmode</a> {<a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">net::cmode::dial</a>}</td></tr>
 <tr class="memdesc:a22f581d25551fc471f2a29a00d81c821"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect mode for req  <br /></td></tr>
 <tr class="separator:a22f581d25551fc471f2a29a00d81c821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cffb7062c2f5d201f0681dc67427cd7" id="r_a0cffb7062c2f5d201f0681dc67427cd7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cffb7062c2f5d201f0681dc67427cd7">service_addr</a> = nullptr</td></tr>
+<tr class="memitem:a0cffb7062c2f5d201f0681dc67427cd7" id="r_a0cffb7062c2f5d201f0681dc67427cd7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cffb7062c2f5d201f0681dc67427cd7">service_addr</a> {nullptr}</td></tr>
 <tr class="memdesc:a0cffb7062c2f5d201f0681dc67427cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">connect addr for req  <br /></td></tr>
 <tr class="separator:a0cffb7062c2f5d201f0681dc67427cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -117,7 +117,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* pars::comp::client::connect_p::service_addr = nullptr</td>
+          <td class="memname">char* pars::comp::client::connect_p::service_addr {nullptr}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -125,7 +125,8 @@ Public Attributes</h2></td></tr>
 <p>connect addr for req </p>
 
 <p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00062">62</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{<span class="keyword">nullptr</span>};                </div>
+</div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="client_8h_source.html#l00065">pars::comp::client::connect()</a>.</p>
 
 </div>
@@ -137,7 +138,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0b">net::cmode</a> pars::comp::client::connect_p::service_cmode = <a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">net::cmode::dial</a></td>
+          <td class="memname"><a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0b">net::cmode</a> pars::comp::client::connect_p::service_cmode {<a class="el" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">net::cmode::dial</a>}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -145,7 +146,9 @@ Public Attributes</h2></td></tr>
 <p>connect mode for req </p>
 
 <p class="definition">Definition at line <a class="el" href="client_8h_source.html#l00061">61</a> of file <a class="el" href="client_8h_source.html">client.h</a>.</p>
-
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{<a class="code hl_enumvalue" href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">net::cmode::dial</a>}; </div>
+<div class="ttc" id="anamespacepars_1_1net_html_a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b"><div class="ttname"><a href="namespacepars_1_1net.html#a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b">pars::net::cmode::dial</a></div><div class="ttdeci">@ dial</div><div class="ttdef"><b>Definition</b> <a href="connect__mode_8h_source.html#l00044">connect_mode.h:44</a></div></div>
+</div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="client_8h_source.html#l00065">pars::comp::client::connect()</a>.</p>
 
 </div>

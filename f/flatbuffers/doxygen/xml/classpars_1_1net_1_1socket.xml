@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="233" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="233" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="214" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a58cfaa463236d18762b3efd9cd240a9f" prot="private" static="no" mutable="no">
         <type><ref refid="classpars_1_1net_1_1op" kindref="compound">op</ref></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="234" column="6" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="234" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="215" column="6" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="215" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1socket_1ab24f59ff7ab5d3dd92d15de45debf62f" prot="private" static="no" mutable="no">
         <type><ref refid="namespacenngxx_1a1cdea0f83fed0a7bb2951057157524ec" kindref="member">nngxx::socket</ref></type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="235" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="235" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="216" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="216" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a5c56e664284e4be64861c5d3bcf1bb1a" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">nngxx::dialer</ref> &gt;</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="236" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="236" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="217" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="217" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpars_1_1net_1_1socket_1a7302888150207ba0bd196c4b4b0563dc" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">nngxx::listener</ref> &gt;</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="237" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="237" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="218" column="15" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="218" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="85" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="85" bodyend="90"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="66" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="66" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -111,8 +111,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="92" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="92" bodyend="92"/>
-        <references refid="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" compoundref="pars_2net_2socket_8h" startline="154" endline="154">stop</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="73" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="73" bodyend="73"/>
+        <references refid="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" compoundref="pars_2net_2socket_8h" startline="135" endline="135">stop</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1d2bfd0ed8969422204f7c0775098753" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="94" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="94" bodyend="94"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="75" column="3" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a1b4f8183905384a2fe69d9ffeff9f5ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="96" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="96" bodyend="109"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="77" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="77" bodyend="90"/>
         <references refid="structpars_1_1net_1_1socket__opt_1a55e0c5f49e8609adc23d4b9d93778372" compoundref="socket__opt_8h" startline="52">pars::net::socket_opt::recv_timeout</references>
         <references refid="structpars_1_1net_1_1socket__opt_1a7c843be919425c7841f9b52a4c5e5d28" compoundref="socket__opt_8h" startline="58">pars::net::socket_opt::req_resend_tick</references>
         <references refid="structpars_1_1net_1_1socket__opt_1a10032afa50eb38e8537d5526269c605c" compoundref="socket__opt_8h" startline="57">pars::net::socket_opt::req_resend_time</references>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="111" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="111" bodyend="119"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="92" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="92" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="121" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="121" bodyend="121"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="102" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="102" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ac86eb2bd9aeacb0e852a0189bc7e074e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="123" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="123" bodyend="123"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="104" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="104" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -220,9 +220,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="125" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="125" bodyend="138"/>
-        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" compoundref="pars_2net_2socket_8h" startline="62">pars::net::dial</references>
-        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" compoundref="pars_2net_2socket_8h" startline="63">pars::net::listen</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="106" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="106" bodyend="119"/>
+        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" compoundref="connect__mode_8h" startline="44">pars::net::dial</references>
+        <references refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" compoundref="connect__mode_8h" startline="45">pars::net::listen</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1afbb51e4e4c45a6b0845e6d166c289c34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacenngxx_1a1689879aeb42ce052ecd413d51e863a8" kindref="member">nngxx::ctx</ref></type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="140" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="140" bodyend="140"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="121" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="121" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a474843a8b434a93ba8a97dc8b819377e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -254,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="142" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="142" bodyend="142"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="123" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="123" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1aff3d822a390fd0d74ed27779ebd6f317" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="144" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="144" bodyend="144"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="125" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="125" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a5a7f31a949fcd8a99f829b0c5e491329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="147" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="147" bodyend="150"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="128" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="128" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a9ebfc30e5757d46d147b1d35da38fc2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="152" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="152" bodyend="152"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="133" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a54f32bf8b7566d6829fc2492e200e60c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -330,8 +330,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="154" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="154" bodyend="154"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" compoundref="pars_2net_2socket_8h" startline="92" endline="92">~socket</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="135" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="135" bodyend="135"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1a1e56fc1cbaf8dea2b2f08481a4b42438" compoundref="pars_2net_2socket_8h" startline="73" endline="73">~socket</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -345,8 +345,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="156" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="156" bodyend="156"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" compoundref="pars_2net_2socket_8h" startline="158" endline="158">socket_id</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="137" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="137" bodyend="137"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" compoundref="pars_2net_2socket_8h" startline="139" endline="139">socket_id</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ab1019fcc2d0ac889b7c6f0de31870fc8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -360,8 +360,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="158" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="158" bodyend="158"/>
-        <references refid="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" compoundref="pars_2net_2socket_8h" startline="156" endline="156">id</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="139" column="7" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="139" bodyend="139"/>
+        <references refid="classpars_1_1net_1_1socket_1ad710ecbb187671eb49a476fffbc7cefe" compoundref="pars_2net_2socket_8h" startline="137" endline="137">id</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const char *</type>
@@ -375,8 +375,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="160" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="160" bodyend="163"/>
-        <referencedby refid="classpars_1_1net_1_1socket_1ab1b807c2f4f56ea74a77d34ed2d29a1e" compoundref="pars_2net_2socket_8h" startline="165" endline="168">format_to</referencedby>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="141" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="141" bodyend="144"/>
+        <referencedby refid="classpars_1_1net_1_1socket_1ab1b807c2f4f56ea74a77d34ed2d29a1e" compoundref="pars_2net_2socket_8h" startline="146" endline="149">format_to</referencedby>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ab1b807c2f4f56ea74a77d34ed2d29a1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
@@ -394,8 +394,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="165" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="165" bodyend="168"/>
-        <references refid="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" compoundref="pars_2net_2socket_8h" startline="160" endline="163">proto_name</references>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="146" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="146" bodyend="149"/>
+        <references refid="classpars_1_1net_1_1socket_1a95e63741218a07e7891d0e3d5e72b55b" compoundref="pars_2net_2socket_8h" startline="141" endline="144">proto_name</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="171" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="171" bodyend="203"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="152" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="152" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ad9824777ab75046426dd99a3f76d0f62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="205" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="205" bodyend="216"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="186" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="186" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1ab0849f043d55eac62e85e4804b36fcc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacenngxx_1a6cc1c6dfd7079e0b9ef6f05daff5c68b" kindref="member">nngxx::listener</ref> &amp;</type>
@@ -451,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="218" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="218" bodyend="224"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="199" column="19" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="199" bodyend="205"/>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1net_1_1socket_1aaf38e88ad5c88adfbbce7735523e2eff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="namespacenngxx_1a901c03de9d29c9bc559a66a7ea091042" kindref="member">nngxx::dialer</ref> &amp;</type>
@@ -469,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="226" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="226" bodyend="231"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="207" column="17" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="207" bodyend="212"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -477,7 +477,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="81" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="82" bodyend="238"/>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="62" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="63" bodyend="219"/>
     <listofallmembers>
       <member refid="classpars_1_1net_1_1socket_1a89852acc0f88c84ad6cc01d68455652c" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>connect</name></member>
       <member refid="classpars_1_1net_1_1socket_1ade250891b09c1a725489944b0d6b8f4f" prot="public" virt="non-virtual"><scope>pars::net::socket</scope><name>dial</name></member>

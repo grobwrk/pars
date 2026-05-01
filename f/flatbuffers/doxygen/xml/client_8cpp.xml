@@ -59,7 +59,7 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="136" relation="include">
+        <childnode refid="137" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -206,12 +206,12 @@
         <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="132">
+      <node id="133">
         <label>nngxx/dialer.h</label>
         <link refid="dialer_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="133" relation="include">
+        <childnode refid="134" relation="include">
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
@@ -278,7 +278,7 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="133">
+      <node id="134">
         <label>nngxx/iface/dialer.h</label>
         <link refid="iface_2dialer_8h"/>
         <childnode refid="31" relation="include">
@@ -296,7 +296,7 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="135">
+      <node id="136">
         <label>nngxx/iface/listener.h</label>
         <link refid="iface_2listener_8h"/>
         <childnode refid="31" relation="include">
@@ -390,12 +390,12 @@
         <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="134">
+      <node id="135">
         <label>nngxx/listener.h</label>
         <link refid="listener_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="135" relation="include">
+        <childnode refid="136" relation="include">
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
@@ -1365,13 +1365,15 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="132" relation="include">
+        <childnode refid="133" relation="include">
         </childnode>
-        <childnode refid="134" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
@@ -1380,10 +1382,6 @@
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
         </childnode>
@@ -1420,6 +1418,18 @@
         <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>pars/net2/connect_mode.h</label>
+        <link refid="connect__mode_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="108">
@@ -1500,7 +1510,7 @@
       <node id="90">
         <label>iomanip</label>
       </node>
-      <node id="136">
+      <node id="137">
         <label>iostream</label>
       </node>
       <node id="79">
@@ -1718,12 +1728,12 @@
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/>component_type::connect_p<sp/>connect_p;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/>std::size_t<sp/>work_id<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fast_fib<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint64_t<sp/>n<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>std::size_t<sp/>work_id{0};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fast_fib{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint64_t<sp/>n{0};</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine&lt;client_state&gt;</ref><sp/>state<sp/>=<sp/>{client_state::creating};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine&lt;client_state&gt;</ref><sp/>state{client_state::creating};</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">parent_type::parent_type;</highlight></codeline>

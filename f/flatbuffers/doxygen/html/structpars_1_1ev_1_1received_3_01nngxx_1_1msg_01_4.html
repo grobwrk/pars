@@ -180,9 +180,9 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ev_2kind_8h_source.html#l00086">86</a> of file <a class="el" href="ev_2kind_8h_source.html">kind.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   87</span>  {</div>
-<div class="line"><span class="lineno">   88</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h1</a> = <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">hash_from_uuid</a>(<a class="code hl_variable" href="#aa7d5dcf79a10270af1dddd632c6f9481">uuid</a>);</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h1</a> = <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">net::hash_from_uuid</a>(<a class="code hl_variable" href="#aa7d5dcf79a10270af1dddd632c6f9481">uuid</a>);</div>
 <div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h2</a> = <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">hash_from_msg</a>(<a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">event</a>());</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h2</a> = <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">net::hash_from_msg</a>(<a class="code hl_enumvalue" href="namespacepars.html#a12232d6f4a47a54243d1c224c421b535a4119639092e62c55ea8be348e4d9260d">event</a>());</div>
 <div class="line"><span class="lineno">   91</span> </div>
 <div class="line"><span class="lineno">   92</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h1</a> ^ (<a class="code hl_struct" href="structpars_1_1ev_1_1received.html">h2</a> &lt;&lt; 1);</div>
 <div class="line"><span class="lineno">   93</span>  }</div>

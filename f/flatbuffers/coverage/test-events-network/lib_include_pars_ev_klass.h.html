@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Dec 19 13:58:18 2025 </td>
+                     <td class="headerValue" width="15%">Fri May  1 18:46:40 2026 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">1</td>
@@ -85,7 +85,7 @@
              : {
              :   using class_type = class_t;
              : 
-             :   static constexpr std::size_t hash = hash_from_uuid(class_type::uuid);
+             :   static constexpr std::size_t hash = net::hash_from_uuid(class_type::uuid);
              : };
              : 
              : template&lt;typename event_t&gt;

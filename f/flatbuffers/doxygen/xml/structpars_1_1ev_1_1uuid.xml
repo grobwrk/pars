@@ -31,7 +31,7 @@
         <argsstring></argsstring>
         <name>hash</name>
         <qualifiedname>pars::ev::uuid::hash</qualifiedname>
-        <initializer>= hash_from_uuid(class_type::uuid)</initializer>
+        <initializer>= net::hash_from_uuid(class_type::uuid)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

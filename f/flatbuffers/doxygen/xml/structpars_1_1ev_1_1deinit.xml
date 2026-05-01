@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
-  <compounddef id="structpars_1_1ev_1_1shutdown" kind="struct" language="C++" prot="public">
-    <compoundname>pars::ev::shutdown</compoundname>
+  <compounddef id="structpars_1_1ev_1_1deinit" kind="struct" language="C++" prot="public">
+    <compoundname>pars::ev::deinit</compoundname>
     <includes refid="lib_2include_2pars_2ev_2event_8h" local="no">event.h</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="structpars_1_1ev_1_1deinit_1a30b841edf02f75de2ab9c0507f555759" prot="private" static="no" mutable="no">
         <type>std::chrono::system_clock::time_point</type>
-        <definition>std::chrono::system_clock::time_point pars::ev::shutdown::creation_time</definition>
+        <definition>std::chrono::system_clock::time_point pars::ev::deinit::creation_time</definition>
         <argsstring></argsstring>
         <name>creation_time</name>
-        <qualifiedname>pars::ev::shutdown::creation_time</qualifiedname>
+        <qualifiedname>pars::ev::deinit::creation_time</qualifiedname>
         <initializer>=
     std::chrono::system_clock::now()</initializer>
         <briefdescription>
@@ -22,12 +22,12 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="structpars_1_1ev_1_1shutdown_1a150a7f138800c861d691a257206346a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structpars_1_1ev_1_1deinit_1a68e16ee57ab9aba5f3e38c8b58f591fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>decltype(ctx.out())</type>
-        <definition>decltype(ctx.out()) pars::ev::shutdown::format_to</definition>
+        <definition>decltype(ctx.out()) pars::ev::deinit::format_to</definition>
         <argsstring>(std::format_context &amp;ctx) const</argsstring>
         <name>format_to</name>
-        <qualifiedname>pars::ev::shutdown::format_to</qualifiedname>
+        <qualifiedname>pars::ev::deinit::format_to</qualifiedname>
         <param>
           <type>std::format_context &amp;</type>
           <declname>ctx</declname>
@@ -47,8 +47,8 @@
     </detaileddescription>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" line="174" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/event.h" bodystart="175" bodyend="184"/>
     <listofallmembers>
-      <member refid="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" prot="private" virt="non-virtual"><scope>pars::ev::shutdown</scope><name>creation_time</name></member>
-      <member refid="structpars_1_1ev_1_1shutdown_1a150a7f138800c861d691a257206346a0" prot="public" virt="non-virtual"><scope>pars::ev::shutdown</scope><name>format_to</name></member>
+      <member refid="structpars_1_1ev_1_1deinit_1a30b841edf02f75de2ab9c0507f555759" prot="private" virt="non-virtual"><scope>pars::ev::deinit</scope><name>creation_time</name></member>
+      <member refid="structpars_1_1ev_1_1deinit_1a68e16ee57ab9aba5f3e38c8b58f591fd" prot="public" virt="non-virtual"><scope>pars::ev::deinit</scope><name>format_to</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

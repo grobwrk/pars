@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>pars: pars::ev::shutdown Struct Reference</title>
+<title>pars: pars::ev::deinit Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,15 +83,15 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacepars.html">pars</a></li><li class="navelem"><a class="el" href="namespacepars_1_1ev.html">ev</a></li><li class="navelem"><a class="el" href="structpars_1_1ev_1_1shutdown.html">shutdown</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacepars.html">pars</a></li><li class="navelem"><a class="el" href="namespacepars_1_1ev.html">ev</a></li><li class="navelem"><a class="el" href="structpars_1_1ev_1_1deinit.html">deinit</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="structpars_1_1ev_1_1shutdown-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">pars::ev::shutdown Struct Reference</div></div>
+<a href="structpars_1_1ev_1_1deinit-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">pars::ev::deinit Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -99,15 +99,15 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a150a7f138800c861d691a257206346a0" id="r_a150a7f138800c861d691a257206346a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a150a7f138800c861d691a257206346a0">format_to</a> (std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
-<tr class="separator:a150a7f138800c861d691a257206346a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e16ee57ab9aba5f3e38c8b58f591fd" id="r_a68e16ee57ab9aba5f3e38c8b58f591fd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68e16ee57ab9aba5f3e38c8b58f591fd">format_to</a> (std::format_context &amp;ctx) const -&gt; decltype(ctx.out())</td></tr>
+<tr class="separator:a68e16ee57ab9aba5f3e38c8b58f591fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00174">174</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a150a7f138800c861d691a257206346a0" name="a150a7f138800c861d691a257206346a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a150a7f138800c861d691a257206346a0">&#9670;&#160;</a></span>format_to()</h2>
+<a id="a68e16ee57ab9aba5f3e38c8b58f591fd" name="a68e16ee57ab9aba5f3e38c8b58f591fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e16ee57ab9aba5f3e38c8b58f591fd">&#9670;&#160;</a></span>format_to()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">auto pars::ev::shutdown::format_to </td>
+          <td class="memname">auto pars::ev::deinit::format_to </td>
           <td>(</td>
           <td class="paramtype">std::format_context &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td> const -&gt; decltype(ctx.out())
@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html#l00176">176</a> of file <a class="el" href="lib_2include_2pars_2ev_2event_8h_source.html">event.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  177</span>  {</div>
-<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;shutdown({})&quot;</span>, creation_time);</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> std::format_to(<a class="code hl_typedef" href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">ctx</a>.out(), <span class="stringliteral">&quot;deinit({})&quot;</span>, creation_time);</div>
 <div class="line"><span class="lineno">  179</span>  }</div>
 <div class="ttc" id="anamespacenngxx_html_a1689879aeb42ce052ecd413d51e863a8"><div class="ttname"><a href="namespacenngxx.html#a1689879aeb42ce052ecd413d51e863a8">nngxx::ctx</a></div><div class="ttdeci">clev::own&lt; nng_ctx &gt; ctx</div><div class="ttdef"><b>Definition</b> <a href="ctx_8h_source.html#l00050">ctx.h:50</a></div></div>
 </div><!-- fragment -->

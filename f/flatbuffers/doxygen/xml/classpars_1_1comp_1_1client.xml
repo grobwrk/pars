@@ -94,8 +94,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="65" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="65" bodyend="68"/>
-        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" compoundref="client_8h" startline="62">pars::comp::client::connect_p::service_addr</references>
-        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" compoundref="client_8h" startline="61">pars::comp::client::connect_p::service_cmode</references>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" compoundref="client_8h" startline="62" endline="62">pars::comp::client::connect_p::service_addr</references>
+        <references refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" compoundref="client_8h" startline="61" endline="61">pars::comp::client::connect_p::service_cmode</references>
       </memberdef>
       <memberdef kind="function" id="classpars_1_1comp_1_1client_1a2757a5dfbae6dbceaab73314c6b965ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

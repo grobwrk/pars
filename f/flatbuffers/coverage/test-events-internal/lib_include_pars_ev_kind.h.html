@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Dec 19 13:58:17 2025 </td>
+                     <td class="headerValue" width="15%">Fri May  1 18:46:40 2026 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">3</td>
@@ -122,9 +122,9 @@
              : 
              :   std::size_t msg_hash() const
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto h1 = hash_from_uuid(uuid);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto h1 = net::hash_from_uuid(uuid);</span>
              : 
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto h2 = hash_from_msg(event());</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    auto h2 = net::hash_from_msg(event());</span>
              : 
 <span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return h1 ^ (h2 &lt;&lt; 1);</span>
              :   }

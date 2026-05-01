@@ -10,7 +10,7 @@
         <argsstring></argsstring>
         <name>service_cmode</name>
         <qualifiedname>pars::comp::client::connect_p::service_cmode</qualifiedname>
-        <initializer>= <ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kindref="member">net::cmode::dial</ref></initializer>
+        <initializer>{<ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kindref="member">net::cmode::dial</ref>}</initializer>
         <briefdescription>
 <para>connect mode for req </para>
         </briefdescription>
@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="61" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="61" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="61" column="16" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="61" bodyend="61"/>
         <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="65" endline="68">pars::comp::client::connect</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" prot="public" static="no" mutable="no">
@@ -27,7 +27,7 @@
         <argsstring></argsstring>
         <name>service_addr</name>
         <qualifiedname>pars::comp::client::connect_p::service_addr</qualifiedname>
-        <initializer>= nullptr</initializer>
+        <initializer>{nullptr}</initializer>
         <briefdescription>
 <para>connect addr for req </para>
         </briefdescription>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="62" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" line="62" column="10" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/comp/client.h" bodystart="62" bodyend="62"/>
         <referencedby refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" compoundref="client_8h" startline="65" endline="68">pars::comp::client::connect</referencedby>
       </memberdef>
     </sectiondef>

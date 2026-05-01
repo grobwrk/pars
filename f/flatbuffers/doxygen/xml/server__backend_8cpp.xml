@@ -127,7 +127,7 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="138" relation="include">
+        <childnode refid="139" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -226,12 +226,12 @@
         <childnode refid="38" relation="include">
         </childnode>
       </node>
-      <node id="134">
+      <node id="135">
         <label>nngxx/dialer.h</label>
         <link refid="dialer_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="135" relation="include">
+        <childnode refid="136" relation="include">
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
@@ -298,7 +298,7 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="135">
+      <node id="136">
         <label>nngxx/iface/dialer.h</label>
         <link refid="iface_2dialer_8h"/>
         <childnode refid="31" relation="include">
@@ -316,7 +316,7 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="137">
+      <node id="138">
         <label>nngxx/iface/listener.h</label>
         <link refid="iface_2listener_8h"/>
         <childnode refid="31" relation="include">
@@ -410,12 +410,12 @@
         <childnode refid="37" relation="include">
         </childnode>
       </node>
-      <node id="136">
+      <node id="137">
         <label>nngxx/listener.h</label>
         <link refid="listener_8h"/>
         <childnode refid="25" relation="include">
         </childnode>
-        <childnode refid="137" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
         <childnode refid="50" relation="include">
         </childnode>
@@ -1407,13 +1407,15 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="134" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
-        <childnode refid="136" relation="include">
+        <childnode refid="137" relation="include">
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
@@ -1422,10 +1424,6 @@
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="38" relation="include">
         </childnode>
@@ -1462,6 +1460,18 @@
         <childnode refid="59" relation="include">
         </childnode>
         <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>pars/net2/connect_mode.h</label>
+        <link refid="connect__mode_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="112">
@@ -1542,7 +1552,7 @@
       <node id="95">
         <label>iomanip</label>
       </node>
-      <node id="138">
+      <node id="139">
         <label>iostream</label>
       </node>
       <node id="79">
@@ -1769,7 +1779,7 @@
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/>std::atomic&lt;int&gt;<sp/>tot_served{0};<sp/></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine&lt;server_state&gt;</ref><sp/>state<sp/>=<sp/>{server_state::creating};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="structpars_1_1app_1_1state__machine" kindref="compound">app::state_machine&lt;server_state&gt;</ref><sp/>state{server_state::creating};</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="classpars_1_1app_1_1resources" kindref="compound">app::resources&lt;int, pipe_resource&gt;</ref><sp/>resources;</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
@@ -1808,7 +1818,7 @@
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kindref="member">hfs</ref>().<ref refid="structpars_1_1ev_1_1hf__registry_1a6e7698a3d0fa173ebd92faa300120211" kindref="member">on</ref>&lt;<ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>,<sp/><ref refid="structpars_1_1ev_1_1init" kindref="compound">init</ref>&gt;(&amp;self::initialize,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kindref="member">hfs</ref>().<ref refid="structpars_1_1ev_1_1hf__registry_1a6e7698a3d0fa173ebd92faa300120211" kindref="member">on</ref>&lt;<ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>,<sp/><ref refid="structpars_1_1ev_1_1shutdown" kindref="compound">shutdown</ref>&gt;(&amp;self::terminate,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6b722b1ff17dbb39f60d1e7eae2abc87" kindref="member">hfs</ref>().<ref refid="structpars_1_1ev_1_1hf__registry_1a6e7698a3d0fa173ebd92faa300120211" kindref="member">on</ref>&lt;<ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>,<sp/><ref refid="structpars_1_1ev_1_1deinit" kindref="compound">deinit</ref>&gt;(&amp;self::terminate,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1a6fba1df9fd871ebd1cb20a50becdfa3c" kindref="member">comp</ref>().<ref refid="classpars_1_1comp_1_1backend_1ace178941233809489ef08320b5c36cc3" kindref="member">rep</ref>().<ref refid="classpars_1_1net_1_1rep_1a377c054cdfc47674f4b67f752b1fd3af" kindref="member">on</ref>&lt;<ref refid="structpars_1_1ev_1_1received" kindref="compound">received</ref>,<sp/><ref refid="structpars__example_1_1event_1_1fib__requested" kindref="compound">fib_requested</ref>&gt;(&amp;self::fire_compute,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
@@ -1975,12 +1985,12 @@
 <codeline lineno="310"><highlight class="normal"></highlight></codeline>
 <codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++tot_served<sp/>==<sp/>max_served)</highlight></codeline>
 <codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>shutdown_ev<sp/>=<sp/><ref refid="structpars_1_1ev_1_1shutdown" kindref="compound">shutdown</ref>{};</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>deinit_ev<sp/>=<sp/><ref refid="structpars_1_1ev_1_1deinit" kindref="compound">deinit</ref>{};</highlight></codeline>
 <codeline lineno="314"><highlight class="normal"></highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" kindref="member">enqueuer</ref>().<ref refid="classpars_1_1ev_1_1enqueuer_1abfaf15c061266e4dd20537318b78145d" kindref="member">fire</ref>(shutdown_ev);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpars_1_1app_1_1single_1ad44674ff70054be64f0a09478c7b23c2" kindref="member">enqueuer</ref>().<ref refid="classpars_1_1ev_1_1enqueuer_1abfaf15c061266e4dd20537318b78145d" kindref="member">fire</ref>(deinit_ev);</highlight></codeline>
 <codeline lineno="316"><highlight class="normal"></highlight></codeline>
 <codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">pars::info</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/></highlight><highlight class="stringliteral">&quot;{}:<sp/>Sent<sp/>{},<sp/>Fire<sp/>{}!<sp/>[{}<sp/>succesfully<sp/>served]&quot;</highlight><highlight class="normal">,<sp/>md,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shutdown_ev,<sp/>max_served);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deinit_ev,<sp/>max_served);</highlight></codeline>
 <codeline lineno="319"><highlight class="normal"></highlight></codeline>
 <codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -2015,7 +2025,7 @@
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1a11e4cd688461da629a6b257cdc3c067b" kindref="member">pars::info</ref>(<ref refid="log_8h_1ad71aeb03d03709c5072b99cb68c21992" kindref="member">SL</ref>,<sp/></highlight><highlight class="stringliteral">&quot;{}:<sp/>Fired<sp/>{}<sp/>(during<sp/>{}),<sp/>Pipe<sp/>Closed!&quot;</highlight><highlight class="normal">,<sp/>md,<sp/><ref refid="namespacepars_1_1ev" kindref="compound">ev</ref>,<sp/>dir);</highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"></highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>terminate(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;fired, shutdown&gt;</ref><sp/><ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>terminate(<ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg&lt;fired, deinit&gt;</ref><sp/><ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>)</highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>state.ensure(server_state::running);</highlight></codeline>
 <codeline lineno="359"><highlight class="normal"></highlight></codeline>

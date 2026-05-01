@@ -1243,8 +1243,8 @@
 <codeline lineno="27"><highlight class="comment">(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS</highlight></codeline>
 <codeline lineno="28"><highlight class="comment">SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
 <codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PRAGMA_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRAGMA_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PARS_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARS_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="lib_2include_2pars_2concept_2event_8h" kindref="compound">pars/concept/event.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="concept_2kind_8h" kindref="compound">pars/concept/kind.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -1579,7 +1579,7 @@
 <codeline lineno="365"><highlight class="normal"></highlight></codeline>
 <codeline lineno="366"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars::ev</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="367"><highlight class="normal"></highlight></codeline>
-<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PRAGMA_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_EV_RUNNER_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/ev/runner.h"/>
   </compounddef>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structpars_1_1overloaded" kind="struct" language="C++" prot="public">
+    <compoundname>pars::overloaded</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Ts...</basecompoundref>
+    <includes refid="init_8h" local="no">init.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Ts...</label>
+      </node>
+      <node id="1">
+        <label>pars::overloaded&lt; Ts &gt;</label>
+        <link refid="structpars_1_1overloaded"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Ts...</label>
+      </node>
+      <node id="1">
+        <label>pars::overloaded&lt; Ts &gt;</label>
+        <link refid="structpars_1_1overloaded"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h" line="52" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h" bodystart="53" bodyend="55"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="60" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="61" bodyend="64"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h" line="42" column="1" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h" bodystart="43" bodyend="46"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -85,6 +85,42 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepars_1_1net_1a1a4dd2232322b0f8373bc7fc6a5686cf" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static constexpr std::size_t pars::net::hash_from_uuid</definition>
+        <argsstring>(const std::string_view &amp;uuid)</argsstring>
+        <name>hash_from_uuid</name>
+        <qualifiedname>pars::net::hash_from_uuid</qualifiedname>
+        <param>
+          <type>const std::string_view &amp;</type>
+          <declname>uuid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h" line="48" column="30" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h" bodystart="48" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepars_1_1net_1a5b7f2648bf05123075093297684ffd04" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>static std::size_t pars::net::hash_from_msg</definition>
+        <argsstring>(const nngxx::msg &amp;m)</argsstring>
+        <name>hash_from_msg</name>
+        <qualifiedname>pars::net::hash_from_msg</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacenngxx_1a4357aed4c68a9f7703914455abf07879" kindref="member">nngxx::msg</ref> &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h" line="82" column="20" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h" bodystart="82" bodyend="93"/>
+      </memberdef>
       <memberdef kind="function" id="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">cmode</ref></type>
         <definition>static cmode pars::net::cmode_from_string</definition>
@@ -101,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" line="66" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket.h" bodystart="66" bodyend="76"/>
+        <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h" line="48" column="14" bodyfile="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h" bodystart="48" bodyend="58"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -17,7 +17,7 @@
         </tr>
                      <tr>
                      <td class="headerItem" width="20%">Date:</td>
-                     <td class="headerValue" width="15%">Fri Dec 19 13:58:18 2025 </td>
+                     <td class="headerValue" width="15%">Fri May  1 18:46:40 2026 </td>
                      <td width="5%"></td>
                      <td class="headerItem" width="20%">Instrumented&nbsp;lines:</td>
                      <td class="headerValue" width="10%">17</td>
@@ -208,11 +208,11 @@
              :   static constexpr bool requires_network = false;
              : };
              : 
-             : struct shutdown
+             : struct deinit
              : {
              :   auto format_to(std::format_context&amp; ctx) const -&gt; decltype(ctx.out())
              :   {
-<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;shutdown({})&quot;, creation_time);</span>
+<span class="lineNoCov">      0 / 1 </span> : <span class="lineNoCov">    return std::format_to(ctx.out(), &quot;deinit({})&quot;, creation_time);</span>
              :   }
              : 
              : private:
@@ -221,7 +221,7 @@
              : };
              : 
              : template&lt;&gt;
-             : struct klass&lt;shutdown&gt; : base_klass&lt;shutdown&gt;
+             : struct klass&lt;deinit&gt; : base_klass&lt;deinit&gt;
              : {
              :   static constexpr std::string_view uuid =
              :     &quot;47c543bb-ba37-4442-a5bd-4b2dcfbf1e02&quot;;

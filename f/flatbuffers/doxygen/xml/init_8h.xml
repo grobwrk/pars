@@ -17,6 +17,7 @@
     <includedby refid="hash_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/hash.h</includedby>
     <includedby refid="socket__opt_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/socket_opt.h</includedby>
     <includedby refid="tool__view_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net/tool_view.h</includedby>
+    <includedby refid="connect__mode_8h" local="yes">/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h</label>
@@ -494,6 +495,8 @@
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
       </node>
       <node id="44">
         <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log/demangle.h</label>
@@ -645,7 +648,14 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
+      <node id="51">
+        <label>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2/connect_mode.h</label>
+        <link refid="connect__mode_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
     </invincdepgraph>
+    <innerclass refid="structpars_1_1overloaded" prot="public">pars::overloaded</innerclass>
     <innernamespace refid="namespacepars">pars</innernamespace>
     <sectiondef kind="define">
       <memberdef kind="define" id="init_8h_1af08ec37a8c99d747fb60fa15bc28678b" prot="public" static="no">
@@ -714,9 +724,15 @@
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacepars_1a17d3c52fa100a5b6caccfd12f1dbccf2" kindref="member">milli</ref><sp/>=<sp/>std::chrono::duration&lt;nng_duration,<sp/>std::milli&gt;;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_INIT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Ts&gt;</highlight></codeline>
+<codeline lineno="52" refid="structpars_1_1overloaded" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1overloaded" kindref="compound">overloaded</ref><sp/>:<sp/>Ts...</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Ts::operator()...;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>PARS_INIT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/init.h"/>
   </compounddef>

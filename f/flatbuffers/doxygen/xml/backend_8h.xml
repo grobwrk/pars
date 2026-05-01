@@ -101,12 +101,12 @@
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="120">
+      <node id="121">
         <label>nngxx/dialer.h</label>
         <link refid="dialer_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="121" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
@@ -173,7 +173,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="121">
+      <node id="122">
         <label>nngxx/iface/dialer.h</label>
         <link refid="iface_2dialer_8h"/>
         <childnode refid="20" relation="include">
@@ -191,7 +191,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="123">
+      <node id="124">
         <label>nngxx/iface/listener.h</label>
         <link refid="iface_2listener_8h"/>
         <childnode refid="20" relation="include">
@@ -285,12 +285,12 @@
         <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="122">
+      <node id="123">
         <label>nngxx/listener.h</label>
         <link refid="listener_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="123" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
@@ -1198,13 +1198,15 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="120" relation="include">
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="122" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
@@ -1213,10 +1215,6 @@
         <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -1253,6 +1251,18 @@
         <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>pars/net2/connect_mode.h</label>
+        <link refid="connect__mode_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="98">

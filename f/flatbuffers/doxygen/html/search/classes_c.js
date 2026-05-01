@@ -10,11 +10,12 @@ var searchData=
   ['opt_5fto_5fnng_5ftype_3c_20opt_3a_3areq_5fresend_5ftime_20_3e_7',['opt_to_nng_type&lt; opt::req_resend_time &gt;',['../structnngxx_1_1opt__to__nng__type_3_01opt_1_1req__resend__time_01_4.html',1,'nngxx']]],
   ['opt_5fto_5fnng_5ftype_3c_20opt_3a_3asendtimeo_20_3e_8',['opt_to_nng_type&lt; opt::sendtimeo &gt;',['../structnngxx_1_1opt__to__nng__type_3_01opt_1_1sendtimeo_01_4.html',1,'nngxx']]],
   ['opt_5fto_5fnng_5ftype_3c_20opt_3a_3asockname_20_3e_9',['opt_to_nng_type&lt; opt::sockname &gt;',['../structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4.html',1,'nngxx']]],
-  ['own_10',['own',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5faio_20_2a_20_3e_11',['own&lt; nng_aio * &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fctx_20_3e_12',['own&lt; nng_ctx &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fdialer_20_3e_13',['own&lt; nng_dialer &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5flistener_20_3e_14',['own&lt; nng_listener &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fmsg_20_2a_20_3e_15',['own&lt; nng_msg * &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fsocket_20_3e_16',['own&lt; nng_socket &gt;',['../structclev_1_1own.html',1,'clev']]]
+  ['overloaded_10',['overloaded',['../structpars_1_1ev_1_1pars_1_1overloaded.html',1,'pars::ev::pars::overloaded&lt; Ts &gt;'],['../structpars_1_1overloaded.html',1,'pars::overloaded&lt; Ts &gt;']]],
+  ['own_11',['own',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5faio_20_2a_20_3e_12',['own&lt; nng_aio * &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fctx_20_3e_13',['own&lt; nng_ctx &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fdialer_20_3e_14',['own&lt; nng_dialer &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5flistener_20_3e_15',['own&lt; nng_listener &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fmsg_20_2a_20_3e_16',['own&lt; nng_msg * &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fsocket_20_3e_17',['own&lt; nng_socket &gt;',['../structclev_1_1own.html',1,'clev']]]
 ];

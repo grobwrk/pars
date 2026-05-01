@@ -766,6 +766,7 @@
     <innerclass refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__requested_01_4" prot="public">pars::ev::klass&lt; pars_example::event::fib_requested &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1fib__computed_01_4" prot="public">pars::ev::klass&lt; pars_example::event::fib_computed &gt;</innerclass>
     <innerclass refid="structpars_1_1ev_1_1klass_3_01pars__example_1_1event_1_1stop__compute_01_4" prot="public">pars::ev::klass&lt; pars_example::event::stop_compute &gt;</innerclass>
+    <innerclass refid="structpars_1_1ev_1_1pars_1_1overloaded" prot="public">pars::ev::pars::overloaded</innerclass>
     <innerclass refid="structpars_1_1ev_1_1std_1_1formatter_3_01foarmattable__t_01_4" prot="public">pars::ev::std::formatter&lt; foarmattable_t &gt;</innerclass>
     <innernamespace refid="namespacepars__example">pars_example</innernamespace>
     <innernamespace refid="namespacepars__example_1_1event">pars_example::event</innernamespace>

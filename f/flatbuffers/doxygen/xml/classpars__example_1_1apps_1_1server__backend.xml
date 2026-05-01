@@ -155,7 +155,7 @@
         <argsstring></argsstring>
         <name>state</name>
         <qualifiedname>pars_example::apps::server_backend::state</qualifiedname>
-        <initializer>= {server_state::creating}</initializer>
+        <initializer>{server_state::creating}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -379,14 +379,14 @@
         </inbodydescription>
         <location file="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" line="334" column="8" bodyfile="/home/runner/work/pars-cxx/pars-cxx/example/server_backend.cpp" bodystart="334" bodyend="353"/>
       </memberdef>
-      <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1a4cc47118b3aa055f7d15ce9a16646b55" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classpars__example_1_1apps_1_1server__backend_1ae6ef75b5cbf91cc24a2701340c0ba70b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void pars_example::apps::server_backend::terminate</definition>
-        <argsstring>(hf_arg&lt; fired, shutdown &gt; fired)</argsstring>
+        <argsstring>(hf_arg&lt; fired, deinit &gt; fired)</argsstring>
         <name>terminate</name>
         <qualifiedname>pars_example::apps::server_backend::terminate</qualifiedname>
         <param>
-          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1shutdown" kindref="compound">shutdown</ref> &gt;</type>
+          <type><ref refid="namespacepars_1_1ev_1ada8ba2faa8e8f8b6a385eb2156e52613" kindref="member">hf_arg</ref>&lt; <ref refid="structpars_1_1ev_1_1fired" kindref="compound">fired</ref>, <ref refid="structpars_1_1ev_1_1deinit" kindref="compound">deinit</ref> &gt;</type>
           <declname>fired</declname>
         </param>
         <briefdescription>
@@ -473,7 +473,7 @@
       <member refid="classpars__example_1_1apps_1_1server__backend_1ab13d5c9453306aa62bd79cd313e39975" prot="private" virt="virtual"><scope>pars_example::apps::server_backend</scope><name>startup</name></member>
       <member refid="classpars__example_1_1apps_1_1server__backend_1a59e3e4691ef250fee3e64a948c7e73ca" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>state</name></member>
       <member refid="classpars_1_1app_1_1single_1a56b98085676e92a4a227bf8456ca9357" prot="protected" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>stop_job_thread</name></member>
-      <member refid="classpars__example_1_1apps_1_1server__backend_1a4cc47118b3aa055f7d15ce9a16646b55" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>terminate</name></member>
+      <member refid="classpars__example_1_1apps_1_1server__backend_1ae6ef75b5cbf91cc24a2701340c0ba70b" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>terminate</name></member>
       <member refid="classpars_1_1app_1_1single_1aade2404769da17ed631fffcf07e9e031" prot="protected" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>terminate_now</name></member>
       <member refid="classpars__example_1_1apps_1_1server__backend_1a9532ce52f8406b930a196b28aff8decd" prot="private" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>tot_served</name></member>
       <member refid="structpars_1_1app_1_1with__default__setup_1a8ed90269f5f66e4774fe1facdd9b8ae4" prot="protected" virt="non-virtual"><scope>pars_example::apps::server_backend</scope><name>with_default_setup</name></member>

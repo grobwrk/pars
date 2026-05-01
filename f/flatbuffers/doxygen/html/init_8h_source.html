@@ -141,11 +141,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">   49</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">milli</a> = std::chrono::duration&lt;nng_duration, std::milli&gt;;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace pars</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// PARS_INIT_H</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span>&lt;<span class="keyword">class</span>... Ts&gt;</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structpars_1_1overloaded.html">   52</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structpars_1_1overloaded.html">overloaded</a> : Ts...</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keyword">using </span>Ts::operator()...;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace pars</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// PARS_INIT_H</span></div>
 <div class="ttc" id="anamespacepars_html"><div class="ttname"><a href="namespacepars.html">pars</a></div><div class="ttdef"><b>Definition</b> <a href="resources_8h_source.html#l00042">resources.h:43</a></div></div>
 <div class="ttc" id="anamespacepars_html_a17d3c52fa100a5b6caccfd12f1dbccf2"><div class="ttname"><a href="namespacepars.html#a17d3c52fa100a5b6caccfd12f1dbccf2">pars::milli</a></div><div class="ttdeci">std::chrono::duration&lt; nng_duration, std::milli &gt; milli</div><div class="ttdef"><b>Definition</b> <a href="#l00049">init.h:49</a></div></div>
+<div class="ttc" id="astructpars_1_1overloaded_html"><div class="ttname"><a href="structpars_1_1overloaded.html">pars::overloaded</a></div><div class="ttdef"><b>Definition</b> <a href="#l00052">init.h:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

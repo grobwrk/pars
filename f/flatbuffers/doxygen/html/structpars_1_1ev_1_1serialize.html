@@ -138,7 +138,7 @@ template&lt;event_c event_t&gt; </div>
 <p class="definition">Definition at line <a class="el" href="serializer_8h_source.html#l00230">230</a> of file <a class="el" href="serializer_8h_source.html">serializer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  231</span>  {</div>
 <div class="line"><span class="lineno">  232</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
-<div class="line"><span class="lineno">  233</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
+<div class="line"><span class="lineno">  233</span>    <span class="keyword">auto</span> recv_event_hash = net::hash_from_msg(m);</div>
 <div class="line"><span class="lineno">  234</span>    <span class="keyword">auto</span> req_event_hash = uuid&lt;klass&lt;event_t&gt;&gt;::hash;</div>
 <div class="line"><span class="lineno">  235</span> </div>
 <div class="line"><span class="lineno">  236</span>    <span class="comment">// 2. check they correspond</span></div>

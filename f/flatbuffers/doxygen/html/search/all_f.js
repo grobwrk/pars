@@ -31,12 +31,13 @@ var searchData=
   ['or_5fexit_28',['or_exit',['../structclev_1_1expected_3_01void_01_4.html#a25663cb98061bb27746e02a7bfd0250a',1,'clev::expected&lt; void &gt;']]],
   ['out_29',['out',['../namespacepars_1_1net.html#a4f9c650e4cbffb5cbb69398ea23859e1ac68271a63ddbc431c307beb7d2918275',1,'pars::net']]],
   ['overload_30',['overload',['../structnngxx_1_1opt__getter.html#a2e09364097ea33bc46e62cd9cd6b6eda',1,'nngxx::opt_getter::overload'],['../structnngxx_1_1opt__setter.html#a7a460bcdf2ebf73db792bec869e0c0a6',1,'nngxx::opt_setter::overload']]],
-  ['own_31',['own',['../structclev_1_1own.html',1,'clev::own&lt; wrap_t &gt;'],['../structclev_1_1own.html#af60b220cbcc36b4315b9c2f127eb5d18',1,'clev::own::own(const own &amp;rhs) noexcept'],['../structclev_1_1own.html#a357e8cae94b4f00b1998851d0aa1325d',1,'clev::own::own(const own &amp;rhs)=delete'],['../structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548',1,'clev::own::own(own &amp;&amp;rhs) noexcept']]],
-  ['own_2eh_32',['own.h',['../own_8h.html',1,'']]],
-  ['own_3c_20nng_5faio_20_2a_20_3e_33',['own&lt; nng_aio * &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fctx_20_3e_34',['own&lt; nng_ctx &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fdialer_20_3e_35',['own&lt; nng_dialer &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5flistener_20_3e_36',['own&lt; nng_listener &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fmsg_20_2a_20_3e_37',['own&lt; nng_msg * &gt;',['../structclev_1_1own.html',1,'clev']]],
-  ['own_3c_20nng_5fsocket_20_3e_38',['own&lt; nng_socket &gt;',['../structclev_1_1own.html',1,'clev']]]
+  ['overloaded_31',['overloaded',['../structpars_1_1ev_1_1pars_1_1overloaded.html',1,'pars::ev::pars::overloaded&lt; Ts &gt;'],['../structpars_1_1overloaded.html',1,'pars::overloaded&lt; Ts &gt;']]],
+  ['own_32',['own',['../structclev_1_1own.html',1,'clev::own&lt; wrap_t &gt;'],['../structclev_1_1own.html#af60b220cbcc36b4315b9c2f127eb5d18',1,'clev::own::own(const own &amp;rhs) noexcept'],['../structclev_1_1own.html#a357e8cae94b4f00b1998851d0aa1325d',1,'clev::own::own(const own &amp;rhs)=delete'],['../structclev_1_1own.html#a7dbc844c1c55e277002e19babb2bb548',1,'clev::own::own(own &amp;&amp;rhs) noexcept']]],
+  ['own_2eh_33',['own.h',['../own_8h.html',1,'']]],
+  ['own_3c_20nng_5faio_20_2a_20_3e_34',['own&lt; nng_aio * &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fctx_20_3e_35',['own&lt; nng_ctx &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fdialer_20_3e_36',['own&lt; nng_dialer &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5flistener_20_3e_37',['own&lt; nng_listener &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fmsg_20_2a_20_3e_38',['own&lt; nng_msg * &gt;',['../structclev_1_1own.html',1,'clev']]],
+  ['own_3c_20nng_5fsocket_20_3e_39',['own&lt; nng_socket &gt;',['../structclev_1_1own.html',1,'clev']]]
 ];

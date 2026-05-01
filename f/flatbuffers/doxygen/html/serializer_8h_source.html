@@ -120,8 +120,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PRAGMA_EV_SERIALIZER_H</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PRAGMA_EV_SERIALIZER_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef PARS_EV_SERIALIZER_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PARS_EV_SERIALIZER_H</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="msg_8h.html">nngxx/msg.h</a>&quot;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -341,7 +341,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="structpars_1_1ev_1_1serialize.html#a839317ecb4e438b12e2f6012ed4d4532">  230</a></span>  <span class="keyword">static</span> event_t <a class="code hl_function" href="structpars_1_1ev_1_1serialize.html#a839317ecb4e438b12e2f6012ed4d4532">to_event</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacenngxx.html#a4357aed4c68a9f7703914455abf07879">nngxx::msg</a>&amp; m)</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="comment">// 1. compute received and requested event hash</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">auto</span> recv_event_hash = hash_from_msg(m);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">auto</span> recv_event_hash = net::hash_from_msg(m);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keyword">auto</span> req_event_hash = <a class="code hl_struct" href="structpars_1_1ev_1_1uuid.html">uuid&lt;klass&lt;event_t&gt;</a>&gt;::hash;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="comment">// 2. check they correspond</span></div>
@@ -362,7 +362,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>} <span class="comment">// namespace pars::ev</span></div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">#endif </span><span class="comment">// PRAGMA_EV_SERIALIZER_H</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">#endif </span><span class="comment">// PARS_EV_SERIALIZER_H</span></div>
 <div class="ttc" id="aflags_8h_html"><div class="ttname"><a href="flags_8h.html">flags.h</a></div></div>
 <div class="ttc" id="ahash_8h_html"><div class="ttname"><a href="hash_8h.html">hash.h</a></div></div>
 <div class="ttc" id="aklass_8h_html"><div class="ttname"><a href="klass_8h.html">klass.h</a></div></div>

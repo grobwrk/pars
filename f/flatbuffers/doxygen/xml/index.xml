@@ -132,6 +132,10 @@
   <compound refid="structpars_1_1ev_1_1creating__pipe" kind="struct"><name>pars::ev::creating_pipe</name>
     <member refid="structpars_1_1ev_1_1creating__pipe_1abb7b50b2dd892b23c9ddf65852102e9f" kind="function"><name>format_to</name></member>
   </compound>
+  <compound refid="structpars_1_1ev_1_1deinit" kind="struct"><name>pars::ev::deinit</name>
+    <member refid="structpars_1_1ev_1_1deinit_1a30b841edf02f75de2ab9c0507f555759" kind="variable"><name>creation_time</name></member>
+    <member refid="structpars_1_1ev_1_1deinit_1a68e16ee57ab9aba5f3e38c8b58f591fd" kind="function"><name>format_to</name></member>
+  </compound>
   <compound refid="classpars_1_1ev_1_1dispatcher" kind="class"><name>pars::ev::dispatcher</name>
     <member refid="classpars_1_1ev_1_1dispatcher_1a26b8a90f31bbd71c2b1479ad1621f2a9" kind="variable"><name>mtx_m</name></member>
     <member refid="classpars_1_1ev_1_1dispatcher_1afe24fcff1882e4013d7b7ab1546f08bf" kind="variable"><name>cond_m</name></member>
@@ -342,6 +346,11 @@
     <member refid="structpars_1_1ev_1_1klass_3_01creating__pipe_01_4_1a4a04378557dd83eae274f2d3fa16d9ab" kind="variable"><name>uuid</name></member>
     <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
   </compound>
+  <compound refid="structpars_1_1ev_1_1klass_3_01deinit_01_4" kind="struct"><name>pars::ev::klass&lt; deinit &gt;</name>
+    <member refid="structpars_1_1ev_1_1klass_3_01deinit_01_4_1a0c0223d38b6f659ae79c1e35d96b3b76" kind="variable"><name>uuid</name></member>
+    <member refid="structpars_1_1ev_1_1klass_3_01deinit_01_4_1a616536e76f0b7e8140ab450c5399552e" kind="variable"><name>requires_network</name></member>
+    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
+  </compound>
   <compound refid="structpars_1_1ev_1_1klass_3_01exception_01_4" kind="struct"><name>pars::ev::klass&lt; exception &gt;</name>
     <member refid="structpars_1_1ev_1_1klass_3_01exception_01_4_1a42106f457e3f2885bf0eab96753080ca" kind="variable"><name>uuid</name></member>
     <member refid="structpars_1_1ev_1_1klass_3_01exception_01_4_1a947d1e2fb681777339af05c03b51b345" kind="variable"><name>requires_network</name></member>
@@ -380,11 +389,6 @@
   </compound>
   <compound refid="structpars_1_1ev_1_1klass_3_01pipe__removed_01_4" kind="struct"><name>pars::ev::klass&lt; pipe_removed &gt;</name>
     <member refid="structpars_1_1ev_1_1klass_3_01pipe__removed_01_4_1ae5b74356bdd447cfb7f7cdec7ffaa454" kind="variable"><name>uuid</name></member>
-    <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
-  </compound>
-  <compound refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4" kind="struct"><name>pars::ev::klass&lt; shutdown &gt;</name>
-    <member refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4_1a634ed67ea28a0e51d203530663cd17f3" kind="variable"><name>uuid</name></member>
-    <member refid="structpars_1_1ev_1_1klass_3_01shutdown_01_4_1af870c3e4597ee34753f72bd12a6eb4a2" kind="variable"><name>requires_network</name></member>
     <member refid="structpars_1_1ev_1_1klass_1a859e5b0486cfbae39af3549e7f2b629d" kind="typedef"><name>event_type</name></member>
   </compound>
   <compound refid="structpars_1_1ev_1_1klass_3_01std_1_1shared__ptr_3_01event__t_01_4_01_4" kind="struct"><name>pars::ev::klass&lt; std::shared_ptr&lt; event_t &gt; &gt;</name>
@@ -514,6 +518,10 @@
   </compound>
   <compound refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4" kind="struct"><name>nngxx::opt_to_nng_type&lt; opt::sockname &gt;</name>
     <member refid="structnngxx_1_1opt__to__nng__type_3_01opt_1_1sockname_01_4_1a3510214b265e6edd0f39f04906aa5bcb" kind="typedef"><name>return_type</name></member>
+  </compound>
+  <compound refid="structpars_1_1ev_1_1pars_1_1overloaded" kind="struct"><name>pars::ev::pars::overloaded</name>
+  </compound>
+  <compound refid="structpars_1_1overloaded" kind="struct"><name>pars::overloaded</name>
   </compound>
   <compound refid="structclev_1_1own" kind="struct"><name>clev::own</name>
     <member refid="structclev_1_1own_1a87d7f4e72bb9dfbfe1385783c7d3de0a" kind="typedef"><name>parent</name></member>
@@ -684,11 +692,7 @@
     <member refid="classpars__example_1_1apps_1_1server__backend_1a92fca6a00289a15b49fb81fc5e53640b" kind="function"><name>compute_answer</name></member>
     <member refid="classpars__example_1_1apps_1_1server__backend_1a66f2a5ee0adbdd962315af16b5c84537" kind="function"><name>recv_next</name></member>
     <member refid="classpars__example_1_1apps_1_1server__backend_1a82b4c706e47efc6e0700d22d5ca04020" kind="function"><name>close_pipe</name></member>
-    <member refid="classpars__example_1_1apps_1_1server__backend_1a4cc47118b3aa055f7d15ce9a16646b55" kind="function"><name>terminate</name></member>
-  </compound>
-  <compound refid="structpars_1_1ev_1_1shutdown" kind="struct"><name>pars::ev::shutdown</name>
-    <member refid="structpars_1_1ev_1_1shutdown_1a110412ea039e6660ed6ddaca8e21b5aa" kind="variable"><name>creation_time</name></member>
-    <member refid="structpars_1_1ev_1_1shutdown_1a150a7f138800c861d691a257206346a0" kind="function"><name>format_to</name></member>
+    <member refid="classpars__example_1_1apps_1_1server__backend_1ae6ef75b5cbf91cc24a2701340c0ba70b" kind="function"><name>terminate</name></member>
   </compound>
   <compound refid="classpars_1_1app_1_1single" kind="class"><name>pars::app::single</name>
     <member refid="classpars_1_1app_1_1single_1a1c702c626c4e90070855013848155578" kind="typedef"><name>component_type</name></member>
@@ -1057,8 +1061,6 @@
     <member refid="namespacepars_1ab213c1db00bcc4efa9c09a037b3153cb" kind="function"><name>operator&amp;</name></member>
     <member refid="namespacepars_1ae0c3e60dcf7f78296ff02693096f0556" kind="function"><name>operator&amp;</name></member>
     <member refid="namespacepars_1a352234c76416c9b4b9688594e5be8b9e" kind="function"><name>operator&amp;</name></member>
-    <member refid="namespacepars_1a7e5d12501985d0fe55404f8e53d26676" kind="function"><name>hash_from_uuid</name></member>
-    <member refid="namespacepars_1ad481204c847db242e0b5f5bf1487a0a7" kind="function"><name>hash_from_msg</name></member>
   </compound>
   <compound refid="namespacepars_1_1app" kind="namespace"><name>pars::app</name>
   </compound>
@@ -1094,6 +1096,8 @@
     <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kind="enumvalue"><name>dial</name></member>
     <member refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba839d7228b5ccc60e54455093a966b8c2" kind="enumvalue"><name>listen</name></member>
     <member refid="namespacepars_1_1net_1ae5981715796cf677d35be33819d52267" kind="typedef"><name>cb_f</name></member>
+    <member refid="namespacepars_1_1net_1a1a4dd2232322b0f8373bc7fc6a5686cf" kind="function"><name>hash_from_uuid</name></member>
+    <member refid="namespacepars_1_1net_1a5b7f2648bf05123075093297684ffd04" kind="function"><name>hash_from_msg</name></member>
     <member refid="namespacepars_1_1net_1a4b6acd1c74503e647166f78418a0e9ea" kind="function"><name>cmode_from_string</name></member>
   </compound>
   <compound refid="namespacepars__example" kind="namespace"><name>pars_example</name>
@@ -1140,25 +1144,15 @@
   <compound refid="server__backend_8cpp" kind="file"><name>server_backend.cpp</name>
     <member refid="server__backend_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="clev_2err_8h" kind="file"><name>err.h</name>
-  </compound>
-  <compound refid="nngxx_2err_8h" kind="file"><name>err.h</name>
-  </compound>
-  <compound refid="pars_2err_8h" kind="file"><name>err.h</name>
-  </compound>
   <compound refid="iface_8h" kind="file"><name>iface.h</name>
   </compound>
   <compound refid="own_8h" kind="file"><name>own.h</name>
   </compound>
-  <compound refid="clev_2value_8h" kind="file"><name>value.h</name>
-  </compound>
-  <compound refid="nngxx_2iface_2value_8h" kind="file"><name>value.h</name>
-  </compound>
-  <compound refid="concept_8h" kind="file"><name>concept.h</name>
-  </compound>
   <compound refid="aio_8h" kind="file"><name>aio.h</name>
   </compound>
   <compound refid="iface_2aio_8h" kind="file"><name>aio.h</name>
+  </compound>
+  <compound refid="concept_8h" kind="file"><name>concept.h</name>
   </compound>
   <compound refid="ctx_8h" kind="file"><name>ctx.h</name>
   </compound>
@@ -1168,13 +1162,17 @@
   </compound>
   <compound refid="iface_2dialer_8h" kind="file"><name>dialer.h</name>
   </compound>
-  <compound refid="iface_2msg_8h" kind="file"><name>msg.h</name>
+  <compound refid="clev_2value_8h" kind="file"><name>value.h</name>
   </compound>
-  <compound refid="msg_8h" kind="file"><name>msg.h</name>
+  <compound refid="nngxx_2iface_2value_8h" kind="file"><name>value.h</name>
   </compound>
   <compound refid="iface_2listener_8h" kind="file"><name>listener.h</name>
   </compound>
   <compound refid="listener_8h" kind="file"><name>listener.h</name>
+  </compound>
+  <compound refid="iface_2msg_8h" kind="file"><name>msg.h</name>
+  </compound>
+  <compound refid="msg_8h" kind="file"><name>msg.h</name>
   </compound>
   <compound refid="msg__body_8h" kind="file"><name>msg_body.h</name>
   </compound>
@@ -1210,10 +1208,6 @@
   </compound>
   <compound refid="lib_2include_2pars_2ev_2event_8h" kind="file"><name>event.h</name>
   </compound>
-  <compound refid="concept_2formattable_8h" kind="file"><name>formattable.h</name>
-  </compound>
-  <compound refid="fmt_2formattable_8h" kind="file"><name>formattable.h</name>
-  </compound>
   <compound refid="hashable_8h" kind="file"><name>hashable.h</name>
   </compound>
   <compound refid="concept_2kind_8h" kind="file"><name>kind.h</name>
@@ -1221,6 +1215,12 @@
   <compound refid="ev_2kind_8h" kind="file"><name>kind.h</name>
   </compound>
   <compound refid="net_8h" kind="file"><name>net.h</name>
+  </compound>
+  <compound refid="clev_2err_8h" kind="file"><name>err.h</name>
+  </compound>
+  <compound refid="nngxx_2err_8h" kind="file"><name>err.h</name>
+  </compound>
+  <compound refid="pars_2err_8h" kind="file"><name>err.h</name>
   </compound>
   <compound refid="dispatcher_8h" kind="file"><name>dispatcher.h</name>
   </compound>
@@ -1248,6 +1248,10 @@
   <compound refid="serializer_8h" kind="file"><name>serializer.h</name>
   </compound>
   <compound refid="spec_8h" kind="file"><name>spec.h</name>
+  </compound>
+  <compound refid="concept_2formattable_8h" kind="file"><name>formattable.h</name>
+  </compound>
+  <compound refid="fmt_2formattable_8h" kind="file"><name>formattable.h</name>
   </compound>
   <compound refid="helpers_8h" kind="file"><name>helpers.h</name>
   </compound>
@@ -1308,6 +1312,8 @@
   </compound>
   <compound refid="tool__view_8h" kind="file"><name>tool_view.h</name>
   </compound>
+  <compound refid="connect__mode_8h" kind="file"><name>connect_mode.h</name>
+  </compound>
   <compound refid="dir_d78138f64fa1281cc4d5674365f8996f" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/app</name>
   </compound>
   <compound refid="dir_7fdf9d038045b73e2c237e42c5922da2" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/clev</name>
@@ -1331,6 +1337,8 @@
   <compound refid="dir_2f2ea1850b379ce39e80e65156de07b7" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/log</name>
   </compound>
   <compound refid="dir_b226a2db4af0c8a921722f1826220d82" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net</name>
+  </compound>
+  <compound refid="dir_3a523056a535c88ff83096248b77260a" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/pars/net2</name>
   </compound>
   <compound refid="dir_11335132a5b40579406e58b1f54b1d1a" kind="dir"><name>/home/runner/work/pars-cxx/pars-cxx/lib/include/nngxx</name>
   </compound>

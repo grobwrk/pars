@@ -99,12 +99,12 @@
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="120">
+      <node id="121">
         <label>nngxx/dialer.h</label>
         <link refid="dialer_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="121" relation="include">
+        <childnode refid="122" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
@@ -171,7 +171,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="121">
+      <node id="122">
         <label>nngxx/iface/dialer.h</label>
         <link refid="iface_2dialer_8h"/>
         <childnode refid="20" relation="include">
@@ -189,7 +189,7 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="123">
+      <node id="124">
         <label>nngxx/iface/listener.h</label>
         <link refid="iface_2listener_8h"/>
         <childnode refid="20" relation="include">
@@ -283,12 +283,12 @@
         <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="122">
+      <node id="123">
         <label>nngxx/listener.h</label>
         <link refid="listener_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="123" relation="include">
+        <childnode refid="124" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
@@ -1192,13 +1192,15 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="120" relation="include">
+        <childnode refid="121" relation="include">
         </childnode>
-        <childnode refid="122" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
@@ -1207,10 +1209,6 @@
         <childnode refid="49" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
@@ -1247,6 +1245,18 @@
         <childnode refid="51" relation="include">
         </childnode>
         <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>pars/net2/connect_mode.h</label>
+        <link refid="connect__mode_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="98">
@@ -1500,8 +1510,8 @@
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59" refid="structpars_1_1comp_1_1client_1_1connect__p" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpars_1_1comp_1_1client_1_1connect__p" kindref="compound">connect_p</ref></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="61" refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">net::cmode</ref><sp/><ref refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" kindref="member">service_cmode</ref><sp/>=<sp/><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kindref="member">net::cmode::dial</ref>;<sp/></highlight></codeline>
-<codeline lineno="62" refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" kindref="member">service_addr</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0b" kindref="member">net::cmode</ref><sp/><ref refid="structpars_1_1comp_1_1client_1_1connect__p_1a22f581d25551fc471f2a29a00d81c821" kindref="member">service_cmode</ref>{<ref refid="namespacepars_1_1net_1a087bfa3d6bb7c88fdd097f40d7764f0ba6de514dbc026d5badb01f8ea18ffcc9b" kindref="member">net::cmode::dial</ref>};<sp/></highlight></codeline>
+<codeline lineno="62" refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structpars_1_1comp_1_1client_1_1connect__p_1a0cffb7062c2f5d201f0681dc67427cd7" kindref="member">service_addr</ref>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65" refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpars_1_1comp_1_1client_1a196f58ffa1846af77b8e45c056f374b2" kindref="member">connect</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpars_1_1comp_1_1client_1_1connect__p" kindref="compound">connect_p</ref>&amp;<sp/>params)</highlight></codeline>
