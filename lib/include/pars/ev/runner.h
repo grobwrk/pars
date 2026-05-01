@@ -27,17 +27,38 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_RUNNER_H
+#define PARS_EV_RUNNER_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/event.h"
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/job.h"
+#include "pars/ev/kind.h"
+#include "pars/ev/kind_decl.h"
+#include "pars/ev/spec.h"
+#include "pars/log.h"
+#include "pars/log/demangle.h"
+#include "pars/log/flags.h"
+#include "pars/net/pipe.h"
 
+#include <atomic>
+#include <chrono>
+#include <cstddef>
+#include <exception>
 #include <format>
 #include <functional>
 #include <future>
+#include <mutex>
+#include <stdexcept>
+#include <stop_token>
 #include <thread>
+#include <tuple>
 #include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 namespace pars::ev
 {
@@ -343,3 +364,5 @@ private:
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_RUNNER_H

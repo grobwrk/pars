@@ -27,18 +27,24 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_JOB_H
+#define PARS_EV_JOB_H
 
-#include "nngxx/msg.h"
-
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/kind.h"
+#include "pars/ev/kind_decl.h"
 #include "pars/ev/metadata.h"
 #include "pars/ev/serializer.h"
 #include "pars/ev/spec.h"
 
+#include "nngxx/msg.h"
+
 #include <any>
+#include <cstddef>
 #include <format>
 #include <type_traits>
+#include <utility>
 
 namespace pars::ev
 {
@@ -127,3 +133,7 @@ static job make_job(std::size_t j_id, kind_of<event_t> ke)
 }
 
 } // namespace pars::ev
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_EV_JOB_H

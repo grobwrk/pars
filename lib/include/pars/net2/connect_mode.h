@@ -27,48 +27,36 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_CONNECTMODE_H
+#define PARS_NET_CONNECTMODE_H
 
-#include "pars/app/resources.h"
-#include "pars/app/setup.h"
-#include "pars/app/single.h"
-#include "pars/app/state_machine.h"
-#include "pars/comp/backend.h"
-#include "pars/comp/client.h"
-#include "pars/concept/event.h"
-#include "pars/concept/formattable.h"
-#include "pars/concept/hashable.h"
-#include "pars/concept/kind.h"
-#include "pars/concept/net.h"
-#include "pars/ev/dispatcher.h"
-#include "pars/ev/enqueuer.h"
-#include "pars/ev/event.h"
-#include "pars/ev/hf_registry.h"
-#include "pars/ev/hf_registry__insert.h"
-#include "pars/ev/job.h"
-#include "pars/ev/kind.h"
-#include "pars/ev/kind_base.h"
-#include "pars/ev/kind_decl.h"
-#include "pars/ev/klass.h"
-#include "pars/ev/make_hf.h"
-#include "pars/ev/metadata.h"
-#include "pars/ev/runner.h"
-#include "pars/ev/serializer.h"
-#include "pars/ev/spec.h"
-#include "pars/log/demangle.h"
-#include "pars/log/flags.h"
-#include "pars/log/nametype.h"
-#include "pars/net/context.h"
-#include "pars/net/context_opt.h"
-#include "pars/net/context_registry.h"
-#include "pars/net/dir.h"
-#include "pars/net/hash.h"
-#include "pars/net/op.h"
-#include "pars/net/pipe.h"
-#include "pars/net/pull.h"
-#include "pars/net/push.h"
-#include "pars/net/rep.h"
-#include "pars/net/req.h"
-#include "pars/net/socket.h"
-#include "pars/net/socket_opt.h"
-#include "pars/net/tool_view.h"
+#include "pars/init.h" // IWYU pragma: keep
+
+#include <format>
+#include <stdexcept>
+#include <string_view>
+
+namespace pars::net
+{
+
+enum class cmode
+{
+  dial,
+  listen
+};
+
+static cmode cmode_from_string(const char* str)
+{
+  auto str_view = std::string_view(str);
+
+  if (str_view.compare("dial") == 0)
+    return cmode::dial;
+  else if (str_view.compare("listen") == 0)
+    return cmode::listen;
+
+  throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
+}
+
+} // namespace pars::net
+
+#endif // PARS_NET_CONNECTMODE_H

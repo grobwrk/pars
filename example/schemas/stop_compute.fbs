@@ -1,0 +1,7 @@
+namespace pars_example.event;
+
+table StopCompute {
+  pipe_id: int;
+}
+
+root_type StopCompute;

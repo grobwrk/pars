@@ -27,9 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_MSG_H
+#define NNGXX_MSG_H
 
 #include "nngxx/iface/msg.h"
+
+#include "clev/err.h"
+#include "clev/own.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
+#include <cstddef>
+#include <utility>
 
 namespace nngxx
 {
@@ -51,3 +61,5 @@ make_msg(std::size_t sz) noexcept
 static_assert(std::copyable<nngxx::msg_view>);
 
 static_assert(std::copyable<nngxx::msg>);
+
+#endif // NNGXX_MSG_H

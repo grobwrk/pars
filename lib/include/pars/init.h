@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_INIT_H
+#define PARS_INIT_H
 
 // avoid crt warnings
 #define _CRT_SECURE_NO_WARNINGS
@@ -40,10 +41,19 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <nng/nng.h>
 
 #include <chrono>
+#include <ratio>
 
 namespace pars
 {
 
 using milli = std::chrono::duration<nng_duration, std::milli>;
 
+template<class... Ts>
+struct overloaded : Ts...
+{
+  using Ts::operator()...;
+};
+
 } // namespace pars
+
+#endif // PARS_INIT_H

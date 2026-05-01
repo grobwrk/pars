@@ -27,11 +27,16 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_OPTSETTER_H
+#define NNGXX_OPTSETTER_H
 
 #include "nngxx/concept.h"
 #include "nngxx/err.h"
 #include "nngxx/opt.h"
+
+#include "clev/err.h"
+
+#include <nng/nng.h>
 
 namespace nngxx
 {
@@ -123,3 +128,5 @@ struct opt_setter
 };
 
 } // namespace nngxx
+
+#endif // NNGXX_OPTSETTER_H

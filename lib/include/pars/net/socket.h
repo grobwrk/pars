@@ -27,42 +27,34 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_SOCKET_H
+#define PARS_NET_SOCKET_H
+
+#include "pars/concept/event.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/event.h"
+#include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/net/op.h"
+#include "pars/net/pipe.h"
+#include "pars/net/socket_opt.h"
+#include "pars/net/tool_view.h"
+#include "pars/net2/connect_mode.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/ctx.h"
 #include "nngxx/dialer.h"
 #include "nngxx/listener.h"
 #include "nngxx/pipe.h"
-
-#include "pars/ev/enqueuer.h"
-#include "pars/net/op.h"
-#include "pars/net/socket_opt.h"
+#include "nngxx/socket_decl.h"
 
 #include <format>
-#include <string_view>
+#include <nng/nng.h>
+#include <utility>
 #include <vector>
 
 namespace pars::net
 {
-
-enum class cmode
-{
-  dial,
-  listen
-};
-
-static cmode cmode_from_string(const char* str)
-{
-  auto str_view = std::string_view(str);
-
-  if (str_view.compare("dial") == 0)
-    return cmode::dial;
-  else if (str_view.compare("listen") == 0)
-    return cmode::listen;
-
-  throw std::runtime_error(std::format("Unable to parse {} to CMODE", str));
-}
 
 /**
  * @brief Represents an nng_socket
@@ -71,8 +63,8 @@ class socket
 {
 public:
   /// Construct a socket
-  socket(ev::enqueuer& r, nngxx::socket&& s)
-    : router_m{r}
+  socket(ev::enqueuer& e, nngxx::socket&& s)
+    : enqueuer_m{e}
     , socket_m{std::move(s)}
   {
     register_pipe_notify();
@@ -135,10 +127,10 @@ public:
   template<ev::event_c event_t>
   void send(event_t ev, pipe p = {})
   {
-    op_m.send(router_m, *this, p, ev);
+    op_m.send(enqueuer_m, *this, p, std::move(ev));
   }
 
-  void recv() { op_m.recv(router_m, *this); }
+  void recv() { op_m.recv(enqueuer_m, *this); }
 
   void stop() { op_m.stop(); }
 
@@ -166,21 +158,21 @@ private:
     case NNG_PIPE_EV_ADD_PRE: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} creating! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::creating_pipe{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::creating_pipe{}, id(), *this, net::pipe{pv});
     }
     break;
 
     case NNG_PIPE_EV_ADD_POST: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} created! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_created{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::pipe_created{}, id(), *this, net::pipe{pv});
     }
     break;
 
     case NNG_PIPE_EV_REM_POST: {
       pars::debug(SL, lf::net, "Pipe 0x{:X} removed! [{}]", pv.id(), *this);
 
-      router_m.queue_fire(ev::pipe_removed{}, id(), *this, net::pipe{pv});
+      enqueuer_m.fire(ev::pipe_removed{}, id(), *this, net::pipe{pv});
     }
     break;
 
@@ -219,7 +211,7 @@ private:
     return dialers_m.back();
   }
 
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   op op_m;
   nngxx::socket socket_m;
   std::vector<nngxx::dialer> dialers_m;
@@ -227,3 +219,7 @@ private:
 };
 
 } // namespace pars::net
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_NET_SOCKET_H

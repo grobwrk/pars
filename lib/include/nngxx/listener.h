@@ -27,9 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_LISTENER_H
+#define NNGXX_LISTENER_H
 
+#include "nngxx/concept.h"
 #include "nngxx/iface/listener.h"
+#include "nngxx/socket_decl.h"
+
+#include "clev/err.h"
+#include "clev/own.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
 
 namespace nngxx
 {
@@ -49,3 +59,5 @@ make_listener(socket_view& s, const char* addr) noexcept
 static_assert(std::copyable<nngxx::listener_view>);
 
 static_assert(nngxx::movable_only_c<nngxx::listener>);
+
+#endif // NNGXX_LISTENER_H

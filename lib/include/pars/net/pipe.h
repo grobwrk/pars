@@ -27,12 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_PIPE_H
+#define PARS_NET_PIPE_H
+
+#include "pars/fmt/nng.h" // IWYU pragma: keep
 
 #include "nngxx/pipe.h"
-#include "nngxx/socket.h"
-
-#include "pars/fmt/nng.h"
+#include "nngxx/socket.h" // IWYU pragma: keep
 
 #include <format>
 
@@ -64,7 +65,7 @@ public:
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
     return std::format_to(ctx.out(), "{}",
-                          static_cast<nngxx::pipe_view>(*this));
+                          static_cast<const nngxx::pipe_view&>(*this));
   }
 
 private:
@@ -74,3 +75,7 @@ private:
 };
 
 } // namespace pars::net
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_NET_PIPE_H

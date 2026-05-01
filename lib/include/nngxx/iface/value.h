@@ -27,14 +27,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_IFACE_VALUE_H
+#define NNGXX_IFACE_VALUE_H
 
-#include "clev/own.h"
+#include "clev/err.h"
 #include "clev/value.h"
+
 #include "nngxx/concept.h"
 #include "nngxx/opt.h"
 #include "nngxx/opt_getter.h"
 #include "nngxx/opt_setter.h"
+
+#include <nng/nng.h>
 
 #include <type_traits>
 
@@ -134,4 +138,4 @@ private:
 
 } // namespace nngxx
 
-static_assert(ownxx_own_is_really_needed_v);
+#endif // NNGXX_IFACE_VALUE_H

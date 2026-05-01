@@ -27,14 +27,41 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
 #include "fib.h"
+
+#include <pars/app/resources.h>
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/backend.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/init.h>
+#include <pars/log.h>
+#include <pars/net/socket.h>
+
+#include <spdlog/spdlog.h>
+
+#include <atomic>
+#include <cstddef>
+#include <cstdlib>
+#include <exception>
+#include <format>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <utility>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the backend component as a single application (rep).
 class server_backend : public app::single<comp::backend>
@@ -60,7 +87,7 @@ private:
   /// @name App State
 
   std::atomic<int> tot_served{0}; ///< total client served
-  app::state_machine<server_state> state = {server_state::creating};
+  app::state_machine<server_state> state{server_state::creating};
   app::resources<int, pipe_resource> resources;
 
   /// @name Constructors
@@ -104,7 +131,7 @@ private:
     /// 3. insert handler functions
     hfs().on<fired, init>(&self::initialize, this);
 
-    hfs().on<fired, shutdown>(&self::terminate, this);
+    hfs().on<fired, deinit>(&self::terminate, this);
 
     comp().rep().on<received, fib_requested>(&self::fire_compute, this);
 
@@ -189,12 +216,12 @@ private:
     pars::info(SL, "{}: Fired {} [# resources: {}]", md, ev, resources.count());
   }
 
-  /// queue_fire the computation
+  /// fire the computation
   void fire_compute(hf_arg<received, fib_requested> recv)
   {
     state.ensure(server_state::running);
 
-    auto [ev, md] = recv.as_tuple();
+    auto [ev, md] = std::move(recv).as_tuple();
 
     auto locked = resources.locked_resource(md.pipe().id());
 
@@ -213,11 +240,11 @@ private:
 
     pipe_resource.save_tool(md.tool());
 
-    router().queue_fire(ev, md);
+    pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
+
+    enqueuer().fire(std::move(ev), md);
 
     ts.commit();
-
-    pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
   }
 
   /// compute fib_b then answer
@@ -241,7 +268,7 @@ private:
 
     try
     {
-      fib_n = compute::fib(ev.n, ev.use_fast_fib, md);
+      fib_n = compute::fib(ev.table()->n(), ev.table()->use_fast_fib(), md);
     }
     catch (const compute::stop_requested&)
     {
@@ -259,15 +286,15 @@ private:
 
     /// send the outcome event using the ctx where we received from
 
-    auto out_ev = fib_computed{ev.work_id, fib_n};
+    auto out_ev = fib_computed::make(ev.table()->work_id(), fib_n);
 
     auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
 
-    ctx.send(out_ev, p);
+    pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
+
+    ctx.send(std::move(out_ev), p);
 
     ts.commit();
-
-    pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
   }
 
   /// start a recv operation
@@ -283,12 +310,12 @@ private:
 
     if (++tot_served == max_served)
     {
-      auto shutdown_ev = shutdown{};
+      auto deinit_ev = deinit{};
 
-      router().queue_fire(shutdown_ev);
+      enqueuer().fire(deinit_ev);
 
       pars::info(SL, "{}: Sent {}, Fire {}! [{} succesfully served]", md, ev,
-                 shutdown_ev, max_served);
+                 deinit_ev, max_served);
 
       return;
     }
@@ -326,7 +353,7 @@ private:
   }
 
   /// graceful terminate
-  void terminate(hf_arg<fired, shutdown> fired)
+  void terminate(hf_arg<fired, deinit> fired)
   {
     state.ensure(server_state::running);
 

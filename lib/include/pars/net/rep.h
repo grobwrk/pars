@@ -27,13 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_REP_H
+#define PARS_NET_REP_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/enqueuer.h"
+#include "pars/ev/hf_registry.h"
 #include "pars/ev/hf_registry__insert.h"
 #include "pars/ev/make_hf.h"
 #include "pars/net/context_registry.h"
 #include "pars/net/socket.h"
+
+#include "nngxx/socket.h"
 
 namespace pars::net
 {
@@ -91,3 +97,5 @@ private:
 };
 
 } // namespace pars::net
+
+#endif // PARS_NET_REP_H

@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_SINGLE_H
+#define PARS_APP_SINGLE_H
 
 #include "pars/app/setup.h"
 #include "pars/ev/dispatcher.h"
@@ -35,6 +36,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/runner.h"
 #include "pars/log.h"
+#include "pars/log/flags.h"
+
+#include <nng/nng.h>
+
+#include <cstdlib>
+#include <exception>
 
 namespace pars::app
 {
@@ -50,8 +57,8 @@ public:
     : runner_m{hf_registry_m}
     , hf_registry_m{runner_m}
     , dispatcher_m{runner_m}
-    , router_m{dispatcher_m, runner_m}
-    , component_m{hf_registry_m, router_m}
+    , enqueuer_m{dispatcher_m, runner_m}
+    , component_m{hf_registry_m, enqueuer_m}
   {
   }
 
@@ -69,7 +76,7 @@ public:
 protected:
   component_type& comp() { return component_m; }
 
-  ev::enqueuer& router() { return router_m; }
+  ev::enqueuer& enqueuer() { return enqueuer_m; }
 
   ev::hf_registry& hfs() { return hf_registry_m; }
 
@@ -109,8 +116,10 @@ private:
   ev::runner runner_m;
   ev::hf_registry hf_registry_m;
   ev::dispatcher dispatcher_m;
-  ev::enqueuer router_m;
+  ev::enqueuer enqueuer_m;
   component_type component_m;
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_SINGLE_H

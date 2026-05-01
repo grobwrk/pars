@@ -1,0 +1,8 @@
+namespace pars_example.event;
+
+table FibComputed {
+  work_id: ulong;
+  fib_n: ulong;
+}
+
+root_type FibComputed;

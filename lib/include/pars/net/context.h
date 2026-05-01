@@ -27,17 +27,22 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_CONTEXT_H
+#define PARS_NET_CONTEXT_H
+
+#include "pars/concept/event.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/net/context_opt.h"
+#include "pars/net/op.h"
+#include "pars/net/pipe.h"
+#include "pars/net/socket.h"
+#include "pars/net/tool_view.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/ctx.h"
 
-#include "pars/ev/enqueuer.h"
-#include "pars/net/context_opt.h"
-#include "pars/net/op.h"
-#include "pars/net/socket.h"
-
 #include <format>
+#include <utility>
 
 namespace pars::net
 {
@@ -45,8 +50,8 @@ namespace pars::net
 class context
 {
 public:
-  context(ev::enqueuer& r, nngxx::ctx&& c, const net::socket& s)
-    : router_m{r}
+  context(ev::enqueuer& e, nngxx::ctx&& c, const net::socket& s)
+    : enqueuer_m{e}
     , ctx_m{std::move(c)}
     , sock_m{s}
   {
@@ -78,10 +83,10 @@ public:
   template<ev::event_c event_t>
   void send(event_t ev, pipe p)
   {
-    op_m.send(router_m, *this, p, ev);
+    op_m.send(enqueuer_m, *this, p, std::move(ev));
   }
 
-  void recv() { op_m.recv(router_m, *this); }
+  void recv() { op_m.recv(enqueuer_m, *this); }
 
   void stop() { op_m.stop(); }
 
@@ -97,10 +102,14 @@ public:
   }
 
 private:
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   op op_m;
   nngxx::ctx ctx_m;
   const net::socket& sock_m;
 };
 
 } // namespace pars::net
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_NET_CONTEXT_H

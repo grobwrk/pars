@@ -27,13 +27,14 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_MAKEHF_H
+#define PARS_EV_MAKEHF_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 
+#include <cstddef>
 #include <functional>
-#include <ratio>
 
 namespace pars::ev
 {
@@ -65,27 +66,23 @@ handler_f<kind_of, event_t> make_hf(mem_fn_t& mem_fn, class_t* self)
   {
     return handler_f<kind_of, event_t>(std::bind(mem_fn, _1));
   }
-  else if constexpr (std::is_same_v<std::integral_constant<std::size_t, arity>,
-                                    std::integral_constant<std::size_t, 0>>)
+  else if constexpr (arity == 0)
   {
     return handler_f<kind_of, event_t>(
       std::bind(mem_fn, static_cast<class_t*>(self)));
   }
-  else if constexpr (std::is_same_v<std::integral_constant<std::size_t, arity>,
-                                    std::integral_constant<std::size_t, 1>>)
+  else if constexpr (arity == 1)
   {
     return handler_f<kind_of, event_t>(
       std::bind(mem_fn, static_cast<class_t*>(self), _1));
   }
-  else if constexpr (std::is_same_v<std::integral_constant<std::size_t, arity>,
-                                    std::integral_constant<std::size_t, 2>>)
+  else if constexpr (arity == 2)
   {
     return handler_f<kind_of, event_t>(
       std::bind(mem_fn, static_cast<class_t*>(self), _1, _2));
   }
 
-  static_assert(std::ratio_less_equal_v<std::ratio<arity>, std::ratio<2>>,
-                "Only fn with arity <= 2 are supported");
+  static_assert(arity <= 2, "Only fn with arity <= 2 are supported");
 }
 
 template<typename return_t, typename class_t,
@@ -105,3 +102,5 @@ struct hf_traits<return_t (class_t::*)(hf_arg<kind_of, event_t>)>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_MAKEHF_H

@@ -27,17 +27,22 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_HASH_H
+#define PARS_NET_HASH_H
 
+#include "pars/init.h" // IWYU pragma: keep
+
+#include "nngxx/msg.h"
 #include "nngxx/msg_body.h"
 
-#include "pars/init.h"
-
 #include <cstddef>
+#include <cstdint>
 #include <cstring>
 #include <format>
+#include <stdexcept>
+#include <string_view>
 
-namespace pars
+namespace pars::net
 {
 
 static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
@@ -88,3 +93,5 @@ static std::size_t hash_from_msg(const nngxx::msg& m)
 }
 
 } // namespace pars
+
+#endif // PARS_NET_HASH_H

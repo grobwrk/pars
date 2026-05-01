@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef CLEV_VALUE_H
+#define CLEV_VALUE_H
 
 #include "clev/iface.h"
 
@@ -78,3 +79,5 @@ protected:
 static_assert(std::copyable<clev::value<int>>);
 
 static_assert(std::copyable<clev::value<int*>>);
+
+#endif // CLEV_VALUE_H

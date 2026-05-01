@@ -25,5 +25,6 @@ Core
 
 .. doxygenenum:: pars::net::dir
 
-.. doxygenfunction:: pars::hash_from_uuid
-.. doxygenfunction:: pars::hash_from_msg
+.. doxygenfunction:: pars::net::hash_from_uuid
+
+.. doxygenfunction:: pars::net::hash_from_msg

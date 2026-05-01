@@ -1,5 +1,9 @@
 #include "pars/log/flags.h"
 
+#include <spdlog/common.h>
+
+#include <string_view>
+
 constexpr auto pars_build_type_v = "${BUILD_TYPE}";
 
 constexpr auto pars_log_enabled =

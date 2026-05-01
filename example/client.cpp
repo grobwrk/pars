@@ -27,13 +27,38 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
+
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/client.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/init.h>
+#include <pars/log.h>
+#include <pars/net/socket.h>
+
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <exception>
+#include <format>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <utility>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the client component as an single application (req)
 class client : public app::single<comp::client>
@@ -52,13 +77,13 @@ private:
   /// @name Input Parameters
 
   component_type::connect_p connect_p;
-  std::size_t work_id = 0;
-  bool fast_fib = false;
-  uint64_t n = 0;
+  std::size_t work_id{0};
+  bool fast_fib{false};
+  uint64_t n{0};
 
   /// @name App State
 
-  app::state_machine<client_state> state = {client_state::creating};
+  app::state_machine<client_state> state{client_state::creating};
 
   /// @name Constructors
 
@@ -147,14 +172,14 @@ private:
 
     auto [ev, md] = fired.as_tuple();
 
-    auto out_ev = fib_requested{work_id, n, fast_fib};
-
-    // use the default context on the sock to send the event
-    comp().req().sock().send(out_ev, md.pipe());
-
-    ts.commit();
+    auto out_ev = fib_requested::make(work_id, n, fast_fib);
 
     pars::info(SL, "Fired {}, Sent {}!", ev, out_ev);
+
+    // use the default context on the sock to send the event
+    comp().req().sock().send(std::move(out_ev), md.pipe());
+
+    ts.commit();
   }
 
   void recv_answer(hf_arg<sent, fib_requested> sent)
@@ -183,8 +208,8 @@ private:
 
     pars::info(SL, "Received {}, Application Terminated!", ev);
 
-    std::cout << "WORK(" << ev.work_id << ") FIB(" << n << ") = " << ev.fib_n
-              << "\n";
+    std::cout << "WORK(" << ev.table()->work_id() << ") FIB(" << n
+              << ") = " << ev.table()->fib_n() << "\n";
   }
 
   void terminate(hf_arg<fired, exception> fired)

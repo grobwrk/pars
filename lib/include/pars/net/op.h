@@ -27,23 +27,33 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_OP_H
+#define PARS_NET_OP_H
+
+#include "pars/concept/event.h"
+#include "pars/concept/net.h"
+#include "pars/ev/enqueuer.h"
+#include "pars/ev/event.h"
+#include "pars/ev/serializer.h"
+#include "pars/fmt/helpers.h"
+#include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/net/dir.h"
+#include "pars/net/pipe.h"
+
+#include "clev/err.h"
 
 #include "nngxx/aio.h"
 #include "nngxx/err.h"
 #include "nngxx/msg.h"
 #include "nngxx/pipe.h"
 
-#include "pars/ev/enqueuer.h"
-#include "pars/ev/event.h"
-#include "pars/ev/serializer.h"
-#include "pars/fmt/helpers.h"
-#include "pars/net/dir.h"
-
+#include <nng/nng.h>
 #include <spdlog/spdlog.h>
 
-#include <expected>
 #include <functional>
+#include <system_error>
+#include <utility>
 
 namespace pars::net
 {
@@ -72,7 +82,8 @@ public:
     pars::debug(SL, lf::net, "{}: Send Message [{}]!", f::pntl{p, t}, m);
 
     // replace the callback with the new one
-    cb_m = [&, p](clev::expected<void> res, nngxx::msg m) mutable {
+    cb_m = [&, ev = std::move(ev), p](clev::expected<void> res,
+                                      nngxx::msg m) mutable {
       if (res)
       {
         // NOTE: m is empty on success
@@ -90,7 +101,7 @@ public:
         pars::err(SL, lf::net, "{}: Error Sending {}! [msg:{},err:{}]",
                   f::pntl{pv, t}, nametype(ev), m, res.error());
 
-        r.queue_fire(ev::network_error{res.error(), dir::out}, t.socket_id(), t,
+        r.fire(ev::network_error{res.error(), dir::out}, t.socket_id(), t,
                      pv);
       }
     };
@@ -130,7 +141,7 @@ public:
         pars::err(SL, lf::net, "{}: Error Receiving! [{}]", f::pntl{pv, t},
                   res.error());
 
-        r.queue_fire(ev::network_error{res.error(), dir::in}, t.socket_id(), t,
+        r.fire(ev::network_error{res.error(), dir::in}, t.socket_id(), t,
                      pv);
       }
     };
@@ -287,3 +298,5 @@ private:
 };
 
 } // namespace pars::net
+
+#endif // PARS_NET_OP_H

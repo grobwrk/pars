@@ -27,13 +27,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_STATEMACHINE_H
+#define PARS_APP_STATEMACHINE_H
 
 #include "pars/log.h"
+#include "pars/log/flags.h"
 
 #include <format>
+#include <initializer_list>
 #include <optional>
 #include <stdexcept>
+#include <string>
+#include <string_view>
 
 namespace pars::app
 {
@@ -88,16 +93,16 @@ struct state_machine
   {
   }
 
-  void ensure(std::initializer_list<state_type> expected)
+  void ensure(std::initializer_list<state_type> states)
   {
-    for (const auto& e : expected)
+    for (const auto& e : states)
       if (e == state_m)
         return;
 
     std::string states_str;
 
-    for (const auto& e : expected)
-      if (e != *expected.end())
+    for (const auto& e : states)
+      if (e != *states.end())
         states_str += std::format("{},", e);
       else
         states_str += std::format("{}", e);
@@ -185,3 +190,5 @@ private:
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_STATEMACHINE_H

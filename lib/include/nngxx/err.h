@@ -27,13 +27,17 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_ERR_H
+#define NNGXX_ERR_H
 
 #include "clev/err.h"
 
 #include <nng/nng.h>
 
-#include <expected>
+#include <concepts>
+#include <string>
+#include <system_error>
+#include <type_traits>
 
 namespace nngxx
 {
@@ -140,3 +144,5 @@ template<typename... args_t>
 static_assert(std::convertible_to<nngxx::err, std::error_code>);
 
 static_assert(std::constructible_from<std::error_code, nngxx::err>);
+
+#endif // NNGXX_ERR_H

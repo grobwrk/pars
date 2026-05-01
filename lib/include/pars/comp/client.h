@@ -27,10 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_COMP_CLIENT_H
+#define PARS_COMP_CLIENT_H
 
 #include "pars/ev/enqueuer.h"
+#include "pars/ev/hf_registry.h"
 #include "pars/net/req.h"
+#include "pars/net/socket.h"
 #include "pars/net/socket_opt.h"
 
 namespace pars::comp
@@ -55,8 +58,8 @@ public:
 
   struct connect_p
   {
-    net::cmode service_cmode = net::cmode::dial; ///< connect mode for req
-    char* service_addr = nullptr;                ///< connect addr for req
+    net::cmode service_cmode{net::cmode::dial}; ///< connect mode for req
+    char* service_addr{nullptr};                ///< connect addr for req
   };
 
   void connect(const connect_p& params)
@@ -71,3 +74,5 @@ private:
 };
 
 } // namespace pars::comp
+
+#endif // PARS_COMP_CLIENT_H

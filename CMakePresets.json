@@ -6,7 +6,6 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_OVERLAY_TRIPLETS": "$env{VCPKG_ROOT}/../my-vcpkg-triplets",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "On"
       }
     },
@@ -28,13 +27,7 @@
       "inherits": "windows-base",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "cl.exe",
-        "CMAKE_CXX_COMPILER": "cl.exe"
-      },
-      "condition": {
-        "type": "matches",
-        "string": "$env{VSCMD_VER}",
-        "regex": ".+"
+        "VCPKG_TARGET_TRIPLET": "x64-windows"
       }
     },
     {
@@ -42,14 +35,7 @@
       "inherits": "windows-base",
       "hidden": true,
       "cacheVariables": {
-        "VCPKG_TARGET_TRIPLET": "x64-win-llvm",
-        "CMAKE_C_COMPILER": "clang.exe",
-        "CMAKE_CXX_COMPILER": "clang++.exe"
-      },
-      "condition": {
-        "type": "notMatches",
-        "string": "$env{VSCMD_VER}",
-        "regex": ".+"
+        "VCPKG_TARGET_TRIPLET": "x64-win-llvm"
       }
     },
     {

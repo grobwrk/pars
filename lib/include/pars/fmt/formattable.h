@@ -27,11 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_FMT_FORMATTABLE_H
+#define PARS_FMT_FORMATTABLE_H
 
 #include "pars/concept/formattable.h"
 
 #include <format>
+#include <string>
 
 template<formattable_c foarmattable_t>
 struct std::formatter<foarmattable_t> : std::formatter<std::string>
@@ -42,3 +44,5 @@ struct std::formatter<foarmattable_t> : std::formatter<std::string>
     return x.format_to(ctx);
   }
 };
+
+#endif // PARS_FMT_FORMATTABLE_H

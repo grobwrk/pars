@@ -27,17 +27,20 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_CONTEXTREGISTRY_H
+#define PARS_NET_CONTEXTREGISTRY_H
 
-#include "nngxx/ctx.h"
-
+#include "pars/ev/enqueuer.h"
 #include "pars/net/context.h"
 #include "pars/net/socket.h"
 #include "pars/net/tool_view.h"
 
+#include "nngxx/ctx.h"
+
 #include <format>
-#include <tuple>
+#include <stdexcept>
 #include <unordered_map>
+#include <utility>
 
 namespace pars::net
 {
@@ -45,8 +48,8 @@ namespace pars::net
 class context_registry
 {
 public:
-  context_registry(ev::enqueuer& r, net::socket& s)
-    : router_m{r}
+  context_registry(ev::enqueuer& e, net::socket& s)
+    : enqueuer_m{e}
     , sock_m{s}
   {
   }
@@ -63,7 +66,7 @@ public:
 
     auto id = ctx.id();
 
-    auto res = ctx_map_m.try_emplace(id, router_m, std::move(ctx), sock_m);
+    auto res = ctx_map_m.try_emplace(id, enqueuer_m, std::move(ctx), sock_m);
 
     if (!res.second)
       throw std::runtime_error("Unable to emplace a context");
@@ -89,9 +92,11 @@ public:
   }
 
 private:
-  ev::enqueuer& router_m;
+  ev::enqueuer& enqueuer_m;
   socket& sock_m;
   std::unordered_map<int, context> ctx_map_m;
 };
 
 } // namespace pars::net
+
+#endif // PARS_NET_CONTEXTREGISTRY_H

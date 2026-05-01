@@ -27,18 +27,21 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_EVENT_H
+#define PARS_EV_EVENT_H
 
 #include "pars/ev/klass.h"
-#include "pars/fmt/stl.h"
+#include "pars/fmt/stl.h" // IWYU pragma: keep
 #include "pars/net/dir.h"
 
 #include "clev/err.h"
 
-#include <cereal/types/vector.hpp>
-
 #include <chrono>
+#include <exception>
 #include <format>
+#include <string>
+#include <string_view>
+#include <system_error>
 
 namespace pars::ev
 {
@@ -168,11 +171,11 @@ struct klass<init> : base_klass<init>
   static constexpr bool requires_network = false;
 };
 
-struct shutdown
+struct deinit
 {
   auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "shutdown({})", creation_time);
+    return std::format_to(ctx.out(), "deinit({})", creation_time);
   }
 
 private:
@@ -181,7 +184,7 @@ private:
 };
 
 template<>
-struct klass<shutdown> : base_klass<shutdown>
+struct klass<deinit> : base_klass<deinit>
 {
   static constexpr std::string_view uuid =
     "47c543bb-ba37-4442-a5bd-4b2dcfbf1e02";
@@ -190,3 +193,7 @@ struct klass<shutdown> : base_klass<shutdown>
 };
 
 } // namespace pars::ev
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_EV_EVENT_H

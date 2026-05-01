@@ -27,13 +27,17 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_KLASS_H
+#define PARS_EV_KLASS_H
 
-#include "nngxx/msg.h"
-
+#include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/net/hash.h"
 
+#include "nngxx/msg.h"
+
+#include <cstddef>
+#include <memory>
 #include <string_view>
 
 namespace pars::ev
@@ -44,7 +48,7 @@ struct uuid
 {
   using class_type = class_t;
 
-  static constexpr std::size_t hash = hash_from_uuid(class_type::uuid);
+  static constexpr std::size_t hash = net::hash_from_uuid(class_type::uuid);
 };
 
 template<typename event_t>
@@ -105,3 +109,5 @@ struct klass<std::shared_ptr<event_t>> : base_klass<event_t>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_KLASS_H

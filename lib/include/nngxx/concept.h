@@ -27,11 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_CONCEPT_H
+#define NNGXX_CONCEPT_H
 
 #include <nng/nng.h>
 
 #include <concepts>
+#include <cstdint>
 
 namespace nngxx
 {
@@ -70,3 +72,5 @@ concept move_only_assignable_c =
 template<typename value_t>
 concept movable_only_c = std::movable<value_t> && !std::copyable<value_t>;
 } // namespace nngxx
+
+#endif // NNGXX_CONCEPT_H

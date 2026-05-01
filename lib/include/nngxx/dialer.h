@@ -27,9 +27,20 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef NNGXX_DIALER_H
+#define NNGXX_DIALER_H
 
+#include "nngxx/concept.h"
 #include "nngxx/iface/dialer.h"
+#include "nngxx/socket_decl.h"
+
+#include "clev/err.h"
+#include "clev/own.h"
+
+#include <nng/nng.h>
+
+#include <concepts>
+#include <utility>
 
 namespace nngxx
 {
@@ -51,3 +62,5 @@ make_dialer(socket_view& s, const char* addr) noexcept
 static_assert(std::copyable<nngxx::dialer_view>);
 
 static_assert(nngxx::movable_only_c<nngxx::dialer>);
+
+#endif // NNGXX_DIALER_H

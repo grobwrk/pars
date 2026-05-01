@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_KINDBASE_H
+#define PARS_EV_KINDBASE_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
@@ -53,10 +54,7 @@ struct common_kind
 
   metadata_type& md() { return metadata_m; }
 
-  std::tuple<const event_type&, metadata_type&> as_tuple()
-  {
-    return std::forward_as_tuple(event_m, metadata_m);
-  }
+  auto as_tuple() { return std::forward_as_tuple(event_m, metadata_m); }
 
   common_kind(event_type e, metadata_type md)
     : event_m{std::move(e)}
@@ -106,3 +104,5 @@ struct base_kind<kind_of, event_t> : common_kind<kind_of, event_t>
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_KINDBASE_H

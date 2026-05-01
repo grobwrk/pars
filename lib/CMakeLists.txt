@@ -1,6 +1,7 @@
 find_package (Threads REQUIRED)
 find_package (nng CONFIG REQUIRED)
 find_package (spdlog CONFIG REQUIRED)
+find_package (flatbuffers CONFIG REQUIRED)
 
 # sorted please
 set (PARS_HEADERS
@@ -55,10 +56,10 @@ set (PARS_HEADERS
     "include/pars/net/socket.h"
     "include/pars/net/socket_opt.h"
     "include/pars/net/tool_view.h"
+    "include/pars/net2/connect_mode.h"
     "include/pars/err.h"
     "include/pars/init.h"
     "include/pars/log.h"
-    "include/pars/pars.h"
     "include/nngxx/iface/aio.h"
     "include/nngxx/iface/ctx.h"
     "include/nngxx/iface/dialer.h"
@@ -99,6 +100,7 @@ target_link_libraries (
     INTERFACE
     nng::nng
     spdlog::spdlog
+    flatbuffers::flatbuffers
 )
 
 target_include_directories (

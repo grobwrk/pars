@@ -27,12 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_KIND_H
+#define PARS_EV_KIND_H
 
+#include "pars/concept/event.h"
 #include "pars/ev/kind_base.h"
 #include "pars/ev/kind_decl.h"
-#include "pars/ev/klass.h"
+#include "pars/ev/klass.h" // IWYU pragma: keep
+#include "pars/ev/metadata.h"
+#include "pars/net/hash.h"
 
+#include "nngxx/msg.h"
+
+#include <cstddef>
 #include <string_view>
 
 namespace pars::ev
@@ -78,9 +85,9 @@ struct received<nngxx::msg> : base_kind<received, nngxx::msg>
 
   std::size_t msg_hash() const
   {
-    auto h1 = hash_from_uuid(uuid);
+    auto h1 = net::hash_from_uuid(uuid);
 
-    auto h2 = hash_from_msg(event());
+    auto h2 = net::hash_from_msg(event());
 
     return h1 ^ (h2 << 1);
   }
@@ -101,3 +108,5 @@ template<typename event_t>
 fired(event_t, metadata<fired, event_t>) -> fired<event_t>;
 
 } // namespace pars::ev
+
+#endif // PARS_EV_KIND_H
