@@ -31,11 +31,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PARS_NET_HASH_H
 
 #include "pars/net/msg.h"
+#include "pars/fmt.h"
 
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
-#include <format>
 #include <stdexcept>
 #include <string_view>
 
@@ -54,7 +54,7 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   {
     if (uuid[i] != '-')
       throw std::runtime_error(
-        std::format("Invalid UUID [missing separator {}]", i));
+        pars::format("Invalid UUID [missing separator {}]", i));
   }
 
   std::uint64_t result{0xcbf29ce484222325};

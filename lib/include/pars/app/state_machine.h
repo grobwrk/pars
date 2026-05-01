@@ -32,8 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/log.h"
 #include "pars/log/flags.h"
+#include "pars/fmt.h"
 
-#include <format>
 #include <initializer_list>
 #include <optional>
 #include <stdexcept>
@@ -103,12 +103,12 @@ struct state_machine
 
     for (const auto& e : states)
       if (e != *states.end())
-        states_str += std::format("{},", e);
+        states_str += pars::format("{},", e);
       else
-        states_str += std::format("{}", e);
+        states_str += pars::format("{}", e);
 
     throw std::runtime_error(
-      std::format("Wrong State {} [must be in \"{}\"]", state_m,
+      pars::format("Wrong State {} [must be in \"{}\"]", state_m,
                   std::string_view{states_str.begin(), states_str.end() - 1}));
   }
 
@@ -116,7 +116,7 @@ struct state_machine
   {
     if (state_m != s)
       throw std::runtime_error(
-        std::format("Wrong State \"{}\" [must be \"{}\"]", state_m, s));
+        pars::format("Wrong State \"{}\" [must be \"{}\"]", state_m, s));
   }
 
   void next(state_type s)

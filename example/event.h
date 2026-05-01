@@ -40,10 +40,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <pars/ev/kind_decl.h>
 #include <pars/ev/klass.h>
 #include <pars/ev/serializer.h>
+#include <pars/fmt.h>
 
 #include <cstddef>
 #include <cstdint>
-#include <format>
 #include <string_view>
 
 namespace pars_example::event
@@ -61,11 +61,11 @@ struct fib_requested : pars::ev::fb<FibRequestedBuilder, fib_requested>
       .build();
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
     auto t = table();
 
-    return std::format_to(ctx.out(), "fib_requested({},{},{})", t->work_id(),
+    return pars::format_to(ctx.out(), "fib_requested({},{},{})", t->work_id(),
                           t->n(), t->use_fast_fib() ? "fast_fib" : "slow_fib");
   }
 };
@@ -81,11 +81,11 @@ struct fib_computed : pars::ev::fb<FibComputedBuilder, fib_computed>
       .build();
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
     auto t = table();
 
-    return std::format_to(ctx.out(), "fib_computed({},{})", t->work_id(),
+    return pars::format_to(ctx.out(), "fib_computed({},{})", t->work_id(),
                           t->fib_n());
   }
 };
@@ -99,9 +99,9 @@ struct stop_compute : pars::ev::fb<StopComputeBuilder, stop_compute>
       .build();
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "stop_compute({})", table()->pipe_id());
+    return pars::format_to(ctx.out(), "stop_compute({})", table()->pipe_id());
   }
 };
 

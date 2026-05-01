@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PARS_NET_MSG_H
 
 #include "pars/net/asio.h"
-#include <format>
+#include "pars/fmt.h"
 
 namespace pars::net
 {
@@ -46,9 +46,9 @@ struct msg
 
   auto size() const { return buf_m.size(); }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "net::msg");
+    return pars::format_to(ctx.out(), "net::msg({})", size());
   }
 
 private:

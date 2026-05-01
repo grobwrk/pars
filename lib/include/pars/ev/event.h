@@ -34,10 +34,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/fmt/stl.h" // IWYU pragma: keep
 #include "pars/net/asio.h"
 #include "pars/net/direction.h"
+#include "pars/fmt.h"
 
 #include <chrono>
 #include <exception>
-#include <format>
 #include <string>
 #include <string_view>
 #include <system_error>
@@ -47,9 +47,9 @@ namespace pars::ev
 
 struct creating_pipe
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "creating_pipe()");
+    return pars::format_to(ctx.out(), "creating_pipe()");
   }
 };
 
@@ -62,9 +62,9 @@ struct klass<creating_pipe> : base_klass<creating_pipe>
 
 struct pipe_created
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "pipe_created()");
+    return pars::format_to(ctx.out(), "pipe_created()");
   }
 };
 
@@ -77,9 +77,9 @@ struct klass<pipe_created> : base_klass<pipe_created>
 
 struct pipe_removed
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "pipe_removed()");
+    return pars::format_to(ctx.out(), "pipe_removed()");
   }
 };
 
@@ -95,9 +95,9 @@ struct network_error
   std::error_code error;
   net::direction dir;
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "network_error({}, {})", error,
+    return pars::format_to(ctx.out(), "network_error({}, {})", error,
                           (dir == net::direction::out ? "out" : "in"));
   }
 };
@@ -121,7 +121,7 @@ struct exception
     }
     catch (std::exception& e)
     {
-      return std::format("{}", e.what());
+      return pars::format("{}", e.what());
     }
     catch (...)
     {
@@ -130,9 +130,9 @@ struct exception
     return "<empty-exception>";
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "{}", str());
+    return pars::format_to(ctx.out(), "{}", str());
   }
 };
 
@@ -147,9 +147,9 @@ struct klass<exception> : base_klass<exception>
 
 struct init
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "init({})", creation_time);
+    return pars::format_to(ctx.out(), "init({})", creation_time);
   }
 
 private:
@@ -168,9 +168,9 @@ struct klass<init> : base_klass<init>
 
 struct deinit
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "deinit({})", creation_time);
+    return pars::format_to(ctx.out(), "deinit({})", creation_time);
   }
 
 private:
@@ -192,9 +192,9 @@ struct resolved
 {
   net::asio::basic_resolver_results<ip_t> results;
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "resolved(...)");
+    return pars::format_to(ctx.out(), "resolved({})", results);
   }
 };
 

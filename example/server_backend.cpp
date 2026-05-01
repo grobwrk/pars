@@ -39,10 +39,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <pars/ev/event.h>
 #include <pars/ev/kind_decl.h>
 #include <pars/ev/make_hf.h>
-#include <pars/init.h>
 #include <pars/log.h>
 #include <pars/net/connect_mode.h>
 #include <pars/net/resolver.h>
+#include <pars/fmt.h>
 
 #include <spdlog/spdlog.h>
 
@@ -51,7 +51,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <cstdint>
 #include <cstdlib>
 #include <exception>
-#include <format>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -392,7 +391,9 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << std::format("Error: {}", e.what()) << "\n";
+  std::cout << pars::format("Error: {}", e.what())
+            << "Usage: ./server_backend endpoint_url [max_served [max_allowed]]"
+            << "\n";
 
     return EXIT_FAILURE;
   }

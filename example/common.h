@@ -32,8 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 constexpr auto enable_compute_fib_async = true;
 
 #include <pars/app/state_machine.h>
+#include <pars/fmt.h>
 
-#include <format>
 #include <string>
 
 namespace pars_example::resource
@@ -84,11 +84,8 @@ struct pipe_resource
 
 } // namespace pars_example::resource
 
-namespace std
-{
-
 template<>
-struct formatter<::pars_example::resource::client_state> : formatter<string>
+struct pars::formatter<::pars_example::resource::client_state> : formatter<std::string>
 {
   using client_state = ::pars_example::resource::client_state;
 
@@ -137,7 +134,8 @@ struct formatter<::pars_example::resource::client_state> : formatter<string>
 };
 
 template<>
-struct formatter<::pars_example::resource::server_state> : formatter<string>
+struct pars::formatter<::pars_example::resource::server_state>
+  : formatter<std::string>
 {
   using server_state = ::pars_example::resource::server_state;
 
@@ -174,7 +172,7 @@ struct formatter<::pars_example::resource::server_state> : formatter<string>
 };
 
 template<>
-struct formatter<::pars_example::resource::pipe_state> : formatter<string>
+struct pars::formatter<::pars_example::resource::pipe_state> : formatter<std::string>
 {
   using pipe_state = ::pars_example::resource::pipe_state;
 
@@ -205,5 +203,3 @@ struct formatter<::pars_example::resource::pipe_state> : formatter<string>
     }
   }
 };
-
-} // namespace std

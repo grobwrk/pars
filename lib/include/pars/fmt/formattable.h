@@ -31,13 +31,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PARS_FMT_FORMATTABLE_H
 
 #include "pars/concept/formattable.h"
+#include "pars/fmt.h"
 
-#include <format>
 #include <memory>
 #include <string>
 
 template<formattable_c foarmattable_t>
-struct std::formatter<foarmattable_t> : std::formatter<std::string>
+struct pars::formatter<foarmattable_t> : pars::formatter<std::string>
 {
   auto format(const foarmattable_t& x, format_context& ctx) const
     -> decltype(ctx.out())
@@ -47,8 +47,8 @@ struct std::formatter<foarmattable_t> : std::formatter<std::string>
 };
 
 template<formattable_c foarmattable_t>
-struct std::formatter<std::unique_ptr<foarmattable_t>>
-  : std::formatter<std::string>
+struct pars::formatter<std::unique_ptr<foarmattable_t>>
+  : pars::formatter<std::string>
 {
   auto format(const std::unique_ptr<foarmattable_t>& x,
               format_context& ctx) const -> decltype(ctx.out())
@@ -58,8 +58,8 @@ struct std::formatter<std::unique_ptr<foarmattable_t>>
 };
 
 template<formattable_c foarmattable_t>
-struct std::formatter<std::shared_ptr<foarmattable_t>>
-  : std::formatter<std::string>
+struct pars::formatter<std::shared_ptr<foarmattable_t>>
+  : pars::formatter<std::string>
 {
   auto format(const std::shared_ptr<foarmattable_t>& x,
               format_context& ctx) const -> decltype(ctx.out())

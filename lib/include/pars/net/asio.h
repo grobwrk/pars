@@ -37,6 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <asio/executor_work_guard.hpp>
 #include <asio/io_context.hpp>
 #include <asio/ip/address.hpp>
+#include <asio/ip/basic_resolver_entry.hpp>
 #include <asio/ip/basic_resolver_results.hpp>
 #include <asio/ip/tcp.hpp>
 #include <asio/ip/udp.hpp>
@@ -62,23 +63,85 @@ using ::asio::ip::tcp;
 
 using ::asio::ip::udp;
 
+using ::asio::ip::basic_resolver_entry;
+
 using ::asio::ip::basic_resolver_results;
 
 using ::asio::detail::socket_type;
 
 } // namespace pars::net::asio
 
-#include <format>
+#include "pars/fmt.h"
+
 #include <string>
 
 template<>
-struct std::formatter<pars::net::asio::tcp::endpoint>
-  : std::formatter<std::string>
+struct pars::formatter<pars::net::asio::tcp> : formatter<std::string>
+{
+  auto format(const pars::net::asio::tcp& x, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
+    switch (x.family())
+    {
+    case ASIO_OS_DEF_AF_INET:
+      return format_to(ctx.out(), "tcp4");
+
+    case ASIO_OS_DEF_AF_INET6:
+      return format_to(ctx.out(), "tcp6");
+
+    default:
+      return format_to(ctx.out(), "unknown");
+    }
+  }
+};
+
+template<>
+struct pars::formatter<pars::net::asio::address> : formatter<std::string>
+{
+  auto format(const pars::net::asio::address& x, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
+    return pars::format_to(ctx.out(), "{}", x.to_string());
+  }
+};
+
+template<>
+struct pars::formatter<pars::net::asio::tcp::endpoint>
+  : formatter<std::string>
 {
   auto format(const pars::net::asio::tcp::endpoint& x,
               format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "tcp::endpoint");
+    return format_to(ctx.out(), "{}://{}:{}", x.protocol(), x.address(),
+                          x.port());
+  }
+};
+
+template<typename ip_t>
+struct pars::formatter<pars::net::asio::basic_resolver_entry<ip_t>>
+  : formatter<std::string>
+{
+  auto format(const pars::net::asio::basic_resolver_entry<ip_t>& x,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    return format_to(ctx.out(), "{}", x.endpoint());
+  }
+};
+
+template<typename ip_t>
+struct pars::formatter<pars::net::asio::basic_resolver_results<ip_t>>
+  : formatter<std::string>
+{
+  auto format(const pars::net::asio::basic_resolver_results<ip_t>& xs,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    format_to(ctx.out(), "{}, ", xs.size());
+
+    for (auto it = xs.begin(); it != xs.end(); ++it)
+      format_to(ctx.out(), "{}{}", *it,
+                     std::next(it) == xs.end() ? "" : ", ");
+
+    return ctx.out();
   }
 };
 

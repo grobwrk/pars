@@ -50,6 +50,7 @@ set (PARS_HEADERS
     "include/pars/net/point.h"
     "include/pars/net/resolver.h"
     "include/pars/err.h"
+    "include/pars/fmt.h"
     "include/pars/init.h"
     "include/pars/log.h"
 )

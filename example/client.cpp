@@ -42,12 +42,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <pars/net/asio.h>
 #include <pars/net/connect_mode.h>
 #include <pars/net/resolver.h>
+#include <pars/fmt.h>
 
 #include <cstddef>
 #include <cstdint>
 #include <cstdlib>
 #include <exception>
-#include <format>
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -246,7 +246,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << std::format("ERROR: {}", ev) << std::endl;
+    std::cout << pars::format("ERROR: {}", ev) << std::endl;
   }
 
   void terminate(hf_arg<fired, network_error> fired)
@@ -262,7 +262,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << std::format("ERROR: {}", ev.error) << std::endl;
+    std::cout << pars::format("ERROR: {}", ev.error) << std::endl;
   }
 
   void terminate(hf_arg<fired, pipe_removed> fired)
@@ -276,7 +276,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!",
                fired.event(), state.current());
 
-    std::cout << std::format("Client Disconnected!") << std::endl;
+    std::cout << pars::format("Client Disconnected!") << std::endl;
   }
 };
 
@@ -292,7 +292,7 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << std::format("Error: {}", e.what()) << "\n";
+  std::cout << pars::format("Error: {}", e.what()) << "\n";
 
     return EXIT_FAILURE;
   }

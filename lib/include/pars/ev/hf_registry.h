@@ -37,9 +37,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/spec.h"
 #include "pars/log.h"
 #include "pars/log/flags.h"
+#include "pars/fmt.h"
 
 #include <cstddef>
-#include <format>
 #include <functional>
 #include <mutex>
 #include <stdexcept>
@@ -126,7 +126,7 @@ private:
     auto spec_hash = spec<kind_of<event_t>>::hash;
 
     if (!handlers_m[p_id].try_emplace(spec_hash, std::move(hf)).second)
-      throw std::runtime_error(std::format(
+      throw std::runtime_error(pars::format(
         "Unable to emplace the handler_f for Point #{} and Spec {:X}", p_id,
         spec_hash));
 

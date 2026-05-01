@@ -41,7 +41,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <string>
 
 template<>
-struct std::formatter<nngxx::msg> : formatter<std::string>
+struct pars::formatter<nngxx::msg> : formatter<std::string>
 {
   auto format(const nngxx::msg& m, format_context& ctx) const
     -> decltype(ctx.out())
@@ -66,7 +66,7 @@ struct std::formatter<nngxx::msg> : formatter<std::string>
 };
 
 template<>
-struct std::formatter<nngxx::pipe_view> : formatter<std::string>
+struct pars::formatter<nngxx::pipe_view> : formatter<std::string>
 {
   auto format(const nngxx::pipe_view& p, std::format_context& ctx) const
     -> decltype(ctx.out())

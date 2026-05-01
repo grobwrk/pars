@@ -47,12 +47,12 @@ enum class dir
 }
 
 template<>
-struct std::formatter<::pars::net::dir> : std::formatter<std::string>
+struct pars::formatter<::pars::net::dir> : formatter<std::string>
 {
-  auto format(const ::pars::net::dir& d, std::format_context& ctx) const
+  auto format(const ::pars::net::dir& d, format_context& ctx) const
     -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "{}",
+    return format_to(ctx.out(), "{}",
                           d == ::pars::net::dir::in ? "receiving" : "sending");
   }
 };

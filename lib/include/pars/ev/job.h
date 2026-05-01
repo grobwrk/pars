@@ -38,10 +38,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/serializer.h"
 #include "pars/ev/spec.h"
 #include "pars/net/msg.h"
+#include "pars/fmt.h"
 
 #include <any>
 #include <cstddef>
-#include <format>
 #include <type_traits>
 #include <utility>
 
@@ -96,9 +96,9 @@ public:
 
   std::size_t spec_hash() const { return spec_hash_m; }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "spec:0x{:X}", spec_hash());
+    return pars::format_to(ctx.out(), "spec:0x{:X}", spec_hash());
   }
 
   void set_id(std::size_t id) { id_m = id; }

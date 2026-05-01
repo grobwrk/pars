@@ -30,9 +30,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef PARS_NET_DIR_H
 #define PARS_NET_DIR_H
 
-#include "pars/init.h" // IWYU pragma: keep
+#include "pars/fmt.h"
 
-#include <format>
 #include <string>
 
 namespace pars::net
@@ -40,20 +39,24 @@ namespace pars::net
 
 enum class direction
 {
+  none,
   out,
   in
 };
 }
 
 template<>
-struct std::formatter<::pars::net::direction> : std::formatter<std::string>
+struct pars::formatter<::pars::net::direction> : formatter<std::string>
 {
-  auto format(const ::pars::net::direction& d, std::format_context& ctx) const
+  using dir = ::pars::net::direction;
+
+  auto format(const dir& d, format_context& ctx) const
     -> decltype(ctx.out())
   {
-    return std::format_to(
-      ctx.out(), "{}",
-      d == ::pars::net::direction::in ? "receiving" : "sending");
+    return format_to(ctx.out(), "{}",
+                          d == dir::in    ? "receiving"
+                          : d == dir::out ? "sending"
+                                          : "none");
   }
 };
 

@@ -30,13 +30,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef PARS_CONCEPT_FORMATTABLE_H
 #define PARS_CONCEPT_FORMATTABLE_H
 
-#include "pars/init.h" // IWYU pragma: keep
+#include "pars/fmt.h"
 
 #include <concepts>
-#include <format>
 
 template<typename value_t>
-concept formattable_c = requires(const value_t& x, std::format_context& ctx) {
+concept formattable_c = requires(const value_t& x, pars::format_context& ctx) {
   { x.format_to(ctx) } -> std::same_as<decltype(ctx.out())>;
 };
 

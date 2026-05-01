@@ -32,9 +32,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pars/ev/klass.h"
 #include "pars/log/nametype.h"
+#include "pars/fmt.h"
 
 #include <cstddef>
-#include <format>
 
 namespace pars::ev
 {
@@ -53,9 +53,9 @@ public:
   static constexpr std::size_t hash =
     uuid<kind_type<event_type>>::hash ^ (uuid<klass<event_type>>::hash << 1);
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(
+    return pars::format_to(
       ctx.out(), "{} \x1b[90m[hash:{:X}, kind:{}({:X}), event:{}({:X})]\x1b[0m",
       nametype<kind_type<event_type>>(), hash, kind_type<event_type>::uuid,
       uuid<kind_type<event_type>>::hash, klass<event_type>::uuid,

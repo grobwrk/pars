@@ -31,9 +31,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PARS_NET_PIPE_H
 
 #include "pars/net/asio.h"
+#include "pars/fmt.h"
 
 #include <cstdint>
-#include <format>
 #include <functional>
 #include <memory>
 #include <system_error>
@@ -68,9 +68,9 @@ struct pipe
       const_cast<asio::tcp::socket&>(socket_m).native_handle()});
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "Pipe #{}-{:X}", id(), socket_id());
+    return pars::format_to(ctx.out(), "Pipe #{}-{:X}", id(), socket_id());
   }
 
 private:

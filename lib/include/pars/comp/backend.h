@@ -34,8 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/net/io.h"
 #include "pars/net/point.h"
-
-#include <format>
+#include "pars/fmt.h"
 
 namespace pars::comp
 {
@@ -58,9 +57,9 @@ public:
 
   net::point& rep() { return rep_m; }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "comp::backend");
+    return pars::format_to(ctx.out(), "comp::backend");
   }
 
 private:

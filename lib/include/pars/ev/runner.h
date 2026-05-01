@@ -42,12 +42,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/log/demangle.h"
 #include "pars/log/flags.h"
 #include "pars/net/pipe.h"
+#include "pars/fmt.h"
 
 #include <atomic>
 #include <chrono>
 #include <cstddef>
 #include <exception>
-#include <format>
 #include <functional>
 #include <future>
 #include <mutex>
@@ -196,7 +196,7 @@ public:
   void associate_job_to_pipe(const int j_id, const int pipe_id)
   {
     if (j_id <= 0)
-      throw std::runtime_error(std::format("Job #{}: invalid Job!", pipe_id));
+      throw std::runtime_error(pars::format("Job #{}: invalid Job!", pipe_id));
 
     if (pipe_id <= 0)
       return;

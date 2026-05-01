@@ -31,10 +31,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PARS_FMT_STL_H
 
 #include "pars/concept/event.h"
+#include "pars/fmt.h"
 
 #include <chrono>
 #include <ctime>
-#include <format>
 #include <iomanip>
 #include <memory>
 #include <sstream>
@@ -42,41 +42,43 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <system_error>
 
 template<>
-struct std::formatter<std::chrono::system_clock::time_point>
-  : std::formatter<std::string>
+struct pars::formatter<std::chrono::system_clock::time_point>
+  : pars::formatter<std::string>
 {
   auto format(const std::chrono::system_clock::time_point& t,
-              std::format_context& ctx) const -> decltype(ctx.out())
+              pars::format_context& ctx) const -> decltype(ctx.out())
   {
     auto t2 = std::chrono::system_clock::to_time_t(t);
 
     std::ostringstream oss;
     oss << std::put_time(std::localtime(&t2), "%F %T");
 
-    return std::format_to(ctx.out(), "{}", oss.str());
+    return pars::format_to(ctx.out(), "{}", oss.str());
   }
 };
 
 template<>
-struct std::formatter<std::error_code> : std::formatter<std::string>
+struct pars::formatter<std::error_code> : pars::formatter<std::string>
 {
-  auto format(const std::error_code& e, std::format_context& ctx) const
+  auto format(const std::error_code& e, pars::format_context& ctx) const
     -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "{}", e.message());
+    return pars::format_to(ctx.out(), "{} [{}]", e.message(),
+                          e.category().name());
   }
 };
 
 template<pars::ev::event_c event_t>
-struct std::formatter<std::shared_ptr<event_t>> : std::formatter<std::string>
+struct pars::formatter<std::shared_ptr<event_t>> : pars::formatter<std::string>
 {
-  auto format(const std::shared_ptr<event_t>& x, std::format_context& ctx) const
+  auto format(const std::shared_ptr<event_t>& x,
+              pars::format_context& ctx) const
     -> decltype(ctx.out())
   {
     if (x)
-      return std::format_to(ctx.out(), "{}", *x);
+      return pars::format_to(ctx.out(), "{}", *x);
     else
-      return std::format_to(ctx.out(), "<empty-shared_ptr>");
+      return pars::format_to(ctx.out(), "<empty-shared_ptr>");
   }
 };
 

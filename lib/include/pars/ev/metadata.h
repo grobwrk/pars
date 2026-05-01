@@ -33,9 +33,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/net/pipe.h"
+#include "pars/fmt.h"
 
 #include <cstdint>
-#include <format>
 #include <stop_token>
 
 namespace pars::ev
@@ -64,9 +64,9 @@ struct base_internal_metadata
 
   auto point_id() const { return 0; }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "<internal-metadata>");
+    return pars::format_to(ctx.out(), "<internal-metadata>");
   }
 };
 
@@ -81,10 +81,10 @@ struct base_network_metadata
 
   auto point_id() const { return pipe_m->point_id(); }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
     // FIXME: duplicated
-    return std::format_to(ctx.out(), "Pipe #{:X}", point_id());
+    return pars::format_to(ctx.out(), "Pipe #{:X}", point_id());
   }
 
 private:
