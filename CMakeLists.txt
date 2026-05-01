@@ -8,10 +8,11 @@ include (cmake/CPM.cmake)
 set (PARS_VERSION "0.2.1.99")
 project ("pars-cxx" VERSION ${PARS_VERSION} LANGUAGES CXX)
 
-option (PARS_BUILD_EXAMPLES      "Build examples"      ON)
-option (PARS_BUILD_DOCUMENTATION "Build documentation" OFF)
-option (PARS_BUILD_TESTS         "Build tests"         OFF)
-option (PARS_BUILD_COVERAGE      "Build coverage"      OFF) # Requires PARS_BUILD_TESTS=ON
+option (PARS_BUILD_EXAMPLES      "Build examples"        ON)
+option (PARS_BUILD_DOCUMENTATION "Build documentation"   OFF)
+option (PARS_BUILD_TESTS         "Build tests"           OFF)
+option (PARS_BUILD_COVERAGE      "Build coverage"        OFF) # Requires PARS_BUILD_TESTS=ON
+option (PARS_ENABLE_LOGGING      "Enable spdlog logging" ON)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   set (CMAKE_CXX_STANDARD 23)
