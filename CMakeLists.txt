@@ -1,8 +1,9 @@
 # CMakeList.txt : CMake project for pars, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.30)
+cmake_minimum_required (VERSION 3.21)
 list (INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}/cmake")
+include (cmake/CPM.cmake)
 
 set (PARS_VERSION "0.2.1.99")
 project ("pars-cxx" VERSION ${PARS_VERSION} LANGUAGES CXX)

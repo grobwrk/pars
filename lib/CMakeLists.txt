@@ -1,11 +1,51 @@
 find_package (Threads REQUIRED)
-find_package (asio CONFIG REQUIRED)
-find_package (flatbuffers CONFIG REQUIRED)
+
+if (DEFINED VCPKG_TOOLCHAIN)
+    find_package (ada CONFIG REQUIRED)
+    find_package (asio CONFIG REQUIRED)
     if (PARS_ENABLE_LOGGING)
         find_package (spdlog CONFIG REQUIRED)
     else ()
         find_package (fmt CONFIG REQUIRED)
     endif ()
+    find_package (flatbuffers CONFIG REQUIRED)
+else ()
+    CPMAddPackage (asio
+        GIT_REPOSITORY https://github.com/chriskohlhoff/asio.git
+        GIT_TAG asio-1-38-0
+        DOWNLOAD_ONLY YES
+    )
+    if (NOT TARGET asio::asio)
+        add_library (asio::asio INTERFACE IMPORTED)
+        target_include_directories (asio::asio INTERFACE ${asio_SOURCE_DIR}/include)
+        target_compile_definitions (asio::asio INTERFACE ASIO_STANDALONE)
+    endif ()
+    CPMAddPackage (flatbuffers
+      GIT_REPOSITORY https://github.com/google/flatbuffers.git
+      GIT_TAG v25.12.19
+      OPTIONS
+      "FLATBUFFERS_BUILD_FLATLIB OFF"
+      "FLATBUFFERS_BUILD_FLATC OFF"
+      "FLATBUFFERS_BUILD_FLATHASH OFF"
+      "FLATBUFFERS_BUILD_TESTS OFF"
+      "FLATBUFFERS_INSTALL OFF"
+    )
+    if (PARS_ENABLE_LOGGING)
+        CPMAddPackage (spdlog
+            GIT_REPOSITORY https://github.com/gabime/spdlog.git
+            GIT_TAG v1.17.0
+            OPTIONS
+            "SPDLOG_USE_STD_FORMAT ON"
+        )
+    else ()
+        CPMAddPackage (fmt
+            GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+            GIT_TAG 12.1.0
+            OPTIONS
+            "FMT_INSTALL OFF"
+        )
+    endif ()
+endif ()
 
 # sorted please
 set (PARS_HEADERS
@@ -73,7 +113,7 @@ target_link_libraries (
     pars
     INTERFACE
     asio::asio
-    flatbuffers::flatbuffers
+    FlatBuffers
 )
 
 if (PARS_ENABLE_LOGGING)
@@ -99,52 +139,54 @@ target_include_directories (
 string (TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 configure_file ("config.h.in" "generated/config.h")
 
-# install
-include (GNUInstallDirs)
+## install
+if (DEFINED VCPKG_TOOLCHAIN)
+    include (GNUInstallDirs)
 
-set (pars_project_config_in "${CMAKE_SOURCE_DIR}/cmake/parsConfig.cmake.in")
-set (pars_project_config_out "${CMAKE_CURRENT_BINARY_DIR}/parsConfig.cmake")
-set (pars_config_targets_file "parsConfigTargets.cmake")
-set (pars_version_config_file "${CMAKE_CURRENT_BINARY_DIR}/parsConfigVersion.cmake")
-set (pars_export_dest_dir "${CMAKE_INSTALL_LIBDIR}/cmake/pars")
+    set (pars_project_config_in "${CMAKE_SOURCE_DIR}/cmake/parsConfig.cmake.in")
+    set (pars_project_config_out "${CMAKE_CURRENT_BINARY_DIR}/parsConfig.cmake")
+    set (pars_config_targets_file "parsConfigTargets.cmake")
+    set (pars_version_config_file "${CMAKE_CURRENT_BINARY_DIR}/parsConfigVersion.cmake")
+    set (pars_export_dest_dir "${CMAKE_INSTALL_LIBDIR}/cmake/pars")
 
-install (
-    TARGETS pars
-    EXPORT pars
-    LIBRARY FILE_SET HEADERS
-)
+    install (
+        TARGETS pars
+        EXPORT pars
+        LIBRARY FILE_SET HEADERS
+    )
 
-install (
-    FILES ${CMAKE_BINARY_DIR}/lib/generated/config.h
-    DESTINATION include/pars
-)
+    install (
+        FILES ${CMAKE_BINARY_DIR}/lib/generated/config.h
+        DESTINATION include/pars
+    )
 
-export (
-    TARGETS pars
-    NAMESPACE pars::
-    FILE "${CMAKE_CURRENT_BINARY_DIR}/${pars_config_targets_file}"
-)
+    export (
+        TARGETS pars
+        NAMESPACE pars::
+        FILE "${CMAKE_CURRENT_BINARY_DIR}/${pars_config_targets_file}"
+    )
 
-install (
-    EXPORT pars
-    DESTINATION ${pars_export_dest_dir}
-    NAMESPACE pars::
-    FILE ${pars_config_targets_file}
-)
+    install (
+        EXPORT pars
+        DESTINATION ${pars_export_dest_dir}
+        NAMESPACE pars::
+        FILE ${pars_config_targets_file}
+    )
 
-include (CMakePackageConfigHelpers)
-configure_package_config_file (
-    "${pars_project_config_in}"
-    "${pars_project_config_out}"
-    INSTALL_DESTINATION ${pars_export_dest_dir}
-)
+    include (CMakePackageConfigHelpers)
+    configure_package_config_file (
+        "${pars_project_config_in}"
+        "${pars_project_config_out}"
+        INSTALL_DESTINATION ${pars_export_dest_dir}
+    )
 
-write_basic_package_version_file (
-    "${pars_version_config_file}"
-    COMPATIBILITY SameMajorVersion
-)
+    write_basic_package_version_file (
+        "${pars_version_config_file}"
+        COMPATIBILITY SameMajorVersion
+    )
 
-install (
-    FILES "${pars_project_config_out}" "${pars_version_config_file}"
-    DESTINATION "${pars_export_dest_dir}"
-)
+    install (
+        FILES "${pars_project_config_out}" "${pars_version_config_file}"
+        DESTINATION "${pars_export_dest_dir}"
+    )
+endif ()

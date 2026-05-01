@@ -1,5 +1,29 @@
 # FlatBuffers schema compilation
-find_package(flatbuffers REQUIRED CONFIG)
+if (DEFINED VCPKG_TOOLCHAIN)
+    find_package(flatbuffers REQUIRED CONFIG)
+else ()
+    FetchContent_GetProperties(flatbuffers SOURCE_DIR flatbuffers_SOURCE_DIR)
+    message(STATUS "flatbuffers source dir: ${flatbuffers_SOURCE_DIR}")
+
+    include(ExternalProject)
+    ExternalProject_Add(flatc_host
+        SOURCE_DIR      ${flatbuffers_SOURCE_DIR}
+        CMAKE_ARGS
+            -DCMAKE_BUILD_TYPE=Release
+            -DFLATBUFFERS_BUILD_FLATLIB=OFF
+            -DFLATBUFFERS_BUILD_TESTS=OFF
+            -DFLATBUFFERS_INSTALL=OFF
+        BUILD_BYPRODUCTS
+            ${CMAKE_CURRENT_BINARY_DIR}/flatc_host-prefix/src/flatc_host-build/flatc
+        INSTALL_COMMAND ""
+    )
+
+    # 4. Expose flatc as an imported executable
+    ExternalProject_Get_Property(flatc_host BINARY_DIR)
+    add_executable(flatc IMPORTED)
+    set_target_properties(flatc PROPERTIES IMPORTED_LOCATION ${BINARY_DIR}/flatc)
+    add_dependencies(flatc flatc_host)
+endif ()
 
 # Find all .fbs schema files in this directory
 file(GLOB SCHEMA_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.fbs")
@@ -17,7 +41,7 @@ foreach(SCHEMA_FILE ${SCHEMA_FILES})
 
     add_custom_command(
         OUTPUT ${GENERATED_HEADER}
-        COMMAND $<TARGET_FILE:flatbuffers::flatc> -c -o ${GENERATED_DIR} ${SCHEMA_FILE}
+        COMMAND $<TARGET_FILE:flatc> -c -o ${GENERATED_DIR} ${SCHEMA_FILE}
         DEPENDS ${SCHEMA_FILE}
         COMMENT "Generating FlatBuffers C++ code for ${SCHEMA_NAME}.fbs"
         VERBATIM
