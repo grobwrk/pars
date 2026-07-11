@@ -27,11 +27,14 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_RESOURCES_H
+#define PARS_APP_RESOURCES_H
 
 #include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <cstddef>
 #include <mutex>
 #include <stdexcept>
 #include <unordered_map>
@@ -118,7 +121,7 @@ public:
     auto mtx = mtxs_m.try_emplace(key);
 
     if (!mtx.second)
-      throw std::runtime_error(std::format(
+      throw std::runtime_error(pars::format(
         "Unable to emplace a new Resource Mutex [key: 0x{:X}]", key));
 
     auto res = resources_m.try_emplace(key, std::forward<args_t>(args)...);
@@ -128,7 +131,7 @@ public:
       mtxs_m.erase(mtx.first);
 
       throw std::runtime_error(
-        std::format("Unable to emplace a new Resource [key: 0x{:X}]", key));
+        pars::format("Unable to emplace a new Resource [key: 0x{:X}]", key));
     }
 
     pars::debug(SL, lf::app, "Emplaced Resource [key: 0x{:X}]", key);
@@ -164,7 +167,7 @@ private:
 
     if (!xs.contains(key))
       throw std::out_of_range(
-        std::format("Object not found for Key 0x{:X}", key));
+        pars::format("Object not found for Key 0x{:X}", key));
 
     auto& x = xs.at(key);
 
@@ -178,3 +181,5 @@ private:
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_RESOURCES_H

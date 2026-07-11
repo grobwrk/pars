@@ -27,17 +27,38 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_RUNNER_H
+#define PARS_EV_RUNNER_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/event.h"
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/job.h"
+#include "pars/ev/kind.h"
+#include "pars/ev/kind_decl.h"
+#include "pars/ev/spec.h"
+#include "pars/log.h"
+#include "pars/log/demangle.h"
+#include "pars/log/flags.h"
+#include "pars/net/pipe.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <atomic>
+#include <chrono>
+#include <cstddef>
+#include <exception>
 #include <functional>
 #include <future>
+#include <mutex>
+#include <stdexcept>
+#include <stop_token>
 #include <thread>
+#include <tuple>
 #include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 namespace pars::ev
 {
@@ -57,11 +78,11 @@ public:
   {
     auto j_id = j.id();
 
-    auto s_id = j.socket_id();
+    auto p_id = j.point_id();
 
     auto guard = std::lock_guard{mtx_m};
 
-    futures_m.emplace_back(j_id, s_id, spec_hash, task.get_future());
+    futures_m.emplace_back(j_id, p_id, spec_hash, task.get_future());
 
     auto th_res = threads_m.try_emplace(j_id, std::move(task), std::move(j));
 
@@ -92,32 +113,32 @@ public:
     pipe_jobs_m.clear();
   }
 
-  bool can_exec(int s_id, std::size_t spec_hash)
+  bool can_exec(int p_id, std::size_t spec_hash)
   {
     auto lock = hf_registry_m.lock();
 
-    return hf_registry_m.has_handler_for(s_id, spec_hash);
+    return hf_registry_m.has_handler_for(p_id, spec_hash);
   }
 
   void exec(job j)
   {
     auto spec_hash = j.spec_hash();
 
-    auto s_id = j.socket_id();
+    auto p_id = j.point_id();
 
     auto lock = hf_registry_m.lock();
 
-    if (!hf_registry_m.has_handler_for(s_id, spec_hash))
+    if (!hf_registry_m.has_handler_for(p_id, spec_hash))
     {
       pars::err(SL, lf::event,
-                "Unable to find handler for Spec 0x{:X} on Socket {}, skip "
+                "Unable to find handler for Spec 0x{:X} on Point #{:X}, skip "
                 "message ...",
-                spec_hash, s_id);
+                spec_hash, p_id);
 
       return;
     }
 
-    auto& hf = hf_registry_m.handler_for(s_id, spec_hash);
+    auto& hf = hf_registry_m.handler_for(p_id, spec_hash);
 
     lock.unlock();
 
@@ -136,7 +157,7 @@ public:
     }
     catch (...)
     {
-      process_exception(s_id, spec_hash);
+      process_exception(p_id, spec_hash);
     }
   }
 
@@ -147,50 +168,50 @@ public:
     exec(make_job(next_job_id(), std::move(ke)));
   }
 
-  void add_pipe(const net::pipe& p)
+  void add_pipe(const net::pipe::pointer& p)
   {
     auto guard = std::lock_guard{mtx_m};
 
-    auto p_id = p.id();
+    auto pipe_id = p->id();
 
-    pipe_jobs_m.insert({p_id, {}});
+    pipe_jobs_m.insert({pipe_id, {}});
   }
 
   /// stop all running and remove all pending jobs for pipe p
-  void remove_pipe(const net::pipe& p)
+  void remove_pipe(const net::pipe::pointer& p)
   {
     auto guard = std::lock_guard{mtx_m};
 
-    auto p_id = p.id();
+    auto pipe_id = p->id();
 
-    if (!pipe_jobs_m.at(p_id).empty())
+    if (!pipe_jobs_m.at(pipe_id).empty())
     {
       // stop all running jobs for pipe p
-      stop_runnings(pipe_jobs_m.at(p_id));
+      stop_runnings(pipe_jobs_m.at(pipe_id));
     }
 
-    pipe_jobs_m.erase(p_id);
+    pipe_jobs_m.erase(pipe_id);
   }
 
-  void associate_job_to_pipe(const int j_id, const int p_id)
+  void associate_job_to_pipe(const int j_id, const int pipe_id)
   {
     if (j_id <= 0)
-      throw std::runtime_error(std::format("Job #{}: invalid Job!", p_id));
+      throw std::runtime_error(pars::format("Job #{}: invalid Job!", pipe_id));
 
-    if (p_id <= 0)
+    if (pipe_id <= 0)
       return;
 
     auto guard = std::lock_guard{mtx_m};
 
     // add j_id to the jobs related to p, unless p was removed with a previous
     // call to remove_pipe(p) (ie: pipe_jobs_m does not contains p.id())
-    if (pipe_jobs_m.contains(p_id))
+    if (pipe_jobs_m.contains(pipe_id))
     {
-      pipe_jobs_m.at(p_id).push_back(j_id);
+      pipe_jobs_m.at(pipe_id).push_back(j_id);
 
       pars::debug(SL, lf::event,
                   "Job #{} pushed and associated to Pipe {:X} [# size: {}]",
-                  j_id, p_id, pipe_jobs_m.at(p_id).size());
+                  j_id, pipe_id, pipe_jobs_m.at(pipe_id).size());
     }
   }
 
@@ -230,7 +251,7 @@ private:
     {
       using namespace std::chrono_literals;
 
-      auto& [j_id, s_id, spec_hash, f] = *it;
+      auto& [j_id, p_id, spec_hash, f] = *it;
 
       if (f.wait_for(0ms) == std::future_status::ready)
       {
@@ -243,7 +264,7 @@ private:
           pars::debug(SL, lf::event,
                       "Job #{}: Throws, processing exceptions !!", j_id);
 
-          process_exception(s_id, spec_hash);
+          process_exception(p_id, spec_hash);
         }
 
         threads_m.erase(j_id);
@@ -260,7 +281,7 @@ private:
     }
   }
 
-  void process_exception(auto s_id, auto spec_hash)
+  void process_exception(auto p_id, auto spec_hash)
   {
     auto e_ptr = std::current_exception();
 
@@ -283,10 +304,10 @@ private:
 
     auto lock = hf_registry_m.lock();
 
-    if (!hf_registry_m.has_handler_for(s_id, e_hash))
+    if (!hf_registry_m.has_handler_for(p_id, e_hash))
       return;
 
-    auto& hf = hf_registry_m.handler_for(s_id, e_hash);
+    auto& hf = hf_registry_m.handler_for(p_id, e_hash);
 
     lock.unlock();
 
@@ -328,7 +349,7 @@ private:
     std::tuple<std::size_t, int, std::size_t, std::future<void>>;
 
   std::vector<futures_value_type>
-    futures_m; ///< all job ids, socket ids, spec hashes
+    futures_m; ///< all job ids, point ids, spec hashes
                ///< and futures from threads that are running
 
   std::unordered_map<std::size_t, std::jthread>
@@ -343,3 +364,5 @@ private:
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_RUNNER_H

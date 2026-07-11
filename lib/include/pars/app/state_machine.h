@@ -27,13 +27,18 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_STATEMACHINE_H
+#define PARS_APP_STATEMACHINE_H
 
 #include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <initializer_list>
 #include <optional>
 #include <stdexcept>
+#include <string>
+#include <string_view>
 
 namespace pars::app
 {
@@ -88,22 +93,22 @@ struct state_machine
   {
   }
 
-  void ensure(std::initializer_list<state_type> expected)
+  void ensure(std::initializer_list<state_type> states)
   {
-    for (const auto& e : expected)
+    for (const auto& e : states)
       if (e == state_m)
         return;
 
     std::string states_str;
 
-    for (const auto& e : expected)
-      if (e != *expected.end())
-        states_str += std::format("{},", e);
+    for (const auto& e : states)
+      if (e != *states.end())
+        states_str += pars::format("{},", e);
       else
-        states_str += std::format("{}", e);
+        states_str += pars::format("{}", e);
 
     throw std::runtime_error(
-      std::format("Wrong State {} [must be in \"{}\"]", state_m,
+      pars::format("Wrong State {} [must be in \"{}\"]", state_m,
                   std::string_view{states_str.begin(), states_str.end() - 1}));
   }
 
@@ -111,7 +116,7 @@ struct state_machine
   {
     if (state_m != s)
       throw std::runtime_error(
-        std::format("Wrong State \"{}\" [must be \"{}\"]", state_m, s));
+        pars::format("Wrong State \"{}\" [must be \"{}\"]", state_m, s));
   }
 
   void next(state_type s)
@@ -185,3 +190,5 @@ private:
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_STATEMACHINE_H

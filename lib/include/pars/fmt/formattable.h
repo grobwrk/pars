@@ -27,14 +27,17 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_FMT_FORMATTABLE_H
+#define PARS_FMT_FORMATTABLE_H
 
 #include "pars/concept/formattable.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <memory>
+#include <string>
 
 template<formattable_c foarmattable_t>
-struct std::formatter<foarmattable_t> : std::formatter<std::string>
+struct pars::formatter<foarmattable_t> : pars::formatter<std::string>
 {
   auto format(const foarmattable_t& x, format_context& ctx) const
     -> decltype(ctx.out())
@@ -42,3 +45,27 @@ struct std::formatter<foarmattable_t> : std::formatter<std::string>
     return x.format_to(ctx);
   }
 };
+
+template<formattable_c foarmattable_t>
+struct pars::formatter<std::unique_ptr<foarmattable_t>>
+  : pars::formatter<std::string>
+{
+  auto format(const std::unique_ptr<foarmattable_t>& x,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    return x->format_to(ctx);
+  }
+};
+
+template<formattable_c foarmattable_t>
+struct pars::formatter<std::shared_ptr<foarmattable_t>>
+  : pars::formatter<std::string>
+{
+  auto format(const std::shared_ptr<foarmattable_t>& x,
+              format_context& ctx) const -> decltype(ctx.out())
+  {
+    return x->format_to(ctx);
+  }
+};
+
+#endif // PARS_FMT_FORMATTABLE_H

@@ -27,18 +27,25 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_HFREGISTRY_H
+#define PARS_EV_HFREGISTRY_H
 
+#include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/ev/job.h"
 #include "pars/ev/make_hf.h"
 #include "pars/ev/spec.h"
-#include "pars/fmt/formattable.h"
 #include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <cstddef>
+#include <functional>
 #include <mutex>
+#include <stdexcept>
+#include <typeinfo>
 #include <unordered_map>
+#include <utility>
 
 namespace pars::ev
 {
@@ -52,6 +59,7 @@ namespace pars::net
 
 class rep;
 class req;
+class point;
 
 } // namespace pars::net
 
@@ -68,9 +76,9 @@ public:
   {
   }
 
-  template<template<typename> typename kind_of, ev::event_c event_t,
+  template<template<typename> typename kind_of, event_c event_t,
            typename class_t>
-    requires ev::kind_c<kind_of>
+    requires kind_c<kind_of>
   void on(void (class_t::*mem_fn)(hf_arg<kind_of, event_t>), class_t* self)
   {
     insert<kind_of, event_t>(make_hf(mem_fn, self));
@@ -79,6 +87,7 @@ public:
 private:
   friend net::rep;
   friend net::req;
+  friend net::point;
   friend runner;
 
   template<template<typename> typename kind_of, event_c event_t>
@@ -88,16 +97,16 @@ private:
     insert(0, std::move(hf));
   }
 
-  /// Insert an handler_f for a kind_of<event_t> on a socket s_id
+  /// Insert an handler_f for a kind_of<event_t> on a point p_id
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
-  void insert(int s_id, handler_f<kind_of, event_t> hf);
+  void insert(int p_id, handler_f<kind_of, event_t> hf);
 
   auto lock() { return std::unique_lock{mtx_m}; }
 
-  bool has_handler_for(int s_id, std::size_t spec_hash)
+  bool has_handler_for(int p_id, std::size_t spec_hash)
   {
-    return handlers_m[s_id].contains(spec_hash);
+    return handlers_m[p_id].contains(spec_hash);
   }
 
   const std::type_info* const type_for(std::size_t spec_hash)
@@ -105,26 +114,26 @@ private:
     return types_m[spec_hash];
   }
 
-  const job_handler_f& handler_for(int s_id, std::size_t spec_hash)
+  const job_handler_f& handler_for(int p_id, std::size_t spec_hash)
   {
-    return handlers_m[s_id][spec_hash];
+    return handlers_m[p_id][spec_hash];
   }
 
   template<template<typename> typename kind_of, event_c event_t>
     requires kind_c<kind_of>
-  auto insert_jhf(int s_id, job_handler_f hf)
+  auto insert_jhf(int p_id, job_handler_f hf)
   {
     auto spec_hash = spec<kind_of<event_t>>::hash;
 
-    if (!handlers_m[s_id].try_emplace(spec_hash, std::move(hf)).second)
-      throw std::runtime_error(std::format(
-        "Unable to emplace the handler_f for Socket #{} and Spec {:X}", s_id,
+    if (!handlers_m[p_id].try_emplace(spec_hash, std::move(hf)).second)
+      throw std::runtime_error(pars::format(
+        "Unable to emplace the handler_f for Point #{} and Spec {:X}", p_id,
         spec_hash));
 
     // register the type for logging purpose
     types_m[spec_hash] = &typeid(kind_of<event_t>);
 
-    pars::debug(SL, lf::event, "Socket {}: Registered {}!", s_id,
+    pars::debug(SL, lf::event, "Point {}: Registered {}!", p_id,
                 spec<kind_of<event_t>>{});
   }
 
@@ -138,3 +147,5 @@ private:
 };
 
 } // namespace pars::ev
+
+#endif // PARS_EV_HFREGISTRY_H

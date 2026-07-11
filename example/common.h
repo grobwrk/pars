@@ -31,13 +31,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 constexpr auto enable_compute_fib_async = true;
 
-#include <pars/pars.h>
+#include <pars/app/state_machine.h>
+#include <pars/fmt.h>
 
-#include <format>
 #include <string>
-
-using namespace pars;
-using namespace pars::ev;
 
 namespace pars_example::resource
 {
@@ -46,7 +43,8 @@ enum class client_state
 {
   creating,
   initializing,
-  started,
+  resolving,
+  connecting,
   sending_work,
   waiting_work_done,
   terminating,
@@ -57,6 +55,7 @@ enum class server_state
 {
   creating,
   initializing,
+  resolving,
   running,
   terminating
 };
@@ -71,7 +70,7 @@ enum class pipe_state
 
 struct pipe_resource
 {
-  app::state_machine<pipe_state> state;
+  pars::app::state_machine<pipe_state> state;
 
   pipe_resource(pipe_state s)
     : state{s}
@@ -81,26 +80,18 @@ struct pipe_resource
   pipe_resource(const pipe_resource&) = delete;
 
   pipe_resource(pipe_resource&&) = delete;
-
-  void save_tool(net::tool_view t) { tool_m.emplace(t); }
-
-  const net::tool_view& load_tool() const { return *tool_m; }
-
-private:
-  std::optional<net::tool_view> tool_m;
 };
 
 } // namespace pars_example::resource
 
 template<>
-struct std::formatter<::pars_example::resource::client_state>
-  : std::formatter<std::string>
+struct pars::formatter<::pars_example::resource::client_state> : formatter<std::string>
 {
-  auto format(const ::pars_example::resource::client_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using client_state = pars_example::resource::client_state;
+  using client_state = ::pars_example::resource::client_state;
 
+  auto format(const client_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case client_state::creating:
@@ -111,8 +102,12 @@ struct std::formatter<::pars_example::resource::client_state>
       return format_to(ctx.out(), "initializing");
       break;
 
-    case client_state::started:
-      return format_to(ctx.out(), "started");
+    case client_state::connecting:
+      return format_to(ctx.out(), "connecting");
+      break;
+
+    case client_state::resolving:
+      return format_to(ctx.out(), "resolving");
       break;
 
     case client_state::sending_work:
@@ -139,14 +134,14 @@ struct std::formatter<::pars_example::resource::client_state>
 };
 
 template<>
-struct std::formatter<::pars_example::resource::server_state>
-  : std::formatter<std::string>
+struct pars::formatter<::pars_example::resource::server_state>
+  : formatter<std::string>
 {
-  auto format(const ::pars_example::resource::server_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using server_state = pars_example::resource::server_state;
+  using server_state = ::pars_example::resource::server_state;
 
+  auto format(const server_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case server_state::creating:
@@ -155,6 +150,10 @@ struct std::formatter<::pars_example::resource::server_state>
 
     case server_state::initializing:
       return format_to(ctx.out(), "initializing");
+      break;
+
+    case server_state::resolving:
+      return format_to(ctx.out(), "resolving");
       break;
 
     case server_state::running:
@@ -173,14 +172,13 @@ struct std::formatter<::pars_example::resource::server_state>
 };
 
 template<>
-struct std::formatter<::pars_example::resource::pipe_state>
-  : std::formatter<std::string>
+struct pars::formatter<::pars_example::resource::pipe_state> : formatter<std::string>
 {
-  auto format(const ::pars_example::resource::pipe_state& s,
-              format_context& ctx) const -> decltype(ctx.out())
-  {
-    using pipe_state = pars_example::resource::pipe_state;
+  using pipe_state = ::pars_example::resource::pipe_state;
 
+  auto format(const pipe_state& s, format_context& ctx) const
+    -> decltype(ctx.out())
+  {
     switch (s)
     {
     case pipe_state::waiting_work:

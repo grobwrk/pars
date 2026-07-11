@@ -19,8 +19,8 @@ Events
 .. doxygenstruct:: pars::ev::init
 .. doxygenstruct:: pars::ev::klass< init >
 
-.. doxygenstruct:: pars::ev::shutdown
-.. doxygenstruct:: pars::ev::klass< shutdown >
+.. doxygenstruct:: pars::ev::deinit
+.. doxygenstruct:: pars::ev::klass< deinit >
 
 .. doxygenclass:: pars::ev::spec
 .. doxygenstruct:: pars::ev::uuid

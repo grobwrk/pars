@@ -6,11 +6,23 @@ Building
 Install Deps
 ------------
 
+Ubuntu 24.10
+************
+
 Follow these instructions (for Ubuntu 24.10) to install the dependencies to build the framework and example applications:
 
 - ``sudo apt install build-essential cmake ninja-build pkg-config git``
 - install vcpkg to ``~/vcpkg`` (https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash)
+- export VCPKG_ROOT="~/vcpkg"
+- export VCPKG_OVERLAY_TRIPLETS="~/my-vcpkg-triplets"
+
+Windows
+*******
+
+- ``scoop install cmake ninja git``
+- install vcpkg to ``~/vcpkg`` (https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-bash)
 - install my-vcpkg-triplets to ``~/my-vcpkg-triplets`` by cloning the repository (https://github.com/Neumann-A/my-vcpkg-triplets)
+- set environment variable VCPKG_ROOT and VCPKG_OVERLAY_TRIPLETS accordingly
 
 Clone
 -----
@@ -21,6 +33,7 @@ Build
 -----
 
 - ``cd ~/pars-cxx``
+- ``cmake --list-presets`` (pick one from here, say `linux-release-llvm`)
 - ``cmake --preset linux-release-llvm``
 - ``cmake --build out/build/linux-release-llvm``
 

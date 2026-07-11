@@ -27,13 +27,40 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
+
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/client.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/init.h>
+#include <pars/log.h>
+#include <pars/net/asio.h>
+#include <pars/net/connect_mode.h>
+#include <pars/net/resolver.h>
+#include <pars/fmt.h>
+
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <exception>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <winsock2.h>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the client component as an single application (req)
 class client : public app::single<comp::client>
@@ -46,19 +73,19 @@ private:
 
   /// @name Network Parameters
 
-  milli req_recv_timeout{-1};
-  milli req_send_timeout{1000};
+  int32_t req_recv_timeout{-1};
+  int32_t req_send_timeout{1000};
 
   /// @name Input Parameters
 
-  component_type::connect_p connect_p;
-  std::size_t work_id = 0;
-  bool fast_fib = false;
-  uint64_t n = 0;
+  net::resolver::params resolve_p;
+  std::size_t work_id{0};
+  bool fast_fib{false};
+  uint64_t n{0};
 
   /// @name App State
 
-  app::state_machine<client_state> state = {client_state::creating};
+  app::state_machine<client_state> state{client_state::creating};
 
   /// @name Constructors
 
@@ -68,8 +95,8 @@ private:
 
   void usage()
   {
-    throw std::invalid_argument(
-      "Usage: ./client service_cmode service_addr work_id fast_or_slow N");
+    throw std::invalid_argument("Usage: ./client connect_mode protocol host "
+                                "service work_id fast_or_slow N");
   }
 
   void startup(int argc, char** argv) override
@@ -82,21 +109,26 @@ private:
     /// 2. get the input
     switch (argc)
     {
-    case 6:
-      connect_p.service_cmode = net::cmode_from_string(argv[1]);
+    case 7:
 
-      connect_p.service_addr = argv[2];
+      resolve_p.connect_mode = net::cmode_from_string(argv[1]);
 
-      work_id = std::stoull(argv[3]);
+      // TODO: protocol can be tcp4 or tcp6
 
-      if (std::string_view(argv[4]).compare("fast") == 0)
+      resolve_p.host = std::string_view(argv[2]);
+
+      resolve_p.service = std::string_view(argv[3]);
+
+      work_id = std::stoull(argv[4]);
+
+      if (std::string_view(argv[5]).compare("fast") == 0)
         fast_fib = true;
-      else if (std::string_view(argv[4]).compare("slow") == 0)
+      else if (std::string_view(argv[5]).compare("slow") == 0)
         fast_fib = false;
       else
         usage();
 
-      n = std::stoull(argv[5]);
+      n = std::stoull(argv[6]);
 
       break;
 
@@ -105,9 +137,11 @@ private:
     }
 
     /// 3. insert handler functions
-    hfs().on<fired, init>(&self::initialize, this);
+    hfs().on<fired, init>(&self::resolve, this);
 
     hfs().on<fired, exception>(&self::terminate, this);
+
+    hfs().on<fired, resolved<net::asio::tcp>>(&self::connect, this);
 
     comp().req().on<fired, pipe_created>(&self::send_work, this);
 
@@ -127,34 +161,46 @@ private:
 
   /// @name Handler Functions
 
-  void initialize(hf_arg<fired, init> fired)
+  void resolve(hf_arg<fired, init> fired)
   {
-    auto ts = state.tx(client_state::initializing, client_state::started);
+    auto ts = state.tx(client_state::initializing, client_state::resolving);
 
     comp().init({.req_opts = {.recv_timeout = req_recv_timeout.count(),
                               .send_timeout = req_send_timeout.count()}});
 
-    comp().connect(connect_p);
+    resolver().resolve(resolve_p);
 
     ts.commit();
 
     pars::info(SL, "Fired {}, Application Initialized!", fired.event());
   }
 
-  void send_work(hf_arg<fired, pipe_created> fired)
+  void connect(hf_arg<fired, resolved<net::asio::tcp>> fired)
   {
-    auto ts = state.tx(client_state::started, client_state::sending_work);
+    auto ts = state.tx(client_state::resolving, client_state::connecting);
 
-    auto [ev, md] = fired.as_tuple();
-
-    auto out_ev = fib_requested{work_id, n, fast_fib};
-
-    // use the default context on the sock to send the event
-    comp().req().sock().send(out_ev, md.pipe());
+    comp().req().connect(net::cmode::dial,
+                         fired.event().results.begin()->endpoint());
 
     ts.commit();
 
+    pars::info(SL, "Fired {}, Address Resolved!", fired.event());
+  }
+
+  void send_work(hf_arg<fired, pipe_created> fired)
+  {
+    auto ts = state.tx(client_state::connecting, client_state::sending_work);
+
+    auto [ev, md] = fired.as_tuple();
+
+    auto out_ev = fib_requested::make(work_id, n, fast_fib);
+
     pars::info(SL, "Fired {}, Sent {}!", ev, out_ev);
+
+    // use the default context on the sock to send the event
+    // comp().req().sock().send(std::move(out_ev), md.pipe());
+
+    ts.commit();
   }
 
   void recv_answer(hf_arg<sent, fib_requested> sent)
@@ -163,7 +209,7 @@ private:
       state.tx(client_state::sending_work, client_state::waiting_work_done);
 
     // recv on the default context of the sock
-    comp().req().sock().recv();
+    // comp().req().sock().recv();
 
     ts.commit();
 
@@ -183,8 +229,8 @@ private:
 
     pars::info(SL, "Received {}, Application Terminated!", ev);
 
-    std::cout << "WORK(" << ev.work_id << ") FIB(" << n << ") = " << ev.fib_n
-              << "\n";
+    std::cout << "WORK(" << ev.table()->work_id() << ") FIB(" << n
+              << ") = " << ev.table()->fib_n() << "\n";
   }
 
   void terminate(hf_arg<fired, exception> fired)
@@ -200,7 +246,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << std::format("ERROR: {}", ev) << std::endl;
+    std::cout << pars::format("ERROR: {}", ev) << std::endl;
   }
 
   void terminate(hf_arg<fired, network_error> fired)
@@ -216,7 +262,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!", ev,
                state.current());
 
-    std::cout << std::format("ERROR: {}", ev.error) << std::endl;
+    std::cout << pars::format("ERROR: {}", ev.error) << std::endl;
   }
 
   void terminate(hf_arg<fired, pipe_removed> fired)
@@ -230,7 +276,7 @@ private:
     pars::info(SL, "Fired {} while \"{}\", Application Terminated!",
                fired.event(), state.current());
 
-    std::cout << std::format("Client Disconnected!") << std::endl;
+    std::cout << pars::format("Client Disconnected!") << std::endl;
   }
 };
 
@@ -246,7 +292,7 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << std::format("Error: {}", e.what()) << "\n";
+  std::cout << pars::format("Error: {}", e.what()) << "\n";
 
     return EXIT_FAILURE;
   }

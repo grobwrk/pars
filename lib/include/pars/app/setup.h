@@ -27,9 +27,43 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_SETUP_H
+#define PARS_APP_SETUP_H
 
 #include "pars/log.h"
+
+#ifndef PARS_LOGGING_ENABLED
+
+namespace pars::app
+{
+
+struct with_default_setup
+{
+public:
+  void enable_source_loc_logging()
+  {
+  }
+
+  void setup()
+  {
+  }
+
+protected:
+  with_default_setup() = default;
+};
+
+} // namespace pars::app
+#else
+
+#include <spdlog/common.h>
+#include <spdlog/logger.h>
+#include <spdlog/sinks/basic_file_sink.h>
+#include <spdlog/sinks/msvc_sink.h>
+#include <spdlog/sinks/stdout_color_sinks.h>
+#include <spdlog/spdlog.h>
+
+#include <memory>
+#include <vector>
 
 namespace pars::app
 {
@@ -117,3 +151,7 @@ protected:
 };
 
 } // namespace pars::app
+
+#endif
+
+#endif // PARS_APP_SETUP_H

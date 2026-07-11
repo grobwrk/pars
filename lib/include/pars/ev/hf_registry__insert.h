@@ -27,17 +27,28 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_HFREGISTRYINSERT_H
+#define PARS_EV_HFREGISTRYINSERT_H
 
+#include "pars/concept/event.h"
+#include "pars/concept/kind.h"
 #include "pars/ev/hf_registry.h"
+#include "pars/ev/job.h"
+#include "pars/ev/make_hf.h"
 #include "pars/ev/runner.h"
+#include "pars/ev/spec.h"
+
+#include <future>
+#include <mutex>
+#include <stop_token>
+#include <utility>
 
 namespace pars::ev
 {
 
 template<template<typename> typename kind_of, event_c event_t>
   requires kind_c<kind_of>
-void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
+void hf_registry::insert(int p_id, handler_f<kind_of, event_t> hf)
 {
   auto hf_ptr = std::make_shared<handler_f<kind_of, event_t>>(std::move(hf));
 
@@ -45,7 +56,7 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
 
   if constexpr (async_kind_c<kind_of<event_t>>)
   {
-    return insert_jhf<kind_of, event_t>(s_id, [&, hf_ptr](job j) {
+    return insert_jhf<kind_of, event_t>(p_id, [&, hf_ptr](job j) {
       auto task = std::packaged_task([hf_ptr](std::stop_token tk, job j) {
         auto ke = j.event<kind_of, event_t>();
 
@@ -64,14 +75,16 @@ void hf_registry::insert(int s_id, handler_f<kind_of, event_t> hf)
   }
   else
   {
-    return insert_jhf<kind_of, event_t>(s_id, [hf_ptr](job j) {
+    return insert_jhf<kind_of, event_t>(p_id, [hf_ptr](job j) {
       auto ke = j.event<kind_of, event_t>();
 
       ke.md().set_job_id(j.id());
 
-      (*hf_ptr)(ke);
+      (*hf_ptr)(std::move(ke));
     });
   }
 }
 
 } // namespace pars::ev
+
+#endif // PARS_EV_HFREGISTRYINSERT_H

@@ -1,6 +1,25 @@
+#ifndef PARS_CONFIG_H
+#define PARS_CONFIG_H
+
 #include "pars/log/flags.h"
 
 constexpr auto pars_build_type_v = "${BUILD_TYPE}";
+
+#ifndef PARS_LOGGING_ENABLED
+
+constexpr auto pars_log_enabled = false;
+
+constexpr auto pars_log_level = 0;
+
+constexpr auto pars_log_enable_stderr = false;
+
+constexpr auto pars_log_enable_file = false;
+
+#else
+
+#include <spdlog/common.h>
+
+#include <string_view>
 
 constexpr auto pars_log_enabled =
   std::string_view(pars_build_type_v).compare("DEBUG") == 0;
@@ -14,6 +33,14 @@ constexpr auto pars_log_enable_stderr = true;
 
 constexpr auto pars_log_enable_file = false;
 
+#endif // else #ifndef PARS_LOGGING_ENABLED
+
 constexpr auto pars_log_flags = ::pars::lf::app | ::pars::lf::comp |
                                 ::pars::lf::event | ::pars::lf::net |
                                 ::pars::lf::user;
+
+#define ASIO_HAS_STD_STRING_VIEW
+#define ASIO_NO_DEPRECATED
+#define ASIO_NO_IOSTREAM
+
+#endif // PARS_CONFIG_H

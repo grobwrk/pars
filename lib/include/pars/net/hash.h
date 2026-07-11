@@ -27,17 +27,19 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_HASH_H
+#define PARS_NET_HASH_H
 
-#include "nngxx/msg_body.h"
-
-#include "pars/init.h"
+#include "pars/net/msg.h"
+#include "pars/fmt.h"
 
 #include <cstddef>
+#include <cstdint>
 #include <cstring>
-#include <format>
+#include <stdexcept>
+#include <string_view>
 
-namespace pars
+namespace pars::net
 {
 
 static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
@@ -52,7 +54,7 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   {
     if (uuid[i] != '-')
       throw std::runtime_error(
-        std::format("Invalid UUID [missing separator {}]", i));
+        pars::format("Invalid UUID [missing separator {}]", i));
   }
 
   std::uint64_t result{0xcbf29ce484222325};
@@ -74,17 +76,18 @@ static constexpr std::size_t hash_from_uuid(const std::string_view& uuid)
   return result;
 }
 
-static std::size_t hash_from_msg(const nngxx::msg& m)
+static std::size_t hash_from_msg(const msg& m)
 {
   std::size_t h;
-  if (m)
-    if (m.body().size() >= sizeof(h))
-      std::memcpy(&h, m.body().data<char>(), sizeof(h));
-    else
-      h = 0xffffffffffffffff;
+
+  if (m.size() >= sizeof(h))
+    std::memcpy(&h, m.data(), sizeof(h));
   else
-    h = 0x0000000000000000;
+    h = 0xffffffffffffffff;
+
   return h;
 }
 
-} // namespace pars
+} // namespace pars::net
+
+#endif // PARS_NET_HASH_H

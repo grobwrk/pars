@@ -27,14 +27,15 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_METADATA_H
+#define PARS_EV_METADATA_H
 
 #include "pars/concept/event.h"
 #include "pars/concept/kind.h"
 #include "pars/net/pipe.h"
-#include "pars/net/tool_view.h"
+#include "pars/fmt.h"
 
-#include <format>
+#include <cstdint>
 #include <stop_token>
 
 namespace pars::ev
@@ -61,40 +62,33 @@ struct base_internal_metadata
 {
   base_internal_metadata() {}
 
-  int socket_id() const { return 0; }
+  auto point_id() const { return 0; }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "<internal-metadata>");
+    return pars::format_to(ctx.out(), "<internal-metadata>");
   }
 };
 
 struct base_network_metadata
 {
-  base_network_metadata(int s_id, net::tool_view t, net::pipe p)
-    : id_m{s_id}
-    , tool_m{t}
-    , pipe_m{p}
+  base_network_metadata(const net::pipe::pointer& p)
+    : pipe_m{p}
   {
   }
 
-  const net::tool_view& tool() const { return tool_m; }
+  const net::pipe::pointer& pipe() const { return pipe_m; }
 
-  const net::pipe& pipe() const { return pipe_m; }
+  auto point_id() const { return pipe_m->point_id(); }
 
-  int socket_id() const { return id_m; }
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
     // FIXME: duplicated
-    return std::format_to(ctx.out(), "Pipe #{:X} {} {}", pipe().id(),
-                          tool().who(), tool().id());
+    return pars::format_to(ctx.out(), "Pipe #{:X}", point_id());
   }
 
 private:
-  int id_m;
-  net::tool_view tool_m;
-  net::pipe pipe_m;
+  const net::pipe::pointer& pipe_m;
 };
 
 struct base_sync_metadata
@@ -160,3 +154,7 @@ struct metadata<kind_of, event_t> : base_network_metadata,
   decltype([]<template<typename> typename kind_of, event_c event_t>(           \
              kind_of<event_t> ke) -> pars::ev::METADATA<kind_of, event_t> {    \
   }(ke))
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_EV_METADATA_H

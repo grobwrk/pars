@@ -31,64 +31,91 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "common.h"
 
-#include <pars/pars.h>
+#include "fib_computed_generated.h"
+#include "fib_requested_generated.h"
+#include "stop_compute_generated.h"
 
-#include <format>
+#include <pars/concept/event.h>
+#include <pars/concept/kind.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/klass.h>
+#include <pars/ev/serializer.h>
+#include <pars/fmt.h>
+
+#include <cstddef>
+#include <cstdint>
 #include <string_view>
 
 namespace pars_example::event
 {
 
 // a client send this to request a fib_n computation
-struct fib_requested
+struct fib_requested : pars::ev::fb<FibRequestedBuilder, fib_requested>
 {
-  std::size_t work_id = 0;
-  uint64_t n = 0;
-  bool use_fast_fib = false;
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto make(std::size_t work_id, uint64_t n, bool use_fast_fib)
   {
-    return std::format_to(ctx.out(), "fib_requested({},{},{})", work_id, n,
-                          use_fast_fib ? "fast_fib" : "slow_fib");
+    return pars::ev::obb<fib_requested>::using_size(64)
+      .and_then(&fib_requested::builder::add_work_id, work_id)
+      .and_then(&fib_requested::builder::add_n, n)
+      .and_then(&fib_requested::builder::add_use_fast_fib, use_fast_fib)
+      .build();
+  }
+
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
+  {
+    auto t = table();
+
+    return pars::format_to(ctx.out(), "fib_requested({},{},{})", t->work_id(),
+                          t->n(), t->use_fast_fib() ? "fast_fib" : "slow_fib");
   }
 };
 
 // a server backend send this in response for a fib_n computation
-struct fib_computed
+struct fib_computed : pars::ev::fb<FibComputedBuilder, fib_computed>
 {
-  std::size_t work_id = 0;
-  uint64_t fib_n = 0;
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto make(std::size_t work_id, uint64_t fib_n)
   {
-    return std::format_to(ctx.out(), "fib_computed({},{})", work_id, fib_n);
+    return pars::ev::obb<fib_computed>::using_size(64)
+      .and_then(&fib_computed::builder::add_work_id, work_id)
+      .and_then(&fib_computed::builder::add_fib_n, fib_n)
+      .build();
+  }
+
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
+  {
+    auto t = table();
+
+    return pars::format_to(ctx.out(), "fib_computed({},{})", t->work_id(),
+                          t->fib_n());
   }
 };
 
-struct stop_compute
+struct stop_compute : pars::ev::fb<StopComputeBuilder, stop_compute>
 {
-  int pipe_id = 0;
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  static auto make(int pipe_id)
   {
-    return std::format_to(ctx.out(), "stop_compute({})", pipe_id);
+    return pars::ev::obb<stop_compute>::using_size(64)
+      .and_then(&stop_compute::builder::add_pipe_id, pipe_id)
+      .build();
+  }
+
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return pars::format_to(ctx.out(), "stop_compute({})", table()->pipe_id());
   }
 };
 
 } // namespace pars_example::event
 
+namespace pars::ev
+{
+
 template<>
-struct pars::ev::klass<::pars_example::event::fib_requested>
-  : base_klass<::pars_example::event::fib_requested>
+struct klass<pars_example::event::fib_requested>
+  : base_klass<pars_example::event::fib_requested>
 {
   static constexpr std::string_view uuid =
     "9e85e1e6-28b1-4e52-85d6-12ca0110049f";
-
-  template<typename Archive>
-  static void serialize(event_type& ev, Archive& ar)
-  {
-    ar(ev.work_id, ev.n, ev.use_fast_fib);
-  }
 
   template<template<typename> typename kind_of>
     requires kind_c<kind_of>
@@ -102,29 +129,21 @@ struct pars::ev::klass<::pars_example::event::fib_requested>
 };
 
 template<>
-struct pars::ev::klass<::pars_example::event::fib_computed>
-  : base_klass<::pars_example::event::fib_computed>
+struct klass<pars_example::event::fib_computed>
+  : base_klass<pars_example::event::fib_computed>
 {
   static constexpr std::string_view uuid =
     "3dc87ab0-bfe0-4eea-8f71-76a16bda62ff";
-
-  template<typename Archive>
-  static void serialize(event_type& ev, Archive& ar)
-  {
-    ar(ev.work_id, ev.fib_n);
-  }
 };
 
 template<>
-struct pars::ev::klass<::pars_example::event::stop_compute>
-  : base_klass<::pars_example::event::stop_compute>
+struct klass<pars_example::event::stop_compute>
+  : base_klass<pars_example::event::stop_compute>
 {
   static constexpr std::string_view uuid =
     "8194470a-3ad8-4f37-a544-d44ff4e5bd29";
-
-  template<typename Archive>
-  static void serialize(event_type& ev, Archive& ar)
-  {
-    ar(ev.pipe_id);
-  }
 };
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+} // namespace pars::ev

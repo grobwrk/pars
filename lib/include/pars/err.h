@@ -27,12 +27,15 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_ERR_H
+#define PARS_ERR_H
 
-#include "pars/init.h"
+#include "pars/init.h" // IWYU pragma: keep
 
-#include <expected>
+#include <concepts>
+#include <string>
 #include <system_error>
+#include <type_traits>
 
 namespace pars
 {
@@ -78,3 +81,5 @@ struct std::is_error_code_enum<pars::error> : true_type
 static_assert(std::convertible_to<pars::error, std::error_code>);
 
 static_assert(std::constructible_from<std::error_code, pars::error>);
+
+#endif // PARS_ERR_H

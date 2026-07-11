@@ -27,11 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_CONCEPT_HASHABLE_H
+#define PARS_CONCEPT_HASHABLE_H
 
-#include "pars/init.h"
+#include "pars/init.h" // IWYU pragma: keep
 
 #include <concepts>
+#include <cstddef>
 #include <functional>
 
 template<typename value_t>
@@ -46,3 +48,5 @@ struct std::hash<value_t>
 
   std::size_t operator()(const value_type& x) const { return x.hash(); }
 };
+
+#endif // PARS_CONCEPT_HASHABLE_H

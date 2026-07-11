@@ -1,9 +1,12 @@
 {
   "dependencies": [
-    "cereal",
+    "asio",
     "flatbuffers",
+    "fmt",
     "gtest",
-    "nng",
-    "spdlog"
+    {
+      "name": "spdlog",
+      "default-features": false
+    }
   ]
 }

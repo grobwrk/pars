@@ -27,14 +27,42 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#include "common.h"
 #include "event.h"
 #include "fib.h"
+
+#include <pars/app/resources.h>
+#include <pars/app/single.h>
+#include <pars/app/state_machine.h>
+#include <pars/comp/backend.h>
+#include <pars/ev/event.h>
+#include <pars/ev/kind_decl.h>
+#include <pars/ev/make_hf.h>
+#include <pars/log.h>
+#include <pars/net/connect_mode.h>
+#include <pars/net/resolver.h>
+#include <pars/fmt.h>
+
+#include <spdlog/spdlog.h>
+
+#include <atomic>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <exception>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <utility>
 
 namespace pars_example::apps
 {
 
 using namespace event;
 using namespace resource;
+using namespace pars;
+using namespace pars::ev;
 
 /// Runs the backend component as a single application (rep).
 class server_backend : public app::single<comp::backend>
@@ -47,20 +75,20 @@ private:
 
   /// @name Network Parameters
 
-  const milli cleanup_timeout{1000};
-  const milli rep_recv_timeout{-1};
-  const milli rep_send_timeout{1000};
+  const int32_t cleanup_timeout{1000};
+  const int32_t rep_recv_timeout{-1};
+  const int32_t rep_send_timeout{1000};
 
   /// @name Input Parameters
 
-  component_type::connect_p connect_p;
+  net::resolver::params resolve_p;
   int max_allowed{128}; ///< concurrent contextes
   int max_served{0};    ///< shutdown when reached (0 = inf)
 
   /// @name App State
 
   std::atomic<int> tot_served{0}; ///< total client served
-  app::state_machine<server_state> state = {server_state::creating};
+  app::state_machine<server_state> state{server_state::creating};
   app::resources<int, pipe_resource> resources;
 
   /// @name Constructors
@@ -79,32 +107,34 @@ private:
     /// 2. grab the input
     switch (argc)
     {
-    case 5:
-      max_allowed = std::stoi(argv[4]);
+    case 6:
+      max_allowed = std::stoi(argv[5]);
 
       [[fallthrough]];
 
-    case 4:
-      max_served = std::stoi(argv[3]);
+    case 5:
+      max_served = std::stoi(argv[4]);
 
       [[fallthrough]];
 
     case 3:
-      connect_p.service_cmode = net::cmode_from_string(argv[1]);
+      resolve_p.connect_mode = net::cmode_from_string(argv[1]);
 
-      connect_p.service_addr = argv[2];
+      resolve_p.host = argv[2];
+
+      resolve_p.service = argv[3];
 
       break;
 
     default:
-      throw std::invalid_argument("Usage: ./server_backend service_cmode "
-                                  "service_addr [max_served [max_allowed]]");
+      throw std::invalid_argument("Usage: ./server_backend connect_mode "
+                                  "host service [max_served [max_allowed]]");
     }
 
     /// 3. insert handler functions
     hfs().on<fired, init>(&self::initialize, this);
 
-    hfs().on<fired, shutdown>(&self::terminate, this);
+    hfs().on<fired, deinit>(&self::terminate, this);
 
     comp().rep().on<received, fib_requested>(&self::fire_compute, this);
 
@@ -131,13 +161,24 @@ private:
   /// spawn all contexts and start a recv operation on each of them
   void initialize(hf_arg<fired, init> fired)
   {
-    auto ts = state.tx(server_state::initializing, server_state::running);
+    auto ts = state.tx(server_state::initializing, server_state::resolving);
 
-    comp().init({.num_ctxs = max_allowed,
-                 .rep_opts = {.recv_timeout = rep_recv_timeout.count(),
-                              .send_timeout = rep_send_timeout.count()}});
+    comp().init({});
 
-    comp().connect(connect_p);
+    resolver().resolve(resolve_p);
+
+    ts.commit();
+
+    pars::info(SL, "Fired {}, Application Initialized!", fired.event());
+  }
+
+  void resolve(hf_arg<fired, init> fired)
+  {
+    auto ts = state.tx(server_state::resolving, server_state::running);
+
+    comp().init({});
+
+    // comp().rep().connect();
 
     ts.commit();
 
@@ -155,14 +196,14 @@ private:
 
     if (resources_count < max_allowed)
     {
-      resources.emplace(md.pipe().id(), pipe_state::waiting_work);
+      resources.emplace(md.pipe()->id(), pipe_state::waiting_work);
 
       pars::info(SL, "{}: Fired {}, Pipe Accepted! [# resources: {} < {}]", md,
                  ev, resources_count, max_allowed);
     }
     else
     {
-      md.pipe().close().or_abort();
+      md.pipe()->socket().close();
 
       pars::info(SL, "{}: Fired {}, Pipe Rejected! [# resources: {} >= {}]", md,
                  ev, resources_count, max_allowed);
@@ -189,14 +230,14 @@ private:
     pars::info(SL, "{}: Fired {} [# resources: {}]", md, ev, resources.count());
   }
 
-  /// queue_fire the computation
+  /// fire the computation
   void fire_compute(hf_arg<received, fib_requested> recv)
   {
     state.ensure(server_state::running);
 
-    auto [ev, md] = recv.as_tuple();
+    auto [ev, md] = std::move(recv).as_tuple();
 
-    auto locked = resources.locked_resource(md.pipe().id());
+    auto locked = resources.locked_resource(md.pipe()->id());
 
     auto& pipe_resource = locked.resource();
 
@@ -211,13 +252,13 @@ private:
     auto ts =
       pipe_resource.state.tx(pipe_state::waiting_work, pipe_state::working);
 
-    pipe_resource.save_tool(md.tool());
-
-    router().queue_fire(ev, md);
-
-    ts.commit();
+    // pipe_resource.save_tool(md.tool());
 
     pars::info(SL, "{}: Received {}, Fire {}!", md, ev, ev);
+
+    enqueuer().fire(std::move(ev), md);
+
+    ts.commit();
   }
 
   /// compute fib_b then answer
@@ -227,9 +268,9 @@ private:
 
     auto [ev, md] = fired.as_tuple();
 
-    auto p = md.pipe();
+    auto& p = md.pipe();
 
-    auto locked = resources.locked_resource(p.id());
+    auto locked = resources.locked_resource(p->id());
 
     auto& pipe_resource = locked.resource();
 
@@ -241,7 +282,7 @@ private:
 
     try
     {
-      fib_n = compute::fib(ev.n, ev.use_fast_fib, md);
+      fib_n = compute::fib(ev.table()->n(), ev.table()->use_fast_fib(), md);
     }
     catch (const compute::stop_requested&)
     {
@@ -249,7 +290,7 @@ private:
 
       ts.rollback();
 
-      resources.delete_resource(p.id());
+      resources.delete_resource(p->id());
 
       pars::info(SL, "{}: Fired {}, Stop Requested! [# resources: {}]", md, ev,
                  resources.count());
@@ -259,15 +300,15 @@ private:
 
     /// send the outcome event using the ctx where we received from
 
-    auto out_ev = fib_computed{ev.work_id, fib_n};
+    auto out_ev = fib_computed::make(ev.table()->work_id(), fib_n);
 
-    auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
-
-    ctx.send(out_ev, p);
-
-    ts.commit();
+    // auto& ctx = comp().rep().ctxs().of(pipe_resource.load_tool());
 
     pars::info(SL, "{}: Fired {}, Send {}!", md, ev, out_ev);
+
+    // ctx.send(std::move(out_ev), p);
+
+    ts.commit();
   }
 
   /// start a recv operation
@@ -279,25 +320,25 @@ private:
 
     auto& p = md.pipe();
 
-    resources.delete_resource(p.id());
+    resources.delete_resource(p->id());
 
     if (++tot_served == max_served)
     {
-      auto shutdown_ev = shutdown{};
+      auto deinit_ev = deinit{};
 
-      router().queue_fire(shutdown_ev);
+      enqueuer().fire(deinit_ev);
 
       pars::info(SL, "{}: Sent {}, Fire {}! [{} succesfully served]", md, ev,
-                 shutdown_ev, max_served);
+                 deinit_ev, max_served);
 
       return;
     }
 
     /// we're ready to receive the next work
 
-    auto& ctx = comp().rep().ctxs().of(md.tool());
+    // auto& ctx = comp().rep().ctxs().of(md.tool());
 
-    ctx.recv();
+    // ctx.recv();
 
     pars::info(SL, "{}: Sent {}, Receiving! [# served: {}]", md, ev,
                tot_served.load());
@@ -312,13 +353,13 @@ private:
 
     auto& p = md.pipe();
 
-    resources.delete_resource(p.id());
+    resources.delete_resource(p->id());
 
-    p.close().or_abort();
+    p->socket().close();
 
-    auto& ctx = comp().rep().ctxs().of(md.tool());
+    // auto& ctx = comp().rep().ctxs().of(md.tool());
 
-    ctx.recv();
+    // ctx.recv();
 
     auto& [e, dir] = ev;
 
@@ -326,7 +367,7 @@ private:
   }
 
   /// graceful terminate
-  void terminate(hf_arg<fired, shutdown> fired)
+  void terminate(hf_arg<fired, deinit> fired)
   {
     state.ensure(server_state::running);
 
@@ -350,7 +391,9 @@ int main(int argc, char** argv)
   }
   catch (std::exception& e)
   {
-    std::cout << std::format("Error: {}", e.what()) << "\n";
+  std::cout << pars::format("Error: {}", e.what())
+            << "Usage: ./server_backend endpoint_url [max_served [max_allowed]]"
+            << "\n";
 
     return EXIT_FAILURE;
   }

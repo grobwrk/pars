@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_APP_SINGLE_H
+#define PARS_APP_SINGLE_H
 
 #include "pars/app/setup.h"
 #include "pars/ev/dispatcher.h"
@@ -35,6 +36,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "pars/ev/hf_registry.h"
 #include "pars/ev/runner.h"
 #include "pars/log.h"
+#include "pars/log/flags.h"
+#include "pars/net/io.h"
+#include "pars/net/resolver.h"
+
+#include <cstdlib>
+#include <exception>
 
 namespace pars::app
 {
@@ -50,15 +57,14 @@ public:
     : runner_m{hf_registry_m}
     , hf_registry_m{runner_m}
     , dispatcher_m{runner_m}
-    , router_m{dispatcher_m, runner_m}
-    , component_m{hf_registry_m, router_m}
+    , enqueuer_m{dispatcher_m, runner_m}
+    , component_m{hf_registry_m, enqueuer_m, io_m}
+    , resolver_m{io_m, enqueuer_m}
   {
   }
 
   int exec(int argc, char** argv)
   {
-    atexit(nng_fini);
-
     setup();
 
     startup(argc, argv);
@@ -67,9 +73,11 @@ public:
   }
 
 protected:
+  net::resolver& resolver() { return resolver_m; }
+
   component_type& comp() { return component_m; }
 
-  ev::enqueuer& router() { return router_m; }
+  ev::enqueuer& enqueuer() { return enqueuer_m; }
 
   ev::hf_registry& hfs() { return hf_registry_m; }
 
@@ -92,7 +100,13 @@ protected:
   {
     try
     {
+      io_m.start();
+
       dispatcher_m.run();
+
+      io_m.stop();
+
+      io_m.join();
 
       return EXIT_SUCCESS;
     }
@@ -100,6 +114,9 @@ protected:
     {
       pars::err(SL, lf::app, "Error while running single application: {}",
                 e.what());
+
+      if (io_m.joinable())
+        io_m.join();
 
       return EXIT_FAILURE;
     }
@@ -109,8 +126,12 @@ private:
   ev::runner runner_m;
   ev::hf_registry hf_registry_m;
   ev::dispatcher dispatcher_m;
-  ev::enqueuer router_m;
+  ev::enqueuer enqueuer_m;
+  net::io io_m;
+  net::resolver resolver_m;
   component_type component_m;
 };
 
 } // namespace pars::app
+
+#endif // PARS_APP_SINGLE_H

@@ -27,27 +27,29 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_EV_EVENT_H
+#define PARS_EV_EVENT_H
 
 #include "pars/ev/klass.h"
-#include "pars/fmt/stl.h"
-#include "pars/net/dir.h"
-
-#include "clev/err.h"
-
-#include <cereal/types/vector.hpp>
+#include "pars/fmt/stl.h" // IWYU pragma: keep
+#include "pars/net/asio.h"
+#include "pars/net/direction.h"
+#include "pars/fmt.h"
 
 #include <chrono>
-#include <format>
+#include <exception>
+#include <string>
+#include <string_view>
+#include <system_error>
 
 namespace pars::ev
 {
 
 struct creating_pipe
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "creating_pipe()");
+    return pars::format_to(ctx.out(), "creating_pipe()");
   }
 };
 
@@ -60,9 +62,9 @@ struct klass<creating_pipe> : base_klass<creating_pipe>
 
 struct pipe_created
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "pipe_created()");
+    return pars::format_to(ctx.out(), "pipe_created()");
   }
 };
 
@@ -75,9 +77,9 @@ struct klass<pipe_created> : base_klass<pipe_created>
 
 struct pipe_removed
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "pipe_removed()");
+    return pars::format_to(ctx.out(), "pipe_removed()");
   }
 };
 
@@ -91,12 +93,12 @@ struct klass<pipe_removed> : base_klass<pipe_removed>
 struct network_error
 {
   std::error_code error;
-  net::dir dir;
+  net::direction dir;
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "network_error({}, {})", error,
-                          (dir == net::dir::out ? "out" : "in"));
+    return pars::format_to(ctx.out(), "network_error({}, {})", error,
+                          (dir == net::direction::out ? "out" : "in"));
   }
 };
 
@@ -117,13 +119,9 @@ struct exception
     {
       std::rethrow_exception(eptr);
     }
-    catch (clev::exception& e)
-    {
-      return std::format("{}", e.what());
-    }
     catch (std::exception& e)
     {
-      return std::format("{}", e.what());
+      return pars::format("{}", e.what());
     }
     catch (...)
     {
@@ -132,9 +130,9 @@ struct exception
     return "<empty-exception>";
   }
 
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "{}", str());
+    return pars::format_to(ctx.out(), "{}", str());
   }
 };
 
@@ -149,9 +147,9 @@ struct klass<exception> : base_klass<exception>
 
 struct init
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "init({})", creation_time);
+    return pars::format_to(ctx.out(), "init({})", creation_time);
   }
 
 private:
@@ -168,11 +166,11 @@ struct klass<init> : base_klass<init>
   static constexpr bool requires_network = false;
 };
 
-struct shutdown
+struct deinit
 {
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "shutdown({})", creation_time);
+    return pars::format_to(ctx.out(), "deinit({})", creation_time);
   }
 
 private:
@@ -181,7 +179,7 @@ private:
 };
 
 template<>
-struct klass<shutdown> : base_klass<shutdown>
+struct klass<deinit> : base_klass<deinit>
 {
   static constexpr std::string_view uuid =
     "47c543bb-ba37-4442-a5bd-4b2dcfbf1e02";
@@ -189,4 +187,27 @@ struct klass<shutdown> : base_klass<shutdown>
   static constexpr bool requires_network = false;
 };
 
+template<typename ip_t>
+struct resolved
+{
+  net::asio::basic_resolver_results<ip_t> results;
+
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
+  {
+    return pars::format_to(ctx.out(), "resolved({})", results);
+  }
+};
+
+template<>
+struct klass<resolved<net::asio::tcp>> : base_klass<resolved<net::asio::tcp>>
+{
+  static constexpr std::string_view uuid =
+    "d7db42c4-0313-4ef4-8265-35fa6870834d";
+
+  static constexpr bool requires_network = false;
+};
 } // namespace pars::ev
+
+#include "pars/fmt/formattable.h" // IWYU pragma: export
+
+#endif // PARS_EV_EVENT_H

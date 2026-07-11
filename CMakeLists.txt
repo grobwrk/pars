@@ -1,16 +1,18 @@
 # CMakeList.txt : CMake project for pars, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.30)
+cmake_minimum_required (VERSION 3.21)
 list (INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}/cmake")
+include (cmake/CPM.cmake)
 
 set (PARS_VERSION "0.2.1.99")
-project ("pars" VERSION ${PARS_VERSION} LANGUAGES CXX)
+project ("pars-cxx" VERSION ${PARS_VERSION} LANGUAGES CXX)
 
-option (PARS_BUILD_EXAMPLES      "Build examples"      ON)
-option (PARS_BUILD_DOCUMENTATION "Build documentation" OFF)
-option (PARS_BUILD_TESTS         "Build tests"         OFF)
-option (PARS_BUILD_COVERAGE      "Build coverage"      OFF) # Requires PARS_BUILD_TESTS=ON
+option (PARS_BUILD_EXAMPLES      "Build examples"        ON)
+option (PARS_BUILD_DOCUMENTATION "Build documentation"   OFF)
+option (PARS_BUILD_TESTS         "Build tests"           OFF)
+option (PARS_BUILD_COVERAGE      "Build coverage"        OFF) # Requires PARS_BUILD_TESTS=ON
+option (PARS_ENABLE_LOGGING      "Enable spdlog logging" ON)
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   set (CMAKE_CXX_STANDARD 23)
@@ -26,6 +28,7 @@ elseif (MSVC)
   set (CMAKE_CXX_STANDARD_REQUIRED 1)
   add_compile_options ("/Zc:preprocessor")
   add_compile_options ("/Zc:__cplusplus")
+  add_compile_options ("/utf-8")
 else ()
   add_compile_options ("-std=c++23")
 endif ()

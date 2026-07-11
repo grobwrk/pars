@@ -27,50 +27,66 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_NET_PIPE_H
+#define PARS_NET_PIPE_H
 
-#include "nngxx/pipe.h"
-#include "nngxx/socket.h"
+#include "pars/net/asio.h"
+#include "pars/fmt.h"
 
-#include "pars/fmt/nng.h"
-
-#include <format>
+#include <cstdint>
+#include <functional>
+#include <memory>
+#include <system_error>
 
 namespace pars::net
 {
 
-class pipe : public nngxx::pipe_view
+struct pipe
 {
-public:
-  pipe()
-    : id_m{0}
-    , socket_id_m{0}
+  using pointer = std::unique_ptr<pipe>;
+
+  template<typename ret_t>
+  using function =
+    std::move_only_function<ret_t(pars::net::pipe::pointer, std::error_code)>;
+
+  static pointer make(asio::io_context& io, int point_id)
   {
+    return pointer{new pipe{io, point_id}};
   }
 
-  pipe(nngxx::pipe_view& pv) noexcept
-    : nngxx::pipe_view{pv}
-    , id_m{pv.id()}
-    , socket_id_m{pv.get_socket().id()}
+  asio::tcp::socket& socket() { return socket_m; }
+
+  int id() const { return id_m; }
+
+  void id(int id) { id_m = id; }
+
+  auto point_id() const { return point_id_m; }
+
+  auto socket_id() const
   {
+    return static_cast<uint64_t>(asio::socket_type{
+      const_cast<asio::tcp::socket&>(socket_m).native_handle()});
   }
 
-  int id() const noexcept { return id_m; }
-
-  int socket_id() const { return socket_id_m; }
-
-  operator bool() { return nngxx::pipe_view::operator bool(); }
-
-  auto format_to(std::format_context& ctx) const -> decltype(ctx.out())
+  auto format_to(pars::format_context& ctx) const -> decltype(ctx.out())
   {
-    return std::format_to(ctx.out(), "{}",
-                          static_cast<nngxx::pipe_view>(*this));
+    return pars::format_to(ctx.out(), "Pipe #{}-{:X}", id(), socket_id());
   }
 
 private:
-  const int id_m;
+  pipe(asio::io_context& io, int point_id)
+    : socket_m{io}
+    , point_id_m{point_id}
+  {
+  }
 
-  const int socket_id_m;
+  int id_m = -1;
+  int point_id_m = -1;
+  asio::tcp::socket socket_m;
 };
 
 } // namespace pars::net
+
+#include "pars/fmt/formattable.h" // IWYU pragma: keep
+
+#endif // PARS_NET_PIPE_H

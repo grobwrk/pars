@@ -27,10 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef CLEV_OWN_H
+#define CLEV_OWN_H
 
 #include "clev/err.h"
 #include "clev/iface.h"
+
+#include <concepts>
 
 namespace clev
 {
@@ -112,4 +115,4 @@ struct own : iface<wrap_t>
 
 } // namespace clev
 
-static constexpr bool ownxx_own_is_really_needed_v = true;
+#endif // CLEV_OWN_H

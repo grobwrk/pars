@@ -27,7 +27,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_CONCEPT_KIND_H
+#define PARS_CONCEPT_KIND_H
 
 #include "pars/concept/event.h"
 #include "pars/ev/kind_decl.h"
@@ -56,3 +57,5 @@ template<template<typename> typename kind_of,
 constexpr auto is_same_kind_v = std::is_same_v<kind_of<void>, event_t<void>>;
 
 } // namespace pars::ev
+
+#endif // PARS_CONCEPT_KIND_H

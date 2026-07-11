@@ -27,11 +27,13 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#pragma once
+#ifndef PARS_COMP_CLIENT_H
+#define PARS_COMP_CLIENT_H
 
 #include "pars/ev/enqueuer.h"
-#include "pars/net/req.h"
-#include "pars/net/socket_opt.h"
+#include "pars/ev/hf_registry.h"
+#include "pars/net/io.h"
+#include "pars/net/point.h"
 
 namespace pars::comp
 {
@@ -39,35 +41,25 @@ namespace pars::comp
 class client
 {
 public:
-  client(ev::hf_registry& h, ev::enqueuer& r)
-    : req_m{h, r}
+  client(ev::hf_registry& h, ev::enqueuer& r, net::io& io)
+    : req_m{h, r, io}
   {
   }
-
-  net::req& req() { return req_m; }
 
   struct init_p
   {
-    net::socket_opt req_opts;
   };
 
-  void init(const init_p& params) { req_m.sock().set_options(params.req_opts); }
+  void init(const init_p& params) {}
 
-  struct connect_p
-  {
-    net::cmode service_cmode = net::cmode::dial; ///< connect mode for req
-    char* service_addr = nullptr;                ///< connect addr for req
-  };
+  void graceful_terminate() {}
 
-  void connect(const connect_p& params)
-  {
-    req_m.sock().connect(params.service_addr, params.service_cmode);
-  }
-
-  void graceful_terminate() { req_m.stop(); }
+  net::point& req() { return req_m; }
 
 private:
-  net::req req_m;
+  net::point req_m;
 };
 
 } // namespace pars::comp
+
+#endif // PARS_COMP_CLIENT_H
